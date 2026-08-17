@@ -61,7 +61,9 @@
     },
     {
      "type": "langfuse-trace",
-     "id": "c0b6a4f2b09a5b1494a87f474dcffd8e"
+     "id": "c0b6a4f2b09a5b1494a87f474dcffd8e",
+     "url": "https://us.cloud.langfuse.com/project/cmse7zydd0wc3ad0d775r1cye/traces/c0b6a4f2b09a5b1494a87f474dcffd8e",
+     "note": "requires accepted Langfuse org invite"
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE"
@@ -116,7 +118,9 @@
      "type": "langfuse-trace",
      "id": "3403d1909af058139c970c8e304658b5",
      "dataset": "humgeo-structural-repair-20260816",
-     "run": "final-1317kst"
+     "run": "final-1317kst",
+     "url": "https://us.cloud.langfuse.com/project/cmse7zydd0wc3ad0d775r1cye/traces/3403d1909af058139c970c8e304658b5",
+     "note": "requires accepted Langfuse org invite; dataset humgeo-structural-repair-20260816, run final-1317kst"
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE"

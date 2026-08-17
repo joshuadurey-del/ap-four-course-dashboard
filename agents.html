@@ -8,7 +8,7 @@
 <tr><th>File</th><th>What it is</th><th>Raw URL</th></tr>
 <tr><td><b>Agent accounting (.md)</b></td><td>The full evidence dossier: every claim with a stable id, status label (OBSERVED / PLANNED / BLOCKED / MISSING), full hashes, verification path, measured scope, access labels, and staleness rules. Includes the Langfuse reading guide.</td><td><a href="agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md">accounting .md</a></td></tr>
 <tr><td><b>Standings (.md)</b></td><td>The human report in markdown, for agents that want the narrative with links intact.</td><td><a href="agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md">standings .md</a></td></tr>
-<tr><td><b>Claims manifest (.json)</b></td><td>The same 36 claims as structured JSON — what the <a href="claims.html">claims explorer</a> renders.</td><td><a href="data.json">data.json</a></td></tr>
+<tr><td><b>Claims manifest (.json)</b></td><td>The same 35 claims as structured JSON — what the <a href="claims.html">claims explorer</a> renders.</td><td><a href="data.json">data.json</a></td></tr>
 <tr><td><b>Updates feed (.json)</b></td><td>Append-only event feed with GMT timestamps — what the Overview renders.</td><td><a href="updates.json">updates.json</a></td></tr>
 </table></section>
 <section><h2>How to read it</h2>
@@ -16,6 +16,7 @@
 <li>Start from any sentence in the standings, find its <code>claim_id</code> in the manifest, and follow the evidence entries.</li>
 <li><code>evidence_access</code> tells you what you can verify yourself: <b>SHARED</b> = live URL or Ilma-readable repo; <b>ILMA_HUMAN_ONLY</b> = the evidence repo (browser yes, bot tokens no); <b>SHARED_AFTER_INVITE</b> = Langfuse; <b>JOSH_MACHINE_ONLY</b> = named local artifact with a durable-copy plan; <b>NONE_YET</b> = planned work, no receipt can exist.</li>
 <li>Staleness: the manifest carries its snapshot time. A PLANNED claim older than 48 hours with no successor receipt is a question, not a fact.</li>
+<li>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b> — accept the org invite first or the trace links 404. Claims with Langfuse evidence carry direct trace URLs in <a href="data.json">data.json</a>; the full reading guide is at the bottom of the accounting .md.</li>
 <li>Cross-check any Langfuse record against the matching GitHub evidence branch by item id or hash — both are written from the same receipts.</li>
 </ul></section>
 <p class="note">These files are dated snapshots, refreshed by commit. The Drive copies (shared separately) match these at publication time; this site is the always-current home.</p>

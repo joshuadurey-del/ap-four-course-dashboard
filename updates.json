@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T07:28Z",
+  "course": "Cross",
+  "text": "Langfuse evidence now clickable on the dashboard: the two cited traces (30-slot amendment, 759-item structural repair) carry direct trace URLs in the claims manifest, and the For-agents page links the Langfuse project entry point. Reminder: the links need the accepted org invite."
+ },
+ {
   "ts": "2026-08-17T06:17Z",
   "course": "Psych",
   "text": "U5 gate improved to 26 findings after the fleet's repair train landed (9 PRs). Course rebuilt from the repaired articles and re-walked: 221/221 green. Screenshots refreshed at the same links."
