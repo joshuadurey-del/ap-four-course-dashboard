@@ -1,5 +1,64 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lessons learned</title><link rel="stylesheet" href="style.css"></head><body>
-<nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims explorer</a><a href="lessons.html" class="active">Lessons</a><a href="agents.html" >For agents</a></nav><main><h1>Lessons learned</h1><p class="sub">What went wrong or got tested last week, and how it is applied now. Receipts in the claims explorer.</p><section><h2>An honest accounting of last week</h2><table><tr><th>Lesson learned</th><th>Applied going forward</th></tr><tr><td><b>We generated a whole corpus without real QC.</b></td><td>The factory now judges every item inside generation. APWH holds strict repair-first, judge-once: 449 repairs applied, zero paid verdicts spent. Every HumGeo rebuild pass binds to the item's exact bytes.</td></tr><tr><td><b>Sealed plans can go stale against their own sources.</b></td><td>Plans now take receipted amendments as first-class input, with a sandbox proof required before execution: 425 prior passes intact, 49 slots selected.</td></tr><tr><td><b>We measured our shortcut before trusting it, and it failed.</b></td><td>A local pre-check judge missed 1 in 5 real failures in a 105-call test. It never gated anything and is now off entirely. Nothing gets judging authority without measurement.</td></tr><tr><td><b>Both deadlines slipped about a day, for a structural reason.</b></td><td>Four courses share one factory pool in strict series. The chain is now automated: each lane's close writes a receipt and the next lane fires on it.</td></tr><tr><td><b>Work sat parked that was executable immediately, twice.</b></td><td>Standing rule: everything buildable builds now; only the truly gated command waits. The 30-slot amendment was fully built and proven while its blocker still ran.</td></tr><tr><td><b>Corrective waves need semantic proof, not just structural success.</b></td><td>Our seal requires a byte-bound official pass per record plus a fingerprint manifest anyone can re-check.</td></tr></table></section></main>
-<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lessons learned</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lessons-page">
+  <nav>
+    <span class="brand">AP Four-Course Dashboard</span>
+    <a href="index.html">Overview</a>
+    <a href="humgeo.html">HumGeo</a>
+    <a href="apwh.html">APWH</a>
+    <a href="apush.html">APUSH</a>
+    <a href="psych.html">Psych</a>
+    <a href="claims.html">Claims explorer</a>
+    <a href="lessons.html" class="active" aria-current="page">Lessons</a>
+    <a href="agents.html">For agents</a>
+  </nav>
+  <main>
+    <h1>Lessons learned</h1>
+    <p class="sub">What went wrong or got tested last week, and how it is applied now. Receipts in the claims explorer.</p>
+    <section class="lesson-ledger">
+      <h2>An honest accounting of last week</h2>
+      <table class="lesson-table">
+        <thead>
+          <tr>
+            <th scope="col">Lesson learned</th>
+            <th scope="col">Applied going forward</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>We generated a whole corpus without real QC.</b></td>
+            <td>The factory now judges every item inside generation. APWH holds strict repair-first, judge-once: 449 repairs applied, zero paid verdicts spent. Every HumGeo rebuild pass binds to the item's exact bytes.</td>
+          </tr>
+          <tr>
+            <td><b>Sealed plans can go stale against their own sources.</b></td>
+            <td>Plans now take receipted amendments as first-class input, with a sandbox proof required before execution: 425 prior passes intact, 49 slots selected.</td>
+          </tr>
+          <tr>
+            <td><b>We measured our shortcut before trusting it, and it failed.</b></td>
+            <td>A local pre-check judge missed 1 in 5 real failures in a 105-call test. It never gated anything and is now off entirely. Nothing gets judging authority without measurement.</td>
+          </tr>
+          <tr>
+            <td><b>Both deadlines slipped about a day, for a structural reason.</b></td>
+            <td>Four courses share one factory pool in strict series. The chain is now automated: each lane's close writes a receipt and the next lane fires on it.</td>
+          </tr>
+          <tr>
+            <td><b>Work sat parked that was executable immediately, twice.</b></td>
+            <td>Standing rule: everything buildable builds now; only the truly gated command waits. The 30-slot amendment was fully built and proven while its blocker still ran.</td>
+          </tr>
+          <tr>
+            <td><b>Corrective waves need semantic proof, not just structural success.</b></td>
+            <td>Our seal requires a byte-bound official pass per record plus a fingerprint manifest anyone can re-check.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
+</body>
+</html>
