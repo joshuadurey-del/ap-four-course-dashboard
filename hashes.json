@@ -1,21 +1,21 @@
 {
- "generated_utc": "2026-08-17T10:46:45Z",
+ "generated_utc": "2026-08-17T10:48:59Z",
  "note": "sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.",
  "files": [
   {
    "path": "agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md",
-   "sha256": "6b9485d25e84ae0f6bb8f2697947328046b02318f6b5997a3e766083f3748ccc",
-   "bytes": 33640
+   "sha256": "64ccf72bb6b44e10e30eb0fcd1835747f63f5b49db8a32d4ebaebaba412b708d",
+   "bytes": 34050
   },
   {
    "path": "agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md",
-   "sha256": "b72eb5909b10786a72aed924f5b3c50adf279a59f397243107a26a1f6ed1373b",
-   "bytes": 17009
+   "sha256": "84511c2cb883d2adb20d8069c6eeced03d198ef8ed5d485f4f365b4c4b45a236",
+   "bytes": 17378
   },
   {
    "path": "agents/COMPANION-RECEIPTS-20260817.md",
-   "sha256": "5f083f0e3b99b94e0e987401d5a6dbbc5875ab20ecd0f552930d427d00106498",
-   "bytes": 10675
+   "sha256": "43047444276ff74b02eceaf3b9df1eee4c723cbc760273baee05d52ff58fe346",
+   "bytes": 11003
   },
   {
    "path": "agents/NOTES.md",
@@ -24,13 +24,13 @@
   },
   {
    "path": "data.json",
-   "sha256": "e07926ceef92af76ff888834706c4e48764ae7b98851ff347bf6e2c0cd7b6c9a",
-   "bytes": 32599
+   "sha256": "7c38e71396b89624105b865a4707ee13fd5a13ce15fcf4e645c515545b5a486c",
+   "bytes": 33324
   },
   {
    "path": "updates.json",
-   "sha256": "c83fccf66ebdb92f147b57fa031707726eeb5a30fa96651b91889554e97c7133",
-   "bytes": 16402
+   "sha256": "d82f44c243a5b929c481af2273365e600ef33dbeb10e3ca7f08895f24d1b0554",
+   "bytes": 17145
   }
  ]
 }

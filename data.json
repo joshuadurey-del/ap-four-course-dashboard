@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T19:10+09:00",
+ "snapshot": "2026-08-17T19:50+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -319,9 +319,9 @@
     },
     {
      "type": "git-tag",
-     "url": "https://github.com/InceptTrilogy/ap-one/releases/tag/retired/apwh-study-skills-demo-serve-20260817",
+     "url": "https://github.com/InceptTrilogy/ap-one/commit/aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
      "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "the serving path used for the 08-12 walk. RETIRED 2026-08-17 to this tag, PUSHED and remote-verified (no longer local-only). CORRECTION: this evidence row previously said 'superseded by upstream ap-one main landed placement machinery (source pin 2129eb94, per STATUS.md)'. That is FALSE and was verified false: 2129eb94 is a source-content pin in ilmych/apwh-blueprint-build, not an ap-one commit, and origin/main 13501daa does not contain build_apworld_demo_tree.py, test_apwh_study_skills_demo_tree.py, or the apwh demo_tree.json. The commit was 1 unmerged commit, 5,639 insertions incl. 142 lines of tests, which is why it was tagged rather than dropped."
+     "note": "the serving path used for the 08-12 walk. RETIRED 2026-08-17 to this tag, PUSHED and remote-verified (no longer local-only). CORRECTION: this evidence row previously said 'superseded by upstream ap-one main landed placement machinery (source pin 2129eb94, per STATUS.md)'. That is FALSE and was verified false: 2129eb94 is a source-content pin in ilmych/apwh-blueprint-build, not an ap-one commit, and origin/main 13501daa does not contain build_apworld_demo_tree.py, test_apwh_study_skills_demo_tree.py, or the apwh demo_tree.json. The commit was 1 unmerged commit, 5,639 insertions incl. 142 lines of tests, which is why it was tagged rather than dropped. | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 — a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+JOSH_MACHINE_ONLY",
@@ -364,9 +364,9 @@
     },
     {
      "type": "git-tag",
-     "url": "https://github.com/InceptTrilogy/ap-one/releases/tag/retired/apwh-study-skills-demo-serve-20260817",
+     "url": "https://github.com/InceptTrilogy/ap-one/commit/aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
      "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "retired demo-leg commit, remote-verified"
+     "note": "retired demo-leg commit, remote-verified | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 — a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
     }
    ],
    "evidence_access": "SHARED"
@@ -455,7 +455,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/ilmych/apush-build-outputs/tree/receipts/20260812-chunk1-fixround",
+     "url": "https://github.com/ilmych/apush-build-outputs/tree/23b75c25bf8e27ab8769013eeb026cd83467293e",
      "note": "74 = gated wave-2 contracts staged at batch-34 commit 7846cd75; posting receipt NONE_YET"
     }
    ],
