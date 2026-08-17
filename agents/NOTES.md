@@ -1,0 +1,32 @@
+# Inputs for 4-course standings report (2026-08-17)
+## HumGeo (this window, live 12:40 KST)
+- 431/474 regeneration slots hold official /v1/qc passes; residual runner at 99/142, alive
+- 30-slot amendment sealed + sandbox-proven; relaunch ready (prescreen OFF per owner ruling 12:11)
+- Then: 6 metadata rows QC -> pool release -> assemble -> fixture validation -> seal 482 (480 active + 2 superseded)
+- Corpus apply = Josh's explicit go (only owner gate left)
+- 741/759 structural-repair candidates staged, rescreens queued behind APWH pool use
+## APWH (incept-2f 12:5x + incept-f6 pending)
+- 933 items/176 lessons; skill codes 726/933, 207 in redraw round 2 (ETA 3-5h)
+- Rationale repairs 435+/571, zero non-convergent; apply pass dry-run-proven
+- 0/933 factory verdicts BY DESIGN (repair first, judge once); 362-item regen tail gated on my pool release (top blocker, owner: me)
+- Owner bar was Sunday; receipts land after regen tail + sweep
+## APUSH (incept-31, live this morning)
+- Ledger 49/249 admitted; 74 authored+gated articles ready to post (batch-34 @ 7846cd75), gated on pool order (HumGeo -> APWH -> APUSH); ceiling after landing ~123/249
+- Nothing serves (build-only)
+- Blockers: Stage-4 pool slot (today); intake #90 (124 positions, factory visual capability, no reply <48h); intake #89 (2 defective packets)
+- PR #6 reconciler fix open, non-gating
+## Psych (incept-ed, live today)
+- ap-status 58%; articles 221/221 DONE (U5's 54 landed 08-16)
+- NEW: local host — bundle assembled (262 components), article+tree legs walked green, 246 receipts, zero key leaks; gate/practice legs unmeasured (bank-gated)
+- Bank 1,810 items short across 374 buckets; nothing platform-side (needs psych entry in feedback_courses.json — Ilma merge, paste-ready)
+- Blockers: Stage-5 pool slot (late today); U5 gate 27 findings (fleet, psych repo issue #2, unchanged since 08-12); RISK: evidence-FRQ zero yield 10 passes 08-11 (221 of the 374 short buckets are that type)
+## Cross-course
+- Pool serial order: HumGeo residual -> HumGeo amended -> APWH 362 -> APUSH 74 -> Psych Stage-5
+- Publisher credential Platform3 #2727 day 4 (verify via scout)
+- Factory judge attribution question (D2 strictness on 08-15) still open
+## APWH update (incept-f6, live 12:14 — primary source, supersedes 2f where they differ)
+- Rationale repairs 449/571 repaired AND applied to canonical bank (apwh-build-outputs main @ 5d6fe7e3); ~122 remaining unlock as redraw codes land
+- Redraw round 2: 28 of 207 done, 19 newly resolved, rate holding
+- Regen tail 362 rows (260 multi-check + 66 content-class + 36 S10), executor dry-run-proven, parked on my pool release
+- Paid sweep: 0 calls spent, fires after regen + fresh 0-fail screen
+- Serving: LOCAL host serves the full course (10d+ uptime); fleet-side placement NOT accepted — #591 open, credential still absent (confirmed live)

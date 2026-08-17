@@ -134,7 +134,7 @@
    "section": "HumGeo",
    "status": "BLOCKED",
    "blocker": "fleet",
-   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). RE-CLAIMED 2026-08-17 for another course's full-catalog write (2,070 operations, plan digest c28b79c9327730a9d8e44cabf119d3626faa99bcfbed6f780a317f1477992b47). No other TimeBack writer until its completion comment. HumGeo's remaining work queues behind it. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip, released-tier traversal",
+   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). RE-CLAIMED 2026-08-17 for another course's full-catalog write (2,070 operations, plan digest c28b79c9327730a9d8e44cabf119d3626faa99bcfbed6f780a317f1477992b47). No other TimeBack writer until its completion comment. HumGeo's remaining work queues behind it. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal",
    "evidence": [
     {
      "type": "github-issue",
@@ -504,15 +504,12 @@
    "claim_id": "psych.registration",
    "section": "Psych",
    "status": "PLANNED",
-   "value": "CORRECTED 2026-08-17T13:21+09:00: platform visibility needs a COMPLETE registration PR \u2014 registry entry + course bundle wiring, plus a DEMO_CATALOG entry if a /demo card is wanted \u2014 not merely the prepared one-line paste. Deployed factory state: no Psych registry entry, no /demo card, tree HTTP 404, no current registration PR in ap-one. The chooser additionally applies readiness/release checks (courses.py)",
+   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold \u2014 U5 gate green, bank full, gate/practice snapshots walked",
    "evidence": [
     {
-     "type": "github-file",
-     "url": "https://github.com/InceptTrilogy/ap-one/blob/main/services/bff/data/feedback_courses.json"
-    },
-    {
-     "type": "live-api",
-     "url": "https://apone.inceptstore.com/api/courses"
+     "type": "git-branch",
+     "id": "f7b40cca on InceptTrilogy/ap-one",
+     "note": "staged registration branch"
     }
    ],
    "evidence_access": "SHARED"
