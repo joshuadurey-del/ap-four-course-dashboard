@@ -6,7 +6,7 @@ For the reader's agent. Every claim in the standings doc maps to a receipt below
 
 | Claim | Receipt |
 | --- | --- |
-| 432/474 slots hold current-byte official /v1/qc passes | Campaign state snapshot (orchestrator machine), status counter accepted=432 at 2026-08-17 ~13:10 KST; adopted-state verification published at [adoption-verifications](https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude) |
+| 451/474 slots hold current-byte official /v1/qc passes (463 accepted in state; 12 fail on pre-amendment pins) | Derived by run_issue21_bulk_qc._official_pass over the amended plan, 2026-08-18 04:2x KST, NOT by counting status=accepted; adopted-state verification published at [adoption-verifications](https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude) |
 | Residual runner draining live | Runner log line `{"completed": 100, "total": 142}`; single-writer lock held by the runner process; every log line carries `"corpus_writes": 0` |
 | Sealed plan (474 rows) | Plan sha256 `f64820223aecb7745c7fa16a9ddf694294264a2dd51c1e6a65e50fa4c97b1734` |
 | 30-slot amendment sealed + sandbox-proven | Amended plan sha256 `91310a145f03358b03dadb7a7b9d48235b8bf628f15e3d9ef09508fe6896edbc`; sandbox proof 425 prior passes intact / 49 selected; receipts + authority citation at [amend30-docs](https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude); Langfuse trace `c0b6a4f2b09a5b1494a87f474dcffd8e` (project incept-durey) |

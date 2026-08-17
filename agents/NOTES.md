@@ -1,8 +1,8 @@
 # Inputs for 4-course standings report (2026-08-17)
 ## HumGeo (this window, live 12:40 KST)
-- 431/474 regeneration slots hold official /v1/qc passes; residual runner at 99/142, alive
+- 451/474 seal-ready (463 accepted in state; 12 stale pre-amendment pins fail the official check); no runner alive as of 2026-08-18 04:2x KST
 - 30-slot amendment sealed + sandbox-proven; relaunch ready (prescreen OFF per owner ruling 12:11)
-- Then: 6 metadata rows QC -> pool release -> assemble -> fixture validation -> seal 482 (480 active + 2 superseded)
+- 6 metadata rows QC DONE 2026-08-18 03:25: 3 pass, 3 FAIL (S6+S7, C2, S8) -> pool RELEASED 04:23 with receipt -> remaining: 12 pin rows (owner), 10 cap-exhausted (owner), 1 rationale repair, 3 metadata repairs -> assemble -> fixtures -> seal 482 -> fresh WALK (owed; newest walk evidence is 08-12, pre-rebuild)
 - Corpus apply = Josh's explicit go (only owner gate left)
 - 741/759 structural-repair candidates staged, rescreens queued behind APWH pool use
 ## APWH (incept-2f 12:5x + incept-f6 pending)
