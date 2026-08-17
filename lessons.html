@@ -32,28 +32,46 @@
         </thead>
         <tbody>
           <tr>
-            <td><b>We generated a whole corpus without real QC.</b></td>
-            <td>The factory now judges every item inside generation. APWH holds strict repair-first, judge-once: 449 repairs applied, zero paid verdicts spent. Every HumGeo rebuild pass binds to the item's exact bytes.</td>
+            <td>
+              <strong class="lesson-title">We generated a whole corpus without real QC.</strong>
+              <span class="lesson-context">The HumGeo bank was minted through the factory's generation route. Its inline checks looked like QC and were not. Half the bank failed when the real sweep ran.</span>
+            </td>
+            <td><strong class="application-lead">The factory now judges every item inside generation.</strong> APWH holds a strict repair-first, judge-once order: 449 repairs applied, zero paid verdicts spent (<a href="https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2">commit</a>). Every HumGeo rebuild pass binds to the item's exact bytes (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude">receipts</a>).</td>
           </tr>
           <tr>
-            <td><b>Sealed plans can go stale against their own sources.</b></td>
-            <td>Plans now take receipted amendments as first-class input, with a sandbox proof required before execution: 425 prior passes intact, 49 slots selected.</td>
+            <td>
+              <strong class="lesson-title">Sealed plans can go stale against their own sources.</strong>
+              <span class="lesson-context">30 HumGeo slots were sealed against source copies missing already-committed skill tags. It cost a mid-campaign amendment.</span>
+            </td>
+            <td><strong class="application-lead">Plans now take receipted amendments as first-class input</strong>, with a sandbox proof required before execution: 425 prior passes intact, 49 slots selected (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude">receipts</a>).</td>
           </tr>
           <tr>
-            <td><b>We measured our shortcut before trusting it, and it failed.</b></td>
-            <td>A local pre-check judge missed 1 in 5 real failures in a 105-call test. It never gated anything and is now off entirely. Nothing gets judging authority without measurement.</td>
+            <td>
+              <strong class="lesson-title">We measured our shortcut before trusting it, and it failed.</strong>
+              <span class="lesson-context">A local pre-check judge was tested against official verdicts: 35 pairs, 3 votes each, 105 calls. It missed 1 in 5 real failures.</span>
+            </td>
+            <td><strong class="application-lead">It never gated anything, and as of today it is off entirely</strong> — every item goes straight to the factory judge. Standing rule: nothing gets judging authority without measurement.</td>
           </tr>
           <tr>
-            <td><b>Both deadlines slipped about a day, for a structural reason.</b></td>
-            <td>Four courses share one factory pool in strict series. The chain is now automated: each lane's close writes a receipt and the next lane fires on it.</td>
+            <td>
+              <strong class="lesson-title">Both deadlines slipped about a day, for a structural reason.</strong>
+              <span class="lesson-context">Four courses share one factory pool in strict series; upstream delay compounds downstream.</span>
+            </td>
+            <td><strong class="application-lead">The chain is now automated:</strong> each lane's close writes a receipt and the next lane fires on it, no human in the handoff (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/seat/20260817-apush-stage4-prep">Stage-4 prep receipts</a>).</td>
           </tr>
           <tr>
-            <td><b>Work sat parked that was executable immediately, twice.</b></td>
-            <td>Standing rule: everything buildable builds now; only the truly gated command waits. The 30-slot amendment was fully built and proven while its blocker still ran.</td>
+            <td>
+              <strong class="lesson-title">My agents parked executable work, twice.</strong>
+              <span class="lesson-context">Buildable work sat scheduled "after the blocker" when only one command needed the blocker. A lane also halted two hours for a decision the factory contract already answered.</span>
+            </td>
+            <td><strong class="application-lead">Standing rules force the split:</strong> everything buildable builds now; only the truly gated command waits. Receipt: the 30-slot amendment was fully built and proven while its blocker still ran (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude">timestamps</a>).</td>
           </tr>
           <tr>
-            <td><b>Corrective waves need semantic proof, not just structural success.</b></td>
-            <td>Our seal requires a byte-bound official pass per record plus a fingerprint manifest anyone can re-check.</td>
+            <td>
+              <strong class="lesson-title">Corrective waves need semantic proof, not just structural success.</strong>
+              <span class="lesson-context">The fleet's 57-item replacement wave shipped structurally valid twins with contaminated prompts (<a href="https://github.com/InceptTrilogy/ap-one/issues/642">#642</a>).</span>
+            </td>
+            <td><strong class="application-lead">Our seal requires a byte-bound official pass per record plus a fingerprint manifest anyone can re-check.</strong> #642's own acceptance criteria now demand the same bar — worth making it the standard for every corrective wave.</td>
           </tr>
         </tbody>
       </table>

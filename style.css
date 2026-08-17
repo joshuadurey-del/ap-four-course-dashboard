@@ -334,14 +334,17 @@ small { color: var(--muted); line-height: 1.45; }
 .lesson-table td { padding: 18px 20px; font-size: 14px; }
 
 .lesson-table td:first-child {
-  width: 36%;
+  width: 44%;
   background: #f3f6ff;
   color: #172554;
-  font-size: 15px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .lesson-table td:last-child { color: #35425a; line-height: 1.6; }
+.lesson-title { display: block; margin-bottom: 7px; font-size: 15px; line-height: 1.4; }
+.lesson-context { display: block; color: #52617a; font-size: 14px; line-height: 1.58; }
+.application-lead { color: #24375d; font-weight: 750; }
+.lesson-table td a { font-weight: 650; }
 .lesson-table tbody tr:hover td:first-child { background: #eaf0ff; }
 .lesson-table tbody tr:hover td:last-child { background: #f8faff; }
 
