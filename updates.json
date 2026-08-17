@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T08:18Z",
+  "course": "Cross",
+  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) — both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
+ },
+ {
   "ts": "2026-08-17T07:32Z",
   "course": "Cross",
   "text": "For-agents page now publishes sha256 digests for every machine-readable file (same convention as the Incept content-factory pages). The manifest hashes.json regenerates on every commit via a git hook, so digests cannot go stale. Agents can verify fetched bytes with one shasum command."
