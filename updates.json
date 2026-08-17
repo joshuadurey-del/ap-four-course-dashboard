@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T19:25Z",
+  "course": "HumGeo",
+  "text": "Factory pool RELEASED to the next course at 04:23 KST, with a receipt. The gate was checked only after the run had stopped and the surface was still, because a check run mid-flight reads at random and can show all-clear by luck. Releasing the pool is not a claim that HumGeo is finished, and the receipt says so in its own field: 12 rows still need the owner-approved pin fix, 10 have burned through the attempt cap and need the owner's number, 1 needs a rationale repair, and 3 metadata rows failed their check. The overnight tail converted two slots and moved seal-ready from 449 to 451, but it also pushed four more slots into the cap wall, so the owner's cap decision now covers 10 rather than 4. Both halves of that trade are on the receipt."
+ },
+ {
   "ts": "2026-08-17T18:31Z",
   "course": "HumGeo",
   "text": "Two corrections to our own published numbers, both found by running checks rather than reading state. First, the headline rebuild figure was 432 of 474 and is now 449. The state file counts 461 accepted, but twelve of those fail the runner's own eligibility check because they point at the pre-amendment version of the item they replace. 449 is the seal-ready number and 461 is not. Second, the six metadata rows had never actually been checked: the tool for it was assumed missing and was in fact already committed. Running it gives 3 passes and 3 failures, so three items of previously uncounted work now exist. Both claims carry the exact command to re-derive them. Nothing was sealed and no corpus was written."

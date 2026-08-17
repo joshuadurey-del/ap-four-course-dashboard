@@ -5,8 +5,8 @@
    "claim_id": "humgeo.rebuild.passes",
    "section": "HumGeo",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T03:31+09:00",
-   "value": "449/474 slots hold current-byte official /v1/qc passes. The state file counts 461 accepted; 12 of those fail the official check on one field (pre-amendment expected_old pin), so 449 is the seal-ready figure",
+   "observed_at": "2026-08-18T04:25+09:00",
+   "value": "451/474 slots hold current-byte official /v1/qc passes. The state file counts 463 accepted; 12 of those fail the official check on one field (pre-amendment expected_old pin), so 451 is the seal-ready figure",
    "scope": "regeneration campaign slots only",
    "excluded": [
     "6 metadata rows",
