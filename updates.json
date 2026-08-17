@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T07:32Z",
+  "course": "Cross",
+  "text": "For-agents page now publishes sha256 digests for every machine-readable file (same convention as the Incept content-factory pages). The manifest hashes.json regenerates on every commit via a git hook, so digests cannot go stale. Agents can verify fetched bytes with one shasum command."
+ },
+ {
   "ts": "2026-08-17T07:28Z",
   "course": "Cross",
   "text": "Langfuse evidence now clickable on the dashboard: the two cited traces (30-slot amendment, 759-item structural repair) carry direct trace URLs in the claims manifest, and the For-agents page links the Langfuse project entry point. Reminder: the links need the accepted org invite."

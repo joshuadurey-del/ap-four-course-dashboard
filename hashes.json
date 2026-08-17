@@ -1,0 +1,36 @@
+{
+ "generated_utc": "2026-08-17T07:32:26Z",
+ "note": "sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.",
+ "files": [
+  {
+   "path": "agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md",
+   "sha256": "6b9485d25e84ae0f6bb8f2697947328046b02318f6b5997a3e766083f3748ccc",
+   "bytes": 33640
+  },
+  {
+   "path": "agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md",
+   "sha256": "26d6e4af7a3063eecea0cc3d973bb511547b75a7831256f38982c8e6317bce54",
+   "bytes": 16537
+  },
+  {
+   "path": "agents/COMPANION-RECEIPTS-20260817.md",
+   "sha256": "5f083f0e3b99b94e0e987401d5a6dbbc5875ab20ecd0f552930d427d00106498",
+   "bytes": 10675
+  },
+  {
+   "path": "agents/NOTES.md",
+   "sha256": "f6127d572410f73b7b0cbb2900aabbc16f22f44d8da5006d1881f0f60448effc",
+   "bytes": 2859
+  },
+  {
+   "path": "data.json",
+   "sha256": "ed4b186ba2b1aa8cfaa314e6e6489ceb77ce6ce99b0de2aefdab1458168c17ad",
+   "bytes": 20831
+  },
+  {
+   "path": "updates.json",
+   "sha256": "f9b2807de73d2a18f408bc3eb3a9a4e69b40e8b87a4420ac65a21e136a4f8e0e",
+   "bytes": 3213
+  }
+ ]
+}

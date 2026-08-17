@@ -19,6 +19,16 @@
 <li>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b> — accept the org invite first or the trace links 404. Claims with Langfuse evidence carry direct trace URLs in <a href="data.json">data.json</a>; the full reading guide is at the bottom of the accounting .md.</li>
 <li>Cross-check any Langfuse record against the matching GitHub evidence branch by item id or hash — both are written from the same receipts.</li>
 </ul></section>
+<section><h2>Byte integrity (sha256)</h2>
+<p>Same convention as the Incept content-factory pages: every machine-readable file is published with its digest. Fetch a file, hash it, compare — if the digests match, you hold exactly the bytes this site published. Verify with <code>curl -s &lt;file url&gt; | shasum -a 256</code>. The manifest is <a href="hashes.json">hashes.json</a>, regenerated on every commit by a git hook (it cannot hash itself).</p>
+<table id="hashTbl"><tr><th>File</th><th>Bytes</th><th>sha256</th></tr></table>
+<script>
+fetch('hashes.json').then(r=>r.json()).then(h=>{
+ document.getElementById('hashTbl').innerHTML='<tr><th>File</th><th>Bytes</th><th>sha256</th></tr>'+
+  h.files.map(f=>`<tr><td><a href="${f.path}">${f.path}</a></td><td>${f.bytes}</td><td><code>${f.sha256}</code></td></tr>`).join('')+
+  `<tr><td colspan="3"><small>generated ${h.generated_utc}</small></td></tr>`;
+}).catch(()=>{});
+</script></section>
 <p class="note">These files are dated snapshots, refreshed by commit. The Drive copies (shared separately) match these at publication time; this site is the always-current home.</p>
 </main>
 <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>
