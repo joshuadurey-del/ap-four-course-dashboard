@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T18:45+09:00",
+ "snapshot": "2026-08-17T18:55+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -282,20 +282,24 @@
    "claim_id": "apwh.sweep",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T18:45+09:00",
-   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). SIZED 2026-08-17 18:45: ~23h (range 15.5-31h) because service_qc.py runs calls SEQUENTIALLY by contract -- its docstring: 'Calls are sequential on purpose -- the ~8-thread factory pool is shared.' This is the LARGEST leg in the campaign, bigger than the 362-item rebuild. WITHDRAWN: the earlier 3.3-7.8h figure assumed 6-8 concurrent, and the earlier claim that QC calls do not consume pool slots. /v1/qc creates no drain-checkable job, so pool-preflight cannot see it, but it contends for the same ~8 shared workers -- which is why the instrument serialises itself. PLAN.md W6 cites the 2026-08-12 sweep receipts for the no-contention claim; those receipts could not be located. Precondition unchanged: 446 items lack distractor_rationales, 137 lack skill_codes.",
+   "status_at": "2026-08-17T18:55+09:00",
+   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). SIZED FROM RECEIPTS 2026-08-17 18:55: 2.6h floor at 1 worker, 3-5h cautious pending a 10-item timed pilot. Basis VERIFIED independently in ~/.incept/day-20260811/i7-sweep/sweep-state.json — 321 batch receipts, 2,513 calls, continuous 2026-08-12T07:17:33Z to 14:20:58Z = 7.06h = 10.1 s/call incl. the 1.0s sleep. Skews higher for us: those items were structurally mixed and many failed fast at the structural gate, while our 933 will be structurally clean and run all content checks. TWO PRIOR FIGURES WITHDRAWN: 3.3-7.8h (assumed 6-8 concurrent) and ~23h (took service_qc.py's 'sequential on purpose - the ~8-thread factory pool is shared' docstring as binding; that line was written 08-10 under the wrong pool model and is superseded). Pool contention withdrawn on FACTORY BYTES, not the plan cite: app.py:5799 /v1/qc is a synchronous handler delegating inline to run_content_qc, no enqueue and no job; async_worker.py's ThreadPoolExecutor is generation-only (thread_name_prefix='gen-worker', ASYNC_GENERATE_MAX_WORKERS). Real shared throttle is the provider token budget, hence safe concurrency 3.",
    "evidence": [
     {
+     "type": "state-snapshot",
+     "note": "~/.incept/day-20260811/i7-sweep/sweep-state.json — 321 receipts, 2,513 calls, 7.06h span, verified by direct read 2026-08-17 18:52"
+    },
+    {
      "type": "code-pointer",
-     "note": "scripts/service_qc.py docstring + --sleep help ('the factory pool is shared'); pool-preflight.sh ('~8 threads shared with every consumer; saturating it starves them')"
+     "note": "engine/api/app.py:5799 (/v1/qc synchronous, delegates inline to run_content_qc); engine/api/async_worker.py (generation-only executor) @ pin 730c875d"
     },
     {
      "type": "dry-run-receipt",
-     "note": "materialize_qc_records.py dry run 2026-08-17 18:12 KST: naked_counts {distractor_rationales: 446, skill_codes: 137} of 933"
+     "note": "materialize_qc_records.py 2026-08-17 18:12: naked_counts {distractor_rationales: 446, skill_codes: 137} of 933"
     }
    ],
    "evidence_access": "NONE_YET",
-   "scope": "the single paid sweep over 933 items; contends with other courses for the shared factory pool"
+   "scope": "the single paid sweep over 933 items; does NOT contend for the generation worker pool"
   },
   {
    "claim_id": "apwh.local_done.walk",
@@ -387,6 +391,24 @@
     }
    ],
    "notes": "Reachability verified: 0 repair-routed items carry a fail that rationales+skill codes cannot clear; 313 of 362 regenerate-routed carry a hard fail (D8/D4/S10/D7) needing regeneration. The 446 remaining failures are now exactly the 446 items lacking distractor rationales: 362 regenerate-routed (gated on the pool) + 84 repair-routed (awaiting redraw skill codes). Every item holding BOTH rationales and a skill code now passes. The earlier 449 reading was understated by a stale enrichment file; the redraw fold at 18:10 corrected it to 487."
+  },
+  {
+   "claim_id": "apwh.sweep.expected_fail_rate",
+   "section": "APWH",
+   "status": "OBSERVED",
+   "observed_at": "2026-08-17T18:55+09:00",
+   "value": "~1/3 of structurally-clean items expected to fail at least one CONTENT check on first sweep",
+   "scope": "estimate from a different course's items, not a measurement of APWH's",
+   "excluded": [
+    "structural failures (cannot recur: our items must be structurally clean before the sweep starts)"
+   ],
+   "evidence": [
+    {
+     "type": "state-snapshot",
+     "note": "same 08-12 sweep state: 2,513 judged, 1,274 passed (50.7%); fail-code hits 805 structural vs 668 content. The factory gates content behind structure, so every content hit came from a structurally-clean item."
+    }
+   ],
+   "notes": "This is the largest remaining risk to the 08-21 date. Codes double-count per item, so ~1/3 is an upper bound on the item share."
   },
   {
    "claim_id": "apush.ledger",
