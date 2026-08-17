@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For agents</title><link rel="stylesheet" href="style.css"></head><body>
+<nav><span class="brand">AP Four-Course Dashboard</span>
+<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims explorer</a><a href="lessons.html" >Lessons</a><a href="agents.html" class="active">For agents</a></nav><main><h1>For agents</h1><p class="sub">Machine-readable entry points for Ilma's (or any) agent.</p>
+<section><h2>Point your agent here</h2>
+<p>Everything on this site is backed by machine-readable files. Fetch these raw URLs directly:</p>
+<table>
+<tr><th>File</th><th>What it is</th><th>Raw URL</th></tr>
+<tr><td><b>Agent accounting (.md)</b></td><td>The full evidence dossier: every claim with a stable id, status label (OBSERVED / PLANNED / BLOCKED / MISSING), full hashes, verification path, measured scope, access labels, and staleness rules. Includes the Langfuse reading guide.</td><td><a href="agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md">accounting .md</a></td></tr>
+<tr><td><b>Standings (.md)</b></td><td>The human report in markdown, for agents that want the narrative with links intact.</td><td><a href="agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md">standings .md</a></td></tr>
+<tr><td><b>Claims manifest (.json)</b></td><td>The same 36 claims as structured JSON — what the <a href="claims.html">claims explorer</a> renders.</td><td><a href="data.json">data.json</a></td></tr>
+<tr><td><b>Updates feed (.json)</b></td><td>Append-only event feed with GMT timestamps — what the Overview renders.</td><td><a href="updates.json">updates.json</a></td></tr>
+</table></section>
+<section><h2>How to read it</h2>
+<ul>
+<li>Start from any sentence in the standings, find its <code>claim_id</code> in the manifest, and follow the evidence entries.</li>
+<li><code>evidence_access</code> tells you what you can verify yourself: <b>SHARED</b> = live URL or Ilma-readable repo; <b>ILMA_HUMAN_ONLY</b> = the evidence repo (browser yes, bot tokens no); <b>SHARED_AFTER_INVITE</b> = Langfuse; <b>JOSH_MACHINE_ONLY</b> = named local artifact with a durable-copy plan; <b>NONE_YET</b> = planned work, no receipt can exist.</li>
+<li>Staleness: the manifest carries its snapshot time. A PLANNED claim older than 48 hours with no successor receipt is a question, not a fact.</li>
+<li>Cross-check any Langfuse record against the matching GitHub evidence branch by item id or hash — both are written from the same receipts.</li>
+</ul></section>
+<p class="note">These files are dated snapshots, refreshed by commit. The Drive copies (shared separately) match these at publication time; this site is the always-current home.</p>
+</main>
+<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>
