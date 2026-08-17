@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T18:35+09:00",
+ "snapshot": "2026-08-17T18:45+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -266,8 +266,8 @@
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T18:05+09:00",
-   "value": "362-item regeneration tail (260 multi-check + 66 content-class + 36 S10); dry-run receipt 362/362 OBSERVED; execution gated on the HumGeo pool release. Pool owner (incept-51) ETA as of 2026-08-17 18:00 KST: cautious 2026-08-18 EOD KST. Pool order: HumGeo, then APWH 362, then APUSH 74, then Psych.",
+   "status_at": "2026-08-17T18:45+09:00",
+   "value": "362-item regeneration tail (260 multi-check + 66 content-class + 36 S10); dry-run receipt 362/362 OBSERVED; execution gated on the HumGeo pool release. Pool owner (incept-51) ETA as of 2026-08-17 18:00 KST: cautious 2026-08-18 EOD KST. Sized 6-9h clean / 10-12h cautious (dispatch-board math, f6: 37 batches, 6-worker pace, 9-14 min/batch incl. preflight; verified 9.8 items/batch, inside the ruling-#55 cap of 10). Pool order: HumGeo, then APWH 362, then APUSH 74, then Psych.",
    "evidence": [
     {
      "type": "dry-run-receipt",
@@ -282,16 +282,20 @@
    "claim_id": "apwh.sweep",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T18:12+09:00",
-   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). PRECONDITION RE-MEASURED 2026-08-17 18:12 KST after the redraw fold: materialize_qc_records.py is fail-closed on naked items and still refuses — 446 items lack distractor_rationales, 137 lack skill_codes (of 933). The skill-code gap fell 207->137 by folding codes that were already resolved but unwritten; the rationale gap needs the regeneration tail (362) plus the remaining repair wave (84), so the sweep cannot be requested until both land.",
+   "status_at": "2026-08-17T18:45+09:00",
+   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). SIZED 2026-08-17 18:45: ~23h (range 15.5-31h) because service_qc.py runs calls SEQUENTIALLY by contract -- its docstring: 'Calls are sequential on purpose -- the ~8-thread factory pool is shared.' This is the LARGEST leg in the campaign, bigger than the 362-item rebuild. WITHDRAWN: the earlier 3.3-7.8h figure assumed 6-8 concurrent, and the earlier claim that QC calls do not consume pool slots. /v1/qc creates no drain-checkable job, so pool-preflight cannot see it, but it contends for the same ~8 shared workers -- which is why the instrument serialises itself. PLAN.md W6 cites the 2026-08-12 sweep receipts for the no-contention claim; those receipts could not be located. Precondition unchanged: 446 items lack distractor_rationales, 137 lack skill_codes.",
    "evidence": [
+    {
+     "type": "code-pointer",
+     "note": "scripts/service_qc.py docstring + --sleep help ('the factory pool is shared'); pool-preflight.sh ('~8 threads shared with every consumer; saturating it starves them')"
+    },
     {
      "type": "dry-run-receipt",
      "note": "materialize_qc_records.py dry run 2026-08-17 18:12 KST: naked_counts {distractor_rationales: 446, skill_codes: 137} of 933"
     }
    ],
    "evidence_access": "NONE_YET",
-   "scope": "the single paid sweep over 933 items; it is the only acceptance signal for APWH items"
+   "scope": "the single paid sweep over 933 items; contends with other courses for the shared factory pool"
   },
   {
    "claim_id": "apwh.local_done.walk",
