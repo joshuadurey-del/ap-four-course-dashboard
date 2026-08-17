@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T19:50+09:00",
+ "snapshot": "2026-08-17T23:40+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -234,8 +234,8 @@
    "claim_id": "apwh.repairs.applied",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:00+09:00",
-   "value": "487/571 rationale repairs applied to the canonical bank, push-gate verified (top-up +38 at 17:56)",
+   "observed_at": "2026-08-17T23:40+09:00",
+   "value": "487 rationale repairs applied to the canonical bank and all 487 banked, push-gate verified (top-up +38 at 2026-08-17 17:56 KST). The DENOMINATOR is not fixed: 571 today, but settling between 501 and 571 as unresolved repair-routed items reroute to regeneration. 84 remain unapplied, of which 70 await a skill code from redraw round 4.",
    "evidence": [
     {
      "type": "git-commit",
@@ -266,17 +266,16 @@
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T18:45+09:00",
-   "value": "362-item regeneration tail (260 multi-check + 66 content-class + 36 S10); dry-run receipt 362/362 OBSERVED; execution gated on the HumGeo pool release. Pool owner (incept-51) ETA as of 2026-08-17 18:00 KST: cautious 2026-08-18 EOD KST. Sized 6-9h clean / 10-12h cautious (dispatch-board math, f6: 37 batches, 6-worker pace, 9-14 min/batch incl. preflight; verified 9.8 items/batch, inside the ruling-#55 cap of 10). Pool order: HumGeo, then APWH 362, then APUSH 74, then Psych.",
+   "status_at": "2026-08-17T23:40+09:00",
+   "value": "Regeneration tail will settle between 362 and 432 items, not a fixed 362. Mechanism: a repair-routed item that never gets a skill code cannot clear the S2 check, and the factory's own S2 consequence routes it to regeneration instead. 70 repair-routed items still lack a code and are being drawn in redraw round 4 (in flight, PID 99723, 120 holdouts). Round 4 resolving all 70 gives the 362 floor; resolving none gives the 432 ceiling. Correspondingly the repair route settles between 501 and 571. Execution still gated on the HumGeo pool release, cautious 2026-08-18 EOD KST per the pool owner. NOTE: the dispatch board quotes ~440+/-5 for this tail, above my computed 432 ceiling; unreconciled, flagged to that seat rather than picking a number.",
    "evidence": [
     {
      "type": "dry-run-receipt",
-     "url": "https://drive.google.com/file/d/1zYWZyNCv_KK2HuTJJbcui3S34kqmCyXA/view",
-     "note": "sanitized, 362/362"
+     "note": "repair-queue-933.json routes on disk 2026-08-17 23:35 KST: 571 repair / 362 regenerate; 70 repair-routed items carry no resolved skill code across all tagger states (main+supplement+r2+r3), all 70 present in the round-4 plan"
     }
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
-   "scope": "regenerate-routed items only; 313 of the 362 carry a hard structural fail (D8/D4/S10/D7) that repairs cannot clear"
+   "scope": "regenerate-routed items; the count is a live function of redraw-round outcomes, not a fixed target"
   },
   {
    "claim_id": "apwh.sweep",
