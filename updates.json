@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T10:41Z",
+  "course": "Cross",
+  "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name \u2014 they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
+ },
+ {
   "ts": "2026-08-17T10:30Z",
   "course": "Cross",
   "text": "Owner directive: the overview now shows only the 10 most recent updates with a link to the new full update-history page. Overview card figures refreshed to the live claims (HumGeo 452/474, APWH 796/933 codes and 487/571 repairs)."
