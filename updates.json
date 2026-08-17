@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T09:28Z",
+  "course": "HumGeo",
+  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged \u2014 release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
+ },
+ {
   "ts": "2026-08-17T09:23Z",
   "course": "Cross",
   "text": "Owner directive: every course's ETA section now carries an explicit definition of done \u2014 what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."

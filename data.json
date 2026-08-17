@@ -174,13 +174,18 @@
    "claim_id": "humgeo.gates.659",
    "section": "HumGeo",
    "status": "BLOCKED",
-   "status_at": "2026-08-17T18:15+09:00",
+   "status_at": "2026-08-17T18:28+09:00",
    "blocker": "fleet",
-   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent \u2014 live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal",
+   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent \u2014 live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal CORRIDOR SELECTION POSTED 2026-08-17: TimeBack-direct (no Platform3 bridge), owner comment 5314243106 on #659; flip criterion unchanged.",
    "evidence": [
     {
      "type": "github-issue",
      "url": "https://github.com/InceptTrilogy/ap-one/issues/659"
+    },
+    {
+     "type": "github-comment",
+     "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5314243106",
+     "note": "owner corridor selection, posted on explicit go"
     }
    ],
    "evidence_access": "SHARED"
