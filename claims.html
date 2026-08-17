@@ -22,7 +22,7 @@ function render(){
  const rows=DATA.claims.filter(c=>(course==='All'||c.section===course)&&(status==='All'||c.status===status));
  document.getElementById('tbl').innerHTML='<tr><th>Claim</th><th>Status</th><th>Value</th><th>Access</th><th>Evidence</th></tr>'+
   rows.map(c=>{
-   const ev=(c.evidence||[]).map(e=>e.url?`<a href="${e.url}">${e.type}</a>`:(e.id?`<code>${String(e.id).slice(0,18)}…</code>`:(e.location||e.type||''))).join(' · ');
+   const ev=(c.evidence||[]).map(e=>e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.type}</a>`:(e.id?`<code>${String(e.id).slice(0,18)}…</code>`:(e.location||e.type||''))).join(' · ');
    return `<tr><td><code>${c.claim_id}</code><br><small>${c.observed_at||''}</small></td>
    <td><span class="badge ${SC[c.status]||'b-gray'}">${c.status}</span></td>
    <td>${c.value||''}${c.scope?`<br><small><b>scope:</b> ${c.scope}</small>`:''}${(c.excluded&&c.excluded.length)?`<br><small><b>excluded:</b> ${c.excluded.join('; ')}</small>`:''}</td>
