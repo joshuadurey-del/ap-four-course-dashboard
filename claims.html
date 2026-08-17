@@ -8,7 +8,17 @@
 <script>
 const SC={OBSERVED:'b-green',PLANNED:'b-blue',BLOCKED:'b-amber',MISSING:'b-red',DERIVED:'b-purple'};
 let DATA=null, course='All', status='All';
-fetch('data.json').then(r=>r.json()).then(d=>{DATA=d;mkFilters();render();});
+fetch('data.json').then(r=>r.json()).then(d=>{DATA=d;mkFilters();render();jump();});
+function jump(){
+ const id=decodeURIComponent(location.hash.slice(1));
+ if(!id) return;
+ const row=document.getElementById(id);
+ if(!row) return;
+ row.scrollIntoView({block:'center'});
+ row.style.outline='3px solid #2558d8';
+ setTimeout(()=>{row.style.outline='';},4000);
+}
+window.addEventListener('hashchange',jump);
 function mkFilters(){
  const cs=['All',...new Set(DATA.claims.map(c=>c.section))];
  const ss=['All',...new Set(DATA.claims.map(c=>c.status))];
@@ -24,7 +34,7 @@ function render(){
   rows.map(c=>{
    const ev=(c.evidence||[]).map(e=>e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.type}</a>`:(e.id?`<code>${String(e.id).slice(0,18)}…</code>`:(e.location||e.type||''))).join(' · ');
    const when=c.observed_at?`observed ${c.observed_at}`:(c.status_at?`status set ${c.status_at}`:'<b>no row date</b>');
-   return `<tr><td><code>${c.claim_id}</code><br><small>${when}${c.observed_note?` <i>(${c.observed_note})</i>`:''}</small></td>
+   return `<tr id="claim-${c.claim_id}"><td><a href="#claim-${c.claim_id}" style="text-decoration:none"><code>${c.claim_id}</code></a><br><small>${when}${c.observed_note?` <i>(${c.observed_note})</i>`:''}</small></td>
    <td><span class="badge ${SC[c.status]||'b-gray'}">${c.status}</span></td>
    <td>${c.value||''}${c.scope?`<br><small><b>scope:</b> ${c.scope}</small>`:''}${(c.excluded&&c.excluded.length)?`<br><small><b>excluded:</b> ${c.excluded.join('; ')}</small>`:''}</td>
    <td><small>${c.evidence_access||''}</small></td><td>${ev}</td></tr>`;

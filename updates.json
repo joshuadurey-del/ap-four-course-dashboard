@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T09:01Z",
+  "course": "Cross",
+  "text": "Every number on every course page is now a link into the claims explorer, which scrolls to and highlights the exact claim row with its receipts. APWH figures refreshed to the live campaign state (487/571 repairs, 791/933 skill codes, 449/933 structural-screen passes). Fleet-wide status pull completed: all six agent seats reported in the seven-state claim shape."
+ },
+ {
   "ts": "2026-08-17T08:58Z",
   "course": "Cross",
   "text": "Receipt audit per owner directive: every numeric claim now carries evidence. The conclude-and-relaunch ceremony receipts (backup sha256, atomic re-bind, preflight, amended-slot reconciliation, grinder code trails) are published on the evidence repo and linked from the HumGeo execution claim; the Drive backup folder is linked directly. PLANNED numbers now cite the receipt their number originates from, marked NONE_YET for the execution half."
