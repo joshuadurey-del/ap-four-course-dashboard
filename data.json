@@ -20,7 +20,7 @@
     },
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude",
      "commit": "b6f5f1e8f585633f16f6733f8b9b315a9426d3ac"
     }
    ],
@@ -62,7 +62,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude",
      "commit": "d1f7902ddefa510b5e2dc970f96ecbf001b167c6"
     },
     {
@@ -121,7 +121,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude",
      "note": "482 = 474 plan rows + 6 metadata + 2 superseded; target defined by the sealed amended plan (sha 91310a14...)"
     }
    ],
@@ -141,7 +141,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370/evidence/humgeo/20260816-052500__claude__humgeo--repair-docs/claude",
      "commit": "b26d5a2ff43de8820e729c28c23e236abad3c370"
     },
     {
@@ -164,7 +164,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370/evidence/humgeo/20260816-052500__claude__humgeo--repair-docs/claude",
      "note": "741 = staged-candidate receipts (same receipts as repair759.staged); official rescreen NONE_YET"
     }
    ],
@@ -530,7 +530,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/564d0866336d71bb467b28d02d1d123e4adf82ee",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/564d0866336d71bb467b28d02d1d123e4adf82ee/evidence/psych/20260817-local-host/claude",
      "commit": "564d086",
      "note": "re-walked after the fleet repair train: 221/221 green at rebuilt bundle"
     }
@@ -570,7 +570,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/564d0866336d71bb467b28d02d1d123e4adf82ee",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/564d0866336d71bb467b28d02d1d123e4adf82ee/evidence/psych/20260817-local-host/claude",
      "commit": "564d086",
      "note": "re-walked after the fleet repair train: 221/221 green at rebuilt bundle"
     }
@@ -658,7 +658,7 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/f05a665d52a31707a72c2d76d5271b2f5a02db60",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/f05a665d52a31707a72c2d76d5271b2f5a02db60/evidence/seat/20260817-apush-stage4-prep",
      "commit": "f05a665d52a31707a72c2d76d5271b2f5a02db60"
     }
    ],
