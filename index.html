@@ -2,23 +2,20 @@
 <title>Overview — all four courses</title><link rel="stylesheet" href="style.css"></head><body>
 <nav><span class="brand">AP Four-Course Dashboard</span>
 <a href="index.html" class="active">Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims explorer</a><a href="lessons.html" >Lessons</a><a href="agents.html" >For agents</a></nav><main><h1>Overview — all four courses</h1><p class="sub">Live standings for Josh Durey's four AP courses. Every number links to its receipt; the <a href='claims.html'>claims explorer</a> holds the full evidence map.</p>
-<section><h2>Most recent updates <span id="newcount"></span></h2>
-<table id="upd"><tr><th style="width:130px">When</th><th style="width:80px">Course</th><th>What happened</th></tr></table>
-<p><small id="lastvisit"></small></p>
+<section><h2>Most recent updates</h2>
+<p id="lastupd" style="font-size:14px"></p>
+<table id="upd"><tr><th style="width:150px">When (your time)</th><th style="width:80px">Course</th><th>What happened</th></tr></table>
 <script>
-const KEY='ap4-last-visit';
-const last=Number(localStorage.getItem(KEY)||0);
 function rel(ms){const m=Math.round((Date.now()-ms)/60000);
  if(m<60)return m+'m ago'; const h=Math.round(m/60); if(h<48)return h+'h ago'; return Math.round(h/24)+'d ago';}
+function loc(ms){return new Date(ms).toLocaleString(undefined,{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});}
 fetch('updates.json').then(r=>r.json()).then(us=>{
- let fresh=0;
- document.getElementById('upd').innerHTML='<tr><th style="width:130px">When</th><th style="width:80px">Course</th><th>What happened</th></tr>'+
-  us.map(u=>{const t=Date.parse(u.ts); const isNew=t>last; if(isNew&&last)fresh++;
-   return `<tr${isNew&&last?' style="background:#fffbeb"':''}><td>${u.ts.replace('T',' ').replace('Z',' GMT')}<br><small>${rel(t)}</small>${isNew&&last?' <span class="badge b-amber">NEW</span>':''}</td><td>${u.course}</td><td>${u.text}</td></tr>`;
+ const newest=Math.max(...us.map(u=>Date.parse(u.ts)));
+ document.getElementById('lastupd').innerHTML=`<b>Last updated:</b> ${loc(newest)} <span class="badge b-blue">${rel(newest)}</span> <small>(shown in your local time)</small>`;
+ document.getElementById('upd').innerHTML='<tr><th style="width:150px">When (your time)</th><th style="width:80px">Course</th><th>What happened</th></tr>'+
+  us.map(u=>{const ms=Date.parse(u.ts);
+   return `<tr><td>${loc(ms)}<br><small>${rel(ms)}</small></td><td>${u.course}</td><td>${u.text}</td></tr>`;
   }).join('');
- if(last)document.getElementById('newcount').innerHTML=fresh?`<span class="badge b-amber">${fresh} new since your last visit</span>`:'<span class="badge b-green">nothing new since your last visit</span>';
- document.getElementById('lastvisit').textContent=last?('Your previous visit: '+new Date(last).toUTCString()):'First visit — from now on, changes since your last visit get a NEW badge.';
- localStorage.setItem(KEY,String(Date.now()));
 });
 </script></section>
 <div class="cards">
