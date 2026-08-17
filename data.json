@@ -685,10 +685,16 @@
    "claim_id": "humgeo.pin12.staged",
    "section": "HumGeo",
    "status": "BLOCKED",
-   "status_at": "2026-08-18T02:48+09:00",
+   "status_at": "2026-08-18T02:52+09:00",
    "blocker": "owner",
-   "value": "12 accepted records fail sealed-row binding because the FLEET moved their swap-target corpus rows after our plan sealed (containment wave 08-14). The generated content is verified valid (contract and request hashes match; judged fingerprints intact) \u2014 only the provenance pin is stale. Fix drafted as a record-pin amendment (12 records, pin-only, staged NOT executed): first-of-shape ceremony, so it waits for explicit owner approval, per the standing rule that new ceremony shapes stay explicit",
-   "evidence": [],
+   "value": "12 accepted records fail the official current-byte check on exactly one field: they stamp PRE-AMENDMENT expected_old pins (all 12 are rows the 30-slot amendment re-pinned; the records were generated before it). CAUSE CORRECTED 08-18: an earlier version of this claim blamed fleet corpus writes \u2014 that was unverified inference and is withdrawn; no fleet involvement. Seal-ready is therefore 449 of 474, not 461. Content validity of all 12 is verified (contract and request hashes match the amended rows; judged fingerprints intact). Fix staged as a pin-only record amendment \u2014 first-of-shape ceremony, held for explicit owner approval",
+   "evidence": [
+    {
+     "type": "staged-draft",
+     "location": "day-20260818/humgeo-pin-amendment/record-pin-amendment-12-DRAFT.json (orchestrator machine; publishes to the evidence repo on owner approval)",
+     "note": "pin-only, 12 records, invariance checks recorded in the draft"
+    }
+   ],
    "evidence_access": "NONE_YET"
   }
  ]
