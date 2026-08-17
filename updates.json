@@ -1,13 +1,18 @@
 [
  {
+  "ts": "2026-08-17T18:31Z",
+  "course": "HumGeo",
+  "text": "Two corrections to our own published numbers, both found by running checks rather than reading state. First, the headline rebuild figure was 432 of 474 and is now 449. The state file counts 461 accepted, but twelve of those fail the runner's own eligibility check because they point at the pre-amendment version of the item they replace. 449 is the seal-ready number and 461 is not. Second, the six metadata rows had never actually been checked: the tool for it was assumed missing and was in fact already committed. Running it gives 3 passes and 3 failures, so three items of previously uncounted work now exist. Both claims carry the exact command to re-derive them. Nothing was sealed and no corpus was written."
+ },
+ {
   "ts": "2026-08-17T17:52Z",
   "course": "HumGeo",
-  "text": "Cause correction on the 12-record finding, one hour after publishing it: the stale pins are from OUR OWN 30-slot amendment (the records were generated before it re-pinned their rows) \u2014 not from fleet corpus writes, which was unverified inference and is withdrawn. Seal-ready reads 449 of 474 until the owner rules on the staged pin-only fix. Also overnight: single ownership of the HumGeo chain passed to the fresh orchestrator session after a two-driver race was caught by the dispatch board; all receipts intact, zero corpus writes, both sessions' work preserved."
+  "text": "Cause correction on the 12-record finding, one hour after publishing it: the stale pins are from OUR OWN 30-slot amendment (the records were generated before it re-pinned their rows) — not from fleet corpus writes, which was unverified inference and is withdrawn. Seal-ready reads 449 of 474 until the owner rules on the staged pin-only fix. Also overnight: single ownership of the HumGeo chain passed to the fresh orchestrator session after a two-driver race was caught by the dispatch board; all receipts intact, zero corpus writes, both sessions' work preserved."
  },
  {
   "ts": "2026-08-17T17:48Z",
   "course": "HumGeo",
-  "text": "Overnight: the amended relaunch exited at 02:38 KST with 29 of 42 slots converted \u2014 461 of 474 now hold official passes. The 13 leftovers are fully classified: 6 were revived by receipted adjudication and a conversion run is converting them now; 7 are grinder-class (the generator cannot satisfy their contracts within the 120-try cap) and get a root-cause dossier in the morning. One new finding: 12 already-accepted records point at swap-targets the fleet changed under us on 08-14 \u2014 their content is verified intact and a pin-only fix is staged, held for the owner because it is a first-of-its-kind ceremony."
+  "text": "Overnight: the amended relaunch exited at 02:38 KST with 29 of 42 slots converted — 461 of 474 now hold official passes. The 13 leftovers are fully classified: 6 were revived by receipted adjudication and a conversion run is converting them now; 7 are grinder-class (the generator cannot satisfy their contracts within the 120-try cap) and get a root-cause dossier in the morning. One new finding: 12 already-accepted records point at swap-targets the fleet changed under us on 08-14 — their content is verified intact and a pin-only fix is staged, held for the owner because it is a first-of-its-kind ceremony."
  },
  {
   "ts": "2026-08-17T14:45Z",
@@ -32,7 +37,7 @@
  {
   "ts": "2026-08-17T10:46Z",
   "course": "Cross",
-  "text": "Second pass on the evidence links after an APWH-seat audit caught the first pass half-broken: 14 SHA links resolved but landed on the repository root \u2014 the original symptom, invisible to a link checker. Every evidence link now carries its full directory path, and each one was verified against the commit's actual bytes (git cat-file), not by whether it returns a page. Honesty note on the diagnosis: the browser failure on slash-named branches is the owner's observation; nobody has measured GitHub's resolver from the shell (the repo is private, so logged-out checks 404 on everything). The SHA form is used because a 40-character commit cannot be ambiguous \u2014 a structural argument, not a measurement."
+  "text": "Second pass on the evidence links after an APWH-seat audit caught the first pass half-broken: 14 SHA links resolved but landed on the repository root — the original symptom, invisible to a link checker. Every evidence link now carries its full directory path, and each one was verified against the commit's actual bytes (git cat-file), not by whether it returns a page. Honesty note on the diagnosis: the browser failure on slash-named branches is the owner's observation; nobody has measured GitHub's resolver from the shell (the repo is private, so logged-out checks 404 on everything). The SHA form is used because a 40-character commit cannot be ambiguous — a structural argument, not a measurement."
  },
  {
   "ts": "2026-08-17T10:10Z",
@@ -42,7 +47,7 @@
  {
   "ts": "2026-08-17T10:41Z",
   "course": "Cross",
-  "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name \u2014 they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
+  "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name — they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
  },
  {
   "ts": "2026-08-17T10:30Z",
@@ -62,7 +67,7 @@
  {
   "ts": "2026-08-17T09:44Z",
   "course": "Cross",
-  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics \u2014 the only italics on the pages. Content, numbers, and caveats unchanged."
+  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics — the only italics on the pages. Content, numbers, and caveats unchanged."
  },
  {
   "ts": "2026-08-17T09:55Z",
@@ -77,7 +82,7 @@
  {
   "ts": "2026-08-17T09:35Z",
   "course": "HumGeo",
-  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it \u2014 dates move on receipts here, in either direction."
+  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it — dates move on receipts here, in either direction."
  },
  {
   "ts": "2026-08-17T09:35Z",
@@ -87,22 +92,22 @@
  {
   "ts": "2026-08-17T09:31Z",
   "course": "Psych",
-  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page \u2014 bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
+  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page — bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
  },
  {
   "ts": "2026-08-17T09:28Z",
   "course": "HumGeo",
-  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged \u2014 release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
+  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged — release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
  },
  {
   "ts": "2026-08-17T09:23Z",
   "course": "Cross",
-  "text": "Owner directive: every course's ETA section now carries an explicit definition of done \u2014 what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
+  "text": "Owner directive: every course's ETA section now carries an explicit definition of done — what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
  },
  {
   "ts": "2026-08-17T09:15Z",
   "course": "HumGeo",
-  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external \u2014 it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
+  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external — it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
  },
  {
   "ts": "2026-08-17T09:12Z",
@@ -137,7 +142,7 @@
  {
   "ts": "2026-08-17T08:18Z",
   "course": "Cross",
-  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) \u2014 both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
+  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) — both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
  },
  {
   "ts": "2026-08-17T07:32Z",

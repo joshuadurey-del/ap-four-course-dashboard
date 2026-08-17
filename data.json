@@ -5,8 +5,8 @@
    "claim_id": "humgeo.rebuild.passes",
    "section": "HumGeo",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T13:20+09:00",
-   "value": "432/474 slots hold current-byte official /v1/qc passes",
+   "observed_at": "2026-08-18T03:31+09:00",
+   "value": "449/474 slots hold current-byte official /v1/qc passes. The state file counts 461 accepted; 12 of those fail the official check on one field (pre-amendment expected_old pin), so 449 is the seal-ready figure",
    "scope": "regeneration campaign slots only",
    "excluded": [
     "6 metadata rows",
@@ -24,7 +24,8 @@
      "commit": "b6f5f1e8f585633f16f6733f8b9b315a9426d3ac"
     }
    ],
-   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_VIA_DRIVE"
+   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_VIA_DRIVE",
+   "verification": "run_issue21_bulk_qc.py --plan <amended> --plan-only reports official_current_byte_passes_reused=449, selected=25; the runner's own _official_pass check, not the state file's status field"
   },
   {
    "claim_id": "humgeo.residual.draining",
@@ -73,7 +74,7 @@
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE",
-   "observed_note": "sha recomputed from bytes \u00b7 date-only in source; midnight assumed"
+   "observed_note": "sha recomputed from bytes · date-only in source; midnight assumed"
   },
   {
    "claim_id": "humgeo.amendment.execution",
@@ -100,9 +101,8 @@
   {
    "claim_id": "humgeo.metadata6.qc",
    "section": "HumGeo",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T15:09:35+09:00",
-   "value": "6 metadata rows through official /v1/qc; pre-POST intents written",
+   "status": "OBSERVED",
+   "value": "all 6 metadata rows COMPLETED official /v1/qc: 3 pass (5.8-f1-r00, 5.8-f1-a00, 5.8-f2-a02), 3 FAIL (5.8-f1-r01 S6+S7, 5.8-f2-a00 C2, 5.8-f2-a01 S8). Verdicts persisted with judged fingerprints on all 6",
    "evidence": [
     {
      "type": "qc-intents",
@@ -110,7 +110,13 @@
      "note": "sanitized copy"
     }
    ],
-   "evidence_access": "SHARED_VIA_DRIVE"
+   "evidence_access": "SHARED_VIA_DRIVE",
+   "observed_at": "2026-08-18T03:31+09:00",
+   "scope": "the 6 metadata candidate records",
+   "excluded": [
+    "repair or regeneration of the 3 failures — not yet scoped"
+   ],
+   "verification": "scripts/service_qc.py --items issue21-metadata-candidates-6 --refresh (committed factory-QC runner, POST /v1/qc); re-read each record's qc.service.passed"
   },
   {
    "claim_id": "humgeo.seal.manifest",
@@ -176,7 +182,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-17T18:28+09:00",
    "blocker": "fleet",
-   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent \u2014 live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal CORRIDOR SELECTION POSTED 2026-08-17: TimeBack-direct (no Platform3 bridge), owner comment 5314243106 on #659; flip criterion unchanged.",
+   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent — live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal CORRIDOR SELECTION POSTED 2026-08-17: TimeBack-direct (no Platform3 bridge), owner comment 5314243106 on #659; flip criterion unchanged.",
    "evidence": [
     {
      "type": "github-issue",
@@ -210,7 +216,7 @@
    "section": "HumGeo",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 \u2014 Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
+   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 — Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
    "scope": "deployed surface anchored to commit e4b03bc441e8a6870de86ca2368043016f03213e",
    "excluded": [],
    "evidence": [
@@ -282,11 +288,11 @@
    "section": "APWH",
    "status": "PLANNED",
    "status_at": "2026-08-17T19:00+09:00",
-   "value": "PROVENANCE AUDITED 2026-08-17 19:00 (owner challenge: canonical factory machinery or a local invention?): CANONICAL. 2,499 of 2,513 records carry spend_notes naming paid /v1/qc content calls; exactly 1 batch (14 records) was seeded from pre-existing probe verdicts at zero spend and labels itself so; batch notes use service_qc.py's own --limit flag (the sanctioned instrument that imports factory bytes); fail codes are the factory's contract ids (STRUCT_S1/S2/D1/D4, D2, C1/C2/C3, S3/S6/S7/S8). Not a hand-rolled harness. paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). SIZED FROM RECEIPTS 2026-08-17 18:55: 3.1h floor at 1 worker, 3-5h cautious pending a 10-item timed pilot. Basis VERIFIED independently in ~/.incept/day-20260811/i7-sweep/sweep-state.json \u2014 321 batch receipts, 2,513 calls, continuous 2026-08-12T07:17:33Z to 14:20:58Z = 7.06h span; per-item cost 11.9s from the 220 batches that state their own duration (1,614 items / 19,215s). METHOD CORRECTION: the earlier 10.1-10.2 s/call figure divided the whole span by the record count -- time per record, not call cost, and it silently included 14 records that were never called. Idle time was NOT the problem (only 0.09h of gaps >5min across the run); dividing by the span was. incept-51 independently re-derived 11.9s from the same bytes and matched. Skews higher for us: those items were structurally mixed and many failed fast at the structural gate, while our 933 will be structurally clean and run all content checks. TWO PRIOR FIGURES WITHDRAWN: 3.3-7.8h (assumed 6-8 concurrent) and ~23h (took service_qc.py's 'sequential on purpose - the ~8-thread factory pool is shared' docstring as binding; that line was written 08-10 under the wrong pool model and is superseded). Pool contention withdrawn on FACTORY BYTES, not the plan cite: app.py:5799 /v1/qc is a synchronous handler delegating inline to run_content_qc, no enqueue and no job; async_worker.py's ThreadPoolExecutor is generation-only (thread_name_prefix='gen-worker', ASYNC_GENERATE_MAX_WORKERS). Real shared throttle is the provider token budget, hence safe concurrency 3.",
+   "value": "PROVENANCE AUDITED 2026-08-17 19:00 (owner challenge: canonical factory machinery or a local invention?): CANONICAL. 2,499 of 2,513 records carry spend_notes naming paid /v1/qc content calls; exactly 1 batch (14 records) was seeded from pre-existing probe verdicts at zero spend and labels itself so; batch notes use service_qc.py's own --limit flag (the sanctioned instrument that imports factory bytes); fail codes are the factory's contract ids (STRUCT_S1/S2/D1/D4, D2, C1/C2/C3, S3/S6/S7/S8). Not a hand-rolled harness. paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). SIZED FROM RECEIPTS 2026-08-17 18:55: 3.1h floor at 1 worker, 3-5h cautious pending a 10-item timed pilot. Basis VERIFIED independently in ~/.incept/day-20260811/i7-sweep/sweep-state.json — 321 batch receipts, 2,513 calls, continuous 2026-08-12T07:17:33Z to 14:20:58Z = 7.06h span; per-item cost 11.9s from the 220 batches that state their own duration (1,614 items / 19,215s). METHOD CORRECTION: the earlier 10.1-10.2 s/call figure divided the whole span by the record count -- time per record, not call cost, and it silently included 14 records that were never called. Idle time was NOT the problem (only 0.09h of gaps >5min across the run); dividing by the span was. incept-51 independently re-derived 11.9s from the same bytes and matched. Skews higher for us: those items were structurally mixed and many failed fast at the structural gate, while our 933 will be structurally clean and run all content checks. TWO PRIOR FIGURES WITHDRAWN: 3.3-7.8h (assumed 6-8 concurrent) and ~23h (took service_qc.py's 'sequential on purpose - the ~8-thread factory pool is shared' docstring as binding; that line was written 08-10 under the wrong pool model and is superseded). Pool contention withdrawn on FACTORY BYTES, not the plan cite: app.py:5799 /v1/qc is a synchronous handler delegating inline to run_content_qc, no enqueue and no job; async_worker.py's ThreadPoolExecutor is generation-only (thread_name_prefix='gen-worker', ASYNC_GENERATE_MAX_WORKERS). Real shared throttle is the provider token budget, hence safe concurrency 3.",
    "evidence": [
     {
      "type": "state-snapshot",
-     "note": "~/.incept/day-20260811/i7-sweep/sweep-state.json \u2014 321 receipts, 2,513 calls, 7.06h span, verified by direct read 2026-08-17 18:52"
+     "note": "~/.incept/day-20260811/i7-sweep/sweep-state.json — 321 receipts, 2,513 calls, 7.06h span, verified by direct read 2026-08-17 18:52"
     },
     {
      "type": "code-pointer",
@@ -314,13 +320,13 @@
     {
      "type": "git-commit",
      "url": "https://github.com/joshuadurey-del/ap-ss-evidence/commit/483efc1",
-     "note": "walk receipts \u2014 durable, in the evidence repo, independent of any ap-one branch"
+     "note": "walk receipts — durable, in the evidence repo, independent of any ap-one branch"
     },
     {
      "type": "git-tag",
      "url": "https://github.com/InceptTrilogy/ap-one/commit/aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
      "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "the serving path used for the 08-12 walk. RETIRED 2026-08-17 to this tag, PUSHED and remote-verified (no longer local-only). CORRECTION: this evidence row previously said 'superseded by upstream ap-one main landed placement machinery (source pin 2129eb94, per STATUS.md)'. That is FALSE and was verified false: 2129eb94 is a source-content pin in ilmych/apwh-blueprint-build, not an ap-one commit, and origin/main 13501daa does not contain build_apworld_demo_tree.py, test_apwh_study_skills_demo_tree.py, or the apwh demo_tree.json. The commit was 1 unmerged commit, 5,639 insertions incl. 142 lines of tests, which is why it was tagged rather than dropped. | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 \u2014 a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
+     "note": "the serving path used for the 08-12 walk. RETIRED 2026-08-17 to this tag, PUSHED and remote-verified (no longer local-only). CORRECTION: this evidence row previously said 'superseded by upstream ap-one main landed placement machinery (source pin 2129eb94, per STATUS.md)'. That is FALSE and was verified false: 2129eb94 is a source-content pin in ilmych/apwh-blueprint-build, not an ap-one commit, and origin/main 13501daa does not contain build_apworld_demo_tree.py, test_apwh_study_skills_demo_tree.py, or the apwh demo_tree.json. The commit was 1 unmerged commit, 5,639 insertions incl. 142 lines of tests, which is why it was tagged rather than dropped. | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 — a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+JOSH_MACHINE_ONLY",
@@ -355,7 +361,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-17T18:00+09:00",
    "blocker": "fleet",
-   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration \u2014 the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other \u2014 whoever resumes #591 needs the tag.",
+   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration — the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other — whoever resumes #591 needs the tag.",
    "evidence": [
     {
      "type": "github-issue",
@@ -365,7 +371,7 @@
      "type": "git-tag",
      "url": "https://github.com/InceptTrilogy/ap-one/commit/aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
      "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "retired demo-leg commit, remote-verified | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 \u2014 a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
+     "note": "retired demo-leg commit, remote-verified | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 — a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
     }
    ],
    "evidence_access": "SHARED"
@@ -376,7 +382,7 @@
    "status": "OBSERVED",
    "observed_at": "2026-08-17T18:12+09:00",
    "value": "487/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 446 still fail (D1 446, D8 189, S2 137, D4 126, S10 47, D7 10)",
-   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 \u2014 NOT a paid /v1/qc verdict and not a release signal",
+   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
    "excluded": [
     "paid content checks",
     "factory /v1/qc verdicts (0/933 spent)"
@@ -429,7 +435,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T00:00+09:00",
-   "value": "74 authored+gated wave-2 CONTRACTS (not articles \u2014 the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
+   "value": "74 authored+gated wave-2 CONTRACTS (not articles — the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
    "scope": "contracts only",
    "excluded": [
     "article bytes, which do not exist yet"
@@ -510,7 +516,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 \u2014 build-only from the platform's perspective",
+   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 — build-only from the platform's perspective",
    "evidence": [
     {
      "type": "live-api",
@@ -564,7 +570,7 @@
    "scope": "article-serving paths only",
    "excluded": [
     "gate paths",
-    "practice paths \u2014 bank-gated, unmeasured"
+    "practice paths — bank-gated, unmeasured"
    ],
    "evidence": [
     {
@@ -623,7 +629,7 @@
    "section": "Psych",
    "status": "BLOCKED",
    "blocker": "fleet (repair assigned)",
-   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af \u2014 per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
+   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af — per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
    "evidence": [
     {
      "type": "github-issue",
@@ -638,7 +644,7 @@
    "section": "Psych",
    "status": "PLANNED",
    "status_at": "2026-08-17T15:54:30+09:00",
-   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold \u2014 U5 gate green, bank full, gate/practice snapshots walked",
+   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold — U5 gate green, bank full, gate/practice snapshots walked",
    "evidence": [
     {
      "type": "git-branch",
@@ -687,7 +693,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-18T02:52+09:00",
    "blocker": "owner",
-   "value": "12 accepted records fail the official current-byte check on exactly one field: they stamp PRE-AMENDMENT expected_old pins (all 12 are rows the 30-slot amendment re-pinned; the records were generated before it). CAUSE CORRECTED 08-18: an earlier version of this claim blamed fleet corpus writes \u2014 that was unverified inference and is withdrawn; no fleet involvement. Seal-ready is therefore 449 of 474, not 461. Content validity of all 12 is verified (contract and request hashes match the amended rows; judged fingerprints intact). Fix staged as a pin-only record amendment \u2014 first-of-shape ceremony, held for explicit owner approval",
+   "value": "12 accepted records fail the official current-byte check on exactly one field: they stamp PRE-AMENDMENT expected_old pins (all 12 are rows the 30-slot amendment re-pinned; the records were generated before it). CAUSE CORRECTED 08-18: an earlier version of this claim blamed fleet corpus writes — that was unverified inference and is withdrawn; no fleet involvement. Seal-ready is therefore 449 of 474, not 461. Content validity of all 12 is verified (contract and request hashes match the amended rows; judged fingerprints intact). Fix staged as a pin-only record amendment — first-of-shape ceremony, held for explicit owner approval",
    "evidence": [
     {
      "type": "staged-draft",
