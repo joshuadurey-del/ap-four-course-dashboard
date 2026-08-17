@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T23:40+09:00",
+ "snapshot": "2026-08-17T23:45+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -266,8 +266,8 @@
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T23:40+09:00",
-   "value": "Regeneration tail will settle between 362 and 432 items, not a fixed 362. Mechanism: a repair-routed item that never gets a skill code cannot clear the S2 check, and the factory's own S2 consequence routes it to regeneration instead. 70 repair-routed items still lack a code and are being drawn in redraw round 4 (in flight, PID 99723, 120 holdouts). Round 4 resolving all 70 gives the 362 floor; resolving none gives the 432 ceiling. Correspondingly the repair route settles between 501 and 571. Execution still gated on the HumGeo pool release, cautious 2026-08-18 EOD KST per the pool owner. NOTE: the dispatch board quotes ~440+/-5 for this tail, above my computed 432 ceiling; unreconciled, flagged to that seat rather than picking a number.",
+   "status_at": "2026-08-17T23:45+09:00",
+   "value": "Regeneration tail will settle between 362 and 432 items, not a fixed 362. Mechanism: a repair-routed item that never gets a skill code cannot clear the S2 check, and the factory's own S2 consequence routes it to regeneration instead. 70 repair-routed items still lack a code and are being drawn in redraw round 4 (in flight, PID 99723, 120 holdouts). Round 4 resolving all 70 gives the 362 floor; resolving none gives the 432 ceiling. Correspondingly the repair route settles between 501 and 571. Execution still gated on the HumGeo pool release, cautious 2026-08-18 EOD KST per the pool owner. RECONCILED 2026-08-17 23:45: the dispatch board's earlier ~440+/-5 is WITHDRAWN by that seat after verifying from bytes (repair-routed-without-code = exactly 70, ceiling 432, floor 362). Its root cause is recorded because the error class recurs: 84 was derived as 571-487, repair target minus repaired-at-that-moment, which conflates 'not yet repaired' with 'code-unresolved' and mixes in rows whose codes existed but were not yet consumed plus regenerate-routed uncodeds whose codes are irrelevant before generation (new items are tagged after minting). 362-432 with the mechanism is the agreed figure on both surfaces.",
    "evidence": [
     {
      "type": "dry-run-receipt",

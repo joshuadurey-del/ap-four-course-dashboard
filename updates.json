@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T14:45Z",
+  "course": "APWH",
+  "text": "The disagreement over the size of the rebuild batch is settled. The dispatch board withdrew its higher figure after checking the underlying data, and both surfaces now carry 362 to 432 with the mechanism. The cause is worth recording: their count subtracted repaired-so-far from the repair target, which mixes together questions that are merely not repaired yet with questions that can never be repaired for lack of a tag. Those are different populations. Every tag the running round recovers moves the batch toward the lower end."
+ },
+ {
   "ts": "2026-08-17T14:40Z",
   "course": "APWH",
   "text": "Redraw round 3 finished, 22 of 142 resolved, and round 4 is now running on the remaining 120. Skill codes stand at 815 of 933, so 12.6 percent unresolved, well under the 40 percent stop rule. A number we had published is about to move and the page now says so: the regeneration batch is not a fixed 362. A question marked for repair that never gets a skill code cannot pass one of the checks, and the factory's own rule then sends it to be rebuilt instead. 70 such questions are in round 4 right now, so the batch settles somewhere between 362 and 432, and the repair side between 501 and 571. Publishing the range with its cause rather than letting the old figure look wrong tomorrow."
