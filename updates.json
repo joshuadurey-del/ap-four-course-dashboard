@@ -1,0 +1,37 @@
+[
+ {
+  "ts": "2026-08-17T04:44Z",
+  "course": "HumGeo",
+  "text": "Bank rebuild at 432/474 official passes; residual runner draining the rest; 30-slot amendment sealed and parked to fire at drain."
+ },
+ {
+  "ts": "2026-08-17T04:21Z",
+  "course": "APWH",
+  "text": "Skill codes 760/933; redraw round 2 at 61 of 207 (~56% recovery). 449/571 rationale repairs applied to the canonical bank; repair wave relaunched to consume new codes."
+ },
+ {
+  "ts": "2026-08-17T04:20Z",
+  "course": "Cross",
+  "text": "TimeBack writer corridor re-claimed for another course's catalog write (2,070 ops). HumGeo cutover and APWH platform writes queue behind its completion."
+ },
+ {
+  "ts": "2026-08-17T03:50Z",
+  "course": "Psych",
+  "text": "Whole course now assembles and serves locally (boot-on-demand): 221/221 article views walked green, 246 receipts, zero key leaks. Bank fill queued for tonight's pool turn."
+ },
+ {
+  "ts": "2026-08-17T01:00Z",
+  "course": "APUSH",
+  "text": "74 wave-2 article contracts authored, gated, and manifest-validated; posting waits on the pool turn (third in line)."
+ },
+ {
+  "ts": "2026-08-16T21:00Z",
+  "course": "HumGeo",
+  "text": "TimeBack writer corridor released after full compensation (#659 thread)."
+ },
+ {
+  "ts": "2026-08-16T15:04Z",
+  "course": "HumGeo",
+  "text": "Fleet: all 68 TimeBack components + 204 links MATERIALIZED with exact readback (#659). Remaining: serving cutover, deploy/readback, release_ready flip."
+ }
+]

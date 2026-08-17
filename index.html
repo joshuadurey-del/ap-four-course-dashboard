@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overview — all four courses</title><link rel="stylesheet" href="style.css"></head><body>
+<nav><span class="brand">AP Four-Course Dashboard</span>
+<a href="index.html" class="active">Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims explorer</a><a href="lessons.html" >Lessons</a></nav><main><h1>Overview — all four courses</h1><p class="sub">Live standings for Josh Durey's four AP courses. Every number links to its receipt; the <a href='claims.html'>claims explorer</a> holds the full evidence map.</p>
+<section><h2>Most recent updates <span id="newcount"></span></h2>
+<table id="upd"><tr><th style="width:130px">When</th><th style="width:80px">Course</th><th>What happened</th></tr></table>
+<p><small id="lastvisit"></small></p>
+<script>
+const KEY='ap4-last-visit';
+const last=Number(localStorage.getItem(KEY)||0);
+function rel(ms){const m=Math.round((Date.now()-ms)/60000);
+ if(m<60)return m+'m ago'; const h=Math.round(m/60); if(h<48)return h+'h ago'; return Math.round(h/24)+'d ago';}
+fetch('updates.json').then(r=>r.json()).then(us=>{
+ let fresh=0;
+ document.getElementById('upd').innerHTML='<tr><th style="width:130px">When</th><th style="width:80px">Course</th><th>What happened</th></tr>'+
+  us.map(u=>{const t=Date.parse(u.ts); const isNew=t>last; if(isNew&&last)fresh++;
+   return `<tr${isNew&&last?' style="background:#fffbeb"':''}><td>${u.ts.replace('T',' ').replace('Z',' GMT')}<br><small>${rel(t)}</small>${isNew&&last?' <span class="badge b-amber">NEW</span>':''}</td><td>${u.course}</td><td>${u.text}</td></tr>`;
+  }).join('');
+ if(last)document.getElementById('newcount').innerHTML=fresh?`<span class="badge b-amber">${fresh} new since your last visit</span>`:'<span class="badge b-green">nothing new since your last visit</span>';
+ document.getElementById('lastvisit').textContent=last?('Your previous visit: '+new Date(last).toUTCString()):'First visit — from now on, changes since your last visit get a NEW badge.';
+ localStorage.setItem(KEY,String(Date.now()));
+});
+</script></section>
+<div class="cards">
+<div class="card"><h2><a href="humgeo.html">AP Human Geography</a></h2>
+<div class="pct">432 / 474</div><div class="bar"><div style="width:91%"></div></div>
+<span class="badge b-blue">rebuild draining</span><span class="badge b-amber">2 fleet gates</span><p>Bank rebuild nearly home; sealed 482-record package lands after the drain. Release waits on the fleet.</p><p>&#128065; <a href="https://apone.inceptstore.com/demo">Open it on /demo now</a> — card is live, tree serves</p></div>
+<div class="card"><h2><a href="apwh.html">AP World History</a></h2>
+<div class="pct">760 / 933</div><div class="bar"><div style="width:81%"></div></div>
+<span class="badge b-blue">redraw running</span><span class="badge b-green">serving in chooser</span><p>449/571 repairs applied to the canonical bank. 362-item regeneration batch parked on the pool turn.</p><p>&#128065; <a href="https://apone.inceptstore.com/api/courses">In the live chooser</a> &middot; <a href="https://drive.google.com/file/d/1gb0OGF13ar9dWhDph9GGVGmvvX3qsIaG/view">lesson renders</a></p></div>
+<div class="card"><h2><a href="apush.html">AP US History</a></h2>
+<div class="pct">49 / 249</div><div class="bar"><div style="width:20%"></div></div>
+<span class="badge b-amber">factory-walled</span><span class="badge b-gray">build-only</span><p>74 article contracts validated and queued. 126 positions wait on a factory capability answer.</p><p>&#128065; <a href="https://github.com/ilmych/apush-course-build/blob/main/STATUS.md">Build ledger</a> &middot; <a href="https://docs.google.com/document/d/1d0mvskgAcpLmyrUNNw_2385pXcDdr_1fIzXgSnHUZDo/edit">sample article</a></p></div>
+<div class="card"><h2><a href="psych.html">AP Psychology</a></h2>
+<div class="pct">ap-status 58%</div><div class="bar"><div style="width:58%"></div></div>
+<span class="badge b-green">articles 221/221</span><span class="badge b-purple">bank fill tonight</span><p>Whole course hosts locally, walks green. The item bank (1,810 short) is the long pole.</p><p>&#128065; <a href="https://drive.google.com/file/d/19fHxlNmgZnGoB9TTG_yYDjkCKpRFLC2k/view">Course tree</a> &middot; <a href="https://drive.google.com/file/d/1Zlq_tlyaEtXpDGRZ-W5O9NsluIGhBQv2/view">article captures</a></p></div>
+</div>
+<section><h2>The honest line</h2>
+<p>HumGeo is hours from sealed-from-our-side; what stands between it and students is fleet work (<a href="https://github.com/InceptTrilogy/ap-one/issues/659">#659</a> cutover, <a href="https://github.com/InceptTrilogy/ap-one/issues/642">#642</a> cleanup), not authoring. APWH slipped its Sunday bar by a day; receipts land after the batch and sweep, and fleet placement gates students. APUSH is capped near half the course until the factory answers two intakes. Psych jumped forward, but its bank fill carries the one genuine unknown: evidence-based-FRQ yield.</p></section>
+<section><h2>Top blockers (fleet-side, days matter)</h2><ul>
+<li><a href="https://github.com/InceptTrilogy/ap-one/issues/659">#659</a> HumGeo: serving cutover, deploy/readback, release_ready flip (68 components + 204 links already materialized) &mdash; <b>fleet</b></li>
+<li><a href="https://github.com/InceptTrilogy/ap-one/issues/642">#642</a> HumGeo: corrective wave for 57 duplicate-choice-text items, 1,750 active children &mdash; <b>fleet</b></li>
+<li>APWH: publisher credential (absent day 4) + <a href="https://github.com/InceptTrilogy/ap-one/issues/591">#591</a>'s four study-skill lessons &mdash; <b>fleet</b></li>
+</ul></section>
+<p class="note">Agent-readable evidence: every claim on this site has a stable id, status label, and receipt in <a href="data.json">data.json</a> &mdash; the same manifest as the agent accounting file.</p>
+</main>
+<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>
