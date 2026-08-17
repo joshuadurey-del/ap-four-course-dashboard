@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T10:30Z",
+  "course": "Cross",
+  "text": "Owner directive: the overview now shows only the 10 most recent updates with a link to the new full update-history page. Overview card figures refreshed to the live claims (HumGeo 452/474, APWH 796/933 codes and 487/571 repairs)."
+ },
+ {
   "ts": "2026-08-17T09:59Z",
   "course": "Cross-course",
   "text": "Brought the front page and the agent-facing standings snapshot in line with the owner's cadence ruling. Both still carried the old three-column optimistic/realistic/conservative ETA table and the week bar that put all four courses on our side by Friday 08-21. That bar was acknowledged too optimistic. The published dates are now one cautious date each: HumGeo 08-20, APWH 08-21, APUSH 08-22, Psych 08-25. The Friday 08-21 bar now covers HumGeo and APWH only, which is what the measurements support. The four course pages already carried these dates; only the index page and the snapshot were behind. Item counts were left alone on purpose: 432 of 474 is stamped 13:20 KST with its own evidence link, and the seal pass will refresh it from receipts."
@@ -12,7 +17,7 @@
  {
   "ts": "2026-08-17T09:44Z",
   "course": "Cross",
-  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics — the only italics on the pages. Content, numbers, and caveats unchanged."
+  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics \u2014 the only italics on the pages. Content, numbers, and caveats unchanged."
  },
  {
   "ts": "2026-08-17T09:55Z",
@@ -27,7 +32,7 @@
  {
   "ts": "2026-08-17T09:35Z",
   "course": "HumGeo",
-  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it — dates move on receipts here, in either direction."
+  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it \u2014 dates move on receipts here, in either direction."
  },
  {
   "ts": "2026-08-17T09:35Z",
@@ -37,22 +42,22 @@
  {
   "ts": "2026-08-17T09:31Z",
   "course": "Psych",
-  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page — bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
+  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page \u2014 bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
  },
  {
   "ts": "2026-08-17T09:28Z",
   "course": "HumGeo",
-  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged — release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
+  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged \u2014 release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
  },
  {
   "ts": "2026-08-17T09:23Z",
   "course": "Cross",
-  "text": "Owner directive: every course's ETA section now carries an explicit definition of done — what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
+  "text": "Owner directive: every course's ETA section now carries an explicit definition of done \u2014 what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
  },
  {
   "ts": "2026-08-17T09:15Z",
   "course": "HumGeo",
-  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external — it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
+  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external \u2014 it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
  },
  {
   "ts": "2026-08-17T09:12Z",
@@ -87,7 +92,7 @@
  {
   "ts": "2026-08-17T08:18Z",
   "course": "Cross",
-  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) — both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
+  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) \u2014 both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
  },
  {
   "ts": "2026-08-17T07:32Z",
