@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T09:59Z",
+  "course": "Cross-course",
+  "text": "Brought the front page and the agent-facing standings snapshot in line with the owner's cadence ruling. Both still carried the old three-column optimistic/realistic/conservative ETA table and the week bar that put all four courses on our side by Friday 08-21. That bar was acknowledged too optimistic. The published dates are now one cautious date each: HumGeo 08-20, APWH 08-21, APUSH 08-22, Psych 08-25. The Friday 08-21 bar now covers HumGeo and APWH only, which is what the measurements support. The four course pages already carried these dates; only the index page and the snapshot were behind. Item counts were left alone on purpose: 432 of 474 is stamped 13:20 KST with its own evidence link, and the seal pass will refresh it from receipts."
+ },
+ {
   "ts": "2026-08-17T10:00Z",
   "course": "APWH",
   "text": "Audited whether the sweep-rate receipt was real factory machinery or one of our own inventions, after the owner asked. It is canonical: 2,499 of 2,513 records were paid calls to the factory's own check endpoint through the sanctioned tool, with the factory's own failure codes, and the single 14-record exception labels itself as seeded at no cost. The audit also caught our own method error: the 10.1 seconds per call we had both published divided the run's whole span by the record count instead of using the durations the batches recorded, and counted 14 records never called. The honest figure is 11.9 seconds an item, which the HumGeo seat re-derived independently and matched. Our sweep floor moves 2.6 to 3.1 hours, inside the published cautious band, so 08-21 is unaffected."

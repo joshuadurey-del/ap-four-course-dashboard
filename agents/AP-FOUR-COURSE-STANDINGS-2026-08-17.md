@@ -4,7 +4,7 @@
 
 ## TLDR — where the week landed
 
-- **HumGeo**: bank rebuild at 432 of 474 items passed; the rest drain today, slowed by fail-closed retries. The sealed replacement package lands at drain, 08-18 at the cautious estimate. You can open it on the /demo page today; formal RELEASE waits on two fleet items ([#659](https://github.com/InceptTrilogy/ap-one/issues/659) serving cutover + release flip, [#642](https://github.com/InceptTrilogy/ap-one/issues/642) cleanup).
+- **HumGeo**: bank rebuild at 432 of 474 items passed; the rest drain today, slowed by fail-closed retries. The sealed replacement package lands at drain, cautiously 08-20; the factory-pool release that unblocks APWH comes earlier, cautiously 08-18 end of day. You can open it on the /demo page today; formal RELEASE waits on two fleet items ([#659](https://github.com/InceptTrilogy/ap-one/issues/659) serving cutover + release flip, [#642](https://github.com/InceptTrilogy/ap-one/issues/642) cleanup).
 - **APWH**: the full course is proven end to end by a render walk with bytes-exact receipts. 449 of 571 rationale repairs are applied to the canonical bank ([commit](https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2)). The last regeneration batch and the paid QC sweep queue behind HumGeo's factory-pool turn.
 - **APUSH**: 49 of 249 article positions admitted. The next 74 article CONTRACTS are validated and post on their pool turn (third in the chain, aimed at end of week); the factory writes the article text at its next stage. Half the course waits on a factory capability answer ([intake #90](https://github.com/ilmych/incept-agent-intake/issues/90)).
 - **Psych**: the surprise of the week. All 221 articles are done. The whole course assembles and serves locally on demand — the real serving app booted over the bundle, every article leg walked green ([evidence](https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/psych/20260817-local-host/claude)). The item bank fill starts on Psych's pool turn (last in the chain) and is the long pole.
@@ -32,14 +32,14 @@ All visuals below live in the [visuals folder](https://drive.google.com/drive/fo
 
 ## ETA per course — our side done
 
-Dates are KST, set to the cautious end on purpose. The bar for the week: all four done from our side by Friday 08-21. "Our side done" means content work complete, receipted, and handed to the fleet. Student-live also needs the fleet items in P0; I do not set dates for those.
+Dates are KST. One date per course, the cautious one, per the owner's 2026-08-17 cadence ruling: earlier internal dates are planning numbers, not commitments, and they are deliberately not published here. The bar for the week: HumGeo and APWH done from our side by Friday 08-21. All four by that Friday was acknowledged too optimistic on 2026-08-17. "Our side done" means content work complete, receipted, and handed to the fleet. Student-live also needs the fleet items in P0; I do not set dates for those.
 
-| Course | Optimistic | Realistic | Conservative | What moves it between columns |
-| --- | --- | --- | --- | --- |
-| **HumGeo** | 08-18 | 08-19 | 08-20 | The amended 30-slot pass and metadata QC are mechanical. Conservative covers a new fail-closed stop that needs a canon fix first. |
-| **APWH** | 08-19 | 08-20 | 08-21 | The 362-item batch + paid sweep start on my pool release. Conservative covers a sweep-fail repair round and slow redraw stragglers. |
-| **APUSH (to ~123/249 ceiling)** | 08-20 | 08-21 | 08-22 | The 74 articles post on the pool turn; admission pace sets the rest. Full 249 has NO honest date — 126 positions wait on the factory's [intake #90](https://github.com/ilmych/incept-agent-intake/issues/90) answer. |
-| **Psych** | 08-21 | 08-22 | 08-23, or a reset if the FRQ generator stays at zero | Bank fill is 1,810 items. Optimistic assumes evidence-based-FRQ generation yields on tonight's measurement. If it is still at zero, the disposition decision resets the clock. |
+| Course | Cautious | What would move it |
+| --- | --- | --- |
+| **HumGeo** | 08-20 | The amended 30-slot pass and metadata QC are mechanical. The date covers a fail-closed stop that would need a canon fix first, and the 741 rescreens' place in the queue. |
+| **APWH** | 08-21 | The 362-item batch + paid sweep start on my pool release. The date covers a sweep-fail repair round and slow redraw stragglers. Two legs are unmeasured: generation throughput for the 362, and the paid check's failure rate. |
+| **APUSH (to ~123/249 ceiling)** | 08-22 | The 74 articles post on the pool turn; admission pace sets the rest. Retry rounds for image-checker rejections are the known kill class. Full 249 has NO honest date — 126 positions wait on the factory's [intake #90](https://github.com/ilmych/incept-agent-intake/issues/90) answer. |
+| **Psych** | 08-25, or a reset if the FRQ generator stays at zero | Moved from 08-23 on 2026-08-17: that date stacked three optimisms (full pool availability, recovered essay-type yield, and fleet repair pace). Bank fill is 1,810 items. A still-zero essay-type reading sends the disposition to the owner and resets the clock. |
 
 ## Priority order
 
