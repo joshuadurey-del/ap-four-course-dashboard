@@ -526,7 +526,7 @@
    "section": "Cross-course",
    "status": "OBSERVED",
    "observed_at": "2026-08-16 (measurement) / 2026-08-17T12:11+09:00 (retirement ruling)",
-   "value": "local pre-check judge measured against official verdicts: 35 pairs x 3 votes, 105 calls, 0 errors; best fail-recall 80% strict / 70% majority; never gated anything; owner turned it off entirely on 2026-08-17",
+   "value": "local pre-check judge measured against official verdicts: 35 pairs x 3 votes, 105 calls, 0 errors; best fail-recall 80% strict / 70% majority; never gated anything; owner turned it off entirely on 2026-08-17. The follow-up attribution ask was WITHDRAWN as moot on 2026-08-17 (local judge retired; official verdict is the contract regardless of serving model)",
    "scope": "35-pair sample",
    "excluded": [],
    "evidence": [
@@ -536,14 +536,6 @@
     }
    ],
    "evidence_access": "JOSH_MACHINE_ONLY"
-  },
-  {
-   "claim_id": "cross.judge.attribution",
-   "section": "Cross-course",
-   "status": "MISSING",
-   "value": "which model/settings served official /v1/qc content checks on 2026-08-15 \u2014 receipts omit the judging model; 10 of 18 locally-missed fails concentrate in D2 (distractor plausibility) on DOK-1 recall items; fleet attribution requested",
-   "evidence": [],
-   "evidence_access": "NONE_YET"
   }
  ]
 }

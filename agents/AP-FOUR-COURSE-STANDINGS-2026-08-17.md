@@ -4,10 +4,10 @@
 
 ## TLDR — where the week landed
 
-- **HumGeo**: bank rebuild at 432 of 474 items passed; the rest drain today. The sealed replacement package lands tonight. You can open it on the /demo page today; formal RELEASE waits on two fleet items ([#659](https://github.com/InceptTrilogy/ap-one/issues/659) serving cutover + release flip, [#642](https://github.com/InceptTrilogy/ap-one/issues/642) cleanup).
+- **HumGeo**: bank rebuild at 432 of 474 items passed; the rest drain today, slowed by fail-closed retries. The sealed replacement package lands at drain, 08-18 at the cautious estimate. You can open it on the /demo page today; formal RELEASE waits on two fleet items ([#659](https://github.com/InceptTrilogy/ap-one/issues/659) serving cutover + release flip, [#642](https://github.com/InceptTrilogy/ap-one/issues/642) cleanup).
 - **APWH**: the full course is proven end to end by a render walk with bytes-exact receipts. 449 of 571 rationale repairs are applied to the canonical bank ([commit](https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2)). The last regeneration batch and the paid QC sweep queue behind HumGeo's factory-pool turn.
-- **APUSH**: 49 of 249 article positions admitted. The next 74 article CONTRACTS are validated and post today; the factory writes the article text at its next stage. Half the course waits on a factory capability answer ([intake #90](https://github.com/ilmych/incept-agent-intake/issues/90)).
-- **Psych**: the surprise of the week. All 221 articles are done. The whole course assembles and serves locally on demand — the real serving app booted over the bundle, every article leg walked green ([evidence](https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/psych/20260817-local-host/claude)). The item bank fill starts tonight and is the long pole.
+- **APUSH**: 49 of 249 article positions admitted. The next 74 article CONTRACTS are validated and post on their pool turn (third in the chain, aimed at end of week); the factory writes the article text at its next stage. Half the course waits on a factory capability answer ([intake #90](https://github.com/ilmych/incept-agent-intake/issues/90)).
+- **Psych**: the surprise of the week. All 221 articles are done. The whole course assembles and serves locally on demand — the real serving app booted over the bundle, every article leg walked green ([evidence](https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/psych/20260817-local-host/claude)). The item bank fill starts on Psych's pool turn (last in the chain) and is the long pole.
 
 ## See each course today
 
@@ -28,18 +28,18 @@ All visuals below live in the [visuals folder](https://drive.google.com/drive/fo
 | **AP World History** | • Full course proven by render walk, bytes-exact receipts. • 449/571 rationale repairs applied, push-verified ([commit](https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2)). • Skill codes 760/933; redraw recovering the rest (61 of 207 done, ~56% rate). • 362-item regeneration batch proven and parked. | • Batch parked on HumGeo's pool release (today) — Josh. • Paid sweep fires after the batch (0/933 verdicts yet, by design). • [#591](https://github.com/InceptTrilogy/ap-one/issues/591): four study-skill lessons still un-ingested — fleet. • Publisher credential absent day 4 (per ap-status; gates canonical placement) — fleet. • Sunday bar slipped one day. • Even after the credential lands, platform writes queue behind the TimeBack corridor's current write phase. |
 | **AP US History** | • 49/249 article positions admitted. • Next 74 article contracts authored, gated, validated; post on the pool turn (the factory writes the articles from them). • Nothing serves yet, build-only. | • Ceiling ~123/249 after the 74 land. • 126 positions wait on factory visual-class capability ([intake #90](https://github.com/ilmych/incept-agent-intake/issues/90), no reply) — factory. • 2 positions on defective packets ([intake #89](https://github.com/ilmych/incept-agent-intake/issues/89)) — factory. |
 | **AP Psychology** | • Articles 221/221 done, every EK covered (Unit 5's 54 landed Saturday). • Topic 3.3 shows 0 lessons BY DESIGN: no EK maps to it; an approved lesson asset is parked pending a separate curriculum decision. • NEW: whole course serves locally boot-on-demand; walks green, 246 receipts, zero key leaks ([evidence](https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/psych/20260817-local-host/claude)). • Bank fill queued for tonight's pool turn. | • Bank 1,810 items short across 374 buckets — Josh. • RISK: evidence-based-FRQ generator gave zero yield in 10 passes on 08-11; fresh measurement tonight. • U5 gate: 27 findings ([psych #2](https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2), unchanged since 08-12) — fleet. • Platform registration: needs a complete registration PR (registry entry + bundle wiring), not just the prepared one-line paste — Josh prepares, Ilma merges. |
-| **Cross-course** | • One shared factory pool, strict series: HumGeo → APWH (362) → APUSH (74) → Psych fill. • Every handoff receipted; next lane fires automatically. | • One fleet question: which model/settings served official QC content checks on 08-15? Receipts omit the judging model. • That judge reads distractor plausibility (D2) far stricter on recall items than any replay of ours. • One line closes it. |
+| **Cross-course** | • One shared factory pool, strict series: HumGeo → APWH (362) → APUSH (74) → Psych fill. • Every handoff receipted; next lane fires automatically. | • No open cross-course blockers on our side. • The retired local pre-check judge left one footnote: the official judge reads distractor plausibility (D2) strictly on recall items — strict means it fails good items, the cheap direction, so no action is owed. |
 
 ## ETA per course — our side done
 
-Dates are KST. "Our side done" means content work complete, receipted, and handed to the fleet. Student-live also needs the fleet items in P0; I do not set dates for those.
+Dates are KST, set to the cautious end on purpose. The bar for the week: all four done from our side by Friday 08-21. "Our side done" means content work complete, receipted, and handed to the fleet. Student-live also needs the fleet items in P0; I do not set dates for those.
 
 | Course | Optimistic | Realistic | Conservative | What moves it between columns |
 | --- | --- | --- | --- | --- |
-| **HumGeo** | tonight 08-17 | 08-18 | 08-19 | The amended 30-slot pass and metadata QC are mechanical. Conservative covers a new fail-closed stop that needs a canon fix first. |
-| **APWH** | 08-18 | 08-19 | 08-21 | The 362-item batch + paid sweep start on my pool release. Conservative covers a sweep-fail repair round and slow redraw stragglers. |
-| **APUSH (to ~123/249 ceiling)** | 08-18 | 08-19 | 08-21 | The 74 articles post on the pool turn; admission pace sets the rest. Full 249 has NO honest date — 126 positions wait on the factory's [intake #90](https://github.com/ilmych/incept-agent-intake/issues/90) answer. |
-| **Psych** | 08-21 | 08-24 | no date yet | Bank fill is 1,810 items. Optimistic assumes evidence-based-FRQ generation yields on tonight's measurement. If it is still at zero, the disposition decision resets the clock. |
+| **HumGeo** | 08-18 | 08-19 | 08-20 | The amended 30-slot pass and metadata QC are mechanical. Conservative covers a new fail-closed stop that needs a canon fix first. |
+| **APWH** | 08-19 | 08-20 | 08-21 | The 362-item batch + paid sweep start on my pool release. Conservative covers a sweep-fail repair round and slow redraw stragglers. |
+| **APUSH (to ~123/249 ceiling)** | 08-20 | 08-21 | 08-22 | The 74 articles post on the pool turn; admission pace sets the rest. Full 249 has NO honest date — 126 positions wait on the factory's [intake #90](https://github.com/ilmych/incept-agent-intake/issues/90) answer. |
+| **Psych** | 08-21 | 08-22 | 08-23, or a reset if the FRQ generator stays at zero | Bank fill is 1,810 items. Optimistic assumes evidence-based-FRQ generation yields on tonight's measurement. If it is still at zero, the disposition decision resets the clock. |
 
 ## Priority order
 
@@ -70,7 +70,7 @@ Dates are KST. "Our side done" means content work complete, receipted, and hande
 
 ### P3 · To schedule, no clock
 
-The QC judge attribution question (which model ruled on 08-15) · the D2 strictness finding it would explain · the APUSH visual-capability sizing conversation if [#90](https://github.com/ilmych/incept-agent-intake/issues/90) stays quiet past 48h.
+The APUSH visual-capability sizing conversation if [#90](https://github.com/ilmych/incept-agent-intake/issues/90) stays quiet past 48h.
 
 ## Lessons learned last week
 
