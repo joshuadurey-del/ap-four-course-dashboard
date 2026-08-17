@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T10:22Z",
+  "course": "Cross-course",
+  "text": "Finished the evidence-link repair on the surfaces the earlier passes did not reach. The three agent-facing snapshot documents still wrote their receipt links as branch names, and GitHub cannot tell where a branch name ending in /claude stops and a folder path starts, so those links dumped the reader at the repository root instead of the receipts. All of them now name the commit and then the folder. One more link, the APUSH receipts branch on ilmych/apush-build-outputs, had the same defect and now points at the exact commit that claim recorded when it was stamped, not at today's branch head. Every tree link in this repo was then re-checked one at a time against its own commit through the GitHub API: 8 links, 0 broken. The first version of that check was itself wrong and passed everything, because it queried the repository root for every link; the fix was to pair each path with its own commit and confirm a deliberately wrong path still fails."
+ },
+ {
   "ts": "2026-08-17T10:50Z",
   "course": "APWH",
   "text": "Swept every link class on the dashboard, not just the evidence links. All 19 evidence links now open on the evidence itself, verified against the repository rather than by loading a page. All 4 commit links and all 6 issue links check out. Found and fixed one more of my own: a link to a retired tag pointed at a release page that does not exist, because a tag was pushed and never a release, and the tag name contains a slash which is the same ambiguity that caused the original fault. It now points at the commit, verified reachable. Twenty Drive links, three documents, three tracing links and nine live course links cannot be checked from here and are recorded as unchecked rather than assumed good."
