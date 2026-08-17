@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T17:19:00+09:00",
+ "snapshot": "2026-08-17T18:00+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -67,7 +67,7 @@
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE",
-   "observed_note": "sha recomputed from bytes \u00b7 date-only in source; midnight assumed"
+   "observed_note": "sha recomputed from bytes · date-only in source; midnight assumed"
   },
   {
    "claim_id": "humgeo.amendment.execution",
@@ -174,7 +174,7 @@
    "section": "HumGeo",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 \u2014 Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
+   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 — Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
    "scope": "deployed surface anchored to commit e4b03bc441e8a6870de86ca2368043016f03213e",
    "excluded": [],
    "evidence": [
@@ -198,30 +198,33 @@
    "claim_id": "apwh.repairs.applied",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T12:14+09:00",
-   "value": "449/571 rationale repairs applied to the canonical bank, push-gate verified",
+   "observed_at": "2026-08-17T18:00+09:00",
+   "value": "487/571 rationale repairs applied to the canonical bank, push-gate verified (top-up +38 at 17:56)",
    "evidence": [
     {
      "type": "git-commit",
-     "url": "https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2"
+     "url": "https://github.com/ilmych/apwh-build-outputs/commit/5afcb7a0b527d0071ab3c7a578dc4976f70bac6b",
+     "commit": "5afcb7a0b527d0071ab3c7a578dc4976f70bac6b",
+     "note": "bank 93bd33ba -> 7c96b2c2; 38 applied, 449 already-applied, 0 refused, readback clean"
     }
    ],
-   "evidence_access": "SHARED"
+   "evidence_access": "SHARED",
+   "scope": "repair-routed D1-only items; the remaining 84 await skill codes from redraw rounds"
   },
   {
    "claim_id": "apwh.skillcodes",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T15:10+09:00",
-   "value": "774/933 skill codes resolved (recomputed at staging). Redraw round 2 continuing. Repair wave consuming codes as they land",
+   "observed_at": "2026-08-17T18:00+09:00",
+   "value": "791/933 skill codes resolved (142 unresolved = 15.2%, under the 40% machinery stop-rule). Redraw round 2 COMPLETE (207/207 drawn, +65 resolved); round 3 running on the remaining 142",
    "evidence": [
     {
      "type": "cursor-snapshot",
-     "url": "https://drive.google.com/file/d/1irC-LdBf4Oe6iZY2xyaCfbMz2GiU_XY2/view",
-     "note": "recomputed live at staging"
+     "note": "tagger main + supplement + redraw r2 states, counted 2026-08-17 17:55 KST; r3 in flight"
     }
    ],
-   "evidence_access": "SHARED_VIA_DRIVE"
+   "evidence_access": "SHARED_VIA_DRIVE",
+   "scope": "ap-tagger 3-draw 2-vote agreement; unresolved are recorded, never guessed"
   },
   {
    "claim_id": "apwh.regen_tail",
@@ -299,16 +302,43 @@
    "claim_id": "apwh.placement.591",
    "section": "APWH",
    "status": "BLOCKED",
-   "status_at": "2026-08-17T13:48:21+09:00",
+   "status_at": "2026-08-17T18:00+09:00",
    "blocker": "fleet",
-   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration \u2014 the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659)",
+   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration — the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other — whoever resumes #591 needs the tag.",
    "evidence": [
     {
      "type": "github-issue",
      "url": "https://github.com/InceptTrilogy/ap-one/issues/591"
+    },
+    {
+     "type": "git-tag",
+     "url": "https://github.com/InceptTrilogy/ap-one/releases/tag/retired/apwh-study-skills-demo-serve-20260817",
+     "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
+     "note": "retired demo-leg commit, remote-verified"
     }
    ],
    "evidence_access": "SHARED"
+  },
+  {
+   "claim_id": "apwh.structural_screen",
+   "section": "APWH",
+   "status": "OBSERVED",
+   "observed_at": "2026-08-17T18:00+09:00",
+   "value": "449/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 484 still fail (D1 446, S2 207, D8 189, D4 126, S10 47, D7 10)",
+   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
+   "excluded": [
+    "paid content checks",
+    "factory /v1/qc verdicts (0/933 spent)"
+   ],
+   "evidence": [
+    {
+     "type": "git-branch",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/apwh/20260816-042248__fable__apwh--qc-sweep-w2/fable/window-3",
+     "commit": "64823839b89047e93a9eb7f33c0f08c026fb96d2",
+     "note": "window-3 log, screen receipts, and the two instrument fixes"
+    }
+   ],
+   "notes": "Reachability verified: 0 repair-routed items carry a fail that rationales+skill codes cannot clear; 313 of 362 regenerate-routed carry a hard fail (D8/D4/S10/D7) needing regeneration; 122+362 reconciles to the 484. The 449 is UNDERSTATED: 487 items now carry rationales, but the v2 enrichment still holds 726 of the 791 resolved skill codes, so 38 repaired items still fail S2 until the redraw fold lands (gated on rounds going dry)."
   },
   {
    "claim_id": "apush.ledger",
@@ -330,7 +360,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T00:00+09:00",
-   "value": "74 authored+gated wave-2 CONTRACTS (not articles \u2014 the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
+   "value": "74 authored+gated wave-2 CONTRACTS (not articles — the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
    "scope": "contracts only",
    "excluded": [
     "article bytes, which do not exist yet"
@@ -405,7 +435,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 \u2014 build-only from the platform's perspective",
+   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 — build-only from the platform's perspective",
    "evidence": [
     {
      "type": "live-api",
@@ -459,7 +489,7 @@
    "scope": "article-serving paths only",
    "excluded": [
     "gate paths",
-    "practice paths \u2014 bank-gated, unmeasured"
+    "practice paths — bank-gated, unmeasured"
    ],
    "evidence": [
     {
@@ -518,7 +548,7 @@
    "section": "Psych",
    "status": "BLOCKED",
    "blocker": "fleet (repair assigned)",
-   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af \u2014 per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
+   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af — per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
    "evidence": [
     {
      "type": "github-issue",
@@ -533,7 +563,7 @@
    "section": "Psych",
    "status": "PLANNED",
    "status_at": "2026-08-17T15:54:30+09:00",
-   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold \u2014 U5 gate green, bank full, gate/practice snapshots walked",
+   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold — U5 gate green, bank full, gate/practice snapshots walked",
    "evidence": [
     {
      "type": "git-branch",
