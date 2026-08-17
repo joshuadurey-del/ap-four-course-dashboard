@@ -15,7 +15,7 @@
 <ul>
 <li>Start from any sentence in the standings, find its <code>claim_id</code> in the manifest, and follow the evidence entries.</li>
 <li><code>evidence_access</code> tells you what you can verify yourself: <b>SHARED</b> = live URL or Ilma-readable repo; <b>ILMA_HUMAN_ONLY</b> = the evidence repo (browser yes, bot tokens no); <b>SHARED_AFTER_INVITE</b> = Langfuse; <b>JOSH_MACHINE_ONLY</b> = named local artifact with a durable-copy plan; <b>NONE_YET</b> = planned work, no receipt can exist.</li>
-<li>Staleness: the manifest carries its snapshot time. A PLANNED claim older than 48 hours with no successor receipt is a question, not a fact.</li>
+<li>Staleness: every claim carries its own date — <code>observed_at</code> for an OBSERVED claim, <code>status_at</code> for a PLANNED or BLOCKED one. Age it against that field, never against the manifest snapshot: republishing the file does not refresh a claim. A claim older than 48 hours with no successor receipt is a question, not a fact. <code>observed_note</code> holds any hand-written qualifier, including "midnight assumed" where the source recorded only a date.</li>
 <li>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b> — accept the org invite first or the trace links 404. Claims with Langfuse evidence carry direct trace URLs in <a href="data.json">data.json</a>; the full reading guide is at the bottom of the accounting .md.</li>
 <li>Cross-check any Langfuse record against the matching GitHub evidence branch by item id or hash — both are written from the same receipts.</li>
 </ul></section>
