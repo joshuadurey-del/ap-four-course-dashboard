@@ -403,7 +403,8 @@
     {
      "type": "git-branch",
      "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/psych/20260817-local-host/claude",
-     "commit": "054e5c286696bb89dab2d7148960634de6ef3e07"
+     "commit": "564d086",
+     "note": "re-walked after the fleet repair train: 221/221 green at rebuilt bundle"
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY"
@@ -419,10 +420,11 @@
    "evidence": [
     {
      "type": "repo-doc",
-     "location": "Psych course repo DOWNSTREAM_NOTES section 1"
+     "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/cfa166afe6345c28d331bb809a3ac26b3655bf6f/DOWNSTREAM_NOTES.md#L117-L118",
+     "note": "sha-pinned coverage invariant"
     }
    ],
-   "evidence_access": "JOSH_MACHINE_ONLY"
+   "evidence_access": "SHARED"
   },
   {
    "claim_id": "psych.local_serving",
@@ -439,7 +441,8 @@
     {
      "type": "git-branch",
      "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/psych/20260817-local-host/claude",
-     "commit": "054e5c286696bb89dab2d7148960634de6ef3e07"
+     "commit": "564d086",
+     "note": "re-walked after the fleet repair train: 221/221 green at rebuilt bundle"
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY"
@@ -453,10 +456,11 @@
    "evidence": [
     {
      "type": "admin-dry-run",
-     "location": "seat receipt \u2014 sanitized Drive copy being staged (folder: https://drive.google.com/drive/folders/1gfqL4L9-hE0N32FIDu-E_qn8IQiQjXj7)"
+     "url": "https://drive.google.com/file/d/1V6K5DdaPCfSH4vSeMhYqiWuS2r4dSVWa/view",
+     "note": "headline + all 374 bucket rows, counts only"
     }
    ],
-   "evidence_access": "JOSH_MACHINE_ONLY"
+   "evidence_access": "SHARED_VIA_DRIVE"
   },
   {
    "claim_id": "psych.fill",
@@ -474,25 +478,27 @@
    "value": "evidence-based-FRQ generation produced 0 usable items in 10 passes; fresh measurement is PLANNED on the first two fill cycles; 221 of the 374 short buckets need this generator",
    "evidence": [
     {
-     "type": "seat-receipts",
-     "location": "seat receipt \u2014 sanitized Drive copy being staged (folder: https://drive.google.com/drive/folders/1gfqL4L9-hE0N32FIDu-E_qn8IQiQjXj7)"
+     "type": "verify-summaries",
+     "url": "https://drive.google.com/file/d/1ZzE3hohbc_mPQIx9-18vprBCkq8NYG6z/view",
+     "note": "chunk summaries + standing low-yield flag"
     }
    ],
-   "evidence_access": "JOSH_MACHINE_ONLY"
+   "evidence_access": "SHARED_VIA_DRIVE"
   },
   {
    "claim_id": "psych.u5gate",
    "section": "Psych",
    "status": "BLOCKED",
    "blocker": "fleet (repair assigned)",
-   "value": "U5 acceptance gate: 27 findings, unchanged since 2026-08-12",
+   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af \u2014 per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
    "evidence": [
     {
      "type": "github-issue",
      "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2"
     }
    ],
-   "evidence_access": "SHARED"
+   "evidence_access": "SHARED",
+   "observed_at": "2026-08-17T15:20+09:00"
   },
   {
    "claim_id": "psych.registration",
