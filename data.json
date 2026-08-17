@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T18:12+09:00",
+ "snapshot": "2026-08-17T18:35+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -73,7 +73,7 @@
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE",
-   "observed_note": "sha recomputed from bytes \u00b7 date-only in source; midnight assumed"
+   "observed_note": "sha recomputed from bytes · date-only in source; midnight assumed"
   },
   {
    "claim_id": "humgeo.amendment.execution",
@@ -176,7 +176,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-17T18:28+09:00",
    "blocker": "fleet",
-   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent \u2014 live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal CORRIDOR SELECTION POSTED 2026-08-17: TimeBack-direct (no Platform3 bridge), owner comment 5314243106 on #659; flip criterion unchanged.",
+   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent — live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal CORRIDOR SELECTION POSTED 2026-08-17: TimeBack-direct (no Platform3 bridge), owner comment 5314243106 on #659; flip criterion unchanged.",
    "evidence": [
     {
      "type": "github-issue",
@@ -210,7 +210,7 @@
    "section": "HumGeo",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 \u2014 Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
+   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 — Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
    "scope": "deployed surface anchored to commit e4b03bc441e8a6870de86ca2368043016f03213e",
    "excluded": [],
    "evidence": [
@@ -283,7 +283,7 @@
    "section": "APWH",
    "status": "PLANNED",
    "status_at": "2026-08-17T18:12+09:00",
-   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). PRECONDITION RE-MEASURED 2026-08-17 18:12 KST after the redraw fold: materialize_qc_records.py is fail-closed on naked items and still refuses \u2014 446 items lack distractor_rationales, 137 lack skill_codes (of 933). The skill-code gap fell 207->137 by folding codes that were already resolved but unwritten; the rationale gap needs the regeneration tail (362) plus the remaining repair wave (84), so the sweep cannot be requested until both land.",
+   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). PRECONDITION RE-MEASURED 2026-08-17 18:12 KST after the redraw fold: materialize_qc_records.py is fail-closed on naked items and still refuses — 446 items lack distractor_rationales, 137 lack skill_codes (of 933). The skill-code gap fell 207->137 by folding codes that were already resolved but unwritten; the rationale gap needs the regeneration tail (362) plus the remaining repair wave (84), so the sweep cannot be requested until both land.",
    "evidence": [
     {
      "type": "dry-run-receipt",
@@ -297,8 +297,8 @@
    "claim_id": "apwh.local_done.walk",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-12T00:00+09:00",
-   "value": "full course proven by render walk, bytes-exact receipts; NO resident server (corrected 2026-08-17)",
+   "observed_at": "2026-08-17T18:35+09:00",
+   "value": "full course proven by render walk, bytes-exact receipts; NO resident server. The walk itself dates from 2026-08-12 and predates all repair work, so it must be REDONE against the final bank before our-side done",
    "scope": "render walk of all lesson pages",
    "excluded": [
     "persistent serving"
@@ -307,12 +307,13 @@
     {
      "type": "git-commit",
      "url": "https://github.com/joshuadurey-del/ap-ss-evidence/commit/483efc1",
-     "note": "walk receipts"
+     "note": "walk receipts — durable, in the evidence repo, independent of any ap-one branch"
     },
     {
-     "type": "local-branch",
-     "id": "apwh/study-skills-demo-serve @ aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "local-only, retired: superseded by upstream ap-one main landed placement machinery (source pin ilmych/apwh-blueprint-build @ 2129eb94497c81f5521005baddbf23f7468d57f9, per ap-one STATUS.md); walk receipts remain the durable 08-12 proof"
+     "type": "git-tag",
+     "url": "https://github.com/InceptTrilogy/ap-one/releases/tag/retired/apwh-study-skills-demo-serve-20260817",
+     "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
+     "note": "the serving path used for the 08-12 walk. RETIRED 2026-08-17 to this tag, PUSHED and remote-verified (no longer local-only). CORRECTION: this evidence row previously said 'superseded by upstream ap-one main landed placement machinery (source pin 2129eb94, per STATUS.md)'. That is FALSE and was verified false: 2129eb94 is a source-content pin in ilmych/apwh-blueprint-build, not an ap-one commit, and origin/main 13501daa does not contain build_apworld_demo_tree.py, test_apwh_study_skills_demo_tree.py, or the apwh demo_tree.json. The commit was 1 unmerged commit, 5,639 insertions incl. 142 lines of tests, which is why it was tagged rather than dropped."
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+JOSH_MACHINE_ONLY",
@@ -347,7 +348,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-17T18:00+09:00",
    "blocker": "fleet",
-   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration \u2014 the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other \u2014 whoever resumes #591 needs the tag.",
+   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration — the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other — whoever resumes #591 needs the tag.",
    "evidence": [
     {
      "type": "github-issue",
@@ -368,7 +369,7 @@
    "status": "OBSERVED",
    "observed_at": "2026-08-17T18:12+09:00",
    "value": "487/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 446 still fail (D1 446, D8 189, S2 137, D4 126, S10 47, D7 10)",
-   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 \u2014 NOT a paid /v1/qc verdict and not a release signal",
+   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
    "excluded": [
     "paid content checks",
     "factory /v1/qc verdicts (0/933 spent)"
@@ -403,7 +404,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T00:00+09:00",
-   "value": "74 authored+gated wave-2 CONTRACTS (not articles \u2014 the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
+   "value": "74 authored+gated wave-2 CONTRACTS (not articles — the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
    "scope": "contracts only",
    "excluded": [
     "article bytes, which do not exist yet"
@@ -484,7 +485,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 \u2014 build-only from the platform's perspective",
+   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 — build-only from the platform's perspective",
    "evidence": [
     {
      "type": "live-api",
@@ -538,7 +539,7 @@
    "scope": "article-serving paths only",
    "excluded": [
     "gate paths",
-    "practice paths \u2014 bank-gated, unmeasured"
+    "practice paths — bank-gated, unmeasured"
    ],
    "evidence": [
     {
@@ -597,7 +598,7 @@
    "section": "Psych",
    "status": "BLOCKED",
    "blocker": "fleet (repair assigned)",
-   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af \u2014 per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
+   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af — per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
    "evidence": [
     {
      "type": "github-issue",
@@ -612,7 +613,7 @@
    "section": "Psych",
    "status": "PLANNED",
    "status_at": "2026-08-17T15:54:30+09:00",
-   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold \u2014 U5 gate green, bank full, gate/practice snapshots walked",
+   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold — U5 gate green, bank full, gate/practice snapshots walked",
    "evidence": [
     {
      "type": "git-branch",
