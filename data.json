@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T19:00+09:00",
+ "snapshot": "2026-08-17T19:10+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -385,9 +385,9 @@
    "evidence": [
     {
      "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/64823839b89047e93a9eb7f33c0f08c026fb96d2/window-3",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/64823839b89047e93a9eb7f33c0f08c026fb96d2/evidence/apwh/20260816-042248__fable__apwh--qc-sweep-w2/fable/window-3",
      "commit": "64823839b89047e93a9eb7f33c0f08c026fb96d2",
-     "note": "window-3 log, screen receipts, and the two instrument fixes"
+     "note": "window-3 log, screen receipts, and the two instrument fixes | URL corrected 2026-08-17 19:10: the SHA-pin conversion dropped the directory prefix, leaving path 'window-3' which does not exist at repo root. Verified the full path resolves at this commit before republishing."
     }
    ],
    "notes": "Reachability verified: 0 repair-routed items carry a fail that rationales+skill codes cannot clear; 313 of 362 regenerate-routed carry a hard fail (D8/D4/S10/D7) needing regeneration. The 446 remaining failures are now exactly the 446 items lacking distractor rationales: 362 regenerate-routed (gated on the pool) + 84 repair-routed (awaiting redraw skill codes). Every item holding BOTH rationales and a skill code now passes. The earlier 449 reading was understated by a stale enrichment file; the redraw fold at 18:10 corrected it to 487."
