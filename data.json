@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T18:05+09:00",
+ "snapshot": "2026-08-17T18:12+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -246,12 +246,12 @@
    "claim_id": "apwh.skillcodes",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:00+09:00",
-   "value": "791/933 skill codes resolved (142 unresolved = 15.2%, under the 40% machinery stop-rule). Redraw round 2 COMPLETE (207/207 drawn, +65 resolved); round 3 running on the remaining 142",
+   "observed_at": "2026-08-17T18:12+09:00",
+   "value": "796/933 skill codes resolved and FOLDED into the v2 enrichment (137 unresolved = 14.7%, under the 40% machinery stop-rule). Redraw round 2 drew all 207 of its items (+65); round 3 in flight on the last 142",
    "evidence": [
     {
-     "type": "cursor-snapshot",
-     "note": "tagger main + supplement + redraw r2 states, counted 2026-08-17 17:55 KST; r3 in flight"
+     "type": "dry-run-receipt",
+     "note": "fold_redraw_codes.py --execute 2026-08-17 18:10 KST; v2 + both repair queues filled to 796; fold-redraw-receipt.json"
     }
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
@@ -277,12 +277,12 @@
    "claim_id": "apwh.sweep",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T18:05+09:00",
-   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). PRECONDITION MEASURED 2026-08-17 18:03 KST: materialize_qc_records.py is fail-closed on naked items and currently refuses — 446 items lack distractor_rationales, 207 lack skill_codes (of 933). The sweep therefore cannot be requested until repairs converge AND the regeneration tail lands AND the redraw skill-code fold is applied.",
+   "status_at": "2026-08-17T18:12+09:00",
+   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). PRECONDITION RE-MEASURED 2026-08-17 18:12 KST after the redraw fold: materialize_qc_records.py is fail-closed on naked items and still refuses — 446 items lack distractor_rationales, 137 lack skill_codes (of 933). The skill-code gap fell 207->137 by folding codes that were already resolved but unwritten; the rationale gap needs the regeneration tail (362) plus the remaining repair wave (84), so the sweep cannot be requested until both land.",
    "evidence": [
     {
      "type": "dry-run-receipt",
-     "note": "materialize_qc_records.py dry run 2026-08-17 18:03 KST: naked_counts {distractor_rationales: 446, skill_codes: 207} of 933"
+     "note": "materialize_qc_records.py dry run 2026-08-17 18:12 KST: naked_counts {distractor_rationales: 446, skill_codes: 137} of 933"
     }
    ],
    "evidence_access": "NONE_YET",
@@ -361,8 +361,8 @@
    "claim_id": "apwh.structural_screen",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:00+09:00",
-   "value": "449/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 484 still fail (D1 446, S2 207, D8 189, D4 126, S10 47, D7 10)",
+   "observed_at": "2026-08-17T18:12+09:00",
+   "value": "487/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 446 still fail (D1 446, D8 189, S2 137, D4 126, S10 47, D7 10)",
    "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
    "excluded": [
     "paid content checks",
@@ -376,7 +376,7 @@
      "note": "window-3 log, screen receipts, and the two instrument fixes"
     }
    ],
-   "notes": "Reachability verified: 0 repair-routed items carry a fail that rationales+skill codes cannot clear; 313 of 362 regenerate-routed carry a hard fail (D8/D4/S10/D7) needing regeneration; 122+362 reconciles to the 484. The 449 is UNDERSTATED: 487 items now carry rationales, but the v2 enrichment still holds 726 of the 791 resolved skill codes, so 38 repaired items still fail S2 until the redraw fold lands (gated on rounds going dry)."
+   "notes": "Reachability verified: 0 repair-routed items carry a fail that rationales+skill codes cannot clear; 313 of 362 regenerate-routed carry a hard fail (D8/D4/S10/D7) needing regeneration. The 446 remaining failures are now exactly the 446 items lacking distractor rationales: 362 regenerate-routed (gated on the pool) + 84 repair-routed (awaiting redraw skill codes). Every item holding BOTH rationales and a skill code now passes. The earlier 449 reading was understated by a stale enrichment file; the redraw fold at 18:10 corrected it to 487."
   },
   {
    "claim_id": "apush.ledger",

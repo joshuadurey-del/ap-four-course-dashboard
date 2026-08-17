@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T09:12Z",
+  "course": "APWH",
+  "text": "Folded the redraw skill codes, which corrected an understated reading: items that would pass structural QC went 449 to 487, and the skill-code gap fell from 207 to 137. The 207 was inflated because 69 codes were already resolved but not written into the enrichment file. The 446 remaining structural failures are now exactly the items with no distractor rationales: 362 awaiting regeneration behind the pool, and 84 awaiting redraw codes."
+ },
+ {
   "ts": "2026-08-17T09:05Z",
   "course": "APWH",
   "text": "Pool release ETA from the pool owner: cautious 2026-08-18 EOD KST, which gates the 362-item APWH regeneration tail. Measured the paid sweep's own precondition: the materializer is fail-closed and currently refuses, with 446 items lacking distractor rationales and 207 lacking skill codes. So the sweep cannot be requested until repairs converge, the regeneration tail lands, and the redraw skill-code fold is applied."
