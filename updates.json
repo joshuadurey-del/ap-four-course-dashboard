@@ -1,5 +1,25 @@
 [
  {
+  "ts": "2026-08-17T06:40Z",
+  "course": "Psych",
+  "text": "U5 gate improved to 26 findings after the fleet's repair train landed (9 PRs). Course rebuilt from the repaired articles and re-walked: 221/221 green. Screenshots refreshed at the same links."
+ },
+ {
+  "ts": "2026-08-17T06:35Z",
+  "course": "APWH",
+  "text": "Skill codes at 774/933, recomputed live. Redraw round 2 continuing; repair wave consuming new codes as they land."
+ },
+ {
+  "ts": "2026-08-17T06:30Z",
+  "course": "Cross",
+  "text": "All evidence that lived only on local machines is now uploaded to the Drive evidence folder and linked from every claim. Judge-attribution ask withdrawn as moot (local judge retired; the factory verdict is the contract)."
+ },
+ {
+  "ts": "2026-08-17T06:00Z",
+  "course": "HumGeo",
+  "text": "Drain slowed: the factory's generation route is returning intermittent 502/504 errors and the runner fail-closes each one (38 blocked events). Factory health itself reads OK. Blocked slots roll into the amended relaunch; cautious seal date stays 08-18."
+ },
+ {
   "ts": "2026-08-17T04:44Z",
   "course": "HumGeo",
   "text": "Bank rebuild at 432/474 official passes; residual runner draining the rest; 30-slot amendment sealed and parked to fire at drain."
