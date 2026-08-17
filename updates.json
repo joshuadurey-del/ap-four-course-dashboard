@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T08:58Z",
+  "course": "Cross",
+  "text": "Receipt audit per owner directive: every numeric claim now carries evidence. The conclude-and-relaunch ceremony receipts (backup sha256, atomic re-bind, preflight, amended-slot reconciliation, grinder code trails) are published on the evidence repo and linked from the HumGeo execution claim; the Drive backup folder is linked directly. PLANNED numbers now cite the receipt their number originates from, marked NONE_YET for the execution half."
+ },
+ {
   "ts": "2026-08-17T09:00Z",
   "course": "APWH",
   "text": "Structural screen now reads the repaired bank: 449/933 items would pass structure and reach paid content checks, up from 0/933 at window 1. Top-up apply landed (+38, 487/571 total, commit 5afcb7a). Skill codes at 791/933; redraw round 2 complete, round 3 running on 142. Two instrument bugs fixed: the apply step was not idempotent (would have falsely refused all 449 prior items) and the screen was not reading the fields the repair chain fills. Regen tail still gated on HumGeo POOL-RELEASED."
@@ -12,7 +17,7 @@
  {
   "ts": "2026-08-17T08:18Z",
   "course": "Cross",
-  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) — both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
+  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) \u2014 both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
  },
  {
   "ts": "2026-08-17T07:32Z",

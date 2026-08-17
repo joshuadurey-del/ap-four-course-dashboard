@@ -39,6 +39,12 @@
      "type": "runner-log",
      "url": "https://drive.google.com/file/d/13LV3wLzRCz0m5YvkFQoIgpH16OwbkJoX/view",
      "note": "sanitized copy, 2026-08-17"
+    },
+    {
+     "type": "git-branch",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260817-084500__claude__humgeo--residual-conclude-relaunch/claude",
+     "commit": "8811dd9",
+     "note": "conclude ceremony receipts incl. grinder trails (why the run was concluded)"
     }
    ],
    "evidence_access": "SHARED_VIA_DRIVE"
@@ -67,16 +73,28 @@
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE",
-   "observed_note": "sha recomputed from bytes · date-only in source; midnight assumed"
+   "observed_note": "sha recomputed from bytes \u00b7 date-only in source; midnight assumed"
   },
   {
    "claim_id": "humgeo.amendment.execution",
    "section": "HumGeo",
    "status": "OBSERVED",
    "value": "amended relaunch LIVE (detached, 120-attempt cap, prescreen off per owner ruling): plan re-bound f6482022->91310a14 atomically with 432 accepts preserved; preflight 432 reused / 42 selected / zero corpus writes; 19 amended slots regenerating under fresh bytes",
-   "evidence": [],
-   "evidence_access": "NONE_YET",
-   "observed_at": "2026-08-17T17:37+09:00",
+   "evidence": [
+    {
+     "type": "git-branch",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260817-084500__claude__humgeo--residual-conclude-relaunch/claude",
+     "commit": "8811dd9",
+     "note": "ceremony receipts: backup sha, atomic re-bind, plan-only preflight, amended-slot reconciliation, grinder code trails, blocked census"
+    },
+    {
+     "type": "drive-backup",
+     "url": "https://drive.google.com/drive/folders/1Gl6s74YH-htbUHnRr3QONGzJ_VH8rRBP",
+     "note": "Drive INCEPT/humgeo-pre-stop-backup-20260817-173235 (3 files, rclone checksum-verified); archive sha256 5b825a65..."
+    }
+   ],
+   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_VIA_DRIVE",
+   "observed_at": "2026-08-17T17:58+09:00",
    "scope": "runner launch + preflight receipts; official verdicts pending per slot"
   },
   {
@@ -100,8 +118,15 @@
    "status": "PLANNED",
    "status_at": "2026-08-17T13:48:21+09:00",
    "value": "sealed manifest of 482 records (480 active + 2 superseded), fingerprint per record",
-   "evidence": [],
-   "evidence_access": "NONE_YET"
+   "evidence": [
+    {
+     "type": "git-branch",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude",
+     "note": "482 = 474 plan rows + 6 metadata + 2 superseded; target defined by the sealed amended plan (sha 91310a14...)"
+    }
+   ],
+   "evidence_access": "NONE_YET",
+   "note": "target per sealed plan; execution receipt NONE_YET"
   },
   {
    "claim_id": "humgeo.repair759.staged",
@@ -136,7 +161,13 @@
    "status": "PLANNED",
    "status_at": "2026-08-17T13:48:21+09:00",
    "value": "741 staged candidates through official /v1/qc after the APWH pool turn",
-   "evidence": [],
+   "evidence": [
+    {
+     "type": "git-branch",
+     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/evidence/humgeo/20260816-052500__claude__humgeo--repair-docs/claude",
+     "note": "741 = staged-candidate receipts (same receipts as repair759.staged); official rescreen NONE_YET"
+    }
+   ],
    "evidence_access": "NONE_YET"
   },
   {
@@ -174,7 +205,7 @@
    "section": "HumGeo",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 — Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
+   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 \u2014 Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
    "scope": "deployed surface anchored to commit e4b03bc441e8a6870de86ca2368043016f03213e",
    "excluded": [],
    "evidence": [
@@ -247,7 +278,13 @@
    "status": "PLANNED",
    "status_at": "2026-08-17T13:48:21+09:00",
    "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once)",
-   "evidence": [],
+   "evidence": [
+    {
+     "type": "git-commit",
+     "url": "https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2",
+     "note": "933 = canonical bank size at this commit; 0 verdicts = owner ruling repair-first-judge-once"
+    }
+   ],
    "evidence_access": "NONE_YET"
   },
   {
@@ -304,7 +341,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-17T18:00+09:00",
    "blocker": "fleet",
-   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration — the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other — whoever resumes #591 needs the tag.",
+   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration \u2014 the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other \u2014 whoever resumes #591 needs the tag.",
    "evidence": [
     {
      "type": "github-issue",
@@ -325,7 +362,7 @@
    "status": "OBSERVED",
    "observed_at": "2026-08-17T18:00+09:00",
    "value": "449/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 484 still fail (D1 446, S2 207, D8 189, D4 126, S10 47, D7 10)",
-   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
+   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 \u2014 NOT a paid /v1/qc verdict and not a release signal",
    "excluded": [
     "paid content checks",
     "factory /v1/qc verdicts (0/933 spent)"
@@ -360,7 +397,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T00:00+09:00",
-   "value": "74 authored+gated wave-2 CONTRACTS (not articles — the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
+   "value": "74 authored+gated wave-2 CONTRACTS (not articles \u2014 the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
    "scope": "contracts only",
    "excluded": [
     "article bytes, which do not exist yet"
@@ -382,7 +419,13 @@
    "status": "PLANNED",
    "status_at": "2026-08-17T13:48:21+09:00",
    "value": "74 contracts post on APUSH's factory-pool turn (third in the serial order)",
-   "evidence": [],
+   "evidence": [
+    {
+     "type": "git-branch",
+     "url": "https://github.com/ilmych/apush-build-outputs/tree/receipts/20260812-chunk1-fixround",
+     "note": "74 = gated wave-2 contracts staged at batch-34 commit 7846cd75; posting receipt NONE_YET"
+    }
+   ],
    "evidence_access": "NONE_YET"
   },
   {
@@ -435,7 +478,7 @@
    "section": "APUSH",
    "status": "OBSERVED",
    "observed_at": "2026-08-17T13:21+09:00",
-   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 — build-only from the platform's perspective",
+   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 \u2014 build-only from the platform's perspective",
    "evidence": [
     {
      "type": "live-api",
@@ -489,7 +532,7 @@
    "scope": "article-serving paths only",
    "excluded": [
     "gate paths",
-    "practice paths — bank-gated, unmeasured"
+    "practice paths \u2014 bank-gated, unmeasured"
    ],
    "evidence": [
     {
@@ -548,7 +591,7 @@
    "section": "Psych",
    "status": "BLOCKED",
    "blocker": "fleet (repair assigned)",
-   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af — per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
+   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af \u2014 per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
    "evidence": [
     {
      "type": "github-issue",
@@ -563,7 +606,7 @@
    "section": "Psych",
    "status": "PLANNED",
    "status_at": "2026-08-17T15:54:30+09:00",
-   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold — U5 gate green, bank full, gate/practice snapshots walked",
+   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold \u2014 U5 gate green, bank full, gate/practice snapshots walked",
    "evidence": [
     {
      "type": "git-branch",
