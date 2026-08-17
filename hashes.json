@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-17T09:23:03Z",
+ "generated_utc": "2026-08-17T09:23:55Z",
  "note": "sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.",
  "files": [
   {
