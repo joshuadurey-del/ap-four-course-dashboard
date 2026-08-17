@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T22:00Z",
+  "course": "APWH",
+  "text": "The factory pool was released to us at 04:23 and the gate condition checks out, so the rebuild batch is no longer waiting on anyone. All four tagging rounds have finished and their results are now written into the file the checks read: 821 of 933 questions have a skill tag, leaving 12 percent unresolved, well inside the limit. Items that would pass the structural check rose to 487 of 933, and the 446 that still fail are exactly the ones with no wrong-answer explanations yet. The rebuild batch settles between 362 and 429. One constraint from the release note: our batch must run in small chunks and hand the pool back between them, because human geography work jumps ahead of ours the moment it has anything runnable."
+ },
+ {
   "ts": "2026-08-17T19:25Z",
   "course": "HumGeo",
   "text": "Factory pool RELEASED to the next course at 04:23 KST, with a receipt. The gate was checked only after the run had stopped and the surface was still, because a check run mid-flight reads at random and can show all-clear by luck. Releasing the pool is not a claim that HumGeo is finished, and the receipt says so in its own field: 12 rows still need the owner-approved pin fix, 10 have burned through the attempt cap and need the owner's number, 1 needs a rationale repair, and 3 metadata rows failed their check. The overnight tail converted two slots and moved seal-ready from 449 to 451, but it also pushed four more slots into the cap wall, so the owner's cap decision now covers 10 rather than 4. Both halves of that trade are on the receipt."

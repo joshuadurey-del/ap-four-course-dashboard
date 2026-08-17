@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-17T23:45+09:00",
+ "snapshot": "2026-08-18T07:00+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -240,8 +240,8 @@
    "claim_id": "apwh.repairs.applied",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T23:40+09:00",
-   "value": "487 rationale repairs applied to the canonical bank and all 487 banked, push-gate verified (top-up +38 at 2026-08-17 17:56 KST). The DENOMINATOR is not fixed: 571 today, but settling between 501 and 571 as unresolved repair-routed items reroute to regeneration. 84 remain unapplied, of which 70 await a skill code from redraw round 4.",
+   "observed_at": "2026-08-18T07:00+09:00",
+   "value": "487 rationale repairs applied and banked, push-gate verified (commit 5afcb7a, bank 7c96b2c2). Denominator not fixed: 571 today, settling between 504 and 571 as the 67 still-uncoded repair-routed items reroute to regeneration. 84 remain unapplied, of which 67 await a skill code that four redraw rounds did not produce.",
    "evidence": [
     {
      "type": "git-commit",
@@ -257,12 +257,12 @@
    "claim_id": "apwh.skillcodes",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:12+09:00",
-   "value": "796/933 skill codes resolved and FOLDED into the v2 enrichment (137 unresolved = 14.7%, under the 40% machinery stop-rule). Redraw round 2 drew all 207 of its items (+65); round 3 in flight on the last 142",
+   "observed_at": "2026-08-18T07:00+09:00",
+   "value": "821/933 skill codes resolved AND folded into the v2 enrichment the gates read (112 unresolved = 12.0%, under the 40% machinery stop-rule). All four redraw rounds COMPLETE: r2 207/207 drawn +65, r3 142/142 +22, r4 120/120 +8. Declining recovery per round (31% -> 15% -> 7%). A round-5 plan builds over the remaining 112 (not dry), and the tagger is a separate service from the factory pool so it does not compete with the tail.",
    "evidence": [
     {
      "type": "dry-run-receipt",
-     "note": "fold_redraw_codes.py --execute 2026-08-17 18:10 KST; v2 + both repair queues filled to 796; fold-redraw-receipt.json"
+     "note": "fold_redraw_codes.py --execute 2026-08-18 06:58 KST behind a fresh course-freshness PASS; v2 + both repair queues filled to 821; fold-redraw-receipt.json"
     }
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
@@ -272,12 +272,16 @@
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T23:45+09:00",
-   "value": "Regeneration tail will settle between 362 and 432 items, not a fixed 362. Mechanism: a repair-routed item that never gets a skill code cannot clear the S2 check, and the factory's own S2 consequence routes it to regeneration instead. 70 repair-routed items still lack a code and are being drawn in redraw round 4 (in flight, PID 99723, 120 holdouts). Round 4 resolving all 70 gives the 362 floor; resolving none gives the 432 ceiling. Correspondingly the repair route settles between 501 and 571. Execution still gated on the HumGeo pool release, cautious 2026-08-18 EOD KST per the pool owner. RECONCILED 2026-08-17 23:45: the dispatch board's earlier ~440+/-5 is WITHDRAWN by that seat after verifying from bytes (repair-routed-without-code = exactly 70, ceiling 432, floor 362). Its root cause is recorded because the error class recurs: 84 was derived as 571-487, repair target minus repaired-at-that-moment, which conflates 'not yet repaired' with 'code-unresolved' and mixes in rows whose codes existed but were not yet consumed plus regenerate-routed uncodeds whose codes are irrelevant before generation (new items are tagged after minting). 362-432 with the mechanism is the agreed figure on both surfaces.",
+   "status_at": "2026-08-18T07:00+09:00",
+   "value": "POOL RELEASED 2026-08-18 04:23 KST — the HumGeo seat issued HUMGEO-POOL-RELEASED with gate.uncertain_jobs empty and no_runner_alive true, so the APWH tail is clear to fire and is no longer gated. Tail settles between 362 and 429 items: 362 staged and pin-verified against the live bank (all 362 identity pins match 7c96b2c2, zero drift), plus up to 67 repair-routed items that never resolved a skill code and therefore reroute to regeneration under the factory's S2 consequence. Ceiling moved 432 -> 429 as redraw round 4 recovered 3 more. BINDING CONSTRAINT from the receipt's priority_guard: the tail runs chunk-gated and yields the pool between chunks the moment any HumGeo row becomes runnable — HumGeo generation jumps the queue mid-tail. Chunks <=10 with a pool-preflight between, per fleet ruling #55; the runner does NOT chunk internally, so the discipline is operator-driven (37 chunks).",
    "evidence": [
     {
+     "type": "state-snapshot",
+     "note": "~/.incept/day-20260816/humgeo-pool-released.receipt, issued 2026-08-17T19:23:33Z; gate.uncertain_jobs == [], gate.no_runner_alive == true, corpus_writes 0"
+    },
+    {
      "type": "dry-run-receipt",
-     "note": "repair-queue-933.json routes on disk 2026-08-17 23:35 KST: 571 repair / 362 regenerate; 70 repair-routed items carry no resolved skill code across all tagger states (main+supplement+r2+r3), all 70 present in the round-4 plan"
+     "note": "362 worklist identity pins verified against live bank 7c96b2c2 — 362 match, 0 drift, all route=regenerate; 67 repair-routed still uncoded after r4"
     }
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
@@ -287,8 +291,8 @@
    "claim_id": "apwh.sweep",
    "section": "APWH",
    "status": "PLANNED",
-   "status_at": "2026-08-17T19:00+09:00",
-   "value": "PROVENANCE AUDITED 2026-08-17 19:00 (owner challenge: canonical factory machinery or a local invention?): CANONICAL. 2,499 of 2,513 records carry spend_notes naming paid /v1/qc content calls; exactly 1 batch (14 records) was seeded from pre-existing probe verdicts at zero spend and labels itself so; batch notes use service_qc.py's own --limit flag (the sanctioned instrument that imports factory bytes); fail codes are the factory's contract ids (STRUCT_S1/S2/D1/D4, D2, C1/C2/C3, S3/S6/S7/S8). Not a hand-rolled harness. paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). SIZED FROM RECEIPTS 2026-08-17 18:55: 3.1h floor at 1 worker, 3-5h cautious pending a 10-item timed pilot. Basis VERIFIED independently in ~/.incept/day-20260811/i7-sweep/sweep-state.json — 321 batch receipts, 2,513 calls, continuous 2026-08-12T07:17:33Z to 14:20:58Z = 7.06h span; per-item cost 11.9s from the 220 batches that state their own duration (1,614 items / 19,215s). METHOD CORRECTION: the earlier 10.1-10.2 s/call figure divided the whole span by the record count -- time per record, not call cost, and it silently included 14 records that were never called. Idle time was NOT the problem (only 0.09h of gaps >5min across the run); dividing by the span was. incept-51 independently re-derived 11.9s from the same bytes and matched. Skews higher for us: those items were structurally mixed and many failed fast at the structural gate, while our 933 will be structurally clean and run all content checks. TWO PRIOR FIGURES WITHDRAWN: 3.3-7.8h (assumed 6-8 concurrent) and ~23h (took service_qc.py's 'sequential on purpose - the ~8-thread factory pool is shared' docstring as binding; that line was written 08-10 under the wrong pool model and is superseded). Pool contention withdrawn on FACTORY BYTES, not the plan cite: app.py:5799 /v1/qc is a synchronous handler delegating inline to run_content_qc, no enqueue and no job; async_worker.py's ThreadPoolExecutor is generation-only (thread_name_prefix='gen-worker', ASYNC_GENERATE_MAX_WORKERS). Real shared throttle is the provider token budget, hence safe concurrency 3.",
+   "status_at": "2026-08-18T07:00+09:00",
+   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). Sized ~3.1h floor at 1 worker / 3-5h cautious from the verified 11.9 s/item receipt. PRECONDITION RE-MEASURED 2026-08-18 06:59 post-fold: materialize_qc_records.py still refuses — 446 items lack distractor_rationales, 112 lack skill_codes (of 933). The skill-code gap fell 207 -> 137 -> 112 across the folds; the rationale gap needs the regeneration tail plus the remaining repair wave. QC calls do NOT consume generation pool slots (app.py:5799 synchronous handler; async_worker.py executor is generation-only), so this leg never blocks another course.",
    "evidence": [
     {
      "type": "state-snapshot",
@@ -380,8 +384,8 @@
    "claim_id": "apwh.structural_screen",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:12+09:00",
-   "value": "487/933 items would now pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 446 still fail (D1 446, D8 189, S2 137, D4 126, S10 47, D7 10)",
+   "observed_at": "2026-08-18T07:00+09:00",
+   "value": "487/933 items would pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 446 fail (D1 446, D8 189, D4 126, S2 112, S10 47, D7 10)",
    "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
    "excluded": [
     "paid content checks",
@@ -395,7 +399,7 @@
      "note": "window-3 log, screen receipts, and the two instrument fixes | URL corrected 2026-08-17 19:10: the SHA-pin conversion dropped the directory prefix, leaving path 'window-3' which does not exist at repo root. Verified the full path resolves at this commit before republishing."
     }
    ],
-   "notes": "Reachability verified: 0 repair-routed items carry a fail that rationales+skill codes cannot clear; 313 of 362 regenerate-routed carry a hard fail (D8/D4/S10/D7) needing regeneration. The 446 remaining failures are now exactly the 446 items lacking distractor rationales: 362 regenerate-routed (gated on the pool) + 84 repair-routed (awaiting redraw skill codes). Every item holding BOTH rationales and a skill code now passes. The earlier 449 reading was understated by a stale enrichment file; the redraw fold at 18:10 corrected it to 487."
+   "notes": "Re-measured post-fold against bank 7c96b2c2 with 821 skill codes and 487 rationale sets supplied. The 446 remaining failures are exactly the 446 items lacking distractor rationales: every item holding BOTH a rationale set and a skill code now passes. S2 fell 207 -> 112 as the redraw folds landed. Reachability unchanged: 0 repair-routed items carry a fail that rationales+codes cannot clear; 313 of the regenerate-routed carry a hard fail (D8/D4/S10/D7) that genuinely needs regeneration."
   },
   {
    "claim_id": "apwh.sweep.expected_fail_rate",
