@@ -34,51 +34,114 @@
           <tr>
             <td>
               <strong class="lesson-title">We invented a retry loop the factory never asked for.</strong>
-              <span class="lesson-context">The factory's own contract caps generation attempts at 5 per call, default 5, with 3x overgeneration built in. Our runner wrapped it in an outer loop of our own &mdash; 120 tries per slot, earlier runs unlimited. The campaign spent 6,749 calls and 968 hours of factory compute by the service's own timing field; a factory-faithful run would have used about 7% of that. The dollar figure is unknowable from our side: the receipts carry no token or cost fields.</span>
+              <details class="lesson-details">
+                <summary>Context</summary>
+                <span class="lesson-context">The factory's own contract caps generation attempts at 5 per call, default 5, with 3x overgeneration built in. Our runner wrapped it in an outer loop of our own &mdash; 120 tries per slot, earlier runs unlimited. The campaign spent 6,749 calls and 968 hours of factory compute by the service's own timing field; a factory-faithful run would have used about 7% of that. The dollar figure is unknowable from our side: the receipts carry no token or cost fields.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">Owner ruling 2026-08-18: outer retry loops are retired.</strong> The full story — what the contract publishes, how retry layers drifted around it in every era on both sides of the handover, and the correction — is a neutral contract note in the campaign repo (<a href="https://github.com/ilmych/humgeo-rebuild/blob/63df2e4b62f8a5d4d187dc10e19c01dde119c51e/out/issue21/FACTORY-ATTEMPTS-CONTRACT-NOTE.md" target="_blank" rel="noopener">note</a>). One factory call per slot on factory defaults (their max_attempts, their overgeneration); exhaustion goes straight to the published dispositions (repair / regenerate-once / supersede), never to another loop. The live run was stopped mid-grind on the ruling. Model-pinning's hidden price &mdash; their contract forces count=1 and max_attempts=1 when a model is pinned &mdash; must be named at plan design. A write-time gate now blocks new grinding-shaped plans.</td>
+            <td>
+              <strong class="application-lead">Owner ruling 2026-08-18: outer retry loops are retired.</strong>
+              <details class="lesson-details">
+                <summary>Implementation and evidence</summary>
+                <div>The full story — what the contract publishes, how retry layers drifted around it in every era on both sides of the handover, and the correction — is a neutral contract note in the campaign repo (<a href="https://github.com/ilmych/humgeo-rebuild/blob/63df2e4b62f8a5d4d187dc10e19c01dde119c51e/out/issue21/FACTORY-ATTEMPTS-CONTRACT-NOTE.md" target="_blank" rel="noopener">note</a>). One factory call per slot on factory defaults (their max_attempts, their overgeneration); exhaustion goes straight to the published dispositions (repair / regenerate-once / supersede), never to another loop. The live run was stopped mid-grind on the ruling. Model-pinning's hidden price &mdash; their contract forces count=1 and max_attempts=1 when a model is pinned &mdash; must be named at plan design. A write-time gate now blocks new grinding-shaped plans.</div>
+              </details>
+            </td>
           </tr>
           <tr>
             <td>
               <strong class="lesson-title">We generated a whole corpus without real QC.</strong>
-              <span class="lesson-context">The HumGeo bank was minted through the factory's generation route. Its inline checks looked like QC and were not. Half the bank failed when the real sweep ran.</span>
+              <details class="lesson-details">
+                <summary>Context</summary>
+                <span class="lesson-context">The HumGeo bank was minted through the factory's generation route. Its inline checks looked like QC and were not. Half the bank failed when the real sweep ran.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">The factory now judges every item inside generation.</strong> APWH holds a strict repair-first, judge-once order: 449 repairs applied, zero paid verdicts spent (<a href="https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2" target="_blank" rel="noopener">commit</a>). Every HumGeo rebuild pass binds to the item's exact bytes (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude" target="_blank" rel="noopener">receipts</a>).</td>
+            <td>
+              <strong class="application-lead">The factory now judges every item inside generation.</strong>
+              <details class="lesson-details">
+                <summary>Implementation and evidence</summary>
+                <div>APWH holds a strict repair-first, judge-once order: 449 repairs applied, zero paid verdicts spent (<a href="https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2" target="_blank" rel="noopener">commit</a>). Every HumGeo rebuild pass binds to the item's exact bytes (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude" target="_blank" rel="noopener">receipts</a>).</div>
+              </details>
+            </td>
           </tr>
           <tr>
             <td>
               <strong class="lesson-title">Sealed plans can go stale against their own sources.</strong>
-              <span class="lesson-context">30 HumGeo slots were sealed against source copies missing already-committed skill tags. It cost a mid-campaign amendment.</span>
+              <details class="lesson-details">
+                <summary>Context</summary>
+                <span class="lesson-context">30 HumGeo slots were sealed against source copies missing already-committed skill tags. It cost a mid-campaign amendment.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">Plans now take receipted amendments as first-class input.</strong> A sandbox proof is required before execution: 425 prior passes intact, 49 slots selected (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude" target="_blank" rel="noopener">receipts</a>).</td>
+            <td>
+              <strong class="application-lead">Plans now take receipted amendments as first-class input.</strong>
+              <details class="lesson-details">
+                <summary>Implementation and evidence</summary>
+                <div>A sandbox proof is required before execution: 425 prior passes intact, 49 slots selected (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude" target="_blank" rel="noopener">receipts</a>).</div>
+              </details>
+            </td>
           </tr>
           <tr>
             <td>
               <strong class="lesson-title">We measured our shortcut before trusting it, and it failed.</strong>
-              <span class="lesson-context">A local pre-check judge was tested against official verdicts: 35 pairs, 3 votes each, 105 calls. It missed 1 in 5 real failures.</span>
+              <details class="lesson-details">
+                <summary>Context</summary>
+                <span class="lesson-context">A local pre-check judge was tested against official verdicts: 35 pairs, 3 votes each, 105 calls. It missed 1 in 5 real failures.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">It never gated anything, and as of today it is off entirely.</strong> Every item goes straight to the factory judge. Standing rule: nothing gets judging authority without measurement.</td>
+            <td>
+              <strong class="application-lead">It never gated anything, and as of today it is off entirely.</strong>
+              <details class="lesson-details">
+                <summary>Implementation</summary>
+                <div>Every item goes straight to the factory judge. Standing rule: nothing gets judging authority without measurement.</div>
+              </details>
+            </td>
           </tr>
           <tr>
             <td>
               <strong class="lesson-title">Both deadlines slipped about a day, for a structural reason.</strong>
-              <span class="lesson-context">Four courses share one factory pool in strict series; upstream delay compounds downstream.</span>
+              <details class="lesson-details">
+                <summary>Context</summary>
+                <span class="lesson-context">Four courses share one factory pool in strict series; upstream delay compounds downstream.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">The chain is now automated.</strong> Each lane's close writes a receipt and the next lane fires on it, no human in the handoff (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/f05a665d52a31707a72c2d76d5271b2f5a02db60/evidence/seat/20260817-apush-stage4-prep" target="_blank" rel="noopener">Stage-4 prep receipts</a>).</td>
+            <td>
+              <strong class="application-lead">The chain is now automated.</strong>
+              <details class="lesson-details">
+                <summary>Implementation and evidence</summary>
+                <div>Each lane's close writes a receipt and the next lane fires on it, no human in the handoff (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/f05a665d52a31707a72c2d76d5271b2f5a02db60/evidence/seat/20260817-apush-stage4-prep" target="_blank" rel="noopener">Stage-4 prep receipts</a>).</div>
+              </details>
+            </td>
           </tr>
           <tr>
             <td>
               <strong class="lesson-title">My agents parked executable work, twice.</strong>
-              <span class="lesson-context">Buildable work sat scheduled "after the blocker" when only one command needed the blocker. A lane also halted two hours for a decision the factory contract already answered.</span>
+              <details class="lesson-details">
+                <summary>Context</summary>
+                <span class="lesson-context">Buildable work sat scheduled "after the blocker" when only one command needed the blocker. A lane also halted two hours for a decision the factory contract already answered.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">Standing rules force the split.</strong> Everything buildable builds now; only the truly gated command waits. Receipt: the 30-slot amendment was fully built and proven while its blocker still ran (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude" target="_blank" rel="noopener">timestamps</a>).</td>
+            <td>
+              <strong class="application-lead">Standing rules force the split.</strong>
+              <details class="lesson-details">
+                <summary>Implementation and evidence</summary>
+                <div>Everything buildable builds now; only the truly gated command waits. Receipt: the 30-slot amendment was fully built and proven while its blocker still ran (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude" target="_blank" rel="noopener">timestamps</a>).</div>
+              </details>
+            </td>
           </tr>
           <tr>
             <td>
               <strong class="lesson-title">One of my agents turned an investigation into an unauthorized production rewrite.</strong>
-              <span class="lesson-context">I had not approved the operation. It replaced <a href="claims.html#claim-humgeo.contamination.642">57 HumGeo items and moved 1,750 active child references to their successors</a> &mdash; historical incident counts, not a current-state claim. The agent broadened a rendered-UI investigation into a live content rewrite, reused display text containing the prompt and choices as the new prompt, then authored the choices again. <a href="https://github.com/InceptTrilogy/ap-one/pull/636" target="_blank" rel="noopener">PR #636</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/637" target="_blank" rel="noopener">PR #637</a> produced the contaminated successors documented in <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">#642</a>.</span>
+              <details class="lesson-details">
+                <summary>Context and incident evidence</summary>
+                <span class="lesson-context">I had not approved the operation. It replaced <a href="claims.html#claim-humgeo.contamination.642">57 HumGeo items and moved 1,750 active child references to their successors</a> &mdash; historical incident counts, not a current-state claim. The agent broadened a rendered-UI investigation into a live content rewrite, reused display text containing the prompt and choices as the new prompt, then authored the choices again. <a href="https://github.com/InceptTrilogy/ap-one/pull/636" target="_blank" rel="noopener">PR #636</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/637" target="_blank" rel="noopener">PR #637</a> produced the contaminated successors documented in <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">#642</a>.</span>
+              </details>
             </td>
-            <td><strong class="application-lead">Investigation authority no longer implies permission to write or publish.</strong> The fleet's <a href="https://github.com/InceptTrilogy/ap-one/pull/685" target="_blank" rel="noopener">PR #685</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/698" target="_blank" rel="noopener">PR #698</a> disabled the historical mutation paths. On my side, <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">every issue or PR on the sanctioned Claude path now requires an approving second-model verdict and my transcript-verified approval for the exact destination</a>. A later unauthorized filing, <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">intake #92</a>, exposed the same approval gap; <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">a replay proves that peer-message shape now blocks</a>. Any future corrective wave must meet #642's exact-source semantic proof. The local authorization failure mode is contained; the corrective data work in #642 remains open.</td>
+            <td>
+              <strong class="application-lead">Investigation authority no longer implies permission to write or publish.</strong>
+              <details class="lesson-details">
+                <summary>Containment and evidence</summary>
+                <div>The fleet's <a href="https://github.com/InceptTrilogy/ap-one/pull/685" target="_blank" rel="noopener">PR #685</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/698" target="_blank" rel="noopener">PR #698</a> disabled the historical mutation paths. On my side, <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">every issue or PR on the sanctioned Claude path now requires an approving second-model verdict and my transcript-verified approval for the exact destination</a>. A later unauthorized filing, <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">intake #92</a>, exposed the same approval gap; <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">a replay proves that peer-message shape now blocks</a>. Any future corrective wave must meet #642's exact-source semantic proof. The local authorization failure mode is contained; the corrective data work in #642 remains open.</div>
+              </details>
+            </td>
           </tr>
         </tbody>
       </table>

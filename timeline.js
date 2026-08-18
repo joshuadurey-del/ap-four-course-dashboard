@@ -143,7 +143,7 @@ const AP4_TIMELINE = {
         <p class="timeline-detail-title"></p>
       </div>
       <div>
-        <p class="timeline-eta" hidden><span>Estimated work remaining (our side)</span><strong></strong></p>
+        <p class="timeline-eta" hidden><span>Estimated active work within our control</span><strong></strong></p>
         <p class="timeline-detail-copy"></p>
         <p class="timeline-detail-foot"></p>
         <a class="timeline-detail-link" hidden>Open course dashboard →</a>

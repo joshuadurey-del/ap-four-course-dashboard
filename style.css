@@ -495,6 +495,18 @@ small { color: var(--muted); line-height: 1.45; }
 .lesson-title { display: block; margin-bottom: 7px; font-size: 15px; line-height: 1.4; }
 .lesson-context { display: block; color: #52617a; font-size: 14px; line-height: 1.58; }
 .application-lead { display: block; margin-bottom: 6px; color: #24375d; font-weight: 750; }
+.lesson-details { margin-top: 6px; }
+.lesson-details summary {
+  min-height: 44px;
+  padding: 11px 0;
+  cursor: pointer;
+  color: var(--blue-strong);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.lesson-details summary:hover { color: var(--blue); }
+.lesson-details[open] summary { margin-bottom: 3px; }
 .lesson-table td a { font-weight: 650; }
 .lesson-table tbody tr:hover td:first-child { background: #eaf0ff; }
 .lesson-table tbody tr:hover td:last-child { background: #f8faff; }
@@ -533,6 +545,8 @@ footer {
   nav {
     min-height: 56px;
     padding: 8px 14px;
+    flex-wrap: wrap;
+    overflow-x: visible;
   }
 
   nav .brand {
@@ -543,6 +557,11 @@ footer {
     margin-right: 4px;
     overflow: hidden;
     font-size: 0;
+  }
+
+  nav a {
+    min-height: 44px;
+    padding: 12px 10px;
   }
 
   nav a.active { order: -1; }
