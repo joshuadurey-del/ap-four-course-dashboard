@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T03:30Z",
+  "course": "Cross",
+  "text": "Claims contract addition: settled marker for terminal history. A claim like the retired local judge is a permanently closed fact \u2014 nothing exists to re-observe, so re-dating it every 48 hours would be ceremony without information. Settled claims keep their true dates forever, stay under full date hygiene, and are exempt only from the staleness clock; the linter now reports them on their own transparency line. Documented on the For-agents page."
+ },
+ {
   "ts": "2026-08-18T02:24Z",
   "course": "APWH",
   "text": "Overview card corrected on the APWH seat's four-point audit (owner asked if it was current; it was not): headline is now 504/933 structurally passing with its denominator named on the card; repairs read 504/571 banked; the regeneration batch is shown as mid-flight (253 accepted of 350 attempted, yielded to HumGeo's pool reclaim by design, resumes on pool return); badge reads tagger round 5. The honest line no longer says the paid sweep queues on the pool \u2014 only the batch does; the sweep waits transitively."
