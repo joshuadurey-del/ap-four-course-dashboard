@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T10:05Z",
+  "course": "APWH",
+  "text": "Honesty update on the old walk proof, no new work affected. The 08-12 render walk matched bytes against a course tree that was later retired to a tag and never merged — so that proof cannot be re-run against today's canonical tree, and the status tool's local-done credit stays unearned rather than false-accepted. Serving is unaffected: the platform serves the course tree live. The restore-or-retire choice goes to Josh in the morning report. The night QC chain (tagging, banking, the paid sweep handover) does not touch this."
+ },
+ {
   "ts": "2026-08-18T08:53Z",
   "course": "HumGeo",
   "text": "Course-page accuracy fix, no campaign movement: the #642 figures (57 items with duplicate choice text, 1,750 affected children) are now marked as the incident count measured at the 2026-08-13 filing, not a re-proven current count. Campaign state re-verified this hour from live sources and unchanged: 462 of 474 slots hold current-byte factory QC passes, 9 slots filed to the fleet on intake #92 (still open), 3 resumable from persisted factory jobs, 741 rescreens queued behind APWH's pool turn, seal blocked on the #92 ruling."

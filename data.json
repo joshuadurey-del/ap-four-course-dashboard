@@ -340,8 +340,8 @@
    "claim_id": "apwh.local_done.walk",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:35+09:00",
-   "value": "full course proven by render walk, bytes-exact receipts; NO resident server. The walk itself dates from 2026-08-12 and predates all repair work, so it must be REDONE against the final bank before our-side done",
+   "observed_at": "2026-08-18T19:05+09:00",
+   "value": "Render walk of 2026-08-12: 176 lessons walked, bytes-exact receipts vs the committed tree AS OF THAT DATE; NO resident server. TWO limits now on record: (1) the walk predates all repair/rebuild work and must be REDONE against the final bank; (2) CANON GAP found 2026-08-18 (incept-fd, byte-verified): the committed tree those receipts bind to sits unmerged on retired tag retired/apwh-study-skills-demo-serve-20260817 — absent from origin/main, so main serves APWH's tree LIVE from the platform (feedback_catalog.py:313-319: absent demo_tree_path = live reads) and the byte-exact proof is not reproducible on the canonical tree today. Serving is NOT at risk. Restore-vs-retire is Josh's morning call; ap_status deliberately left reading ?% rather than false-accepting the 60.",
    "scope": "render walk of all lesson pages",
    "excluded": [
     "persistent serving"
