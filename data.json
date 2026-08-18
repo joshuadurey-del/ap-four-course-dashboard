@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-18T07:00+09:00",
+ "snapshot": "2026-08-18T10:10+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -257,8 +257,8 @@
    "claim_id": "apwh.skillcodes",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T07:00+09:00",
-   "value": "821/933 skill codes resolved AND folded into the v2 enrichment the gates read (112 unresolved = 12.0%, under the 40% machinery stop-rule). All four redraw rounds COMPLETE: r2 207/207 drawn +65, r3 142/142 +22, r4 120/120 +8. Declining recovery per round (31% -> 15% -> 7%). A round-5 plan builds over the remaining 112 (not dry), and the tagger is a separate service from the factory pool so it does not compete with the tail.",
+   "observed_at": "2026-08-18T10:10+09:00",
+   "value": "821/933 skill codes resolved and folded into the v2 enrichment the gates read (112 unresolved = 12.0%, under the 40% stop-rule). All four redraw rounds COMPLETE (r2 +65, r3 +22, r4 +8; per-round recovery 31% -> 15% -> 7%). A round-5 plan exists over the 112 but is not fired; most of the 112 clear via regeneration instead, since new items are tagged after minting.",
    "evidence": [
     {
      "type": "dry-run-receipt",
@@ -271,9 +271,9 @@
   {
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
-   "status": "PLANNED",
-   "status_at": "2026-08-18T07:00+09:00",
-   "value": "POOL RELEASED 2026-08-18 04:23 KST — the HumGeo seat issued HUMGEO-POOL-RELEASED with gate.uncertain_jobs empty and no_runner_alive true, so the APWH tail is clear to fire and is no longer gated. Tail settles between 362 and 429 items: 362 staged and pin-verified against the live bank (all 362 identity pins match 7c96b2c2, zero drift), plus up to 67 repair-routed items that never resolved a skill code and therefore reroute to regeneration under the factory's S2 consequence. Ceiling moved 432 -> 429 as redraw round 4 recovered 3 more. BINDING CONSTRAINT from the receipt's priority_guard: the tail runs chunk-gated and yields the pool between chunks the moment any HumGeo row becomes runnable — HumGeo generation jumps the queue mid-tail. Chunks <=10 with a pool-preflight between, per fleet ruling #55; the runner does NOT chunk internally, so the discipline is operator-driven (37 chunks).",
+   "status": "OBSERVED",
+   "status_at": "2026-08-18T10:10+09:00",
+   "value": "Regeneration tail EXECUTING under the pool released 2026-08-18 04:23 KST: 253 accepted, 97 shortfall, 350 of 358 attempted (4 ids quarantined out of the original 362 by the driver's automatic retry cap). Runner idle between chunks under chunk<=10 + preflight discipline; the release note's priority guard holds (HumGeo work jumps the queue the moment it has a runnable row). The quarantined 4 carry a COMPLETE exhaustion checklist per the owner's last-resort gate — every option measured with byte cites: article enrichment PROHIBITED by the article spec's own prompt; hole-filler covers the subject but mints via the same endpoint and same G5 judge (not an alternate); universal-qgen is K-12-only by the factory's own gate (AP excluded); blind re-posting closed by owner ruling. ONE live option staged: a count=7 job (factory-accepted field, le=20; first-attempt ask = min(20, count*3.0) per the factory's own overgen idiom, ~100 candidates vs the 15 a count=1 job buys; partial passes return even on an exhausted job). Fires with the tail behind fresh preflight on the owner's go; interpretation fixed in advance: 0-of-~100 earns a drafted atom-layer ask shown to the owner before filing, 1+ runs the other three the same shape.",
    "evidence": [
     {
      "type": "state-snapshot",
@@ -285,7 +285,8 @@
     }
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
-   "scope": "regenerate-routed items; the count is a live function of redraw-round outcomes, not a fixed target"
+   "scope": "regenerate-routed items; 358 active + 4 quarantined-pending-exhaustion",
+   "observed_at": "2026-08-18T10:10+09:00"
   },
   {
    "claim_id": "apwh.sweep",
