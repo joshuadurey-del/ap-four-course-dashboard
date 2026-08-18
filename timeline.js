@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 18, 2026 · 14:04 KST',
+  snapshot: 'Aug 18, 2026 · 15:48 KST',
   courses: [
     {
       id: 'apush',
@@ -26,9 +26,9 @@ const AP4_TIMELINE = {
       stage: 'Build content',
       lastCompleted: 'Last completed · Aug 17',
       summary: 'Seventy-four wave-2 article contracts were authored, gated, and validated. Forty-nine of 249 article positions are admitted.',
-      next: 'Next · post the 74 contracts on the factory-pool turn; 124 visual-capability positions and 2 source-packet positions remain factory-owned.',
+      next: 'Next · post the 74 contracts on the factory-pool turn, one factory call per slot on factory defaults; 124 visual-capability positions and 2 source-packet positions remain factory-owned.',
       etaDays: '2–4 days',
-      etaNote: 'Covers the 74 authorable positions only; the 126 factory-owned positions are excluded.'
+      etaNote: 'Covers the 74 authorable positions only; the 126 factory-owned positions are excluded. APUSH posts after the APWH pool turn ahead of it.'
     },
     {
       id: 'psych',
@@ -38,11 +38,11 @@ const AP4_TIMELINE = {
       x: 42,
       y: 134,
       stage: 'Build content',
-      lastCompleted: 'Last completed · Aug 16',
-      summary: 'All 221 articles are complete and the real course bundle has been walked locally with receipts.',
-      next: 'Next · fill 1,810 missing questions across 374 buckets and clear the U5 acceptance gate before registration.',
-      etaDays: '6–8 days',
-      etaNote: 'Assumes evidence-based-FRQ yield recovers; another zero-yield result resets the estimate.'
+      lastCompleted: 'Last completed · Aug 17',
+      summary: 'All 221 articles are complete; the course bundle was walked locally 221-for-221 green with receipts, then rebuilt and re-walked after the fleet’s U5 article-repair train landed.',
+      next: 'Next · fill 1,810 missing questions across 374 buckets on the pool turn (Psych is last in the pool chain), build the gate and practice snapshots, and walk the item legs; the U5 acceptance gate (26 findings) is fleet-owned; registration opens afterward on the owner’s conditions.',
+      etaDays: '6–7 days',
+      etaNote: 'Assumes evidence-based-FRQ yield recovers; another zero-yield result resets the estimate. Snapshot builds and item-leg walks are unmeasured; the U5 gate fix is fleet-paced.'
     },
     {
       id: 'apwh',
@@ -53,10 +53,10 @@ const AP4_TIMELINE = {
       y: 88,
       stage: 'Validate',
       lastCompleted: 'Last completed · Aug 18',
-      summary: 'The repair route closed with 506 of 506 repairable questions banked and verified.',
-      next: 'Next · finish the rebuild queue, run the paid whole-bank QC sweep, place the four study-skills lessons, and repeat the 176-lesson walk.',
-      etaDays: '3–5 days',
-      etaNote: 'Rebuild, tagging, and paid QC are sized; the final 176-lesson walk remains unmeasured.'
+      summary: 'The repair route closed with 506 of 506 repairable questions banked and verified; the rebuild batch is draining now on the returned factory pool.',
+      next: 'Next · tag and bank the accepted rebuilds, run the paid whole-bank QC sweep, re-judge its content fails, and repeat the 176-lesson walk.',
+      etaDays: '2–3 days',
+      etaNote: 'Rebuild, tagging, and paid QC are sized; the re-judge loop is an estimate borrowed from another course; the 176-lesson walk is unmeasured. Study-skills lesson placement is fleet work outside this range.'
     },
     {
       id: 'humgeo',
@@ -66,11 +66,11 @@ const AP4_TIMELINE = {
       x: 80,
       y: 134,
       stage: 'Place course',
-      lastCompleted: 'Last completed · Aug 16',
-      summary: 'All 68 governed components and 204 links were materialized with stored-version readback.',
-      next: 'Next · seal and apply the corrected corpus, complete the serving cutover, flip release_ready, and run the released-tier walk.',
+      lastCompleted: 'Last completed · Aug 18',
+      summary: 'The regeneration campaign settled at 462 of 474 current-byte factory QC passes; the 12 open slots are dispositioned — 9 filed for fleet adjudication, 3 resumable from persisted factory jobs.',
+      next: 'Next · adopt and QC the 3 resumable rows, fix the 3 failed metadata rows, rescreen the 741 staged repairs after APWH’s pool turn, then seal, cut over, and walk once the fleet rules the 9 filed slots.',
       etaDays: '2–3 days',
-      etaNote: 'Includes seal, rescreen, cutover, and walk; any repair/rebuild loop triggered by rescreen is excluded from this range.'
+      etaNote: 'Includes adoption QCs, metadata fixes, rescreens, seal, cutover, and walk; excludes fleet adjudication latency on the 9 filed slots, the shared-pool wait behind APWH, and any repair loop the rescreen triggers.'
     }
   ]
 };

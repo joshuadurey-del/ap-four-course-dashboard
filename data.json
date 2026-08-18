@@ -1,12 +1,12 @@
 {
- "snapshot": "2026-08-18T13:25+09:00",
+ "snapshot": "2026-08-18T15:48+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
    "section": "HumGeo",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T15:05+09:00",
-   "value": "462/474 slots hold current-byte official /v1/qc passes (runner's own eligibility check, post-drain). The repin regeneration converted 11 of the 12 cleared rows before the factory redeployed mid-drain and the runner fail-closed on deploy-SHA drift, as designed. 12 rows open, all named classes: 10 at the 120-attempt cap, 2 resumable without re-POST (submitted/generation_complete receipts)",
+   "observed_at": "2026-08-18T15:32+09:00",
+   "value": "462/474 slots hold current-byte official /v1/qc passes (runner's own eligibility check, re-derived 15:05 KST and quoted verbatim in the intake filing). The repin regeneration converted 11 of the 12 cleared rows before the factory redeployed mid-drain and the runner fail-closed on deploy-SHA drift, as designed. The 12 open rows are dispositioned: 9 supersede-class rows filed for fleet adjudication (intake #92, 15:07 KST), 3 rows resumable by adopting persisted factory jobs plus one official QC each (6.7-f1-a03, 7.1-f2-r03, 7.1-f3-r03) — any of the 3 that fails its QC joins the filed class on that thread",
    "scope": "regeneration campaign slots only",
    "excluded": [
     "6 metadata rows (3 need repair/regen)",
@@ -25,7 +25,7 @@
     }
    ],
    "evidence_access": "ILMA_HUMAN_ONLY+SHARED_VIA_DRIVE",
-   "verification": "run_issue21_bulk_qc.py --plan <amended> --plan-only reports official_current_byte_passes_reused=449, selected=25; the runner's own _official_pass check, not the state file's status field"
+   "verification": "run_issue21_bulk_qc.py --plan <amended> --plan-only reports official_current_byte_passes_reused=462, selected=12; the runner's own _official_pass check, not the state file's status field. Disposition of the 12 verified by reading intake #92 (private intake repo; fleet + Ilma readable)"
   },
   {
    "claim_id": "cross.attempts_policy",
@@ -139,16 +139,16 @@
    "observed_at": "2026-08-18T03:31+09:00",
    "scope": "the 6 metadata candidate records",
    "excluded": [
-    "repair or regeneration of the 3 failures — not yet scoped"
+    "repair or regeneration of the 3 failures — routes chosen (factory repair for the two single-check fails, regenerate-once on factory defaults for the multi-check fail), not yet executed"
    ],
    "verification": "scripts/service_qc.py --items issue21-metadata-candidates-6 --refresh (committed factory-QC runner, POST /v1/qc); re-read each record's qc.service.passed"
   },
   {
    "claim_id": "humgeo.seal.manifest",
    "section": "HumGeo",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "value": "sealed manifest of 482 records (480 active + 2 superseded), fingerprint per record",
+   "status": "BLOCKED",
+   "status_at": "2026-08-18T15:32+09:00",
+   "value": "sealed manifest of 482 records (480 active + 2 superseded), fingerprint per record — BLOCKED on the fleet's adjudication of the 9 supersede-class slots (intake #92, filed 15:07 KST): each slot ruled supersede changes the seal constant, which is fleet code (seal_issue21_apply.py), so the seal cannot assemble until that ruling lands",
    "evidence": [
     {
      "type": "git-branch",
@@ -723,7 +723,7 @@
    "section": "HumGeo",
    "status": "OBSERVED",
    "blocker": "owner",
-   "value": "RESOLVED by the factory's own code, not by a decision: the seal refuses non-plan-bound records fail-closed and no re-stamp route exists (the origin pin is written at generation time), so the staged pin-only amendment was WITHDRAWN as the wrong instrument. The 12 results were cleared (receipts archived as -preamendment-*), rows removed from state, and the slots are regenerating. Live source bytes were verified equal to the amended plan pins on every row before anything was touched",
+   "value": "RESOLVED by the factory's own code, not by a decision: the seal refuses non-plan-bound records fail-closed and no re-stamp route exists (the origin pin is written at generation time), so the staged pin-only amendment was WITHDRAWN as the wrong instrument. The 12 results were cleared (receipts archived as -preamendment-*), rows removed from state, and the slots regenerated until the 08-18 owner ruling retired outer retry loops and stopped the run; their final disposition is 9 filed for fleet adjudication (intake #92) plus 3 adoption-resumable. Live source bytes were verified equal to the amended plan pins on every row before anything was touched",
    "evidence": [
     {
      "type": "staged-draft",
@@ -732,7 +732,7 @@
     }
    ],
    "evidence_access": "NONE_YET",
-   "observed_at": "2026-08-18T10:20+09:00",
+   "observed_at": "2026-08-18T15:32+09:00",
    "verification": "reset ledger issue21-stale-pin-reset-20260818.json in the campaign folder; reset_stale_pin_rows.py derives the row list from the runner's own _official_pass, never a hardcoded list"
   }
  ]

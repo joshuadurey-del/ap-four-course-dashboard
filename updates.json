@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T06:50Z",
+  "course": "HumGeo",
+  "text": "The 12 open slots have their disposition on the record: fleet adjudication is filed as intake #92 for the 9 rows past every published factory route, and the seal claim now reads BLOCKED on that ruling, because every slot ruled supersede changes the 480-plus-2 seal constant, which is fleet code. The other 3 rows need no ruling — each resumes by adopting its persisted factory job plus one official QC, and any that fails joins the filed class on the same thread. A follow-up comment on the filing added two things the body lacked: a generator shape observation (3 of 6,639 archived attempts returned a rationale map with a non-letter key, with command-level receipts, filed as an ask rather than a defect) and neutral provenance context showing the retired outer-retry idiom predates the current owner's tenure on both sides of the handover."
+ },
+ {
   "ts": "2026-08-18T06:20Z",
   "course": "Cross",
   "text": "Owner ruling, fleet-wide: outer retry loops around factory generation are retired. The factory's own contract publishes the entire attempts policy — max_attempts default 5, bounds 1-5, on every request schema, plus 3x first-round overgeneration — and after exhaustion its routes are repair, regenerate-once, or supersede. Our 120-cap loop was an invention; the live HumGeo run was stopped on the ruling at attempt 60. Official HumGeo count from the runner's own check: 462/474; 12 slots go to fleet adjudication. Measured calibration: 6,749 calls, 968 factory-compute hours, roughly 7% of it factory-faithful. New claims row cross.attempts_policy (settled) carries the policy; the lessons page carries the hard lesson."
