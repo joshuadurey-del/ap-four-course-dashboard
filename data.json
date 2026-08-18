@@ -227,7 +227,7 @@
    "status": "BLOCKED",
    "status_at": "2026-08-17T13:48:21+09:00",
    "blocker": "fleet",
-   "value": "57 successor items carry duplicate choice text; 1,750 active children target them; containment landed 2026-08-14 (commit d589d94cc3b168fbd6bff457578795a7fbd8c407); corrective wave pending",
+   "value": "57 successor items carried duplicate choice text at the 2026-08-13 filing; the 1,750 affected active children are the incident count measured then, not re-proven current; containment landed 2026-08-14 (commit d589d94cc3b168fbd6bff457578795a7fbd8c407); corrective wave pending",
    "evidence": [
     {
      "type": "github-issue",

@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T08:53Z",
+  "course": "HumGeo",
+  "text": "Course-page accuracy fix, no campaign movement: the #642 figures (57 items with duplicate choice text, 1,750 affected children) are now marked as the incident count measured at the 2026-08-13 filing, not a re-proven current count. Campaign state re-verified this hour from live sources and unchanged: 462 of 474 slots hold current-byte factory QC passes, 9 slots filed to the fleet on intake #92 (still open), 3 resumable from persisted factory jobs, 741 rescreens queued behind APWH's pool turn, seal blocked on the #92 ruling."
+ },
+ {
   "ts": "2026-08-18T08:40Z",
   "course": "APWH",
   "text": "Rebuild drain is in its final stretch: 355 of 423 rows accepted, 57 left to call, about an hour at measured pace. One incident, caught and closed with zero wasted spend: a data-shape bug crashed the runner before posting for eighteen chunk attempts; the overrun guard stopped it, the fix carries a regression test, and the drain relaunched at 17:28. Eight exhausted rows sit in the disposition queue under the owner's attempts ruling. After the drain: one tagging pass on the fresh questions, banking, a fresh structural screen, then the single paid QC sweep."
