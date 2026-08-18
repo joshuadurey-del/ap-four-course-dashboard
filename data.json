@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-18T10:10+09:00",
+ "snapshot": "2026-08-18T10:45+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -241,8 +241,8 @@
    "claim_id": "apwh.repairs.applied",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T07:00+09:00",
-   "value": "487 rationale repairs applied and banked, push-gate verified (commit 5afcb7a, bank 7c96b2c2). Denominator not fixed: 571 today, settling between 504 and 571 as the 67 still-uncoded repair-routed items reroute to regeneration. 84 remain unapplied, of which 67 await a skill code that four redraw rounds did not produce.",
+   "observed_at": "2026-08-18T10:45+09:00",
+   "value": "REPAIR ROUTE COMPLETE: 504/504 repair-routed items repaired and banked (wave 2 added the final 17 whose skill codes arrived in redraw rounds 3-4; commit 5ef82f9, push-gate verified, bank 7c96b2c2 -> 226debb2, readback 17/17, 0 refused across all three applies). Denominator settled at 504 exactly as forecast: 571 originally routed minus 67 that never resolved a code and reroute to regeneration.",
    "evidence": [
     {
      "type": "git-commit",
@@ -252,7 +252,7 @@
     }
    ],
    "evidence_access": "SHARED",
-   "scope": "repair-routed D1-only items; the remaining 84 await skill codes from redraw rounds"
+   "scope": "the repair route only; the regeneration route and the paid sweep remain"
   },
   {
    "claim_id": "apwh.skillcodes",
@@ -386,8 +386,8 @@
    "claim_id": "apwh.structural_screen",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T07:00+09:00",
-   "value": "487/933 items would pass structural QC and reach paid content checks, up from 0/933 at the window-1 screen. 446 fail (D1 446, D8 189, D4 126, S2 112, S10 47, D7 10)",
+   "observed_at": "2026-08-18T10:45+09:00",
+   "value": "504/933 items would pass structural QC and reach paid content checks, up from 0/933 at window 1. 429 fail (D1 429, D8 189, D4 126, S2 112, S10 47, D7 10) — exactly the regeneration-route population",
    "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
    "excluded": [
     "paid content checks",
@@ -401,7 +401,7 @@
      "note": "window-3 log, screen receipts, and the two instrument fixes | URL corrected 2026-08-17 19:10: the SHA-pin conversion dropped the directory prefix, leaving path 'window-3' which does not exist at repo root. Verified the full path resolves at this commit before republishing."
     }
    ],
-   "notes": "Re-measured post-fold against bank 7c96b2c2 with 821 skill codes and 487 rationale sets supplied. The 446 remaining failures are exactly the 446 items lacking distractor rationales: every item holding BOTH a rationale set and a skill code now passes. S2 fell 207 -> 112 as the redraw folds landed. Reachability unchanged: 0 repair-routed items carry a fail that rationales+codes cannot clear; 313 of the regenerate-routed carry a hard fail (D8/D4/S10/D7) that genuinely needs regeneration."
+   "notes": "Re-measured against bank 226debb2 after the wave-2 apply. Every repair-routed item now passes. The 429 still failing are precisely the regeneration route: 358 active in the tail (253 already accepted as candidates, not yet banked) + 4 quarantined + 67 rerouted. The screen counts bank state, so accepted-but-unbanked candidates still show as fails until they land."
   },
   {
    "claim_id": "apwh.sweep.expected_fail_rate",

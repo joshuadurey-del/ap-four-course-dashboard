@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T01:45Z",
+  "course": "APWH",
+  "text": "The repair route is complete: all 504 repairable questions are repaired and banked, with zero refusals across the whole campaign. The final 17 cleared this morning after the last tagging rounds delivered their skill codes. The repair target settled at 504 exactly as forecast, with 67 unrepairable questions moving to the rebuild route. Questions passing the structural check rose to 504 of 933, and the 429 still failing are exactly the rebuild population, most of which already exists as accepted candidates waiting to be banked. Remaining: finish the rebuilds, bank them, one paid quality check across everything, then the final walkthrough."
+ },
+ {
   "ts": "2026-08-18T01:21Z",
   "course": "HumGeo",
   "text": "Claims explorer synced to this morning's disposition. The twelve-pin claim no longer reads as a blocked owner decision: it is resolved by the factory's own fail-closed check, the amendment is withdrawn, and the rows are regenerating. The rebuild-passes claim now explains that the 463-versus-451 gap is gone because the twelve stale results were cleared with receipts archived. Mid-run counts stay out of the claims by the same rule as the feed: a claim carries numbers that are still true when read."
