@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 18, 2026 · 19:40 KST',
+  snapshot: 'Aug 19, 2026 · 05:45 KST',
   courses: [
     {
       id: 'apush',
@@ -53,9 +53,9 @@ const AP4_TIMELINE = {
       y: 88,
       stage: 'Validate',
       lastCompleted: 'Last completed · Aug 18',
-      summary: 'Repair route closed (506/506 banked). Rebuild drain COMPLETE and receipted: 419 of 423 rows accepted, 4 exhausted rows to the disposition queue with receipts. Overnight tagging is the remaining long pole.',
-      next: 'Next · tag the fresh questions (running, ~04:30), bank them, run the paid whole-bank QC sweep, re-judge its content fails, then the factory walker over all 176 lessons.',
-      etaDays: '2–3 days',
+      summary: 'Overnight: the main tag pass finished — 274 of 383 fresh questions tagged in one pass; the 109 the tagger could not settle are re-minting now per the owner ruling (new questions arrive born-taggable). Nine exhausted rows hold receipts in the disposition queue.',
+      next: 'Next · re-mint drain (~07:45) and its tag pass (~10:30), one batch banking, the paid whole-bank QC sweep (~11:30 start), re-judge its fails, then the factory walker over all 176 lessons.',
+      etaDays: '1–2 days',
       etaNote: 'Rebuild, tagging, and paid QC are sized; the re-judge loop is an estimate borrowed from another course; the 176-lesson walk is unmeasured. Study-skills lesson placement is fleet work outside this range.'
     },
     {

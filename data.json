@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-18T19:40+09:00",
+ "snapshot": "2026-08-19T05:45+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -282,8 +282,8 @@
    "claim_id": "apwh.skillcodes",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T13:25+09:00",
-   "value": "825/933 skill codes resolved and folded (108 unresolved = 11.6%). Round five was STOPPED mid-run by owner ruling 2026-08-18: the tagger's own published method is one 3-draw majority pass (its /accuracy publishes multi_vote_reps: 3) and rounds appear nowhere in the published API — so the standing policy is now one pass, then rebuild. r5 final: 53 of 112 attempted, 4 codes earned (they stand). The 108 unresolved get their tags at re-mint on the rebuild route; redraw rounds are retired.",
+   "observed_at": "2026-08-19T05:45+09:00",
+   "value": "Overnight main tag pass COMPLETE (383/383 fresh mints, one 3-draw pass each, 0 transport errors): 274 resolved and FOLDED into store records before any banking — canonical order holds. The 109 unresolved follow the ruling: untaggable mints superseded, re-mint wave fired 05:34 (one call per slot); their own single tag pass follows the drain. One slot hit the one-call rule (2 posts consumed) and joined the disposition queue (now 9 rows, all receipted). Measured trajectory for the owner's packet: 28.5% of fresh mints failed their one tag pass — consistent with the tagger's published weakness on APWH (topic 52 / EK 55 on their own calibration).",
    "evidence": [
     {
      "type": "dry-run-receipt",

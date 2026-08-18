@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T20:45Z",
+  "course": "APWH",
+  "text": "Overnight: the main tagging pass finished all 383 fresh questions in one pass each — 274 earned tags and are folded in; the 109 the tagger could not settle went straight to re-minting, per the owner's one-pass rule, and that wave is running now. One slot exhausted its call allowance and joined the disposition queue, which stands at nine rows, all with receipts. Revised chain: re-mint drain by ~07:45, its tag pass by ~10:30, then one batch banking, then the paid QC sweep from ~11:30. The Friday bar still holds; the cause of the shift is measured — 28.5% of new questions fail their one tag pass, matching the tagger's own published weakness on this subject."
+ },
+ {
   "ts": "2026-08-18T10:40Z",
   "course": "APWH",
   "text": "The rebuild drain is complete and receipted: 419 of 423 questions got an accepted replacement, 4 exhausted honestly and sit in the disposition queue with full receipts, and all 26 rows from the earlier index miss were recovered and accepted on the fix's first try. Nothing is uncalled, nothing unaccounted — the receipt's identity sum is exact. Overnight the tagging pass runs (done ~04:30 cautious), then banking, then the single paid QC sweep hands to the QC window."
