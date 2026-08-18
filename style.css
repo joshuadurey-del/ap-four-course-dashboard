@@ -439,3 +439,6 @@ footer {
 .card ul.glance { margin: 10px 0 4px; padding-left: 18px; }
 .card ul.glance li { margin: 6px 0; line-height: 1.45; }
 .card ul.glance strong { font-weight: 650; }
+
+/* headline unit labels (owner ask 2026-08-18): every course number names what it counts */
+.pct .pct-label { display: block; font-size: 13.5px; font-weight: 550; color: #5b6472; letter-spacing: .01em; margin-top: 2px; }
