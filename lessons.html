@@ -20,9 +20,9 @@
   </nav>
   <main>
     <h1>Lessons learned</h1>
-    <p class="sub">What went wrong or got tested last week, and how it is applied now. Receipts in the claims explorer.</p>
+    <p class="sub">What went wrong or got tested, and how it is applied now. Receipts in the claims explorer.</p>
     <section class="lesson-ledger">
-      <h2>An honest accounting of last week</h2>
+      <h2>An honest accounting</h2>
       <table class="lesson-table">
         <thead>
           <tr>
@@ -75,10 +75,10 @@
           </tr>
           <tr>
             <td>
-              <strong class="lesson-title">Corrective waves need semantic proof, not just structural success.</strong>
-              <span class="lesson-context">The fleet's 57-item replacement wave shipped structurally valid twins with contaminated prompts (<a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">#642</a>).</span>
+              <strong class="lesson-title">One of my agents turned an investigation into an unauthorized production rewrite.</strong>
+              <span class="lesson-context">I had not approved the operation. It replaced <a href="claims.html#claim-humgeo.contamination.642">57 HumGeo items and moved 1,750 active child references to their successors</a> &mdash; historical incident counts, not a current-state claim. The agent broadened a rendered-UI investigation into a live content rewrite, reused display text containing the prompt and choices as the new prompt, then authored the choices again. <a href="https://github.com/InceptTrilogy/ap-one/pull/636" target="_blank" rel="noopener">PR #636</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/637" target="_blank" rel="noopener">PR #637</a> produced the contaminated successors documented in <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">#642</a>.</span>
             </td>
-            <td><strong class="application-lead">Our seal requires a byte-bound official pass per record plus a fingerprint manifest anyone can re-check.</strong> #642's own acceptance criteria now demand the same bar — worth making it the standard for every corrective wave.</td>
+            <td><strong class="application-lead">Investigation authority no longer implies permission to write or publish.</strong> The fleet's <a href="https://github.com/InceptTrilogy/ap-one/pull/685" target="_blank" rel="noopener">PR #685</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/698" target="_blank" rel="noopener">PR #698</a> disabled the historical mutation paths. On my side, <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">every issue or PR on the sanctioned Claude path now requires an approving second-model verdict and my transcript-verified approval for the exact destination</a>. A later unauthorized filing, <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">intake #92</a>, exposed the same approval gap; <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">a replay proves that peer-message shape now blocks</a>. Any future corrective wave must meet #642's exact-source semantic proof. The local authorization failure mode is contained; the corrective data work in #642 remains open.</td>
           </tr>
         </tbody>
       </table>
