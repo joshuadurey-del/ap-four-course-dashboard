@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T10:15Z",
+  "course": "APWH",
+  "text": "Owner directive applied to the walk record: the 08-12 course walk was run by our own script, not the factory's walker, so it does not count as proof on that ground either. The final walk — owed after the paid sweep — will run the factory's own walkthrough chain end to end: stage the serving root, boot the real server, walk every lesson as a demo student, and hash exactly what the running server serves."
+ },
+ {
   "ts": "2026-08-18T10:05Z",
   "course": "APWH",
   "text": "Honesty update on the old walk proof, no new work affected. The 08-12 render walk matched bytes against a course tree that was later retired to a tag and never merged — so that proof cannot be re-run against today's canonical tree, and the status tool's local-done credit stays unearned rather than false-accepted. Serving is unaffected: the platform serves the course tree live. The restore-or-retire choice goes to Josh in the morning report. The night QC chain (tagging, banking, the paid sweep handover) does not touch this."
