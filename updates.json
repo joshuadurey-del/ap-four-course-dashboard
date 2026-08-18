@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T02:09Z",
+  "course": "APWH",
+  "text": "Correction to this morning's repair entry, plus one advance. The repair count is 504 of 571, not 504 of 504 — the 67 questions without skill tags were never actually moved to the rebuild list. The queue's own rows still class them as repairs; they were waiting on tags, and the repair tool skips untagged questions by design. A fifth tagging round started at 11:05 and covers all 67 (it does not need the shared build pool, so it runs while human geography holds it). Tags that resolve mean cheap repairs, about two hours' worth; only what the round cannot resolve folds to rebuild. Nothing already banked changes. The rebuild batch itself is paused by design — the pool went back to human geography at 09:19 and the batch resumes automatically when it returns."
+ },
+ {
   "ts": "2026-08-18T01:45Z",
   "course": "APWH",
   "text": "The repair route is complete: all 504 repairable questions are repaired and banked, with zero refusals across the whole campaign. The final 17 cleared this morning after the last tagging rounds delivered their skill codes. The repair target settled at 504 exactly as forecast, with 67 unrepairable questions moving to the rebuild route. Questions passing the structural check rose to 504 of 933, and the 429 still failing are exactly the rebuild population, most of which already exists as accepted candidates waiting to be banked. Remaining: finish the rebuilds, bank them, one paid quality check across everything, then the final walkthrough."

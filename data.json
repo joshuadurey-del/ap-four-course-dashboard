@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-18T10:45+09:00",
+ "snapshot": "2026-08-18T11:09+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -241,8 +241,8 @@
    "claim_id": "apwh.repairs.applied",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T10:45+09:00",
-   "value": "REPAIR ROUTE COMPLETE: 504/504 repair-routed items repaired and banked (wave 2 added the final 17 whose skill codes arrived in redraw rounds 3-4; commit 5ef82f9, push-gate verified, bank 7c96b2c2 -> 226debb2, readback 17/17, 0 refused across all three applies). Denominator settled at 504 exactly as forecast: 571 originally routed minus 67 that never resolved a code and reroute to regeneration.",
+   "observed_at": "2026-08-18T11:09+09:00",
+   "value": "504 of 571 repair-route rows repaired and banked (commit 5ef82f9, push-gate verified, bank 7c96b2c2 -> 226debb2, readback clean, 0 refused across all three applies). CORRECTION 2026-08-18 11:09: the earlier \"COMPLETE 504/504, 67 rerouted to rebuild\" line was wrong about the 67 — the queue's own rows still class them as repairs (route: repair, repair contract D1). They were never rerouted; they wait on skill codes, and the repair runner's own eligibility gate skips uncoded rows. A fifth tagging round fired 2026-08-18 ~11:05 KST and covers all 67. Codes that resolve repair cheaply (~2 hours at the measured 33/hour); only rows the round cannot resolve fold to rebuild under the dry rule. The denominator settles when that round finishes, not before. The 504 already banked are unaffected.",
    "evidence": [
     {
      "type": "git-commit",
@@ -258,8 +258,8 @@
    "claim_id": "apwh.skillcodes",
    "section": "APWH",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T10:10+09:00",
-   "value": "821/933 skill codes resolved and folded into the v2 enrichment the gates read (112 unresolved = 12.0%, under the 40% stop-rule). All four redraw rounds COMPLETE (r2 +65, r3 +22, r4 +8; per-round recovery 31% -> 15% -> 7%). A round-5 plan exists over the 112 but is not fired; most of the 112 clear via regeneration instead, since new items are tagged after minting.",
+   "observed_at": "2026-08-18T11:09+09:00",
+   "value": "821/933 skill codes resolved and folded into the v2 enrichment the gates read (112 unresolved = 12.0%, under the 40% stop-rule). All four redraw rounds COMPLETE (r2 +65, r3 +22, r4 +8). Round 5 FIRED 2026-08-18 ~11:05 KST over all 112 (3-draw majority, ~5-6 hours at the endpoint cap). Measured split of the 112: 45 clear via regeneration (new items are tagged after minting); the other 67 are repair-routed and unblock ONLY through this round — regeneration never touches them. If round 5 recovers near zero of the 67, the dry rule folds the remainder to rebuild.",
    "evidence": [
     {
      "type": "dry-run-receipt",
@@ -273,8 +273,8 @@
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
    "status": "OBSERVED",
-   "status_at": "2026-08-18T10:10+09:00",
-   "value": "Regeneration tail EXECUTING under the pool released 2026-08-18 04:23 KST: 253 accepted, 97 shortfall, 350 of 358 attempted (4 ids quarantined out of the original 362 by the driver's automatic retry cap). Runner idle between chunks under chunk<=10 + preflight discipline; the release note's priority guard holds (HumGeo work jumps the queue the moment it has a runnable row). The quarantined 4 carry a COMPLETE exhaustion checklist per the owner's last-resort gate — every option measured with byte cites: article enrichment PROHIBITED by the article spec's own prompt; hole-filler covers the subject but mints via the same endpoint and same G5 judge (not an alternate); universal-qgen is K-12-only by the factory's own gate (AP excluded); blind re-posting closed by owner ruling. ONE live option staged: a count=7 job (factory-accepted field, le=20; first-attempt ask = min(20, count*3.0) per the factory's own overgen idiom, ~100 candidates vs the 15 a count=1 job buys; partial passes return even on an exhausted job). Fires with the tail behind fresh preflight on the owner's go; interpretation fixed in advance: 0-of-~100 earns a drafted atom-layer ask shown to the owner before filing, 1+ runs the other three the same shape.",
+   "status_at": "2026-08-18T11:09+09:00",
+   "value": "Regeneration tail YIELDED BY DESIGN (the runner's reclaim-file branch, exit 3) — HumGeo took the pool back at 09:19 KST and its runner holds it now; the tail resumes through the pool-return watcher, not by hand. Standing at the yield: 253 accepted, 97 shortfall, 350 of 358 attempted (4 ids quarantined out of the original 362 by the driver's automatic retry cap). Runner idle between chunks under chunk<=10 + preflight discipline; the release note's priority guard holds (HumGeo work jumps the queue the moment it has a runnable row). The quarantined 4 carry a COMPLETE exhaustion checklist per the owner's last-resort gate — every option measured with byte cites: article enrichment PROHIBITED by the article spec's own prompt; hole-filler covers the subject but mints via the same endpoint and same G5 judge (not an alternate); universal-qgen is K-12-only by the factory's own gate (AP excluded); blind re-posting closed by owner ruling. ONE live option staged: a count=7 job (factory-accepted field, le=20; first-attempt ask = min(20, count*3.0) per the factory's own overgen idiom, ~100 candidates vs the 15 a count=1 job buys; partial passes return even on an exhausted job). Fires with the tail behind fresh preflight on the owner's go; interpretation fixed in advance: 0-of-~100 earns a drafted atom-layer ask shown to the owner before filing, 1+ runs the other three the same shape.",
    "evidence": [
     {
      "type": "state-snapshot",
@@ -287,7 +287,7 @@
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
    "scope": "regenerate-routed items; 358 active + 4 quarantined-pending-exhaustion",
-   "observed_at": "2026-08-18T10:10+09:00"
+   "observed_at": "2026-08-18T11:09+09:00"
   },
   {
    "claim_id": "apwh.sweep",
