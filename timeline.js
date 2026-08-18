@@ -3,9 +3,11 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 
 1. Verify current state from updates.json + data.json and each course page's current
    "Definition of done" before editing. Do not copy an old dashboard number forward.
-2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next, eta,
-   and etaNote. x is the horizontal position from 0–100; y is 88 or 134 to stagger labels.
-3. ETA must name what it includes and excludes. Keep unmeasured/fleet-paced work explicit.
+2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next,
+   etaDays, and etaNote. x is the horizontal position from 0–100; y is 88 or 134
+   to stagger labels.
+3. etaDays must be a number-of-days range, never a calendar date. ETA notes must name
+   what the range includes and excludes. Keep unmeasured/fleet-paced work explicit.
 4. Never move a course to Release without canonical served-version readback and a dated
    learner walk. Registration, merge, or deploy alone is not release proof.
 
@@ -25,7 +27,7 @@ const AP4_TIMELINE = {
       lastCompleted: 'Last completed · Aug 17',
       summary: 'Seventy-four wave-2 article contracts were authored, gated, and validated. Forty-nine of 249 article positions are admitted.',
       next: 'Next · post the 74 contracts on the factory-pool turn; 124 visual-capability positions and 2 source-packet positions remain factory-owned.',
-      eta: '≈18h with overlap; ≈26h sequential · about 2–4 workdays',
+      etaDays: '2–4 days',
       etaNote: 'Covers the 74 authorable positions only; the 126 factory-owned positions are excluded.'
     },
     {
@@ -39,7 +41,7 @@ const AP4_TIMELINE = {
       lastCompleted: 'Last completed · Aug 16',
       summary: 'All 221 articles are complete and the real course bundle has been walked locally with receipts.',
       next: 'Next · fill 1,810 missing questions across 374 buckets and clear the U5 acceptance gate before registration.',
-      eta: '≈53h known + fleet-paced U5 · about 7 calendar days cautious',
+      etaDays: '6–8 days',
       etaNote: 'Assumes evidence-based-FRQ yield recovers; another zero-yield result resets the estimate.'
     },
     {
@@ -53,7 +55,7 @@ const AP4_TIMELINE = {
       lastCompleted: 'Last completed · Aug 18',
       summary: 'The repair route closed with 506 of 506 repairable questions banked and verified.',
       next: 'Next · finish the rebuild queue, run the paid whole-bank QC sweep, place the four study-skills lessons, and repeat the 176-lesson walk.',
-      eta: '≈25–37h + final walk · about 3–5 workdays',
+      etaDays: '3–5 days',
       etaNote: 'Rebuild, tagging, and paid QC are sized; the final 176-lesson walk remains unmeasured.'
     },
     {
@@ -67,13 +69,20 @@ const AP4_TIMELINE = {
       lastCompleted: 'Last completed · Aug 16',
       summary: 'All 68 governed components and 204 links were materialized with stored-version readback.',
       next: 'Next · seal and apply the corrected corpus, complete the serving cutover, flip release_ready, and run the released-tier walk.',
-      eta: '≈13–19h known work · about 2 workdays',
-      etaNote: 'Includes seal, rescreen, cutover, and walk; any repair/rebuild loop triggered by rescreen is not yet dated.'
+      etaDays: '2–3 days',
+      etaNote: 'Includes seal, rescreen, cutover, and walk; any repair/rebuild loop triggered by rescreen is excluded from this range.'
     }
   ]
 };
 
 (() => {
+  document.querySelectorAll('[data-course-eta]').forEach(section => {
+    const course = AP4_TIMELINE.courses.find(item => item.id === section.dataset.courseEta);
+    if (!course) return;
+    section.querySelector('[data-course-eta-days]').textContent = course.etaDays;
+    section.querySelector('[data-course-eta-note]').textContent = course.etaNote;
+  });
+
   const root = document.getElementById('course-release-timeline');
   if (!root) return;
 
@@ -148,7 +157,7 @@ const AP4_TIMELINE = {
       title: course.lastCompleted,
       copy: course.summary,
       foot: `${course.next} ${course.etaNote}`,
-      eta: course.eta,
+      eta: course.etaDays,
       color: course.color,
       href: `${course.id}.html`
     }])
@@ -189,7 +198,7 @@ const AP4_TIMELINE = {
   });
 
   if (controls.length !== stages.length + AP4_TIMELINE.courses.length ||
-      AP4_TIMELINE.courses.some(course => !course.eta || !course.etaNote)) {
+      AP4_TIMELINE.courses.some(course => !/^\d+[–-]\d+ days$/.test(course.etaDays) || !course.etaNote)) {
     throw new Error('Course release timeline data is incomplete.');
   }
   show(locked, true);
