@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-08-18T15:48+09:00",
+ "snapshot": "2026-08-18T17:40+09:00",
  "claims": [
   {
    "claim_id": "humgeo.rebuild.passes",
@@ -297,8 +297,8 @@
    "claim_id": "apwh.regen_tail",
    "section": "APWH",
    "status": "OBSERVED",
-   "status_at": "2026-08-18T13:25+09:00",
-   "value": "Rebuild queue now 427 rows (362 original + 65 flipped by the ruling): 423 active + 4 quarantined behind the armed count=7 experiment. Tail cursor stands at 253 accepted / 97 shortfall / 350 of 358 attempted. PAUSED BY DESIGN — HumGeo holds the pool (reclaimed 09:19 KST); resumes via the pool-return watcher. The 65 flipped rows get factory-idiom rebuild rows (count > 1, plan-idiom gate) staged when the pool returns.",
+   "status_at": "2026-08-18T17:40+09:00",
+   "value": "Rebuild drain in final chunks, ROW-LEVEL of 423 (f6's live statement 17:28, receipt lands at dry): 355 accepted, 11 attempted-unaccepted, 57 never-called (~6 chunks, ~70 min at the measured 11 min/chunk). Runs the ruling-compliant one-pass shape: one factory call per slot on factory defaults, exhaustion to the disposition queue (8 rows, two families — generation exhaustion vs route/input refusals, classed separately in the receipt). One mid-drain incident owned by f6: chunks 12-30 posted nothing on a data-shape crash, zero spend leaked, fixed with a regression test, relaunched 17:28. The manifest's call-level 'done' counter is NOT quotable as a fraction of 423.",
    "evidence": [
     {
      "type": "state-snapshot",
@@ -311,7 +311,7 @@
    ],
    "evidence_access": "SHARED_VIA_DRIVE",
    "scope": "regenerate-routed items; 423 active + 4 quarantined-pending-experiment",
-   "observed_at": "2026-08-18T13:25+09:00"
+   "observed_at": "2026-08-18T17:40+09:00"
   },
   {
    "claim_id": "apwh.sweep",

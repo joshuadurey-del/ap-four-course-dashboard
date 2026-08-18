@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 18, 2026 · 15:48 KST',
+  snapshot: 'Aug 18, 2026 · 17:40 KST',
   courses: [
     {
       id: 'apush',
@@ -53,7 +53,7 @@ const AP4_TIMELINE = {
       y: 88,
       stage: 'Validate',
       lastCompleted: 'Last completed · Aug 18',
-      summary: 'The repair route closed with 506 of 506 repairable questions banked and verified; the rebuild batch is draining now on the returned factory pool.',
+      summary: 'The repair route closed with 506 of 506 repairable questions banked and verified; the rebuild batch is in its final chunks — 355 of 423 rows accepted, 57 still to call, roughly an hour at measured pace.',
       next: 'Next · tag and bank the accepted rebuilds, run the paid whole-bank QC sweep, re-judge its content fails, and repeat the 176-lesson walk.',
       etaDays: '2–3 days',
       etaNote: 'Rebuild, tagging, and paid QC are sized; the re-judge loop is an estimate borrowed from another course; the 176-lesson walk is unmeasured. Study-skills lesson placement is fleet work outside this range.'

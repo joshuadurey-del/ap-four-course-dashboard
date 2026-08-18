@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T08:40Z",
+  "course": "APWH",
+  "text": "Rebuild drain is in its final stretch: 355 of 423 rows accepted, 57 left to call, about an hour at measured pace. One incident, caught and closed with zero wasted spend: a data-shape bug crashed the runner before posting for eighteen chunk attempts; the overrun guard stopped it, the fix carries a regression test, and the drain relaunched at 17:28. Eight exhausted rows sit in the disposition queue under the owner's attempts ruling. After the drain: one tagging pass on the fresh questions, banking, a fresh structural screen, then the single paid QC sweep."
+ },
+ {
   "ts": "2026-08-18T06:50Z",
   "course": "HumGeo",
   "text": "The 12 open slots have their disposition on the record: fleet adjudication is filed as intake #92 for the 9 rows past every published factory route, and the seal claim now reads BLOCKED on that ruling, because every slot ruled supersede changes the 480-plus-2 seal constant, which is fleet code. The other 3 rows need no ruling — each resumes by adopting its persisted factory job plus one official QC, and any that fails joins the filed class on the same thread. A follow-up comment on the filing added two things the body lacked: a generator shape observation (3 of 6,639 archived attempts returned a rationale map with a non-letter key, with command-level receipts, filed as an ask rather than a defect) and neutral provenance context showing the retired outer-retry idiom predates the current owner's tenure on both sides of the handover."
