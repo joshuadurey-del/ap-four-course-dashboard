@@ -5,13 +5,12 @@
    "claim_id": "humgeo.rebuild.passes",
    "section": "HumGeo",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T10:20+09:00",
-   "value": "451/474 slots hold current-byte official /v1/qc passes, and the 12 stale-pin rows have been cleared and are regenerating through the normal runner (run live at claim time; final count posts at exit). The earlier 463-accepted vs 451-official gap no longer exists — the 12 rows were removed from state with receipts archived",
+   "observed_at": "2026-08-18T15:05+09:00",
+   "value": "462/474 slots hold current-byte official /v1/qc passes (runner's own eligibility check, post-drain). The repin regeneration converted 11 of the 12 cleared rows before the factory redeployed mid-drain and the runner fail-closed on deploy-SHA drift, as designed. 12 rows open, all named classes: 10 at the 120-attempt cap, 2 resumable without re-POST (submitted/generation_complete receipts)",
    "scope": "regeneration campaign slots only",
    "excluded": [
-    "6 metadata rows",
-    "759-line structural cohort",
-    "the in-flight regeneration's mid-run count — deliberately not quoted"
+    "6 metadata rows (3 need repair/regen)",
+    "759-line structural cohort"
    ],
    "evidence": [
     {
