@@ -137,6 +137,7 @@ const AP4_TIMELINE = {
         <p class="timeline-eta" hidden><span>Estimated work remaining (our side)</span><strong></strong></p>
         <p class="timeline-detail-copy"></p>
         <p class="timeline-detail-foot"></p>
+        <a class="timeline-detail-link" hidden>Open course dashboard →</a>
       </div>
     </div>`;
 
@@ -147,7 +148,9 @@ const AP4_TIMELINE = {
       title: course.lastCompleted,
       copy: course.summary,
       foot: `${course.next} ${course.etaNote}`,
-      eta: course.eta
+      eta: course.eta,
+      color: course.color,
+      href: `${course.id}.html`
     }])
   ]);
   const controls = [...root.querySelectorAll('[data-timeline-item]')];
@@ -157,17 +160,21 @@ const AP4_TIMELINE = {
   const foot = root.querySelector('.timeline-detail-foot');
   const eta = root.querySelector('.timeline-eta');
   const etaValue = eta.querySelector('strong');
+  const detailLink = root.querySelector('.timeline-detail-link');
   let locked = 'release';
 
   function show(key, persist = false) {
     const item = details[key];
     if (!item) return;
     kicker.textContent = item.kicker;
+    kicker.style.color = item.color || '';
     title.textContent = item.title;
     copy.textContent = item.copy;
     foot.textContent = item.foot;
     eta.hidden = !item.eta;
     etaValue.textContent = item.eta || '';
+    detailLink.hidden = !item.href;
+    detailLink.href = item.href || '';
     if (persist) {
       locked = key;
       controls.forEach(control => control.setAttribute('aria-pressed', String(control.dataset.timelineItem === key)));
@@ -177,9 +184,7 @@ const AP4_TIMELINE = {
   controls.forEach(control => {
     const key = control.dataset.timelineItem;
     control.addEventListener('pointerenter', () => show(key));
-    control.addEventListener('pointerleave', () => show(locked));
     control.addEventListener('focus', () => show(key));
-    control.addEventListener('blur', () => show(locked));
     control.addEventListener('click', () => show(key, true));
   });
 

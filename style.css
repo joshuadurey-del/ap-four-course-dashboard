@@ -145,47 +145,6 @@ section h2 {
 ul { margin: 8px 0; padding-left: 22px; }
 li { margin: 7px 0; font-size: 14px; line-height: 1.55; }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  --course: var(--blue);
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-top: 4px solid var(--course);
-  border-radius: 14px;
-  background: var(--surface);
-}
-
-.card:nth-child(2) { --course: #4f46b8; }
-.card:nth-child(3) { --course: #c2413a; }
-.card:nth-child(4) { --course: #7c3aed; }
-
-.card h2 { margin: 0 0 8px; font-size: 17px; }
-.card h2 a { color: var(--course); text-decoration: none; }
-.card h2 a::after { content: " →"; }
-
-.pct {
-  margin: 6px 0 9px;
-  font-size: 28px;
-  font-weight: 760;
-  letter-spacing: -.025em;
-  font-variant-numeric: tabular-nums;
-}
-
-.bar {
-  height: 7px;
-  margin-bottom: 13px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: #e4e9f1;
-}
-
-.bar > div { height: 100%; background: var(--course); }
-
 .badge {
   display: inline-block;
   margin: 2px 3px 2px 0;
@@ -271,30 +230,100 @@ small { color: var(--muted); line-height: 1.45; }
 .filters button:hover { border-color: #aebbd0; background: #f7f9fc; }
 .filters button.on { border-color: var(--blue); background: var(--blue); color: #fff; }
 
+.filter-block {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.filter-label {
+  width: 48px;
+  flex: none;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.filter-block .filters { margin: 0; }
+.result-count { margin: 14px 0 8px; color: var(--muted); font-size: 13px; }
+
+.course-page main { width: min(100%, 980px); }
+.course-page section p,
+.course-page section li { max-width: 78ch; }
+
 .eta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin: 2px 0 8px;
 }
 
 .eta div {
-  flex: 1;
+  flex: 0 1 auto;
   min-width: 150px;
-  padding: 13px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #f7f9fc;
-  text-align: center;
+  padding: 0 0 7px;
 }
 
 .eta b {
   display: block;
-  margin-top: 3px;
-  font-size: 18px;
+  margin-top: 4px;
+  color: var(--blue-strong);
+  font-size: 24px;
+  line-height: 1.25;
   font-variant-numeric: tabular-nums;
 }
 
 .eta span { color: var(--muted); font-size: 12px; font-weight: 650; }
+
+.eta-details {
+  margin-top: 17px;
+  border-top: 1px solid var(--line);
+}
+
+.eta-details summary {
+  padding: 14px 0 4px;
+  cursor: pointer;
+  color: var(--blue-strong);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.eta-details summary:hover { color: var(--blue); }
+.eta-details-body { padding-top: 5px; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.section-head h2 { margin-bottom: 0; }
+.section-head a { flex: none; font-size: 13px; font-weight: 650; }
+.last-updated { margin: 8px 0 4px; color: var(--muted); font-size: 13px; }
+
+.update-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.update-item {
+  display: grid;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  grid-template-columns: 178px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.update-item:first-child { border-top: 0; }
+.update-meta { display: flex; flex-direction: column; gap: 4px; }
+.update-meta strong { color: var(--blue-strong); font-size: 13px; }
+.update-meta time { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.update-item p { max-width: 75ch; margin: 0; line-height: 1.55; }
+.update-list-full { padding: 0 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.update-empty { padding: 16px 0; color: var(--muted); }
 
 .note {
   padding: 13px 15px;
@@ -378,6 +407,18 @@ footer {
   .sub { margin-bottom: 22px; }
   section { padding: 19px 18px; }
 
+  .filter-block { display: block; margin: 14px 0; }
+  .filter-label { display: block; width: auto; margin-bottom: 7px; }
+
+  .update-item {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 15px 0;
+  }
+
+  .update-meta { flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 5px 12px; }
+  .update-list-full { padding: 0 18px; }
+
   table:not(.lesson-table) {
     display: block;
     overflow-x: auto;
@@ -388,6 +429,36 @@ footer {
     display: table;
     width: 100%;
     min-width: 680px;
+  }
+
+  #tbl {
+    display: block;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  #tbl tbody { display: block; min-width: 0; }
+  #tbl tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  #tbl tr:first-child { display: none; }
+  #tbl td {
+    display: grid;
+    min-width: 0;
+    padding: 7px 0;
+    border: 0;
+    background: transparent;
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 10px;
+    overflow-wrap: anywhere;
+  }
+  #tbl td > * { min-width: 0; overflow-wrap: anywhere; }
+  #tbl td::before {
+    color: var(--muted);
+    content: attr(data-label);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .lesson-ledger { padding: 0; }
@@ -434,36 +505,6 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; }
 }
-
-/* read-at-a-glance card bullets (owner ask 2026-08-18): bold lead per point */
-.card ul.glance { margin: 10px 0 4px; padding-left: 18px; }
-.card ul.glance li { margin: 6px 0; line-height: 1.45; }
-.card ul.glance strong { font-weight: 650; }
-
-/* headline unit labels (owner ask 2026-08-18): every course number names what it counts */
-.pct .pct-label { display: block; font-size: 13.5px; font-weight: 550; color: #5b6472; letter-spacing: .01em; margin-top: 2px; }
-
-/* seven-state done ladder per card (owner ask 2026-08-18): same stations for every course */
-.card .ladder { display: flex; align-items: center; margin: 2px 0 4px; }
-.card .ladder .st { width: 11px; height: 11px; border-radius: 50%; flex: none;
-  background: #d6dae2; border: 2px solid #d6dae2; box-sizing: border-box; }
-.card .ladder .st.done { background: var(--course, #4064d0); border-color: var(--course, #4064d0); }
-.card .ladder .st.active { background: #fff; border-color: var(--course, #4064d0); }
-.card .ladder .seg { flex: 1 1 8px; height: 2px; background: #e3e6ec; margin: 0 2px; }
-.card .ladder-cap { display: flex; justify-content: space-between; gap: 8px;
-  font-size: 12.5px; color: #5b6472; margin-bottom: 8px; }
-.card .ladder-cap .ladder-date { flex: none; font-weight: 550; }
-
-/* frame convention: every date on a card/strip carries its conditions link */
-.eta-q {
-  margin-left: 2px;
-  color: var(--blue-strong);
-  font-size: .78em;
-  vertical-align: super;
-  text-decoration: none;
-  border-bottom: 1px dotted var(--blue-strong);
-}
-.eta-q:hover { color: var(--blue); }
 
 /* Shared five-point release timeline; routine content updates live in timeline.js. */
 .timeline-sec { margin: 8px 0 20px; padding: 22px 24px 24px; }
@@ -682,6 +723,15 @@ footer {
 }
 
 .timeline-detail-foot { margin-top: 4px; color: var(--muted); }
+
+.timeline-detail-link {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.timeline-detail-link[hidden] { display: none; }
 
 .timeline-eta {
   display: flex;

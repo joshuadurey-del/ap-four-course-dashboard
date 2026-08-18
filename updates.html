@@ -1,17 +1,7 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Update history</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Update history</title><link rel="stylesheet" href="style.css"></head><body class="updates-page">
 <nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims explorer</a><a href="lessons.html" >Lessons</a><a href="agents.html" >For agents</a></nav><main><h1>Update history</h1><p class="sub">The complete append-only feed, newest first. The overview shows only the 10 most recent; this page shows everything. Times render in your local time.</p>
-<table id="upd"><tr><th style="width:150px">When (your time)</th><th style="width:80px">Course</th><th>What happened</th></tr></table>
-<script>
-function rel(ms){const m=Math.round((Date.now()-ms)/60000);
- if(m<60)return m+'m ago'; const h=Math.round(m/60); if(h<48)return h+'h ago'; return Math.round(h/24)+'d ago';}
-function loc(ms){return new Date(ms).toLocaleString(undefined,{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});}
-fetch('updates.json').then(r=>r.json()).then(us=>{
- document.getElementById('upd').innerHTML='<tr><th style="width:150px">When (your time)</th><th style="width:80px">Course</th><th>What happened</th></tr>'+
-  us.map(u=>{const ms=Date.parse(u.ts);
-   return `<tr><td>${loc(ms)}<br><small>${rel(ms)}</small></td><td>${u.course}</td><td>${u.text}</td></tr>`;
-  }).join('');
-});
-</script>
-<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></main></body></html>
+<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="agents.html" >Agent data</a></nav><main><h1>Update history</h1><p class="sub">The complete append-only feed, newest first. Times use your local timezone.</p>
+<ol class="update-list update-list-full" data-update-list aria-live="polite"></ol>
+<script src="updates.js"></script>
+</main><footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>

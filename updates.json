@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T05:53Z",
+  "course": "Cross",
+  "text": "Dashboard design sweep: the redundant overview course cards, repeated deadline narrative, and repeated blocker list were removed. The timeline now links directly to each course and color-matches the selected course name; the overview shows five readable activity entries, detailed ETA evidence is available on demand, and the claims explorer stacks cleanly on mobile. No course-state claims changed in this pass."
+ },
+ {
   "ts": "2026-08-18T05:04Z",
   "course": "Cross",
   "text": "Pipeline section source cite fixed: it pointed at a repo-relative path (recon/...) that does not exist in this repository \u2014 the write-up lives in the orchestrator zone. The cite now names it as an internal source, the same convention unpublished claim evidence uses, instead of dangling."

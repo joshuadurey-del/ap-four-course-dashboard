@@ -1,14 +1,14 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For agents</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For agents</title><link rel="stylesheet" href="style.css"></head><body class="agent-page">
 <nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims explorer</a><a href="lessons.html" >Lessons</a><a href="agents.html" class="active">For agents</a></nav><main><h1>For agents</h1><p class="sub">Machine-readable entry points for Ilma's (or any) agent.</p>
+<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="agents.html" class="active" aria-current="page">Agent data</a></nav><main><h1>For agents</h1><p class="sub">Machine-readable entry points for Ilma's (or any) agent.</p>
 <section><h2>Point your agent here</h2>
 <p>Everything on this site is backed by machine-readable files. Fetch these raw URLs directly:</p>
 <table>
 <tr><th>File</th><th>What it is</th><th>Raw URL</th></tr>
 <tr><td><b>Agent accounting (.md)</b></td><td>The full evidence dossier: every claim with a stable id, status label (OBSERVED / PLANNED / BLOCKED / MISSING), full hashes, verification path, measured scope, access labels, and staleness rules. Includes the Langfuse reading guide.</td><td><a href="agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md">accounting .md</a></td></tr>
 <tr><td><b>Standings (.md)</b></td><td>The human report in markdown, for agents that want the narrative with links intact.</td><td><a href="agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md">standings .md</a></td></tr>
-<tr><td><b>Claims manifest (.json)</b></td><td>The same 35 claims as structured JSON — what the <a href="claims.html">claims explorer</a> renders.</td><td><a href="data.json">data.json</a></td></tr>
+<tr><td><b>Claims manifest (.json)</b></td><td>All claims as structured JSON — what the <a href="claims.html">claims explorer</a> renders.</td><td><a href="data.json">data.json</a></td></tr>
 <tr><td><b>Updates feed (.json)</b></td><td>Append-only event feed with GMT timestamps — what the Overview renders.</td><td><a href="updates.json">updates.json</a></td></tr>
 </table></section>
 <section><h2>How to read it</h2>
