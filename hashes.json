@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-18T01:09:42Z",
+ "generated_utc": "2026-08-18T01:14:04Z",
  "note": "sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.",
  "files": [
   {
@@ -29,8 +29,8 @@
   },
   {
    "path": "updates.json",
-   "sha256": "9aaf77e022f291cf0a764629a30b3939a2aa483997706227aa7d293aa93276c1",
-   "bytes": 23662
+   "sha256": "419eea9960d749fa574234049cc9a90fb8afcee5454ad18dda00db1757210d98",
+   "bytes": 25254
   }
  ]
 }
