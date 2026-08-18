@@ -1,34 +1,240 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For agents</title><link rel="stylesheet" href="style.css"></head><body class="agent-page">
-<nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="agents.html" class="active" aria-current="page">Agent data</a></nav><main><h1>For agents</h1><p class="sub">Machine-readable entry points for Ilma's (or any) agent.</p>
-<section><h2>Point your agent here</h2>
-<p>Everything on this site is backed by machine-readable files. Fetch these raw URLs directly:</p>
-<table>
-<tr><th>File</th><th>What it is</th><th>Raw URL</th></tr>
-<tr><td><b>Agent accounting (.md)</b></td><td>The full evidence dossier: every claim with a stable id, status label (OBSERVED / PLANNED / BLOCKED / MISSING), full hashes, verification path, measured scope, access labels, and staleness rules. Includes the Langfuse reading guide.</td><td><a href="agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md">accounting .md</a></td></tr>
-<tr><td><b>Standings (.md)</b></td><td>The human report in markdown, for agents that want the narrative with links intact.</td><td><a href="agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md">standings .md</a></td></tr>
-<tr><td><b>Claims manifest (.json)</b></td><td>All claims as structured JSON — what the <a href="claims.html">claims explorer</a> renders.</td><td><a href="data.json">data.json</a></td></tr>
-<tr><td><b>Updates feed (.json)</b></td><td>Append-only event feed with GMT timestamps — what the Overview renders.</td><td><a href="updates.json">updates.json</a></td></tr>
-</table></section>
-<section class="reading-guide"><h2>How to read it</h2>
-<dl>
-<div><dt>Trace a claim</dt><dd>Start from any sentence in the standings, find its <code>claim_id</code> in the manifest, and follow the evidence entries.</dd></div>
-<div><dt>Check what you can access</dt><dd><code>evidence_access</code> tells you what you can verify yourself: <b>SHARED</b> = live URL or Ilma-readable repo; <b>ILMA_HUMAN_ONLY</b> = the evidence repo (browser yes, bot tokens no); <b>SHARED_AFTER_INVITE</b> = Langfuse; <b>JOSH_MACHINE_ONLY</b> = named local artifact with a durable-copy plan; <b>NONE_YET</b> = planned work, no receipt can exist.</dd></div>
-<div><dt>Check freshness</dt><dd>Every claim carries its own date — <code>observed_at</code> for an OBSERVED claim, <code>status_at</code> for a PLANNED or BLOCKED one. Age it against that field, never against the manifest snapshot: republishing the file does not refresh a claim. A claim older than 48 hours with no successor receipt is a question, not a fact — unless it carries <code>settled: true</code>, which marks terminal history (a measurement or ruling that is permanently closed, like the retired local judge). Settled claims keep their true dates and are exempt from the staleness clock. <code>observed_note</code> holds any hand-written qualifier, including "midnight assumed" where the source recorded only a date.</dd></div>
-<div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b> — accept the org invite first or the trace links 404. Claims with Langfuse evidence carry direct trace URLs in <a href="data.json">data.json</a>; the full reading guide is at the bottom of the accounting .md.</dd></div>
-<div><dt>Cross-check the receipt</dt><dd>Cross-check any Langfuse record against the matching GitHub evidence branch by item id or hash — both are written from the same receipts.</dd></div>
-</dl></section>
-<section><h2>Byte integrity (sha256)</h2>
-<p>Same convention as the Incept content-factory pages: every machine-readable file is published with its digest. Fetch a file, hash it, compare — if the digests match, you hold exactly the bytes this site published. Verify with <code>curl -s &lt;file url&gt; | shasum -a 256</code>. The manifest is <a href="hashes.json">hashes.json</a>, regenerated on every commit by a git hook (it cannot hash itself).</p>
-<table id="hashTbl"><tr><th>File</th><th>Bytes</th><th>sha256</th></tr></table>
-<script>
-fetch('hashes.json').then(r=>r.json()).then(h=>{
- document.getElementById('hashTbl').innerHTML='<tr><th>File</th><th>Bytes</th><th>sha256</th></tr>'+
-  h.files.map(f=>`<tr><td><a href="${f.path}">${f.path}</a></td><td>${f.bytes}</td><td><code>${f.sha256}</code></td></tr>`).join('')+
-  `<tr><td colspan="3"><small>generated ${h.generated_utc}</small></td></tr>`;
-}).catch(()=>{});
-</script></section>
-<p class="note">These files are dated snapshots, refreshed by commit. The Drive copies (shared separately) match these at publication time; this site is the always-current home.</p>
-</main>
-<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agent data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="agent-page">
+  <nav>
+    <span class="brand">AP Four-Course Dashboard</span>
+    <a href="index.html">Overview</a>
+    <a href="humgeo.html">HumGeo</a>
+    <a href="apwh.html">APWH</a>
+    <a href="apush.html">APUSH</a>
+    <a href="psych.html">Psych</a>
+    <a href="claims.html">Claims</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="agents.html" class="active" aria-current="page">Agent data</a>
+  </nav>
+
+  <main>
+    <h1>Agent data</h1>
+    <p class="sub">The current machine contract comes first. Dated narrative reports are retained below as historical references.</p>
+
+    <section class="agent-brief" aria-labelledby="agent-brief-title">
+      <div class="section-head">
+        <h2 id="agent-brief-title">Current machine brief</h2>
+        <span id="agent-load-state" class="badge b-blue" role="status">Loading current files</span>
+      </div>
+      <dl class="agent-facts">
+        <div>
+          <dt>Manifest snapshot</dt>
+          <dd id="agent-snapshot">Loading…</dd>
+        </div>
+        <div>
+          <dt>Standing claims</dt>
+          <dd id="agent-claim-count">Loading…</dd>
+        </div>
+        <div>
+          <dt>Status mix</dt>
+          <dd id="agent-status-mix">Loading…</dd>
+        </div>
+      </dl>
+      <div class="agent-latest">
+        <strong>Latest recorded event</strong>
+        <p id="agent-latest-event">Loading the append-only feed…</p>
+        <a href="updates.html">View full event history</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="current-sources-title">
+      <h2 id="current-sources-title">Use these sources in this order</h2>
+      <p>The structured files are the current contract. Each claim carries its own observation or status timestamp; the file snapshot never makes an older claim new.</p>
+      <div class="agent-source-list">
+        <div class="agent-source">
+          <div>
+            <h3>Claims manifest</h3>
+            <p>Authoritative standing state: stable claim ids, status, scope, exclusions, evidence, access, and row-level timestamps.</p>
+          </div>
+          <a class="agent-source-link" href="data.json">Open data.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Updates feed</h3>
+            <p>Append-only chronology, newest first. Use it to understand what changed and when.</p>
+          </div>
+          <a class="agent-source-link" href="updates.json">Open updates.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Integrity manifest</h3>
+            <p>Published SHA-256 digests for the structured files and retained reports. A matching hash proves byte identity, not factual freshness.</p>
+          </div>
+          <a class="agent-source-link" href="hashes.json">Open hashes.json</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="historical-reports-title">
+      <h2 id="historical-reports-title">Dated narrative references</h2>
+      <p class="note">These reports preserve the 2026-08-17 reporting snapshot. They are historical: do not use their counts as current without reconciling them against <a href="data.json">data.json</a> and <a href="updates.json">updates.json</a>.</p>
+      <div class="agent-source-list agent-history-list">
+        <div class="agent-source">
+          <div>
+            <h3>Agent accounting — 2026-08-17</h3>
+            <p>Claim-by-claim evidence dossier and Langfuse reading guide captured for the original report.</p>
+          </div>
+          <a class="agent-source-link" href="agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md">Open snapshot</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Four-course standings — 2026-08-17</h3>
+            <p>Human narrative with the links and conclusions available at that reporting cutoff.</p>
+          </div>
+          <a class="agent-source-link" href="agents/AP-FOUR-COURSE-STANDINGS-2026-08-17.md">Open snapshot</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Companion receipts — 2026-08-17</h3>
+            <p>Receipt index supporting that dated narrative.</p>
+          </div>
+          <a class="agent-source-link" href="agents/COMPANION-RECEIPTS-20260817.md">Open snapshot</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reading-guide" aria-labelledby="reading-guide-title">
+      <h2 id="reading-guide-title">How to read the contract</h2>
+      <dl>
+        <div><dt>Trace a claim</dt><dd>Start with its <code>claim_id</code> in <a href="data.json">data.json</a>, then follow the evidence entries. Use the <a href="claims.html">Claims explorer</a> when a visual filter is faster.</dd></div>
+        <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
+        <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
+        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None of those labels implies release by itself.</dd></div>
+        <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="integrity-title">
+      <h2 id="integrity-title">Byte integrity</h2>
+      <p>Fetch a published file, hash its raw bytes, and compare the result below. Matching digests prove that you hold the published bytes; they do not upgrade a dated observation into a current one.</p>
+      <p><code>curl -s &lt;file URL&gt; | shasum -a 256</code></p>
+      <table id="hashTbl">
+        <tr><th>File</th><th>Bytes</th><th>SHA-256</th></tr>
+        <tr><td colspan="3">Loading integrity manifest…</td></tr>
+      </table>
+    </section>
+
+    <p class="note"><b>Authority rule:</b> <a href="data.json">data.json</a> governs standing claims; <a href="updates.json">updates.json</a> governs event chronology. Narrative reports are dated context, and hashes prove bytes only.</p>
+  </main>
+
+  <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
+
+  <script>
+    const formatTimestamp = value => {
+      const date = new Date(value);
+      return Number.isNaN(date.getTime())
+        ? value
+        : new Intl.DateTimeFormat(undefined, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            timeZoneName: 'short'
+          }).format(date);
+    };
+
+    const fetchJson = path => fetch(path).then(response => {
+      if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+      return response.json();
+    });
+
+    Promise.all([fetchJson('data.json'), fetchJson('updates.json')])
+      .then(([manifest, updates]) => {
+        const claims = Array.isArray(manifest.claims) ? manifest.claims : [];
+        const counts = claims.reduce((result, claim) => {
+          result[claim.status] = (result[claim.status] || 0) + 1;
+          return result;
+        }, {});
+        const statusOrder = ['OBSERVED', 'BLOCKED', 'PLANNED', 'MISSING'];
+        const statusMix = statusOrder
+          .filter(status => counts[status])
+          .map(status => `${counts[status]} ${status.toLowerCase()}`)
+          .join(' · ');
+
+        document.getElementById('agent-load-state').textContent = 'Current files loaded';
+        document.getElementById('agent-load-state').className = 'badge b-green';
+        document.getElementById('agent-snapshot').textContent = manifest.snapshot
+          ? formatTimestamp(manifest.snapshot)
+          : 'No snapshot declared';
+        document.getElementById('agent-claim-count').textContent = String(claims.length);
+        document.getElementById('agent-status-mix').textContent = statusMix || 'No standing claims';
+
+        const latest = Array.isArray(updates) ? updates[0] : null;
+        if (!latest) {
+          document.getElementById('agent-latest-event').textContent = 'No event has been recorded.';
+          return;
+        }
+        const fullText = `${latest.course}: ${latest.text}`;
+        const summary = fullText.length > 280 ? `${fullText.slice(0, 277)}…` : fullText;
+        document.getElementById('agent-latest-event').textContent = `${formatTimestamp(latest.ts)} · ${summary}`;
+      })
+      .catch(() => {
+        document.getElementById('agent-load-state').textContent = 'Current brief unavailable';
+        document.getElementById('agent-load-state').className = 'badge b-amber';
+        document.getElementById('agent-snapshot').textContent = 'Open data.json directly';
+        document.getElementById('agent-claim-count').textContent = 'Unavailable';
+        document.getElementById('agent-status-mix').textContent = 'Unavailable';
+        document.getElementById('agent-latest-event').textContent = 'Open updates.json directly.';
+      });
+
+    fetchJson('hashes.json')
+      .then(manifest => {
+        const table = document.getElementById('hashTbl');
+        table.textContent = '';
+
+        const head = document.createElement('tr');
+        ['File', 'Bytes', 'SHA-256'].forEach(label => {
+          const th = document.createElement('th');
+          th.textContent = label;
+          head.appendChild(th);
+        });
+        table.appendChild(head);
+
+        manifest.files.forEach(file => {
+          const row = document.createElement('tr');
+          const pathCell = document.createElement('td');
+          const link = document.createElement('a');
+          link.href = file.path;
+          link.textContent = file.path;
+          pathCell.appendChild(link);
+
+          const bytesCell = document.createElement('td');
+          bytesCell.textContent = file.bytes.toLocaleString();
+
+          const hashCell = document.createElement('td');
+          const code = document.createElement('code');
+          code.textContent = file.sha256;
+          hashCell.appendChild(code);
+
+          row.append(pathCell, bytesCell, hashCell);
+          table.appendChild(row);
+        });
+
+        const generatedRow = document.createElement('tr');
+        const generatedCell = document.createElement('td');
+        generatedCell.colSpan = 3;
+        const small = document.createElement('small');
+        small.textContent = `Generated ${formatTimestamp(manifest.generated_utc)}`;
+        generatedCell.appendChild(small);
+        generatedRow.appendChild(generatedCell);
+        table.appendChild(generatedRow);
+      })
+      .catch(() => {
+        document.querySelector('#hashTbl tr:last-child td').textContent = 'Integrity manifest unavailable. Open hashes.json directly.';
+      });
+  </script>
+</body>
+</html>

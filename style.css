@@ -513,6 +513,70 @@ small { color: var(--muted); line-height: 1.45; }
 
 .agent-page main { width: min(100%, 980px); }
 
+.agent-brief {
+  border-color: #b9c9ef;
+  background: #fbfdff;
+}
+
+.agent-brief .section-head { align-items: center; }
+
+.agent-facts {
+  display: flex;
+  margin: 18px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.agent-facts > div {
+  min-width: 0;
+  flex: 1 1 0;
+  padding: 14px 16px;
+}
+
+.agent-facts > div + div { border-left: 1px solid var(--line); }
+
+.agent-facts dt {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.agent-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.agent-latest { padding-top: 16px; }
+.agent-latest > strong { display: block; font-size: 14px; }
+.agent-latest p { max-width: 78ch; margin: 5px 0 7px; color: #3f4b60; }
+.agent-latest a { font-size: 13px; font-weight: 700; }
+
+.agent-source-list { margin-top: 16px; border-top: 1px solid var(--line); }
+
+.agent-source {
+  display: grid;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+}
+
+.agent-source h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.agent-source p { max-width: 68ch; margin: 4px 0 0; color: #3f4b60; }
+.agent-source-link { font-size: 13px; font-weight: 750; white-space: nowrap; }
+.agent-history-list { margin-top: 10px; }
+
 .reading-guide dl { max-width: 72ch; margin: 0; }
 
 .reading-guide dl > div {
@@ -668,6 +732,22 @@ footer {
   }
 
   .lesson-table td:nth-child(2)::before { content: "Applied going forward"; }
+
+  .agent-facts { display: block; }
+  .agent-facts > div { padding: 13px 0; }
+  .agent-facts > div + div { border-top: 1px solid var(--line); border-left: 0; }
+
+  .agent-source {
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .agent-source-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
