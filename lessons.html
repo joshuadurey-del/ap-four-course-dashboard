@@ -33,6 +33,13 @@
         <tbody>
           <tr>
             <td>
+              <strong class="lesson-title">We invented a retry loop the factory never asked for.</strong>
+              <span class="lesson-context">The factory's own contract caps generation attempts at 5 per call, default 5, with 3x overgeneration built in. Our runner wrapped it in an outer loop of our own &mdash; 120 tries per slot, earlier runs unlimited. The campaign spent 6,749 calls and 968 hours of factory compute by the service's own timing field; a factory-faithful run would have used about 7% of that. The dollar figure is unknowable from our side: the receipts carry no token or cost fields.</span>
+            </td>
+            <td><strong class="application-lead">Owner ruling 2026-08-18: outer retry loops are retired.</strong> One factory call per slot on factory defaults (their max_attempts, their overgeneration); exhaustion goes straight to the published dispositions (repair / regenerate-once / supersede), never to another loop. The live run was stopped mid-grind on the ruling. Model-pinning's hidden price &mdash; their contract forces count=1 and max_attempts=1 when a model is pinned &mdash; must be named at plan design. A write-time gate now blocks new grinding-shaped plans.</td>
+          </tr>
+          <tr>
+            <td>
               <strong class="lesson-title">We generated a whole corpus without real QC.</strong>
               <span class="lesson-context">The HumGeo bank was minted through the factory's generation route. Its inline checks looked like QC and were not. Half the bank failed when the real sweep ran.</span>
             </td>
