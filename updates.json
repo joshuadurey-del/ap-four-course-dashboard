@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T01:21Z",
+  "course": "HumGeo",
+  "text": "Claims explorer synced to this morning's disposition. The twelve-pin claim no longer reads as a blocked owner decision: it is resolved by the factory's own fail-closed check, the amendment is withdrawn, and the rows are regenerating. The rebuild-passes claim now explains that the 463-versus-451 gap is gone because the twelve stale results were cleared with receipts archived. Mid-run counts stay out of the claims by the same rule as the feed: a claim carries numbers that are still true when read."
+ },
+ {
   "ts": "2026-08-18T01:14Z",
   "course": "HumGeo",
   "text": "The twelve stale-pin rows have their answer, and it came from the factory's code rather than a choice. Their records point at the pre-amendment version of the item they replace, the seal refuses that shape fail-closed, and no re-stamp route exists because the pointer is written at generation time. So the staged pin-only amendment is withdrawn as the wrong instrument, the twelve results were cleared with every receipt archived, and the rows are regenerating through the normal runner. The final count posts here when the run exits; mid-run numbers deliberately do not."

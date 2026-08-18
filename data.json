@@ -5,12 +5,13 @@
    "claim_id": "humgeo.rebuild.passes",
    "section": "HumGeo",
    "status": "OBSERVED",
-   "observed_at": "2026-08-18T04:25+09:00",
-   "value": "451/474 slots hold current-byte official /v1/qc passes. The state file counts 463 accepted; 12 of those fail the official check on one field (pre-amendment expected_old pin), so 451 is the seal-ready figure",
+   "observed_at": "2026-08-18T10:20+09:00",
+   "value": "451/474 slots hold current-byte official /v1/qc passes, and the 12 stale-pin rows have been cleared and are regenerating through the normal runner (run live at claim time; final count posts at exit). The earlier 463-accepted vs 451-official gap no longer exists — the 12 rows were removed from state with receipts archived",
    "scope": "regeneration campaign slots only",
    "excluded": [
     "6 metadata rows",
-    "759-line structural cohort"
+    "759-line structural cohort",
+    "the in-flight regeneration's mid-run count — deliberately not quoted"
    ],
    "evidence": [
     {
@@ -695,10 +696,9 @@
   {
    "claim_id": "humgeo.pin12.staged",
    "section": "HumGeo",
-   "status": "BLOCKED",
-   "status_at": "2026-08-18T02:52+09:00",
+   "status": "OBSERVED",
    "blocker": "owner",
-   "value": "12 accepted records fail the official current-byte check on exactly one field: they stamp PRE-AMENDMENT expected_old pins (all 12 are rows the 30-slot amendment re-pinned; the records were generated before it). CAUSE CORRECTED 08-18: an earlier version of this claim blamed fleet corpus writes — that was unverified inference and is withdrawn; no fleet involvement. Seal-ready is therefore 449 of 474, not 461. Content validity of all 12 is verified (contract and request hashes match the amended rows; judged fingerprints intact). Fix staged as a pin-only record amendment — first-of-shape ceremony, held for explicit owner approval",
+   "value": "RESOLVED by the factory's own code, not by a decision: the seal refuses non-plan-bound records fail-closed and no re-stamp route exists (the origin pin is written at generation time), so the staged pin-only amendment was WITHDRAWN as the wrong instrument. The 12 results were cleared (receipts archived as -preamendment-*), rows removed from state, and the slots are regenerating. Live source bytes were verified equal to the amended plan pins on every row before anything was touched",
    "evidence": [
     {
      "type": "staged-draft",
@@ -706,7 +706,9 @@
      "note": "pin-only, 12 records, invariance checks recorded in the draft"
     }
    ],
-   "evidence_access": "NONE_YET"
+   "evidence_access": "NONE_YET",
+   "observed_at": "2026-08-18T10:20+09:00",
+   "verification": "reset ledger issue21-stale-pin-reset-20260818.json in the campaign folder; reset_stale_pin_rows.py derives the row list from the runner's own _official_pass, never a hardcoded list"
   }
  ]
 }
