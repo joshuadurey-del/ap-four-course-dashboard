@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-17T22:35Z",
+  "course": "HumGeo",
+  "text": "Overview card text refreshed: it still described the relaunch as converting and the sealed package as landing after the drain. The drain finished at 04:22 and the pool was released at 04:23. The card now states what is actually true: 451 of 474 seal-ready, nothing sealed, and the two remaining blockers are owner calls rather than machine work."
+ },
+ {
   "ts": "2026-08-17T22:00Z",
   "course": "APWH",
   "text": "The factory pool was released to us at 04:23 and the gate condition checks out, so the rebuild batch is no longer waiting on anyone. All four tagging rounds have finished and their results are now written into the file the checks read: 821 of 933 questions have a skill tag, leaving 12 percent unresolved, well inside the limit. Items that would pass the structural check rose to 487 of 933, and the 446 that still fail are exactly the ones with no wrong-answer explanations yet. The rebuild batch settles between 362 and 429. One constraint from the release note: our batch must run in small chunks and hand the pool back between them, because human geography work jumps ahead of ours the moment it has anything runnable."
