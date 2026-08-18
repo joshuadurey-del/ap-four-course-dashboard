@@ -139,8 +139,8 @@
    "claim_id": "humgeo.repair759.staged",
    "section": "HumGeo",
    "status": "OBSERVED",
-   "observed_at": "2026-08-16T13:17+09:00",
-   "value": "741 of 759 structural-repair candidates staged with receipts",
+   "observed_at": "2026-08-18T13:38+09:00",
+   "value": "741 of 759 structural-repair candidates staged with receipts — RE-VERIFIED unchanged at re-observation: 741 files on disk, receipts ledger reads 741 converged + 17 nonconverged-route-regenerate. NOT yet consumed: the official /v1/qc rescreens have not started (10-item pilot first, queued behind the running regeneration drain and the APWH pool turn)",
    "scope": "staging only; no official verdicts yet",
    "excluded": [
     "18 non-staged (multi-check or nonconverged, dispositioned to regenerate)"
