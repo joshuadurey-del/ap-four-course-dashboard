@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T10:40Z",
+  "course": "APWH",
+  "text": "The rebuild drain is complete and receipted: 419 of 423 questions got an accepted replacement, 4 exhausted honestly and sit in the disposition queue with full receipts, and all 26 rows from the earlier index miss were recovered and accepted on the fix's first try. Nothing is uncalled, nothing unaccounted — the receipt's identity sum is exact. Overnight the tagging pass runs (done ~04:30 cautious), then banking, then the single paid QC sweep hands to the QC window."
+ },
+ {
   "ts": "2026-08-18T10:15Z",
   "course": "APWH",
   "text": "Owner directive applied to the walk record: the 08-12 course walk was run by our own script, not the factory's walker, so it does not count as proof on that ground either. The final walk — owed after the paid sweep — will run the factory's own walkthrough chain end to end: stage the serving root, boot the real server, walk every lesson as a demo student, and hash exactly what the running server serves."
