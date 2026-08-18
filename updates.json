@@ -1,33 +1,38 @@
 [
  {
+  "ts": "2026-08-18T05:04Z",
+  "course": "Cross",
+  "text": "Pipeline section source cite fixed: it pointed at a repo-relative path (recon/...) that does not exist in this repository \u2014 the write-up lives in the orchestrator zone. The cite now names it as an internal source, the same convention unpublished claim evidence uses, instead of dangling."
+ },
+ {
   "ts": "2026-08-18T04:38Z",
   "course": "HumGeo",
-  "text": "Re-observed the staged structural-repair candidates on a staleness flag: all 741 files intact on disk, receipts ledger matching, nothing consumed. The claim now also says plainly that the official rescreens have not started — they run after the current regeneration drain, ten-item pilot first. A re-observation that finds no change is still a fresh observation; pretending consumption had begun would have been the lie."
+  "text": "Re-observed the staged structural-repair candidates on a staleness flag: all 741 files intact on disk, receipts ledger matching, nothing consumed. The claim now also says plainly that the official rescreens have not started \u2014 they run after the current regeneration drain, ten-item pilot first. A re-observation that finds no change is still a fresh observation; pretending consumption had begun would have been the lie."
  },
  {
   "ts": "2026-08-18T04:37Z",
   "course": "APUSH",
-  "text": "Overview card precision fix from the APUSH seat's live verification (owner asked if the card was current — everything matched except one word): the 126 waiting positions now read as what they are — 124 on the factory's visual-capability answer, 2 on broken source packets being re-minted. Both intake tickets remain open with zero replies."
+  "text": "Overview card precision fix from the APUSH seat's live verification (owner asked if the card was current \u2014 everything matched except one word): the 126 waiting positions now read as what they are \u2014 124 on the factory's visual-capability answer, 2 on broken source packets being re-minted. Both intake tickets remain open with zero replies."
  },
  {
   "ts": "2026-08-18T04:25Z",
   "course": "APWH",
-  "text": "Owner ruling landed and executed: tagging an existing question gets exactly one three-draw majority pass — the method the tagging service itself publishes — and anything unresolved goes straight to rebuild. No more re-try rounds. Round five was stopped mid-run (53 of 112 attempted, 4 tags earned, and those stand). The 65 questions still untagged on the repair list moved to the rebuild queue, which now holds 427. With that, the repair route CLOSED: all 506 repairable questions are repaired, banked, and verified pushed, zero refusals across the whole campaign. The structural check now passes 506 of 933, and the 427 still failing are exactly the rebuild queue — nothing is unaccounted for. Rebuilds still wait on the shared pool, which human geography holds."
+  "text": "Owner ruling landed and executed: tagging an existing question gets exactly one three-draw majority pass \u2014 the method the tagging service itself publishes \u2014 and anything unresolved goes straight to rebuild. No more re-try rounds. Round five was stopped mid-run (53 of 112 attempted, 4 tags earned, and those stand). The 65 questions still untagged on the repair list moved to the rebuild queue, which now holds 427. With that, the repair route CLOSED: all 506 repairable questions are repaired, banked, and verified pushed, zero refusals across the whole campaign. The structural check now passes 506 of 933, and the 427 still failing are exactly the rebuild queue \u2014 nothing is unaccounted for. Rebuilds still wait on the shared pool, which human geography holds."
  },
  {
   "ts": "2026-08-18T03:30Z",
   "course": "Cross",
-  "text": "Claims contract addition: settled marker for terminal history. A claim like the retired local judge is a permanently closed fact — nothing exists to re-observe, so re-dating it every 48 hours would be ceremony without information. Settled claims keep their true dates forever, stay under full date hygiene, and are exempt only from the staleness clock; the linter now reports them on their own transparency line. Documented on the For-agents page."
+  "text": "Claims contract addition: settled marker for terminal history. A claim like the retired local judge is a permanently closed fact \u2014 nothing exists to re-observe, so re-dating it every 48 hours would be ceremony without information. Settled claims keep their true dates forever, stay under full date hygiene, and are exempt only from the staleness clock; the linter now reports them on their own transparency line. Documented on the For-agents page."
  },
  {
   "ts": "2026-08-18T02:24Z",
   "course": "APWH",
-  "text": "Overview card corrected on the APWH seat's four-point audit (owner asked if it was current; it was not): headline is now 504/933 structurally passing with its denominator named on the card; repairs read 504/571 banked; the regeneration batch is shown as mid-flight (253 accepted of 350 attempted, yielded to HumGeo's pool reclaim by design, resumes on pool return); badge reads tagger round 5. The honest line no longer says the paid sweep queues on the pool — only the batch does; the sweep waits transitively."
+  "text": "Overview card corrected on the APWH seat's four-point audit (owner asked if it was current; it was not): headline is now 504/933 structurally passing with its denominator named on the card; repairs read 504/571 banked; the regeneration batch is shown as mid-flight (253 accepted of 350 attempted, yielded to HumGeo's pool reclaim by design, resumes on pool return); badge reads tagger round 5. The honest line no longer says the paid sweep queues on the pool \u2014 only the batch does; the sweep waits transitively."
  },
  {
   "ts": "2026-08-18T02:09Z",
   "course": "APWH",
-  "text": "Correction to this morning's repair entry, plus one advance. The repair count is 504 of 571, not 504 of 504 — the 67 questions without skill tags were never actually moved to the rebuild list. The queue's own rows still class them as repairs; they were waiting on tags, and the repair tool skips untagged questions by design. A fifth tagging round started at 11:05 and covers all 67 (it does not need the shared build pool, so it runs while human geography holds it). Tags that resolve mean cheap repairs, about two hours' worth; only what the round cannot resolve folds to rebuild. Nothing already banked changes. The rebuild batch itself is paused by design — the pool went back to human geography at 09:19 and the batch resumes automatically when it returns."
+  "text": "Correction to this morning's repair entry, plus one advance. The repair count is 504 of 571, not 504 of 504 \u2014 the 67 questions without skill tags were never actually moved to the rebuild list. The queue's own rows still class them as repairs; they were waiting on tags, and the repair tool skips untagged questions by design. A fifth tagging round started at 11:05 and covers all 67 (it does not need the shared build pool, so it runs while human geography holds it). Tags that resolve mean cheap repairs, about two hours' worth; only what the round cannot resolve folds to rebuild. Nothing already banked changes. The rebuild batch itself is paused by design \u2014 the pool went back to human geography at 09:19 and the batch resumes automatically when it returns."
  },
  {
   "ts": "2026-08-18T01:45Z",
@@ -47,7 +52,7 @@
  {
   "ts": "2026-08-18T01:13Z",
   "course": "HumGeo",
-  "text": "First screenshot walk of the rebuilt-course era ran overnight on the local demo serving path: seven captures. A demo student can reach the course, answer practice, and pass the mastery gate. Proving a student can open and read a lesson body remains open, stated rather than assumed. The walk also caught a real defect: 260 of 403 practice items in the walked bundle print all four answer options inside the question body. Measured to its edges before filing: our rebuilt items do not carry the offending field, the live serving path does not either, and the hosted demo page is clean, so the poison is confined to the committed staging snapshot our local walks serve — zero student exposure. Filed as ap-one #766 with the reproduce inline, then narrowed by our own follow-up comment. Remaining cost: local walk screenshots misrepresent content until the snapshot is re-aligned."
+  "text": "First screenshot walk of the rebuilt-course era ran overnight on the local demo serving path: seven captures. A demo student can reach the course, answer practice, and pass the mastery gate. Proving a student can open and read a lesson body remains open, stated rather than assumed. The walk also caught a real defect: 260 of 403 practice items in the walked bundle print all four answer options inside the question body. Measured to its edges before filing: our rebuilt items do not carry the offending field, the live serving path does not either, and the hosted demo page is clean, so the poison is confined to the committed staging snapshot our local walks serve \u2014 zero student exposure. Filed as ap-one #766 with the reproduce inline, then narrowed by our own follow-up comment. Remaining cost: local walk screenshots misrepresent content until the snapshot is re-aligned."
  },
  {
   "ts": "2026-08-17T22:35Z",
@@ -72,12 +77,12 @@
  {
   "ts": "2026-08-17T17:52Z",
   "course": "HumGeo",
-  "text": "Cause correction on the 12-record finding, one hour after publishing it: the stale pins are from OUR OWN 30-slot amendment (the records were generated before it re-pinned their rows) — not from fleet corpus writes, which was unverified inference and is withdrawn. Seal-ready reads 449 of 474 until the owner rules on the staged pin-only fix. Also overnight: single ownership of the HumGeo chain passed to the fresh orchestrator session after a two-driver race was caught by the dispatch board; all receipts intact, zero corpus writes, both sessions' work preserved."
+  "text": "Cause correction on the 12-record finding, one hour after publishing it: the stale pins are from OUR OWN 30-slot amendment (the records were generated before it re-pinned their rows) \u2014 not from fleet corpus writes, which was unverified inference and is withdrawn. Seal-ready reads 449 of 474 until the owner rules on the staged pin-only fix. Also overnight: single ownership of the HumGeo chain passed to the fresh orchestrator session after a two-driver race was caught by the dispatch board; all receipts intact, zero corpus writes, both sessions' work preserved."
  },
  {
   "ts": "2026-08-17T17:48Z",
   "course": "HumGeo",
-  "text": "Overnight: the amended relaunch exited at 02:38 KST with 29 of 42 slots converted — 461 of 474 now hold official passes. The 13 leftovers are fully classified: 6 were revived by receipted adjudication and a conversion run is converting them now; 7 are grinder-class (the generator cannot satisfy their contracts within the 120-try cap) and get a root-cause dossier in the morning. One new finding: 12 already-accepted records point at swap-targets the fleet changed under us on 08-14 — their content is verified intact and a pin-only fix is staged, held for the owner because it is a first-of-its-kind ceremony."
+  "text": "Overnight: the amended relaunch exited at 02:38 KST with 29 of 42 slots converted \u2014 461 of 474 now hold official passes. The 13 leftovers are fully classified: 6 were revived by receipted adjudication and a conversion run is converting them now; 7 are grinder-class (the generator cannot satisfy their contracts within the 120-try cap) and get a root-cause dossier in the morning. One new finding: 12 already-accepted records point at swap-targets the fleet changed under us on 08-14 \u2014 their content is verified intact and a pin-only fix is staged, held for the owner because it is a first-of-its-kind ceremony."
  },
  {
   "ts": "2026-08-17T14:45Z",
@@ -102,7 +107,7 @@
  {
   "ts": "2026-08-17T10:46Z",
   "course": "Cross",
-  "text": "Second pass on the evidence links after an APWH-seat audit caught the first pass half-broken: 14 SHA links resolved but landed on the repository root — the original symptom, invisible to a link checker. Every evidence link now carries its full directory path, and each one was verified against the commit's actual bytes (git cat-file), not by whether it returns a page. Honesty note on the diagnosis: the browser failure on slash-named branches is the owner's observation; nobody has measured GitHub's resolver from the shell (the repo is private, so logged-out checks 404 on everything). The SHA form is used because a 40-character commit cannot be ambiguous — a structural argument, not a measurement."
+  "text": "Second pass on the evidence links after an APWH-seat audit caught the first pass half-broken: 14 SHA links resolved but landed on the repository root \u2014 the original symptom, invisible to a link checker. Every evidence link now carries its full directory path, and each one was verified against the commit's actual bytes (git cat-file), not by whether it returns a page. Honesty note on the diagnosis: the browser failure on slash-named branches is the owner's observation; nobody has measured GitHub's resolver from the shell (the repo is private, so logged-out checks 404 on everything). The SHA form is used because a 40-character commit cannot be ambiguous \u2014 a structural argument, not a measurement."
  },
  {
   "ts": "2026-08-17T10:10Z",
@@ -112,7 +117,7 @@
  {
   "ts": "2026-08-17T10:41Z",
   "course": "Cross",
-  "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name — they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
+  "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name \u2014 they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
  },
  {
   "ts": "2026-08-17T10:30Z",
@@ -132,7 +137,7 @@
  {
   "ts": "2026-08-17T09:44Z",
   "course": "Cross",
-  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics — the only italics on the pages. Content, numbers, and caveats unchanged."
+  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics \u2014 the only italics on the pages. Content, numbers, and caveats unchanged."
  },
  {
   "ts": "2026-08-17T09:55Z",
@@ -147,7 +152,7 @@
  {
   "ts": "2026-08-17T09:35Z",
   "course": "HumGeo",
-  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it — dates move on receipts here, in either direction."
+  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it \u2014 dates move on receipts here, in either direction."
  },
  {
   "ts": "2026-08-17T09:35Z",
@@ -157,22 +162,22 @@
  {
   "ts": "2026-08-17T09:31Z",
   "course": "Psych",
-  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page — bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
+  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page \u2014 bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
  },
  {
   "ts": "2026-08-17T09:28Z",
   "course": "HumGeo",
-  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged — release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
+  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged \u2014 release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
  },
  {
   "ts": "2026-08-17T09:23Z",
   "course": "Cross",
-  "text": "Owner directive: every course's ETA section now carries an explicit definition of done — what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
+  "text": "Owner directive: every course's ETA section now carries an explicit definition of done \u2014 what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
  },
  {
   "ts": "2026-08-17T09:15Z",
   "course": "HumGeo",
-  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external — it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
+  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external \u2014 it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
  },
  {
   "ts": "2026-08-17T09:12Z",
@@ -207,7 +212,7 @@
  {
   "ts": "2026-08-17T08:18Z",
   "course": "Cross",
-  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) — both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
+  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) \u2014 both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
  },
  {
   "ts": "2026-08-17T07:32Z",
