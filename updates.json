@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-18T06:20Z",
+  "course": "Cross",
+  "text": "Owner ruling, fleet-wide: outer retry loops around factory generation are retired. The factory's own contract publishes the entire attempts policy — max_attempts default 5, bounds 1-5, on every request schema, plus 3x first-round overgeneration — and after exhaustion its routes are repair, regenerate-once, or supersede. Our 120-cap loop was an invention; the live HumGeo run was stopped on the ruling at attempt 60. Official HumGeo count from the runner's own check: 462/474; 12 slots go to fleet adjudication. Measured calibration: 6,749 calls, 968 factory-compute hours, roughly 7% of it factory-faithful. New claims row cross.attempts_policy (settled) carries the policy; the lessons page carries the hard lesson."
+ },
+ {
   "ts": "2026-08-18T06:05Z",
   "course": "HumGeo",
   "text": "The repin regeneration drained: seal-ready moved 451 to 462 of 474, with all eleven conversions coming from the twelve rows cleared this morning. The run ended when the factory redeployed mid-drain and the runner refused to continue against an unverified deploy, which is the guard working, not a failure. The route contract was re-verified byte-identical and the pin moved with a dated note. The factory pool went back to APWH the moment the drain settled. Twelve rows remain, every one a named class: ten at the attempt cap, two resumable from persisted factory jobs without any re-send, and the twelfth was mid-flight at the stop. No corpus writes at any point."

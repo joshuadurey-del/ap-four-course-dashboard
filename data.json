@@ -28,6 +28,31 @@
    "verification": "run_issue21_bulk_qc.py --plan <amended> --plan-only reports official_current_byte_passes_reused=449, selected=25; the runner's own _official_pass check, not the state file's status field"
   },
   {
+   "claim_id": "cross.attempts_policy",
+   "section": "Cross-course",
+   "status": "OBSERVED",
+   "settled": true,
+   "observed_at": "2026-08-18T14:57+09:00",
+   "value": "Outer retry loops around factory generation RETIRED fleet-wide by owner ruling. The factory's published policy is the request's own max_attempts (default 5, bounds 1-5; engine/api/generate_models.py:398, and live on all four request schemas in the service's openapi.json) plus 3x first-round overgeneration; after exhaustion the routes are repair, regenerate-once, or supersede — no outer loop exists. Calibration that motivated the ruling: 6,749 attempt receipts and 968 factory-compute hours on the 474-slot campaign, ~7% of it factory-faithful; dollar cost pending the Langfuse backfill. Also on record: pinning generation_model forces count=1 and max_attempts=1, trading away all factory retry machinery — a tradeoff to name at plan design, never discover mid-campaign.",
+   "scope": "all four AP courses, every future generation plan",
+   "excluded": [
+    "closing an open UNCERTAIN transaction (one QC of an already-paid record) — that is paid-work closure, not a retry"
+   ],
+   "evidence": [
+    {
+     "type": "dashboard-lesson",
+     "url": "lessons.html",
+     "note": "top ledger row, commit 098c41d"
+    },
+    {
+     "type": "factory-source",
+     "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/main/engine/api/generate_models.py",
+     "note": "max_attempts Field: default 5, ge=1, le=5 (line ~398 at 0182b44)"
+    }
+   ],
+   "note": "settled: an owner ruling is terminal history — dates stay true, exempt from the staleness clock. Cap-design ownership acknowledged by incept-51 in the lane log; old handoff cap mentions carry superseded banners."
+  },
+  {
    "claim_id": "humgeo.residual.draining",
    "section": "HumGeo",
    "status": "OBSERVED",
