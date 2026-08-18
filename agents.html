@@ -49,6 +49,16 @@
       </div>
     </section>
 
+    <section class="agent-handoff" aria-labelledby="agent-handoff-title">
+      <h2 id="agent-handoff-title">Hand off to an agent</h2>
+      <p>Copy a ready-to-use instruction for a web-capable agent, or download one JSON file for an agent that needs an upload. Both actions use the current structured sources below.</p>
+      <div class="agent-actions">
+        <button id="copy-agent-handoff" class="agent-action" type="button">Copy agent handoff</button>
+        <button id="download-agent-bundle" class="agent-action agent-action-secondary" type="button" disabled>Preparing download…</button>
+      </div>
+      <p id="agent-action-status" class="agent-action-status" role="status" aria-live="polite">The bundle is assembled when clicked; no additional current-state file is stored on the site.</p>
+    </section>
+
     <section aria-labelledby="current-sources-title">
       <h2 id="current-sources-title">Use these sources in this order</h2>
       <p>The structured files are the current contract. Each claim carries its own observation or status timestamp; the file snapshot never makes an older claim new.</p>
@@ -151,7 +161,140 @@
       return response.json();
     });
 
-    Promise.all([fetchJson('data.json'), fetchJson('updates.json')])
+    const baseUrl = new URL('.', window.location.href);
+    const sourceUrls = {
+      claims_manifest: new URL('data.json', baseUrl).href,
+      updates_feed: new URL('updates.json', baseUrl).href,
+      integrity_manifest: new URL('hashes.json', baseUrl).href,
+      overview: new URL('index.html', baseUrl).href,
+      claims_explorer: new URL('claims.html', baseUrl).href,
+      lessons_learned: new URL('lessons.html', baseUrl).href,
+      agent_guide: new URL('agents.html', baseUrl).href
+    };
+
+    const contractPromise = Promise.all([fetchJson('data.json'), fetchJson('updates.json')]);
+    const integrityPromise = fetchJson('hashes.json');
+    const agentBundlePromise = Promise.all([contractPromise, integrityPromise])
+      .then(([[manifest, updates], integrity]) => ({manifest, updates, integrity}));
+
+    const buildAgentHandoff = () => `Read the AP Four-Course Dashboard contract.
+
+Standing claims: ${sourceUrls.claims_manifest}
+Event chronology: ${sourceUrls.updates_feed}
+Published-byte digests: ${sourceUrls.integrity_manifest}
+Reading guide: ${sourceUrls.agent_guide}
+
+Rules:
+- data.json governs standing claims; updates.json governs event chronology.
+- Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
+- Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
+- Treat dated Markdown reports as historical context, not current standing.
+- Do not infer release, completion, or readiness from a status label alone.
+
+Return a concise executive summary of current standing, blockers by owner, stale or unknown rows, and material evidence gaps.`;
+
+    const buildAgentBundle = ({manifest, updates, integrity}) => ({
+      schema_version: 1,
+      assembled_at: new Date().toISOString(),
+      purpose: 'Portable handoff for an agent reviewing the AP Four-Course Dashboard.',
+      source_urls: sourceUrls,
+      authority: {
+        standing_claims: 'manifest (data.json)',
+        event_chronology: 'updates (updates.json)',
+        byte_identity: 'integrity (hashes.json)',
+        historical_reports: 'Dated Markdown reports are context only.'
+      },
+      reading_rules: [
+        'Age each claim from observed_at or status_at; the manifest snapshot does not refresh an older row.',
+        'Follow each claim evidence array for receipt pointers and respect evidence_access.',
+        'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
+        'Do not infer release, completion, or readiness from a status label alone.',
+        'A matching SHA-256 digest proves published-byte identity, not factual freshness.'
+      ],
+      receipt_pointer_path: 'manifest.claims[].evidence[]',
+      manifest,
+      updates,
+      integrity
+    });
+
+    const setActionStatus = message => {
+      document.getElementById('agent-action-status').textContent = message;
+    };
+
+    const copyText = async text => {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return;
+        } catch {
+          // Fall through to the selection-based copy path.
+        }
+      }
+
+      const field = document.createElement('textarea');
+      field.value = text;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      const copied = document.execCommand('copy');
+      field.remove();
+      if (!copied) throw new Error('Copy command failed');
+    };
+
+    document.getElementById('copy-agent-handoff').addEventListener('click', async event => {
+      const button = event.currentTarget;
+      button.disabled = true;
+      button.textContent = 'Copying…';
+      try {
+        await copyText(buildAgentHandoff());
+        setActionStatus('Agent handoff copied. Paste it directly into the viewer’s agent.');
+      } catch {
+        setActionStatus('Copy failed. Open the three current source links below and send those URLs instead.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Copy agent handoff';
+      }
+    });
+
+    document.getElementById('download-agent-bundle').addEventListener('click', async event => {
+      const button = event.currentTarget;
+      button.disabled = true;
+      button.textContent = 'Building bundle…';
+      try {
+        const files = await agentBundlePromise;
+        const bundle = buildAgentBundle(files);
+        const blob = new Blob([`${JSON.stringify(bundle, null, 2)}\n`], {type: 'application/json'});
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        const snapshotDate = String(files.manifest.snapshot || bundle.assembled_at).slice(0, 10);
+        link.href = objectUrl;
+        link.download = `ap-four-course-agent-bundle-${snapshotDate}.json`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(objectUrl), 0);
+        setActionStatus(`Agent bundle downloaded from manifest snapshot ${files.manifest.snapshot || 'not declared'}.`);
+      } catch {
+        setActionStatus('Bundle download failed. Open data.json, updates.json, and hashes.json directly.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Download bundle (.json)';
+      }
+    });
+
+    agentBundlePromise
+      .then(() => {
+        const button = document.getElementById('download-agent-bundle');
+        button.disabled = false;
+        button.textContent = 'Download bundle (.json)';
+      })
+      .catch(() => {
+        document.getElementById('download-agent-bundle').textContent = 'Download unavailable';
+      });
+
+    contractPromise
       .then(([manifest, updates]) => {
         const claims = Array.isArray(manifest.claims) ? manifest.claims : [];
         const counts = claims.reduce((result, claim) => {
@@ -190,7 +333,7 @@
         document.getElementById('agent-latest-event').textContent = 'Open updates.json directly.';
       });
 
-    fetchJson('hashes.json')
+    integrityPromise
       .then(manifest => {
         const table = document.getElementById('hashTbl');
         table.textContent = '';
