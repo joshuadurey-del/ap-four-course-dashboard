@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T13:01Z",
+  "snapshot": "2026-08-19T13:53Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -123,7 +123,7 @@
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "JUDGE CODE LANDED (fleet-side, 12:56Z): their autopilot merged the Faultless Bar onto a pushed access-controlled ref (their qc-system PR 8) with the runner, APWH defaults, a fail-closed known-bad fixture, and identity-complete output - 272 tests passing per their receipts. Their stated flow: our single writer produces the sha-pinned 933-row snapshot, then THE FLEET runs the bar twice with two-run agreement over all 933 identities. Honest limit: the repo is private to us, so this is fleet-claimed with receipts, not byte-verified by our token. Remaining before anything moves from our side: the sanctioned single-writer snapshot/apply process is still unnamed in committed terms; the seat is staging an AWAITING packet so it is one command away when named.",
+      "value": "THE ROUTE IS FULLY NAMED. Fleet's 13:37Z answer on their #48: banking is a single SHA-pinned edit of lessons.json committed straight to their outputs repo main through its push gate - no separate applier exists (they retracted their own earlier wording; our absence finding confirmed), no snapshot format needed. Bank of record: 5ca80d81 with 933 conceptItems. After our push they normalize the file and run the merged Faultless Bar twice with agreement artifacts over all 933 identities. The lane is building the replacement-delta packet now with row-level diff proof; the push itself is owner-gated and waits for Josh's explicit go with the exact commit shown first.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -133,7 +133,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T13:01Z"
+      "observed_at": "2026-08-19T13:53Z"
     },
     {
       "claim_id": "apwh.pr791",

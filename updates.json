@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-19T13:53Z",
+  "course": "APWH",
+  "text": "Fleet named the banking route on #48 (13:37Z): SHA-pinned lessons.json edit direct to their outputs main via its push gate; they run the judge twice after. Our clarifying comment (owner-approved, posted 13:26Z) got the answer in 11 minutes. Delta packet building; the push waits for the owner's explicit go."
+ },
+ {
   "ts": "2026-08-19T13:01Z",
   "course": "APWH",
   "text": "Fleet merged the Faultless Bar to a pushed (private) ref within 2 hours of our filing - runner, APWH defaults, fail-closed fixture, 272 tests per their receipts. Their flow: we produce the pinned 933 snapshot, they run the bar twice with two-run agreement. Last open piece: the single-writer snapshot process is still unnamed; AWAITING packet staging."
