@@ -1,422 +1,447 @@
 [
-  {
-    "ts": "2026-08-19T08:20Z",
-    "course": "Psych",
-    "text": "Runs 1-2 through the factory Lambda: 9 jobs total. Run 1 terminal states from their job_stage log: one completed, two failed (FRQ render_failed rejections - their gate). Run 2 (6 jobs) settling. FINDING with receipts: the deployed Lambda drops max_jobs (their handler at main forwards it, line 80) - server line shows budget=capacity-reserve, so the ruling's 4-cap is unenforceable; deploy drift on their side. Real runs PAUSED; dry-run scans continue. Caveat: underfilled still 374 pending admissions."
-  },
-  {
-    "ts": "2026-08-19T08:00Z",
-    "course": "APUSH",
-    "text": "126-class derivation receipt + filer correction posted to intake #90 (comment 5339286801) with Josh's typed confirm; sizing deferred to hole-filler #81. Fleet REWORK active on their #7 and #81/PR #82. Caveat: nothing further outward from our side; watch only."
-  },
-  {
-    "ts": "2026-08-19T07:55Z",
-    "course": "HumGeo",
-    "text": "Regeneration cohort finalized at 761 (COHORT-RECONCILIATION-rev2.json, machine-checked disjoint): 277+17+1+8+373+82+3. The 82 miskey slots measured on clean main: all S2+D1 multi-fatal. The 3 open rows self-resolved from verdicts (3 passes join the held-for-landing class, 3 fails regen). Filing packet being staged to their template for their file_issue.sh + triage routing; posts only on the owner line. Caveat: no GitHub writes this window by owner boundary."
-  },
-  {
-    "ts": "2026-08-19T08:05Z",
-    "course": "HumGeo",
-    "text": "The one repairable item (1.1-f1-a08) carries a fresh factory pass: committed repair (STRUCT_D4) then /v1/qc re-judgment on the finished bytes, fingerprint-bound. Owner shape-call: NOT landed as a one-item PR - the pass is HELD locally and re-enters with the consolidated regeneration-wave landing. Caveat: 373 rebuild-class items still await the regeneration filing (owner text + 3 unresolved rows)."
-  },
-  {
-    "ts": "2026-08-19T07:28Z",
-    "course": "Psych",
-    "text": "Top-up DISPATCHED: 3 of 4 capped jobs submitted through the factory Lambda at 07:28Z (CloudWatch receipt). Items not yet admitted - the async pool drains at its own pace; per-cell deltas verified by dry-run re-scan once jobs settle. Caveat: one capped run proves the route; filling all 374 short buckets is the fleet's cron decision."
-  },
-  {
-    "ts": "2026-08-19T07:40Z",
-    "course": "APUSH",
-    "text": "Fleet woke on our #89 ping: intake autopilot claimed #89 and #90, opened apush-course-build #7 (REWORK - packet defect confirmed in THEIR retrieval pipeline, rebuild ordered with committed scripts) and incept-hole-filler #81 with PR #82 in progress. This is the #90 answer materializing for the 64 held posts. Caveat: our 126-class derivation receipt is not yet attached to #81; attaching it is an outward comment awaiting owner text."
-  },
-  {
-    "ts": "2026-08-19T07:00Z",
-    "course": "Cross",
-    "text": "Single-orchestrator control established (Josh brief + AFK e2e consent): four course seats frozen with live handoffs, harden lane completed its terminal line, factory-exec-gate verified ENFORCE, purge rows P1/P2/P3/P5/P6/P15-humgeo quarantined reversibly with SHA ledger. Caveat: P12 (in-clone tmp scripts) and P16 (pushed-branch seal) stay deferred; incept-b4 window unacknowledged."
-  },
-  {
-    "ts": "2026-08-19T06:55Z",
-    "course": "HumGeo",
-    "text": "Honest re-earn measured on a clean origin/main worktree: 0 of 374 bankable. 373 fail STRUCT_S2+STRUCT_D1 multi-fatal (factory repair refuses multi-fatal by rule) and route to the regeneration cohort; the single D4-only record is blocked on an invalid ambient Anthropic key (401). Discriminator: a known-good wave-462 candidate passes the same battery fresh, so the judge is healthy. Also: Aug-12 set preserved on pushed branch ec2bb05c (classified metadata-only, 2,038 files), i7 branch verified clean (P5 precondition met). Caveat: no banking PR opened - nothing passed; 741 re-earn spend question answered by measurement (would buy failures)."
-  },
-  {
-    "ts": "2026-08-19T06:46Z",
-    "course": "APWH",
-    "text": "Fleet ruling verified live: native governed placement is authoritative on #591 and the fleet itself closed PR #791 unmerged at 06:35Z (mergedAt null, re-read from GitHub). Verbatim: nothing further is needed from the filer lane. The intake autopilot claimed the native-publish chain minutes later. Caveat: acceptance instrument for the 933 cohort remains a fleet choice; our ask stays retracted per owner order."
-  },
-  {
-    "ts": "2026-08-19T06:43Z",
-    "course": "Psych",
-    "text": "Top-up resumed through the factory's committed Lambda (owner relay cleared): dry run then one bounded real run (max_jobs 4, worker_reserve 2). Live scan confirms 374/1,105 buckets underfilled. Dispatch load-guarded to zero by the factory's own worker reserve - fleet jobs occupy the async pool (byte-cited: app.py available_slots logic). Caveat: retry armed; CloudWatch receipts stored; cursor unchanged on a zero-dispatch run."
-  },
-  {
-    "ts": "2026-08-19T06:30Z",
-    "course": "APUSH",
-    "text": "Applied the seat's staged delta: 49/249 is builder-receipted (committed builder re-derived succ11 byte-exact, exit 0) with the mandatory mode split 36 legacy_dual_review + 13 server_strict (11 successor admissions, named reviewer). Owner ruled the 36 retain the legacy label, no funded re-earn. P10 quarantined read-only, ledger re-derives without it. Caveat: #90 walls 64 held posts + 124 positions (zero fleet replies); #89 pinged; PR #6 awaits owner-lane merge."
-  },
-  {
-    "ts": "2026-08-19T05:06Z",
-    "course": "Cross",
-    "text": "Recovery evidence is now durable in the private SS evidence repository: the 25-row damage register, decision book, three-day plan, 16-row purge manifest, runlog, and source hashes. Course ranges now mean recovery work after the named unblock, not time to release; Lessons and Agent data link to the published audit packet."
-  },
-  {
-    "ts": "2026-08-19T04:13Z",
-    "course": "Cross",
-    "text": "Recovery audit supersedes the prior standings: 25 claims now classify as 2 valid factory-proof classes, 8 salvageable-input classes, 5 factory re-earns, 6 void classes, and 4 blocked unknowns. No repair, paid call, mark change, commit, filing, merge, or deploy was performed."
-  },
-  {
-    "ts": "2026-08-19T04:13Z",
-    "course": "HumGeo",
-    "text": "Honesty reset: the sealed-plan wave is the surviving factory proof, with its exact total pending re-derivation. The 741 wrapper verdicts must be re-earned through the committed poster, and the 374-pass set is input for a reviewed PR, not banked main state."
-  },
-  {
-    "ts": "2026-08-19T04:13Z",
-    "course": "APWH",
-    "text": "Honesty reset: the 933-record population is staged input and still has zero official sweep verdicts. PR #791 is CI-green and mergeable, but has no review and conflicts with the newer #591 owner recommendation; it is authority-blocked and must not merge."
-  },
-  {
-    "ts": "2026-08-19T04:13Z",
-    "course": "APUSH",
-    "text": "Honesty reset: 49 of 249 is a current ledger count, not one factory-proof cohort. The split is 13 server-strict, 36 legacy dual-review, and 11 local-path successors; future admissions remain held on #89/#90 and seating PR #6."
-  },
-  {
-    "ts": "2026-08-19T04:13Z",
-    "course": "Psych",
-    "text": "Honesty reset: the fleet-built 221-article content state is proven. The 731-of-1,105 bank scan is held, served-bank provenance is unknown, the EBQ receipt closed zero buckets, and U5 remains not green."
-  },
-  {
-    "ts": "2026-08-19T01:44Z",
-    "course": "HumGeo",
-    "text": "HumGeo: 741 repaired items now hold official /v1/qc verdicts — 464 pass, 277 to regenerate. Caveat: the 464 are not yet on main (reviewed PR pending its verdict re-earn) and not banked; seal still waits on the fleet's #92 ruling."
-  },
-  {
-    "ts": "2026-08-18T20:45Z",
-    "course": "APWH",
-    "text": "Overnight: the main tagging pass finished all 383 fresh questions in one pass each — 274 earned tags and are folded in; the 109 the tagger could not settle went straight to re-minting, per the owner's one-pass rule, and that wave is running now. One slot exhausted its call allowance and joined the disposition queue, which stands at nine rows, all with receipts. Revised chain: re-mint drain by ~07:45, its tag pass by ~10:30, then one batch banking, then the paid QC sweep from ~11:30. The Friday bar still holds; the cause of the shift is measured — 28.5% of new questions fail their one tag pass, matching the tagger's own published weakness on this subject."
-  },
-  {
-    "ts": "2026-08-18T10:40Z",
-    "course": "APWH",
-    "text": "The rebuild drain is complete and receipted: 419 of 423 questions got an accepted replacement, 4 exhausted honestly and sit in the disposition queue with full receipts, and all 26 rows from the earlier index miss were recovered and accepted on the fix's first try. Nothing is uncalled, nothing unaccounted — the receipt's identity sum is exact. Overnight the tagging pass runs (done ~04:30 cautious), then banking, then the single paid QC sweep hands to the QC window."
-  },
-  {
-    "ts": "2026-08-18T10:15Z",
-    "course": "APWH",
-    "text": "Owner directive applied to the walk record: the 08-12 course walk was run by our own script, not the factory's walker, so it does not count as proof on that ground either. The final walk — owed after the paid sweep — will run the factory's own walkthrough chain end to end: stage the serving root, boot the real server, walk every lesson as a demo student, and hash exactly what the running server serves."
-  },
-  {
-    "ts": "2026-08-18T10:05Z",
-    "course": "APWH",
-    "text": "Honesty update on the old walk proof, no new work affected. The 08-12 render walk matched bytes against a course tree that was later retired to a tag and never merged — so that proof cannot be re-run against today's canonical tree, and the status tool's local-done credit stays unearned rather than false-accepted. Serving is unaffected: the platform serves the course tree live. The restore-or-retire choice goes to Josh in the morning report. The night QC chain (tagging, banking, the paid sweep handover) does not touch this."
-  },
-  {
-    "ts": "2026-08-18T08:53Z",
-    "course": "HumGeo",
-    "text": "Course-page accuracy fix, no campaign movement: the #642 figures (57 items with duplicate choice text, 1,750 affected children) are now marked as the incident count measured at the 2026-08-13 filing, not a re-proven current count. Campaign state re-verified this hour from live sources and unchanged: 462 of 474 slots hold current-byte factory QC passes, 9 slots filed to the fleet on intake #92 (still open), 3 resumable from persisted factory jobs, 741 rescreens queued behind APWH's pool turn, seal blocked on the #92 ruling."
-  },
-  {
-    "ts": "2026-08-18T08:40Z",
-    "course": "APWH",
-    "text": "Rebuild drain is in its final stretch: 355 of 423 rows accepted, 57 left to call, about an hour at measured pace. One incident, caught and closed with zero wasted spend: a data-shape bug crashed the runner before posting for eighteen chunk attempts; the overrun guard stopped it, the fix carries a regression test, and the drain relaunched at 17:28. Eight exhausted rows sit in the disposition queue under the owner's attempts ruling. After the drain: one tagging pass on the fresh questions, banking, a fresh structural screen, then the single paid QC sweep."
-  },
-  {
-    "ts": "2026-08-18T06:50Z",
-    "course": "HumGeo",
-    "text": "The 12 open slots have their disposition on the record: fleet adjudication is filed as intake #92 for the 9 rows past every published factory route, and the seal claim now reads BLOCKED on that ruling, because every slot ruled supersede changes the 480-plus-2 seal constant, which is fleet code. The other 3 rows need no ruling — each resumes by adopting its persisted factory job plus one official QC, and any that fails joins the filed class on the same thread. A follow-up comment on the filing added two things the body lacked: a generator shape observation (3 of 6,639 archived attempts returned a rationale map with a non-letter key, with command-level receipts, filed as an ask rather than a defect) and neutral provenance context showing the retired outer-retry idiom predates the current owner's tenure on both sides of the handover."
-  },
-  {
-    "ts": "2026-08-18T06:20Z",
-    "course": "Cross",
-    "text": "Owner ruling, fleet-wide: outer retry loops around factory generation are retired. The factory's own contract publishes the entire attempts policy — max_attempts default 5, bounds 1-5, on every request schema, plus 3x first-round overgeneration — and after exhaustion its routes are repair, regenerate-once, or supersede. Our 120-cap loop was an invention; the live HumGeo run was stopped on the ruling at attempt 60. Official HumGeo count from the runner's own check: 462/474; 12 slots go to fleet adjudication. Measured calibration: 6,749 calls, 968 factory-compute hours, roughly 7% of it factory-faithful. New claims row cross.attempts_policy (settled) carries the policy; the lessons page carries the hard lesson."
-  },
-  {
-    "ts": "2026-08-18T06:05Z",
-    "course": "HumGeo",
-    "text": "The repin regeneration drained: seal-ready moved 451 to 462 of 474, with all eleven conversions coming from the twelve rows cleared this morning. The run ended when the factory redeployed mid-drain and the runner refused to continue against an unverified deploy, which is the guard working, not a failure. The route contract was re-verified byte-identical and the pin moved with a dated note. The factory pool went back to APWH the moment the drain settled. Twelve rows remain, every one a named class: ten at the attempt cap, two resumable from persisted factory jobs without any re-send, and the twelfth was mid-flight at the stop. No corpus writes at any point."
-  },
-  {
-    "ts": "2026-08-18T05:53Z",
-    "course": "Cross",
-    "text": "Dashboard design sweep: the redundant overview course cards, repeated deadline narrative, and repeated blocker list were removed. The timeline now links directly to each course and color-matches the selected course name; the overview shows five readable activity entries, detailed ETA evidence is available on demand, and the claims explorer stacks cleanly on mobile. No course-state claims changed in this pass."
-  },
-  {
-    "ts": "2026-08-18T05:04Z",
-    "course": "Cross",
-    "text": "Pipeline section source cite fixed: it pointed at a repo-relative path (recon/...) that does not exist in this repository — the write-up lives in the orchestrator zone. The cite now names it as an internal source, the same convention unpublished claim evidence uses, instead of dangling."
-  },
-  {
-    "ts": "2026-08-18T04:38Z",
-    "course": "HumGeo",
-    "text": "Re-observed the staged structural-repair candidates on a staleness flag: all 741 files intact on disk, receipts ledger matching, nothing consumed. The claim now also says plainly that the official rescreens have not started — they run after the current regeneration drain, ten-item pilot first. A re-observation that finds no change is still a fresh observation; pretending consumption had begun would have been the lie."
-  },
-  {
-    "ts": "2026-08-18T04:37Z",
-    "course": "APUSH",
-    "text": "Overview card precision fix from the APUSH seat's live verification (owner asked if the card was current — everything matched except one word): the 126 waiting positions now read as what they are — 124 on the factory's visual-capability answer, 2 on broken source packets being re-minted. Both intake tickets remain open with zero replies."
-  },
-  {
-    "ts": "2026-08-18T04:25Z",
-    "course": "APWH",
-    "text": "Owner ruling landed and executed: tagging an existing question gets exactly one three-draw majority pass — the method the tagging service itself publishes — and anything unresolved goes straight to rebuild. No more re-try rounds. Round five was stopped mid-run (53 of 112 attempted, 4 tags earned, and those stand). The 65 questions still untagged on the repair list moved to the rebuild queue, which now holds 427. With that, the repair route CLOSED: all 506 repairable questions are repaired, banked, and verified pushed, zero refusals across the whole campaign. The structural check now passes 506 of 933, and the 427 still failing are exactly the rebuild queue — nothing is unaccounted for. Rebuilds still wait on the shared pool, which human geography holds."
-  },
-  {
-    "ts": "2026-08-18T03:30Z",
-    "course": "Cross",
-    "text": "Claims contract addition: settled marker for terminal history. A claim like the retired local judge is a permanently closed fact — nothing exists to re-observe, so re-dating it every 48 hours would be ceremony without information. Settled claims keep their true dates forever, stay under full date hygiene, and are exempt only from the staleness clock; the linter now reports them on their own transparency line. Documented on the For-agents page."
-  },
-  {
-    "ts": "2026-08-18T02:24Z",
-    "course": "APWH",
-    "text": "Overview card corrected on the APWH seat's four-point audit (owner asked if it was current; it was not): headline is now 504/933 structurally passing with its denominator named on the card; repairs read 504/571 banked; the regeneration batch is shown as mid-flight (253 accepted of 350 attempted, yielded to HumGeo's pool reclaim by design, resumes on pool return); badge reads tagger round 5. The honest line no longer says the paid sweep queues on the pool — only the batch does; the sweep waits transitively."
-  },
-  {
-    "ts": "2026-08-18T02:09Z",
-    "course": "APWH",
-    "text": "Correction to this morning's repair entry, plus one advance. The repair count is 504 of 571, not 504 of 504 — the 67 questions without skill tags were never actually moved to the rebuild list. The queue's own rows still class them as repairs; they were waiting on tags, and the repair tool skips untagged questions by design. A fifth tagging round started at 11:05 and covers all 67 (it does not need the shared build pool, so it runs while human geography holds it). Tags that resolve mean cheap repairs, about two hours' worth; only what the round cannot resolve folds to rebuild. Nothing already banked changes. The rebuild batch itself is paused by design — the pool went back to human geography at 09:19 and the batch resumes automatically when it returns."
-  },
-  {
-    "ts": "2026-08-18T01:45Z",
-    "course": "APWH",
-    "text": "The repair route is complete: all 504 repairable questions are repaired and banked, with zero refusals across the whole campaign. The final 17 cleared this morning after the last tagging rounds delivered their skill codes. The repair target settled at 504 exactly as forecast, with 67 unrepairable questions moving to the rebuild route. Questions passing the structural check rose to 504 of 933, and the 429 still failing are exactly the rebuild population, most of which already exists as accepted candidates waiting to be banked. Remaining: finish the rebuilds, bank them, one paid quality check across everything, then the final walkthrough."
-  },
-  {
-    "ts": "2026-08-18T01:21Z",
-    "course": "HumGeo",
-    "text": "Claims explorer synced to this morning's disposition. The twelve-pin claim no longer reads as a blocked owner decision: it is resolved by the factory's own fail-closed check, the amendment is withdrawn, and the rows are regenerating. The rebuild-passes claim now explains that the 463-versus-451 gap is gone because the twelve stale results were cleared with receipts archived. Mid-run counts stay out of the claims by the same rule as the feed: a claim carries numbers that are still true when read."
-  },
-  {
-    "ts": "2026-08-18T01:14Z",
-    "course": "HumGeo",
-    "text": "The twelve stale-pin rows have their answer, and it came from the factory's code rather than a choice. Their records point at the pre-amendment version of the item they replace, the seal refuses that shape fail-closed, and no re-stamp route exists because the pointer is written at generation time. So the staged pin-only amendment is withdrawn as the wrong instrument, the twelve results were cleared with every receipt archived, and the rows are regenerating through the normal runner. The final count posts here when the run exits; mid-run numbers deliberately do not."
-  },
-  {
-    "ts": "2026-08-18T01:13Z",
-    "course": "HumGeo",
-    "text": "First screenshot walk of the rebuilt-course era ran overnight on the local demo serving path: seven captures. A demo student can reach the course, answer practice, and pass the mastery gate. Proving a student can open and read a lesson body remains open, stated rather than assumed. The walk also caught a real defect: 260 of 403 practice items in the walked bundle print all four answer options inside the question body. Measured to its edges before filing: our rebuilt items do not carry the offending field, the live serving path does not either, and the hosted demo page is clean, so the poison is confined to the committed staging snapshot our local walks serve — zero student exposure. Filed as ap-one #766 with the reproduce inline, then narrowed by our own follow-up comment. Remaining cost: local walk screenshots misrepresent content until the snapshot is re-aligned."
-  },
-  {
-    "ts": "2026-08-17T22:35Z",
-    "course": "HumGeo",
-    "text": "Overview card text refreshed: it still described the relaunch as converting and the sealed package as landing after the drain. The drain finished at 04:22 and the pool was released at 04:23. The card now states what is actually true: 451 of 474 seal-ready, nothing sealed, and the two remaining blockers are owner calls rather than machine work."
-  },
-  {
-    "ts": "2026-08-17T22:00Z",
-    "course": "APWH",
-    "text": "The factory pool was released to us at 04:23 and the gate condition checks out, so the rebuild batch is no longer waiting on anyone. All four tagging rounds have finished and their results are now written into the file the checks read: 821 of 933 questions have a skill tag, leaving 12 percent unresolved, well inside the limit. Items that would pass the structural check rose to 487 of 933, and the 446 that still fail are exactly the ones with no wrong-answer explanations yet. The rebuild batch settles between 362 and 429. One constraint from the release note: our batch must run in small chunks and hand the pool back between them, because human geography work jumps ahead of ours the moment it has anything runnable."
-  },
-  {
-    "ts": "2026-08-17T19:25Z",
-    "course": "HumGeo",
-    "text": "Factory pool RELEASED to the next course at 04:23 KST, with a receipt. The gate was checked only after the run had stopped and the surface was still, because a check run mid-flight reads at random and can show all-clear by luck. Releasing the pool is not a claim that HumGeo is finished, and the receipt says so in its own field: 12 rows still need the owner-approved pin fix, 10 have burned through the attempt cap and need the owner's number, 1 needs a rationale repair, and 3 metadata rows failed their check. The overnight tail converted two slots and moved seal-ready from 449 to 451, but it also pushed four more slots into the cap wall, so the owner's cap decision now covers 10 rather than 4. Both halves of that trade are on the receipt."
-  },
-  {
-    "ts": "2026-08-17T18:31Z",
-    "course": "HumGeo",
-    "text": "Two corrections to our own published numbers, both found by running checks rather than reading state. First, the headline rebuild figure was 432 of 474 and is now 449. The state file counts 461 accepted, but twelve of those fail the runner's own eligibility check because they point at the pre-amendment version of the item they replace. 449 is the seal-ready number and 461 is not. Second, the six metadata rows had never actually been checked: the tool for it was assumed missing and was in fact already committed. Running it gives 3 passes and 3 failures, so three items of previously uncounted work now exist. Both claims carry the exact command to re-derive them. Nothing was sealed and no corpus was written."
-  },
-  {
-    "ts": "2026-08-17T17:52Z",
-    "course": "HumGeo",
-    "text": "Cause correction on the 12-record finding, one hour after publishing it: the stale pins are from OUR OWN 30-slot amendment (the records were generated before it re-pinned their rows) — not from fleet corpus writes, which was unverified inference and is withdrawn. Seal-ready reads 449 of 474 until the owner rules on the staged pin-only fix. Also overnight: single ownership of the HumGeo chain passed to the fresh orchestrator session after a two-driver race was caught by the dispatch board; all receipts intact, zero corpus writes, both sessions' work preserved."
-  },
-  {
-    "ts": "2026-08-17T17:48Z",
-    "course": "HumGeo",
-    "text": "Overnight: the amended relaunch exited at 02:38 KST with 29 of 42 slots converted — 461 of 474 now hold official passes. The 13 leftovers are fully classified: 6 were revived by receipted adjudication and a conversion run is converting them now; 7 are grinder-class (the generator cannot satisfy their contracts within the 120-try cap) and get a root-cause dossier in the morning. One new finding: 12 already-accepted records point at swap-targets the fleet changed under us on 08-14 — their content is verified intact and a pin-only fix is staged, held for the owner because it is a first-of-its-kind ceremony."
-  },
-  {
-    "ts": "2026-08-17T14:45Z",
-    "course": "APWH",
-    "text": "The disagreement over the size of the rebuild batch is settled. The dispatch board withdrew its higher figure after checking the underlying data, and both surfaces now carry 362 to 432 with the mechanism. The cause is worth recording: their count subtracted repaired-so-far from the repair target, which mixes together questions that are merely not repaired yet with questions that can never be repaired for lack of a tag. Those are different populations. Every tag the running round recovers moves the batch toward the lower end."
-  },
-  {
-    "ts": "2026-08-17T14:40Z",
-    "course": "APWH",
-    "text": "Redraw round 3 finished, 22 of 142 resolved, and round 4 is now running on the remaining 120. Skill codes stand at 815 of 933, so 12.6 percent unresolved, well under the 40 percent stop rule. A number we had published is about to move and the page now says so: the regeneration batch is not a fixed 362. A question marked for repair that never gets a skill code cannot pass one of the checks, and the factory's own rule then sends it to be rebuilt instead. 70 such questions are in round 4 right now, so the batch settles somewhere between 362 and 432, and the repair side between 501 and 571. Publishing the range with its cause rather than letting the old figure look wrong tomorrow."
-  },
-  {
-    "ts": "2026-08-17T10:22Z",
-    "course": "Cross-course",
-    "text": "Finished the evidence-link repair on the surfaces the earlier passes did not reach. The three agent-facing snapshot documents still wrote their receipt links as branch names, and GitHub cannot tell where a branch name ending in /claude stops and a folder path starts, so those links dumped the reader at the repository root instead of the receipts. All of them now name the commit and then the folder. One more link, the APUSH receipts branch on ilmych/apush-build-outputs, had the same defect and now points at the exact commit that claim recorded when it was stamped, not at today's branch head. Every tree link in this repo was then re-checked one at a time against its own commit through the GitHub API: 8 links, 0 broken. The first version of that check was itself wrong and passed everything, because it queried the repository root for every link; the fix was to pair each path with its own commit and confirm a deliberately wrong path still fails."
-  },
-  {
-    "ts": "2026-08-17T10:50Z",
-    "course": "APWH",
-    "text": "Swept every link class on the dashboard, not just the evidence links. All 19 evidence links now open on the evidence itself, verified against the repository rather than by loading a page. All 4 commit links and all 6 issue links check out. Found and fixed one more of my own: a link to a retired tag pointed at a release page that does not exist, because a tag was pushed and never a release, and the tag name contains a slash which is the same ambiguity that caused the original fault. It now points at the commit, verified reachable. Twenty Drive links, three documents, three tracing links and nine live course links cannot be checked from here and are recorded as unchecked rather than assumed good."
-  },
-  {
-    "ts": "2026-08-17T10:46Z",
-    "course": "Cross",
-    "text": "Second pass on the evidence links after an APWH-seat audit caught the first pass half-broken: 14 SHA links resolved but landed on the repository root — the original symptom, invisible to a link checker. Every evidence link now carries its full directory path, and each one was verified against the commit's actual bytes (git cat-file), not by whether it returns a page. Honesty note on the diagnosis: the browser failure on slash-named branches is the owner's observation; nobody has measured GitHub's resolver from the shell (the repo is private, so logged-out checks 404 on everything). The SHA form is used because a 40-character commit cannot be ambiguous — a structural argument, not a measurement."
-  },
-  {
-    "ts": "2026-08-17T10:10Z",
-    "course": "APWH",
-    "text": "Audited every evidence link on the dashboard after the owner reported that they open the repository root instead of the evidence folder. 15 links checked against the repository itself. One was genuinely broken and it was mine: pinning it to a commit had dropped the folder path, leaving a path that does not exist. Fixed and verified before republishing. A second finding for the orchestrator surfaces: 14 of the links point at a commit with no folder path at all, so they resolve but still land the reader on the repository root, which is the same symptom the owner reported."
-  },
-  {
-    "ts": "2026-08-17T10:41Z",
-    "course": "Cross",
-    "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name — they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
-  },
-  {
-    "ts": "2026-08-17T10:30Z",
-    "course": "Cross",
-    "text": "Owner directive: the overview now shows only the 10 most recent updates with a link to the new full update-history page. Overview card figures refreshed to the live claims (HumGeo 452/474, APWH 796/933 codes and 487/571 repairs)."
-  },
-  {
-    "ts": "2026-08-17T09:59Z",
-    "course": "Cross-course",
-    "text": "Brought the front page and the agent-facing standings snapshot in line with the owner's cadence ruling. Both still carried the old three-column optimistic/realistic/conservative ETA table and the week bar that put all four courses on our side by Friday 08-21. That bar was acknowledged too optimistic. The published dates are now one cautious date each: HumGeo 08-20, APWH 08-21, APUSH 08-22, Psych 08-25. The Friday 08-21 bar now covers HumGeo and APWH only, which is what the measurements support. The four course pages already carried these dates; only the index page and the snapshot were behind. Item counts were left alone on purpose: 432 of 474 is stamped 13:20 KST with its own evidence link, and the seal pass will refresh it from receipts."
-  },
-  {
-    "ts": "2026-08-17T10:00Z",
-    "course": "APWH",
-    "text": "Audited whether the sweep-rate receipt was real factory machinery or one of our own inventions, after the owner asked. It is canonical: 2,499 of 2,513 records were paid calls to the factory's own check endpoint through the sanctioned tool, with the factory's own failure codes, and the single 14-record exception labels itself as seeded at no cost. The audit also caught our own method error: the 10.1 seconds per call we had both published divided the run's whole span by the record count instead of using the durations the batches recorded, and counted 14 records never called. The honest figure is 11.9 seconds an item, which the HumGeo seat re-derived independently and matched. Our sweep floor moves 2.6 to 3.1 hours, inside the published cautious band, so 08-21 is unaffected."
-  },
-  {
-    "ts": "2026-08-17T09:44Z",
-    "course": "Cross",
-    "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics — the only italics on the pages. Content, numbers, and caveats unchanged."
-  },
-  {
-    "ts": "2026-08-17T09:55Z",
-    "course": "APWH",
-    "text": "Date back to 08-21, now measured rather than guessed. I moved it to 08-22 an hour ago on a wrong number and that move is reversed. The paid check was sized three ways today: about 3 hours (guess), about 23 hours (after trusting a comment in the tool), and finally 2.6 hours measured against a real 2,513-call run at 10.1 seconds a call, which I verified by reading the receipts myself. The tool comment was written under a mistaken picture of the service and is set aside. The check also does not compete for build capacity, settled by reading the factory's code. Same receipts give the first real estimate of the failure loop: about a third of structurally-clean items fail at least one content check, which is now the largest risk to the date."
-  },
-  {
-    "ts": "2026-08-17T09:45Z",
-    "course": "APWH",
-    "text": "Date corrected 08-21 to 08-22, with the arithmetic on the page. The old date rested on a wrong number: it assumed the paid check ran six to eight questions at once for about 3 hours. The tool that runs it says in its own documentation that it runs calls one at a time, because all courses share one pool of about eight workers. That makes the check roughly 23 hours and the largest single leg in the campaign, bigger than the rebuild. Also withdrawn: the claim that the paid check does not compete for the shared pool. It creates no queued job so the usual probe cannot see it, but it does compete, and the receipts the plan cited for that claim could not be found. A retraction went to the HumGeo seat, who had been about to move their schedule a day earlier on my advice."
-  },
-  {
-    "ts": "2026-08-17T09:35Z",
-    "course": "HumGeo",
-    "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it — dates move on receipts here, in either direction."
-  },
-  {
-    "ts": "2026-08-17T09:35Z",
-    "course": "APWH",
-    "text": "Every line of the APWH definition of done now carries a time estimate with its basis named, and the published 08-21 was checked against them rather than defended. Two legs are measured: the last 84 repairs at 33 an hour, and tagging at 40 an hour, so re-tagging 362 rebuilt questions is 9.1 hours on its own. Two are projections: the rebuild leg at 6-12 hours and the paid check at 3.3-7.8 hours depending on how many run at once. The walk has no number at all. Total sequential work after the pool opens is about 25 hours clean and 39 hours cautious, which lands 08-20 and keeps 08-21 with roughly a day spare. The dominant risk is the pool opening date, not our throughput: a one-day slip puts the cautious branch at the wire on 08-21."
-  },
-  {
-    "ts": "2026-08-17T09:31Z",
-    "course": "Psych",
-    "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page — bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
-  },
-  {
-    "ts": "2026-08-17T09:28Z",
-    "course": "HumGeo",
-    "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged — release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
-  },
-  {
-    "ts": "2026-08-17T09:23Z",
-    "course": "Cross",
-    "text": "Owner directive: every course's ETA section now carries an explicit definition of done — what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
-  },
-  {
-    "ts": "2026-08-17T09:15Z",
-    "course": "HumGeo",
-    "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external — it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
-  },
-  {
-    "ts": "2026-08-17T09:12Z",
-    "course": "APWH",
-    "text": "Folded the redraw skill codes, which corrected an understated reading: items that would pass structural QC went 449 to 487, and the skill-code gap fell from 207 to 137. The 207 was inflated because 69 codes were already resolved but not written into the enrichment file. The 446 remaining structural failures are now exactly the items with no distractor rationales: 362 awaiting regeneration behind the pool, and 84 awaiting redraw codes."
-  },
-  {
-    "ts": "2026-08-17T09:05Z",
-    "course": "APWH",
-    "text": "Pool release ETA from the pool owner: cautious 2026-08-18 EOD KST, which gates the 362-item APWH regeneration tail. Measured the paid sweep's own precondition: the materializer is fail-closed and currently refuses, with 446 items lacking distractor rationales and 207 lacking skill codes. So the sweep cannot be requested until repairs converge, the regeneration tail lands, and the redraw skill-code fold is applied."
-  },
-  {
-    "ts": "2026-08-17T09:01Z",
-    "course": "Cross",
-    "text": "Every number on every course page is now a link into the claims explorer, which scrolls to and highlights the exact claim row with its receipts. APWH figures refreshed to the live campaign state (487/571 repairs, 791/933 skill codes, 449/933 structural-screen passes). Fleet-wide status pull completed: all six agent seats reported in the seven-state claim shape."
-  },
-  {
-    "ts": "2026-08-17T08:58Z",
-    "course": "Cross",
-    "text": "Receipt audit per owner directive: every numeric claim now carries evidence. The conclude-and-relaunch ceremony receipts (backup sha256, atomic re-bind, preflight, amended-slot reconciliation, grinder code trails) are published on the evidence repo and linked from the HumGeo execution claim; the Drive backup folder is linked directly. PLANNED numbers now cite the receipt their number originates from, marked NONE_YET for the execution half."
-  },
-  {
-    "ts": "2026-08-17T09:00Z",
-    "course": "APWH",
-    "text": "Structural screen now reads the repaired bank: 449/933 items would pass structure and reach paid content checks, up from 0/933 at window 1. Top-up apply landed (+38, 487/571 total, commit 5afcb7a). Skill codes at 791/933; redraw round 2 complete, round 3 running on 142. Two instrument bugs fixed: the apply step was not idempotent (would have falsely refused all 449 prior items) and the screen was not reading the fields the repair chain fills. Regen tail still gated on HumGeo POOL-RELEASED."
-  },
-  {
-    "ts": "2026-08-17T08:37Z",
-    "course": "HumGeo",
-    "text": "Residual run concluded deliberately (owner-approved): 3 slots were in a non-converging retry grind (200+ attempts each, far past the historical worst success at 105) while holding the writer lock. Full byte backup taken first (sha256 receipted). State re-bound to the sealed amended plan and relaunched with a 120-attempt cap and prescreen off per the standing rulings. Preflight: 432 passes reused untouched, 42 slots selected, zero corpus writes. Early relaunch: 13 slots already converted via the adoption path."
-  },
-  {
-    "ts": "2026-08-17T08:18Z",
-    "course": "Cross",
-    "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) — both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
-  },
-  {
-    "ts": "2026-08-17T07:32Z",
-    "course": "Cross",
-    "text": "For-agents page now publishes sha256 digests for every machine-readable file (same convention as the Incept content-factory pages). The manifest hashes.json regenerates on every commit via a git hook, so digests cannot go stale. Agents can verify fetched bytes with one shasum command."
-  },
-  {
-    "ts": "2026-08-17T07:28Z",
-    "course": "Cross",
-    "text": "Langfuse evidence now clickable on the dashboard: the two cited traces (30-slot amendment, 759-item structural repair) carry direct trace URLs in the claims manifest, and the For-agents page links the Langfuse project entry point. Reminder: the links need the accepted org invite."
-  },
-  {
-    "ts": "2026-08-17T06:17Z",
-    "course": "Psych",
-    "text": "U5 gate improved to 26 findings after the fleet's repair train landed (9 PRs). Course rebuilt from the repaired articles and re-walked: 221/221 green. Screenshots refreshed at the same links."
-  },
-  {
-    "ts": "2026-08-17T06:14Z",
-    "course": "APWH",
-    "text": "Skill codes at 774/933, recomputed live. Redraw round 2 continuing; repair wave consuming new codes as they land."
-  },
-  {
-    "ts": "2026-08-17T06:10Z",
-    "course": "Cross",
-    "text": "All evidence that lived only on local machines is now uploaded to the Drive evidence folder and linked from every claim. Judge-attribution ask withdrawn as moot (local judge retired; the factory verdict is the contract)."
-  },
-  {
-    "ts": "2026-08-17T06:00Z",
-    "course": "HumGeo",
-    "text": "Drain slowed: the factory's generation route is returning intermittent 502/504 errors and the runner fail-closes each one (38 blocked events). Factory health itself reads OK. Blocked slots roll into the amended relaunch; cautious seal date stays 08-18."
-  },
-  {
-    "ts": "2026-08-17T04:44Z",
-    "course": "HumGeo",
-    "text": "Bank rebuild at 432/474 official passes; residual runner draining the rest; 30-slot amendment sealed and parked to fire at drain."
-  },
-  {
-    "ts": "2026-08-17T04:21Z",
-    "course": "APWH",
-    "text": "Skill codes 760/933; redraw round 2 at 61 of 207 (~56% recovery). 449/571 rationale repairs applied to the canonical bank; repair wave relaunched to consume new codes."
-  },
-  {
-    "ts": "2026-08-17T04:20Z",
-    "course": "Cross",
-    "text": "TimeBack writer corridor re-claimed for another course's catalog write (2,070 ops). HumGeo cutover and APWH platform writes queue behind its completion."
-  },
-  {
-    "ts": "2026-08-17T03:50Z",
-    "course": "Psych",
-    "text": "Whole course now assembles and serves locally (boot-on-demand): 221/221 article views walked green, 246 receipts, zero key leaks. Bank fill queued for tonight's pool turn."
-  },
-  {
-    "ts": "2026-08-17T01:00Z",
-    "course": "APUSH",
-    "text": "74 wave-2 article contracts authored, gated, and manifest-validated; posting waits on the pool turn (third in line)."
-  },
-  {
-    "ts": "2026-08-16T21:00Z",
-    "course": "HumGeo",
-    "text": "TimeBack writer corridor released after full compensation (#659 thread)."
-  },
-  {
-    "ts": "2026-08-16T15:04Z",
-    "course": "HumGeo",
-    "text": "Fleet: all 68 TimeBack components + 204 links MATERIALIZED with exact readback (#659). Remaining: serving cutover, deploy/readback, release_ready flip."
-  }
+ {
+  "ts": "2026-08-19T08:57Z",
+  "course": "Cross-course",
+  "text": "Owner sweep: every checklist tool provenance-traced. New rule: sanctioned = fleet-authored or fleet-merged. Struck forever: the two self-merged regeneration-bridge scripts on humgeo-rebuild main (PRs 38/39/42, no fleet review anywhere in their history). Local coverage tool demoted to bookkeeping that claims nothing. Staged HumGeo filing will disclose the struck pair and ask the fleet to bless or delete."
+ },
+ {
+  "ts": "2026-08-19T08:57Z",
+  "course": "HumGeo",
+  "text": "Factory chain running: Ilma-core hydrator 373/373 complete; factory screens 0 repair-eligible + 0 lexical fatals; 10-row /v1/qc pilot 10/10 PASS post-hydration. 363-row /v1/qc batch in flight, chunks of 10 behind drained-pool receipts, seat attended. 82 miskey rows held for a sanctioned rationale pass after the batch boundary."
+ },
+ {
+  "ts": "2026-08-19T08:57Z",
+  "course": "Psych",
+  "text": "Run 2 settled: final tally 9 dispatched, 2 completed, 7 failed (last job failed pre-deadline, a genuine failure). Fresh dry-run rescan: 1,105 buckets, 374 underfilled, unchanged. Lambda drift now byte-proven three ways (deployed handler 92 lines, zero cap; committed 125 lines with cap; env lacks cap vars). Local w7 walk of bundle f7b40cca in flight."
+ },
+ {
+  "ts": "2026-08-19T08:57Z",
+  "course": "APWH",
+  "text": "Fleet closed PR 791 unmerged on their native-placement ruling; their PR 792 merged a Unit-1 practice bank (tip 38eccf1c). Committed release gate at that tip: practice FAIL - seat's byte-cited finding says four instrument gaps, held as seat claim pending fleet ruling. Live A/B probes show practice serving and scoring correctly."
+ },
+ {
+  "ts": "2026-08-19T08:57Z",
+  "course": "APUSH",
+  "text": "Offline receipts: committed reconciler dry-run at PR 6 head 2698913a passes all 11 admitted positions, no writes. Fleet PR 8 (head e55dad7): its 43-test suite passes; its known-bad fixtures cover both filed defect classes. Review-silence ping for PR 6 stays parked on the owner's no-GitHub-posts ruling."
+ },
+ {
+  "ts": "2026-08-19T08:20Z",
+  "course": "Psych",
+  "text": "Runs 1-2 through the factory Lambda: 9 jobs total. Run 1 terminal states from their job_stage log: one completed, two failed (FRQ render_failed rejections - their gate). Run 2 (6 jobs) settling. FINDING with receipts: the deployed Lambda drops max_jobs (their handler at main forwards it, line 80) - server line shows budget=capacity-reserve, so the ruling's 4-cap is unenforceable; deploy drift on their side. Real runs PAUSED; dry-run scans continue. Caveat: underfilled still 374 pending admissions."
+ },
+ {
+  "ts": "2026-08-19T08:00Z",
+  "course": "APUSH",
+  "text": "126-class derivation receipt + filer correction posted to intake #90 (comment 5339286801) with Josh's typed confirm; sizing deferred to hole-filler #81. Fleet REWORK active on their #7 and #81/PR #82. Caveat: nothing further outward from our side; watch only."
+ },
+ {
+  "ts": "2026-08-19T07:55Z",
+  "course": "HumGeo",
+  "text": "Regeneration cohort finalized at 761 (COHORT-RECONCILIATION-rev2.json, machine-checked disjoint): 277+17+1+8+373+82+3. The 82 miskey slots measured on clean main: all S2+D1 multi-fatal. The 3 open rows self-resolved from verdicts (3 passes join the held-for-landing class, 3 fails regen). Filing packet being staged to their template for their file_issue.sh + triage routing; posts only on the owner line. Caveat: no GitHub writes this window by owner boundary."
+ },
+ {
+  "ts": "2026-08-19T08:05Z",
+  "course": "HumGeo",
+  "text": "The one repairable item (1.1-f1-a08) carries a fresh factory pass: committed repair (STRUCT_D4) then /v1/qc re-judgment on the finished bytes, fingerprint-bound. Owner shape-call: NOT landed as a one-item PR - the pass is HELD locally and re-enters with the consolidated regeneration-wave landing. Caveat: 373 rebuild-class items still await the regeneration filing (owner text + 3 unresolved rows)."
+ },
+ {
+  "ts": "2026-08-19T07:28Z",
+  "course": "Psych",
+  "text": "Top-up DISPATCHED: 3 of 4 capped jobs submitted through the factory Lambda at 07:28Z (CloudWatch receipt). Items not yet admitted - the async pool drains at its own pace; per-cell deltas verified by dry-run re-scan once jobs settle. Caveat: one capped run proves the route; filling all 374 short buckets is the fleet's cron decision."
+ },
+ {
+  "ts": "2026-08-19T07:40Z",
+  "course": "APUSH",
+  "text": "Fleet woke on our #89 ping: intake autopilot claimed #89 and #90, opened apush-course-build #7 (REWORK - packet defect confirmed in THEIR retrieval pipeline, rebuild ordered with committed scripts) and incept-hole-filler #81 with PR #82 in progress. This is the #90 answer materializing for the 64 held posts. Caveat: our 126-class derivation receipt is not yet attached to #81; attaching it is an outward comment awaiting owner text."
+ },
+ {
+  "ts": "2026-08-19T07:00Z",
+  "course": "Cross",
+  "text": "Single-orchestrator control established (Josh brief + AFK e2e consent): four course seats frozen with live handoffs, harden lane completed its terminal line, factory-exec-gate verified ENFORCE, purge rows P1/P2/P3/P5/P6/P15-humgeo quarantined reversibly with SHA ledger. Caveat: P12 (in-clone tmp scripts) and P16 (pushed-branch seal) stay deferred; incept-b4 window unacknowledged."
+ },
+ {
+  "ts": "2026-08-19T06:55Z",
+  "course": "HumGeo",
+  "text": "Honest re-earn measured on a clean origin/main worktree: 0 of 374 bankable. 373 fail STRUCT_S2+STRUCT_D1 multi-fatal (factory repair refuses multi-fatal by rule) and route to the regeneration cohort; the single D4-only record is blocked on an invalid ambient Anthropic key (401). Discriminator: a known-good wave-462 candidate passes the same battery fresh, so the judge is healthy. Also: Aug-12 set preserved on pushed branch ec2bb05c (classified metadata-only, 2,038 files), i7 branch verified clean (P5 precondition met). Caveat: no banking PR opened - nothing passed; 741 re-earn spend question answered by measurement (would buy failures)."
+ },
+ {
+  "ts": "2026-08-19T06:46Z",
+  "course": "APWH",
+  "text": "Fleet ruling verified live: native governed placement is authoritative on #591 and the fleet itself closed PR #791 unmerged at 06:35Z (mergedAt null, re-read from GitHub). Verbatim: nothing further is needed from the filer lane. The intake autopilot claimed the native-publish chain minutes later. Caveat: acceptance instrument for the 933 cohort remains a fleet choice; our ask stays retracted per owner order."
+ },
+ {
+  "ts": "2026-08-19T06:43Z",
+  "course": "Psych",
+  "text": "Top-up resumed through the factory's committed Lambda (owner relay cleared): dry run then one bounded real run (max_jobs 4, worker_reserve 2). Live scan confirms 374/1,105 buckets underfilled. Dispatch load-guarded to zero by the factory's own worker reserve - fleet jobs occupy the async pool (byte-cited: app.py available_slots logic). Caveat: retry armed; CloudWatch receipts stored; cursor unchanged on a zero-dispatch run."
+ },
+ {
+  "ts": "2026-08-19T06:30Z",
+  "course": "APUSH",
+  "text": "Applied the seat's staged delta: 49/249 is builder-receipted (committed builder re-derived succ11 byte-exact, exit 0) with the mandatory mode split 36 legacy_dual_review + 13 server_strict (11 successor admissions, named reviewer). Owner ruled the 36 retain the legacy label, no funded re-earn. P10 quarantined read-only, ledger re-derives without it. Caveat: #90 walls 64 held posts + 124 positions (zero fleet replies); #89 pinged; PR #6 awaits owner-lane merge."
+ },
+ {
+  "ts": "2026-08-19T05:06Z",
+  "course": "Cross",
+  "text": "Recovery evidence is now durable in the private SS evidence repository: the 25-row damage register, decision book, three-day plan, 16-row purge manifest, runlog, and source hashes. Course ranges now mean recovery work after the named unblock, not time to release; Lessons and Agent data link to the published audit packet."
+ },
+ {
+  "ts": "2026-08-19T04:13Z",
+  "course": "Cross",
+  "text": "Recovery audit supersedes the prior standings: 25 claims now classify as 2 valid factory-proof classes, 8 salvageable-input classes, 5 factory re-earns, 6 void classes, and 4 blocked unknowns. No repair, paid call, mark change, commit, filing, merge, or deploy was performed."
+ },
+ {
+  "ts": "2026-08-19T04:13Z",
+  "course": "HumGeo",
+  "text": "Honesty reset: the sealed-plan wave is the surviving factory proof, with its exact total pending re-derivation. The 741 wrapper verdicts must be re-earned through the committed poster, and the 374-pass set is input for a reviewed PR, not banked main state."
+ },
+ {
+  "ts": "2026-08-19T04:13Z",
+  "course": "APWH",
+  "text": "Honesty reset: the 933-record population is staged input and still has zero official sweep verdicts. PR #791 is CI-green and mergeable, but has no review and conflicts with the newer #591 owner recommendation; it is authority-blocked and must not merge."
+ },
+ {
+  "ts": "2026-08-19T04:13Z",
+  "course": "APUSH",
+  "text": "Honesty reset: 49 of 249 is a current ledger count, not one factory-proof cohort. The split is 13 server-strict, 36 legacy dual-review, and 11 local-path successors; future admissions remain held on #89/#90 and seating PR #6."
+ },
+ {
+  "ts": "2026-08-19T04:13Z",
+  "course": "Psych",
+  "text": "Honesty reset: the fleet-built 221-article content state is proven. The 731-of-1,105 bank scan is held, served-bank provenance is unknown, the EBQ receipt closed zero buckets, and U5 remains not green."
+ },
+ {
+  "ts": "2026-08-19T01:44Z",
+  "course": "HumGeo",
+  "text": "HumGeo: 741 repaired items now hold official /v1/qc verdicts \u2014 464 pass, 277 to regenerate. Caveat: the 464 are not yet on main (reviewed PR pending its verdict re-earn) and not banked; seal still waits on the fleet's #92 ruling."
+ },
+ {
+  "ts": "2026-08-18T20:45Z",
+  "course": "APWH",
+  "text": "Overnight: the main tagging pass finished all 383 fresh questions in one pass each \u2014 274 earned tags and are folded in; the 109 the tagger could not settle went straight to re-minting, per the owner's one-pass rule, and that wave is running now. One slot exhausted its call allowance and joined the disposition queue, which stands at nine rows, all with receipts. Revised chain: re-mint drain by ~07:45, its tag pass by ~10:30, then one batch banking, then the paid QC sweep from ~11:30. The Friday bar still holds; the cause of the shift is measured \u2014 28.5% of new questions fail their one tag pass, matching the tagger's own published weakness on this subject."
+ },
+ {
+  "ts": "2026-08-18T10:40Z",
+  "course": "APWH",
+  "text": "The rebuild drain is complete and receipted: 419 of 423 questions got an accepted replacement, 4 exhausted honestly and sit in the disposition queue with full receipts, and all 26 rows from the earlier index miss were recovered and accepted on the fix's first try. Nothing is uncalled, nothing unaccounted \u2014 the receipt's identity sum is exact. Overnight the tagging pass runs (done ~04:30 cautious), then banking, then the single paid QC sweep hands to the QC window."
+ },
+ {
+  "ts": "2026-08-18T10:15Z",
+  "course": "APWH",
+  "text": "Owner directive applied to the walk record: the 08-12 course walk was run by our own script, not the factory's walker, so it does not count as proof on that ground either. The final walk \u2014 owed after the paid sweep \u2014 will run the factory's own walkthrough chain end to end: stage the serving root, boot the real server, walk every lesson as a demo student, and hash exactly what the running server serves."
+ },
+ {
+  "ts": "2026-08-18T10:05Z",
+  "course": "APWH",
+  "text": "Honesty update on the old walk proof, no new work affected. The 08-12 render walk matched bytes against a course tree that was later retired to a tag and never merged \u2014 so that proof cannot be re-run against today's canonical tree, and the status tool's local-done credit stays unearned rather than false-accepted. Serving is unaffected: the platform serves the course tree live. The restore-or-retire choice goes to Josh in the morning report. The night QC chain (tagging, banking, the paid sweep handover) does not touch this."
+ },
+ {
+  "ts": "2026-08-18T08:53Z",
+  "course": "HumGeo",
+  "text": "Course-page accuracy fix, no campaign movement: the #642 figures (57 items with duplicate choice text, 1,750 affected children) are now marked as the incident count measured at the 2026-08-13 filing, not a re-proven current count. Campaign state re-verified this hour from live sources and unchanged: 462 of 474 slots hold current-byte factory QC passes, 9 slots filed to the fleet on intake #92 (still open), 3 resumable from persisted factory jobs, 741 rescreens queued behind APWH's pool turn, seal blocked on the #92 ruling."
+ },
+ {
+  "ts": "2026-08-18T08:40Z",
+  "course": "APWH",
+  "text": "Rebuild drain is in its final stretch: 355 of 423 rows accepted, 57 left to call, about an hour at measured pace. One incident, caught and closed with zero wasted spend: a data-shape bug crashed the runner before posting for eighteen chunk attempts; the overrun guard stopped it, the fix carries a regression test, and the drain relaunched at 17:28. Eight exhausted rows sit in the disposition queue under the owner's attempts ruling. After the drain: one tagging pass on the fresh questions, banking, a fresh structural screen, then the single paid QC sweep."
+ },
+ {
+  "ts": "2026-08-18T06:50Z",
+  "course": "HumGeo",
+  "text": "The 12 open slots have their disposition on the record: fleet adjudication is filed as intake #92 for the 9 rows past every published factory route, and the seal claim now reads BLOCKED on that ruling, because every slot ruled supersede changes the 480-plus-2 seal constant, which is fleet code. The other 3 rows need no ruling \u2014 each resumes by adopting its persisted factory job plus one official QC, and any that fails joins the filed class on the same thread. A follow-up comment on the filing added two things the body lacked: a generator shape observation (3 of 6,639 archived attempts returned a rationale map with a non-letter key, with command-level receipts, filed as an ask rather than a defect) and neutral provenance context showing the retired outer-retry idiom predates the current owner's tenure on both sides of the handover."
+ },
+ {
+  "ts": "2026-08-18T06:20Z",
+  "course": "Cross",
+  "text": "Owner ruling, fleet-wide: outer retry loops around factory generation are retired. The factory's own contract publishes the entire attempts policy \u2014 max_attempts default 5, bounds 1-5, on every request schema, plus 3x first-round overgeneration \u2014 and after exhaustion its routes are repair, regenerate-once, or supersede. Our 120-cap loop was an invention; the live HumGeo run was stopped on the ruling at attempt 60. Official HumGeo count from the runner's own check: 462/474; 12 slots go to fleet adjudication. Measured calibration: 6,749 calls, 968 factory-compute hours, roughly 7% of it factory-faithful. New claims row cross.attempts_policy (settled) carries the policy; the lessons page carries the hard lesson."
+ },
+ {
+  "ts": "2026-08-18T06:05Z",
+  "course": "HumGeo",
+  "text": "The repin regeneration drained: seal-ready moved 451 to 462 of 474, with all eleven conversions coming from the twelve rows cleared this morning. The run ended when the factory redeployed mid-drain and the runner refused to continue against an unverified deploy, which is the guard working, not a failure. The route contract was re-verified byte-identical and the pin moved with a dated note. The factory pool went back to APWH the moment the drain settled. Twelve rows remain, every one a named class: ten at the attempt cap, two resumable from persisted factory jobs without any re-send, and the twelfth was mid-flight at the stop. No corpus writes at any point."
+ },
+ {
+  "ts": "2026-08-18T05:53Z",
+  "course": "Cross",
+  "text": "Dashboard design sweep: the redundant overview course cards, repeated deadline narrative, and repeated blocker list were removed. The timeline now links directly to each course and color-matches the selected course name; the overview shows five readable activity entries, detailed ETA evidence is available on demand, and the claims explorer stacks cleanly on mobile. No course-state claims changed in this pass."
+ },
+ {
+  "ts": "2026-08-18T05:04Z",
+  "course": "Cross",
+  "text": "Pipeline section source cite fixed: it pointed at a repo-relative path (recon/...) that does not exist in this repository \u2014 the write-up lives in the orchestrator zone. The cite now names it as an internal source, the same convention unpublished claim evidence uses, instead of dangling."
+ },
+ {
+  "ts": "2026-08-18T04:38Z",
+  "course": "HumGeo",
+  "text": "Re-observed the staged structural-repair candidates on a staleness flag: all 741 files intact on disk, receipts ledger matching, nothing consumed. The claim now also says plainly that the official rescreens have not started \u2014 they run after the current regeneration drain, ten-item pilot first. A re-observation that finds no change is still a fresh observation; pretending consumption had begun would have been the lie."
+ },
+ {
+  "ts": "2026-08-18T04:37Z",
+  "course": "APUSH",
+  "text": "Overview card precision fix from the APUSH seat's live verification (owner asked if the card was current \u2014 everything matched except one word): the 126 waiting positions now read as what they are \u2014 124 on the factory's visual-capability answer, 2 on broken source packets being re-minted. Both intake tickets remain open with zero replies."
+ },
+ {
+  "ts": "2026-08-18T04:25Z",
+  "course": "APWH",
+  "text": "Owner ruling landed and executed: tagging an existing question gets exactly one three-draw majority pass \u2014 the method the tagging service itself publishes \u2014 and anything unresolved goes straight to rebuild. No more re-try rounds. Round five was stopped mid-run (53 of 112 attempted, 4 tags earned, and those stand). The 65 questions still untagged on the repair list moved to the rebuild queue, which now holds 427. With that, the repair route CLOSED: all 506 repairable questions are repaired, banked, and verified pushed, zero refusals across the whole campaign. The structural check now passes 506 of 933, and the 427 still failing are exactly the rebuild queue \u2014 nothing is unaccounted for. Rebuilds still wait on the shared pool, which human geography holds."
+ },
+ {
+  "ts": "2026-08-18T03:30Z",
+  "course": "Cross",
+  "text": "Claims contract addition: settled marker for terminal history. A claim like the retired local judge is a permanently closed fact \u2014 nothing exists to re-observe, so re-dating it every 48 hours would be ceremony without information. Settled claims keep their true dates forever, stay under full date hygiene, and are exempt only from the staleness clock; the linter now reports them on their own transparency line. Documented on the For-agents page."
+ },
+ {
+  "ts": "2026-08-18T02:24Z",
+  "course": "APWH",
+  "text": "Overview card corrected on the APWH seat's four-point audit (owner asked if it was current; it was not): headline is now 504/933 structurally passing with its denominator named on the card; repairs read 504/571 banked; the regeneration batch is shown as mid-flight (253 accepted of 350 attempted, yielded to HumGeo's pool reclaim by design, resumes on pool return); badge reads tagger round 5. The honest line no longer says the paid sweep queues on the pool \u2014 only the batch does; the sweep waits transitively."
+ },
+ {
+  "ts": "2026-08-18T02:09Z",
+  "course": "APWH",
+  "text": "Correction to this morning's repair entry, plus one advance. The repair count is 504 of 571, not 504 of 504 \u2014 the 67 questions without skill tags were never actually moved to the rebuild list. The queue's own rows still class them as repairs; they were waiting on tags, and the repair tool skips untagged questions by design. A fifth tagging round started at 11:05 and covers all 67 (it does not need the shared build pool, so it runs while human geography holds it). Tags that resolve mean cheap repairs, about two hours' worth; only what the round cannot resolve folds to rebuild. Nothing already banked changes. The rebuild batch itself is paused by design \u2014 the pool went back to human geography at 09:19 and the batch resumes automatically when it returns."
+ },
+ {
+  "ts": "2026-08-18T01:45Z",
+  "course": "APWH",
+  "text": "The repair route is complete: all 504 repairable questions are repaired and banked, with zero refusals across the whole campaign. The final 17 cleared this morning after the last tagging rounds delivered their skill codes. The repair target settled at 504 exactly as forecast, with 67 unrepairable questions moving to the rebuild route. Questions passing the structural check rose to 504 of 933, and the 429 still failing are exactly the rebuild population, most of which already exists as accepted candidates waiting to be banked. Remaining: finish the rebuilds, bank them, one paid quality check across everything, then the final walkthrough."
+ },
+ {
+  "ts": "2026-08-18T01:21Z",
+  "course": "HumGeo",
+  "text": "Claims explorer synced to this morning's disposition. The twelve-pin claim no longer reads as a blocked owner decision: it is resolved by the factory's own fail-closed check, the amendment is withdrawn, and the rows are regenerating. The rebuild-passes claim now explains that the 463-versus-451 gap is gone because the twelve stale results were cleared with receipts archived. Mid-run counts stay out of the claims by the same rule as the feed: a claim carries numbers that are still true when read."
+ },
+ {
+  "ts": "2026-08-18T01:14Z",
+  "course": "HumGeo",
+  "text": "The twelve stale-pin rows have their answer, and it came from the factory's code rather than a choice. Their records point at the pre-amendment version of the item they replace, the seal refuses that shape fail-closed, and no re-stamp route exists because the pointer is written at generation time. So the staged pin-only amendment is withdrawn as the wrong instrument, the twelve results were cleared with every receipt archived, and the rows are regenerating through the normal runner. The final count posts here when the run exits; mid-run numbers deliberately do not."
+ },
+ {
+  "ts": "2026-08-18T01:13Z",
+  "course": "HumGeo",
+  "text": "First screenshot walk of the rebuilt-course era ran overnight on the local demo serving path: seven captures. A demo student can reach the course, answer practice, and pass the mastery gate. Proving a student can open and read a lesson body remains open, stated rather than assumed. The walk also caught a real defect: 260 of 403 practice items in the walked bundle print all four answer options inside the question body. Measured to its edges before filing: our rebuilt items do not carry the offending field, the live serving path does not either, and the hosted demo page is clean, so the poison is confined to the committed staging snapshot our local walks serve \u2014 zero student exposure. Filed as ap-one #766 with the reproduce inline, then narrowed by our own follow-up comment. Remaining cost: local walk screenshots misrepresent content until the snapshot is re-aligned."
+ },
+ {
+  "ts": "2026-08-17T22:35Z",
+  "course": "HumGeo",
+  "text": "Overview card text refreshed: it still described the relaunch as converting and the sealed package as landing after the drain. The drain finished at 04:22 and the pool was released at 04:23. The card now states what is actually true: 451 of 474 seal-ready, nothing sealed, and the two remaining blockers are owner calls rather than machine work."
+ },
+ {
+  "ts": "2026-08-17T22:00Z",
+  "course": "APWH",
+  "text": "The factory pool was released to us at 04:23 and the gate condition checks out, so the rebuild batch is no longer waiting on anyone. All four tagging rounds have finished and their results are now written into the file the checks read: 821 of 933 questions have a skill tag, leaving 12 percent unresolved, well inside the limit. Items that would pass the structural check rose to 487 of 933, and the 446 that still fail are exactly the ones with no wrong-answer explanations yet. The rebuild batch settles between 362 and 429. One constraint from the release note: our batch must run in small chunks and hand the pool back between them, because human geography work jumps ahead of ours the moment it has anything runnable."
+ },
+ {
+  "ts": "2026-08-17T19:25Z",
+  "course": "HumGeo",
+  "text": "Factory pool RELEASED to the next course at 04:23 KST, with a receipt. The gate was checked only after the run had stopped and the surface was still, because a check run mid-flight reads at random and can show all-clear by luck. Releasing the pool is not a claim that HumGeo is finished, and the receipt says so in its own field: 12 rows still need the owner-approved pin fix, 10 have burned through the attempt cap and need the owner's number, 1 needs a rationale repair, and 3 metadata rows failed their check. The overnight tail converted two slots and moved seal-ready from 449 to 451, but it also pushed four more slots into the cap wall, so the owner's cap decision now covers 10 rather than 4. Both halves of that trade are on the receipt."
+ },
+ {
+  "ts": "2026-08-17T18:31Z",
+  "course": "HumGeo",
+  "text": "Two corrections to our own published numbers, both found by running checks rather than reading state. First, the headline rebuild figure was 432 of 474 and is now 449. The state file counts 461 accepted, but twelve of those fail the runner's own eligibility check because they point at the pre-amendment version of the item they replace. 449 is the seal-ready number and 461 is not. Second, the six metadata rows had never actually been checked: the tool for it was assumed missing and was in fact already committed. Running it gives 3 passes and 3 failures, so three items of previously uncounted work now exist. Both claims carry the exact command to re-derive them. Nothing was sealed and no corpus was written."
+ },
+ {
+  "ts": "2026-08-17T17:52Z",
+  "course": "HumGeo",
+  "text": "Cause correction on the 12-record finding, one hour after publishing it: the stale pins are from OUR OWN 30-slot amendment (the records were generated before it re-pinned their rows) \u2014 not from fleet corpus writes, which was unverified inference and is withdrawn. Seal-ready reads 449 of 474 until the owner rules on the staged pin-only fix. Also overnight: single ownership of the HumGeo chain passed to the fresh orchestrator session after a two-driver race was caught by the dispatch board; all receipts intact, zero corpus writes, both sessions' work preserved."
+ },
+ {
+  "ts": "2026-08-17T17:48Z",
+  "course": "HumGeo",
+  "text": "Overnight: the amended relaunch exited at 02:38 KST with 29 of 42 slots converted \u2014 461 of 474 now hold official passes. The 13 leftovers are fully classified: 6 were revived by receipted adjudication and a conversion run is converting them now; 7 are grinder-class (the generator cannot satisfy their contracts within the 120-try cap) and get a root-cause dossier in the morning. One new finding: 12 already-accepted records point at swap-targets the fleet changed under us on 08-14 \u2014 their content is verified intact and a pin-only fix is staged, held for the owner because it is a first-of-its-kind ceremony."
+ },
+ {
+  "ts": "2026-08-17T14:45Z",
+  "course": "APWH",
+  "text": "The disagreement over the size of the rebuild batch is settled. The dispatch board withdrew its higher figure after checking the underlying data, and both surfaces now carry 362 to 432 with the mechanism. The cause is worth recording: their count subtracted repaired-so-far from the repair target, which mixes together questions that are merely not repaired yet with questions that can never be repaired for lack of a tag. Those are different populations. Every tag the running round recovers moves the batch toward the lower end."
+ },
+ {
+  "ts": "2026-08-17T14:40Z",
+  "course": "APWH",
+  "text": "Redraw round 3 finished, 22 of 142 resolved, and round 4 is now running on the remaining 120. Skill codes stand at 815 of 933, so 12.6 percent unresolved, well under the 40 percent stop rule. A number we had published is about to move and the page now says so: the regeneration batch is not a fixed 362. A question marked for repair that never gets a skill code cannot pass one of the checks, and the factory's own rule then sends it to be rebuilt instead. 70 such questions are in round 4 right now, so the batch settles somewhere between 362 and 432, and the repair side between 501 and 571. Publishing the range with its cause rather than letting the old figure look wrong tomorrow."
+ },
+ {
+  "ts": "2026-08-17T10:22Z",
+  "course": "Cross-course",
+  "text": "Finished the evidence-link repair on the surfaces the earlier passes did not reach. The three agent-facing snapshot documents still wrote their receipt links as branch names, and GitHub cannot tell where a branch name ending in /claude stops and a folder path starts, so those links dumped the reader at the repository root instead of the receipts. All of them now name the commit and then the folder. One more link, the APUSH receipts branch on ilmych/apush-build-outputs, had the same defect and now points at the exact commit that claim recorded when it was stamped, not at today's branch head. Every tree link in this repo was then re-checked one at a time against its own commit through the GitHub API: 8 links, 0 broken. The first version of that check was itself wrong and passed everything, because it queried the repository root for every link; the fix was to pair each path with its own commit and confirm a deliberately wrong path still fails."
+ },
+ {
+  "ts": "2026-08-17T10:50Z",
+  "course": "APWH",
+  "text": "Swept every link class on the dashboard, not just the evidence links. All 19 evidence links now open on the evidence itself, verified against the repository rather than by loading a page. All 4 commit links and all 6 issue links check out. Found and fixed one more of my own: a link to a retired tag pointed at a release page that does not exist, because a tag was pushed and never a release, and the tag name contains a slash which is the same ambiguity that caused the original fault. It now points at the commit, verified reachable. Twenty Drive links, three documents, three tracing links and nine live course links cannot be checked from here and are recorded as unchecked rather than assumed good."
+ },
+ {
+  "ts": "2026-08-17T10:46Z",
+  "course": "Cross",
+  "text": "Second pass on the evidence links after an APWH-seat audit caught the first pass half-broken: 14 SHA links resolved but landed on the repository root \u2014 the original symptom, invisible to a link checker. Every evidence link now carries its full directory path, and each one was verified against the commit's actual bytes (git cat-file), not by whether it returns a page. Honesty note on the diagnosis: the browser failure on slash-named branches is the owner's observation; nobody has measured GitHub's resolver from the shell (the repo is private, so logged-out checks 404 on everything). The SHA form is used because a 40-character commit cannot be ambiguous \u2014 a structural argument, not a measurement."
+ },
+ {
+  "ts": "2026-08-17T10:10Z",
+  "course": "APWH",
+  "text": "Audited every evidence link on the dashboard after the owner reported that they open the repository root instead of the evidence folder. 15 links checked against the repository itself. One was genuinely broken and it was mine: pinning it to a commit had dropped the folder path, leaving a path that does not exist. Fixed and verified before republishing. A second finding for the orchestrator surfaces: 14 of the links point at a commit with no folder path at all, so they resolve but still land the reader on the repository root, which is the same symptom the owner reported."
+ },
+ {
+  "ts": "2026-08-17T10:41Z",
+  "course": "Cross",
+  "text": "Owner-reported defect fixed: evidence links to branch names with slashes landed on the repo root in the browser. All 18 evidence links on the orchestrator surfaces (HumGeo page, lessons, claims manifest) are now pinned to the immutable commit SHA instead of the branch name \u2014 they resolve deterministically and survive branch deletion. The Psych page was fixed by its seat; the same recipe is relayed to the APWH and APUSH seats."
+ },
+ {
+  "ts": "2026-08-17T10:30Z",
+  "course": "Cross",
+  "text": "Owner directive: the overview now shows only the 10 most recent updates with a link to the new full update-history page. Overview card figures refreshed to the live claims (HumGeo 452/474, APWH 796/933 codes and 487/571 repairs)."
+ },
+ {
+  "ts": "2026-08-17T09:59Z",
+  "course": "Cross-course",
+  "text": "Brought the front page and the agent-facing standings snapshot in line with the owner's cadence ruling. Both still carried the old three-column optimistic/realistic/conservative ETA table and the week bar that put all four courses on our side by Friday 08-21. That bar was acknowledged too optimistic. The published dates are now one cautious date each: HumGeo 08-20, APWH 08-21, APUSH 08-22, Psych 08-25. The Friday 08-21 bar now covers HumGeo and APWH only, which is what the measurements support. The four course pages already carried these dates; only the index page and the snapshot were behind. Item counts were left alone on purpose: 432 of 474 is stamped 13:20 KST with its own evidence link, and the seal pass will refresh it from receipts."
+ },
+ {
+  "ts": "2026-08-17T10:00Z",
+  "course": "APWH",
+  "text": "Audited whether the sweep-rate receipt was real factory machinery or one of our own inventions, after the owner asked. It is canonical: 2,499 of 2,513 records were paid calls to the factory's own check endpoint through the sanctioned tool, with the factory's own failure codes, and the single 14-record exception labels itself as seeded at no cost. The audit also caught our own method error: the 10.1 seconds per call we had both published divided the run's whole span by the record count instead of using the durations the batches recorded, and counted 14 records never called. The honest figure is 11.9 seconds an item, which the HumGeo seat re-derived independently and matched. Our sweep floor moves 2.6 to 3.1 hours, inside the published cautious band, so 08-21 is unaffected."
+ },
+ {
+  "ts": "2026-08-17T09:44Z",
+  "course": "Cross",
+  "text": "Owner formatting directive applied to all four ETA sections in one pass: every definition-of-done item leads with its name in bold, per-task times are in blue, and each item ends with its total time in blue italics \u2014 the only italics on the pages. Content, numbers, and caveats unchanged."
+ },
+ {
+  "ts": "2026-08-17T09:55Z",
+  "course": "APWH",
+  "text": "Date back to 08-21, now measured rather than guessed. I moved it to 08-22 an hour ago on a wrong number and that move is reversed. The paid check was sized three ways today: about 3 hours (guess), about 23 hours (after trusting a comment in the tool), and finally 2.6 hours measured against a real 2,513-call run at 10.1 seconds a call, which I verified by reading the receipts myself. The tool comment was written under a mistaken picture of the service and is set aside. The check also does not compete for build capacity, settled by reading the factory's code. Same receipts give the first real estimate of the failure loop: about a third of structurally-clean items fail at least one content check, which is now the largest risk to the date."
+ },
+ {
+  "ts": "2026-08-17T09:45Z",
+  "course": "APWH",
+  "text": "Date corrected 08-21 to 08-22, with the arithmetic on the page. The old date rested on a wrong number: it assumed the paid check ran six to eight questions at once for about 3 hours. The tool that runs it says in its own documentation that it runs calls one at a time, because all courses share one pool of about eight workers. That makes the check roughly 23 hours and the largest single leg in the campaign, bigger than the rebuild. Also withdrawn: the claim that the paid check does not compete for the shared pool. It creates no queued job so the usual probe cannot see it, but it does compete, and the receipts the plan cited for that claim could not be found. A retraction went to the HumGeo seat, who had been about to move their schedule a day earlier on my advice."
+ },
+ {
+  "ts": "2026-08-17T09:35Z",
+  "course": "HumGeo",
+  "text": "A day of queue vanished: the dispatch board verified from factory source bytes that paid QC calls never consume generation pool slots (the QC endpoint is synchronous, no job queue). HumGeo's 741 structural rescreens therefore stop waiting for APWH's pool turn and start when tonight's relaunch exits. Published date stays 08-20 until tomorrow's receipts justify moving it \u2014 dates move on receipts here, in either direction."
+ },
+ {
+  "ts": "2026-08-17T09:35Z",
+  "course": "APWH",
+  "text": "Every line of the APWH definition of done now carries a time estimate with its basis named, and the published 08-21 was checked against them rather than defended. Two legs are measured: the last 84 repairs at 33 an hour, and tagging at 40 an hour, so re-tagging 362 rebuilt questions is 9.1 hours on its own. Two are projections: the rebuild leg at 6-12 hours and the paid check at 3.3-7.8 hours depending on how many run at once. The walk has no number at all. Total sequential work after the pool opens is about 25 hours clean and 39 hours cautious, which lands 08-20 and keeps 08-21 with roughly a day spare. The dominant risk is the pool opening date, not our throughput: a one-day slip puts the cautious branch at the wire on 08-21."
+ },
+ {
+  "ts": "2026-08-17T09:31Z",
+  "course": "Psych",
+  "text": "Psych's published date moved 08-23 to 08-25 after the owner-ordered reality check: the old date stacked three optimisms (full pool availability, recovered essay-question yield, fleet repair pace). The new date carries the math inline on the page \u2014 bounded item types ~20 pool-hours from a cautious 08-20 start, the essay type +28 pool-hours IF its yield recovers, half-day walks, and the fleet-paced U5 caveat. A moved date with receipts beats a defended one."
+ },
+ {
+  "ts": "2026-08-17T09:28Z",
+  "course": "HumGeo",
+  "text": "Corridor selection posted on #659 under the owner's account: TimeBack-direct, no Platform3 bridge. Basis: the platform migration plus today's 2,070-operation proof of the TimeBack writer. Flip criterion unchanged \u2014 release_ready stays false until the cutover carries the 68 gates with receipts and the released-tier walkthrough passes. Also: every course definition-of-done now carries per-item time estimates, and each page states what decides its date."
+ },
+ {
+  "ts": "2026-08-17T09:23Z",
+  "course": "Cross",
+  "text": "Owner directive: every course's ETA section now carries an explicit definition of done \u2014 what 'our side done' includes, item by item, and what is deliberately outside it (owner acts like the corpus apply and the release flip, and platform serving). HumGeo's is live; the three seat-owned pages are landing via their seats."
+ },
+ {
+  "ts": "2026-08-17T09:15Z",
+  "course": "HumGeo",
+  "text": "Corridor status corrected from a live thread read: the TimeBack writer corridor is FREE as of 06:12 GMT (the other course's 2,070-operation catalog write completed with full readback and released the lock). HumGeo's cutover no longer queues behind anything external \u2014 it claims the corridor when our sealed package is ready. Also: the HumGeo ETA block now shows the cautious date only, per the owner's cadence rule."
+ },
+ {
+  "ts": "2026-08-17T09:12Z",
+  "course": "APWH",
+  "text": "Folded the redraw skill codes, which corrected an understated reading: items that would pass structural QC went 449 to 487, and the skill-code gap fell from 207 to 137. The 207 was inflated because 69 codes were already resolved but not written into the enrichment file. The 446 remaining structural failures are now exactly the items with no distractor rationales: 362 awaiting regeneration behind the pool, and 84 awaiting redraw codes."
+ },
+ {
+  "ts": "2026-08-17T09:05Z",
+  "course": "APWH",
+  "text": "Pool release ETA from the pool owner: cautious 2026-08-18 EOD KST, which gates the 362-item APWH regeneration tail. Measured the paid sweep's own precondition: the materializer is fail-closed and currently refuses, with 446 items lacking distractor rationales and 207 lacking skill codes. So the sweep cannot be requested until repairs converge, the regeneration tail lands, and the redraw skill-code fold is applied."
+ },
+ {
+  "ts": "2026-08-17T09:01Z",
+  "course": "Cross",
+  "text": "Every number on every course page is now a link into the claims explorer, which scrolls to and highlights the exact claim row with its receipts. APWH figures refreshed to the live campaign state (487/571 repairs, 791/933 skill codes, 449/933 structural-screen passes). Fleet-wide status pull completed: all six agent seats reported in the seven-state claim shape."
+ },
+ {
+  "ts": "2026-08-17T08:58Z",
+  "course": "Cross",
+  "text": "Receipt audit per owner directive: every numeric claim now carries evidence. The conclude-and-relaunch ceremony receipts (backup sha256, atomic re-bind, preflight, amended-slot reconciliation, grinder code trails) are published on the evidence repo and linked from the HumGeo execution claim; the Drive backup folder is linked directly. PLANNED numbers now cite the receipt their number originates from, marked NONE_YET for the execution half."
+ },
+ {
+  "ts": "2026-08-17T09:00Z",
+  "course": "APWH",
+  "text": "Structural screen now reads the repaired bank: 449/933 items would pass structure and reach paid content checks, up from 0/933 at window 1. Top-up apply landed (+38, 487/571 total, commit 5afcb7a). Skill codes at 791/933; redraw round 2 complete, round 3 running on 142. Two instrument bugs fixed: the apply step was not idempotent (would have falsely refused all 449 prior items) and the screen was not reading the fields the repair chain fills. Regen tail still gated on HumGeo POOL-RELEASED."
+ },
+ {
+  "ts": "2026-08-17T08:37Z",
+  "course": "HumGeo",
+  "text": "Residual run concluded deliberately (owner-approved): 3 slots were in a non-converging retry grind (200+ attempts each, far past the historical worst success at 105) while holding the writer lock. Full byte backup taken first (sha256 receipted). State re-bound to the sealed amended plan and relaunched with a 120-attempt cap and prescreen off per the standing rulings. Preflight: 432 passes reused untouched, 42 slots selected, zero corpus writes. Early relaunch: 13 slots already converted via the adoption path."
+ },
+ {
+  "ts": "2026-08-17T08:18Z",
+  "course": "Cross",
+  "text": "Every claim now carries its own date: observed_at for an OBSERVED claim, status_at for a PLANNED or BLOCKED one. Before this, an undated row inherited the manifest snapshot, so republishing the file refreshed it and the staleness check reported all 35 claims fresh. 15 rows had no date and 11 carried prose the parser rejected. The undated rows were backfilled from the manifest's own git history, the 11 were normalized to ISO with the qualifier moved to observed_note, and the snapshot fallback is gone. Real result: 2 claims are older than 48 hours and now say so (APWH local-done walk, Psych EBQ zero-yield) \u2014 both need re-observing, not re-dating. Age claims against the row field, never against the snapshot. A pre-commit gate now blocks any commit that adds an undated claim or changes the claims manifest without an entry in this feed."
+ },
+ {
+  "ts": "2026-08-17T07:32Z",
+  "course": "Cross",
+  "text": "For-agents page now publishes sha256 digests for every machine-readable file (same convention as the Incept content-factory pages). The manifest hashes.json regenerates on every commit via a git hook, so digests cannot go stale. Agents can verify fetched bytes with one shasum command."
+ },
+ {
+  "ts": "2026-08-17T07:28Z",
+  "course": "Cross",
+  "text": "Langfuse evidence now clickable on the dashboard: the two cited traces (30-slot amendment, 759-item structural repair) carry direct trace URLs in the claims manifest, and the For-agents page links the Langfuse project entry point. Reminder: the links need the accepted org invite."
+ },
+ {
+  "ts": "2026-08-17T06:17Z",
+  "course": "Psych",
+  "text": "U5 gate improved to 26 findings after the fleet's repair train landed (9 PRs). Course rebuilt from the repaired articles and re-walked: 221/221 green. Screenshots refreshed at the same links."
+ },
+ {
+  "ts": "2026-08-17T06:14Z",
+  "course": "APWH",
+  "text": "Skill codes at 774/933, recomputed live. Redraw round 2 continuing; repair wave consuming new codes as they land."
+ },
+ {
+  "ts": "2026-08-17T06:10Z",
+  "course": "Cross",
+  "text": "All evidence that lived only on local machines is now uploaded to the Drive evidence folder and linked from every claim. Judge-attribution ask withdrawn as moot (local judge retired; the factory verdict is the contract)."
+ },
+ {
+  "ts": "2026-08-17T06:00Z",
+  "course": "HumGeo",
+  "text": "Drain slowed: the factory's generation route is returning intermittent 502/504 errors and the runner fail-closes each one (38 blocked events). Factory health itself reads OK. Blocked slots roll into the amended relaunch; cautious seal date stays 08-18."
+ },
+ {
+  "ts": "2026-08-17T04:44Z",
+  "course": "HumGeo",
+  "text": "Bank rebuild at 432/474 official passes; residual runner draining the rest; 30-slot amendment sealed and parked to fire at drain."
+ },
+ {
+  "ts": "2026-08-17T04:21Z",
+  "course": "APWH",
+  "text": "Skill codes 760/933; redraw round 2 at 61 of 207 (~56% recovery). 449/571 rationale repairs applied to the canonical bank; repair wave relaunched to consume new codes."
+ },
+ {
+  "ts": "2026-08-17T04:20Z",
+  "course": "Cross",
+  "text": "TimeBack writer corridor re-claimed for another course's catalog write (2,070 ops). HumGeo cutover and APWH platform writes queue behind its completion."
+ },
+ {
+  "ts": "2026-08-17T03:50Z",
+  "course": "Psych",
+  "text": "Whole course now assembles and serves locally (boot-on-demand): 221/221 article views walked green, 246 receipts, zero key leaks. Bank fill queued for tonight's pool turn."
+ },
+ {
+  "ts": "2026-08-17T01:00Z",
+  "course": "APUSH",
+  "text": "74 wave-2 article contracts authored, gated, and manifest-validated; posting waits on the pool turn (third in line)."
+ },
+ {
+  "ts": "2026-08-16T21:00Z",
+  "course": "HumGeo",
+  "text": "TimeBack writer corridor released after full compensation (#659 thread)."
+ },
+ {
+  "ts": "2026-08-16T15:04Z",
+  "course": "HumGeo",
+  "text": "Fleet: all 68 TimeBack components + 204 links MATERIALIZED with exact readback (#659). Remaining: serving cutover, deploy/readback, release_ready flip."
+ }
 ]

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T05:06Z",
+  "snapshot": "2026-08-19T08:57Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -8,18 +8,31 @@
       "observed_at": "2026-08-19T04:13Z",
       "value": "Recovery audit complete: 25 claims classified as 2 valid factory-proof classes, 8 salvageable-input classes, 5 factory re-earns, 6 void classes, and 4 blocked unknowns. The older dashboard standings are superseded by these dispositions.",
       "scope": "local recovery audit and dashboard truth surface",
-      "evidence": [{"type": "audit-evidence", "location": "~/.incept/day-20260819/course-recovery-audit/", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "~/.incept/day-20260819/course-recovery-audit/",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
       "claim_id": "cross.handrolled.machinery",
       "section": "Cross-course",
-      "status": "BLOCKED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Sixteen purge-manifest rows identify hand-rolled proof, apply, QC, fold, campaign, and top-up machinery. Nothing is deleted until row-level approval and every surviving input is covered by a canonical replacement or a filed contract gap.",
+      "value": "Sixteen purge-manifest rows identify hand-rolled proof, apply, and walk machinery; owner sweep 2026-08-19 evening added a provenance rule (sanctioned = fleet-authored or fleet-merged) and struck two self-merged scripts from humgeo-rebuild main (build_issue21_regeneration_plan.py, run_issue21_regeneration_wave.py \u2014 PRs #38/#39/#42, no fleet review). Local coverage tool demoted to bookkeeping. Struck tools banned from every process; staged filing discloses them.",
       "scope": "local course machinery only; data classified separately",
-      "evidence": [{"type": "audit-evidence", "location": "PURGE-AND-REPLACEMENT-MANIFEST.md", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md"}],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "PURGE-AND-REPLACEMENT-MANIFEST.md",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL",
+      "observed_at": "2026-08-19T08:57Z"
     },
     {
       "claim_id": "humgeo.wave.proof",
@@ -28,18 +41,31 @@
       "observed_at": "2026-08-19T04:13Z",
       "value": "The sealed-plan wave verdicts are the surviving HumGeo factory-proof class. The exact pass total remains scheduled for re-derivation because prior reports disagree; do not promote a final count until that verifier receipt exists.",
       "scope": "sealed-plan regeneration wave only",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#HG-009", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#HG-009",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
       "claim_id": "humgeo.rescreen741.reearn",
       "section": "HumGeo",
-      "status": "BLOCKED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The 741 wrapper-produced verdicts are not accepted proof. They must be re-earned through committed scripts/service_qc.py --slot-file from a clean current checkout with fingerprint-bound receipts. This is paid work awaiting Josh's spend decision.",
+      "value": "Re-earn is running on the factory chain. Tonight receipted: Ilma-core hydrator completed 373/373; factory screens found 0 repair-eligible and 0 lexical fatals; 10-row pilot through /v1/qc passed 10/10 post-hydration. 363-row /v1/qc batch in flight, chunks of 10 behind drained-pool receipts. The 82 miskey rows await a sanctioned rationale pass, held for the batch boundary. 741 wrapper verdicts remain non-proof; only fresh /v1/qc verdicts count.",
       "scope": "741 rescreen records; 464/277 lists survive only as inputs",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#HG-004", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"}],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#HG-004",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL",
+      "observed_at": "2026-08-19T08:57Z"
     },
     {
       "claim_id": "humgeo.bank374",
@@ -48,7 +74,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The 374-pass set survives as input but is not banked on main. A candidate reviewed PR must be generated through committed scripts/repair_shortcut.py; the hand-rolled apply worktree is not an admissible PR source.",
       "scope": "374 current candidate pass records",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#HG-007", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#HG-007",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -59,8 +91,14 @@
       "value": "Release is not proven. The two walk marks are revoked; release requires the owner readiness ruling, canonical deployed-byte readback, and a fresh factory w7 walk. Intake #92 and ap-one #642 remain open dependencies.",
       "scope": "released and student-visible state",
       "evidence": [
-        {"type": "issue", "url": "https://github.com/ilmych/incept-agent-intake/issues/92"},
-        {"type": "issue", "url": "https://github.com/InceptTrilogy/ap-one/issues/642"}
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/92"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/642"
+        }
       ],
       "evidence_access": "GITHUB+LOCAL_AUDIT"
     },
@@ -71,7 +109,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The intended official sweep population is 933: 506 banked rows, 369 candidate rows, and 58 disposition rows. A fresh machine-readable 369-record candidate pack is required before execution.",
       "scope": "staged inputs only; not acceptance proof",
-      "evidence": [{"type": "audit-evidence", "location": "COURSE-RECOVERY-DECISION-BOOK.md#5", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "COURSE-RECOVERY-DECISION-BOOK.md#5",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -81,21 +125,34 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "Zero of 933 records has a current official sweep verdict. The one paid sweep awaits owner approval, a fresh pool-preflight receipt, a canonical ingestion route, and fingerprint-bound receipt coverage.",
       "scope": "official /v1/qc acceptance sweep",
-      "evidence": [{"type": "audit-evidence", "location": "THREE-DAY-PLAN.md#day-2", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/THREE-DAY-PLAN.md"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "THREE-DAY-PLAN.md#day-2",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/THREE-DAY-PLAN.md"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
-      "status": "BLOCKED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "PR #791 is open, mergeable, and green on BFF, frontend, infrastructure, and CodeBuild. It has zero reviews and conflicts with the newer owner recommendation to supersede the shadow tree with native governed placement. Status: CI_GREEN — AUTHORITY_BLOCKED; do not merge.",
+      "value": "PR #791 was CLOSED UNMERGED by the fleet at 06:35Z on their native-placement ruling for the practice bank. Their PR #792 merged a Unit-1 practice bank to main (live tip 38eccf1c). Committed release gate run at that tip reports a practice FAIL; the seat's byte-cited finding is four instrument gaps against the overlay design (held as seat claim pending fleet ruling). Live A/B probes show the practice surface serving and scoring correctly.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
-        {"type": "pull-request", "url": "https://github.com/InceptTrilogy/ap-one/pull/791"},
-        {"type": "owner-comment", "url": "https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000"}
+        {
+          "type": "pull-request",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/791"
+        },
+        {
+          "type": "owner-comment",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000"
+        }
       ],
-      "evidence_access": "PUBLIC_GITHUB"
+      "evidence_access": "PUBLIC_GITHUB",
+      "observed_at": "2026-08-19T08:57Z"
     },
     {
       "claim_id": "apwh.local_done",
@@ -104,7 +161,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The apwh.local_done mark is not valid completion proof: it depends on a hand-rolled walker and a retired, unmerged tree. Retirement and a later factory w7 re-earn require Josh's tree ruling.",
       "scope": "local completion mark and walk evidence",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#AW-001", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#AW-001",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -114,7 +177,13 @@
       "observed_at": "2026-08-19T04:13Z",
       "value": "The 49-of-249 ledger count is byte-current but mixed: 13 admissions are server-strict, 36 are legacy dual-review, and 11 successor records used a local admit path. Only the 13 are presently in the proven factory class.",
       "scope": "article acceptance ledger; not course release",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#AU-001", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#AU-001",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -125,8 +194,14 @@
       "value": "Wave-2 contracts survive as inputs, but new admissions remain held on intake #89 and #90. Do not resume posting while the image contract and source-packet defects remain unresolved.",
       "scope": "future article admissions",
       "evidence": [
-        {"type": "issue", "url": "https://github.com/ilmych/incept-agent-intake/issues/89"},
-        {"type": "issue", "url": "https://github.com/ilmych/incept-agent-intake/issues/90"}
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/89"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/90"
+        }
       ],
       "evidence_access": "GITHUB"
     },
@@ -135,9 +210,14 @@
       "section": "APUSH",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Seating PR #6 is open and mergeable with no reviews or reported checks. It remains a factory-owned merge decision; this recovery lane does not merge it.",
+      "value": "Seating PR #6 remains open with no fleet review. Prepared, not posted: a review-silence ping (non-author reviewed, filing checks passed) parked on the owner's no-GitHub-writes ruling. Offline dry-run of the committed reconciler at PR #6 head 2698913a: all 11 admitted successor positions pass, no writes. Fleet PR #8 head e55dad7: its own 43-test suite passes and its known-bad fixtures cover both filed defect classes.",
       "scope": "successor seating only",
-      "evidence": [{"type": "pull-request", "url": "https://github.com/ilmych/apush-course-build/pull/6"}],
+      "evidence": [
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/apush-course-build/pull/6"
+        }
+      ],
       "evidence_access": "PUBLIC_GITHUB"
     },
     {
@@ -147,7 +227,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "No course registration or learner-serving surface is proven. Registration, serving, and a learner walk are later stages, not implied by the build ledger.",
       "scope": "released and student-visible state",
-      "evidence": [{"type": "audit-evidence", "location": "COURSE-RECOVERY-DECISION-BOOK.md#6", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "COURSE-RECOVERY-DECISION-BOOK.md#6",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -157,7 +243,13 @@
       "observed_at": "2026-08-19T04:13Z",
       "value": "The 221-article course content state is fleet-built and is the second surviving factory-proof class from the recovery audit.",
       "scope": "course content state only; not bank acceptance or release",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-001", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#PS-001",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -165,9 +257,15 @@
       "section": "Psych",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The local scan records 731 of 1,105 buckets filled. Top-up is owner-relay held, and a committed canonical top-up client must be verified before the local driver can be retired and work resumes.",
+      "value": "Live dry-run re-scan 2026-08-19 08:2xZ: 1,105 buckets scanned, 374 underfilled (was 731/1105 filled on 08-16 scan). Today's 9 dispatched jobs settled 2 COMPLETED / 7 FAILED; zero render-failure events. Real top-up runs PAUSED, byte-proven: the deployed top-up Lambda (last modified 2026-05-01) carries no job cap, so the owner's cap of 4 is unenforceable; the factory's own idempotent fix script is named. Owner/fleet decision pending.",
       "scope": "bank scan and top-up workstream",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-003", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#PS-003",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -177,7 +275,12 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The U5 acceptance gate is not green. The recovery audit measured 26 findings; the public issue remains open under its older 27-finding title.",
       "scope": "U5 acceptance gate",
-      "evidence": [{"type": "issue", "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2"}],
+      "evidence": [
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2"
+        }
+      ],
       "evidence_access": "PUBLIC_GITHUB+LOCAL_AUDIT"
     },
     {
@@ -187,7 +290,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The EBQ receipt records two items admitted and zero buckets closed. The old milestone credit is not accepted; direct factory readback and a local verifier that actually opens the receipt are required.",
       "scope": "EBQ milestone only",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-002", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#PS-002",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -197,7 +306,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The provenance of the 1,105 served-bank buckets is unknown while the authoring repository reports item generation not started. Keep the denominator qualified until the fleet answers.",
       "scope": "served bank provenance",
-      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-004", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "DAMAGE-REGISTER.jsonl#PS-004",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
@@ -207,7 +322,13 @@
       "status_at": "2026-08-19T04:13Z",
       "value": "The registration branch is parked, not open or released. It opens only after U5 is green, the bank is full, snapshots are walked, and Josh gives the go.",
       "scope": "registration and learner visibility",
-      "evidence": [{"type": "audit-evidence", "location": "COURSE-RECOVERY-DECISION-BOOK.md#7", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence": [
+        {
+          "type": "audit-evidence",
+          "location": "COURSE-RECOVERY-DECISION-BOOK.md#7",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        }
+      ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     }
   ]
