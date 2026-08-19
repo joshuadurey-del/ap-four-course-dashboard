@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T09:03Z",
+  "snapshot": "2026-08-19T09:05Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -139,7 +139,7 @@
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "PR #791 was CLOSED UNMERGED by the fleet at 06:35Z on their native-placement ruling for the practice bank. Their PR #792 merged a Unit-1 practice bank to main (live tip 38eccf1c). Committed release gate run at that tip reports a practice FAIL; the seat's byte-cited finding is four instrument gaps against the overlay design (held as seat claim pending fleet ruling). Live A/B probes show the practice surface serving and scoring correctly.",
+      "value": "PR #791 was CLOSED UNMERGED by the fleet at 06:35Z on their native-placement ruling. Their PR #792 merged a Unit-1 practice bank; main moved again tonight (tip 9dedc51c). Committed release gate re-run at the new tip: verdicts identical to the earlier run - the course is listed PASS in a 7-course chooser, and the practice-leg FAIL reproduces exactly; the seat's byte-cited finding holds that the FAIL is four instrument gaps against the overlay design (seat claim, pending fleet ruling; live A/B probes show practice serving and scoring correctly). Fleet progress on #591: their autopilot attempt 2 passed their own review, and the fleet posted its own status nudge on the stale thread. Two filing texts are final and staged, posting only on the owner's typed line after the GitHub boundary lifts.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -152,7 +152,7 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-19T08:57Z"
+      "observed_at": "2026-08-19T09:05Z"
     },
     {
       "claim_id": "apwh.local_done",

@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-19T09:05Z",
+  "course": "APWH",
+  "text": "Checklist complete. Release gate re-run at tonight's new tip (9dedc51c): identical verdicts - course listed PASS in the 7-course chooser, practice false-FAIL reproduces (seat claim: four instrument gaps, byte-cited at two tips). Fleet's #591 attempt 2 passed their own review and the fleet posted its own status nudge. Two filing texts final and staged for the owner's read; nothing posted."
+ },
+ {
   "ts": "2026-08-19T09:03Z",
   "course": "Psych",
   "text": "Factory w7 walk of bundle f7b40cca: FAIL at the chain's own preflight - course not in the readiness-filtered chooser. Readiness debug names the gates: bank underfilled 374/1105, lesson-evidence sweep never run (fleet edit). Course tree live PASS (262 nodes/5 units/221 lessons). Honest receipt on file; 11 walk stages recorded UNMEASURED, not green. Re-walk free once readiness turns."
