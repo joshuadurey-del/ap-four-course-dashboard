@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T08:57Z",
+  "snapshot": "2026-08-19T09:03Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -210,7 +210,7 @@
       "section": "APUSH",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Seating PR #6 remains open with no fleet review. Prepared, not posted: a review-silence ping (non-author reviewed, filing checks passed) parked on the owner's no-GitHub-writes ruling. Offline dry-run of the committed reconciler at PR #6 head 2698913a: all 11 admitted successor positions pass, no writes. Fleet PR #8 head e55dad7: its own 43-test suite passes and its known-bad fixtures cover both filed defect classes.",
+      "value": "Seating PR #6 remains open with no fleet review. Prepared, not posted: a review-silence ping (non-author reviewed, filing checks passed) parked on the owner's no-GitHub-writes ruling. Offline dry-run of the committed reconciler at PR #6 head 2698913a: all 11 admitted successor positions pass, no writes. Fleet PR #8 head e55dad7: its own 43-test suite passes and its known-bad fixtures cover both filed defect classes. Seating runbook staged: the 11 committed-reconciler invocations with derived output names and ordered preconditions, ready to execute the moment the fleet merges.",
       "scope": "successor seating only",
       "evidence": [
         {
@@ -320,7 +320,7 @@
       "section": "Psych",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The registration branch is parked, not open or released. It opens only after U5 is green, the bank is full, snapshots are walked, and Josh gives the go.",
+      "value": "Registration is not reachable yet, and tonight it is measured rather than assumed: the factory w7 walk chain (pinned 28684ec8) ran against bundle f7b40cca and FAILED at its own preflight - the course is not in the readiness-filtered chooser. The platform's readiness debug names the failing checks: bank fill under threshold (374 of 1,105 buckets underfilled) and the lesson-evidence sweep never run (a fleet-side edit). Course tree itself reads live and healthy (262 nodes / 5 units / 221 lessons). Eight registration gates are mapped with owners; re-walk is free once readiness turns.",
       "scope": "registration and learner visibility",
       "evidence": [
         {

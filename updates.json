@@ -1,5 +1,15 @@
 [
  {
+  "ts": "2026-08-19T09:03Z",
+  "course": "Psych",
+  "text": "Factory w7 walk of bundle f7b40cca: FAIL at the chain's own preflight - course not in the readiness-filtered chooser. Readiness debug names the gates: bank underfilled 374/1105, lesson-evidence sweep never run (fleet edit). Course tree live PASS (262 nodes/5 units/221 lessons). Honest receipt on file; 11 walk stages recorded UNMEASURED, not green. Re-walk free once readiness turns."
+ },
+ {
+  "ts": "2026-08-19T09:03Z",
+  "course": "APUSH",
+  "text": "Prepare-ahead complete: PR 6 ping frozen post-ready (parked on owner boundary), seating runbook staged with all 11 committed-reconciler invocations, watch legs receipted 18:02 KST - PR 82 head unmoved so the sha-pinned image prediction stays current."
+ },
+ {
   "ts": "2026-08-19T08:57Z",
   "course": "Cross-course",
   "text": "Owner sweep: every checklist tool provenance-traced. New rule: sanctioned = fleet-authored or fleet-merged. Struck forever: the two self-merged regeneration-bridge scripts on humgeo-rebuild main (PRs 38/39/42, no fleet review anywhere in their history). Local coverage tool demoted to bookkeeping that claims nothing. Staged HumGeo filing will disclose the struck pair and ask the fleet to bless or delete."
