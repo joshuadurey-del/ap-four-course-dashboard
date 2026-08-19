@@ -2,6 +2,13 @@
  "snapshot": "2026-08-19T05:45+09:00",
  "claims": [
   {
+   "claim_id": "humgeo.repair759.rescreen",
+   "section": "HumGeo",
+   "status": "OBSERVED",
+   "observed_at": "2026-08-19T10:44+09:00",
+   "value": "All 741 staged 759-campaign repairs rescreened through the official /v1/qc overnight 08-18/19: 464 pass, 277 fail to the regenerate queue, 741/741 real verdicts (3 transport blips retried clean). Chunks of 10 behind fresh pool-preflight receipts, concurrency 3. Receipts: day-20260818/humgeo-rescreen/rescreen-receipts.jsonl + two manifests. Write-back of the 464 into a pinned main checkout is done (zero skips) with the committed service_qc verdict re-earn running; lands via a reviewed PR. No bank/corpus writes yet."
+  },
+  {
    "claim_id": "humgeo.rebuild.passes",
    "section": "HumGeo",
    "status": "OBSERVED",

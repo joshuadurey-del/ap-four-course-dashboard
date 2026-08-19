@@ -1,5 +1,9 @@
 [
  {
+  "at": "2026-08-19T01:44Z",
+  "text": "HumGeo: 741 repaired items now hold official /v1/qc verdicts — 464 pass, 277 to regenerate. Caveat: the 464 are not yet on main (reviewed PR pending its verdict re-earn) and not banked; seal still waits on the fleet's #92 ruling."
+ },
+ {
   "ts": "2026-08-18T20:45Z",
   "course": "APWH",
   "text": "Overnight: the main tagging pass finished all 383 fresh questions in one pass each — 274 earned tags and are folded in; the 109 the tagger could not settle went straight to re-minting, per the owner's one-pass rule, and that wave is running now. One slot exhausted its call allowance and joined the disposition queue, which stands at nine rows, all with receipts. Revised chain: re-mint drain by ~07:45, its tag pass by ~10:30, then one batch banking, then the paid QC sweep from ~11:30. The Friday bar still holds; the cause of the shift is measured — 28.5% of new questions fail their one tag pass, matching the tagger's own published weakness on this subject."

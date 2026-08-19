@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 · 05:45 KST',
+  snapshot: 'Aug 19, 2026 · 10:43 KST',
   courses: [
     {
       id: 'apush',
@@ -24,11 +24,11 @@ const AP4_TIMELINE = {
       x: 29,
       y: 88,
       stage: 'Build content',
-      lastCompleted: 'Last completed · Aug 17',
-      summary: 'Seventy-four wave-2 article contracts were authored, gated, and validated. Forty-nine of 249 article positions are admitted.',
-      next: 'Next · post the 74 contracts on the factory-pool turn, one factory call per slot on factory defaults; 124 visual-capability positions and 2 source-packet positions remain factory-owned.',
-      etaDays: '2–4 days',
-      etaNote: 'Covers the 74 authorable positions only; the 126 factory-owned positions are excluded. APUSH posts after the APWH pool turn ahead of it.'
+      lastCompleted: 'Last completed · Aug 19',
+      summary: 'The readability fix is confirmed: batch-35 chunk 1 settled and all nine previously exhausted positions now pass the factory text QC. But every factory-passed article came back with its images stripped (server reason: unsupported contract, 10 of 10 measured), so zero articles are admissible yet.',
+      next: 'Next · the remaining 64 posts are deliberately held until intake #90 answers the image-contract question; firing more chunks would only re-measure the strip. Wave-2 admissions resume the hour that answer lands.',
+      etaDays: '2–3 days',
+      etaNote: 'Top end is the seat\'s published cautious date (Aug 22). The whole range now rides on the fleet\'s intake #90 answer, not pool timing; zero of 249 wave-2 admissions have landed.'
     },
     {
       id: 'psych',
@@ -39,10 +39,10 @@ const AP4_TIMELINE = {
       y: 134,
       stage: 'Build content',
       lastCompleted: 'Last completed · Aug 17',
-      summary: 'All 221 articles are complete; the course bundle was walked locally 221-for-221 green with receipts, then rebuilt and re-walked after the fleet’s U5 article-repair train landed.',
+      summary: 'All 221 articles are complete; the bundle was walked 221-for-221 green with receipts (our instrument — the factory walker run is queued behind the bank fill), then rebuilt and re-walked after the fleet’s U5 repair train.',
       next: 'Next · fill 1,810 missing questions across 374 buckets on the pool turn (Psych is last in the pool chain), build the gate and practice snapshots, and walk the item legs; the U5 acceptance gate (26 findings) is fleet-owned; registration opens afterward on the owner’s conditions.',
-      etaDays: '6–7 days',
-      etaNote: 'Assumes evidence-based-FRQ yield recovers; another zero-yield result resets the estimate. Snapshot builds and item-leg walks are unmeasured; the U5 gate fix is fleet-paced.'
+      etaDays: '5–6 days',
+      etaNote: 'Top end is the seat\'s published cautious date (Aug 25). Assumes essay-question yield recovers; another zero-yield result resets the estimate. Snapshot builds and item-leg walks are unmeasured; the U5 gate (26 findings re-verified today at head b19cced) is fleet-paced.'
     },
     {
       id: 'apwh',
@@ -52,11 +52,11 @@ const AP4_TIMELINE = {
       x: 61,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'Last completed · Aug 18',
-      summary: 'Overnight: the main tag pass finished — 274 of 383 fresh questions tagged in one pass; the 109 the tagger could not settle are re-minting now per the owner ruling (new questions arrive born-taggable). Nine exhausted rows hold receipts in the disposition queue.',
-      next: 'Next · re-mint drain (~07:45) and its tag pass (~10:30), one batch banking, the paid whole-bank QC sweep (~11:30 start), re-judge its fails, then the factory walker over all 176 lessons.',
+      lastCompleted: 'Last completed · Aug 19',
+      summary: 'The rebuild and tagging chain closed this morning: 419 of 423 accepted row-level on the drain receipt, and all 371 rebuild candidates verified — unique, coded, one per slot, zero content overlap with the 165 quarantined fingerprints. The 56-row disposition queue is fully receipted.',
+      next: 'Next · the one paid QC sweep (933 judgments: the 371 candidates first, then the 562 already banked, judged in place), then bank the passers with receipts, re-judge content fails per their dispositions, then the factory-run walk.',
       etaDays: '1–2 days',
-      etaNote: 'Rebuild, tagging, and paid QC are sized; the re-judge loop is an estimate borrowed from another course; the 176-lesson walk is unmeasured. Study-skills lesson placement is fleet work outside this range.'
+      etaNote: 'Top end is the seat\'s published cautious date (Aug 21). The walk is unmeasured until the walker-scope call; the 56 pre-classified fails ride their receipts; study-skills lesson placement is fleet work outside this range.'
     },
     {
       id: 'humgeo',
@@ -66,11 +66,11 @@ const AP4_TIMELINE = {
       x: 80,
       y: 134,
       stage: 'Place course',
-      lastCompleted: 'Last completed · Aug 18',
-      summary: 'The regeneration campaign settled at 462 of 474 current-byte factory QC passes; the 12 open slots are dispositioned — 9 filed for fleet adjudication, 3 resumable from persisted factory jobs.',
-      next: 'Next · adopt and QC the 3 resumable rows, fix the 3 failed metadata rows, rescreen the 741 staged repairs after APWH’s pool turn, then seal, cut over, and walk once the fleet rules the 9 filed slots.',
-      etaDays: '2–3 days',
-      etaNote: 'Includes adoption QCs, metadata fixes, rescreens, seal, cutover, and walk; excludes fleet adjudication latency on the 9 filed slots, the shared-pool wait behind APWH, and any repair loop the rescreen triggers.'
+      lastCompleted: 'Last completed · Aug 19',
+      summary: 'Overnight, all 741 staged repairs were rescreened through the factory’s official QC: 464 passed and 277 route to regeneration. One resumable row closed negative (its recovered item failed the factory’s checks) and joins the filed class, 9 becoming 10. The two walk marks were revoked Aug 18 for hand-rolled provenance, which is why the bar reads 52 honestly.',
+      next: 'Next · land the 464 passes into main (write-back done on a pinned checkout, official verdict re-earn running, then a reviewed PR); post the promised update on the fleet filing; regenerate the 277-plus-18 queue once the per-slot route is named; assemble the local-host proof package for Ilma — demo hosting is no longer the target (owner, Aug 19).',
+      etaDays: '1–2 days',
+      etaNote: 'Covers this seat’s own work: the 464 landing and the regenerate queue. Excludes fleet latency on the filed slots’ ruling, the seal that waits on it, the cutover, and the release-flag walk — those are fleet- or owner-paced.'
     }
   ]
 };
