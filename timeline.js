@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 pm · orchestrated recovery run',
+  snapshot: 'Aug 19, 2026 late pm · orchestrated run, fleet active',
   courses: [
     {
       id: 'apush',
@@ -26,7 +26,7 @@ const AP4_TIMELINE = {
       stage: 'Build content',
       lastCompleted: 'Ledger re-verified · 49/249 builder-receipted',
       summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
-      next: 'Next · watch intake #90 (walls 64 held posts and 124 positions, zero fleet replies), intake #89 (our 48-hour ping posted 2026-08-19), and seating PR #6 (owner-lane merge). No paid APUSH packet is sanctioned.',
+      next: 'Next · the fleet WOKE on our #89 ping: their autopilot claimed #89 and #90, opened apush-course-build #7 (REWORK on their retrieval pipeline, rebuild ordered with committed scripts) and hole-filler #81 with PR #82 in progress — the #90 answer materializing for the 64 held posts. Watch those plus seating PR #6. No paid APUSH packet is sanctioned.',
       etaDays: '1–2 days',
       etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
     },
@@ -38,9 +38,9 @@ const AP4_TIMELINE = {
       x: 39,
       y: 134,
       stage: 'Build content',
-      lastCompleted: 'Factory top-up run · load-guarded at zero',
+      lastCompleted: 'Top-up dispatched · 3 of 4 capped jobs',
       summary: 'The committed factory top-up Lambda is confirmed as the only sanctioned client and was invoked today: a dry run, then one bounded real run capped at 4 jobs. The live scan confirms 374 of 1,105 buckets underfilled. The factory worker reserve deferred dispatch to zero because fleet jobs occupy the pool right now. Local drivers are purged, including the day-20260811 twins, and the provenance ask is filed as course issue #14.',
-      next: 'Next · retry the bounded top-up when the factory pool frees, verify through CloudWatch plus a dry-run re-scan, and watch issue #14 and the U5 findings (fleet-owned). Registration stays parked.',
+      next: 'Next · 3 of 4 capped jobs DISPATCHED 07:28Z through the factory Lambda (CloudWatch receipt); items not yet admitted — re-scan for per-cell deltas as the async pool drains. Watch issue #14 and the U5 findings (fleet-owned). Registration stays parked.',
       etaDays: '2–4 days',
       etaNote: 'Work estimate, not a release promise. The owner relay cleared 2026-08-19 so the clock is running; the range covers pool retries, top-up hours, and local snapshot work. U5 repair and registration are fleet-gated and excluded.'
     },
@@ -66,9 +66,9 @@ const AP4_TIMELINE = {
       x: 58,
       y: 134,
       stage: 'Validate',
-      lastCompleted: 'Honest re-earn measured · 0 of 374 bankable',
+      lastCompleted: 'Single repair re-earned · pass held for the wave',
       summary: 'A clean worktree at origin/main measured the 374-slot re-earn honestly: 373 records fail two fatal structural checks at once (S2 plus D1), which the factory repair engine refuses by rule, so they route to the regeneration cohort. The one repairable record (D4-only) is blocked on an invalid Anthropic key. A known-good wave candidate passes the same battery fresh, so the judge is healthy and the failures are real. Paying for the 741 re-earn would buy failures; regeneration is the honest route. The Aug-12 uncommitted set (classified: metadata-only) is preserved on a pushed branch and the i7 branch is verified clean.',
-      next: 'Next · fold the 373 into the regeneration cohort re-derivation (the filing stays parked pending three unresolved rows and Josh text), rotate the Anthropic key to finish the single repair, and watch #92 plus the release predicates (#659).',
+      next: 'Next · the key is rotated and the one repairable item now carries a fresh factory pass; per the owner shape-call it is HELD locally and re-enters with the consolidated regeneration landing, never a one-item PR. Fold the 373 into the regeneration re-derivation (filing waits on three unresolved rows and Josh text); watch #92 plus the release predicates (#659).',
       etaDays: '2–4 days',
       etaNote: 'Work estimate, not a release promise. Covers the key-gated single repair and the regen-cohort re-derivation. The regeneration wave itself, #92 adjudication, and release predicates are owner- or fleet-gated and excluded.'
     }

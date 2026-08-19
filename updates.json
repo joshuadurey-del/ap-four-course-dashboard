@@ -1,5 +1,20 @@
 [
   {
+    "ts": "2026-08-19T08:05Z",
+    "course": "HumGeo",
+    "text": "The one repairable item (1.1-f1-a08) carries a fresh factory pass: committed repair (STRUCT_D4) then /v1/qc re-judgment on the finished bytes, fingerprint-bound. Owner shape-call: NOT landed as a one-item PR - the pass is HELD locally and re-enters with the consolidated regeneration-wave landing. Caveat: 373 rebuild-class items still await the regeneration filing (owner text + 3 unresolved rows)."
+  },
+  {
+    "ts": "2026-08-19T07:28Z",
+    "course": "Psych",
+    "text": "Top-up DISPATCHED: 3 of 4 capped jobs submitted through the factory Lambda at 07:28Z (CloudWatch receipt). Items not yet admitted - the async pool drains at its own pace; per-cell deltas verified by dry-run re-scan once jobs settle. Caveat: one capped run proves the route; filling all 374 short buckets is the fleet's cron decision."
+  },
+  {
+    "ts": "2026-08-19T07:40Z",
+    "course": "APUSH",
+    "text": "Fleet woke on our #89 ping: intake autopilot claimed #89 and #90, opened apush-course-build #7 (REWORK - packet defect confirmed in THEIR retrieval pipeline, rebuild ordered with committed scripts) and incept-hole-filler #81 with PR #82 in progress. This is the #90 answer materializing for the 64 held posts. Caveat: our 126-class derivation receipt is not yet attached to #81; attaching it is an outward comment awaiting owner text."
+  },
+  {
     "ts": "2026-08-19T07:00Z",
     "course": "Cross",
     "text": "Single-orchestrator control established (Josh brief + AFK e2e consent): four course seats frozen with live handoffs, harden lane completed its terminal line, factory-exec-gate verified ENFORCE, purge rows P1/P2/P3/P5/P6/P15-humgeo quarantined reversibly with SHA ledger. Caveat: P12 (in-clone tmp scripts) and P16 (pushed-branch seal) stay deferred; incept-b4 window unacknowledged."
