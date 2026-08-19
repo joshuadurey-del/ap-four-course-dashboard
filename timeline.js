@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 late evening · live re-earn batch + filings posted',
+  snapshot: 'Aug 20, 2026 morning · campaign final, owner gates staged',
   courses: [
     {
       id: 'apush',
@@ -66,9 +66,9 @@ const AP4_TIMELINE = {
       x: 58,
       y: 134,
       stage: 'Validate',
-      lastCompleted: 'Single repair re-earned · pass held for the wave',
-      summary: 'A clean worktree at origin/main measured the 374-slot re-earn honestly: 373 records fail two fatal structural checks at once (S2 plus D1), which the factory repair engine refuses by rule, so they route to the regeneration cohort. The one repairable record (D4-only) is blocked on an invalid Anthropic key. A known-good wave candidate passes the same battery fresh, so the judge is healthy and the failures are real. Paying for the 741 re-earn would buy failures; regeneration is the honest route. The Aug-12 uncommitted set (classified: metadata-only) is preserved on a pushed branch and the i7 branch is verified clean.',
-      next: 'Next · the key is rotated and the one repairable item now carries a fresh factory pass; per the owner shape-call it is HELD locally and re-enters with the consolidated regeneration landing, never a one-item PR. Fold the 373 into the regeneration re-derivation (filing waits on three unresolved rows and Josh text); watch #92 plus the release predicates (#659).',
+      lastCompleted: 'Campaign final · 351/373 re-earned, branch pushed',
+      summary: 'The overnight campaign re-earned 351 of 373 rows through the factory judge (fresh fingerprint-bound passes after the committed hydrate step), with 5 real content fails and 17 honest unmeasureds - zero unaccounted, receipts on record bytes. The regeneration cohort is machine-checked down from 761 to 410 (82 of those mid-pipeline behind one credential paste). The 351 fresh-pass records are pushed to a non-main branch, owner-approved from the phone.',
+      next: 'Next · three owner gates release everything staged: one typed line opens the reviewed PR (all four owner checks green, held only by the typed-line hook), one typed line posts the corrected 410 regen filing, one key paste re-runs the 82-row rationale leg. Watch #92 plus the release predicates (#659).',
       etaDays: '2–4 days',
       etaNote: 'Work estimate, not a release promise. Covers the key-gated single repair and the regen-cohort re-derivation. The regeneration wave itself, #92 adjudication, and release predicates are owner- or fleet-gated and excluded.'
     }
