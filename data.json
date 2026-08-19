@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T16:28Z",
+  "snapshot": "2026-08-19T16:35Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -55,7 +55,7 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "CAMPAIGN HISTOGRAM FINAL, all 373 rows from record bytes with zero unaccounted: 351 PASS (re-earned out of the regeneration pile), 5 content fails named and kept in the pile, 17 UNMEASURED (the factory's read endpoint would not answer even after a stability-verified retry - they earned nothing and stay in the pile; no error was ever counted as a verdict). Five factory deploys during the campaign, judge continuity byte-verified after each. Now running: the 82-row rationale leg under standing approvals, then that population's own judging pass, then the regeneration-cohort re-derivation and corrected filing numbers. Nothing pushes outward without the owner.",
+      "value": "CAMPAIGN COMPLETE. Final histogram 351 pass / 5 content fail / 17 unmeasured of 373, zero unaccounted. Regeneration cohort re-derived and machine-checked: 410 remain (was 761 this morning - cut nearly in half), with 82 of those mid-pipeline behind one credential paste. Filing body updated to the 410 count with honest dispositions for the 17 and the 82; local commit bd0b27fc holds exactly the 351 fresh-pass records with the PR body staged. Everything outward is owner-gated: the key paste, the filing line, the push boundary. The shared pool is released.",
       "scope": "741 rescreen records; 464/277 lists survive only as inputs",
       "evidence": [
         {
@@ -65,14 +65,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T16:28Z"
+      "observed_at": "2026-08-19T16:35Z"
     },
     {
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The 374-pass set survives as input but is not banked on main. A candidate reviewed PR must be generated through committed scripts/repair_shortcut.py; the hand-rolled apply worktree is not an admissible PR source.",
+      "value": "The re-earn campaign superseded this claim's frame: 351 records now hold fresh factory passes on the staged branch (commit bd0b27fc, unpushed), awaiting the owner's push boundary and the consolidated landing path. Banking on main remains gated by their reviewed-PR route.",
       "scope": "374 current candidate pass records",
       "evidence": [
         {
