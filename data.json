@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T11:08Z",
+  "snapshot": "2026-08-19T11:13Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -121,9 +121,9 @@
     {
       "claim_id": "apwh.qc933",
       "section": "APWH",
-      "status": "BLOCKED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Zero of 933 records has a current official sweep verdict \u2014 and the ask that unblocks it is now FILED: intake #93 asks the fleet to name the acceptance instrument and banking order (three resolution options, byte-cited dead ends, we conform to any answer). Companion #94 reports the release gate's overlay blind spot (byte-cited at two tips, live probe pair attached). Both posted 2026-08-19 through their filing script after non-author review; fleet answer is the next mover.",
+      "value": "FLEET ANSWERED within the hour of our filing: their lane issue apwh-blueprint-build #48 (live-verified, opened 11:03Z citing intake #93) names the Faultless Bar course-QC job as the sanctioned acceptance instrument - the standalone per-item route is retracted as a category error - and sets the order: bank the sha-pinned 933 through the existing single-writer process, THEN run the bar with machine-readable proof all 933 identities were judged (model verdicts need their two-run-agreement rule). Their side owes first: push the course_qc implementation (they byte-confirmed our absence finding: zero such paths at their main), document one committed invocation, add a fail-closed fixture. Our banking packet arms only when the sanctioned single-writer apply is named in committed terms.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -132,7 +132,8 @@
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/THREE-DAY-PLAN.md"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL",
+      "observed_at": "2026-08-19T11:13Z"
     },
     {
       "claim_id": "apwh.pr791",

@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 evening · factory-tooled run',
+  snapshot: 'Aug 19, 2026 late evening · live re-earn batch + filings posted',
   courses: [
     {
       id: 'apush',
@@ -24,9 +24,9 @@ const AP4_TIMELINE = {
       x: 30,
       y: 88,
       stage: 'Build content',
-      lastCompleted: 'Ledger re-verified · 49/249 builder-receipted',
+      lastCompleted: 'Fleet fix merged · remint verified 36/36 + 18/18',
       summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
-      next: 'Next · the fleet WOKE on our #89 ping: their autopilot claimed #89 and #90, opened apush-course-build #7 (REWORK on their retrieval pipeline, rebuild ordered with committed scripts) and hole-filler #81 with PR #82 in progress — the #90 answer materializing for the 64 held posts. Watch those plus seating PR #6. No paid APUSH packet is sanctioned.',
+      next: 'Next · fleet merged PR #8 (their fix for our two filed defect classes) and we verified it offline: their own validator passes unit 7 at 36/36 and unit 9 at 18/18 from post-merge main, and the two defective positions read clean. Seating is proven ready — the blessed reconciler dry-ran all 11 admitted positions at PR #6 head — and the seating runbook is staged to execute the moment the fleet merges PR #6 (queue check only, per the standing factory-tooling go). The review-silence ping was killed by the owner as unnecessary. No paid APUSH packet is sanctioned.',
       etaDays: '1–2 days',
       etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
     },
@@ -38,11 +38,11 @@ const AP4_TIMELINE = {
       x: 39,
       y: 134,
       stage: 'Build content',
-      lastCompleted: 'Top-up runs 1-2 · 9 jobs, cap finding',
-      summary: 'The committed factory top-up Lambda is confirmed as the only sanctioned client and was invoked today: a dry run, then one bounded real run capped at 4 jobs. The live scan confirms 374 of 1,105 buckets underfilled. The factory worker reserve deferred dispatch to zero because fleet jobs occupy the pool right now. Local drivers are purged, including the day-20260811 twins, and the provenance ask is filed as course issue #14.',
-      next: 'Next · 9 jobs dispatched through the factory Lambda (run 1: one completed, two failed at their terminal states — FRQ render gate; run 2: six settling). Real runs PAUSED: the deployed Lambda drops the max_jobs field (their handler at main forwards it), so the 4-cap ruling cannot be enforced — deploy drift on their side, receipts held. Dry-run scans continue. Watch #14 and U5 (fleet-owned). Registration stays parked.',
-      etaDays: '2–4 days',
-      etaNote: 'Work estimate, not a release promise. The owner relay cleared 2026-08-19 so the clock is running; the range covers pool retries, top-up hours, and local snapshot work. U5 repair and registration are fleet-gated and excluded.'
+      lastCompleted: 'Lambda repaired via their script · walk honestly refused',
+      summary: 'Today settled Psych into a fully measured state. The nine dispatched jobs finished 2 completed, 7 failed (their render gate; the last failure was genuine, pre-deadline). The deployed top-up Lambda was proven 3.5 months stale with no job cap, then repaired on the owner\'s word using the factory\'s own setup script — deployed now byte-matches committed, cap of 4 restored, schedule off, nothing dispatched. The factory w7 walk chain ran and refused at its own preflight: the course is not chooser-ready (bank 374 short, lesson-evidence sweep never run), which is the walk working, not failing. An 8-gate registration map with owners is on file.',
+      next: 'Next · top-up dispatch is HELD as a recorded contract conflict: the lifecycle requires sealed blueprint scope first, and the top-up request carries no bucket-level exclusion (subjects and item types only), so a capped run cannot avoid Unit-5 or provenance-uncertain cells. It clears only when the factory answers the provenance/denominator question (course issue #14 / PS-004) or ships a scope-excluding route. Free re-walk fires when readiness turns. No spend until then.',
+      etaDays: 'fleet-gated',
+      etaNote: 'No date while the contract conflict stands — the clearing event belongs to the fleet (issue #14 / Unit-5). The Lambda repair and walk receipts are done and keep their value regardless.'
     },
     {
       id: 'apwh',
@@ -52,9 +52,9 @@ const AP4_TIMELINE = {
       x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'Fleet ruled #591 · PR #791 closed unmerged',
+      lastCompleted: 'Fleet answered #93 · Faultless Bar named, bank-first order',
       summary: 'The fleet ruled native governed placement authoritative on issue #591 and closed PR #791 unmerged itself (2026-08-19T06:35Z, verified live); nothing further is needed from our lane on that thread. The 933-item population reconciles exactly (506 banked, 369 candidates, 58 disposition rows). The honest pre-sweep state stands: 933 items without current receipts and 427 structural fails. Which acceptance instrument judges the recovered cohort is a fleet choice. Our purge rows are quarantined and the stale local-done mark is retired.',
-      next: 'Next · watch the native-publish chain on #591 (the intake autopilot is actively working it) and the acceptance-instrument answer. Josh retracted the fleet ask, so the open question stays recorded, not filed. Nothing is runnable from our side today.',
+      next: 'Next · the fleet ANSWERED #93 within the hour (their lane issue #48, live-verified): the Faultless Bar course-QC job is the named acceptance instrument — the standalone per-item route is retracted as a category error — and the order is bank the sha-pinned 933 through the existing single-writer process first, then run the bar over the banked course with machine-readable proof that all 933 identities were judged. Their side owes first: push the course_qc implementation to a reproducible ref, document the one committed invocation, add a fail-closed fixture. Our next packet arms when the sanctioned single-writer apply is named in committed terms — nothing banks before that. #94 (gate blind spot) and #591 stay watched.',
       etaDays: '2–4 days',
       etaNote: 'Entirely fleet-paced: publisher bootstrap (#2727), native placement, and the acceptance instrument belong to the fleet. The range is a watch window, not our work estimate.'
     },
