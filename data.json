@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T11:13Z",
+  "snapshot": "2026-08-19T11:36Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -140,7 +140,7 @@
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "PR #791 was CLOSED UNMERGED by the fleet at 06:35Z on their native-placement ruling. Their PR #792 merged a Unit-1 practice bank; main moved again tonight (tip 9dedc51c). Committed release gate re-run at the new tip: verdicts identical to the earlier run - the course is listed PASS in a 7-course chooser, and the practice-leg FAIL reproduces exactly; the seat's byte-cited finding holds that the FAIL is four instrument gaps against the overlay design (seat claim, pending fleet ruling; live A/B probes show practice serving and scoring correctly). Fleet progress on #591: their autopilot attempt 2 passed their own review, and the fleet posted its own status nudge on the stale thread. Two filing texts are final and staged, posting only on the owner's typed line after the GitHub boundary lifts.",
+      "value": "Our #94 gate report was FIXED AND MERGED by the fleet within 27 minutes (ap-one PR #800, checker-only change to the release gate). Seat re-ran the committed gate at the new tip: the practice leg flipped FAIL to PASS with 9 of 9 items scored, and the two unmeasured legs (key-leak, letters) now read PASS. The committed gate and our live probes now agree the course serves practice correctly. Remaining fleet-side: the #48 judge-implementation push for the 933 (no code pushed yet), the #93 disposition (their attempt 2 mid-review), and the #591 publish chain.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -153,7 +153,7 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-19T09:05Z"
+      "observed_at": "2026-08-19T11:36Z"
     },
     {
       "claim_id": "apwh.local_done",

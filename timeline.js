@@ -52,7 +52,7 @@ const AP4_TIMELINE = {
       x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'Fleet answered #93 · Faultless Bar named, bank-first order',
+      lastCompleted: 'Fleet fixed #94 in 27 min · gate practice leg now PASS 9/9',
       summary: 'The fleet ruled native governed placement authoritative on issue #591 and closed PR #791 unmerged itself (2026-08-19T06:35Z, verified live); nothing further is needed from our lane on that thread. The 933-item population reconciles exactly (506 banked, 369 candidates, 58 disposition rows). The honest pre-sweep state stands: 933 items without current receipts and 427 structural fails. Which acceptance instrument judges the recovered cohort is a fleet choice. Our purge rows are quarantined and the stale local-done mark is retired.',
       next: 'Next · the fleet ANSWERED #93 within the hour (their lane issue #48, live-verified): the Faultless Bar course-QC job is the named acceptance instrument — the standalone per-item route is retracted as a category error — and the order is bank the sha-pinned 933 through the existing single-writer process first, then run the bar over the banked course with machine-readable proof that all 933 identities were judged. Their side owes first: push the course_qc implementation to a reproducible ref, document the one committed invocation, add a fail-closed fixture. Our next packet arms when the sanctioned single-writer apply is named in committed terms — nothing banks before that. #94 (gate blind spot) and #591 stay watched.',
       etaDays: '2–4 days',

@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-19T11:36Z",
+  "course": "APWH",
+  "text": "Fleet fixed our #94 within 27 minutes of filing: PR 800 merged, checker-only. Gate re-run at the new tip: practice leg FAIL to PASS (9/9 scored), key-leak and letters now PASS. The committed release gate and our live probes now agree. Judge-implementation push for the 933 (#48) still pending - banking stays parked."
+ },
+ {
   "ts": "2026-08-19T11:13Z",
   "course": "APWH",
   "text": "The fleet answered our #93 filing inside an hour (their #48, live-verified): Faultless Bar is the named acceptance instrument, bank-first order, two-run agreement for model verdicts. They owe the pushed implementation + documented invocation + fail-closed fixture; our banking packet arms when the sanctioned single-writer apply is named in committed terms. They also byte-confirmed our absence finding exactly."
