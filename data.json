@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T10:53Z",
+  "snapshot": "2026-08-19T11:08Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -257,7 +257,7 @@
       "section": "Psych",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Top-up machinery REPAIRED tonight on the owner's word, using the factory's own fix script: the deployed Lambda now matches committed bytes exactly (was 3.5 months stale with no job cap), all seven settings restored including the cap of 4, schedule stays off, zero jobs dispatched. Live rescan earlier tonight: 1,105 buckets, 374 underfilled. One bounded top-up run (cap 4, dry-run first) is armed and waits only for HumGeo's paid batch to release the shared pool. Disclosed: the seat identity cannot run the fix script end-to-end (three IAM permissions missing) - blocked legs receipted, end state byte-verified anyway.",
+      "value": "Top-up machinery repaired tonight (deployed Lambda byte-matches committed, cap of 4 restored, schedule off) - but dispatch is HELD as a recorded CONTRACT CONFLICT: the lifecycle gates content generation on sealed blueprint scope, and the top-up scans AP Psychology broadly with no way to exclude Unit-5 or provenance-uncertain buckets. No spend runs until the factory resolves the provenance/denominator question (course issue #14 / PS-004) or provides a route that provably excludes unresolved scope. Bank stands at 374 underfilled of 1,105.",
       "scope": "bank scan and top-up workstream",
       "evidence": [
         {
