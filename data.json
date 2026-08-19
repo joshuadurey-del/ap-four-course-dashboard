@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T16:35Z",
+  "snapshot": "2026-08-19T23:39Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -70,9 +70,9 @@
     {
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
-      "status": "BLOCKED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The re-earn campaign superseded this claim's frame: 351 records now hold fresh factory passes on the staged branch (commit bd0b27fc, unpushed), awaiting the owner's push boundary and the consolidated landing path. Banking on main remains gated by their reviewed-PR route.",
+      "value": "MORNING STATE: the 351 fresh-pass records are PUSHED to their repo on a non-main branch (bd0b27fc, owner-approved from the phone, verified live). The PR to their main cleared all four owner checks with receipts but is HELD by the local owner-approval hook, which requires a line typed at the Mac - one line opens it. The regen filing (410 ask) waits on the same class of typed line; the 82-row rationale leg waits on one credential paste. Nothing else is pending on our side.",
       "scope": "374 current candidate pass records",
       "evidence": [
         {
@@ -81,7 +81,8 @@
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL",
+      "observed_at": "2026-08-19T23:39Z"
     },
     {
       "claim_id": "humgeo.release",
