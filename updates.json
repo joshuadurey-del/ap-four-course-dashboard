@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-19T15:22Z",
+  "course": "APUSH",
+  "text": "Defect closed end to end: issue 7 complete, remint landed on canon (44e4a09a), validator re-run on the landed tree - unit 7 36/36, unit 9 18/18, zero failures, hashes matching the fleet's closing comment. Seating PR and image contracts remain fleet-side."
+ },
+ {
   "ts": "2026-08-19T14:18Z",
   "course": "HumGeo",
   "text": "Paid re-earn batch DRAINED: 373/373 accounted - 299 pass, 5 content fails (named), 69 transport-error rows in the refresh leg now, zero unverdicted. Five factory deploys during the campaign, judge continuity byte-verified each time. Final histogram after the refresh leg; 82-row rationale leg follows under standing approvals."

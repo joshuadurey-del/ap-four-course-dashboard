@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T14:18Z",
+  "snapshot": "2026-08-19T15:22Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -192,7 +192,7 @@
       "section": "APUSH",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Wave-2 contracts survive as inputs; new admissions remain gated. Fleet motion tonight: PR #8 MERGED (main 90c57a88) and the re-minted packets verified on our side with the committed validator from post-merge main - unit 7 36/36, unit 9 18/18, zero failures; defective positions 170/244 read clean on spot-check. When the remint lands on outputs main and #7 closes, that defect class closes end to end.",
+      "value": "The filed defect on positions 170/244 is CLOSED END TO END: their issue 7 closed as complete, the re-minted content landed on the canonical outputs tree (44e4a09a), and the committed validator re-run against the LANDED bytes passes unit 7 at 36/36 and unit 9 at 18/18 with zero failures - packet hashes match the fleet's own closing-comment SHAs. Still fleet-owned: the seating PR 6 (zero reviews), the image-contract chain (#81 / PR 82) governing the 64 held posts, and the #89 receipts disposition.",
       "scope": "future article admissions",
       "evidence": [
         {
@@ -204,7 +204,8 @@
           "url": "https://github.com/ilmych/incept-agent-intake/issues/90"
         }
       ],
-      "evidence_access": "GITHUB"
+      "evidence_access": "GITHUB",
+      "observed_at": "2026-08-19T15:22Z"
     },
     {
       "claim_id": "apush.seating",
