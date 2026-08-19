@@ -49,6 +49,22 @@
       </div>
     </section>
 
+    <section aria-labelledby="recovery-posture-title">
+      <h2 id="recovery-posture-title">Recovery posture</h2>
+      <ul>
+        <li><b>Proof:</b> 2 factory-proof classes survive the audit; every other claim is input-only, re-earn-required, void, or blocked.</li>
+        <li><b>Machinery:</b> 16 hand-rolled targets are listed for approval-gated replacement or deletion. Listing is not deletion authority.</li>
+        <li><b>Execution:</b> this dashboard is a read-only status surface. It grants no authority to write course data, spend, file, mark, commit, merge, delete, deploy, or release.</li>
+        <li><b>Factory rule:</b> use committed canonical tools exactly as documented. When no route exists, return <code>BLOCKED_CONTRACT</code>; never create a local bridge.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="agent-ranges-title">
+      <h2 id="agent-ranges-title">Course recovery ranges</h2>
+      <p>These ranges estimate recovery work after each named unblock. They are not release dates and do not include another owner's latency.</p>
+      <div id="agent-course-ranges" class="agent-source-list"></div>
+    </section>
+
     <section class="agent-handoff" aria-labelledby="agent-handoff-title">
       <h2 id="agent-handoff-title">Hand off to an agent</h2>
       <p>Copy a ready-to-use instruction for a web-capable agent, or download one JSON file for an agent that needs an upload. Both actions use the current structured sources below.</p>
@@ -69,6 +85,13 @@
             <p>Authoritative standing state: stable claim ids, status, scope, exclusions, evidence, access, and row-level timestamps.</p>
           </div>
           <a class="agent-source-link" href="data.json">Open data.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Recovery audit evidence</h3>
+            <p>Durable private packet containing the 25-row damage register, decision book, three-day plan, 16-row purge manifest, source hashes, and audit runlog.</p>
+          </div>
+          <a class="agent-source-link" href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex" target="_blank" rel="noopener">Open evidence packet</a>
         </div>
         <div class="agent-source">
           <div>
@@ -141,6 +164,7 @@
 
   <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 
+  <script src="timeline.js"></script>
   <script>
     const formatTimestamp = value => {
       const date = new Date(value);
@@ -166,6 +190,7 @@
       claims_manifest: new URL('data.json', baseUrl).href,
       updates_feed: new URL('updates.json', baseUrl).href,
       integrity_manifest: new URL('hashes.json', baseUrl).href,
+      recovery_audit: 'https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex',
       overview: new URL('index.html', baseUrl).href,
       claims_explorer: new URL('claims.html', baseUrl).href,
       lessons_learned: new URL('lessons.html', baseUrl).href,
@@ -182,14 +207,18 @@
 Standing claims: ${sourceUrls.claims_manifest}
 Event chronology: ${sourceUrls.updates_feed}
 Published-byte digests: ${sourceUrls.integrity_manifest}
+Recovery audit evidence: ${sourceUrls.recovery_audit}
 Reading guide: ${sourceUrls.agent_guide}
 
 Rules:
 - data.json governs standing claims; updates.json governs event chronology.
+- This site is a read-only status surface, not execution authority.
 - Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
 - Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
 - Treat dated Markdown reports as historical context, not current standing.
-- Do not infer release, completion, or readiness from a status label alone.
+- Prepared, accepted, merged, deployed, and released are separate states.
+- Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
+- Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.
 
 Return a concise executive summary of current standing, blockers by owner, stale or unknown rows, and material evidence gaps.`;
 
@@ -202,13 +231,17 @@ Return a concise executive summary of current standing, blockers by owner, stale
         standing_claims: 'manifest (data.json)',
         event_chronology: 'updates (updates.json)',
         byte_identity: 'integrity (hashes.json)',
+        recovery_audit: 'Private SS evidence packet at source_urls.recovery_audit.',
         historical_reports: 'Dated Markdown reports are context only.'
       },
       reading_rules: [
         'Age each claim from observed_at or status_at; the manifest snapshot does not refresh an older row.',
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
         'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
-        'Do not infer release, completion, or readiness from a status label alone.',
+        'This dashboard is a read-only status surface and grants no execution authority.',
+        'Prepared, accepted, merged, deployed, and released are separate states.',
+        'Use committed factory-canonical routes; when none exists, report BLOCKED_CONTRACT rather than creating a local bridge.',
+        'Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.',
         'A matching SHA-256 digest proves published-byte identity, not factual freshness.'
       ],
       receipt_pointer_path: 'manifest.claims[].evidence[]',
@@ -220,6 +253,15 @@ Return a concise executive summary of current standing, blockers by owner, stale
     const setActionStatus = message => {
       document.getElementById('agent-action-status').textContent = message;
     };
+
+    document.getElementById('agent-course-ranges').innerHTML = AP4_TIMELINE.courses.map(course => `
+      <div class="agent-source">
+        <div>
+          <h3>${course.label}</h3>
+          <p>${course.etaNote}</p>
+        </div>
+        <strong>${course.etaDays}</strong>
+      </div>`).join('');
 
     const copyText = async text => {
       if (navigator.clipboard && window.isSecureContext) {

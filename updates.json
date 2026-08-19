@@ -1,5 +1,35 @@
 [
- {
+  {
+    "ts": "2026-08-19T05:06Z",
+    "course": "Cross",
+    "text": "Recovery evidence is now durable in the private SS evidence repository: the 25-row damage register, decision book, three-day plan, 16-row purge manifest, runlog, and source hashes. Course ranges now mean recovery work after the named unblock, not time to release; Lessons and Agent data link to the published audit packet."
+  },
+  {
+    "ts": "2026-08-19T04:13Z",
+    "course": "Cross",
+    "text": "Recovery audit supersedes the prior standings: 25 claims now classify as 2 valid factory-proof classes, 8 salvageable-input classes, 5 factory re-earns, 6 void classes, and 4 blocked unknowns. No repair, paid call, mark change, commit, filing, merge, or deploy was performed."
+  },
+  {
+    "ts": "2026-08-19T04:13Z",
+    "course": "HumGeo",
+    "text": "Honesty reset: the sealed-plan wave is the surviving factory proof, with its exact total pending re-derivation. The 741 wrapper verdicts must be re-earned through the committed poster, and the 374-pass set is input for a reviewed PR, not banked main state."
+  },
+  {
+    "ts": "2026-08-19T04:13Z",
+    "course": "APWH",
+    "text": "Honesty reset: the 933-record population is staged input and still has zero official sweep verdicts. PR #791 is CI-green and mergeable, but has no review and conflicts with the newer #591 owner recommendation; it is authority-blocked and must not merge."
+  },
+  {
+    "ts": "2026-08-19T04:13Z",
+    "course": "APUSH",
+    "text": "Honesty reset: 49 of 249 is a current ledger count, not one factory-proof cohort. The split is 13 server-strict, 36 legacy dual-review, and 11 local-path successors; future admissions remain held on #89/#90 and seating PR #6."
+  },
+  {
+    "ts": "2026-08-19T04:13Z",
+    "course": "Psych",
+    "text": "Honesty reset: the fleet-built 221-article content state is proven. The 731-of-1,105 bank scan is held, served-bank provenance is unknown, the EBQ receipt closed zero buckets, and U5 remains not green."
+  },
+  {
   "ts": "2026-08-19T01:44Z",
   "course": "HumGeo",
   "text": "HumGeo: 741 repaired items now hold official /v1/qc verdicts — 464 pass, 277 to regenerate. Caveat: the 464 are not yet on main (reviewed PR pending its verdict re-earn) and not banked; seal still waits on the fleet's #92 ruling."

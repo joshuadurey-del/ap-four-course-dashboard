@@ -1,48 +1,67 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AP World History</title><link rel="stylesheet" href="style.css"></head><body class="course-page">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AP World History</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="course-page">
 <nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="agents.html" >Agent data</a></nav><main><h1>AP World History</h1><p class="sub">Repair-first, judge-once campaign; serving in the chooser.</p>
-<section><h2>Where it is</h2><ul>
-<li><a href="claims.html#claim-apwh.local_done.walk">Render walk of 2026-08-12: bytes matched then, but the proof is not reproducible today</a> &mdash; the committed course tree it walked sits unmerged on a retired branch (kept as a tag), so main serves APWH's tree live from the platform instead of from committed bytes. Serving works and is not at risk; the walk proof does not meet the canonical-tree bar until the tree is restored or the mark is retired &mdash; that choice is with Josh (morning report). A fresh walk against the final bank is owed at the end regardless.</li>
-<li><a href="claims.html#claim-apwh.repairs.applied">Repair route COMPLETE: 506/506 repaired and banked</a> (commit 5ca80d8, push-gate verified, zero refusals across the whole campaign). The owner ruling of 08-18 settled the denominator: tagging gets one three-draw pass &mdash; the method the tagging service itself publishes &mdash; and the 65 questions that pass could not resolve moved to the rebuild queue.</li>
-<li><a href="claims.html#claim-apwh.skillcodes">Skill codes 825/933 resolved and folded</a>; 108 unresolved get their tags at re-mint on the rebuild route. Round five was stopped mid-run by owner ruling: one three-draw pass, then rebuild &mdash; retry rounds are retired.</li>
-<li><a href="claims.html#claim-apwh.structural_screen">506/933 items pass structural QC</a> on the fresh 13:21 screen — and the 427 failing are exactly the rebuild queue. Up from 0/933 at the start of repairs.</li>
-<li><a href="claims.html#claim-apwh.regen_tail">Rebuild drain COMPLETE, receipted</a>: 419 of 423 rows accepted, 4 exhausted to the disposition queue (8 rows there total, all with receipts and reopen conditions). Ran one factory call per slot on factory defaults per the 08-18 attempts ruling. Candidates await overnight tags, banking, and the one paid sweep.</li>
-</ul></section>
-<section><h2>Blocking reality</h2><ul>
-<li><b>Pool back with human geography since 09:19 KST</b> (released to us 04:23, reclaimed on their runnable work &mdash; exactly the priority guard working). Our batch resumes on pool return via the standing watcher. One binding constraint from the release note: it runs in small chunks and hands the pool back between them, because human geography work jumps ahead of ours the moment it has anything runnable.</li>
-<li>Paid sweep fires after the batch (<a href="claims.html#claim-apwh.sweep">0/933 verdicts yet, by design</a>: repair first, judge once).</li>
-<li><a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">#591</a>: four study-skill lessons still un-ingested &mdash; <b>fleet</b>. Publisher credential absent day 4 (gates canonical placement).</li>
-<li>Even after the credential lands, platform writes queue behind the TimeBack corridor's current write phase.</li>
-</ul></section>
-<section id="eta" data-course-eta="apwh"><h2>Work remaining within our control</h2><div class="eta">
-<div><span>Estimated active work</span><b data-course-eta-days>—</b></div></div><p data-course-eta-note></p>
-<details class="eta-details"><summary>Work breakdown, assumptions, and evidence</summary><div class="eta-details-body">
-<p class="eta-basis"><b>Range basis:</b> the sequential rebuild, tagging, apply, materialization, structural screen, and paid sweep total about 25 hours on a clean run and about 37 hours with retries and a heavy failure loop. The final 176-lesson walk is still unmeasured; a high content-failure rate would extend the range.</p>
+<a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="agents.html">Agent data</a></nav>
+<main>
+  <h1>AP World History</h1>
+  <p class="sub">Recovery state: staged inputs exist, but the official sweep and factory walk are not earned.</p>
 
-<h3>Definition of done (our side)</h3>
-<p class="eta-intro">All five of these have to be true. None of them is true yet.</p>
-<ul class="work-list">
-<li><b>Every question marked for repair is fixed and saved into the course file of record.</b> Repair here means writing the short explanation of why each wrong answer choice is wrong. DONE: all 506 are saved and verified pushed. The list settled at 506 (not 571) because the owner ruling moved the 65 un-taggable questions to the rebuild list, where new questions are born tagged. Runs at <span class="work-measure">33 questions an hour</span>. Basis: MEASURED at 33 questions an hour at full tilt (the average of the six busiest hours across 487 timestamped repairs; all 487 succeeded first try, no retries). This leg is CLOSED as of 13:22 on 08-18. <span class="work-estimate">Total: done.</span></li>
-<li><b>Every question marked for rebuild has been rebuilt by the factory and judged by it.</b>
-<p><b>Current state:</b> 423 active questions plus 4 quarantined (the ruling added 65); 253 rebuilt candidates are accepted so far and awaiting bank entry and the paid check. Rebuilding is how a question that is broken in a way repair cannot reach gets replaced.</p>
-<p><b>Basis:</b> 37 batches at the builder's six-worker pace, <span class="work-measure">9&ndash;14 minutes a batch</span> including its safety check. This is a dispatch-board projection, not a measurement. The retry part is verified from our runner's own settings &mdash; two attempts per question, a rejected one gets a single fresh build with different wording, and if both fail the question is reported as a shortfall rather than quietly dropped.</p>
-<p><b>Uncertainty:</b> the rejection rate is unknown. The lower number is the everything-works case; the upper is a guess about rejections that no APWH run has measured. The runner is set to 9.8 questions a batch, inside the cap of ten. No APWH rebuild has actually run yet, so this is the softest number on the page. HumGeo measured about 20 minutes per question on its hardest cases; if ours behave like those, this leg doubles.</p>
-<p><b>Shared resource:</b> this is the only leg that occupies the shared factory pool.</p>
-<span class="work-estimate">Total: 6&ndash;9 hours on a clean run, 10&ndash;12 hours allowing for retries.</span></li>
-<li><b>Every question in the final course file carries a skill tag</b> &mdash; the label saying which exam skill it tests. 825 of 933 have one saved into the file the checks actually read. By owner ruling (08-18), tagging an existing question gets exactly one three-draw pass — the method the tagging service itself publishes — and retry rounds are retired. A question the pass cannot settle is rebuilt rather than given a guessed tag; the 108 still untagged all sit in the rebuild queue and get their tags after re-minting. A wrong tag is worse than no tag. Runs at <span class="work-measure">40 questions an hour, two at a time</span> (MEASURED, three of today's runs agreeing). Every rebuilt question is brand new and needs its own tag, which is why this leg is easy to forget &mdash; it sits in the middle of the chain. <span class="work-estimate">Total: about 10.7 hours for the 427 rebuilt questions, at the measured 40/hour.</span></li>
-<li><b>The factory has run its one paid quality check across the whole course file, and its verdicts are saved.</b>
-<p><b>Current state:</b> one pass over all 933, on purpose: fix everything first, then judge once. None of the 933 has been judged yet. Any question the check fails goes back through repair or rebuild and is judged again.</p>
-<p><b>Measured basis:</b> <span class="work-measure">11.9 seconds an item</span>, including its one-second pause, from a real earlier run of 2,513 calls over 7.06 hours. We checked these were genuine factory calls: 2,499 records name the factory's check endpoint; one batch of 14 was seeded from earlier results at no cost and says so; the batch notes use the sanctioned tool's flags; and the failure codes are the factory's own. Our 933 at that rate is 3.1 hours, or about an hour with three running at once.</p>
-<p><b>Caveat:</b> the earlier items were a structural mix and many failed before the expensive language-model checks. Ours will be structurally clean, so every one runs the full content suite and costs more per call. A timed ten-item run at the start will set the honest figure.</p>
-<p><b>Correction:</b> this line was wrong twice before it was measured &mdash; first about 3 hours, then about 23. The 1&ndash;2 minute figure was a whole build-and-check cycle, not the check alone.</p>
-<p><b>Capacity:</b> this leg does not compete for build capacity. The factory code shows the check runs immediately and never enters the build queue. Calls share only the language-model spending budget, so three at once is the agreed safe limit. The earlier claim that it used build capacity is withdrawn.</p>
-<p><b>Failure-loop risk:</b> the comparable run passed 50.7% overall, but most failures were structural. Counting only content failures, roughly a third of clean items failed at least one. That could send a few hundred of our 933 back through another pass. It is the largest risk left and remains an estimate from another course.</p>
-<span class="work-estimate">Total: 3.1 hours measured as a floor, 3&ndash;5 hours as a cautious quote, one call at a time.</span></li>
-<li><b>Somebody has clicked through every lesson page against the finished course file, with saved proof.</b> The last such walk was 2026-08-12, before all of this repair work — and it was run by our own script, which by owner directive does not count as proof. The final walk runs the FACTORY walker (the w7 walkthrough chain: stage the serving root, boot the server, walk as a demo student, hash what the running server serves), so it has to be done again at the end either way. 176 lessons. Nobody recorded how long the August walk took, so this is the one line on this list with no number behind it at all. Its receipts are safe in the evidence repo and do not depend on any code branch; the serving setup used back then is preserved at a pushed tag. <span class="work-estimate">Total: UNMEASURED.</span></li>
-</ul>
-<p class="eta-exclusions"><b>Outside “our side done”:</b> three things, none of them ours to finish: the four study-skill lessons from <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">#591</a>, which the wider team has to load in; the publisher credential that has to arrive before the course can be placed in the catalogue properly; and anything that puts the course in front of students. This list covers only what sits inside our own authority, so clearing every line on it still leaves those three untouched.</p>
-</div></details></section>
-<section><h2>See it</h2><p>Registered and serving: open <a href="https://apone.inceptstore.com/c/ap-world-history-fall-2026-v1" target="_blank" rel="noopener">the course itself</a> or the <a href="https://apone.inceptstore.com/" target="_blank" rel="noopener">live course chooser</a> (<a href="https://apone.inceptstore.com/api/courses" target="_blank" rel="noopener">raw registration data</a> for agents), tree serves (HTTP 200). Not on the static /demo card list (separate catalog file). Lesson renders from the proof walk: <a href="https://drive.google.com/file/d/1gb0OGF13ar9dWhDph9GGVGmvvX3qsIaG/view" target="_blank" rel="noopener">unit 1</a> &middot; <a href="https://drive.google.com/file/d/1YSIEoYVrrqPMPMNWVMyrDHL5Ctqlf4Ps/view" target="_blank" rel="noopener">unit 2</a> &middot; <a href="https://drive.google.com/file/d/1q7eb3pln06P_WM-zWNCXidQJgNbKgAyY/view" target="_blank" rel="noopener">unit 5</a> &middot; <a href="https://drive.google.com/file/d/1R-YGBHv7NS7F7wWjR4k94XCJ9A2oMoVI/view" target="_blank" rel="noopener">study skills</a>.</p></section>
+  <section>
+    <h2>Verified now</h2>
+    <ul>
+      <li>The intended sweep population is 933 records: 506 banked rows, 369 candidate rows, and 58 disposition rows. A fresh machine-readable 369-row pack is still required before that total is executable.</li>
+      <li>Zero of the 933 records has a current official sweep verdict. The paid sweep is deliberately not started.</li>
+      <li>The folded skill tags survive as input only. Local scripts computed the majority and folded disallowed rounds, so they do not earn factory credit.</li>
+      <li>The <code>apwh.local_done</code> mark is stale: it depends on a hand-rolled walker and a retired shadow tree.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Blocking reality</h2>
+    <ul>
+      <li><b>PR #791:</b> <a href="https://github.com/InceptTrilogy/ap-one/pull/791" target="_blank" rel="noopener">CI green and mergeable</a>, but it has no review and is <b>authority-blocked</b>. Do not merge.</li>
+      <li><b>Issue #591:</b> the newer owner recommendation is to supersede the shadow tree with native governed placement. The fleet has not ruled on that recommendation.</li>
+      <li><b>Josh:</b> decide restore-versus-retire for the tree, retire the stale mark, and approve or defer the paid 933-item sweep.</li>
+      <li><b>Contract gap:</b> confirm a committed factory fold/ingestion route. If absent, file the gap; do not preserve the local fold scripts as machinery.</li>
+    </ul>
+  </section>
+
+  <section id="eta" data-course-eta="apwh">
+    <h2>Recovery work remaining</h2>
+    <div class="eta"><div><span>Estimated recovery work</span><b data-course-eta-days>—</b></div></div>
+    <p data-course-eta-note></p>
+    <details class="eta-details">
+      <summary>Work breakdown, assumptions, and evidence</summary>
+      <div class="eta-details-body">
+        <h3>Our scope complete</h3>
+        <ul class="work-list">
+          <li><b>Resolve PR #791 before touching code.</b><p>Compare the PR against the later #591 owner recommendation and current main. Produce a keep, supersede, or explicit-ruling packet. Do not comment, close, rebase, or merge from this lane.</p><span class="work-estimate">Active work: about 1–2h.</span></li>
+          <li><b>Rebuild the machine-readable sweep pack.</b><p>Prove the 369 candidates from current bytes, reconcile the 506 and 58 cohorts, and preserve one exact 933-row identity set.</p><span class="work-estimate">Active work: about 2–3h.</span></li>
+          <li><b>Run the one official sweep after approval.</b><p>Use the committed poster, pool preflight, chunks of ten or fewer, and fingerprint-bound receipts. A 100% pass rate is a stop signal, not a win.</p><span class="work-estimate">Active work: about 3h attended, plus factory runtime.</span></li>
+          <li><b>Bank passers and re-earn the walk.</b><p>Admit only fingerprint-matched passers. Run the factory w7 chain against the tree selected by the ruling; then mint status from its manifests.</p><span class="work-estimate">Active work: about 4–5h after the sweep.</span></li>
+        </ul>
+        <h3>Factory accepted</h3>
+        <ul class="work-list">
+          <li><b>Not earned.</b><p>The 933-item official sweep is the acceptance event. Staged candidates, local tags, CI green, and an open PR do not substitute for it.</p></li>
+        </ul>
+        <h3>Released and student visible</h3>
+        <ul class="work-list">
+          <li><b>Blocked on governed placement and a post-landing walk.</b><p>The four study-skills lessons remain open on #591. Release needs native placement, exact deployed-byte readback, and a dated learner walk.</p></li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/791" target="_blank" rel="noopener">PR #791</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000" target="_blank" rel="noopener">newer owner recommendation on #591</a>.</p></section>
 </main>
-<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer><script src="timeline.js"></script></body></html>
+<footer>Recovery-audited snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
+<script src="timeline.js"></script>
+</body>
+</html>

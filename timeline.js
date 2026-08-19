@@ -14,63 +14,63 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 · 10:43 KST',
+  snapshot: 'Aug 19, 2026 · recovery audit',
   courses: [
     {
       id: 'apush',
       label: 'AP US History',
       short: 'APUSH',
       color: '#c2413a',
-      x: 29,
+      x: 30,
       y: 88,
       stage: 'Build content',
-      lastCompleted: 'Last completed · Aug 19',
-      summary: 'The readability fix is confirmed: batch-35 chunk 1 settled and all nine previously exhausted positions now pass the factory text QC. But every factory-passed article came back with its images stripped (server reason: unsupported contract, 10 of 10 measured), so zero articles are admissible yet.',
-      next: 'Next · the remaining 64 posts are deliberately held until intake #90 answers the image-contract question; firing more chunks would only re-measure the strip. Wave-2 admissions resume the hour that answer lands.',
-      etaDays: '2–3 days',
-      etaNote: 'Top end is the seat\'s published cautious date (Aug 22). The whole range now rides on the fleet\'s intake #90 answer, not pool timing; zero of 249 wave-2 admissions have landed.'
+      lastCompleted: 'Recovery audit · mixed proof',
+      summary: 'The 49-of-249 ledger count is current, but it is not one uniform factory-accepted cohort: 13 admissions are server-strict, 36 are legacy dual-review, and 11 successors used a local admit path. Future admissions remain held.',
+      next: 'Next · rerun the committed ledger builder in an isolated scratch checkout, preserve the 13/36/11 split, obtain the legacy-36 label ruling, and watch intake #89/#90 plus seating PR #6. Do not post more articles while the factory image contract is unresolved.',
+      etaDays: '1–2 days',
+      etaNote: 'Work estimate, not a release promise. This covers local re-verification and decision preparation only. Factory answers, future admissions, registration, serving, and release remain separate blockers.'
     },
     {
       id: 'psych',
       label: 'AP Psychology',
       short: 'Psych',
       color: '#7c3aed',
-      x: 42,
+      x: 39,
       y: 134,
       stage: 'Build content',
-      lastCompleted: 'Last completed · Aug 17',
-      summary: 'All 221 articles are complete; the bundle was walked 221-for-221 green with receipts (our instrument — the factory walker run is queued behind the bank fill), then rebuilt and re-walked after the fleet’s U5 repair train.',
-      next: 'Next · fill 1,810 missing questions across 374 buckets on the pool turn (Psych is last in the pool chain), build the gate and practice snapshots, and walk the item legs; the U5 acceptance gate (26 findings) is fleet-owned; registration opens afterward on the owner’s conditions.',
-      etaDays: '5–6 days',
-      etaNote: 'Top end is the seat\'s published cautious date (Aug 25). Assumes essay-question yield recovers; another zero-yield result resets the estimate. Snapshot builds and item-leg walks are unmeasured; the U5 gate (26 findings re-verified today at head b19cced) is fleet-paced.'
+      lastCompleted: 'Recovery audit · content proven',
+      summary: 'The fleet-built 221-article content state is proven. The bank scan shows 731 of 1,105 buckets filled, but the served-bank provenance is unknown. The EBQ receipt admitted two items and closed zero buckets, so it does not earn serving credit.',
+      next: 'Next · verify a committed factory top-up client, obtain the owner relay, read the EBQ state back from the factory, and fix the local status verifier to open its receipt. U5 is still not green; registration stays parked.',
+      etaDays: '3–4 days',
+      etaNote: 'Work estimate, not a release promise. The clock starts after the owner relay and a canonical top-up client are confirmed. The range includes about 48 pool-hours plus local snapshot and walk work; zero EBQ yield stops and resets it.'
     },
     {
       id: 'apwh',
       label: 'AP World History',
       short: 'APWH',
       color: '#4f46b8',
-      x: 61,
+      x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'Last completed · Aug 19',
-      summary: 'The rebuild and tagging chain closed this morning: 419 of 423 accepted row-level on the drain receipt, and all 371 rebuild candidates verified — unique, coded, one per slot, zero content overlap with the 165 quarantined fingerprints. The 56-row disposition queue is fully receipted.',
-      next: 'Next · the one paid QC sweep (933 judgments: the 371 candidates first, then the 562 already banked, judged in place), then bank the passers with receipts, re-judge content fails per their dispositions, then the factory-run walk.',
-      etaDays: '1–2 days',
-      etaNote: 'Top end is the seat\'s published cautious date (Aug 21). The walk is unmeasured until the walker-scope call; the 56 pre-classified fails ride their receipts; study-skills lesson placement is fleet work outside this range.'
+      lastCompleted: 'Recovery audit · re-earn required',
+      summary: 'The staged population survives as input, not completion proof: 506 banked rows, 369 candidate rows, and 58 disposition rows await a fresh machine-readable pack and one official 933-item sweep. The folded tags and the local-done walk cannot back factory credit.',
+      next: 'Next · contain PR #791. It is CI-green and mergeable but has no review and conflicts with the newer owner recommendation to supersede the shadow tree with native governed placement. Resolve that authority first; then approve and run the paid sweep through committed factory machinery.',
+      etaDays: '2–3 days',
+      etaNote: 'Work estimate, not a release promise. The clock starts after the tree ruling and paid-sweep approval. Publisher bootstrap, study-skills placement, merge/deploy latency, and learner-visible release remain separate blockers.'
     },
     {
       id: 'humgeo',
       label: 'AP Human Geography',
       short: 'HumGeo',
       color: '#2558d8',
-      x: 80,
+      x: 58,
       y: 134,
-      stage: 'Place course',
-      lastCompleted: 'Last completed · Aug 19',
-      summary: 'Overnight, all 741 staged repairs were rescreened through the factory’s official QC: 464 passed and 277 route to regeneration. One resumable row closed negative (its recovered item failed the factory’s checks) and joins the filed class, 9 becoming 10. The two walk marks were revoked Aug 18 for hand-rolled provenance, which is why the bar reads 52 honestly.',
-      next: 'Next · land the 464 passes into main (write-back done on a pinned checkout, official verdict re-earn running, then a reviewed PR); post the promised update on the fleet filing; regenerate the 277-plus-18 queue once the per-slot route is named; assemble the local-host proof package for Ilma — demo hosting is no longer the target (owner, Aug 19).',
-      etaDays: '1–2 days',
-      etaNote: 'Covers this seat’s own work: the 464 landing and the regenerate queue. Excludes fleet latency on the filed slots’ ruling, the seal that waits on it, the cutover, and the release-flag walk — those are fleet- or owner-paced.'
+      stage: 'Validate',
+      lastCompleted: 'Recovery audit · re-earn required',
+      summary: 'The sealed-plan wave is the surviving factory proof, with its exact total scheduled for re-derivation. The 741 rescreen verdicts are not bindable to current bytes and must be re-earned. The 374 pass set survives only as input and is not banked on main.',
+      next: 'Next · use a clean factory checkout to re-derive the wave total, stage the paid 741 re-earn through committed service_qc.py, and prepare the 374-pass reviewed-PR path through repair_shortcut.py. Do not touch the polluted shortfall clone until its older 2,038-file residue is ruled.',
+      etaDays: '2–3 days',
+      etaNote: 'Work estimate, not a release promise. The clock starts after the paid re-earn and 374-apply decisions. #92, #642, release-ready, deployment, and the post-flip learner walk remain separate blockers.'
     }
   ]
 };
@@ -118,7 +118,7 @@ const AP4_TIMELINE = {
     <div class="timeline-head">
       <div>
         <h2>Where each course sits on the path to release</h2>
-        <p class="timeline-sub">One shared process. Hover, focus, or tap any point to see what it means, the latest dated evidence, and remaining work.</p>
+        <p class="timeline-sub">One shared process. Hover, focus, or tap any point for evidence and remaining work. Ranges count recovery work after the named unblock, not time to release.</p>
       </div>
       <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
     </div>
@@ -143,7 +143,7 @@ const AP4_TIMELINE = {
         <p class="timeline-detail-title"></p>
       </div>
       <div>
-        <p class="timeline-eta" hidden><span>Estimated active work within our control</span><strong></strong></p>
+        <p class="timeline-eta" hidden><span>Estimated recovery work</span><strong></strong></p>
         <p class="timeline-detail-copy"></p>
         <p class="timeline-detail-foot"></p>
         <a class="timeline-detail-link" hidden>Open course dashboard →</a>

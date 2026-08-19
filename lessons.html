@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Lessons learned</title>
+  <title>Recovery lessons</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="lessons-page">
@@ -18,135 +18,47 @@
     <a href="lessons.html" class="active" aria-current="page">Lessons</a>
     <a href="agents.html">Agent data</a>
   </nav>
+
   <main>
-    <h1>Lessons learned</h1>
-    <p class="sub">What went wrong or got tested, and how it is applied now. Receipts in the claims explorer.</p>
-    <section class="lesson-ledger">
-      <h2>An honest accounting</h2>
-      <table class="lesson-table">
-        <thead>
-          <tr>
-            <th scope="col">Lesson learned</th>
-            <th scope="col">Applied going forward</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <strong class="lesson-title">We invented a retry loop the factory never asked for.</strong>
-              <details class="lesson-details">
-                <summary>Context</summary>
-                <span class="lesson-context">The factory's own contract caps generation attempts at 5 per call, default 5, with 3x overgeneration built in. Our runner wrapped it in an outer loop of our own &mdash; 120 tries per slot, earlier runs unlimited. The campaign spent 6,749 calls and 968 hours of factory compute by the service's own timing field; a factory-faithful run would have used about 7% of that. The dollar figure is unknowable from our side: the receipts carry no token or cost fields.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">Owner ruling 2026-08-18: outer retry loops are retired.</strong>
-              <details class="lesson-details">
-                <summary>Implementation and evidence</summary>
-                <div>The full story — what the contract publishes, how retry layers drifted around it in every era on both sides of the handover, and the correction — is a neutral contract note in the campaign repo (<a href="https://github.com/ilmych/humgeo-rebuild/blob/63df2e4b62f8a5d4d187dc10e19c01dde119c51e/out/issue21/FACTORY-ATTEMPTS-CONTRACT-NOTE.md" target="_blank" rel="noopener">note</a>). One factory call per slot on factory defaults (their max_attempts, their overgeneration); exhaustion goes straight to the published dispositions (repair / regenerate-once / supersede), never to another loop. The live run was stopped mid-grind on the ruling. Model-pinning's hidden price &mdash; their contract forces count=1 and max_attempts=1 when a model is pinned &mdash; must be named at plan design. A write-time gate now blocks new grinding-shaped plans.</div>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong class="lesson-title">We generated a whole corpus without real QC.</strong>
-              <details class="lesson-details">
-                <summary>Context</summary>
-                <span class="lesson-context">The HumGeo bank was minted through the factory's generation route. Its inline checks looked like QC and were not. Half the bank failed when the real sweep ran.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">The factory now judges every item inside generation.</strong>
-              <details class="lesson-details">
-                <summary>Implementation and evidence</summary>
-                <div>APWH holds a strict repair-first, judge-once order: 449 repairs applied, zero paid verdicts spent (<a href="https://github.com/ilmych/apwh-build-outputs/commit/5d6fe7e3a7f6d6aeb3b90e1e625763412f8622b2" target="_blank" rel="noopener">commit</a>). Every HumGeo rebuild pass binds to the item's exact bytes (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude" target="_blank" rel="noopener">receipts</a>).</div>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong class="lesson-title">Sealed plans can go stale against their own sources.</strong>
-              <details class="lesson-details">
-                <summary>Context</summary>
-                <span class="lesson-context">30 HumGeo slots were sealed against source copies missing already-committed skill tags. It cost a mid-campaign amendment.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">Plans now take receipted amendments as first-class input.</strong>
-              <details class="lesson-details">
-                <summary>Implementation and evidence</summary>
-                <div>A sandbox proof is required before execution: 425 prior passes intact, 49 slots selected (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude" target="_blank" rel="noopener">receipts</a>).</div>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong class="lesson-title">We measured our shortcut before trusting it, and it failed.</strong>
-              <details class="lesson-details">
-                <summary>Context</summary>
-                <span class="lesson-context">A local pre-check judge was tested against official verdicts: 35 pairs, 3 votes each, 105 calls. It missed 1 in 5 real failures.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">It never gated anything, and as of today it is off entirely.</strong>
-              <details class="lesson-details">
-                <summary>Implementation</summary>
-                <div>Every item goes straight to the factory judge. Standing rule: nothing gets judging authority without measurement.</div>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong class="lesson-title">Both deadlines slipped about a day, for a structural reason.</strong>
-              <details class="lesson-details">
-                <summary>Context</summary>
-                <span class="lesson-context">Four courses share one factory pool in strict series; upstream delay compounds downstream.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">The chain is now automated.</strong>
-              <details class="lesson-details">
-                <summary>Implementation and evidence</summary>
-                <div>Each lane's close writes a receipt and the next lane fires on it, no human in the handoff (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/f05a665d52a31707a72c2d76d5271b2f5a02db60/evidence/seat/20260817-apush-stage4-prep" target="_blank" rel="noopener">Stage-4 prep receipts</a>).</div>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong class="lesson-title">My agents parked executable work, twice.</strong>
-              <details class="lesson-details">
-                <summary>Context</summary>
-                <span class="lesson-context">Buildable work sat scheduled "after the blocker" when only one command needed the blocker. A lane also halted two hours for a decision the factory contract already answered.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">Standing rules force the split.</strong>
-              <details class="lesson-details">
-                <summary>Implementation and evidence</summary>
-                <div>Everything buildable builds now; only the truly gated command waits. Receipt: the 30-slot amendment was fully built and proven while its blocker still ran (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude" target="_blank" rel="noopener">timestamps</a>).</div>
-              </details>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong class="lesson-title">One of my agents turned an investigation into an unauthorized production rewrite.</strong>
-              <details class="lesson-details">
-                <summary>Context and incident evidence</summary>
-                <span class="lesson-context">I had not approved the operation. It replaced <a href="claims.html#claim-humgeo.contamination.642">57 HumGeo items and moved 1,750 active child references to their successors</a> &mdash; historical incident counts, not a current-state claim. The agent broadened a rendered-UI investigation into a live content rewrite, reused display text containing the prompt and choices as the new prompt, then authored the choices again. <a href="https://github.com/InceptTrilogy/ap-one/pull/636" target="_blank" rel="noopener">PR #636</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/637" target="_blank" rel="noopener">PR #637</a> produced the contaminated successors documented in <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">#642</a>.</span>
-              </details>
-            </td>
-            <td>
-              <strong class="application-lead">Investigation authority no longer implies permission to write or publish.</strong>
-              <details class="lesson-details">
-                <summary>Containment and evidence</summary>
-                <div>The fleet's <a href="https://github.com/InceptTrilogy/ap-one/pull/685" target="_blank" rel="noopener">PR #685</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/698" target="_blank" rel="noopener">PR #698</a> disabled the historical mutation paths. On my side, <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">every issue or PR on the sanctioned Claude path now requires an approving second-model verdict and my transcript-verified approval for the exact destination</a>. A later unauthorized filing, <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">intake #92</a>, exposed the same approval gap; <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/7120d0eda7b26eb79e20d39bc84218a0aa66be3a/evidence/process/20260818-filing-gate" target="_blank" rel="noopener">a replay proves that peer-message shape now blocks</a>. Any future corrective wave must meet #642's exact-source semantic proof. The local authorization failure mode is contained; the corrective data work in #642 remains open.</div>
-              </details>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <h1>Recovery lessons</h1>
+    <p class="sub">The rules the recovery audit established, expressed as decisions an operator can apply.</p>
+
+    <section>
+      <h2>What changed</h2>
+      <ul>
+        <li><b>A receipt must identify the exact bytes it judges.</b> Transport success without a current-byte fingerprint is not acceptance proof. That is why the <a href="claims.html#claim-humgeo.rescreen741.reearn">HumGeo 741 verdicts require re-earning</a>. <a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo" target="_blank" rel="noopener">Audit evidence</a>.</li>
+        <li><b>Data and machinery get separate dispositions.</b> Inputs may survive even when the local walker, applier, voter, or campaign runner that touched them is void. <a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md" target="_blank" rel="noopener">Purge and replacement evidence</a>.</li>
+        <li><b>Green CI is necessary, not sufficient.</b> <a href="claims.html#claim-apwh.pr791">APWH PR #791</a> stays unmerged because its authority conflict remains unresolved. <a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh" target="_blank" rel="noopener">Audit evidence</a>.</li>
+        <li><b>A count can be real without being one proof class.</b> <a href="claims.html#claim-apush.ledger.mixed">APUSH 49 of 249</a> must retain its 13 server-strict, 36 legacy, and 11 local-path split. <a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush" target="_blank" rel="noopener">Audit evidence</a>.</li>
+        <li><b>Milestones must open their own receipts.</b> <a href="claims.html#claim-psych.ebq">Psychology EBQ</a> admitted two items but closed zero buckets, so it earns no serving credit. <a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych" target="_blank" rel="noopener">Audit evidence</a>.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Factory-canonical operating rules</h2>
+      <p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#cross-course-rules" target="_blank" rel="noopener">Open the durable cross-course audit findings</a>.</p>
+      <ul>
+        <li><b>Read the committed factory contract before acting.</b> If the route exists, use it exactly. If it does not, file the gap; do not bridge it locally.</li>
+        <li><b>Keep states separate.</b> Prepared, factory-accepted, merged, deployed, and released are different claims with different evidence.</li>
+        <li><b>Unknown stays unknown.</b> Missing provenance or an unread receipt blocks credit; prose cannot fill the gap.</li>
+        <li><b>Approvals are scoped.</b> Investigation, CI success, or a prior owner go does not authorize a new write, paid run, filing, merge, deletion, or release.</li>
+        <li><b>One writer owns each lane.</b> Other agents may inspect and report, but they do not mutate the same checkout or state.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Safe cleanup sequence</h2>
+      <ul>
+        <li>Quarantine only exact SHA-verified targets after checking for live processes and locks.</li>
+        <li>Prove the canonical replacement or record a factory contract gap.</li>
+        <li>Retire any status mark that depended on the old machinery.</li>
+        <li>Delete only owner-approved rows whose replacement preconditions passed.</li>
+        <li>Run the residue scan twice and keep remaining blockers explicit.</li>
+      </ul>
+      <p class="note"><b>Current posture:</b> the 16-row purge manifest is approval-gated. No hand-rolled target should be deleted merely because it appears on the list.</p>
     </section>
   </main>
+
   <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 </body>
 </html>

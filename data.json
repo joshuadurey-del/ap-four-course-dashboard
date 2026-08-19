@@ -1,746 +1,214 @@
 {
- "snapshot": "2026-08-19T05:45+09:00",
- "claims": [
-  {
-   "claim_id": "humgeo.repair759.rescreen",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-19T10:44+09:00",
-   "value": "All 741 staged 759-campaign repairs rescreened through the official /v1/qc overnight 08-18/19: 464 pass, 277 fail to the regenerate queue, 741/741 real verdicts (3 transport blips retried clean). Chunks of 10 behind fresh pool-preflight receipts, concurrency 3. Receipts: day-20260818/humgeo-rescreen/rescreen-receipts.jsonl + two manifests. Write-back of the 464 into a pinned main checkout is done (zero skips) with the committed service_qc verdict re-earn running; lands via a reviewed PR. No bank/corpus writes yet."
-  },
-  {
-   "claim_id": "humgeo.rebuild.passes",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-18T15:32+09:00",
-   "value": "462/474 slots hold current-byte official /v1/qc passes (runner's own eligibility check, re-derived 15:05 KST and quoted verbatim in the intake filing). The repin regeneration converted 11 of the 12 cleared rows before the factory redeployed mid-drain and the runner fail-closed on deploy-SHA drift, as designed. The 12 open rows are dispositioned: 9 supersede-class rows filed for fleet adjudication (intake #92, 15:07 KST), 3 rows resumable by adopting persisted factory jobs plus one official QC each (6.7-f1-a03, 7.1-f2-r03, 7.1-f3-r03) — any of the 3 that fails its QC joins the filed class on that thread",
-   "scope": "regeneration campaign slots only",
-   "excluded": [
-    "6 metadata rows (3 need repair/regen)",
-    "759-line structural cohort"
-   ],
-   "evidence": [
+  "snapshot": "2026-08-19T05:06Z",
+  "claims": [
     {
-     "type": "state-snapshot",
-     "url": "https://drive.google.com/file/d/1gJayI66bbayK0GrfsCOocZhBBgmbnWzD/view",
-     "note": "sanitized snapshot, 2026-08-17 15:00 KST"
+      "claim_id": "cross.recovery.audit",
+      "section": "Cross-course",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-19T04:13Z",
+      "value": "Recovery audit complete: 25 claims classified as 2 valid factory-proof classes, 8 salvageable-input classes, 5 factory re-earns, 6 void classes, and 4 blocked unknowns. The older dashboard standings are superseded by these dispositions.",
+      "scope": "local recovery audit and dashboard truth surface",
+      "evidence": [{"type": "audit-evidence", "location": "~/.incept/day-20260819/course-recovery-audit/", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude",
-     "commit": "b6f5f1e8f585633f16f6733f8b9b315a9426d3ac"
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_VIA_DRIVE",
-   "verification": "run_issue21_bulk_qc.py --plan <amended> --plan-only reports official_current_byte_passes_reused=462, selected=12; the runner's own _official_pass check, not the state file's status field. Disposition of the 12 verified by reading intake #92 (private intake repo; fleet + Ilma readable)"
-  },
-  {
-   "claim_id": "cross.attempts_policy",
-   "section": "Cross-course",
-   "status": "OBSERVED",
-   "settled": true,
-   "observed_at": "2026-08-18T14:57+09:00",
-   "value": "Outer retry loops around factory generation RETIRED fleet-wide by owner ruling. The factory's published policy is the request's own max_attempts (default 5, bounds 1-5; engine/api/generate_models.py:398, and live on all four request schemas in the service's openapi.json) plus 3x first-round overgeneration; after exhaustion the routes are repair, regenerate-once, or supersede — no outer loop exists. Calibration that motivated the ruling: 6,749 attempt receipts and 968 factory-compute hours on the 474-slot campaign, ~7% of it factory-faithful; dollar cost pending the Langfuse backfill. Also on record: pinning generation_model forces count=1 and max_attempts=1, trading away all factory retry machinery — a tradeoff to name at plan design, never discover mid-campaign.",
-   "scope": "all four AP courses, every future generation plan",
-   "excluded": [
-    "closing an open UNCERTAIN transaction (one QC of an already-paid record) — that is paid-work closure, not a retry"
-   ],
-   "evidence": [
-    {
-     "type": "dashboard-lesson",
-     "url": "lessons.html",
-     "note": "top ledger row, commit 098c41d"
+      "claim_id": "cross.handrolled.machinery",
+      "section": "Cross-course",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "Sixteen purge-manifest rows identify hand-rolled proof, apply, QC, fold, campaign, and top-up machinery. Nothing is deleted until row-level approval and every surviving input is covered by a canonical replacement or a filed contract gap.",
+      "scope": "local course machinery only; data classified separately",
+      "evidence": [{"type": "audit-evidence", "location": "PURGE-AND-REPLACEMENT-MANIFEST.md", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "factory-source",
-     "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/main/engine/api/generate_models.py",
-     "note": "max_attempts Field: default 5, ge=1, le=5 (line ~398 at 0182b44)"
-    }
-   ],
-   "note": "settled: an owner ruling is terminal history — dates stay true, exempt from the staleness clock. Cap-design ownership acknowledged by incept-51 in the lane log; old handoff cap mentions carry superseded banners."
-  },
-  {
-   "claim_id": "humgeo.residual.draining",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T17:37+09:00",
-   "value": "residual run concluded by owner decision after 3 non-converging slots (attempts 216/250/266 vs historical max success 105) held the writer lock; 100 accepts banked this run; full pre-stop backup sha256 5b825a65...; all remaining work rolled into the amended relaunch",
-   "scope": "runner log tail + process table",
-   "excluded": [],
-   "evidence": [
-    {
-     "type": "runner-log",
-     "url": "https://drive.google.com/file/d/13LV3wLzRCz0m5YvkFQoIgpH16OwbkJoX/view",
-     "note": "sanitized copy, 2026-08-17"
+      "claim_id": "humgeo.wave.proof",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-19T04:13Z",
+      "value": "The sealed-plan wave verdicts are the surviving HumGeo factory-proof class. The exact pass total remains scheduled for re-derivation because prior reports disagree; do not promote a final count until that verifier receipt exists.",
+      "scope": "sealed-plan regeneration wave only",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#HG-009", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/8811dd985f74b047b8d2baa01d9592cdd930d08a/claude",
-     "commit": "8811dd9",
-     "note": "conclude ceremony receipts incl. grinder trails (why the run was concluded)"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE"
-  },
-  {
-   "claim_id": "humgeo.amendment.sealed",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T00:00+09:00",
-   "value": "30-slot amendment sealed; plan sha256 91310a145f03358b03dadb7a7b9d48235b8bf628f15e3d9ef09508fe6896edbc (recomputed from bytes today); sandbox proof 425 prior passes intact / 49 slots selected",
-   "scope": "plan + sandbox proof",
-   "excluded": [
-    "execution"
-   ],
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude",
-     "commit": "d1f7902ddefa510b5e2dc970f96ecbf001b167c6"
+      "claim_id": "humgeo.rescreen741.reearn",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The 741 wrapper-produced verdicts are not accepted proof. They must be re-earned through committed scripts/service_qc.py --slot-file from a clean current checkout with fingerprint-bound receipts. This is paid work awaiting Josh's spend decision.",
+      "scope": "741 rescreen records; 464/277 lists survive only as inputs",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#HG-004", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "langfuse-trace",
-     "id": "c0b6a4f2b09a5b1494a87f474dcffd8e",
-     "url": "https://us.cloud.langfuse.com/project/cmse7zydd0wc3ad0d775r1cye/traces/c0b6a4f2b09a5b1494a87f474dcffd8e",
-     "note": "requires accepted Langfuse org invite"
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE",
-   "observed_note": "sha recomputed from bytes · date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "humgeo.amendment.execution",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "value": "amended relaunch EXITED 2026-08-18 02:38 KST: 29 of 42 converted (461/474 accepted). 13 leftovers classified: 6 revivable (adjudicated with receipted authority, conversion run fired), 7 grinder-class at/over the 120 cap (root-cause dossier in the morning)",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/8811dd985f74b047b8d2baa01d9592cdd930d08a/claude",
-     "commit": "8811dd9",
-     "note": "ceremony receipts: backup sha, atomic re-bind, plan-only preflight, amended-slot reconciliation, grinder code trails, blocked census"
+      "claim_id": "humgeo.bank374",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The 374-pass set survives as input but is not banked on main. A candidate reviewed PR must be generated through committed scripts/repair_shortcut.py; the hand-rolled apply worktree is not an admissible PR source.",
+      "scope": "374 current candidate pass records",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#HG-007", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "drive-backup",
-     "url": "https://drive.google.com/drive/folders/1Gl6s74YH-htbUHnRr3QONGzJ_VH8rRBP",
-     "note": "Drive INCEPT/humgeo-pre-stop-backup-20260817-173235 (3 files, rclone checksum-verified); archive sha256 5b825a65..."
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_VIA_DRIVE",
-   "observed_at": "2026-08-18T02:48+09:00",
-   "scope": "run exit + classification; per-slot receipts on the orchestrator lane log"
-  },
-  {
-   "claim_id": "humgeo.metadata6.qc",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "value": "all 6 metadata rows COMPLETED official /v1/qc: 3 pass (5.8-f1-r00, 5.8-f1-a00, 5.8-f2-a02), 3 FAIL (5.8-f1-r01 S6+S7, 5.8-f2-a00 C2, 5.8-f2-a01 S8). Verdicts persisted with judged fingerprints on all 6",
-   "evidence": [
-    {
-     "type": "qc-intents",
-     "url": "https://drive.google.com/file/d/10b_AYqrqVbVgBh9NXodx2QoWGVTUm9lP/view",
-     "note": "sanitized copy"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "observed_at": "2026-08-18T03:31+09:00",
-   "scope": "the 6 metadata candidate records",
-   "excluded": [
-    "repair or regeneration of the 3 failures — routes chosen (factory repair for the two single-check fails, regenerate-once on factory defaults for the multi-check fail), not yet executed"
-   ],
-   "verification": "scripts/service_qc.py --items issue21-metadata-candidates-6 --refresh (committed factory-QC runner, POST /v1/qc); re-read each record's qc.service.passed"
-  },
-  {
-   "claim_id": "humgeo.seal.manifest",
-   "section": "HumGeo",
-   "status": "BLOCKED",
-   "status_at": "2026-08-18T15:32+09:00",
-   "value": "sealed manifest of 482 records (480 active + 2 superseded), fingerprint per record — BLOCKED on the fleet's adjudication of the 9 supersede-class slots (intake #92, filed 15:07 KST): each slot ruled supersede changes the seal constant, which is fleet code (seal_issue21_apply.py), so the seal cannot assemble until that ruling lands",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/d1f7902ddefa510b5e2dc970f96ecbf001b167c6/evidence/humgeo/20260817-000500__claude__humgeo--amend30-docs/claude",
-     "note": "482 = 474 plan rows + 6 metadata + 2 superseded; target defined by the sealed amended plan (sha 91310a14...)"
-    }
-   ],
-   "evidence_access": "NONE_YET",
-   "note": "target per sealed plan; execution receipt NONE_YET"
-  },
-  {
-   "claim_id": "humgeo.repair759.staged",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-18T13:38+09:00",
-   "value": "741 of 759 structural-repair candidates staged with receipts — RE-VERIFIED unchanged at re-observation: 741 files on disk, receipts ledger reads 741 converged + 17 nonconverged-route-regenerate. NOT yet consumed: the official /v1/qc rescreens have not started (10-item pilot first, queued behind the running regeneration drain and the APWH pool turn)",
-   "scope": "staging only; no official verdicts yet",
-   "excluded": [
-    "18 non-staged (multi-check or nonconverged, dispositioned to regenerate)"
-   ],
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370/evidence/humgeo/20260816-052500__claude__humgeo--repair-docs/claude",
-     "commit": "b26d5a2ff43de8820e729c28c23e236abad3c370"
+      "claim_id": "humgeo.release",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "Release is not proven. The two walk marks are revoked; release requires the owner readiness ruling, canonical deployed-byte readback, and a fresh factory w7 walk. Intake #92 and ap-one #642 remain open dependencies.",
+      "scope": "released and student-visible state",
+      "evidence": [
+        {"type": "issue", "url": "https://github.com/ilmych/incept-agent-intake/issues/92"},
+        {"type": "issue", "url": "https://github.com/InceptTrilogy/ap-one/issues/642"}
+      ],
+      "evidence_access": "GITHUB+LOCAL_AUDIT"
     },
     {
-     "type": "langfuse-trace",
-     "id": "3403d1909af058139c970c8e304658b5",
-     "dataset": "humgeo-structural-repair-20260816",
-     "run": "final-1317kst",
-     "url": "https://us.cloud.langfuse.com/project/cmse7zydd0wc3ad0d775r1cye/traces/3403d1909af058139c970c8e304658b5",
-     "note": "requires accepted Langfuse org invite; dataset humgeo-structural-repair-20260816, run final-1317kst"
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY+SHARED_AFTER_INVITE"
-  },
-  {
-   "claim_id": "humgeo.repair759.rescreen",
-   "section": "HumGeo",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "value": "741 staged candidates through official /v1/qc after the APWH pool turn",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370/evidence/humgeo/20260816-052500__claude__humgeo--repair-docs/claude",
-     "note": "741 = staged-candidate receipts (same receipts as repair759.staged); official rescreen NONE_YET"
-    }
-   ],
-   "evidence_access": "NONE_YET"
-  },
-  {
-   "claim_id": "humgeo.gates.659",
-   "section": "HumGeo",
-   "status": "BLOCKED",
-   "status_at": "2026-08-17T18:28+09:00",
-   "blocker": "fleet",
-   "value": "all 68 HumGeo TimeBack components + 204 links MATERIALIZED with exact stored-version readback (fleet comment 2026-08-16T15:04Z); writer corridor RELEASED 2026-08-16 (sealed digest 79629e16a1b66fba08b4c07f42df7260a62e3afb0d3fd676457f9727126707a4). That catalog write COMPLETED and the corridor RELEASED 2026-08-17T06:12Z (2,070/2,070 readback_pass, sealed digest 4b303ddc..., lock absent — live thread read). The corridor is FREE; HumGeo's cutover claims it when the sealed package is ready. REMAINING: AP One gate-serving cutover, map reconciliation, deploy/readback, release_ready flip (flip authority is Josh's, per intake #72), released-tier traversal CORRIDOR SELECTION POSTED 2026-08-17: TimeBack-direct (no Platform3 bridge), owner comment 5314243106 on #659; flip criterion unchanged.",
-   "evidence": [
-    {
-     "type": "github-issue",
-     "url": "https://github.com/InceptTrilogy/ap-one/issues/659"
+      "claim_id": "apwh.sweep.pack",
+      "section": "APWH",
+      "status": "PLANNED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The intended official sweep population is 933: 506 banked rows, 369 candidate rows, and 58 disposition rows. A fresh machine-readable 369-record candidate pack is required before execution.",
+      "scope": "staged inputs only; not acceptance proof",
+      "evidence": [{"type": "audit-evidence", "location": "COURSE-RECOVERY-DECISION-BOOK.md#5", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "github-comment",
-     "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5314243106",
-     "note": "owner corridor selection, posted on explicit go"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "humgeo.contamination.642",
-   "section": "HumGeo",
-   "status": "BLOCKED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "blocker": "fleet",
-   "value": "57 successor items carried duplicate choice text at the 2026-08-13 filing; the 1,750 affected active children are the incident count measured then, not re-proven current; containment landed 2026-08-14 (commit d589d94cc3b168fbd6bff457578795a7fbd8c407); corrective wave pending",
-   "evidence": [
-    {
-     "type": "github-issue",
-     "url": "https://github.com/InceptTrilogy/ap-one/issues/642"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "humgeo.platform.visibility",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T13:21+09:00",
-   "value": "THREE-SURFACE state: HAS a /demo card (static DEMO_CATALOG) and its tree serves HTTP 200 — Ilma can open and walk it on /demo today; ABSENT from the readiness-filtered chooser /api/courses (release_ready false, #659); registry entry present in feedback_courses.json",
-   "scope": "deployed surface anchored to commit e4b03bc441e8a6870de86ca2368043016f03213e",
-   "excluded": [],
-   "evidence": [
-    {
-     "type": "github-file",
-     "url": "https://github.com/InceptTrilogy/ap-one/blob/e4b03bc441e8a6870de86ca2368043016f03213e/apps/web/src/demo/demoCatalog.ts"
+      "claim_id": "apwh.qc933",
+      "section": "APWH",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "Zero of 933 records has a current official sweep verdict. The one paid sweep awaits owner approval, a fresh pool-preflight receipt, a canonical ingestion route, and fingerprint-bound receipt coverage.",
+      "scope": "official /v1/qc acceptance sweep",
+      "evidence": [{"type": "audit-evidence", "location": "THREE-DAY-PLAN.md#day-2", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/THREE-DAY-PLAN.md"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "live-api",
-     "url": "https://apone.inceptstore.com/api/courses"
+      "claim_id": "apwh.pr791",
+      "section": "APWH",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "PR #791 is open, mergeable, and green on BFF, frontend, infrastructure, and CodeBuild. It has zero reviews and conflicts with the newer owner recommendation to supersede the shadow tree with native governed placement. Status: CI_GREEN — AUTHORITY_BLOCKED; do not merge.",
+      "scope": "APWH shadow-tree successor PR",
+      "evidence": [
+        {"type": "pull-request", "url": "https://github.com/InceptTrilogy/ap-one/pull/791"},
+        {"type": "owner-comment", "url": "https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000"}
+      ],
+      "evidence_access": "PUBLIC_GITHUB"
     },
     {
-     "type": "live-api",
-     "url": "https://apone.inceptstore.com/api/courses/ap-human-geography-fall-2026-v1/tree",
-     "result": "HTTP 200"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "apwh.repairs.applied",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-18T13:25+09:00",
-   "value": "REPAIR ROUTE COMPLETE under the post-ruling denominator: 506/506 repair-route rows repaired and banked (bank 7720da32, commit 5ca80d8, push-gate VERIFIED, 0 refused across all four applies). The owner ruling 2026-08-18 (three tries then regenerate) settled the denominator: 65 rows whose skill tags one published-method pass could not resolve flipped to the rebuild route, so the repair route closed at 506 — 504 from waves 1-2 plus the final 2 whose codes the stopped round-five pass earned before the stop.",
-   "evidence": [
-    {
-     "type": "git-commit",
-     "url": "https://github.com/ilmych/apwh-build-outputs/commit/5afcb7a0b527d0071ab3c7a578dc4976f70bac6b",
-     "commit": "5afcb7a0b527d0071ab3c7a578dc4976f70bac6b",
-     "note": "bank 93bd33ba -> 7c96b2c2; 38 applied, 449 already-applied, 0 refused, readback clean"
-    }
-   ],
-   "evidence_access": "SHARED",
-   "scope": "the repair route only; the regeneration route and the paid sweep remain"
-  },
-  {
-   "claim_id": "apwh.skillcodes",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-19T05:45+09:00",
-   "value": "Overnight main tag pass COMPLETE (383/383 fresh mints, one 3-draw pass each, 0 transport errors): 274 resolved and FOLDED into store records before any banking — canonical order holds. The 109 unresolved follow the ruling: untaggable mints superseded, re-mint wave fired 05:34 (one call per slot); their own single tag pass follows the drain. One slot hit the one-call rule (2 posts consumed) and joined the disposition queue (now 9 rows, all receipted). Measured trajectory for the owner's packet: 28.5% of fresh mints failed their one tag pass — consistent with the tagger's published weakness on APWH (topic 52 / EK 55 on their own calibration).",
-   "evidence": [
-    {
-     "type": "dry-run-receipt",
-     "note": "fold_redraw_codes.py --execute 2026-08-18 06:58 KST behind a fresh course-freshness PASS; v2 + both repair queues filled to 821; fold-redraw-receipt.json"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "scope": "ap-tagger 3-draw 2-vote agreement; unresolved are recorded, never guessed"
-  },
-  {
-   "claim_id": "apwh.regen_tail",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "status_at": "2026-08-18T19:40+09:00",
-   "value": "REBUILD DRAIN COMPLETE AND RECEIPTED (DRAIN-RECEIPT.md, ~19:35 KST): row-level of the 423-row worklist — 419 accepted (replacement minted + stored), 4 posted-and-exhausted to the disposition queue, 0 not-found (all 26 index-refused rows recovered and accepted), 0 never-called; identity sum exact. Disposition queue: 8 rows total (4 in-worklist + 4 ex-quarantine grinders), each with exhaustion receipt, the owner-ruling terminal line, and a byte-anchored reopen condition. The manifest's call-level counter is named in the receipt and quoted nowhere as a fraction. Candidates now await the overnight tag pass, banking, and the one paid sweep.",
-   "evidence": [
-    {
-     "type": "state-snapshot",
-     "note": "~/.incept/day-20260816/humgeo-pool-released.receipt, issued 2026-08-17T19:23:33Z; gate.uncertain_jobs == [], gate.no_runner_alive == true, corpus_writes 0"
+      "claim_id": "apwh.local_done",
+      "section": "APWH",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The apwh.local_done mark is not valid completion proof: it depends on a hand-rolled walker and a retired, unmerged tree. Retirement and a later factory w7 re-earn require Josh's tree ruling.",
+      "scope": "local completion mark and walk evidence",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#AW-001", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "dry-run-receipt",
-     "note": "362 worklist identity pins verified against live bank 7c96b2c2 — 362 match, 0 drift, all route=regenerate; 67 repair-routed still uncoded after r4"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "scope": "regenerate-routed items; 423 active + 4 quarantined-pending-experiment",
-   "observed_at": "2026-08-18T19:40+09:00"
-  },
-  {
-   "claim_id": "apwh.sweep",
-   "section": "APWH",
-   "status": "PLANNED",
-   "status_at": "2026-08-18T07:00+09:00",
-   "value": "paid /v1/qc sweep, 0/933 verdicts spent (deliberate: repair first, judge once). Sized ~3.1h floor at 1 worker / 3-5h cautious from the verified 11.9 s/item receipt. PRECONDITION RE-MEASURED 2026-08-18 06:59 post-fold: materialize_qc_records.py still refuses — 446 items lack distractor_rationales, 112 lack skill_codes (of 933). The skill-code gap fell 207 -> 137 -> 112 across the folds; the rationale gap needs the regeneration tail plus the remaining repair wave. QC calls do NOT consume generation pool slots (app.py:5799 synchronous handler; async_worker.py executor is generation-only), so this leg never blocks another course.",
-   "evidence": [
-    {
-     "type": "state-snapshot",
-     "note": "~/.incept/day-20260811/i7-sweep/sweep-state.json — 321 receipts, 2,513 calls, 7.06h span, verified by direct read 2026-08-17 18:52"
+      "claim_id": "apush.ledger.mixed",
+      "section": "APUSH",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-19T04:13Z",
+      "value": "The 49-of-249 ledger count is byte-current but mixed: 13 admissions are server-strict, 36 are legacy dual-review, and 11 successor records used a local admit path. Only the 13 are presently in the proven factory class.",
+      "scope": "article acceptance ledger; not course release",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#AU-001", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "code-pointer",
-     "note": "engine/api/app.py:5799 (/v1/qc synchronous, delegates inline to run_content_qc); engine/api/async_worker.py (generation-only executor) @ pin 730c875d"
+      "claim_id": "apush.admissions",
+      "section": "APUSH",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "Wave-2 contracts survive as inputs, but new admissions remain held on intake #89 and #90. Do not resume posting while the image contract and source-packet defects remain unresolved.",
+      "scope": "future article admissions",
+      "evidence": [
+        {"type": "issue", "url": "https://github.com/ilmych/incept-agent-intake/issues/89"},
+        {"type": "issue", "url": "https://github.com/ilmych/incept-agent-intake/issues/90"}
+      ],
+      "evidence_access": "GITHUB"
     },
     {
-     "type": "dry-run-receipt",
-     "note": "materialize_qc_records.py 2026-08-17 18:12: naked_counts {distractor_rationales: 446, skill_codes: 137} of 933"
-    }
-   ],
-   "evidence_access": "NONE_YET",
-   "scope": "the single paid sweep over 933 items; does NOT contend for the generation worker pool"
-  },
-  {
-   "claim_id": "apwh.local_done.walk",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-18T19:15+09:00",
-   "value": "Render walk of 2026-08-12: 176 lessons walked, bytes-exact receipts vs the committed tree AS OF THAT DATE; NO resident server. THREE limits now on record: (0) OWNER DIRECTIVE 08-18: the walk was run by OUR script (apwh_local_walk.py, in no factory repo) — hand-rolled walkers do not count as provenance; the redo runs the factory w7 walkthrough chain (w7_stage -> w7_serve_local -> w7_walkthrough -> w7_bundle_hash, verdicts from w7_common.Status). (1) the walk predates all repair/rebuild work and must be REDONE against the final bank; (2) CANON GAP found 2026-08-18 (incept-fd, byte-verified): the committed tree those receipts bind to sits unmerged on retired tag retired/apwh-study-skills-demo-serve-20260817 — absent from origin/main, so main serves APWH's tree LIVE from the platform (feedback_catalog.py:313-319: absent demo_tree_path = live reads) and the byte-exact proof is not reproducible on the canonical tree today. Serving is NOT at risk. Restore-vs-retire is Josh's morning call; ap_status deliberately left reading ?% rather than false-accepting the 60.",
-   "scope": "render walk of all lesson pages",
-   "excluded": [
-    "persistent serving"
-   ],
-   "evidence": [
-    {
-     "type": "git-commit",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/commit/483efc1",
-     "note": "walk receipts — durable, in the evidence repo, independent of any ap-one branch"
+      "claim_id": "apush.seating",
+      "section": "APUSH",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "Seating PR #6 is open and mergeable with no reviews or reported checks. It remains a factory-owned merge decision; this recovery lane does not merge it.",
+      "scope": "successor seating only",
+      "evidence": [{"type": "pull-request", "url": "https://github.com/ilmych/apush-course-build/pull/6"}],
+      "evidence_access": "PUBLIC_GITHUB"
     },
     {
-     "type": "git-tag",
-     "url": "https://github.com/InceptTrilogy/ap-one/commit/aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "the serving path used for the 08-12 walk. RETIRED 2026-08-17 to this tag, PUSHED and remote-verified (no longer local-only). CORRECTION: this evidence row previously said 'superseded by upstream ap-one main landed placement machinery (source pin 2129eb94, per STATUS.md)'. That is FALSE and was verified false: 2129eb94 is a source-content pin in ilmych/apwh-blueprint-build, not an ap-one commit, and origin/main 13501daa does not contain build_apworld_demo_tree.py, test_apwh_study_skills_demo_tree.py, or the apwh demo_tree.json. The commit was 1 unmerged commit, 5,639 insertions incl. 142 lines of tests, which is why it was tagged rather than dropped. | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 — a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY+JOSH_MACHINE_ONLY",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "apwh.demo.listed",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T13:21+09:00",
-   "value": "REGISTERED AND SERVING: present in the readiness-filtered chooser /api/courses and its tree serves HTTP 200; NOT on the static /demo card list (separate DEMO_CATALOG file)",
-   "evidence": [
-    {
-     "type": "live-api",
-     "url": "https://apone.inceptstore.com/api/courses"
+      "claim_id": "apush.platform",
+      "section": "APUSH",
+      "status": "MISSING",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "No course registration or learner-serving surface is proven. Registration, serving, and a learner walk are later stages, not implied by the build ledger.",
+      "scope": "released and student-visible state",
+      "evidence": [{"type": "audit-evidence", "location": "COURSE-RECOVERY-DECISION-BOOK.md#6", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "live-api",
-     "url": "https://apone.inceptstore.com/api/courses/ap-world-history-fall-2026-v1/tree",
-     "result": "HTTP 200"
+      "claim_id": "psych.content",
+      "section": "Psych",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-19T04:13Z",
+      "value": "The 221-article course content state is fleet-built and is the second surviving factory-proof class from the recovery audit.",
+      "scope": "course content state only; not bank acceptance or release",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-001", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "github-file",
-     "url": "https://github.com/InceptTrilogy/ap-one/blob/e4b03bc441e8a6870de86ca2368043016f03213e/apps/web/src/demo/demoCatalog.ts"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "apwh.placement.591",
-   "section": "APWH",
-   "status": "BLOCKED",
-   "status_at": "2026-08-17T18:00+09:00",
-   "blocker": "fleet",
-   "value": "SCOPE CORRECTED 2026-08-17: #591 governs FOUR study-skill lessons (A-203/A-210 length leg), not overall registration — the course is registered and serving without them. The publisher-credential-absent-day-4 claim is a separate ap-status read (seat-reported) gating canonical placement; its issue thread sits on a repo outside the org. NEW 2026-08-17: after the credential lands, APWH platform writes still queue behind the TimeBack corridor phase (see humgeo.gates.659) | 2026-08-17 18:00: the LOCAL ap-one demo-leg branch apwh/study-skills-demo-serve was retired by owner instruction and preserved as pushed tag retired/apwh-study-skills-demo-serve-20260817 (aff550ea). It was never merged and never deployed. The remote branch autopilot/i591-apwh-study-skills carries the shared demo_tree.py change but NOT build_apworld_demo_tree.py or its 142 lines of tests, and neither contains the other — whoever resumes #591 needs the tag.",
-   "evidence": [
-    {
-     "type": "github-issue",
-     "url": "https://github.com/InceptTrilogy/ap-one/issues/591"
+      "claim_id": "psych.bank",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The local scan records 731 of 1,105 buckets filled. Top-up is owner-relay held, and a committed canonical top-up client must be verified before the local driver can be retired and work resumes.",
+      "scope": "bank scan and top-up workstream",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-003", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
-     "type": "git-tag",
-     "url": "https://github.com/InceptTrilogy/ap-one/commit/aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "commit": "aff550eabaaf4c5c71325f7cf0dd2b3b338684a2",
-     "note": "retired demo-leg commit, remote-verified | URL corrected 2026-08-17 19:50: the previous /releases/tag/ form pointed at a release object that does not exist (API 404 — a tag was pushed, never a release), and the tag name contains a slash, the same ambiguity class as the branch-form defect. Now the commit, verified reachable on the remote. Tag name for restore: retired/apwh-study-skills-demo-serve-20260817."
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "apwh.structural_screen",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-18T13:25+09:00",
-   "value": "506/933 items pass structural QC and reach paid content checks, on bank 7720da32 (fresh screen 13:21 KST). The 427 fails are EXACTLY the rebuild queue — every repair-route row passes. Up from 0/933 at the start of repairs.",
-   "scope": "free structural screen only (factory run_structural_qc, import-only, pin 730c875d) against bank 7c96b2c2 — NOT a paid /v1/qc verdict and not a release signal",
-   "excluded": [
-    "paid content checks",
-    "factory /v1/qc verdicts (0/933 spent)"
-   ],
-   "evidence": [
+      "claim_id": "psych.u5",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The U5 acceptance gate is not green. The recovery audit measured 26 findings; the public issue remains open under its older 27-finding title.",
+      "scope": "U5 acceptance gate",
+      "evidence": [{"type": "issue", "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2"}],
+      "evidence_access": "PUBLIC_GITHUB+LOCAL_AUDIT"
+    },
     {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/64823839b89047e93a9eb7f33c0f08c026fb96d2/evidence/apwh/20260816-042248__fable__apwh--qc-sweep-w2/fable/window-3",
-     "commit": "64823839b89047e93a9eb7f33c0f08c026fb96d2",
-     "note": "window-3 log, screen receipts, and the two instrument fixes | URL corrected 2026-08-17 19:10: the SHA-pin conversion dropped the directory prefix, leaving path 'window-3' which does not exist at repo root. Verified the full path resolves at this commit before republishing."
-    }
-   ],
-   "notes": "Re-measured against bank 226debb2 after the wave-2 apply. Every repair-routed item now passes. The 429 still failing are precisely the regeneration route: 358 active in the tail (253 already accepted as candidates, not yet banked) + 4 quarantined + 67 rerouted. The screen counts bank state, so accepted-but-unbanked candidates still show as fails until they land."
-  },
-  {
-   "claim_id": "apwh.sweep.expected_fail_rate",
-   "section": "APWH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T18:55+09:00",
-   "value": "~1/3 of structurally-clean items expected to fail at least one CONTENT check on first sweep",
-   "scope": "estimate from a different course's items, not a measurement of APWH's",
-   "excluded": [
-    "structural failures (cannot recur: our items must be structurally clean before the sweep starts)"
-   ],
-   "evidence": [
+      "claim_id": "psych.ebq",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The EBQ receipt records two items admitted and zero buckets closed. The old milestone credit is not accepted; direct factory readback and a local verifier that actually opens the receipt are required.",
+      "scope": "EBQ milestone only",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-002", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+    },
     {
-     "type": "state-snapshot",
-     "note": "same 08-12 sweep state: 2,513 judged, 1,274 passed (50.7%); fail-code hits 805 structural vs 668 content. The factory gates content behind structure, so every content hit came from a structurally-clean item."
-    }
-   ],
-   "notes": "This is the largest remaining risk to the 08-21 date. Codes double-count per item, so ~1/3 is an upper bound on the item share."
-  },
-  {
-   "claim_id": "apush.ledger",
-   "section": "APUSH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T10:00+09:00",
-   "value": "49/249 article positions admitted; ap-status 36%",
-   "evidence": [
+      "claim_id": "psych.provenance",
+      "section": "Psych",
+      "status": "MISSING",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The provenance of the 1,105 served-bank buckets is unknown while the authoring repository reports item generation not started. Keep the denominator qualified until the fleet answers.",
+      "scope": "served bank provenance",
+      "evidence": [{"type": "audit-evidence", "location": "DAMAGE-REGISTER.jsonl#PS-004", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+    },
     {
-     "type": "github-file",
-     "url": "https://github.com/ilmych/apush-course-build/blob/main/STATUS.md"
+      "claim_id": "psych.registration",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "status_at": "2026-08-19T04:13Z",
+      "value": "The registration branch is parked, not open or released. It opens only after U5 is green, the bank is full, snapshots are walked, and Josh gives the go.",
+      "scope": "registration and learner visibility",
+      "evidence": [{"type": "audit-evidence", "location": "COURSE-RECOVERY-DECISION-BOOK.md#7", "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"}],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL"
     }
-   ],
-   "evidence_access": "SHARED",
-   "observed_note": "seat-reported morning read"
-  },
-  {
-   "claim_id": "apush.batch34",
-   "section": "APUSH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T00:00+09:00",
-   "value": "74 authored+gated wave-2 CONTRACTS (not articles — the factory writes articles at Stage 4); all 8 chunk manifests re-validated today",
-   "scope": "contracts only",
-   "excluded": [
-    "article bytes, which do not exist yet"
-   ],
-   "evidence": [
-    {
-     "type": "git-commit",
-     "url": "https://github.com/ilmych/apush-build-outputs/commit/7846cd754bb2ab733afaa996155a45a52fc17a4a",
-     "branch": "receipts/20260812-chunk1-fixround",
-     "branch_head": "23b75c25bf8e27ab8769013eeb026cd83467293e"
-    }
-   ],
-   "evidence_access": "SHARED",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "apush.posting",
-   "section": "APUSH",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "value": "74 contracts post on APUSH's factory-pool turn (third in the serial order)",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/ilmych/apush-build-outputs/tree/23b75c25bf8e27ab8769013eeb026cd83467293e",
-     "note": "74 = gated wave-2 contracts staged at batch-34 commit 7846cd75; posting receipt NONE_YET"
-    }
-   ],
-   "evidence_access": "NONE_YET"
-  },
-  {
-   "claim_id": "apush.intake90",
-   "section": "APUSH",
-   "status": "BLOCKED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "blocker": "factory owners",
-   "value": "126 positions wait on factory visual-class capability; no reply yet (<48h)",
-   "evidence": [
-    {
-     "type": "github-issue",
-     "url": "https://github.com/ilmych/incept-agent-intake/issues/90"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "apush.intake89",
-   "section": "APUSH",
-   "status": "BLOCKED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "blocker": "factory owners",
-   "value": "2 positions (170, 244) on defective source packets",
-   "evidence": [
-    {
-     "type": "github-issue",
-     "url": "https://github.com/ilmych/incept-agent-intake/issues/89"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "apush.sample_article",
-   "section": "APUSH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T00:00+09:00",
-   "value": "strongest ADMITTED article (position 232, KC-9.1.I, strict-QC PASS + manual image review PASS) published as a Google Doc beside the report; one presentation-only change noted in its provenance comment (S3 image URL swapped for local PNG)",
-   "evidence": [
-    {
-     "type": "drive-doc",
-     "url": "https://docs.google.com/document/d/1d0mvskgAcpLmyrUNNw_2385pXcDdr_1fIzXgSnHUZDo/edit"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "apush.platform.absent",
-   "section": "APUSH",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T13:21+09:00",
-   "value": "nothing platform-side: no registry entry, no /demo card, absent from the chooser, tree HTTP 404 — build-only from the platform's perspective",
-   "evidence": [
-    {
-     "type": "live-api",
-     "url": "https://apone.inceptstore.com/api/courses/ap-us-history-fall-2026-v1/tree",
-     "result": "HTTP 404"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "psych.articles",
-   "section": "Psych",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T00:00+09:00",
-   "value": "221/221 articles complete, every EK covered (U5's 54 landed 2026-08-16)",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/564d0866336d71bb467b28d02d1d123e4adf82ee/evidence/psych/20260817-local-host/claude",
-     "commit": "564d086",
-     "note": "re-walked after the fleet repair train: 221/221 green at rebuilt bundle"
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "psych.topic33.empty",
-   "section": "Psych",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T00:00+09:00",
-   "value": "topic 3.3 (Gender and Sexual Orientation) carries 0 lessons BY DESIGN: no EK record maps to 3.3 (coverage invariant, course repo DOWNSTREAM_NOTES section 1); an approved topic-3.3 lesson asset exists on the shelf; a 2026-08-09 ruling parked adding it as a separate curriculum-authoring decision; verified today: exactly one empty topic in the served tree",
-   "scope": "served course tree",
-   "excluded": [],
-   "evidence": [
-    {
-     "type": "repo-doc",
-     "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/cfa166afe6345c28d331bb809a3ac26b3655bf6f/DOWNSTREAM_NOTES.md#L117-L118",
-     "note": "sha-pinned coverage invariant"
-    }
-   ],
-   "evidence_access": "SHARED",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "psych.local_serving",
-   "section": "Psych",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T00:00+09:00",
-   "value": "boot-on-demand serving proven: the real BFF app booted in-process over the assembled bundle (262 components); 221/221 article student-views served; tree exact; zero key leaks; 246 receipts; reproducible on one documented command (WALK-SUMMARY.md in the evidence branch)",
-   "scope": "article-serving paths only",
-   "excluded": [
-    "gate paths",
-    "practice paths — bank-gated, unmeasured"
-   ],
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/564d0866336d71bb467b28d02d1d123e4adf82ee/evidence/psych/20260817-local-host/claude",
-     "commit": "564d086",
-     "note": "re-walked after the fleet repair train: 221/221 green at rebuilt bundle"
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "psych.bank.shortfall",
-   "section": "Psych",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-17T09:00+09:00",
-   "value": "1,810 items short across 374 buckets (221 evidence-based-FRQ + 147 article-analysis + 6 MCQ)",
-   "evidence": [
-    {
-     "type": "admin-dry-run",
-     "url": "https://drive.google.com/file/d/1V6K5DdaPCfSH4vSeMhYqiWuS2r4dSVWa/view",
-     "note": "headline + all 374 bucket rows, counts only"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "observed_note": "admin dry_run"
-  },
-  {
-   "claim_id": "psych.fill",
-   "section": "Psych",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "value": "bank fill on Psych's pool turn (last in the serial order)",
-   "evidence": [],
-   "evidence_access": "NONE_YET"
-  },
-  {
-   "claim_id": "psych.ebq.zero_yield",
-   "section": "Psych",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-11T00:00+09:00",
-   "value": "evidence-based-FRQ generation produced 0 usable items in 10 passes; fresh measurement is PLANNED on the first two fill cycles; 221 of the 374 short buckets need this generator",
-   "evidence": [
-    {
-     "type": "verify-summaries",
-     "url": "https://drive.google.com/file/d/1ZzE3hohbc_mPQIx9-18vprBCkq8NYG6z/view",
-     "note": "chunk summaries + standing low-yield flag"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "observed_note": "date-only in source; midnight assumed"
-  },
-  {
-   "claim_id": "psych.u5gate",
-   "section": "Psych",
-   "status": "BLOCKED",
-   "blocker": "fleet (repair assigned)",
-   "value": "U5 acceptance gate: 26 findings, repair actively landing (fleet repair train merged mid-day, course repo PRs #3-#11; fresh gate run at HEAD cfa166af — per-article FK and both CED distribution classes fixed; remaining: skill-assignment + unit-median FK)",
-   "evidence": [
-    {
-     "type": "github-issue",
-     "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2"
-    }
-   ],
-   "evidence_access": "SHARED",
-   "observed_at": "2026-08-17T15:20+09:00"
-  },
-  {
-   "claim_id": "psych.registration",
-   "section": "Psych",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T15:54:30+09:00",
-   "value": "PARKED BY OWNER RULING (no repo noise), not a blocker: the prepared branch f7b40cca on InceptTrilogy/ap-one (builder + bundle + registration entry, body gate-passed) stays staged; it opens as ONE complete-course PR when three conditions hold — U5 gate green, bank full, gate/practice snapshots walked",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "id": "f7b40cca on InceptTrilogy/ap-one",
-     "note": "staged registration branch"
-    }
-   ],
-   "evidence_access": "SHARED"
-  },
-  {
-   "claim_id": "cross.pool_chain",
-   "section": "Cross-course",
-   "status": "PLANNED",
-   "status_at": "2026-08-17T13:48:21+09:00",
-   "value": "serial factory-pool order: HumGeo close-out, then APWH 362 + sweep, then APUSH 74, then Psych fill; each handoff writes a receipt the next lane fires on; Stage-4 prep receipts already OBSERVED",
-   "evidence": [
-    {
-     "type": "git-branch",
-     "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/f05a665d52a31707a72c2d76d5271b2f5a02db60/evidence/seat/20260817-apush-stage4-prep",
-     "commit": "f05a665d52a31707a72c2d76d5271b2f5a02db60"
-    }
-   ],
-   "evidence_access": "ILMA_HUMAN_ONLY"
-  },
-  {
-   "claim_id": "cross.judge.retired",
-   "section": "Cross-course",
-   "status": "OBSERVED",
-   "observed_at": "2026-08-16T00:00+09:00",
-   "value": "local pre-check judge measured against official verdicts: 35 pairs x 3 votes, 105 calls, 0 errors; best fail-recall 80% strict / 70% majority; never gated anything; owner turned it off entirely on 2026-08-17. The follow-up attribution ask was WITHDRAWN as moot on 2026-08-17 (local judge retired; official verdict is the contract regardless of serving model). SETTLED 2026-08-18: terminal history (measurement 08-16, owner retirement ruling 08-17T12:11 KST) — the judge is off permanently; there is nothing to re-observe, so this row is exempt from the 48h staleness clock while keeping its true dates",
-   "scope": "35-pair sample",
-   "excluded": [],
-   "evidence": [
-    {
-     "type": "lane-log-excerpt",
-     "url": "https://drive.google.com/file/d/195jOefAPOBzY6eQiljcCCNEHRk_NFScx/view",
-     "note": "judge rulings excerpt, sanitized"
-    }
-   ],
-   "evidence_access": "SHARED_VIA_DRIVE",
-   "observed_note": "measurement date-only, midnight assumed; retirement ruling 2026-08-17T12:11+09:00",
-   "settled": true
-  },
-  {
-   "claim_id": "humgeo.pin12.staged",
-   "section": "HumGeo",
-   "status": "OBSERVED",
-   "blocker": "owner",
-   "value": "RESOLVED by the factory's own code, not by a decision: the seal refuses non-plan-bound records fail-closed and no re-stamp route exists (the origin pin is written at generation time), so the staged pin-only amendment was WITHDRAWN as the wrong instrument. The 12 results were cleared (receipts archived as -preamendment-*), rows removed from state, and the slots regenerated until the 08-18 owner ruling retired outer retry loops and stopped the run; their final disposition is 9 filed for fleet adjudication (intake #92) plus 3 adoption-resumable. Live source bytes were verified equal to the amended plan pins on every row before anything was touched",
-   "evidence": [
-    {
-     "type": "staged-draft",
-     "location": "day-20260818/humgeo-pin-amendment/record-pin-amendment-12-DRAFT.json (orchestrator machine; publishes to the evidence repo on owner approval)",
-     "note": "pin-only, 12 records, invariance checks recorded in the draft"
-    }
-   ],
-   "evidence_access": "NONE_YET",
-   "observed_at": "2026-08-18T15:32+09:00",
-   "verification": "reset ledger issue21-stale-pin-reset-20260818.json in the campaign folder; reset_stale_pin_rows.py derives the row list from the runner's own _official_pass, never a hardcoded list"
-  }
- ]
+  ]
 }

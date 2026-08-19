@@ -1,38 +1,67 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AP Human Geography</title><link rel="stylesheet" href="style.css"></head><body class="course-page">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AP Human Geography</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="course-page">
 <nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" class="active" aria-current="page">HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="agents.html" >Agent data</a></nav><main><h1>AP Human Geography</h1><p class="sub">Bank rebuild campaign + fleet release gates.</p>
-<section><h2>Where it is</h2><ul>
-<li>Bank rebuild <a href="claims.html#claim-humgeo.rebuild.passes">462/474 seal-ready</a> (post-drain; 12 of those point at the pre-amendment version of the item they replace, so they do not count). The stalled residual run was <a href="claims.html#claim-humgeo.residual.draining">concluded 08-17 by owner decision</a> (3 non-converging slots held the writer lock).</li>
-<li><a href="claims.html#claim-humgeo.amendment.sealed">30-slot amendment</a> sealed and proven; the <a href="claims.html#claim-humgeo.amendment.execution">amended relaunch is LIVE</a> covering all 42 remaining slots (120-attempt cap, ceremony <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/8811dd985f74b047b8d2baa01d9592cdd930d08a/claude" target="_blank" rel="noopener">receipts</a>).</li>
-<li>Then: <a href="claims.html#claim-humgeo.metadata6.qc">6 metadata rows</a>, assembly, validation, sealed <a href="claims.html#claim-humgeo.seal.manifest">482-record manifest</a>.</li>
-<li><a href="claims.html#claim-humgeo.repair759.staged">741/759 structural-repair candidates staged</a> (<a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/b26d5a2ff43de8820e729c28c23e236abad3c370/evidence/humgeo/20260816-052500__claude__humgeo--repair-docs/claude" target="_blank" rel="noopener">receipts</a>).</li>
-</ul></section>
-<section><h2>Blocking reality</h2><ul>
-<li><a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">#659</a>: <a href="claims.html#claim-humgeo.gates.659">68 components + 204 links materialized 08-16</a>; remaining = AP One serving cutover and deploy/readback (<b>fleet</b>), then the release_ready flip (<b>Josh's authority</b>, per intake #72). The shared TimeBack writer corridor is FREE as of 08-17 06:12 GMT (the other course's catalog write completed with full readback); HumGeo's cutover claims it when the sealed package is ready.</li>
-<li><a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">#642</a>: <a href="claims.html#claim-humgeo.contamination.642">57 items with duplicate choice text; 1,750 children affected as measured at the 08-13 filing (historical incident count, not re-proven current)</a> &mdash; <b>fleet</b>.</li>
-<li>Corpus-apply go after seal &mdash; <b>Josh</b>.</li>
-</ul></section>
-<section id="eta" data-course-eta="humgeo"><h2>Work remaining within our control</h2><div class="eta">
-<div><span>Estimated active work</span><b data-course-eta-days>—</b></div></div><p data-course-eta-note></p>
-<details class="eta-details"><summary>Work breakdown, assumptions, and evidence</summary><div class="eta-details-body">
-<h3>Definition of done (our side)</h3>
-<ul class="work-list">
-<li><b>Where the seal actually stands (2026-08-18 15:1x KST).</b>
-<p><b>Current state:</b> 462 of 474 slots hold current-byte official factory QC passes. The regeneration run stopped when the owner retired outer retry loops. The factory's own policy &mdash; <code>max_attempts</code> 1–5 plus first-round overgeneration &mdash; is now the only retry machinery; our 120-attempt loop was our invention and is retired.</p>
-<p><b>Remaining:</b> 9 slots filed to the fleet for supersede-class adjudication (<a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">intake #92</a>; the 480-active + 2-superseded seal constant is fleet code); 3 slots resumable from persisted factory jobs without new generation; 3 failed metadata rows (repair × 2, regenerate-once × 1, then official QC); the 741 rescreens (ten-item pilot first, queued behind APWH's pool turn); then assemble, validate, and seal with owner notice.</p>
-<p><b>Estimate:</b> deliberately absent until intake #92 is ruled because the seal shape depends on it.</p></li>
-<li><b>The 741 staged structural repairs have been through official factory QC.</b>
-<p><b>Measured basis:</b> <span class="work-measure">11.9 seconds per item</span> on the 08-12 receipt, derived from 220 batches recording their own durations (1,614 items, 19,215s). The earlier 10.2-second reading silently included 14 never-called seed rows; the earlier 1&ndash;2 minute figure covered the full generate-plus-QC cycle, not QC alone.</p>
-<p><b>Caveat:</b> structurally clean items run all 14 content checks, so they cost more than that floor. A ten-item timed pilot will set the honest rate.</p>
-<p><b>Queue and risk:</b> the board verified on 08-17 that QC does not consume generation-pool slots, so this leg can start once the regeneration work exits. From the same receipt, roughly a third of structurally clean items may fail a content check, so about 250 of the 741 could route to repair-or-rebuild dispositions. That follow-on sizing is not included in the estimate.</p>
-<span class="work-estimate">Total: cautious 2–6h at concurrency 3, the measured-safe level.</span></li>
-<li><b>The serving cutover is receipted.</b> Through the TimeBack writer corridor with all 68 governed gates preserved, plus deploy and readback receipts. Basis: today's 2,070-operation catalog write ran <span class="work-measure">about two hours end to end</span> with full readback; ours is roughly a seventh of that size, padded for gate-preservation checks. The corridor is free and the selection is posted on #659: TimeBack-direct, no Platform3 bridge. <span class="work-estimate">Total: ~2–4h.</span></li>
-<li><b>The course walk, dated.</b> The /demo card and serving tree were last verified 2026-08-17 against the CURRENT (pre-apply) bank. A fresh walk against the applied bank is owed the moment the corpus apply runs — that walk is the proof the sealed records actually serve. <span class="work-estimate">Total: ~1h.</span></li>
-</ul>
-<p class="eta-basis"><b>Range basis:</b> the known seal, rescreen, cutover, and walk total about 13–19 hours. Factory error weather and any repair/rebuild loop triggered by the rescreen are unmeasured; if either creates new work, the range must be recalculated.</p>
-<p class="eta-exclusions"><b>Outside “our side done”:</b> writing the sealed records into the live bank (the corpus apply — the owner's explicit go), the release_ready flip (the owner's act, per intake #72), and the released-tier walkthrough that follows the flip. Done here means everything within our authority is finished and receipted; it does not mean students see it.</p>
-</div></details></section>
-<section><h2>See it</h2><p><a href="https://apone.inceptstore.com/demo" target="_blank" rel="noopener">Open the /demo page</a> and pick the AP Human Geography card &mdash; visible and walkable today. Its tree serves (HTTP 200). Still absent from the released chooser until release_ready flips. Rebuild receipts: <a href="https://github.com/joshuadurey-del/ap-ss-evidence/tree/b6f5f1e8f585633f16f6733f8b9b315a9426d3ac/evidence/humgeo/20260816-004715__claude__humgeo--adoption-verifications/claude" target="_blank" rel="noopener">verification branch</a>.</p></section>
+<a href="index.html">Overview</a><a href="humgeo.html" class="active" aria-current="page">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="agents.html">Agent data</a></nav>
+<main>
+  <h1>AP Human Geography</h1>
+  <p class="sub">Recovery state: factory re-earn required before banking or release credit.</p>
+
+  <section>
+    <h2>Verified now</h2>
+    <ul>
+      <li>The sealed-plan wave has the course's surviving factory proof. Its exact pass total is being re-derived because two prior reports disagree.</li>
+      <li>The 741-item rescreen result is <b>not</b> accepted proof: its receipts are not fingerprint-bound to current bytes and the poster came from a divergent worktree.</li>
+      <li>The 374-pass set survives as input for a reviewed PR. It is not banked on main and cannot be promoted directly from the hand-rolled apply worktree.</li>
+      <li>Both old walk marks remain revoked. A fresh factory walk is impossible until the release-ready ruling lands.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Blocking reality</h2>
+    <ul>
+      <li><b>Josh:</b> approve or defer the paid 741-item factory re-earn; approve the 374-pass reviewed-PR path; decide release-ready timing.</li>
+      <li><b>Josh:</b> decide whether to preserve or discard the roughly 2,038 older modified files in the polluted shortfall clone. No cleanup runs before that ruling.</li>
+      <li><b>Factory:</b> intake #92 remains open for the seal/supersede ruling; <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">ap-one #642</a> remains contained and explicitly carries no retry authority.</li>
+      <li><b>Contract gap:</b> no committed factory route currently regenerates an arbitrary slot list. File the gap; do not create another local runner.</li>
+    </ul>
+  </section>
+
+  <section id="eta" data-course-eta="humgeo">
+    <h2>Recovery work remaining</h2>
+    <div class="eta"><div><span>Estimated recovery work</span><b data-course-eta-days>—</b></div></div>
+    <p data-course-eta-note></p>
+    <details class="eta-details">
+      <summary>Work breakdown, assumptions, and evidence</summary>
+      <div class="eta-details-body">
+        <h3>Our scope complete</h3>
+        <ul class="work-list">
+          <li><b>Re-derive the sealed-wave total.</b><p>Run the named verifier from clean current factory bytes and preserve its receipt. Until then, the wave is proven but its exact total is not final.</p><span class="work-estimate">Active work: about 1–2h.</span></li>
+          <li><b>Re-earn all 741 verdicts through the committed poster.</b><p>Use <code>scripts/service_qc.py --slot-file</code> from a clean checkout, in chunks of ten behind pool preflight, retaining current-byte fingerprints. This is paid work and does not start without approval.</p><span class="work-estimate">Active work: about 3–5h attended, plus factory runtime.</span></li>
+          <li><b>Prepare the 374-pass banking change through the factory applier.</b><p>Generate the candidate PR path with committed <code>scripts/repair_shortcut.py</code>. Never use the hand-rolled apply worktree as the PR source.</p><span class="work-estimate">Active work: about 3–4h before review.</span></li>
+          <li><b>Finish the regeneration-gap packet.</b><p>Reconcile the cohort after the fresh re-earn, fill the filing placeholders, and use the existing filing gate. No substitute runner is permitted.</p><span class="work-estimate">Active work: about 2–3h.</span></li>
+        </ul>
+        <h3>Factory accepted</h3>
+        <ul class="work-list">
+          <li><b>Seal and corrective-wave acceptance remain external.</b><p>Track intake #92 and ap-one #642. Do not attach an ETA to another owner's work.</p></li>
+        </ul>
+        <h3>Released and student visible</h3>
+        <ul class="work-list">
+          <li><b>Not proven.</b><p>Release requires the owner flip, exact deployed-byte readback, and a dated factory walk. A PR, merge, deploy, or local demo alone is not release proof.</p></li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">seal/supersede ruling</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">contained corrective-wave issue</a>.</p></section>
 </main>
-<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer><script src="timeline.js"></script></body></html>
+<footer>Recovery-audited snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
+<script src="timeline.js"></script>
+</body>
+</html>
