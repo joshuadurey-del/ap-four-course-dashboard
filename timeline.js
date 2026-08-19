@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 · recovery audit',
+  snapshot: 'Aug 19, 2026 pm · orchestrated recovery run',
   courses: [
     {
       id: 'apush',
@@ -24,11 +24,11 @@ const AP4_TIMELINE = {
       x: 30,
       y: 88,
       stage: 'Build content',
-      lastCompleted: 'Recovery audit · mixed proof',
-      summary: 'The 49-of-249 ledger count is current, but it is not one uniform factory-accepted cohort: 13 admissions are server-strict, 36 are legacy dual-review, and 11 successors used a local admit path. Future admissions remain held.',
-      next: 'Next · rerun the committed ledger builder in an isolated scratch checkout, preserve the 13/36/11 split, obtain the legacy-36 label ruling, and watch intake #89/#90 plus seating PR #6. Do not post more articles while the factory image contract is unresolved.',
+      lastCompleted: 'Ledger re-verified · 49/249 builder-receipted',
+      summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
+      next: 'Next · watch intake #90 (walls 64 held posts and 124 positions, zero fleet replies), intake #89 (our 48-hour ping posted 2026-08-19), and seating PR #6 (owner-lane merge). No paid APUSH packet is sanctioned.',
       etaDays: '1–2 days',
-      etaNote: 'Work estimate, not a release promise. This covers local re-verification and decision preparation only. Factory answers, future admissions, registration, serving, and release remain separate blockers.'
+      etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
     },
     {
       id: 'psych',
@@ -38,11 +38,11 @@ const AP4_TIMELINE = {
       x: 39,
       y: 134,
       stage: 'Build content',
-      lastCompleted: 'Recovery audit · content proven',
-      summary: 'The fleet-built 221-article content state is proven. The bank scan shows 731 of 1,105 buckets filled, but the served-bank provenance is unknown. The EBQ receipt admitted two items and closed zero buckets, so it does not earn serving credit.',
-      next: 'Next · verify a committed factory top-up client, obtain the owner relay, read the EBQ state back from the factory, and fix the local status verifier to open its receipt. U5 is still not green; registration stays parked.',
-      etaDays: '3–4 days',
-      etaNote: 'Work estimate, not a release promise. The clock starts after the owner relay and a canonical top-up client are confirmed. The range includes about 48 pool-hours plus local snapshot and walk work; zero EBQ yield stops and resets it.'
+      lastCompleted: 'Factory top-up run · load-guarded at zero',
+      summary: 'The committed factory top-up Lambda is confirmed as the only sanctioned client and was invoked today: a dry run, then one bounded real run capped at 4 jobs. The live scan confirms 374 of 1,105 buckets underfilled. The factory worker reserve deferred dispatch to zero because fleet jobs occupy the pool right now. Local drivers are purged, including the day-20260811 twins, and the provenance ask is filed as course issue #14.',
+      next: 'Next · retry the bounded top-up when the factory pool frees, verify through CloudWatch plus a dry-run re-scan, and watch issue #14 and the U5 findings (fleet-owned). Registration stays parked.',
+      etaDays: '2–4 days',
+      etaNote: 'Work estimate, not a release promise. The owner relay cleared 2026-08-19 so the clock is running; the range covers pool retries, top-up hours, and local snapshot work. U5 repair and registration are fleet-gated and excluded.'
     },
     {
       id: 'apwh',
@@ -52,11 +52,11 @@ const AP4_TIMELINE = {
       x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'Recovery audit · re-earn required',
-      summary: 'The staged population survives as input, not completion proof: 506 banked rows, 369 candidate rows, and 58 disposition rows await a fresh machine-readable pack and one official 933-item sweep. The folded tags and the local-done walk cannot back factory credit.',
-      next: 'Next · contain PR #791. It is CI-green and mergeable but has no review and conflicts with the newer owner recommendation to supersede the shadow tree with native governed placement. Resolve that authority first; then approve and run the paid sweep through committed factory machinery.',
-      etaDays: '2–3 days',
-      etaNote: 'Work estimate, not a release promise. The clock starts after the tree ruling and paid-sweep approval. Publisher bootstrap, study-skills placement, merge/deploy latency, and learner-visible release remain separate blockers.'
+      lastCompleted: 'Fleet ruled #591 · PR #791 closed unmerged',
+      summary: 'The fleet ruled native governed placement authoritative on issue #591 and closed PR #791 unmerged itself (2026-08-19T06:35Z, verified live); nothing further is needed from our lane on that thread. The 933-item population reconciles exactly (506 banked, 369 candidates, 58 disposition rows). The honest pre-sweep state stands: 933 items without current receipts and 427 structural fails. Which acceptance instrument judges the recovered cohort is a fleet choice. Our purge rows are quarantined and the stale local-done mark is retired.',
+      next: 'Next · watch the native-publish chain on #591 (the intake autopilot is actively working it) and the acceptance-instrument answer. Josh retracted the fleet ask, so the open question stays recorded, not filed. Nothing is runnable from our side today.',
+      etaDays: '2–4 days',
+      etaNote: 'Entirely fleet-paced: publisher bootstrap (#2727), native placement, and the acceptance instrument belong to the fleet. The range is a watch window, not our work estimate.'
     },
     {
       id: 'humgeo',
@@ -66,11 +66,11 @@ const AP4_TIMELINE = {
       x: 58,
       y: 134,
       stage: 'Validate',
-      lastCompleted: 'Recovery audit · re-earn required',
-      summary: 'The sealed-plan wave is the surviving factory proof, with its exact total scheduled for re-derivation. The 741 rescreen verdicts are not bindable to current bytes and must be re-earned. The 374 pass set survives only as input and is not banked on main.',
-      next: 'Next · use a clean factory checkout to re-derive the wave total, stage the paid 741 re-earn through committed service_qc.py, and prepare the 374-pass reviewed-PR path through repair_shortcut.py. Do not touch the polluted shortfall clone until its older 2,038-file residue is ruled.',
-      etaDays: '2–3 days',
-      etaNote: 'Work estimate, not a release promise. The clock starts after the paid re-earn and 374-apply decisions. #92, #642, release-ready, deployment, and the post-flip learner walk remain separate blockers.'
+      lastCompleted: 'Honest re-earn measured · 0 of 374 bankable',
+      summary: 'A clean worktree at origin/main measured the 374-slot re-earn honestly: 373 records fail two fatal structural checks at once (S2 plus D1), which the factory repair engine refuses by rule, so they route to the regeneration cohort. The one repairable record (D4-only) is blocked on an invalid Anthropic key. A known-good wave candidate passes the same battery fresh, so the judge is healthy and the failures are real. Paying for the 741 re-earn would buy failures; regeneration is the honest route. The Aug-12 uncommitted set (classified: metadata-only) is preserved on a pushed branch and the i7 branch is verified clean.',
+      next: 'Next · fold the 373 into the regeneration cohort re-derivation (the filing stays parked pending three unresolved rows and Josh text), rotate the Anthropic key to finish the single repair, and watch #92 plus the release predicates (#659).',
+      etaDays: '2–4 days',
+      etaNote: 'Work estimate, not a release promise. Covers the key-gated single repair and the regen-cohort re-derivation. The regeneration wave itself, #92 adjudication, and release predicates are owner- or fleet-gated and excluded.'
     }
   ]
 };
