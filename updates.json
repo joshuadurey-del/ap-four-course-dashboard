@@ -1,6 +1,7 @@
 [
  {
-  "at": "2026-08-19T01:44Z",
+  "ts": "2026-08-19T01:44Z",
+  "course": "HumGeo",
   "text": "HumGeo: 741 repaired items now hold official /v1/qc verdicts — 464 pass, 277 to regenerate. Caveat: the 464 are not yet on main (reviewed PR pending its verdict re-earn) and not banked; seal still waits on the fleet's #92 ruling."
  },
  {

@@ -14,6 +14,32 @@ LINT="${INCEPT_ZONE:-$HOME/repos/social-studies/INCEPT}/tools/claims_staleness_l
 # the surface agents read first (caught by Josh 2026-08-17, 46 minutes after a
 # republish left the timestamp untouched).
 STAGED=$(git diff --cached --name-only)
+
+if ! python3 - <<'PY'
+import datetime
+import json
+import re
+
+with open('updates.json') as f:
+    updates = json.load(f)
+
+assert isinstance(updates, list), 'updates.json must contain a JSON array'
+for index, update in enumerate(updates):
+    assert isinstance(update, dict), f'update {index} must be an object'
+    for field in ('ts', 'course', 'text'):
+        assert isinstance(update.get(field), str) and update[field].strip(), \
+            f'update {index} needs a non-empty {field}'
+    assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z', update['ts']), \
+        f"update {index} has invalid ts: {update['ts']}"
+    datetime.datetime.fromisoformat(update['ts'].replace('Z', '+00:00'))
+
+print(f'UPDATES OK: {len(updates)} schema-valid entries')
+PY
+then
+  echo "pre-commit: BLOCKED — updates.json violates its published schema."
+  exit 1
+fi
+
 if [ -z "$SKIP_CLAIMS_LINT" ] \
    && echo "$STAGED" | grep -qx 'data.json' \
    && ! echo "$STAGED" | grep -qx 'updates.json'; then
