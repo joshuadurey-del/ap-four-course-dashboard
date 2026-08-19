@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T13:53Z",
+  "snapshot": "2026-08-19T14:18Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -55,7 +55,7 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Re-earn batch LIVE on the factory chain: 13 of 37 chunks done at 10:26Z - 122 passes, 2 content fails (they stay in the regen pile), plus the 10-for-10 pilot. Mid-batch the factory redeployed; judge continuity was byte-verified (changes gated to AP Statistics only) so the campaign stays comparable across the deploy. Earlier tonight: hydrator 373/373, factory screens 0 repair-eligible + 0 lexical fatals. The 82 miskey rows queue behind the batch for a sanctioned rationale pass.",
+      "value": "BATCH DRAINED, all 373 rows accounted from record bytes with zero unverdicted: 299 PASS (re-earned out of the regeneration pile), 5 content fails named and kept in the pile, 69 transport-error rows now re-running through the committed refresh route in 7 chunks. The factory deployed five times during the campaign; judge continuity was byte-verified after each one (every change gated to AP Statistics; the HumGeo judge path untouched). Remaining in the campaign: the refresh leg's final histogram, the 82-row rationale leg under its standing approvals, then the regeneration-cohort re-derivation and corrected filing numbers. Nothing pushes outward without the owner's line.",
       "scope": "741 rescreen records; 464/277 lists survive only as inputs",
       "evidence": [
         {
@@ -65,7 +65,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T08:57Z"
+      "observed_at": "2026-08-19T14:18Z"
     },
     {
       "claim_id": "humgeo.bank374",
