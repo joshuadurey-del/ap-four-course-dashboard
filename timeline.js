@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 19, 2026 late pm · orchestrated run, fleet active',
+  snapshot: 'Aug 19, 2026 evening · factory-tooled run',
   courses: [
     {
       id: 'apush',
@@ -38,9 +38,9 @@ const AP4_TIMELINE = {
       x: 39,
       y: 134,
       stage: 'Build content',
-      lastCompleted: 'Top-up dispatched · 3 of 4 capped jobs',
+      lastCompleted: 'Top-up runs 1-2 · 9 jobs, cap finding',
       summary: 'The committed factory top-up Lambda is confirmed as the only sanctioned client and was invoked today: a dry run, then one bounded real run capped at 4 jobs. The live scan confirms 374 of 1,105 buckets underfilled. The factory worker reserve deferred dispatch to zero because fleet jobs occupy the pool right now. Local drivers are purged, including the day-20260811 twins, and the provenance ask is filed as course issue #14.',
-      next: 'Next · 3 of 4 capped jobs DISPATCHED 07:28Z through the factory Lambda (CloudWatch receipt); items not yet admitted — re-scan for per-cell deltas as the async pool drains. Watch issue #14 and the U5 findings (fleet-owned). Registration stays parked.',
+      next: 'Next · 9 jobs dispatched through the factory Lambda (run 1: one completed, two failed at their terminal states — FRQ render gate; run 2: six settling). Real runs PAUSED: the deployed Lambda drops the max_jobs field (their handler at main forwards it), so the 4-cap ruling cannot be enforced — deploy drift on their side, receipts held. Dry-run scans continue. Watch #14 and U5 (fleet-owned). Registration stays parked.',
       etaDays: '2–4 days',
       etaNote: 'Work estimate, not a release promise. The owner relay cleared 2026-08-19 so the clock is running; the range covers pool retries, top-up hours, and local snapshot work. U5 repair and registration are fleet-gated and excluded.'
     },

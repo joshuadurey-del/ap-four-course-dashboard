@@ -1,5 +1,20 @@
 [
   {
+    "ts": "2026-08-19T08:20Z",
+    "course": "Psych",
+    "text": "Runs 1-2 through the factory Lambda: 9 jobs total. Run 1 terminal states from their job_stage log: one completed, two failed (FRQ render_failed rejections - their gate). Run 2 (6 jobs) settling. FINDING with receipts: the deployed Lambda drops max_jobs (their handler at main forwards it, line 80) - server line shows budget=capacity-reserve, so the ruling's 4-cap is unenforceable; deploy drift on their side. Real runs PAUSED; dry-run scans continue. Caveat: underfilled still 374 pending admissions."
+  },
+  {
+    "ts": "2026-08-19T08:00Z",
+    "course": "APUSH",
+    "text": "126-class derivation receipt + filer correction posted to intake #90 (comment 5339286801) with Josh's typed confirm; sizing deferred to hole-filler #81. Fleet REWORK active on their #7 and #81/PR #82. Caveat: nothing further outward from our side; watch only."
+  },
+  {
+    "ts": "2026-08-19T07:55Z",
+    "course": "HumGeo",
+    "text": "Regeneration cohort finalized at 761 (COHORT-RECONCILIATION-rev2.json, machine-checked disjoint): 277+17+1+8+373+82+3. The 82 miskey slots measured on clean main: all S2+D1 multi-fatal. The 3 open rows self-resolved from verdicts (3 passes join the held-for-landing class, 3 fails regen). Filing packet being staged to their template for their file_issue.sh + triage routing; posts only on the owner line. Caveat: no GitHub writes this window by owner boundary."
+  },
+  {
     "ts": "2026-08-19T08:05Z",
     "course": "HumGeo",
     "text": "The one repairable item (1.1-f1-a08) carries a fresh factory pass: committed repair (STRUCT_D4) then /v1/qc re-judgment on the finished bytes, fingerprint-bound. Owner shape-call: NOT landed as a one-item PR - the pass is HELD locally and re-enters with the consolidated regeneration-wave landing. Caveat: 373 rebuild-class items still await the regeneration filing (owner text + 3 unresolved rows)."
