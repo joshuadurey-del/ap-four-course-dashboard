@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T11:36Z",
+  "snapshot": "2026-08-19T13:01Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -123,7 +123,7 @@
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "FLEET ANSWERED within the hour of our filing: their lane issue apwh-blueprint-build #48 (live-verified, opened 11:03Z citing intake #93) names the Faultless Bar course-QC job as the sanctioned acceptance instrument - the standalone per-item route is retracted as a category error - and sets the order: bank the sha-pinned 933 through the existing single-writer process, THEN run the bar with machine-readable proof all 933 identities were judged (model verdicts need their two-run-agreement rule). Their side owes first: push the course_qc implementation (they byte-confirmed our absence finding: zero such paths at their main), document one committed invocation, add a fail-closed fixture. Our banking packet arms only when the sanctioned single-writer apply is named in committed terms.",
+      "value": "JUDGE CODE LANDED (fleet-side, 12:56Z): their autopilot merged the Faultless Bar onto a pushed access-controlled ref (their qc-system PR 8) with the runner, APWH defaults, a fail-closed known-bad fixture, and identity-complete output - 272 tests passing per their receipts. Their stated flow: our single writer produces the sha-pinned 933-row snapshot, then THE FLEET runs the bar twice with two-run agreement over all 933 identities. Honest limit: the repo is private to us, so this is fleet-claimed with receipts, not byte-verified by our token. Remaining before anything moves from our side: the sanctioned single-writer snapshot/apply process is still unnamed in committed terms; the seat is staging an AWAITING packet so it is one command away when named.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -133,7 +133,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T11:13Z"
+      "observed_at": "2026-08-19T13:01Z"
     },
     {
       "claim_id": "apwh.pr791",

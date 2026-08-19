@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-19T13:01Z",
+  "course": "APWH",
+  "text": "Fleet merged the Faultless Bar to a pushed (private) ref within 2 hours of our filing - runner, APWH defaults, fail-closed fixture, 272 tests per their receipts. Their flow: we produce the pinned 933 snapshot, they run the bar twice with two-run agreement. Last open piece: the single-writer snapshot process is still unnamed; AWAITING packet staging."
+ },
+ {
   "ts": "2026-08-19T11:36Z",
   "course": "APWH",
   "text": "Fleet fixed our #94 within 27 minutes of filing: PR 800 merged, checker-only. Gate re-run at the new tip: practice leg FAIL to PASS (9/9 scored), key-leak and letters now PASS. The committed release gate and our live probes now agree. Judge-implementation push for the 933 (#48) still pending - banking stays parked."
