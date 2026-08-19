@@ -1,5 +1,15 @@
 [
  {
+  "ts": "2026-08-19T10:53Z",
+  "course": "APWH",
+  "text": "Both filings POSTED on the owner's go: intake #93 (name the acceptance instrument for the 933) and #94 (release gate cannot read overlay courses - false FAIL, byte-cited, live probe attached). Their triage owns routing; fleet answer is the next mover for the 933."
+ },
+ {
+  "ts": "2026-08-19T10:53Z",
+  "course": "APUSH",
+  "text": "Fleet merged PR #8 (10:06Z). Re-minted packets verified our-side with the committed validator: unit 7 36/36, unit 9 18/18, zero failures; positions 170/244 spot-check clean."
+ },
+ {
   "ts": "2026-08-19T10:26Z",
   "course": "Psych",
   "text": "Owner word landed ('use their script fix'): factory's own setup script re-run - deployed Lambda now byte-matches committed, cap of 4 restored, schedule off, nothing dispatched. Bounded top-up armed behind HumGeo's batch. Disclosed: seat identity lacks 3 IAM permissions to run the script end-to-end; blocked legs receipted, end state byte-verified."

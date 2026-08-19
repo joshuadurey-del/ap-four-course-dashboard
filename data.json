@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T10:26Z",
+  "snapshot": "2026-08-19T10:53Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -123,7 +123,7 @@
       "section": "APWH",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Zero of 933 records has a current official sweep verdict. The one paid sweep awaits owner approval, a fresh pool-preflight receipt, a canonical ingestion route, and fingerprint-bound receipt coverage.",
+      "value": "Zero of 933 records has a current official sweep verdict \u2014 and the ask that unblocks it is now FILED: intake #93 asks the fleet to name the acceptance instrument and banking order (three resolution options, byte-cited dead ends, we conform to any answer). Companion #94 reports the release gate's overlay blind spot (byte-cited at two tips, live probe pair attached). Both posted 2026-08-19 through their filing script after non-author review; fleet answer is the next mover.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -191,7 +191,7 @@
       "section": "APUSH",
       "status": "BLOCKED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Wave-2 contracts survive as inputs, but new admissions remain held on intake #89 and #90. Do not resume posting while the image contract and source-packet defects remain unresolved.",
+      "value": "Wave-2 contracts survive as inputs; new admissions remain gated. Fleet motion tonight: PR #8 MERGED (main 90c57a88) and the re-minted packets verified on our side with the committed validator from post-merge main - unit 7 36/36, unit 9 18/18, zero failures; defective positions 170/244 read clean on spot-check. When the remint lands on outputs main and #7 closes, that defect class closes end to end.",
       "scope": "future article admissions",
       "evidence": [
         {
