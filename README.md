@@ -7,7 +7,7 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 - Course pages are static HTML; the overview and claims explorer render from the JSON.
 - `timeline.js` — shared course stage and recovery-work ranges. A range starts only after its named unblock; it is never a release date.
 
-Production model: four stages — **Define & scope → Build & assemble → Validate & seal → Publish & integrate** — followed by separate **Internal review** and **Release** gates. Internal review follows serving-layer readiness; human learning-science or subject-matter findings loop back into the relevant production stage. Persona and model simulations do not count as human review. Stage 4 requires a course-owned sealed package and action-bound authorization/readback/recovery; another course's delivery receipt never transfers. Release still requires a dated signed-in learner walk.
+Production model: four stages — **Define & scope → Build & assemble → Validate & seal → Publish & integrate** — followed by separate **Internal review** and **Release** gates. Specialist queueing and component sampling may start earlier, but the course-level Internal review gate follows serving-layer readiness; findings loop back into the relevant production stage. Partial, persona, and model reviews do not count as whole-course human clearance. Stage 4 requires a course-owned sealed package and action-bound authorization/readback/recovery; another course's delivery receipt never transfers. Release still requires a dated signed-in learner walk.
 
 Status rule: prepared, factory-accepted, merged, deployed, and released are separate claims. Link recovery findings to the durable private packet in `joshuadurey-del/ap-ss-evidence`; do not cite machine-local audit paths as the only evidence.
 

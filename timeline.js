@@ -109,8 +109,8 @@ const AP4_TIMELINE = {
     },
     {
       id: 'internal-review', point: 'QC', label: 'Internal review', kicker: 'QC Layer 4', title: 'Human and subject-matter review',
-      copy: 'After serving-layer readiness, a human learning-science or subject-matter reviewer works the reviewable course, including failure paths. Findings reopen the relevant build, validation, or publication work until they are dispositioned.',
-      foot: 'Exit evidence · named human reviewer, dated scope and disposition, revision/readback receipts, and no persona or model simulation presented as human review.'
+      copy: 'Specialist queueing and component sampling may begin earlier. The course-level gate clears only after a human learning-science or subject-matter reviewer works the current reviewable served course, including failure paths; findings reopen the relevant production work.',
+      foot: 'Exit evidence · named human reviewer, dated course-level scope and disposition, revision/readback receipts, and no partial, persona, or model review presented as whole-course human clearance.'
     },
     {
       id: 'release', point: 'Release', label: 'Release', kicker: 'Separate outcome gate', title: 'Release',

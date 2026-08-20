@@ -2,7 +2,7 @@
   {
     "ts": "2026-08-20T02:57Z",
     "course": "Cross-course",
-    "text": "Production-stage correction: the four production stages are Define & scope, Build & assemble, Validate & seal, and Publish & integrate. Internal review is now a separate gate after serving-layer readiness and before Release. Human learning-science or subject-matter findings loop back into the relevant production stage; persona and model simulations do not count as human review."
+    "text": "Production-stage correction: the four production stages are Define & scope, Build & assemble, Validate & seal, and Publish & integrate. Internal review is a separate course-level gate after serving-layer readiness and before Release. Specialist queueing and component sampling may start earlier, but partial, persona, and model reviews do not clear whole-course human review; findings loop back into the relevant production stage."
   },
   {
     "ts": "2026-08-20T02:49Z",
