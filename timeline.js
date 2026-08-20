@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 11:39 KST delivery-gate audit',
+  snapshot: 'Aug 20, 2026 · 11:49 KST delivery-gate audit',
   courses: [
     {
       id: 'apush',
@@ -52,9 +52,9 @@ const AP4_TIMELINE = {
       x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'First two model-backed legs ran · acceptance failed closed',
-      summary: 'The first two fresh Faultless Bar legs ran against the same 933-item bank at ba41f90 and failed closed: 12 and 16 failed identities, 9 stable failures, 11 item/check disagreements, and two-run agreement FAIL. The serialized outputs main has since advanced through the fleet\'s repairs to 243b340, but that post-repair bank has not yet earned a passing acceptance receipt.',
-      next: 'Two fresh independent empty-cache legs run against one identical pinned post-repair bank, and both pass and agree exactly.',
+      lastCompleted: 'Two repaired-bank legs ran · acceptance still failed closed',
+      summary: 'Two fresh model-backed legs ran against the same repaired 933-item bank at 243b340 with complete, equal identity sets. Leg A reported 3 failed items and leg B reported 9; the comparator retained 8 stable ordering findings and 6 item/check disagreements. Both-run pass is false and two-run agreement is FAIL, so PR #9 remains open and unmerged.',
+      next: 'The fleet adjudicates or repairs the 8 stable ordering findings, strengthens the 6 unstable item-verdict paths, then reruns two independent empty-cache legs until both pass and agree exactly.',
       etaDays: 'fleet-gated',
       etaNote: 'No date until two fresh post-repair Faultless Bar legs pass and agree exactly. The bank and our local handoff are complete.'
     },

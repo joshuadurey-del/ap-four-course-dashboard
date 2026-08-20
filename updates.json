@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T02:49Z",
+    "course": "APWH",
+    "text": "Live refresh: two fresh repaired-bank legs completed against the same 933-item population and acceptance remains red. Leg A reported 3 failed items and leg B reported 9; the comparator retained 8 stable ordering findings and 6 item/check disagreements, so both-run pass is false and two-run agreement is FAIL. The fleet now adjudicates or repairs those findings, strengthens unstable verdict paths, and reruns two independent empty-cache legs."
+  },
+  {
     "ts": "2026-08-20T02:39Z",
     "course": "Cross-course",
     "text": "Production model clarified: four production stages plus a separate Release outcome gate. The stages are now Define & scope, Build & accept, Validate & seal, and Publish & integrate. Stage 4 is HOLD until the course has its own sealed package, exact action authorization, planned or supplied IDs, readback/recovery rules, learner-surface mapping, and registration; prior-course receipts do not transfer. Filing guidance now routes same-class gaps to existing owning issues and permits a new filing only after current bytes prove BLOCKED_CONTRACT and the duplicate/filing check is clean. Each timeline course now has a dedicated What moves it forward line."
