@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 10:55 KST blocker audit',
+  snapshot: 'Aug 20, 2026 · 11:18 KST blocker audit',
   courses: [
     {
       id: 'apush',
@@ -52,11 +52,11 @@ const AP4_TIMELINE = {
       x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: '933 banked · placement settled · deterministic coverage green',
-      summary: 'The 933-item population is banked on the fleet\'s canonical outputs under Josh\'s ratified rule. Native governed placement is settled, PR #791 is closed unmerged, and the stale local-done mark is retired. The latest deterministic no-LLM smoke covers all 933 identities, but it is not Faultless Bar acceptance.',
-      next: 'Next · fleet issue #48 must run two fresh independent model-backed legs against the same pinned 933-item bank, repair stable findings, and accept only when both legs pass and agree exactly. This course seat is watch-only; no Josh ruling, local sweep, PR #791 action, or #591 decision remains.',
+      lastCompleted: 'First two model-backed legs ran · acceptance failed closed',
+      summary: 'The first two fresh Faultless Bar legs ran against the same 933-item bank at ba41f90 and failed closed: 12 and 16 failed identities, 9 stable failures, 11 item/check disagreements, and two-run agreement FAIL. The serialized outputs main has since advanced through the fleet\'s repairs to 243b340, but that post-repair bank has not yet earned a passing acceptance receipt.',
+      next: 'Next · the fleet completed the nine stable repairs on issue #48. It must now run two independent empty-cache legs against the identical pinned 243b340 bank, strengthen any unstable adjudication, and accept only when both legs pass and agree exactly. This course seat remains watch-only.',
       etaDays: 'fleet-gated',
-      etaNote: 'No date until the two independent model-backed Faultless Bar legs pass and agree. The bank and our local handoff are complete.'
+      etaNote: 'No date until two fresh post-repair Faultless Bar legs pass and agree exactly. The bank and our local handoff are complete.'
     },
     {
       id: 'humgeo',

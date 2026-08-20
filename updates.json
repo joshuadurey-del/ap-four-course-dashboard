@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T02:18Z",
+    "course": "APWH",
+    "text": "Faultless Bar moved from pending to measured red: the first two fresh model-backed legs ran against the same 933-item bank and failed closed (12 and 16 failed identities, 9 stable failures, 11 disagreements, agreement FAIL). The fleet repaired all nine stable findings on serialized outputs main through 243b340. Two fresh empty-cache legs against that pinned bank are next; the APWH seat remains watch-only."
+  },
+  {
     "ts": "2026-08-20T01:55Z",
     "course": "Cross-course",
     "text": "Blocking-reality audit refreshed all four courses from live receipts. APWH now names only the two model-backed Faultless Bar legs; APUSH names #81/#82, PR #6, and #89/#90 with the legacy-36 ruling settled; Psych is BLOCKED_CONTRACT on #14 or a scope-excluding route with zero spend; HumGeo is 429/455 re-earned with PR #43 open at the exact pushed head and 332 rows awaiting factory regeneration authority. Retired owner asks and stale 351/410/82-row language were removed across pages, timeline, claims, and lessons."

@@ -112,8 +112,8 @@
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The former candidate-pack plan is superseded. All 933 identities are banked on canonical outputs under Josh's ratified rule. The latest deterministic smoke covers all 933 identities, but it is not model-backed Faultless Bar acceptance.",
-      "scope": "banked 933-item population and deterministic coverage; not acceptance proof",
+      "value": "The former candidate-pack plan is superseded. The serialized canonical bank remains 933 identities and outputs main has advanced through fleet corrections to 243b340. That post-repair head does not yet have a passing two-leg Faultless Bar receipt.",
+      "scope": "serialized 933-item population and current correction head; not acceptance proof",
       "evidence": [
         {
           "type": "audit-evidence",
@@ -122,14 +122,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-20T02:16Z"
     },
     {
       "claim_id": "apwh.qc933",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The 933 identities are banked under Josh's ratified rule and the Faultless Bar is the named acceptance instrument. Issue #48 remains open. The latest deterministic no-LLM smoke covers all 933 identities but is not acceptance. Exact unblock: two fresh independent model-backed legs against the same pinned bank; repair stable findings; accept only when both pass and agree exactly.",
+      "value": "Issue #48 remains open. Its first two fresh model-backed legs ran against bank ba41f90 and failed closed: 12 and 16 failed identities, 9 stable failures, 11 item/check disagreements, and two-run agreement FAIL. The fleet repaired all nine stable findings on serialized outputs main at 243b340. Exact unblock: two independent empty-cache legs against that identical pinned 933-item bank must both pass and agree exactly.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -143,14 +143,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-20T02:18Z"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. The only active APWH acceptance blocker is the two-leg model-backed Faultless Bar loop on issue #48.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. The only active APWH acceptance blocker is the failed-closed repair/rerun loop on issue #48.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -163,14 +163,14 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-20T02:16Z"
     },
     {
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The apwh.local_done mark is retired and carries no completion credit. The tree ruling is settled; current acceptance credit can come only from the fleet's two fresh model-backed Faultless Bar legs and exact agreement over the pinned 933-item bank.",
+      "value": "The apwh.local_done mark is retired and carries no completion credit. The tree ruling is settled; the first model-backed pair failed closed. Acceptance credit can come only from two fresh post-repair Faultless Bar legs that pass and agree exactly over one pinned 933-item bank.",
       "scope": "local completion mark and walk evidence",
       "evidence": [
         {
