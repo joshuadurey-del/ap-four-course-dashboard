@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T05:55Z",
+  "snapshot": "2026-08-20T06:45Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -54,8 +54,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T04:13Z",
-      "value": "The lane-bound HumGeo blueprint hash matches the active lane. Base revision 28684ec8 has a 40-pass, 0-fail, 0-warn oracle receipt, but that receipt predates PR #43. LS-QC readiness requires a current-byte rerun after landing, an honest review denominator, and a safe reviewer-visible candidate; named human disposition follows the handoff.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "The lane-bound HumGeo blueprint hash matches the active lane. Base revision 28684ec8 has a 40-pass, 0-fail, 0-warn oracle receipt, but that receipt predates merged PR #43. LS-QC readiness requires a current-byte rerun against merge commit be18d12, an honest review denominator, and a safe reviewer-visible candidate; named human disposition follows the handoff.",
       "scope": "blueprint binding and implementation reconciliation",
       "evidence": [
         {
@@ -176,7 +176,7 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "CAMPAIGN COMPLETE. Two legs re-earned 429 of 455 records through fresh fingerprint-bound factory verdicts: 351 plus 78 passes. Remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. The regeneration cohort is machine-checked at 332. Both commits are pushed at 43584a54; PR #43 is open and intake #95 is open in needs-review.",
+      "value": "Two legs re-earned 429 of 455 records through fresh fingerprint-bound factory verdicts: 351 plus 78 passes. Remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. The regeneration cohort is machine-checked at 332. PR #43 merged the 429 records at be18d12; intake #95 closed with owner delegation to choose regeneration or enrich-plus-QC and approval of associated API costs.",
       "scope": "741 rescreen records; 464/277 lists survive only as inputs",
       "evidence": [
         {
@@ -186,14 +186,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-20T06:45Z"
     },
     {
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "LANDING IN PROGRESS. PR #43 is open at exact head 43584a54 and reads clean, with no review decision or checks. The outgoing 429 records passed the #642 signature scan with zero flags. The current declared store still measures 2,513 items, 2,505 without fingerprint-matched /v1/qc receipts, and 789 structural failures; rerun only after canonical merge/readback.",
+      "value": "LANDING COMPLETE, CURRENT-BYTE COVERAGE UNMEASURED. PR #43 merged at be18d12 and the outgoing 429 records had passed the #642 signature scan with zero flags. The 2,513 total / 2,505 without fingerprint-matched receipts / 789 structural-failure figures came from the last pre-merge verifier and are historical until that same verifier runs against the merged state.",
       "scope": "429 current fresh-pass records",
       "evidence": [
         {
@@ -207,14 +207,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-20T06:45Z"
     },
     {
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "Estimated 3–5 focused days to LS-QC READY after prompt owner action on PR #43 and intake #95: merge/read back the 429 passes, rerun current-byte coverage, verify a safe representative AP One path, and seal the measured gap/handoff packet.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "Estimated 3–5 focused days to LS-QC READY from the now-cleared landing and route-authority state: read back the merged 429 passes, rerun current-byte coverage and blueprint reconciliation, execute the quality-first route for the 332-record cohort, verify a safe representative AP One path, and seal the measured gap/handoff packet.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -251,8 +251,8 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T04:30Z",
-      "value": "Release is not proven. Merge/read back PR #43, use intake #95 for the 332-row regeneration contract, and route the measured 135-of-204 served-form composition failure to existing 68-gate / 204-form cutover issue #659. Canonical deployed-byte readback and a fresh factory w7 walk remain required.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "Release is not proven. PR #43 is merged and intake #95 delegated the 332-row route to the course lane, but current-byte verifier readback, execution of that route, and the measured 135-of-204 served-form composition failure on issue #659 remain. Canonical deployed-byte readback and a fresh factory w7 walk are still required for release.",
       "scope": "released and student-visible state",
       "evidence": [
         {
@@ -286,7 +286,7 @@
       "claim_id": "apwh.qc933",
       "section": "APWH",
       "status": "BLOCKED",
-      "value": "Issue #48 remains open and actively worked. A fresh complete pair failed on three stable item defects, seven stable ordering locations, and eight item disagreements. The fleet's subsequent targeted model run passes the three stable item identities, while a fresh ordering diagnostic still reports eight findings. Pre-LS acceptance requires a new L1/L2 pair to pass and agree over one pinned 933-item population; named human disposition follows the handoff.",
+      "value": "Issue #48 remains open and actively worked. The latest complete pair on serialized bank 17808cc has equal complete 933-item population binding and builder evidence present, but both legs fail: five identities fail in both, nine item/check verdicts disagree, ordering reports six findings in leg A and five in leg B, and both legs clear 28 of 31 Faultless Bar gates. Pre-LS acceptance requires a new L1/L2 pair to pass and agree; named human disposition follows the handoff.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -300,7 +300,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "status_at": "2026-08-20T05:55Z"
+      "status_at": "2026-08-20T06:45Z"
     },
     {
       "claim_id": "apwh.pr791",
@@ -343,8 +343,8 @@
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "PLANNED",
-      "status_at": "2026-08-20T05:55Z",
-      "value": "Estimated 3–5 focused days to LS-QC READY: clear the remaining ordering/instability residue, complete a new passing issue #48 pair, rerun the blueprint oracle against the exact readable candidate, verify the governed AP One review path, and seal the coverage/gap/handoff packet. The range reflects fleet-owned full-leg work still pending after the APWH seat closed.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "Estimated 3–5 focused days to LS-QC READY: repair or adjudicate the five stable failures and persistent ordering residue, strengthen nine unstable verdicts, complete a new passing issue #48 pair, rerun the blueprint oracle against the exact readable candidate, verify the governed AP One review path, and seal the handoff packet.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -415,8 +415,8 @@
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T01:55Z",
-      "value": "Seating PR #6 remains open at 2698913a with no reviews. Offline dry-run of the committed reconciler at that head passed all 11 receipted successor positions without writes. The 11 must first land in the canonical acceptance ledger; after that and PR merge, seating runs only behind fresh queue, freshness, gate, clean-tree, and liveness checks.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "Seating PR #6 merged at dab70a6. Its offline dry-run had passed all 11 receipted successor positions without writes, but merge does not admit or seat them. The 11 must first land in the canonical acceptance ledger; seating then runs only behind fresh queue, freshness, gate, clean-tree, and liveness checks.",
       "scope": "successor seating only",
       "evidence": [
         {
@@ -480,8 +480,8 @@
       "claim_id": "psych.bank",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T01:55Z",
-      "value": "BLOCKED_CONTRACT: the committed top-up route exists and its deployed Lambda is repaired, capped at 4, and disabled. The route still scans AP Psychology broadly and cannot exclude Unit-5 or provenance-uncertain buckets while lifecycle requires sealed scope. No spend runs until course issue #14 answers the contract or the factory commits a scope-excluding route. Bank stands at 374 underfilled of 1,105.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "PROVENANCE CLEARED, SCOPE BLOCKED: issue #14 confirms the served bank came through the Content Factory generation API with its QC. The repaired, capped, disabled top-up route still scans AP Psychology broadly and cannot exclude unresolved Unit 5 scope while lifecycle requires sealed scope. No spend runs until a Unit 5-excluding route is committed or issue #2 resolves. Bank stands at the last measured 374 underfilled of 1,105.",
       "scope": "bank scan and top-up workstream",
       "evidence": [
         {
@@ -530,9 +530,9 @@
     {
       "claim_id": "psych.provenance",
       "section": "Psych",
-      "status": "MISSING",
-      "status_at": "2026-08-20T01:55Z",
-      "value": "The provenance of the 1,105 served-bank buckets remains unresolved. Course issue #14 is open with no comments; keep the denominator qualified and top-up spend at zero until the fleet answers or commits a scope-excluding route.",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-20T06:45Z",
+      "value": "Course issue #14 is closed with owner confirmation that the 1,105 served-bank buckets were produced through the Content Factory generation API and include that API's QC. Provenance is resolved; the separate Unit 5 scope/exclusion blocker remains.",
       "scope": "served bank provenance",
       "evidence": [
         {
@@ -551,8 +551,8 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "Estimated 4–7 focused days after issue #14 clears the safe scope/provenance route: measure the owner-approved denominator, top up only proven high-value buckets to the review bar, stage a safe candidate, and seal the Unit 5/provenance gap ledger. No paid top-up runs while #14 is unresolved.",
+      "status_at": "2026-08-20T06:45Z",
+      "value": "Estimated 4–7 focused days after a safe Unit 5 scope route clears: bind #14's confirmed generation/QC provenance, measure the owner-approved denominator, top up only proven high-value buckets to the review bar, stage a safe candidate, and seal the Unit 5 gap ledger. No paid top-up runs while scope remains unsealed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
         {

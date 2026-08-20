@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 14:55 KST blocker refresh',
+  snapshot: 'Aug 20, 2026 · 15:45 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -24,11 +24,11 @@ const AP4_TIMELINE = {
       x: 28,
       y: 80,
       stage: 'Current recovery locus · Build reviewer candidate',
-      lastCompleted: '2,479 generated candidates retain factory QC provenance',
-      summary: 'The question candidates were QC checked during generation, so a duplicate blanket pass is not required. The canonical article ledger still has 38 accepted positions plus 11 receipted successors outside canon; the design reconciliation does not yet prove an approximately 80%-blueprint, reviewer-visible implementation.',
+      lastCompleted: 'Seating PR #6 merged · 2,479 candidates retain factory QC provenance',
+      summary: 'The question candidates were QC checked during generation, so a duplicate blanket pass is not required. The seating reconciler merged at dab70a6, but the canonical article ledger still has 38 accepted positions plus 11 receipted successors outside canon; merge alone does not seat them or prove an approximately 80%-blueprint reviewer candidate.',
       next: 'Route the 11 receipted successors, measure the exact current candidate against the blueprint denominator, parallel-author only the highest-weight missing scope, and stage the pinned AP One review candidate.',
       etaDays: '7–10 days',
-      etaNote: 'Focused work to LS-QC READY, not release. Assumes at least four non-colliding authoring/QC lanes, prompt owner review of PR #6 and intake rulings, and reuse of the hosted grader calibration.'
+      etaNote: 'Focused work to LS-QC READY, not release. Assumes at least four non-colliding authoring/QC lanes, prompt intake rulings, and reuse of the merged seating reconciler and hosted grader calibration.'
     },
     {
       id: 'psych',
@@ -38,11 +38,11 @@ const AP4_TIMELINE = {
       x: 43,
       y: 160,
       stage: 'Current recovery locus · Build and measure candidate',
-      lastCompleted: '221/221 articles pass · 374/1,105 bank buckets underfilled',
-      summary: 'All article sidecars pass; 17 partial-source labels are not failures. Safe item top-up remains held because the current route cannot exclude Unit 5 or provenance-uncertain buckets. The unnamed specialist signoff is part of human review, not a reason to delay sharing an otherwise honest candidate.',
-      next: 'Measure the owner-approved blueprint denominator, obtain the #14 scope/provenance answer or a committed excluding route, top up only proven scope to the review bar, then stage the candidate and explicit Unit 5 gap ledger.',
+      lastCompleted: 'Bank provenance confirmed · 221/221 articles pass · 374/1,105 buckets underfilled',
+      summary: 'Issue #14 closed with owner confirmation that the served bank came through the Content Factory generation API and includes its QC. Provenance is no longer the hold. Safe top-up remains held because the broad route cannot exclude unresolved Unit 5 scope; issue #2 remains open.',
+      next: 'Measure the owner-approved blueprint denominator, bind the confirmed generation/QC provenance, establish a committed Unit 5-safe scope route or resolve #2, then top up only proven scope and stage the candidate with an explicit gap ledger.',
       etaDays: '4–7 days',
-      etaNote: 'Focused work to LS-QC READY after the #14 scope route clears. No paid top-up runs while provenance is unresolved; a bounded candidate may advance only if its measured denominator honestly reaches the owner’s review bar.'
+      etaNote: 'Focused work to LS-QC READY after a safe Unit 5 scope route clears. Provenance is resolved; no paid top-up runs while scope remains unsealed. A bounded candidate may advance only if its measured denominator honestly reaches the owner’s review bar.'
     },
     {
       id: 'apwh',
@@ -52,9 +52,9 @@ const AP4_TIMELINE = {
       x: 55,
       y: 120,
       stage: 'Current recovery locus · Measure and preflight',
-      lastCompleted: '933 banked · three stable item repairs pass · ordering remains',
-      summary: 'The APWH seat banked the 933 and closed out. A fresh full pair then failed on three stable item defects, seven stable ordering locations, and eight disagreements. The fleet repaired the three item defects and they pass a targeted model run; a fresh ordering diagnostic still reports eight findings, so the next complete agreeing pair remains pending on issue #48.',
-      next: 'Repair or defensibly adjudicate the remaining ordering findings, run the new issue #48 L1/L2 pair, rerun the blueprint oracle against the exact readable candidate, then stage and seal the AP One reviewer handoff.',
+      lastCompleted: '17808cc full pair measured · 28/31 gates clear in both legs',
+      summary: 'The latest complete 933-item pair on bank 17808cc remains red: five identities fail both legs, nine item/check verdicts disagree, and ordering reports six findings in leg A and five in leg B. Builder evidence is present and population binding agrees; issue #48 owns the active repair loop.',
+      next: 'Repair or defensibly adjudicate the five stable failures and recurring prerequisite findings, strengthen the nine unstable verdicts, run two new empty-cache legs, then rerun readable blueprint reconciliation and stage the AP One reviewer handoff.',
       etaDays: '3–5 days',
       etaNote: 'Focused work to LS-QC READY, not release. Assumes the fleet continues its active bar loop and the governed AP One placement route remains available; named LS/SME disposition follows the handoff.'
     },
@@ -66,11 +66,11 @@ const AP4_TIMELINE = {
       x: 63,
       y: 200,
       stage: 'Current recovery locus · Measure and preflight',
-      lastCompleted: '429 fresh QC passes await merge in PR #43',
-      summary: 'PR #43 is open and mergeable with zero reviews; intake #95 awaits disposition for the 332-record cohort. The served course is already reviewable in part, but 135 of 204 forms miss 4/8/3. The EOC endpoint contains the grader fix, and the governed 2023/24 pool landed in merged PR #32; remaining #28 calibration work belongs to the course/fleet, not Ilma.',
-      next: 'Merge/read back PR #43, rerun current-byte coverage, disposition #95, verify a safe representative AP One review surface, and put the form-composition and EOC tails in the gap ledger.',
+      lastCompleted: 'PR #43 merged · #95 closed with route and cost authority',
+      summary: 'The 429 fresh QC passes merged at be18d12. Intake #95 closed with owner delegation to choose regeneration or enrich-plus-QC for the 332-record cohort and approval of the associated API costs. Current-byte coverage and the blueprint denominator have not yet been remeasured after landing.',
+      next: 'Read back the merged 429 records, rerun current-byte coverage and the blueprint oracle, execute the highest-quality route for the 332-record cohort, verify a safe AP One review surface, and carry form-composition/EOC tails in the gap ledger.',
       etaDays: '3–5 days',
-      etaNote: 'Focused work to LS-QC READY, not release. Assumes prompt #43/#95 owner action. Full 204-form remediation, formal EOC calibration, release cutover, and learner walk remain later unless they break the review surface.'
+      etaNote: 'Focused work to LS-QC READY, not release. The landing and route-authority waits are cleared; the range now assumes a dedicated course lane and prompt verifier throughput. Full 204-form remediation, formal EOC calibration, release cutover, and learner walk remain later unless they break the review surface.'
     }
   ]
 };
