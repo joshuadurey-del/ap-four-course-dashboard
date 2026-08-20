@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 morning · campaign final, owner gates staged',
+  snapshot: 'Aug 20, 2026 · 10:55 KST blocker audit',
   courses: [
     {
       id: 'apush',
@@ -26,7 +26,7 @@ const AP4_TIMELINE = {
       stage: 'Build content',
       lastCompleted: 'Fleet fix merged · remint verified 36/36 + 18/18',
       summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
-      next: 'Next · fleet merged PR #8 (their fix for our two filed defect classes) and we verified it offline: their own validator passes unit 7 at 36/36 and unit 9 at 18/18 from post-merge main, and the two defective positions read clean. Seating is proven ready — the blessed reconciler dry-ran all 11 admitted positions at PR #6 head — and the seating runbook is staged to execute the moment the fleet merges PR #6 (queue check only, per the standing factory-tooling go). The review-silence ping was killed by the owner as unnecessary. No paid APUSH packet is sanctioned.',
+      next: 'Next · fleet issue #81 remains in rework with PR #82 open; intake #89 is claimed and #90 remains open with Josh\'s correction as its current tail. Seating PR #6 is still open with no reviews. On its merge, run the staged seating plan only after fresh queue, freshness, gate, clean-tree, and liveness checks. New admissions remain held; no paid APUSH packet is sanctioned.',
       etaDays: '1–2 days',
       etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
     },
@@ -52,11 +52,11 @@ const AP4_TIMELINE = {
       x: 52,
       y: 88,
       stage: 'Validate',
-      lastCompleted: 'Fleet fixed #94 in 27 min · gate practice leg now PASS 9/9',
-      summary: 'The fleet ruled native governed placement authoritative on issue #591 and closed PR #791 unmerged itself (2026-08-19T06:35Z, verified live); nothing further is needed from our lane on that thread. The 933-item population reconciles exactly (506 banked, 369 candidates, 58 disposition rows). The honest pre-sweep state stands: 933 items without current receipts and 427 structural fails. Which acceptance instrument judges the recovered cohort is a fleet choice. Our purge rows are quarantined and the stale local-done mark is retired.',
-      next: 'Next · the fleet ANSWERED #93 within the hour (their lane issue #48, live-verified): the Faultless Bar course-QC job is the named acceptance instrument — the standalone per-item route is retracted as a category error — and the order is bank the sha-pinned 933 through the existing single-writer process first, then run the bar over the banked course with machine-readable proof that all 933 identities were judged. Their side owes first: push the course_qc implementation to a reproducible ref, document the one committed invocation, add a fail-closed fixture. Our next packet arms when the sanctioned single-writer apply is named in committed terms — nothing banks before that. #94 (gate blind spot) and #591 stay watched.',
-      etaDays: '2–4 days',
-      etaNote: 'Entirely fleet-paced: publisher bootstrap (#2727), native placement, and the acceptance instrument belong to the fleet. The range is a watch window, not our work estimate.'
+      lastCompleted: '933 banked · placement settled · deterministic coverage green',
+      summary: 'The 933-item population is banked on the fleet\'s canonical outputs under Josh\'s ratified rule. Native governed placement is settled, PR #791 is closed unmerged, and the stale local-done mark is retired. The latest deterministic no-LLM smoke covers all 933 identities, but it is not Faultless Bar acceptance.',
+      next: 'Next · fleet issue #48 must run two fresh independent model-backed legs against the same pinned 933-item bank, repair stable findings, and accept only when both legs pass and agree exactly. This course seat is watch-only; no Josh ruling, local sweep, PR #791 action, or #591 decision remains.',
+      etaDays: 'fleet-gated',
+      etaNote: 'No date until the two independent model-backed Faultless Bar legs pass and agree. The bank and our local handoff are complete.'
     },
     {
       id: 'humgeo',
@@ -66,11 +66,11 @@ const AP4_TIMELINE = {
       x: 58,
       y: 134,
       stage: 'Validate',
-      lastCompleted: 'Campaign final · 351/373 re-earned, branch pushed',
-      summary: 'The overnight campaign re-earned 351 of 373 rows through the factory judge (fresh fingerprint-bound passes after the committed hydrate step), with 5 real content fails and 17 honest unmeasureds - zero unaccounted, receipts on record bytes. The regeneration cohort is machine-checked down from 761 to 410 (82 of those mid-pipeline behind one credential paste). The 351 fresh-pass records are pushed to a non-main branch, owner-approved from the phone.',
-      next: 'Next · three owner gates release everything staged: one typed line opens the reviewed PR (all four owner checks green, held only by the typed-line hook), one typed line posts the corrected 410 regen filing, one key paste re-runs the 82-row rationale leg. Watch #92 plus the release predicates (#659).',
-      etaDays: '2–4 days',
-      etaNote: 'Work estimate, not a release promise. Covers the key-gated single repair and the regen-cohort re-derivation. The regeneration wave itself, #92 adjudication, and release predicates are owner- or fleet-gated and excluded.'
+      lastCompleted: '429/455 re-earned · both commits pushed',
+      summary: 'The two campaign legs re-earned 429 of 455 records through the factory judge: 351 plus 78 fresh fingerprint-bound passes. The remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. Both commits are pushed at 43584a54; the outgoing 429 records passed the #642 signature scan with zero flags and the diff contains only intended record files.',
+      next: 'Next · PR #43 is open at the exact pushed head and currently reads clean, with no review decision or reported checks. Finish its review and merge/readback, then post and verify the companion filing. Intake #92 must then provide the missing factory selector and authority for the machine-checked 332-row regeneration cohort; release readback and a fresh w7 walk follow.',
+      etaDays: 'fleet-gated',
+      etaNote: 'PR #43 is open; its merge, the companion filing, regeneration, #92 adjudication, and release remain fleet-paced, so no release date is claimed.'
     }
   ]
 };

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-19T23:39Z",
+  "snapshot": "2026-08-20T01:55Z",
   "claims": [
     {
       "claim_id": "cross.recovery.audit",
@@ -38,8 +38,8 @@
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-19T04:13Z",
-      "value": "The sealed-plan wave verdicts are the surviving HumGeo factory-proof class. The exact pass total remains scheduled for re-derivation because prior reports disagree; do not promote a final count until that verifier receipt exists.",
+      "observed_at": "2026-08-20T01:55Z",
+      "value": "This historical sealed-plan proof class is superseded for current blocker reporting by the two-leg re-earn: 429 fresh-pass records are on PR #43 and the remaining machine-checked regeneration cohort is 332. Do not use the older wave count as an active blocker or completion claim.",
       "scope": "sealed-plan regeneration wave only",
       "evidence": [
         {
@@ -55,7 +55,7 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "CAMPAIGN COMPLETE. Final histogram 351 pass / 5 content fail / 17 unmeasured of 373, zero unaccounted. Regeneration cohort re-derived and machine-checked: 410 remain (was 761 this morning - cut nearly in half), with 82 of those mid-pipeline behind one credential paste. Filing body updated to the 410 count with honest dispositions for the 17 and the 82; local commit bd0b27fc holds exactly the 351 fresh-pass records with the PR body staged. Everything outward is owner-gated: the key paste, the filing line, the push boundary. The shared pool is released.",
+      "value": "CAMPAIGN COMPLETE. Two legs re-earned 429 of 455 records through fresh fingerprint-bound factory verdicts: 351 plus 78 passes. Remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. The regeneration cohort is machine-checked at 332. Both commits are pushed at 43584a54; consolidated PR #43 is open and the companion filing remains in final review.",
       "scope": "741 rescreen records; 464/277 lists survive only as inputs",
       "evidence": [
         {
@@ -65,31 +65,35 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T16:35Z"
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "MORNING STATE: the 351 fresh-pass records are PUSHED to their repo on a non-main branch (bd0b27fc, owner-approved from the phone, verified live). The PR to their main cleared all four owner checks with receipts but is HELD by the local owner-approval hook, which requires a line typed at the Mac - one line opens it. The regen filing (410 ask) waits on the same class of typed line; the 82-row rationale leg waits on one credential paste. Nothing else is pending on our side.",
-      "scope": "374 current candidate pass records",
+      "value": "LANDING IN PROGRESS. Consolidated PR #43 is open at the exact pushed head 43584a54 and currently reads clean, with no review decision or reported checks. The exact outgoing 429 records passed the #642 signature scan with zero flags, and the diff touches only intended record files. Merge/readback and the companion filing remain outcome-pending.",
+      "scope": "429 current fresh-pass records",
       "evidence": [
         {
           "type": "audit-evidence",
           "location": "DAMAGE-REGISTER.jsonl#HG-007",
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/43"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T23:39Z"
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Release is not proven. The two walk marks are revoked; release requires the owner readiness ruling, canonical deployed-byte readback, and a fresh factory w7 walk. Intake #92 and ap-one #642 remain open dependencies.",
+      "status_at": "2026-08-20T01:55Z",
+      "value": "Release is not proven. First merge/read back PR #43 and post/read back the companion filing; then the factory must provide the regeneration selector and authority for the 332-row cohort. Canonical deployed-byte readback and a fresh factory w7 walk remain required. Intake #92 is the active contract dependency; ap-one #642 is a containment lesson, not retry authority.",
       "scope": "released and student-visible state",
       "evidence": [
         {
@@ -106,10 +110,10 @@
     {
       "claim_id": "apwh.sweep.pack",
       "section": "APWH",
-      "status": "PLANNED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The intended official sweep population is 933: 506 banked rows, 369 candidate rows, and 58 disposition rows. A fresh machine-readable 369-record candidate pack is required before execution.",
-      "scope": "staged inputs only; not acceptance proof",
+      "value": "The former candidate-pack plan is superseded. All 933 identities are banked on canonical outputs under Josh's ratified rule. The latest deterministic smoke covers all 933 identities, but it is not model-backed Faultless Bar acceptance.",
+      "scope": "banked 933-item population and deterministic coverage; not acceptance proof",
       "evidence": [
         {
           "type": "audit-evidence",
@@ -117,31 +121,36 @@
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL",
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "apwh.qc933",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "THE ROUTE IS FULLY NAMED. Fleet's 13:37Z answer on their #48: banking is a single SHA-pinned edit of lessons.json committed straight to their outputs repo main through its push gate - no separate applier exists (they retracted their own earlier wording; our absence finding confirmed), no snapshot format needed. Bank of record: 5ca80d81 with 933 conceptItems. After our push they normalize the file and run the merged Faultless Bar twice with agreement artifacts over all 933 identities. The lane is building the replacement-delta packet now with row-level diff proof; the push itself is owner-gated and waits for Josh's explicit go with the exact commit shown first.",
+      "value": "The 933 identities are banked under Josh's ratified rule and the Faultless Bar is the named acceptance instrument. Issue #48 remains open. The latest deterministic no-LLM smoke covers all 933 identities but is not acceptance. Exact unblock: two fresh independent model-backed legs against the same pinned bank; repair stable findings; accept only when both pass and agree exactly.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
           "type": "audit-evidence",
           "location": "THREE-DAY-PLAN.md#day-2",
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/THREE-DAY-PLAN.md"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T13:53Z"
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Our #94 gate report was FIXED AND MERGED by the fleet within 27 minutes (ap-one PR #800, checker-only change to the release gate). Seat re-ran the committed gate at the new tip: the practice leg flipped FAIL to PASS with 9 of 9 items scored, and the two unmeasured legs (key-leak, letters) now read PASS. The committed gate and our live probes now agree the course serves practice correctly. Remaining fleet-side: the #48 judge-implementation push for the 933 (no code pushed yet), the #93 disposition (their attempt 2 mid-review), and the #591 publish chain.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. The only active APWH acceptance blocker is the two-leg model-backed Faultless Bar loop on issue #48.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -154,14 +163,14 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-19T11:36Z"
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "apwh.local_done",
       "section": "APWH",
-      "status": "BLOCKED",
+      "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "The apwh.local_done mark is not valid completion proof: it depends on a hand-rolled walker and a retired, unmerged tree. Retirement and a later factory w7 re-earn require Josh's tree ruling.",
+      "value": "The apwh.local_done mark is retired and carries no completion credit. The tree ruling is settled; current acceptance credit can come only from the fleet's two fresh model-backed Faultless Bar legs and exact agreement over the pinned 933-item bank.",
       "scope": "local completion mark and walk evidence",
       "evidence": [
         {
@@ -170,14 +179,15 @@
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL",
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "apush.ledger.mixed",
       "section": "APUSH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-19T04:13Z",
-      "value": "The 49-of-249 ledger count is byte-current but mixed: 13 admissions are server-strict, 36 are legacy dual-review, and 11 successor records used a local admit path. Only the 13 are presently in the proven factory class.",
+      "observed_at": "2026-08-20T01:55Z",
+      "value": "The 49-of-249 ledger count is byte-current and retains its mandatory split: 13 admissions are server-strict, 36 are honestly labeled legacy dual-review, and 11 successor records used a local admit path. Josh ruled that the 36 keep the legacy label with no funded re-earn.",
       "scope": "article acceptance ledger; not course release",
       "evidence": [
         {
@@ -192,10 +202,18 @@
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "The filed defect on positions 170/244 is CLOSED END TO END: their issue 7 closed as complete, the re-minted content landed on the canonical outputs tree (44e4a09a), and the committed validator re-run against the LANDED bytes passes unit 7 at 36/36 and unit 9 at 18/18 with zero failures - packet hashes match the fleet's own closing-comment SHAs. Still fleet-owned: the seating PR 6 (zero reviews), the image-contract chain (#81 / PR 82) governing the 64 held posts, and the #89 receipts disposition.",
+      "status_at": "2026-08-20T01:55Z",
+      "value": "The filed defect on positions 170/244 remains closed end to end on canonical bytes. Still fleet-owned: issue #81 is in rework, PR #82 remains open, intake #89 remains open and claimed, and #90 remains open with Josh's correction as the current tail. New admissions stay held until those dispositions land.",
       "scope": "future article admissions",
       "evidence": [
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/incept-hole-filler/issues/81"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/InceptTrilogy/incept-hole-filler/pull/82"
+        },
         {
           "type": "issue",
           "url": "https://github.com/ilmych/incept-agent-intake/issues/89"
@@ -206,14 +224,14 @@
         }
       ],
       "evidence_access": "GITHUB",
-      "observed_at": "2026-08-19T15:22Z"
+      "observed_at": "2026-08-20T01:55Z"
     },
     {
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Seating PR #6 remains open with no fleet review. Prepared, not posted: a review-silence ping (non-author reviewed, filing checks passed) parked on the owner's no-GitHub-writes ruling. Offline dry-run of the committed reconciler at PR #6 head 2698913a: all 11 admitted successor positions pass, no writes. Fleet PR #8 head e55dad7: its own 43-test suite passes and its known-bad fixtures cover both filed defect classes. Seating runbook staged: the 11 committed-reconciler invocations with derived output names and ordered preconditions, ready to execute the moment the fleet merges.",
+      "status_at": "2026-08-20T01:55Z",
+      "value": "Seating PR #6 remains open at 2698913a with no reviews. Offline dry-run of the committed reconciler at that head passed all 11 admitted successor positions without writes. The seating runbook is staged; after merge it runs only behind fresh queue, freshness, gate, clean-tree, and liveness checks. The retired review-silence ping is not an active blocker.",
       "scope": "successor seating only",
       "evidence": [
         {
@@ -259,14 +277,18 @@
       "claim_id": "psych.bank",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Top-up machinery repaired tonight (deployed Lambda byte-matches committed, cap of 4 restored, schedule off) - but dispatch is HELD as a recorded CONTRACT CONFLICT: the lifecycle gates content generation on sealed blueprint scope, and the top-up scans AP Psychology broadly with no way to exclude Unit-5 or provenance-uncertain buckets. No spend runs until the factory resolves the provenance/denominator question (course issue #14 / PS-004) or provides a route that provably excludes unresolved scope. Bank stands at 374 underfilled of 1,105.",
+      "status_at": "2026-08-20T01:55Z",
+      "value": "BLOCKED_CONTRACT: the committed top-up route exists and its deployed Lambda is repaired, capped at 4, and disabled. The route still scans AP Psychology broadly and cannot exclude Unit-5 or provenance-uncertain buckets while lifecycle requires sealed scope. No spend runs until course issue #14 answers the contract or the factory commits a scope-excluding route. Bank stands at 374 underfilled of 1,105.",
       "scope": "bank scan and top-up workstream",
       "evidence": [
         {
           "type": "audit-evidence",
           "location": "DAMAGE-REGISTER.jsonl#PS-003",
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
@@ -275,7 +297,7 @@
       "claim_id": "psych.u5",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
+      "status_at": "2026-08-20T01:55Z",
       "value": "The U5 acceptance gate is not green. The recovery audit measured 26 findings; the public issue remains open under its older 27-finding title.",
       "scope": "U5 acceptance gate",
       "evidence": [
@@ -306,14 +328,18 @@
       "claim_id": "psych.provenance",
       "section": "Psych",
       "status": "MISSING",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "The provenance of the 1,105 served-bank buckets is unknown while the authoring repository reports item generation not started. Keep the denominator qualified until the fleet answers.",
+      "status_at": "2026-08-20T01:55Z",
+      "value": "The provenance of the 1,105 served-bank buckets remains unresolved. Course issue #14 is open with no comments; keep the denominator qualified and top-up spend at zero until the fleet answers or commits a scope-excluding route.",
       "scope": "served bank provenance",
       "evidence": [
         {
           "type": "audit-evidence",
           "location": "DAMAGE-REGISTER.jsonl#PS-004",
           "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
