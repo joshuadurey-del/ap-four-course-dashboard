@@ -11,23 +11,38 @@
 <a href="index.html">Overview</a><a href="humgeo.html" class="active" aria-current="page">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP Human Geography</h1>
-  <p class="sub">Recovery state: 429 of 455 re-earned through the factory judge; consolidated PR #43 is open and clean; the companion filing remains in final safety review.</p>
+  <p class="sub">Recovery state: 429 of 455 re-earned through the factory judge; PR #43 and regeneration intake #95 are open; served-form composition remains red.</p>
 
   <section>
     <h2>Verified now</h2>
     <ul>
       <li>The two campaign legs re-earned 429 of 455 records: 351 plus 78 fresh fingerprint-bound factory passes. The remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale.</li>
       <li>Both commits are pushed on the intended non-main branch at <code>43584a54</code>. A 429-record #642 signature scan found zero flags, and the diff touches only the intended record files.</li>
-      <li>The regeneration cohort is re-derived and machine-checked at 332. <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">Consolidated PR #43</a> is open at the exact pushed head and currently reads clean; the companion intake filing remains in final review.</li>
+      <li>The regeneration cohort is re-derived and machine-checked at 332. <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">Consolidated PR #43</a> is open at the exact pushed head and currently reads clean; <a href="https://github.com/ilmych/incept-agent-intake/issues/95" target="_blank" rel="noopener">intake #95</a> is open and marked needs-review.</li>
+      <li>The latest retained nightly oracle passes the 68-gate / 204-form shape check but fails served composition: only 69 of 204 forms satisfy the required 4/8/3 composition, leaving 135 nonconforming.</li>
+      <li>The declared item store contains 2,513 items; 2,505 lack a fingerprint-matched <code>/v1/qc</code> receipt and 789 fail the structural screen. PR #43 carries 429 current-byte passes but has not landed, so none are deducted from the canonical-store count yet.</li>
       <li>Both old walk marks remain revoked; a fresh factory walk still waits on the release predicates.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Blueprint audit</h2>
+    <ul>
+      <li><b>Working source:</b> the active lane uses the onboarding HumGeo blueprint at SHA-256 <code>bea50d0d…bbe9e4</code>. That exact hash is present in the current build lane.</li>
+      <li><b>Receipt found:</b> the current base revision has a <a href="https://github.com/ilmych/humgeo-rebuild/blob/28684ec8ba9829a58d5323b928b87b11fa8774a4/manifests/w6-staging/receipt-blueprint-diff.json" target="_blank" rel="noopener">40-pass / 0-fail / 0-warn blueprint receipt</a>.</li>
+      <li><b>Honest gap:</b> that receipt predates PR #43. After the PR lands, rerun the oracle against the exact landed revision and retain its exit receipt. Also record the TimeBack/AP One delivery mapping and every required named human disposition.</li>
     </ul>
   </section>
 
   <section>
     <h2>Blocking reality</h2>
     <ul>
-      <li><b>Landing in progress:</b> <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">PR #43</a> is open and clean with no review decision or reported checks; merge/readback and the companion filing are still outcome-pending.</li>
-      <li><b>Regeneration contract:</b> 332 rows remain in the machine-checked cohort. <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">intake #92</a> remains open; the filing asks the fleet for the missing regeneration selector and authority. Do not invent a local runner.</li>
+      <li><b>Landing in progress:</b> <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">PR #43</a> is open and clean with no review decision or reported checks; merge/readback remains outcome-pending.</li>
+      <li><b>Regeneration contract:</b> 332 rows remain in the machine-checked cohort. <a href="https://github.com/ilmych/incept-agent-intake/issues/95" target="_blank" rel="noopener">intake #95</a> asks the fleet for the missing regeneration selector and authority. Do not invent a local runner.</li>
+      <li><b>Served composition:</b> 135 of 204 served forms fail the required 4/8/3 composition. Route the measured failure to existing <a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">ap-one #659</a> first because that thread already owns the 68-gate / 204-form cutover and readback contract; draft any narrower filing only if the owner rejects that scope.</li>
+      <li><b>Receipt coverage:</b> after PR #43 lands, rerun the declared-store coverage verifier and preserve both the fingerprint-matched receipt count and the structural-failure histogram. Do not subtract the 429 before canonical merge/readback.</li>
+      <li><b>Current-byte blueprint proof:</b> rerun the existing oracle only after PR #43 lands; the base-branch pass does not transfer to the newer bytes.</li>
+      <li><b>Named human disposition:</b> no whole-course named human LS/SME clearance was found for the current revision. Do not substitute persona or model review.</li>
       <li><b>Delivery gate after landing:</b> publication begins only from a sealed HumGeo-owned package with an exact action receipt, planned or supplied IDs, readback/recovery rules, learner-surface mapping, and registration. Existing shared capability is not course-wide cutover authority.</li>
       <li><b>Release:</b> release predicates, canonical deployed-byte readback, and a fresh factory w7 walk remain after landing.</li>
       <li><b>Containment:</b> <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">ap-one #642</a> is a safety lesson, not a current execution lever or retry authority.</li>
@@ -43,12 +58,13 @@
       <div class="eta-details-body">
         <h3>Our scope complete</h3>
         <ul class="work-list">
-          <li><b>Land the reviewed package.</b><p>PR #43 is open. Finish its review and merge/readback, then finish, post, and verify the companion filing.</p></li>
-          <li><b>Route the 332-row regeneration cohort.</b><p>Use intake #92 to obtain the missing factory selector and authority. Do not create a substitute runner.</p></li>
+          <li><b>Land the reviewed package.</b><p>PR #43 is open. Finish its review and merge/readback, then rerun current-byte receipt coverage.</p></li>
+          <li><b>Route the 332-row regeneration cohort.</b><p>Use intake #95 to obtain the missing factory selector and authority. Do not create a substitute runner.</p></li>
+          <li><b>Correct served composition.</b><p>Attach the 69/204 conforming, 135/204 failing oracle result to #659 and require exact deployed-byte readback after the 4/8/3 repair.</p></li>
         </ul>
         <h3>Factory accepted</h3>
         <ul class="work-list">
-          <li><b>Regeneration authority remains external.</b><p>Track intake #92. Issue #642 remains a containment lesson and supplies no execution authority.</p></li>
+          <li><b>Regeneration and serving repairs remain external.</b><p>Track intake #95 for regeneration and #659 for the governed 68-gate / 204-form serving contract. Issue #642 remains a containment lesson and supplies no execution authority.</p></li>
         </ul>
         <h3>Released and student visible</h3>
         <ul class="work-list">
@@ -58,7 +74,7 @@
     </details>
   </section>
 
-  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/92" target="_blank" rel="noopener">seal/supersede ruling</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/642" target="_blank" rel="noopener">contained corrective-wave issue</a>.</p></section>
+  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">landing PR #43</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/95" target="_blank" rel="noopener">regeneration intake #95</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">68-gate / 204-form cutover #659</a>.</p></section>
 </main>
 <footer>Recovery-audited snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 <script src="timeline.js"></script>

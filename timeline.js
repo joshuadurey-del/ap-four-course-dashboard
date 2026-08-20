@@ -4,8 +4,8 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 1. Verify current state from updates.json + data.json and each course page's current
    "Definition of done" before editing. Do not copy an old dashboard number forward.
 2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next,
-   etaDays, and etaNote. x is the horizontal position from 0–100; y is 100 or 150
-   to stagger labels.
+   etaDays, and etaNote. x is the horizontal position from 0–100; y staggers
+   labels when multiple courses share a recovery locus.
 3. etaDays must be a number-of-days range, never a calendar date. ETA notes must name
    what the range includes and excludes. Keep unmeasured/fleet-paced work explicit.
 4. Never move a course to Release without canonical served-version readback and a dated
@@ -14,19 +14,19 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 12:10 KST factory-phase audit',
+  snapshot: 'Aug 20, 2026 · 13:30 KST evidence reconciliation',
   courses: [
     {
       id: 'apush',
       label: 'AP US History',
       short: 'APUSH',
       color: '#c2413a',
-      x: 19,
-      y: 100,
-      stage: 'Phase 2 · Articles per concept',
-      lastCompleted: 'Fleet fix merged · remint verified 36/36 + 18/18',
-      summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
-      next: 'Fleet lands the image/wave contract and merges seating PR #6; then the staged seating checks can run. New admissions remain held.',
+      x: 24,
+      y: 80,
+      stage: 'Current recovery locus · Build current bytes',
+      lastCompleted: 'Canonical ledger verified · 38 accepted / 211 pending',
+      summary: 'The canonical outputs ledger contains 38 accepted positions: 36 legacy dual-review and 2 server-strict. Eleven additional successor records have receipts but are not committed admissions, so bare 49-of-249 is not an honest canonical count. Josh ruled the 36 keep the legacy label with no funded re-earn.',
+      next: 'Fleet routes the 11 receipted successors into the canonical ledger, lands the image/wave contract, and merges seating PR #6; then rerun the implementation-to-blueprint crosswalk.',
       etaDays: '1–2 days',
       etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
     },
@@ -36,11 +36,11 @@ const AP4_TIMELINE = {
       short: 'Psych',
       color: '#7c3aed',
       x: 24,
-      y: 150,
-      stage: 'Phases 2–3 · Articles and questions',
+      y: 160,
+      stage: 'Current recovery locus · Build current bytes',
       lastCompleted: 'Lambda repaired via their script · walk honestly refused',
-      summary: 'Today settled Psych into a fully measured state. The nine dispatched jobs finished 2 completed, 7 failed (their render gate; the last failure was genuine, pre-deadline). The deployed top-up Lambda was proven 3.5 months stale with no job cap, then repaired on the owner\'s word using the factory\'s own setup script — deployed now byte-matches committed, cap of 4 restored, schedule off, nothing dispatched. The factory w7 walk chain ran and refused at its own preflight: the course is not chooser-ready (bank 374 short, lesson-evidence sweep never run), which is the walk working, not failing. An 8-gate registration map with owners is on file.',
-      next: 'The factory resolves provenance and scope through course issue #14, or supplies a committed scope-excluding route; then bank completion and the free readiness re-walk can resume.',
+      summary: 'The current course repo has 221 EK articles and 221 passing QC sidecars: 204 use fully covered sources and 17 use partial-coverage sources. The 17 partial labels are not failures; the nonblocking article tail is three self-findings. Separately, the factory walk refuses correctly because 374 of 1,105 bank buckets are underfilled and the lesson-evidence sweep has not run.',
+      next: 'Confirm one skill tag and trim two soft-cap overruns; the factory resolves provenance and scope through issue #14 before any top-up, then the course needs the named psychology-specialist disposition.',
       etaDays: 'fleet-gated',
       etaNote: 'No date while the contract conflict stands — the clearing event belongs to the fleet (issue #14 / Unit-5). The Lambda repair and walk receipts are done and keep their value regardless.'
     },
@@ -49,28 +49,28 @@ const AP4_TIMELINE = {
       label: 'AP World History',
       short: 'APWH',
       color: '#4f46b8',
-      x: 65,
-      y: 100,
-      stage: 'Phase 6 complete · Phase 7 held',
-      lastCompleted: 'Two repaired-bank legs ran · acceptance still failed closed',
-      summary: 'Two fresh model-backed legs ran against the same repaired 933-item bank at 243b340 with complete, equal identity sets. Leg A reported 3 failed items and leg B reported 9; the comparator retained 8 stable ordering findings and 6 item/check disagreements. Both-run pass is false and two-run agreement is FAIL, so PR #9 remains open and unmerged.',
-      next: 'The fleet adjudicates or repairs the 8 stable ordering findings, strengthens the 6 unstable item-verdict paths, then reruns two independent empty-cache legs until both pass and agree exactly.',
+      x: 37,
+      y: 120,
+      stage: 'Current recovery locus · Reconcile and accept current bytes',
+      lastCompleted: 'Attempt 1 rejected · attempt 2 active, outcome pending',
+      summary: 'The latest completed fleet readback on issue #48 is REWORK. Acceptance was invoked without the required evidence envelope, so the reported 9-of-31 clear gates are an invocation artifact rather than a current-bank verdict. The current 933-item bank is adcc641; fleet attempt 2 was claimed at 04:13Z, with its outcome still pending.',
+      next: 'Generate the evidence envelope for adcc641 and rerun the bar. Separately rerun the blueprint oracle against a readable exact current course directory; its A-197 result is unmeasured until course_dir_readable is true.',
       etaDays: 'fleet-gated',
-      etaNote: 'No date until two fresh post-repair Faultless Bar legs pass and agree exactly. The bank and our local handoff are complete.'
+      etaNote: 'No date until the current-bank evidence envelope is valid, genuine acceptance residue clears, and the missing Ilma-audit and named human-SME dispositions are receipted. The bank and local handoff are complete.'
     },
     {
       id: 'humgeo',
       label: 'AP Human Geography',
       short: 'HumGeo',
       color: '#2558d8',
-      x: 60,
-      y: 150,
-      stage: 'Phase 6 · SME/persona review + fixes',
+      x: 37,
+      y: 200,
+      stage: 'Current recovery locus · Reconcile and accept current bytes',
       lastCompleted: '429/455 re-earned · both commits pushed',
-      summary: 'The two campaign legs re-earned 429 of 455 records through the factory judge: 351 plus 78 fresh fingerprint-bound passes. The remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. Both commits are pushed at 43584a54; the outgoing 429 records passed the #642 signature scan with zero flags and the diff contains only intended record files.',
-      next: 'PR #43 merges and reads back, the companion filing lands, and the factory supplies the missing regeneration selector and authority.',
+      summary: 'PR #43 carries 429 current-byte passes and intake #95 owns the 332-row regeneration ask. The declared store still measures 2,505 of 2,513 items without fingerprint-matched QC receipts and 789 structural failures until landing. Served composition is independently red: 69 of 204 forms conform to 4/8/3, leaving 135 failures.',
+      next: 'Merge/read back PR #43 and rerun coverage; advance #95 for regeneration; attach the 135-of-204 served-composition failure to existing cutover thread #659 before drafting any new filing.',
       etaDays: 'fleet-gated',
-      etaNote: 'PR #43 is open; its merge, the companion filing, regeneration, #92 adjudication, and release remain fleet-paced, so no release date is claimed.'
+      etaNote: 'PR #43, intake #95, #659 composition repair, regeneration, and release remain fleet-paced, so no release date is claimed.'
     }
   ]
 };
@@ -88,47 +88,37 @@ const AP4_TIMELINE = {
 
   const stages = [
     {
-      id: 'phase-1', point: '1', label: 'CED → validated KG + videos', kicker: 'Factory phase 1 of 7', title: 'CED → validated KG + per-concept videos',
-      copy: 'Build and validate the CED-aligned knowledge graph. Start one AlphaTok video per KG concept in parallel.',
-      foot: 'Gate · validated KG and blueprint reconciliation; videos are KG-driven, not deferred to the end.'
+      id: 'blueprint', point: '1', label: 'Bind blueprint', kicker: 'Evidence gate 1', title: 'Bind the exact working blueprint',
+      copy: 'Pin the course lane to an exact blueprint ref and hash, including course-specific v1 scope, deferred-v2 scope, and completion blockers.',
+      foot: 'A lane-bound copy is working authority for the build; it is not proof that no newer owner-sanctioned blueprint exists.'
     },
     {
-      id: 'phase-2', point: '2', label: 'Articles per concept', kicker: 'Factory phase 2 of 7', title: 'Articles per concept',
-      copy: 'Build an article for each concept, grounded in secondary sources.',
-      foot: 'Gate · Content QC passes against the article golden standard.'
+      id: 'build', point: '2', label: 'Build current bytes', kicker: 'Evidence gate 2', title: 'Build the course against the blueprint',
+      copy: 'Use sanctioned factory routes to produce the course artifacts required by that blueprint. Prepared plans and design locks do not count as implementation.',
+      foot: 'Exit evidence · current artifact census and provenance mapped to every required blueprint dimension.'
     },
     {
-      id: 'phase-3', point: '3', label: 'Questions per CED type', kicker: 'Factory phase 3 of 7', title: 'Questions per CED type + point structure',
-      copy: 'Build questions for each required CED type and point structure through the UQG.',
-      foot: 'Gate · Content QC passes for MCQs and FRQs against their golden standards.'
+      id: 'reconcile', point: '3', label: 'Reconcile + accept', kicker: 'Evidence gate 3', title: 'Reconcile and accept the current bytes',
+      copy: 'Run the course oracle or dimension-by-dimension crosswalk against the exact candidate revision, then clear the course-specific QC and validation gates.',
+      foot: 'A historical or base-branch receipt does not clear a newer candidate. Documented deviations stay visible.'
     },
     {
-      id: 'phase-4', point: '4', label: 'Video wiring', kicker: 'Factory phase 4 of 7', title: 'Video wiring',
-      copy: 'Wire the per-concept videos into the course ledger.',
-      foot: 'Gate · the video map resolves against the accepted course structure.'
+      id: 'human-review', point: 'H', label: 'Human disposition', kicker: 'Required evidence · sequence authority unresolved', title: 'Obtain every required named human disposition',
+      copy: 'Record the named human reviewer, dated scope, findings, revisions, and final disposition required by the course blueprint or factory contract.',
+      foot: 'Persona and model reviews are not human clearance. The current factory-blessed ordering of whole-course LS review is not pinned, so this dashboard does not invent it.'
     },
     {
-      id: 'phase-5', point: '5', label: 'Difficulty + metadata tagging', kicker: 'Factory phase 5 of 7', title: 'Difficulty + metadata tagging',
-      copy: 'Apply honest difficulty and required metadata using the canonical allowlist, not College Board tags.',
-      foot: 'Gate · real per-unit difficulty spread, PP100 pools, and the structure/distribution checks pass.'
+      id: 'delivery', point: '4', label: 'Bind + deliver', kicker: 'Evidence gate 4', title: 'Bind and execute course-owned delivery',
+      copy: 'Bind the exact accepted bytes to the sanctioned TimeBack and AP One route, with course-owned IDs, authorization, manifest, checkpointing, readback, and recovery.',
+      foot: 'Shared APIs and publisher code are mechanisms, not transferable course authority or proof.'
     },
     {
-      id: 'phase-6', point: '6', label: 'SME/persona review + fixes', kicker: 'Factory phase 6 of 7', title: 'SME/persona review + fixes',
-      copy: 'Run the factory learning-science personas, fix root causes, and rerun the applicable QC gates.',
-      foot: 'Factory meaning · persona review, not real human SME or Learning Science clearance.'
+      id: 'served', point: '5', label: 'Serve + read back', kicker: 'Evidence gate 5', title: 'Prove the served course',
+      copy: 'Read back exact stored and learner-served versions, registration, chooser visibility, and the required lesson, practice, gate, scoring, and failure paths.',
+      foot: 'A merge, publish call, deployment, or course registration alone is not served-course proof.'
     },
     {
-      id: 'phase-7', point: '7', label: 'Publish/wire into AP One', kicker: 'Factory phase 7 of 7', title: 'Publish/wire into AP One',
-      copy: 'Publish the course-owned accepted bytes and wire them into AP One through the authorized course-bound delivery path.',
-      foot: 'Gate · exact stored-object readback, learner-surface wiring, registration, deployment, and recovery receipt.'
-    },
-    {
-      id: 'internal-review', point: 'LS', label: 'Human LS review', kicker: 'Post-Phase-7 gate · QC Layer 4', title: 'Human Learning Science review',
-      copy: 'Specialist queueing and component sampling may begin earlier. The course-level gate clears only after a human learning-science or subject-matter reviewer works the current reviewable served course, including failure paths; findings reopen the relevant production work.',
-      foot: 'Exit evidence · named human reviewer, dated course-level scope and disposition, revision/readback receipts, and no partial, persona, or model review presented as whole-course human clearance.'
-    },
-    {
-      id: 'release', point: 'Release', label: 'Release', kicker: 'Separate outcome gate', title: 'Release',
+      id: 'release', point: 'Release', label: 'Release', kicker: 'Outcome gate', title: 'Release',
       copy: 'The course is learner-visible and its exact deployed bytes pass a dated signed-in end-to-end walk. Registration, publication, or deployment alone does not count.',
       foot: 'Exit evidence · chooser visibility, lesson/practice/gate/scoring checks, no answer-key exposure, and identity/progress readback when those outcomes are claimed.'
     }
@@ -138,15 +128,15 @@ const AP4_TIMELINE = {
     <div class="timeline-head">
       <div>
         <h2>Where each course sits on the path to release</h2>
-        <p class="timeline-sub">The factory's seven phases, then separate human Learning Science review and Release gates. Hover, focus, or tap any point for evidence and remaining work.</p>
+        <p class="timeline-sub">Evidence gates for the honest audit—not a claimed factory phase order. Course markers show the current recovery locus, not proof that every earlier gate cleared. Hover, focus, or tap for evidence and remaining work.</p>
       </div>
       <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
     </div>
-    <div class="timeline-canvas" aria-label="Seven factory phases plus separate human Learning Science review and release gates with four course positions">
+    <div class="timeline-canvas" aria-label="Blueprint audit evidence gates and current recovery locus for four courses">
       <div class="timeline-rail" aria-hidden="true"></div>
       <div class="timeline-stages">
         ${stages.map(stage => `
-          <button class="timeline-stage${stage.id === 'internal-review' ? ' timeline-stage-review' : ''}" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'release'}">
+          <button class="timeline-stage${stage.id === 'human-review' ? ' timeline-stage-review' : ''}" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'release'}">
             <span class="timeline-stage-point">${stage.point}</span>
             <span class="timeline-stage-label"${stage.id === 'release' ? ' aria-hidden="true"' : ''}>${stage.label}</span>
           </button>`).join('')}

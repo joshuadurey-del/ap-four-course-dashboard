@@ -11,24 +11,37 @@
 <a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP World History</h1>
-  <p class="sub">Recovery state: the 933 remain on the serialized canonical bank; the first two model-backed legs failed closed, and the fleet repair/rerun loop is active.</p>
+  <p class="sub">Recovery state: the current 933-item bank is at <code>adcc641</code>; attempt 1 is REWORK for a missing evidence envelope, and fleet attempt 2 is active.</p>
 
   <section>
     <h2>Verified now</h2>
     <ul>
-      <li>The serialized outputs main has advanced through the fleet's corrections to <code>243b340</code>; the population remains 933 identities. That commit has not yet earned a passing two-leg acceptance receipt.</li>
-      <li>The first two fresh model-backed legs against bank <code>ba41f90</code> failed closed: 12 and 16 failed identities, 9 stable failures, 11 item/check disagreements, and two-run agreement FAIL. The complete run trees and agreement artifact were retained on issue #48.</li>
+      <li>The serialized bank has advanced to <code>adcc641</code>; the population remains 933 identities. That revision has not earned a valid current-bank acceptance receipt.</li>
+      <li>The latest <a href="https://github.com/ilmych/apwh-blueprint-build/issues/48" target="_blank" rel="noopener">issue #48</a> readback is REWORK: the runner lacked its required evidence envelope, so the reported 9-of-31 clear gates are an invocation artifact rather than a verdict on the current bank.</li>
+      <li>Intake autopilot claimed attempt 2 at <code>2026-08-20T04:13Z</code>. Its outcome is pending; no acceptance credit transfers from the claim event.</li>
       <li>The committed release gate now reads practice PASS 9 of 9 - the fleet fixed our filed gate report within 27 minutes (their PR 800), and the gate agrees with our live probes at three tips.</li>
       <li>The <code>apwh.local_done</code> mark stays retired; verdict credit arrives only with their two-run agreement artifacts.</li>
     </ul>
   </section>
 
   <section>
+    <h2>Blueprint audit</h2>
+    <ul>
+      <li><b>Working source:</b> the active lane uses the onboarding APWH blueprint at SHA-256 <code>790a01f2…513cde</code>; the same bytes are committed in the current home repo.</li>
+      <li><b>Oracle found:</b> the home repo contains the <a href="https://github.com/ilmych/apwh-blueprint-build/blob/8a6ebccbc72451217d1739791d89c14f492ccb60/scripts/blueprint_diff.py" target="_blank" rel="noopener">235-ID blueprint oracle</a>. Historical reconciliation is not a current-bank exit receipt.</li>
+      <li><b>A-197 is not yet a proven course defect:</b> the latest local oracle emitted <code>FAIL 1 / MISSING 79 / PASS 56</code>, but its own receipt says <code>course_dir_readable=false</code> and <code>spine_lessons=0</code>. The A-197 rebind must not be proposed or filed until the oracle is rerun against an exact readable current course directory.</li>
+      <li><b>Honest gap:</b> generate the <code>adcc641</code> evidence envelope, rerun the full oracle and acceptance gates on retained fresh caches, and record the missing Ilma-audit and named human-SME dispositions.</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Blocking reality</h2>
     <ul>
-      <li><b>Fleet acceptance:</b> <a href="https://github.com/ilmych/apwh-blueprint-build/issues/48" target="_blank" rel="noopener">issue #48</a> remains open. Two fresh repaired-bank legs completed against the same 933-item population; leg A reported 3 failed items, leg B reported 9, with 8 stable ordering findings and 6 item/check disagreements. Two-run agreement remains FAIL.</li>
-      <li><b>Exact unblock:</b> adjudicate or repair the 8 stable ordering findings, strengthen the 6 unstable item-verdict paths without suppressing valid failures, and rerun two independent empty-cache legs; accept only when both pass and agree exactly.</li>
-      <li><b>Delivery gate after acceptance:</b> a passing bar is necessary but does not publish the course. Phase 7 then requires an APWH-owned sealed package and exact action/readback/recovery receipt; no prior-course delivery receipt transfers.</li>
+      <li><b>Fleet acceptance:</b> <a href="https://github.com/ilmych/apwh-blueprint-build/issues/48" target="_blank" rel="noopener">issue #48</a> remains open. Attempt 1 is REWORK because it omitted the evidence envelope; attempt 2 is active with no disposition yet. Do not treat 9-of-31 as measured course residue.</li>
+      <li><b>Exact unblock:</b> generate the current <code>adcc641</code> envelope, rerun with retained fresh caches, repair the three recurring identities that remain after claimed fixes, and report only the genuine red gates.</li>
+      <li><b>Blueprint-oracle rerun:</b> pass the exact current readable course directory to the oracle. Treat A-197 and the emitted totals as <code>UNMEASURED</code> until that receipt proves the input was readable.</li>
+      <li><b>Named reviews:</b> current evidence still expects an Ilma audit and human SME signoff; neither has a named course-level completion receipt.</li>
+      <li><b>Delivery gate after acceptance:</b> a passing bar is necessary but does not publish the course. APWH then needs its own sealed package and exact action/readback/recovery receipt; no prior-course delivery receipt transfers.</li>
       <li><b>Ownership:</b> fleet/home-repo only. This course seat is watch-only; no Josh tree ruling, paid-sweep approval, PR #791 action, or #591 decision remains.</li>
     </ul>
   </section>
@@ -42,11 +55,11 @@
       <div class="eta-details-body">
         <h3>Our scope complete</h3>
         <ul class="work-list">
-          <li><b>Watch fleet issue #48.</b><p>The bank, placement ruling, and local handoff are complete. The first two legs failed closed and the fleet has already entered the repair/rerun loop. Do not start another local sweep or alter the bank.</p></li>
+          <li><b>Watch fleet issue #48.</b><p>The bank, placement ruling, and local handoff are complete. The current action is to correct the evidence envelope and rerun from the home repo; do not start another local sweep or alter the bank.</p></li>
         </ul>
         <h3>Factory accepted</h3>
         <ul class="work-list">
-          <li><b>Pending a clean two-leg rerun.</b><p>The first pair found 9 stable failures and 11 disagreements. Acceptance requires two fresh post-repair legs to pass and agree exactly.</p></li>
+          <li><b>Pending a valid current-bank run.</b><p>The latest invocation cannot measure residue without its envelope. Acceptance still requires genuine gates to clear and the named human dispositions to be receipted.</p></li>
         </ul>
         <h3>Released and student visible</h3>
         <ul class="work-list">

@@ -828,7 +828,7 @@ footer {
   .agent-action { transition: none; }
 }
 
-/* Shared factory-phase release timeline; routine content updates live in timeline.js. */
+/* Shared evidence-gate release timeline; routine content updates live in timeline.js. */
 .timeline-sec { margin: 8px 0 20px; padding: 22px 24px 24px; }
 
 .timeline-head {
@@ -860,7 +860,7 @@ footer {
 
 .timeline-canvas {
   position: relative;
-  height: 222px;
+  height: 250px;
   margin: 0 -2px;
   padding-top: 4px;
 }
@@ -878,7 +878,7 @@ footer {
   position: absolute;
   inset: 0 3% auto;
   display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   align-items: start;
 }
 
@@ -990,6 +990,7 @@ footer {
   background: var(--timeline-course-color);
   content: "";
   opacity: .55;
+  pointer-events: none;
 }
 
 .timeline-course::after {
@@ -1003,6 +1004,7 @@ footer {
   background: var(--timeline-course-color);
   box-shadow: 0 0 0 1px var(--timeline-course-color);
   content: "";
+  pointer-events: none;
   transform: translateX(-50%);
 }
 
@@ -1100,7 +1102,7 @@ footer {
   .timeline-sec { padding: 19px 16px 18px; }
   .timeline-head { display: block; margin-bottom: 8px; }
   .timeline-snapshot { display: block; margin-top: 6px; white-space: normal; }
-  .timeline-canvas { height: 212px; }
+  .timeline-canvas { height: 250px; }
   .timeline-rail { right: 6%; left: 6%; }
   .timeline-stages { right: 0; left: 0; }
   .timeline-stage-point { width: 31px; height: 31px; }

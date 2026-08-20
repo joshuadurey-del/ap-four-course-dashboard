@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-20T03:14:13Z",
+ "generated_utc": "2026-08-20T04:35:34Z",
  "note": "sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.",
  "files": [
   {
@@ -18,19 +18,24 @@
    "bytes": 11080
   },
   {
+   "path": "agents/FOUR-COURSE-BLUEPRINT-AUDIT-20260820.md",
+   "sha256": "f53047317279cb4f0a57486510049d13dfb6646e5cf124cb30580c397366b46b",
+   "bytes": 7663
+  },
+  {
    "path": "agents/NOTES.md",
    "sha256": "9400ca977aa031755f1e4d2e59369f31da291346bd4f0314b8f0e8bb80dffea3",
    "bytes": 3105
   },
   {
    "path": "data.json",
-   "sha256": "1f243e870b45dab7c5e4d22e3da5575763cb4ea9cf73272b84ba5be1399fc090",
-   "bytes": 18145
+   "sha256": "5ff27bf8eb443018fc10ad289ba937cd716c7591cf600896bb475e7e5ca19a7c",
+   "bytes": 23884
   },
   {
    "path": "updates.json",
-   "sha256": "aed0b865fcc0ed2dc73e186bb6b14b217dff6021ac2809e0b11c33d8ea464a82",
-   "bytes": 56787
+   "sha256": "081333e523faa51dc59af1e034a832c78956b7321b3263527d99197c36c62d9b",
+   "bytes": 58910
   }
  ]
 }
