@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T03:10Z",
+    "course": "Cross-course",
+    "text": "Timeline now uses the factory's seven phase names directly: CED to validated KG plus videos; articles per concept; questions per CED type plus point structure; video wiring; difficulty plus metadata tagging; SME/persona review plus fixes; and publish/wire into AP One. Human Learning Science review remains a separate post-Phase-7 gate, followed by Release. Phase 6 persona review is not presented as real human LS clearance."
+  },
+  {
     "ts": "2026-08-20T02:57Z",
     "course": "Cross-course",
     "text": "Production-stage correction: the four production stages are Define & scope, Build & assemble, Validate & seal, and Publish & integrate. Internal review is a separate course-level gate after serving-layer readiness and before Release. Specialist queueing and component sampling may start earlier, but partial, persona, and model reviews do not clear whole-course human review; findings loop back into the relevant production stage."
