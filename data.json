@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-20T04:30Z",
+  "snapshot": "2026-08-20T05:27Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
-      "status": "BLOCKED",
-      "status_at": "2026-08-20T04:13Z",
-      "value": "The lane-bound blueprints are normative course-design sources, not complete execution protocols. Onboarding points to a seven-phase playbook and a historical capture exists, but no current factory-blessed playbook or successor is pinned in the accessible repositories. Dashboard markers therefore report current recovery locus, not phase completion.",
+      "status": "OBSERVED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. No universal seven-phase canon is asserted. The dashboard's four stages organize the sprint to LS-QC READY; course markers report current recovery locus, not canonical phase completion.",
       "scope": "accessible onboarding, course-build, dashboard, current factory guide, and skill-pack sources",
       "evidence": [
         {
@@ -17,11 +17,30 @@
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
     },
     {
+      "claim_id": "cross.ls_qc_target",
+      "section": "Cross-course",
+      "status": "PLANNED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "The active milestone is LS-QC READY: a pinned, reviewer-visible candidate at roughly 80% blueprint match with a measured denominator, inherited generation/QC provenance, explicit known gaps, a safe critical review path, and a handoff naming Learning Science as next owner. It excludes LS disposition, revisions, and production release.",
+      "scope": "all four course sprint planning and dashboard ETA",
+      "evidence": [
+        {
+          "type": "owner-direction",
+          "location": "Ilma Cohadzic direction dated 2026-08-07, supplied by Josh on 2026-08-20"
+        },
+        {
+          "type": "sprint-plan",
+          "location": "timeline.js"
+        }
+      ],
+      "evidence_access": "OWNER_DIRECTION+DASHBOARD"
+    },
+    {
       "claim_id": "cross.human_review",
       "section": "Cross-course",
-      "status": "MISSING",
-      "status_at": "2026-08-20T04:13Z",
-      "value": "No named whole-course human LS/SME completion disposition was found for the current revision of any course in the searched dashboard, declared build repositories, or cited blocker threads. Persona, model, task-level, and partial component reviews do not clear this scoped evidence requirement.",
+      "status": "PLANNED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "No named whole-course LS disposition exists yet because human Learning Scientist review is the next owner state after LS-QC READY. Under current owner direction, unnamed human signoff does not block sharing an otherwise honest reviewer candidate; later specialist findings and dispositions remain required evidence.",
       "scope": "current dashboard plus declared HumGeo, APWH, APUSH, and Psychology build repositories and cited blocker threads",
       "evidence": [
         {
@@ -36,7 +55,7 @@
       "section": "HumGeo",
       "status": "BLOCKED",
       "status_at": "2026-08-20T04:13Z",
-      "value": "The lane-bound HumGeo blueprint hash matches the active lane. Base revision 28684ec8 has a 40-pass, 0-fail, 0-warn oracle receipt, but that receipt predates PR #43. A current-byte rerun after exact landing plus named-human and course-owned delivery receipts remain required.",
+      "value": "The lane-bound HumGeo blueprint hash matches the active lane. Base revision 28684ec8 has a 40-pass, 0-fail, 0-warn oracle receipt, but that receipt predates PR #43. LS-QC readiness requires a current-byte rerun after landing, an honest review denominator, and a safe reviewer-visible candidate; named human disposition follows the handoff.",
       "scope": "blueprint binding and implementation reconciliation",
       "evidence": [
         {
@@ -54,8 +73,8 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T04:30Z",
-      "value": "The lane-bound APWH blueprint matches the home repo and a 235-ID oracle exists. A local run emitted FAIL 1 / MISSING 79 / PASS 56, but its receipt also says course_dir_readable=false and spine_lessons=0; A-197 and those totals are UNMEASURED until rerun against an exact readable current course directory. Separately, current bank adcc641 has no valid acceptance receipt and the named human dispositions remain unreceipted.",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "The lane-bound APWH blueprint matches the home repo and a 235-ID oracle exists. A local run emitted FAIL 1 / MISSING 79 / PASS 56, but its receipt also says course_dir_readable=false and spine_lessons=0; A-197 and those totals are UNMEASURED until rerun against the exact readable candidate. The APWH seat banked the 933 and closed; fleet issue #48 owns the active acceptance loop.",
       "scope": "blueprint binding and current-bank acceptance",
       "evidence": [
         {
@@ -74,7 +93,7 @@
       "section": "APUSH",
       "status": "BLOCKED",
       "status_at": "2026-08-20T04:13Z",
-      "value": "The deterministic builder pins the lane-bound APUSH blueprint. Its reconciliation manifest is BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS, but the detailed ledger is chiefly PREPARED design state, not current learner implementation. A current-byte implementation crosswalk, named-human disposition, and delivery/readback receipts are missing.",
+      "value": "The deterministic builder pins the lane-bound APUSH blueprint. Its reconciliation manifest is BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS, but the detailed ledger is chiefly PREPARED design state, not current learner implementation. A denominator-aware current-byte crosswalk and reviewer-visible candidate remain missing; named human disposition follows the handoff.",
       "scope": "blueprint design reconciliation versus current implementation",
       "evidence": [
         {
@@ -89,7 +108,7 @@
       "section": "Psych",
       "status": "BLOCKED",
       "status_at": "2026-08-20T04:13Z",
-      "value": "Psychology is blueprint-first and its Phase 1 design receipt covers 221 of 221 EKs. The current course repo has 221 passing QC sidecars: 204 fully covered and 17 partial-source-coverage, with zero blocking findings. Specialist split review and human-declared sequencing remain open; no course-level implementation oracle or named psychology-specialist completion receipt was found.",
+      "value": "Psychology is blueprint-first and its Phase 1 design receipt covers 221 of 221 EKs. The current course repo has 221 passing QC sidecars: 204 fully covered and 17 partial-source-coverage, with zero blocking findings. No course-level implementation oracle exists. Psychology-specialist review remains later human evidence, but unnamed signoff does not block the LS handoff under current owner direction.",
       "scope": "blueprint design reconciliation, implementation, and specialist completion gates",
       "evidence": [
         {
@@ -191,6 +210,44 @@
       "observed_at": "2026-08-20T01:55Z"
     },
     {
+      "claim_id": "humgeo.ls_qc_ready",
+      "section": "HumGeo",
+      "status": "PLANNED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "Estimated 3–5 focused days to LS-QC READY after prompt owner action on PR #43 and intake #95: merge/read back the 429 passes, rerun current-byte coverage, verify a safe representative AP One path, and seal the measured gap/handoff packet.",
+      "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
+      "evidence": [
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/43"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/95"
+        }
+      ],
+      "evidence_access": "GITHUB+DASHBOARD_PLAN"
+    },
+    {
+      "claim_id": "humgeo.eoc",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "The EOC grader endpoint now reports a deployed SHA that is a descendant of the merged weak-explain fix. A fresh calibration against that endpoint is pending, and the governed 2023/24 typed-gold pool remains unavailable in issue #28. This is a production/EOC tail unless it pulls measured LS-review coverage below the owner bar.",
+      "scope": "HumGeo EOC calibration; not whole-course LS-QC readiness by itself",
+      "evidence": [
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/28"
+        },
+        {
+          "type": "grader-health",
+          "url": "https://ap-grader.inceptstore.com/api/health"
+        }
+      ],
+      "evidence_access": "PUBLIC_ENDPOINT+GITHUB"
+    },
+    {
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
@@ -213,7 +270,7 @@
       "claim_id": "apwh.sweep.pack",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The former candidate-pack plan is superseded. The serialized bank remains 933 identities and has advanced to adcc641. That current bank does not have a valid acceptance receipt because the latest invocation omitted its required evidence envelope.",
+      "value": "The APWH seat banked 933 identities at db2ca06d, recorded the population-scoped ratification at dde5a973, passed the break checks, and closed watch-only. The fleet has since advanced the serialized bank through issue #48 repairs; seat closure is not whole-course acceptance.",
       "scope": "serialized 933-item population and current bank; not acceptance proof",
       "evidence": [
         {
@@ -223,13 +280,13 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T04:13Z"
+      "observed_at": "2026-08-20T05:02Z"
     },
     {
       "claim_id": "apwh.qc933",
       "section": "APWH",
       "status": "BLOCKED",
-      "value": "Issue #48 remains open. Attempt 1 on adcc641 is REWORK because it omitted the required evidence envelope, so 9 of 31 clear gates is an invocation artifact rather than measured course residue. Attempt 2 was claimed at 04:13Z and has no disposition yet. It must generate the envelope, rerun with retained fresh caches, repair the three recurring identities still failing, and obtain the Ilma-audit and named human-SME dispositions.",
+      "value": "Issue #48 remains open and actively worked. The missing-envelope artifact is corrected. At the latest verified tick, all six recurring items pass a focused model diagnostic; ordering and two fresh complete model-backed 933-item legs remain pending. Pre-LS acceptance requires the current L1/L2 pair to pass and agree; named human disposition follows the handoff.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -243,14 +300,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "status_at": "2026-08-20T04:13Z"
+      "status_at": "2026-08-20T05:02Z"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. Current acceptance work is the evidence-envelope rerun plus the Ilma-audit and named human-SME dispositions tracked on issue #48.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. Current pre-LS work is the issue #48 L1/L2 pair, readable blueprint reconciliation, AP One review staging, and handoff packet.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -283,6 +340,21 @@
       "observed_at": "2026-08-20T01:55Z"
     },
     {
+      "claim_id": "apwh.ls_qc_ready",
+      "section": "APWH",
+      "status": "PLANNED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "Estimated 3–5 focused days to LS-QC READY: finish the active issue #48 two-run pair, rerun the blueprint oracle against the exact readable candidate, verify the governed AP One review path, and seal the coverage/gap/handoff packet. The range reflects fleet-owned full-leg work still pending after the APWH seat closed.",
+      "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
+      "evidence": [
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
+        }
+      ],
+      "evidence_access": "GITHUB+DASHBOARD_PLAN"
+    },
+    {
       "claim_id": "apush.ledger.mixed",
       "section": "APUSH",
       "status": "OBSERVED",
@@ -298,10 +370,25 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
     },
     {
+      "claim_id": "apush.generated_qc",
+      "section": "APUSH",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-20T05:27Z",
+      "value": "Owner direction confirms that the 2,479 question candidates passed QC during generation and that hosted grading corpora/calibration already exist. The LS sprint must bind this provenance to the selected candidate; it must not schedule duplicate blanket QC or rebuild calibration merely because later folders are empty.",
+      "scope": "generation-QC and hosted grader inheritance; not current blueprint coverage",
+      "evidence": [
+        {
+          "type": "owner-direction",
+          "location": "Ilma Cohadzic direction dated 2026-08-07, supplied by Josh on 2026-08-20"
+        }
+      ],
+      "evidence_access": "OWNER_DIRECTION"
+    },
+    {
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "BLOCKED",
-      "value": "The filed defect on positions 170/244 remains closed end to end on canonical bytes. Still fleet-owned: issue #81 is in rework, PR #82 remains open, intake #89 remains open and claimed, and #90 remains open with Josh's correction as the current tail. New admissions stay held until those dispositions land.",
+      "value": "The filed defect on positions 170/244 remains closed end to end on canonical bytes. Still fleet-owned: issue #81 is in rework, PR #82 remains open, intake #89 remains open and claimed, and #90 remains open with Josh's correction as the current tail. The correction proves the original 126-position wall overstated the dependency; residual scope must be remeasured rather than repeated as 126.",
       "scope": "future article admissions",
       "evidence": [
         {
@@ -338,6 +425,25 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB"
+    },
+    {
+      "claim_id": "apush.ls_qc_ready",
+      "section": "APUSH",
+      "status": "PLANNED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "Estimated 7–10 focused days to LS-QC READY with at least four non-colliding authoring/QC lanes: bind inherited QC, route the 11 receipts, measure the current blueprint denominator, parallel-author the highest-weight gaps, then stage and seal the AP One reviewer candidate.",
+      "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
+      "evidence": [
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/apush-course-build/pull/6"
+        },
+        {
+          "type": "reconciliation-manifest",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase1/blueprint-reconciliation/reconciliation_manifest.json"
+        }
+      ],
+      "evidence_access": "GITHUB+OWNER_DIRECTION+DASHBOARD_PLAN"
     },
     {
       "claim_id": "apush.platform",
@@ -440,6 +546,21 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
+    },
+    {
+      "claim_id": "psych.ls_qc_ready",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "status_at": "2026-08-20T05:27Z",
+      "value": "Estimated 4–7 focused days after issue #14 clears the safe scope/provenance route: measure the owner-approved denominator, top up only proven high-value buckets to the review bar, stage a safe candidate, and seal the Unit 5/provenance gap ledger. No paid top-up runs while #14 is unresolved.",
+      "scope": "Learning Scientist reviewer-candidate handoff; excludes specialist disposition, LS review, and production release",
+      "evidence": [
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
+        }
+      ],
+      "evidence_access": "GITHUB+DASHBOARD_PLAN"
     },
     {
       "claim_id": "psych.registration",

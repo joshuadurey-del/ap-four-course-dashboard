@@ -5,11 +5,13 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 - `data.json` — claims manifest (same as the agent accounting file)
 - `updates.json` — the "most recent updates" feed (append new entries at the TOP: `{"ts":"YYYY-MM-DDTHH:MMZ","course":"...","text":"..."}`)
 - Course pages are static HTML; the overview and claims explorer render from the JSON.
-- `timeline.js` — shared course stage and recovery-work ranges. A range starts only after its named unblock; it is never a release date.
+- `timeline.js` — shared current recovery loci and focused-work ranges to LS-QC READY. A range is active work under named assumptions; it is never a release date.
 
-Process model: the dashboard shows audit evidence gates — **bind blueprint → build current bytes → reconcile and accept → required named human dispositions → bind and deliver → serve and read back → release**. These are not asserted to be the factory's canonical phase names or a strictly serial production protocol. The onboarding packet points to a seven-phase playbook, but a current factory-blessed copy or successor is not pinned in the accessible repositories. Course markers are therefore labeled **current recovery locus** and never prove every earlier gate cleared.
+Sprint model: the dashboard uses four planning stages — **bind review target → build candidate → measure and preflight → stage for Learning Science → LS-QC READY**. These are dashboard terms, not asserted factory phase names. Course markers are labeled **current recovery locus** and never prove every earlier factory phase cleared.
 
-Authority rule: the lane-bound blueprint is the normative course-design source, not a complete execution protocol. Current factory service contracts govern sanctioned actions. A historical or base-branch blueprint receipt does not clear newer course bytes. Persona/model review is not named human clearance; human-review timing follows the current factory contract once pinned. Delivery requires a course-owned sealed package and action-bound authorization/readback/recovery, and release still requires a dated signed-in learner walk.
+Target rule: owner direction defines the current handoff as a reviewer-visible candidate at roughly 80% blueprint match, with a pinned candidate, measured denominator, inherited generation/QC provenance, known gaps, a safe review surface, and an LS handoff packet. Existing generation QC and hosted grader calibration are reused; unnamed human signoff starts at human review rather than blocking the handoff. LS-QC READY is not LS approval, post-review revision, production release, or proof of canonical phase completion.
+
+Authority rule: the lane-bound blueprint is the normative course-design source, while current factory service contracts govern sanctioned actions. A historical or base-branch blueprint receipt does not clear newer course bytes. Production delivery still requires a course-owned sealed package and action-bound authorization/readback/recovery, and release still requires a dated signed-in learner walk.
 
 Status rule: prepared, factory-accepted, merged, deployed, and released are separate claims. Link recovery findings to the durable private packet in `joshuadurey-del/ap-ss-evidence`; do not cite machine-local audit paths as the only evidence.
 

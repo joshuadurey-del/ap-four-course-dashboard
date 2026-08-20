@@ -423,8 +423,20 @@ small { color: var(--muted); line-height: 1.45; }
   background: #fffcf5;
 }
 
+.ls-target-sec {
+  border-color: #b9c9ef;
+  background: #fbfdff;
+}
+
 .delivery-gate-sec .section-head { align-items: center; }
 .delivery-gate-sec .section-head h2 { margin-top: 8px; }
+.ls-target-sec .section-head { align-items: center; }
+.ls-target-sec .section-head h2 { margin-top: 8px; }
+
+.ls-target-sec .delivery-gate-grid > div {
+  border-color: #ccd8f2;
+  background: #fff;
+}
 
 .delivery-gate-grid {
   display: grid;
@@ -828,7 +840,7 @@ footer {
   .agent-action { transition: none; }
 }
 
-/* Shared evidence-gate release timeline; routine content updates live in timeline.js. */
+/* Shared LS-QC readiness timeline; routine content updates live in timeline.js. */
 .timeline-sec { margin: 8px 0 20px; padding: 22px 24px 24px; }
 
 .timeline-head {
@@ -878,7 +890,7 @@ footer {
   position: absolute;
   inset: 0 3% auto;
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: start;
 }
 
@@ -931,20 +943,15 @@ footer {
   box-shadow: 0 0 0 3px rgba(37, 88, 216, .3);
 }
 
-.timeline-stage-review .timeline-stage-point {
-  border-color: #d59a2c;
-  background: #fff8e8;
-  color: #7a4b00;
-}
-
 .timeline-stage:last-child .timeline-stage-point {
   width: auto;
-  min-width: 74px;
+  min-width: 92px;
   padding: 0 12px;
   border-radius: 999px;
   border-color: var(--blue);
   background: var(--blue);
   color: #fff;
+  white-space: nowrap;
 }
 
 .timeline-stage-label {
@@ -1106,7 +1113,7 @@ footer {
   .timeline-rail { right: 6%; left: 6%; }
   .timeline-stages { right: 0; left: 0; }
   .timeline-stage-point { width: 31px; height: 31px; }
-  .timeline-stage:last-child .timeline-stage-point { min-width: 62px; padding: 0 8px; font-size: 11px; }
+  .timeline-stage:last-child .timeline-stage-point { min-width: 72px; padding: 0 6px; font-size: 9px; }
   .timeline-stage-label { display: none; }
   .timeline-course { max-width: 78px; padding: 6px 8px; font-size: 11px; }
   .timeline-course-long { display: none; }

@@ -21,7 +21,7 @@
 
   <main>
     <h1>Agent data</h1>
-    <p class="sub">The current machine contract comes first. Dated narrative reports are retained below as historical references.</p>
+    <p class="sub">The current machine contract comes first. The active milestone is LS-QC READY at roughly 80% blueprint match; dated release-quality audits remain historical context.</p>
 
     <section class="agent-brief" aria-labelledby="agent-brief-title">
       <div class="section-head">
@@ -56,12 +56,13 @@
         <li><b>Machinery:</b> 16 hand-rolled targets are listed for approval-gated replacement or deletion. Listing is not deletion authority.</li>
         <li><b>Execution:</b> this dashboard is a read-only status surface. It grants no authority to write course data, spend, file, mark, commit, merge, delete, deploy, or release.</li>
         <li><b>Factory rule:</b> use committed canonical tools exactly as documented. When no route exists, return <code>BLOCKED_CONTRACT</code>; never create a local bridge.</li>
+        <li><b>Current target:</b> pin and measure a reviewer-visible candidate, bind existing generation/QC provenance, record gaps, and hand it to Learning Science. LS approval, revisions, and release are later states.</li>
       </ul>
     </section>
 
     <section aria-labelledby="agent-ranges-title">
-      <h2 id="agent-ranges-title">Course recovery ranges</h2>
-      <p>These ranges estimate recovery work after each named unblock. They are not release dates and do not include another owner's latency.</p>
+      <h2 id="agent-ranges-title">Focused work to LS-QC READY</h2>
+      <p>These ranges estimate active work to the Learning Scientist handoff under the stated capacity assumptions. They exclude external waiting time, LS review, revisions, and production release.</p>
       <div id="agent-course-ranges" class="agent-source-list"></div>
     </section>
 
@@ -79,13 +80,6 @@
       <h2 id="current-sources-title">Use these sources in this order</h2>
       <p>The structured files are the current contract. Each claim carries its own observation or status timestamp; the file snapshot never makes an older claim new.</p>
       <div class="agent-source-list">
-        <div class="agent-source">
-          <div>
-            <h3>Four-course blueprint audit — 2026-08-20</h3>
-            <p>Course-by-course blueprint hashes, receipt classification, human-review finding, authority gap, and exact honest work queue.</p>
-          </div>
-          <a class="agent-source-link" href="agents/FOUR-COURSE-BLUEPRINT-AUDIT-20260820.md">Open blueprint audit</a>
-        </div>
         <div class="agent-source">
           <div>
             <h3>Claims manifest</h3>
@@ -106,6 +100,13 @@
             <p>Append-only chronology, newest first. Use it to understand what changed and when.</p>
           </div>
           <a class="agent-source-link" href="updates.json">Open updates.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Four-course blueprint audit baseline — 2026-08-20</h3>
+            <p>Strict release-quality baseline captured before the LS-handoff target was corrected. Use it for gap evidence, not for the current milestone or ETA.</p>
+          </div>
+          <a class="agent-source-link" href="agents/FOUR-COURSE-BLUEPRINT-AUDIT-20260820.md">Open baseline audit</a>
         </div>
         <div class="agent-source">
           <div>
@@ -151,7 +152,8 @@
         <div><dt>Trace a claim</dt><dd>Start with its <code>claim_id</code> in <a href="data.json">data.json</a>, then follow the evidence entries. Use the <a href="claims.html">Claims explorer</a> when a visual filter is faster.</dd></div>
         <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
         <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
-        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None of those labels implies release by itself.</dd></div>
+        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS-QC readiness or release by itself.</dd></div>
+        <div><dt>Keep the milestones separate</dt><dd><code>LS-QC READY</code> means a human reviewer can begin on a pinned, measured candidate. It is not an LS disposition, post-review revision, production release, or proof that every earlier factory phase cleared.</dd></div>
         <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
       </dl>
     </section>
@@ -223,6 +225,9 @@ Rules:
 - Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
 - Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
 - Treat dated Markdown reports as historical context, not current standing.
+- The active milestone is LS-QC READY: a pinned, reviewer-visible candidate at roughly 80% blueprint match with measured coverage, inherited QC provenance, and known gaps.
+- LS-QC READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.
+- Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.
 - Prepared, accepted, merged, deployed, and released are separate states.
 - Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
 - Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.
@@ -246,6 +251,9 @@ Return a concise executive summary of current standing, blockers by owner, stale
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
         'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
         'This dashboard is a read-only status surface and grants no execution authority.',
+        'The active milestone is LS-QC READY: a pinned, reviewer-visible candidate at roughly 80% blueprint match with measured coverage, inherited QC provenance, and known gaps.',
+        'LS-QC READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.',
+        'Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.',
         'Prepared, accepted, merged, deployed, and released are separate states.',
         'Use committed factory-canonical routes; when none exists, report BLOCKED_CONTRACT rather than creating a local bridge.',
         'Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.',

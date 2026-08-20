@@ -1,5 +1,15 @@
 [
   {
+    "ts": "2026-08-20T05:27Z",
+    "course": "Cross-course",
+    "text": "Milestone and ETA reset from owner direction: the active target is LS-QC READY, a pinned reviewer-visible candidate at roughly 80% blueprint match with measured coverage, inherited generation/QC provenance, explicit gaps, a safe review path, and a Learning Science handoff. It is not LS approval or release. Duplicate generation QC, rebuilt grader calibration, and unnamed pre-review signoff were removed from the critical path. After correcting the APWH break-check/full-bar distinction across the five-model panel, focused-work ranges are APWH 3–5 days, HumGeo 3–5, Psychology 4–7 after issue #14 clears, and APUSH 7–10 with at least four non-colliding lanes. The four dashboard stages are sprint-planning terms; markers remain current recovery loci, not proof of canonical phase completion."
+  },
+  {
+    "ts": "2026-08-20T05:26Z",
+    "course": "HumGeo",
+    "text": "Live blocker correction: ap-grader.inceptstore.com now reports deployed SHA a4940515, and GitHub ancestry confirms it descends from the merged weak-explain fix 42b4d169. The old EOC deployment ask is therefore cleared. A fresh course calibration remains our work; the owner-side EOC input still missing is the governed 2023/24 typed-gold pool on HumGeo #28. PR #43 remains open, mergeable, and unreviewed; intake #95 remains needs_review."
+  },
+  {
     "ts": "2026-08-20T04:30Z",
     "course": "Cross-course",
     "text": "Fable-assessment reconciliation: APUSH canon is corrected to 38/249 (36 legacy + 2 server-strict), with 11 receipted successor records still outside the committed ledger. HumGeo now shows PR #43, intake #95, current 2,505/2,513 naked-receipt coverage with 789 structural failures, and the served-composition failure (69/204 conform; route first to #659). APWH A-197 is UNMEASURED because that oracle run had course_dir_readable=false and spine_lessons=0. Psychology has 221/221 passing sidecars; 17 partial-source-coverage labels are not failures, and the actual nonblocking article tail is three self-findings. The exec gate already sanctions refresh.py; any freshness-gate pin fix must verify a declared immutable pin rather than exempt detached HEAD generally."

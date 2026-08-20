@@ -1,76 +1,76 @@
 /*
-CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE below.
+CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIMELINE below.
 
 1. Verify current state from updates.json + data.json and each course page's current
-   "Definition of done" before editing. Do not copy an old dashboard number forward.
+   LS-QC target before editing. Do not copy an old dashboard number forward.
 2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next,
    etaDays, and etaNote. x is the horizontal position from 0–100; y staggers
    labels when multiple courses share a recovery locus.
-3. etaDays must be a number-of-days range, never a calendar date. ETA notes must name
-   what the range includes and excludes. Keep unmeasured/fleet-paced work explicit.
-4. Never move a course to Release without canonical served-version readback and a dated
-   learner walk. Registration, merge, or deploy alone is not release proof.
+3. etaDays must be a focused-work range, never a calendar date. ETA notes must name
+   capacity assumptions and exclusions. External wait time stays explicit.
+4. LS-QC READY is a reviewer-handoff milestone, not LS approval or release. Never imply
+   that a current recovery locus proves every earlier gate cleared canonically.
 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 13:30 KST evidence reconciliation',
+  snapshot: 'Aug 20, 2026 · 14:27 KST LS-handoff reset',
   courses: [
     {
       id: 'apush',
       label: 'AP US History',
       short: 'APUSH',
       color: '#c2413a',
-      x: 24,
+      x: 28,
       y: 80,
-      stage: 'Current recovery locus · Build current bytes',
-      lastCompleted: 'Canonical ledger verified · 38 accepted / 211 pending',
-      summary: 'The canonical outputs ledger contains 38 accepted positions: 36 legacy dual-review and 2 server-strict. Eleven additional successor records have receipts but are not committed admissions, so bare 49-of-249 is not an honest canonical count. Josh ruled the 36 keep the legacy label with no funded re-earn.',
-      next: 'Fleet routes the 11 receipted successors into the canonical ledger, lands the image/wave contract, and merges seating PR #6; then rerun the implementation-to-blueprint crosswalk.',
-      etaDays: '1–2 days',
-      etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
+      stage: 'Current recovery locus · Build reviewer candidate',
+      lastCompleted: '2,479 generated candidates retain factory QC provenance',
+      summary: 'The question candidates were QC checked during generation, so a duplicate blanket pass is not required. The canonical article ledger still has 38 accepted positions plus 11 receipted successors outside canon; the design reconciliation does not yet prove an approximately 80%-blueprint, reviewer-visible implementation.',
+      next: 'Route the 11 receipted successors, measure the exact current candidate against the blueprint denominator, parallel-author only the highest-weight missing scope, and stage the pinned AP One review candidate.',
+      etaDays: '7–10 days',
+      etaNote: 'Focused work to LS-QC READY, not release. Assumes at least four non-colliding authoring/QC lanes, prompt owner review of PR #6 and intake rulings, and reuse of the hosted grader calibration.'
     },
     {
       id: 'psych',
       label: 'AP Psychology',
       short: 'Psych',
       color: '#7c3aed',
-      x: 24,
+      x: 43,
       y: 160,
-      stage: 'Current recovery locus · Build current bytes',
-      lastCompleted: 'Lambda repaired via their script · walk honestly refused',
-      summary: 'The current course repo has 221 EK articles and 221 passing QC sidecars: 204 use fully covered sources and 17 use partial-coverage sources. The 17 partial labels are not failures; the nonblocking article tail is three self-findings. Separately, the factory walk refuses correctly because 374 of 1,105 bank buckets are underfilled and the lesson-evidence sweep has not run.',
-      next: 'Confirm one skill tag and trim two soft-cap overruns; the factory resolves provenance and scope through issue #14 before any top-up, then the course needs the named psychology-specialist disposition.',
-      etaDays: 'fleet-gated',
-      etaNote: 'No date while the contract conflict stands — the clearing event belongs to the fleet (issue #14 / Unit-5). The Lambda repair and walk receipts are done and keep their value regardless.'
+      stage: 'Current recovery locus · Build and measure candidate',
+      lastCompleted: '221/221 articles pass · 374/1,105 bank buckets underfilled',
+      summary: 'All article sidecars pass; 17 partial-source labels are not failures. Safe item top-up remains held because the current route cannot exclude Unit 5 or provenance-uncertain buckets. The unnamed specialist signoff is part of human review, not a reason to delay sharing an otherwise honest candidate.',
+      next: 'Measure the owner-approved blueprint denominator, obtain the #14 scope/provenance answer or a committed excluding route, top up only proven scope to the review bar, then stage the candidate and explicit Unit 5 gap ledger.',
+      etaDays: '4–7 days',
+      etaNote: 'Focused work to LS-QC READY after the #14 scope route clears. No paid top-up runs while provenance is unresolved; a bounded candidate may advance only if its measured denominator honestly reaches the owner’s review bar.'
     },
     {
       id: 'apwh',
       label: 'AP World History',
       short: 'APWH',
       color: '#4f46b8',
-      x: 37,
+      x: 55,
       y: 120,
-      stage: 'Current recovery locus · Reconcile and accept current bytes',
-      lastCompleted: 'Attempt 1 rejected · attempt 2 active, outcome pending',
-      summary: 'The latest completed fleet readback on issue #48 is REWORK. Acceptance was invoked without the required evidence envelope, so the reported 9-of-31 clear gates are an invocation artifact rather than a current-bank verdict. The current 933-item bank is adcc641; fleet attempt 2 was claimed at 04:13Z, with its outcome still pending.',
-      next: 'Generate the evidence envelope for adcc641 and rerun the bar. Separately rerun the blueprint oracle against a readable exact current course directory; its A-197 result is unmeasured until course_dir_readable is true.',
-      etaDays: 'fleet-gated',
-      etaNote: 'No date until the current-bank evidence envelope is valid, genuine acceptance residue clears, and the missing Ilma-audit and named human-SME dispositions are receipted. The bank and local handoff are complete.'
+      stage: 'Current recovery locus · Measure and preflight',
+      lastCompleted: '933 banked · APWH seat closeout complete · fleet bar iterating',
+      summary: 'The APWH seat banked the 933 and closed out; the fleet now owns serialized strengthening and the two full model-backed acceptance legs on issue #48. The latest verified thread state has the focused six-item diagnostic green, with ordering and the complete two-leg result still pending.',
+      next: 'Finish the issue #48 L1/L2 pair, rerun the blueprint oracle against the exact readable candidate, stage that candidate in AP One, and seal the measured gap and reviewer handoff packet.',
+      etaDays: '3–5 days',
+      etaNote: 'Focused work to LS-QC READY, not release. Assumes the fleet continues its active bar loop and the governed AP One placement route remains available; named LS/SME disposition follows the handoff.'
     },
     {
       id: 'humgeo',
       label: 'AP Human Geography',
       short: 'HumGeo',
       color: '#2558d8',
-      x: 37,
+      x: 63,
       y: 200,
-      stage: 'Current recovery locus · Reconcile and accept current bytes',
-      lastCompleted: '429/455 re-earned · both commits pushed',
-      summary: 'PR #43 carries 429 current-byte passes and intake #95 owns the 332-row regeneration ask. The declared store still measures 2,505 of 2,513 items without fingerprint-matched QC receipts and 789 structural failures until landing. Served composition is independently red: 69 of 204 forms conform to 4/8/3, leaving 135 failures.',
-      next: 'Merge/read back PR #43 and rerun coverage; advance #95 for regeneration; attach the 135-of-204 served-composition failure to existing cutover thread #659 before drafting any new filing.',
-      etaDays: 'fleet-gated',
-      etaNote: 'PR #43, intake #95, #659 composition repair, regeneration, and release remain fleet-paced, so no release date is claimed.'
+      stage: 'Current recovery locus · Measure and preflight',
+      lastCompleted: '429 fresh QC passes await merge in PR #43',
+      summary: 'PR #43 is open and mergeable with zero reviews; intake #95 awaits disposition for the 332-record cohort. The served course is already reviewable in part, but 135 of 204 forms miss 4/8/3. The EOC endpoint now contains the grader fix; the governed 2023/24 typed-gold pool remains open in #28.',
+      next: 'Merge/read back PR #43, rerun current-byte coverage, disposition #95, verify a safe representative AP One review surface, and put the form-composition and EOC tails in the gap ledger.',
+      etaDays: '3–5 days',
+      etaNote: 'Focused work to LS-QC READY, not release. Assumes prompt #43/#95 owner action. Full 204-form remediation, formal EOC calibration, release cutover, and learner walk remain later unless they break the review surface.'
     }
   ]
 };
@@ -88,57 +88,47 @@ const AP4_TIMELINE = {
 
   const stages = [
     {
-      id: 'blueprint', point: '1', label: 'Bind blueprint', kicker: 'Evidence gate 1', title: 'Bind the exact working blueprint',
-      copy: 'Pin the course lane to an exact blueprint ref and hash, including course-specific v1 scope, deferred-v2 scope, and completion blockers.',
-      foot: 'A lane-bound copy is working authority for the build; it is not proof that no newer owner-sanctioned blueprint exists.'
+      id: 'blueprint', point: '1', label: 'Bind review target', kicker: 'Planning stage 1', title: 'Bind the blueprint and review denominator',
+      copy: 'Pin the exact blueprint/CED and candidate scope. Name what counts in the approximately 80% reviewer bar and what is explicitly deferred; do not redefine the denominator after seeing the result.',
+      foot: 'These four planning stages organize the sprint. They are not claimed as universal factory phase names.'
     },
     {
-      id: 'build', point: '2', label: 'Build current bytes', kicker: 'Evidence gate 2', title: 'Build the course against the blueprint',
-      copy: 'Use sanctioned factory routes to produce the course artifacts required by that blueprint. Prepared plans and design locks do not count as implementation.',
-      foot: 'Exit evidence · current artifact census and provenance mapped to every required blueprint dimension.'
+      id: 'build', point: '2', label: 'Build candidate', kicker: 'Planning stage 2', title: 'Build the reviewer candidate',
+      copy: 'Reuse factory-generated, generation-QC-proven content and existing hosted graders. Parallel-author only measured high-value gaps through sanctioned routes; no duplicate blanket QC or calibration work.',
+      foot: 'Exit evidence · exact candidate census and provenance mapped to the bound blueprint dimensions.'
     },
     {
-      id: 'reconcile', point: '3', label: 'Reconcile + accept', kicker: 'Evidence gate 3', title: 'Reconcile and accept the current bytes',
-      copy: 'Run the course oracle or dimension-by-dimension crosswalk against the exact candidate revision, then clear the course-specific QC and validation gates.',
-      foot: 'A historical or base-branch receipt does not clear a newer candidate. Documented deviations stay visible.'
+      id: 'measure', point: '3', label: 'Measure + preflight', kicker: 'Planning stage 3', title: 'Measure coverage and preflight the review surface',
+      copy: 'Run the blueprint crosswalk against the exact candidate, bind existing generation/QC receipts, and check the reviewer path for answer-key exposure, placeholders, and critical broken routes.',
+      foot: 'Exit evidence · measured coverage with denominator, current-byte receipts, and an explicit known-gap ledger.'
     },
     {
-      id: 'human-review', point: 'H', label: 'Human disposition', kicker: 'Required evidence · sequence authority unresolved', title: 'Obtain every required named human disposition',
-      copy: 'Record the named human reviewer, dated scope, findings, revisions, and final disposition required by the course blueprint or factory contract.',
-      foot: 'Persona and model reviews are not human clearance. The current factory-blessed ordering of whole-course LS review is not pinned, so this dashboard does not invent it.'
+      id: 'stage', point: '4', label: 'Stage for LS', kicker: 'Planning stage 4', title: 'Stage the exact candidate for Learning Science',
+      copy: 'Make the pinned candidate reviewer-visible in AP One or the sanctioned review surface and seal the coverage report, provenance, gaps, review instructions, and next owner.',
+      foot: 'A local build or unbound publish call is not reviewer visibility. The staged bytes and the packet must name each other.'
     },
     {
-      id: 'delivery', point: '4', label: 'Bind + deliver', kicker: 'Evidence gate 4', title: 'Bind and execute course-owned delivery',
-      copy: 'Bind the exact accepted bytes to the sanctioned TimeBack and AP One route, with course-owned IDs, authorization, manifest, checkpointing, readback, and recovery.',
-      foot: 'Shared APIs and publisher code are mechanisms, not transferable course authority or proof.'
-    },
-    {
-      id: 'served', point: '5', label: 'Serve + read back', kicker: 'Evidence gate 5', title: 'Prove the served course',
-      copy: 'Read back exact stored and learner-served versions, registration, chooser visibility, and the required lesson, practice, gate, scoring, and failure paths.',
-      foot: 'A merge, publish call, deployment, or course registration alone is not served-course proof.'
-    },
-    {
-      id: 'release', point: 'Release', label: 'Release', kicker: 'Outcome gate', title: 'Release',
-      copy: 'The course is learner-visible and its exact deployed bytes pass a dated signed-in end-to-end walk. Registration, publication, or deployment alone does not count.',
-      foot: 'Exit evidence · chooser visibility, lesson/practice/gate/scoring checks, no answer-key exposure, and identity/progress readback when those outcomes are claimed.'
+      id: 'ls-ready', point: 'LS-QC READY', label: 'LS-QC READY', kicker: 'Sprint outcome', title: 'Ready for Learning Scientist QC',
+      copy: 'A Learning Scientist can immediately inspect a named candidate, measured blueprint coverage, QC provenance, and every known gap. This outcome does not claim LS approval or release.',
+      foot: 'Next lifecycle · human LS review → evidence-backed revisions → production validation and learner release.'
     }
   ];
 
   root.innerHTML = `
     <div class="timeline-head">
       <div>
-        <h2>Where each course sits on the path to release</h2>
-        <p class="timeline-sub">Evidence gates for the honest audit—not a claimed factory phase order. Course markers show the current recovery locus, not proof that every earlier gate cleared. Hover, focus, or tap for evidence and remaining work.</p>
+        <h2>Where each course sits on the path to Learning Science review</h2>
+        <p class="timeline-sub">Target: a reviewer-visible candidate at approximately 80% blueprint match. Markers show the current recovery locus—not proof that every earlier stage cleared. Hover, focus, or tap for evidence and the next move.</p>
       </div>
       <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
     </div>
-    <div class="timeline-canvas" aria-label="Blueprint audit evidence gates and current recovery locus for four courses">
+    <div class="timeline-canvas" aria-label="Planning stages and current recovery locus for four courses moving to Learning Scientist review">
       <div class="timeline-rail" aria-hidden="true"></div>
       <div class="timeline-stages">
         ${stages.map(stage => `
-          <button class="timeline-stage${stage.id === 'human-review' ? ' timeline-stage-review' : ''}" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'release'}">
+          <button class="timeline-stage" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'ls-ready'}">
             <span class="timeline-stage-point">${stage.point}</span>
-            <span class="timeline-stage-label"${stage.id === 'release' ? ' aria-hidden="true"' : ''}>${stage.label}</span>
+            <span class="timeline-stage-label"${stage.id === 'ls-ready' ? ' aria-hidden="true"' : ''}>${stage.label}</span>
           </button>`).join('')}
       </div>
       ${AP4_TIMELINE.courses.map(course => `
@@ -153,7 +143,7 @@ const AP4_TIMELINE = {
         <p class="timeline-detail-title"></p>
       </div>
       <div>
-        <p class="timeline-eta" hidden><span>Estimated recovery work</span><strong></strong></p>
+        <p class="timeline-eta" hidden><span>Focused work to LS-QC READY</span><strong></strong></p>
         <p class="timeline-detail-copy"></p>
         <p class="timeline-detail-move" hidden><span>What moves it forward</span><strong></strong></p>
         <p class="timeline-detail-foot"></p>
@@ -184,7 +174,7 @@ const AP4_TIMELINE = {
   const eta = root.querySelector('.timeline-eta');
   const etaValue = eta.querySelector('strong');
   const detailLink = root.querySelector('.timeline-detail-link');
-  let locked = 'release';
+  let locked = 'ls-ready';
 
   function show(key, persist = false) {
     const item = details[key];
@@ -215,9 +205,9 @@ const AP4_TIMELINE = {
 
   if (controls.length !== stages.length + AP4_TIMELINE.courses.length ||
       AP4_TIMELINE.courses.some(course =>
-        !(/^\d+[–-]\d+ days$/.test(course.etaDays) || course.etaDays === 'fleet-gated') ||
+        !/^\d+[–-]\d+ days$/.test(course.etaDays) ||
         !course.etaNote || !course.next)) {
-    throw new Error('Course release timeline data is incomplete.');
+    throw new Error('Course LS-QC timeline data is incomplete.');
   }
   show(locked, true);
 })();
