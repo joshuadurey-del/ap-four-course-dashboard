@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-20T06:45Z",
+  "snapshot": "2026-08-20T08:30Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. No universal seven-phase canon is asserted. The dashboard's four stages organize the sprint to LS-QC READY; course markers report current recovery locus, not canonical phase completion.",
+      "observed_at": "2026-08-20T08:30Z",
+      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. No universal seven-phase canon is asserted. The dashboard's four stages organize the sprint to LS REVIEW READY; course markers report current recovery locus, not canonical phase completion.",
       "scope": "accessible onboarding, course-build, dashboard, current factory guide, and skill-pack sources",
       "evidence": [
         {
@@ -20,8 +20,8 @@
       "claim_id": "cross.ls_qc_target",
       "section": "Cross-course",
       "status": "PLANNED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "The active milestone is LS-QC READY: a pinned, reviewer-visible candidate at roughly 80% blueprint match with a measured denominator, inherited generation/QC provenance, explicit known gaps, a safe critical review path, and a handoff naming Learning Science as next owner. It excludes LS disposition, revisions, and production release.",
+      "status_at": "2026-08-20T08:30Z",
+      "value": "The active milestone is LS REVIEW READY: Learning Science can access the pinned candidate and walk a representative course path. The roughly 80% blueprint measure, inherited QC provenance, and gap accounting remain internal build controls rather than an LS intake packet. The milestone excludes LS disposition, revisions, and production release.",
       "scope": "all four course sprint planning and dashboard ETA",
       "evidence": [
         {
@@ -39,8 +39,8 @@
       "claim_id": "cross.human_review",
       "section": "Cross-course",
       "status": "PLANNED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "No named whole-course LS disposition exists yet because human Learning Scientist review is the next owner state after LS-QC READY. Under current owner direction, unnamed human signoff does not block sharing an otherwise honest reviewer candidate; later specialist findings and dispositions remain required evidence.",
+      "status_at": "2026-08-20T08:30Z",
+      "value": "No named whole-course LS disposition exists yet because Learning Science applies its own review process after LS REVIEW READY. The pre-review requirement is working access to a pinned candidate and a representative walkthrough, not an evidence packet or unnamed human signoff.",
       "scope": "current dashboard plus declared HumGeo, APWH, APUSH, and Psychology build repositories and cited blocker threads",
       "evidence": [
         {
@@ -54,8 +54,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T06:45Z",
-      "value": "The lane-bound HumGeo blueprint hash matches the active lane. Base revision 28684ec8 has a 40-pass, 0-fail, 0-warn oracle receipt, but that receipt predates merged PR #43. LS-QC readiness requires a current-byte rerun against merge commit be18d12, an honest review denominator, and a safe reviewer-visible candidate; named human disposition follows the handoff.",
+      "status_at": "2026-08-20T08:30Z",
+      "value": "The lane-bound HumGeo blueprint hash matches the active lane. Base revision 28684ec8 has a 40-pass, 0-fail, 0-warn oracle receipt, but that receipt predates merged PR #43. The official CED denominator is now resolved at 150 EK / 70 LO. A current-byte oracle rerun and the distinct accepted-EK numerator remain pending; Learning Science review begins after access and a representative walkthrough are proven.",
       "scope": "blueprint binding and implementation reconciliation",
       "evidence": [
         {
@@ -65,9 +65,32 @@
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/43"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/45"
         }
       ],
       "evidence_access": "GITHUB"
+    },
+    {
+      "claim_id": "humgeo.coverage.denominator",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-20T08:30Z",
+      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. The committed 158-code library map has nine codes absent from the CED and omits real CED code PSO-3.D.2. Coverage must count distinct accepted artifacts against the 150 official codes; failed receipts and phantom-only mappings earn no accepted coverage. The exact accepted-EK numerator is still unmeasured.",
+      "scope": "HumGeo internal blueprint-coverage denominator; not an LS intake requirement",
+      "evidence": [
+        {
+          "type": "official-ced",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap-human-geography-course-and-exam-description.pdf"
+        },
+        {
+          "type": "local-denominator-report",
+          "location": "~/.incept/day-20260820/humgeo-ek-denominator/HUMGEO-EK-DENOMINATOR-20260820.md"
+        }
+      ],
+      "evidence_access": "PUBLIC_COLLEGE_BOARD+LOCAL_RECEIPT"
     },
     {
       "claim_id": "apwh.blueprint.audit",
@@ -192,30 +215,51 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "LANDING COMPLETE, CURRENT-BYTE COVERAGE UNMEASURED. PR #43 merged at be18d12 and the outgoing 429 records had passed the #642 signature scan with zero flags. The 2,513 total / 2,505 without fingerprint-matched receipts / 789 structural-failure figures came from the last pre-merge verifier and are historical until that same verifier runs against the merged state.",
-      "scope": "429 current fresh-pass records",
+      "observed_at": "2026-08-20T08:30Z",
+      "value": "POST-MERGE RECORD INVENTORY MEASURED; DISTINCT EK COVERAGE UNMEASURED. The merged genfill tree has 2,578 generated records: 459 fingerprint-receipted (433 passes plus 26 fails, all 26 inside PR #45) and 2,119 without matching receipts. The 2,119 partition exactly into 306 PR #45 rows, 4 held-for-landing rows, 29 calibration fixtures, and 1,780 never-swept rows. These record counts do not establish how many of the 150 official EKs have an accepted artifact.",
+      "scope": "HumGeo genfill tree at course commit be18d12d; PR #45 adds plan-only bytes; record receipt inventory, not accepted-EK coverage",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#HG-007",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+          "type": "local-partition-report",
+          "location": "~/.incept/day-20260819/course-recovery-work/humgeo/NEVER-SWEPT-CUT-20260820.md"
         },
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/43"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/45"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T06:45Z"
+      "evidence_access": "GITHUB+LOCAL_RECEIPT"
+    },
+    {
+      "claim_id": "humgeo.review_surface.local",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-20T08:30Z",
+      "value": "Candidate be18d12d stages and serves locally through the committed w7 chain. The running server's 13-file bundle hash equals the staged hash byte-for-byte and contains 7 units / 1,225 lessons. The browser walker stops at the expected readiness-chooser preflight and skips the remaining 11 stages. This proves local stage, boot, and bundle identity; it does not prove an LS-reachable surface or a complete reviewer walkthrough.",
+      "scope": "local w7 candidate and chooser preflight only",
+      "evidence": [
+        {
+          "type": "local-host-proof",
+          "location": "~/.incept/day-20260819/course-recovery-work/humgeo/LOCAL-HOST-PROOF-PACKAGE.md"
+        },
+        {
+          "type": "merged-candidate",
+          "url": "https://github.com/ilmych/humgeo-rebuild/commit/be18d12db835b3fab55043536910a134a1102504"
+        }
+      ],
+      "evidence_access": "GITHUB+LOCAL_RECEIPT"
     },
     {
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-20T06:45Z",
-      "value": "Estimated 3–5 focused days to LS-QC READY from the now-cleared landing and route-authority state: read back the merged 429 passes, rerun current-byte coverage and blueprint reconciliation, execute the quality-first route for the 332-record cohort, verify a safe representative AP One path, and seal the measured gap/handoff packet.",
-      "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
+      "status_at": "2026-08-20T08:30Z",
+      "value": "Estimated 3–5 focused days to LS REVIEW READY. The denominator and local serving mechanism are proven. The handoff now requires an LS-reachable secure surface and a complete reviewer-equivalent walkthrough. In parallel, builders compute the distinct accepted-EK numerator over 150 and target any pilot at uncovered EKs. Merged PR #45 supplies the sealed 332-row candidate-only plan; execution remains pending under its single-writer and re-arm controls.",
+      "scope": "Learning Science access and walkthrough handoff; excludes LS disposition and production release",
       "evidence": [
         {
           "type": "pull-request",
@@ -224,6 +268,10 @@
         {
           "type": "issue",
           "url": "https://github.com/ilmych/incept-agent-intake/issues/95"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/45"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN"
@@ -234,7 +282,7 @@
       "status": "BLOCKED",
       "status_at": "2026-08-20T05:27Z",
       "value": "The EOC grader endpoint reports a deployed SHA that is a descendant of the merged weak-explain fix. Ilma's authorization was received and executed, and the governed 2023/24 pool landed in merged PR #32. Fresh calibration acceptance remains course/fleet work on issue #28, not an owner source-supply ask; it is a production/EOC tail unless it pulls measured LS-review coverage below the owner bar.",
-      "scope": "HumGeo EOC calibration; not whole-course LS-QC readiness by itself",
+      "scope": "HumGeo EOC calibration; not whole-course LS review readiness by itself",
       "evidence": [
         {
           "type": "issue",
@@ -251,13 +299,17 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T06:45Z",
-      "value": "Release is not proven. PR #43 is merged and intake #95 delegated the 332-row route to the course lane, but current-byte verifier readback, execution of that route, and the measured 135-of-204 served-form composition failure on issue #659 remain. Canonical deployed-byte readback and a fresh factory w7 walk are still required for release.",
+      "status_at": "2026-08-20T08:30Z",
+      "value": "Release is not proven. Local w7 stage/serve and byte-identical bundle readback succeeded on candidate be18d12d, but the walker stopped at the readiness chooser and skipped the course stages. PR #45 merged the sealed 332-row plan, not its execution; the measured 135-of-204 served-form composition failure on issue #659 also remains. Release still requires canonical deployed-byte readback and a released-tier learner walk.",
       "scope": "released and student-visible state",
       "evidence": [
         {
           "type": "issue",
           "url": "https://github.com/ilmych/incept-agent-intake/issues/95"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/45"
         },
         {
           "type": "issue",
@@ -286,7 +338,7 @@
       "claim_id": "apwh.qc933",
       "section": "APWH",
       "status": "BLOCKED",
-      "value": "Issue #48 remains open and actively worked. The latest complete pair on serialized bank 17808cc has equal complete 933-item population binding and builder evidence present, but both legs fail: five identities fail in both, nine item/check verdicts disagree, ordering reports six findings in leg A and five in leg B, and both legs clear 28 of 31 Faultless Bar gates. Pre-LS acceptance requires a new L1/L2 pair to pass and agree; named human disposition follows the handoff.",
+      "value": "Issue #48 remains open and actively worked. The latest complete pair on serialized bank 67f6961 has equal 933-item population binding and zero population warnings. Leg A is 930 pass / 3 fail; leg B is 931 pass / 2 fail; ordering passes both legs; three item verdicts disagree. One stable and three unstable substantive item defects keep exact agreement red. Pre-LS acceptance requires a new L1/L2 pair to pass and agree; named human disposition follows the handoff.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -300,14 +352,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "status_at": "2026-08-20T06:45Z"
+      "status_at": "2026-08-20T08:30Z"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
       "status_at": "2026-08-19T04:13Z",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. Current pre-LS work is the issue #48 L1/L2 pair, readable blueprint reconciliation, AP One review staging, and handoff packet.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. Current pre-LS work is the issue #48 L1/L2 pair, readable blueprint reconciliation, working AP One review access, and a representative walkthrough.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -343,8 +395,8 @@
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "PLANNED",
-      "status_at": "2026-08-20T06:45Z",
-      "value": "Estimated 3–5 focused days to LS-QC READY: repair or adjudicate the five stable failures and persistent ordering residue, strengthen nine unstable verdicts, complete a new passing issue #48 pair, rerun the blueprint oracle against the exact readable candidate, verify the governed AP One review path, and seal the handoff packet.",
+      "status_at": "2026-08-20T08:30Z",
+      "value": "Estimated 3–5 focused days to LS REVIEW READY: repair the one stable and three unstable substantive item defects on issue #48, complete a new passing and exactly agreeing pair, rerun the blueprint oracle against the exact readable candidate, then provide working AP One access and verify the representative walkthrough.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -431,7 +483,7 @@
       "section": "APUSH",
       "status": "PLANNED",
       "status_at": "2026-08-20T05:27Z",
-      "value": "Estimated 7–10 focused days to LS-QC READY with at least four non-colliding authoring/QC lanes: bind inherited QC, route the 11 receipts, measure the current blueprint denominator, parallel-author the highest-weight gaps, then stage and seal the AP One reviewer candidate.",
+      "value": "Estimated 7–10 focused days to LS REVIEW READY with at least four non-colliding authoring/QC lanes: bind inherited QC, route the 11 receipts, measure the current blueprint denominator, parallel-author the highest-weight gaps, then provide working AP One access and verify the representative walkthrough.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -552,8 +604,8 @@
       "section": "Psych",
       "status": "BLOCKED",
       "status_at": "2026-08-20T06:45Z",
-      "value": "Estimated 4–7 focused days after a safe Unit 5 scope route clears: bind #14's confirmed generation/QC provenance, measure the owner-approved denominator, top up only proven high-value buckets to the review bar, stage a safe candidate, and seal the Unit 5 gap ledger. No paid top-up runs while scope remains unsealed.",
-      "scope": "Learning Scientist reviewer-candidate handoff; excludes specialist disposition, LS review, and production release",
+      "value": "Estimated 4–7 focused days to LS REVIEW READY after a safe Unit 5 scope route clears: bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, then provide working access to the pinned candidate and verify the representative walkthrough. No paid top-up runs while scope remains unsealed.",
+      "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
         {
           "type": "issue",

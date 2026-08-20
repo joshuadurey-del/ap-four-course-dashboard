@@ -21,7 +21,7 @@
 
   <main>
     <h1>Agent data</h1>
-    <p class="sub">The current machine contract comes first. The active milestone is LS-QC READY at roughly 80% blueprint match; dated release-quality audits remain historical context.</p>
+    <p class="sub">The current machine contract comes first. The active milestone is LS REVIEW READY: Learning Science can access and walk the named candidate. Internal coverage measures remain planning evidence; dated release-quality audits remain historical context.</p>
 
     <section class="agent-brief" aria-labelledby="agent-brief-title">
       <div class="section-head">
@@ -56,12 +56,12 @@
         <li><b>Machinery:</b> 16 hand-rolled targets are listed for approval-gated replacement or deletion. Listing is not deletion authority.</li>
         <li><b>Execution:</b> this dashboard is a read-only status surface. It grants no authority to write course data, spend, file, mark, commit, merge, delete, deploy, or release.</li>
         <li><b>Factory rule:</b> use committed canonical tools exactly as documented. When no route exists, return <code>BLOCKED_CONTRACT</code>; never create a local bridge.</li>
-        <li><b>Current target:</b> pin and measure a reviewer-visible candidate, bind existing generation/QC provenance, record gaps, and hand it to Learning Science. LS approval, revisions, and release are later states.</li>
+        <li><b>Current target:</b> provide Learning Science working access to a pinned candidate and verify a representative walkthrough. Internal measurement, QC provenance, and gap tracking continue as builder controls. LS approval, revisions, and release are later states.</li>
       </ul>
     </section>
 
     <section aria-labelledby="agent-ranges-title">
-      <h2 id="agent-ranges-title">Focused work to LS-QC READY</h2>
+      <h2 id="agent-ranges-title">Focused work to LS REVIEW READY</h2>
       <p>These ranges estimate active work to the Learning Scientist handoff under the stated capacity assumptions. They exclude external waiting time, LS review, revisions, and production release.</p>
       <div id="agent-course-ranges" class="agent-source-list"></div>
     </section>
@@ -152,8 +152,8 @@
         <div><dt>Trace a claim</dt><dd>Start with its <code>claim_id</code> in <a href="data.json">data.json</a>, then follow the evidence entries. Use the <a href="claims.html">Claims explorer</a> when a visual filter is faster.</dd></div>
         <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
         <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
-        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS-QC readiness or release by itself.</dd></div>
-        <div><dt>Keep the milestones separate</dt><dd><code>LS-QC READY</code> means a human reviewer can begin on a pinned, measured candidate. It is not an LS disposition, post-review revision, production release, or proof that every earlier factory phase cleared.</dd></div>
+        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS review readiness or release by itself.</dd></div>
+        <div><dt>Keep the milestones separate</dt><dd><code>LS REVIEW READY</code> means Learning Science can access and walk the named candidate. It is not an LS disposition, post-review revision, production release, or proof that every earlier factory phase cleared.</dd></div>
         <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
       </dl>
     </section>
@@ -225,8 +225,8 @@ Rules:
 - Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
 - Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
 - Treat dated Markdown reports as historical context, not current standing.
-- The active milestone is LS-QC READY: a pinned, reviewer-visible candidate at roughly 80% blueprint match with measured coverage, inherited QC provenance, and known gaps.
-- LS-QC READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.
+- The active milestone is LS REVIEW READY: Learning Science can access and walk the pinned candidate; internal coverage and QC evidence remain builder controls.
+- LS REVIEW READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.
 - Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.
 - Prepared, accepted, merged, deployed, and released are separate states.
 - Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
@@ -251,8 +251,8 @@ Return a concise executive summary of current standing, blockers by owner, stale
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
         'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
         'This dashboard is a read-only status surface and grants no execution authority.',
-        'The active milestone is LS-QC READY: a pinned, reviewer-visible candidate at roughly 80% blueprint match with measured coverage, inherited QC provenance, and known gaps.',
-        'LS-QC READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.',
+        'The active milestone is LS REVIEW READY: Learning Science can access and walk the pinned candidate; internal coverage and QC evidence remain builder controls.',
+        'LS REVIEW READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.',
         'Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.',
         'Prepared, accepted, merged, deployed, and released are separate states.',
         'Use committed factory-canonical routes; when none exists, report BLOCKED_CONTRACT rather than creating a local bridge.',

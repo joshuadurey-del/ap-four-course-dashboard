@@ -1,5 +1,20 @@
 [
   {
+    "ts": "2026-08-20T08:30Z",
+    "course": "Cross-course",
+    "text": "Target correction: Learning Science has its own review process. LS REVIEW READY now means reviewers can access the pinned course and walk a representative path. The roughly 80% blueprint measure, QC provenance, and gap accounting remain internal build controls; an evidence packet is not an LS intake requirement. LS disposition, revision, release, and learner validation remain later states."
+  },
+  {
+    "ts": "2026-08-20T08:30Z",
+    "course": "APWH",
+    "text": "APWH successor receipt: the latest complete pair on serialized bank 67f6961 covers 176 lessons / 933 unique items with zero population warnings. Leg A is 930 pass / 3 fail; leg B is 931 pass / 2 fail; ordering passes both legs; population binding agrees. Acceptance remains red on one stable plus three unstable substantive item defects. Issue #48 owns the repairs and two new independent full legs; PR #9 remains unmerged until the legs pass and agree exactly."
+  },
+  {
+    "ts": "2026-08-20T08:30Z",
+    "course": "HumGeo",
+    "text": "HumGeo refresh: the official Fall-2020 College Board CED resolves the denominator at 150 EK / 70 LO. The 158-code library map has nine non-CED codes and omits PSO-3.D.2. Merged-main inventory is 2,578 generated records: 433 passes, 26 fingerprint-valid fails inside PR #45, and 2,119 without matching receipts, including 1,780 never swept. These are record counts, not the distinct accepted-EK numerator, which remains pending. PR #45 merged the sealed 332-row mixed-disposition plan and candidate-only runner; its zero-action receipt means execution is still pending. Candidate be18d12d stages and serves locally with byte-identical bundle readback across 7 units / 1,225 lessons; the browser run stops at the expected readiness chooser, so an LS-reachable surface and complete reviewer-equivalent walkthrough remain the handoff blockers."
+  },
+  {
     "ts": "2026-08-20T06:45Z",
     "course": "Cross-course",
     "text": "Live authority refresh: HumGeo PR #43 merged at be18d12 and intake #95 closed with owner delegation to choose regeneration or enrich-plus-QC plus approval of associated API costs; merged-store coverage remains unmeasured until the declared verifier reruns. Psychology #14 closed with confirmation that the served bank came through the Content Factory generation API and includes its QC; provenance is cleared, but Unit 5 scope remains blocked on a safe excluding route or #2 resolution, so top-up stays disabled at zero spend. APUSH seating PR #6 merged at dab70a6; the 11 successors still require canonical ledger admission and a guarded seating run. APWH's latest complete 17808cc pair remains red at 28/31 gates in both legs with five stable failures, nine disagreements, and persistent ordering findings; issue #48 owns the active repair loop. Focused-work ranges are unchanged."

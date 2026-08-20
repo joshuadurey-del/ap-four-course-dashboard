@@ -2,19 +2,20 @@
 CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIMELINE below.
 
 1. Verify current state from updates.json + data.json and each course page's current
-   LS-QC target before editing. Do not copy an old dashboard number forward.
+   LS review target before editing. Do not copy an old dashboard number forward.
 2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next,
    etaDays, and etaNote. x is the horizontal position from 0–100; y staggers
    labels when multiple courses share a recovery locus.
 3. etaDays must be a focused-work range, never a calendar date. ETA notes must name
    capacity assumptions and exclusions. External wait time stays explicit.
-4. LS-QC READY is a reviewer-handoff milestone, not LS approval or release. Never imply
+4. LS REVIEW READY means Learning Science can access and walk the named candidate. It is
+   not LS approval or release. Never imply
    that a current recovery locus proves every earlier gate cleared canonically.
 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 15:45 KST live-receipt refresh',
+  snapshot: 'Aug 20, 2026 · 17:30 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -28,7 +29,7 @@ const AP4_TIMELINE = {
       summary: 'The question candidates were QC checked during generation, so a duplicate blanket pass is not required. The seating reconciler merged at dab70a6, but the canonical article ledger still has 38 accepted positions plus 11 receipted successors outside canon; merge alone does not seat them or prove an approximately 80%-blueprint reviewer candidate.',
       next: 'Route the 11 receipted successors, measure the exact current candidate against the blueprint denominator, parallel-author only the highest-weight missing scope, and stage the pinned AP One review candidate.',
       etaDays: '7–10 days',
-      etaNote: 'Focused work to LS-QC READY, not release. Assumes at least four non-colliding authoring/QC lanes, prompt intake rulings, and reuse of the merged seating reconciler and hosted grader calibration.'
+      etaNote: 'Focused work to LS REVIEW READY, not release. Assumes at least four non-colliding authoring/QC lanes, prompt intake rulings, and reuse of the merged seating reconciler and hosted grader calibration.'
     },
     {
       id: 'psych',
@@ -42,7 +43,7 @@ const AP4_TIMELINE = {
       summary: 'Issue #14 closed with owner confirmation that the served bank came through the Content Factory generation API and includes its QC. Provenance is no longer the hold. Safe top-up remains held because the broad route cannot exclude unresolved Unit 5 scope; issue #2 remains open.',
       next: 'Measure the owner-approved blueprint denominator, bind the confirmed generation/QC provenance, establish a committed Unit 5-safe scope route or resolve #2, then top up only proven scope and stage the candidate with an explicit gap ledger.',
       etaDays: '4–7 days',
-      etaNote: 'Focused work to LS-QC READY after a safe Unit 5 scope route clears. Provenance is resolved; no paid top-up runs while scope remains unsealed. A bounded candidate may advance only if its measured denominator honestly reaches the owner’s review bar.'
+      etaNote: 'Focused work to LS REVIEW READY after a safe Unit 5 scope route clears. Provenance is resolved; no paid top-up runs while scope remains unsealed. Internal coverage measurement guides the bounded candidate but is not Learning Science’s intake process.'
     },
     {
       id: 'apwh',
@@ -52,25 +53,25 @@ const AP4_TIMELINE = {
       x: 55,
       y: 120,
       stage: 'Current recovery locus · Measure and preflight',
-      lastCompleted: '17808cc full pair measured · 28/31 gates clear in both legs',
-      summary: 'The latest complete 933-item pair on bank 17808cc remains red: five identities fail both legs, nine item/check verdicts disagree, and ordering reports six findings in leg A and five in leg B. Builder evidence is present and population binding agrees; issue #48 owns the active repair loop.',
-      next: 'Repair or defensibly adjudicate the five stable failures and recurring prerequisite findings, strengthen the nine unstable verdicts, run two new empty-cache legs, then rerun readable blueprint reconciliation and stage the AP One reviewer handoff.',
+      lastCompleted: '67f6961 full pair measured · ordering passes both legs',
+      summary: 'The latest complete 933-item pair on serialized bank 67f6961 remains red but is narrower: leg A passes 930 and fails 3; leg B passes 931 and fails 2. Ordering passes both legs, population binding agrees, and the remaining residue is one stable plus three unstable substantive item defects. Issue #48 owns the active repair loop.',
+      next: 'Repair the four named bindings through the serialized bank route, run two new independent 933-item legs until they pass and agree exactly, then rerun readable blueprint reconciliation and open the governed AP One reviewer path.',
       etaDays: '3–5 days',
-      etaNote: 'Focused work to LS-QC READY, not release. Assumes the fleet continues its active bar loop and the governed AP One placement route remains available; named LS/SME disposition follows the handoff.'
+      etaNote: 'Focused work to LS REVIEW READY, not release. Assumes the fleet continues its active bar loop and the governed AP One placement route remains available; named LS/SME disposition follows the handoff.'
     },
     {
       id: 'humgeo',
       label: 'AP Human Geography',
       short: 'HumGeo',
       color: '#2558d8',
-      x: 63,
+      x: 69,
       y: 200,
-      stage: 'Current recovery locus · Measure and preflight',
-      lastCompleted: 'PR #43 merged · #95 closed with route and cost authority',
-      summary: 'The 429 fresh QC passes merged at be18d12. Intake #95 closed with owner delegation to choose regeneration or enrich-plus-QC for the 332-record cohort and approval of the associated API costs. Current-byte coverage and the blueprint denominator have not yet been remeasured after landing.',
-      next: 'Read back the merged 429 records, rerun current-byte coverage and the blueprint oracle, execute the highest-quality route for the 332-record cohort, verify a safe AP One review surface, and carry form-composition/EOC tails in the gap ledger.',
+      stage: 'Current recovery locus · Measure coverage + open review access',
+      lastCompleted: '150 EK / 70 LO settled · PR #45 sealed plan merged · pinned candidate serves locally',
+      summary: 'The live College Board CED resolves the denominator at 150 EK / 70 LO. Post-merge inventory is 2,578 generated records: 433 current passes, 26 fingerprint-valid fails inside PR #45, and 2,119 without matching receipts, including 1,780 never swept. Candidate be18d12d stages, boots, and serves a byte-identical 1,225-lesson bundle locally; the walker stops honestly at the readiness chooser, so a complete reviewer walk is not yet proven.',
+      next: 'Compute the distinct accepted-EK numerator over 150, explicitly measure missing map code PSO-3.D.2, target any pilot at uncovered EKs, place the pinned candidate on an LS-reachable secure surface, and run the full reviewer-equivalent walk. Merged PR #45 supplies the separate sealed 332-row plan; its candidate-only execution has not run.',
       etaDays: '3–5 days',
-      etaNote: 'Focused work to LS-QC READY, not release. The landing and route-authority waits are cleared; the range now assumes a dedicated course lane and prompt verifier throughput. Full 204-form remediation, formal EOC calibration, release cutover, and learner walk remain later unless they break the review surface.'
+      etaNote: 'Focused work to LS REVIEW READY, not release. The denominator and local serving mechanism are proven; the remaining handoff gate is an LS-reachable surface plus a complete reviewer-equivalent walk. Internal EK measurement and the 332-row lane continue in parallel.'
     }
   ]
 };
@@ -88,8 +89,8 @@ const AP4_TIMELINE = {
 
   const stages = [
     {
-      id: 'blueprint', point: '1', label: 'Bind review target', kicker: 'Planning stage 1', title: 'Bind the blueprint and review denominator',
-      copy: 'Pin the exact blueprint/CED and candidate scope. Name what counts in the approximately 80% reviewer bar and what is explicitly deferred; do not redefine the denominator after seeing the result.',
+      id: 'blueprint', point: '1', label: 'Bind review target', kicker: 'Planning stage 1', title: 'Bind the candidate and internal coverage target',
+      copy: 'Pin the exact blueprint/CED and candidate scope. Measure coverage honestly for internal planning; the roughly 80% target is not a Learning Science intake requirement.',
       foot: 'These four planning stages organize the sprint. They are not claimed as universal factory phase names.'
     },
     {
@@ -98,18 +99,18 @@ const AP4_TIMELINE = {
       foot: 'Exit evidence · exact candidate census and provenance mapped to the bound blueprint dimensions.'
     },
     {
-      id: 'measure', point: '3', label: 'Measure + preflight', kicker: 'Planning stage 3', title: 'Measure coverage and preflight the review surface',
-      copy: 'Run the blueprint crosswalk against the exact candidate, bind existing generation/QC receipts, and check the reviewer path for answer-key exposure, placeholders, and critical broken routes.',
-      foot: 'Exit evidence · measured coverage with denominator, current-byte receipts, and an explicit known-gap ledger.'
+      id: 'measure', point: '3', label: 'Measure + preflight', kicker: 'Planning stage 3', title: 'Measure internally and preflight the walkthrough',
+      copy: 'Run the blueprint crosswalk against the exact candidate, bind existing generation/QC receipts, and test a representative reviewer path. Keep internal measurements separate from the LS intake process.',
+      foot: 'Exit evidence · current internal measurement plus a representative path that is ready to expose to reviewers.'
     },
     {
-      id: 'stage', point: '4', label: 'Stage for LS', kicker: 'Planning stage 4', title: 'Stage the exact candidate for Learning Science',
-      copy: 'Make the pinned candidate reviewer-visible in AP One or the sanctioned review surface and seal the coverage report, provenance, gaps, review instructions, and next owner.',
-      foot: 'A local build or unbound publish call is not reviewer visibility. The staged bytes and the packet must name each other.'
+      id: 'stage', point: '4', label: 'Open LS access', kicker: 'Planning stage 4', title: 'Make the exact candidate accessible to Learning Science',
+      copy: 'Provide a working URL and access to the pinned candidate, then verify the representative walkthrough from a reviewer-equivalent account.',
+      foot: 'A localhost build is useful proof but is not reviewer visibility. Supply the version, walk route, blocking defects, and feedback owner.'
     },
     {
-      id: 'ls-ready', point: 'LS-QC READY', label: 'LS-QC READY', kicker: 'Sprint outcome', title: 'Ready for Learning Scientist QC',
-      copy: 'A Learning Scientist can immediately inspect a named candidate, measured blueprint coverage, QC provenance, and every known gap. This outcome does not claim LS approval or release.',
+      id: 'ls-ready', point: 'LS REVIEW READY', label: 'LS REVIEW READY', kicker: 'Sprint outcome', title: 'Ready for Learning Science review',
+      copy: 'Learning Science can open the named candidate and walk the representative course path. Internal coverage and QC evidence remain available to builders but do not become an LS intake ceremony.',
       foot: 'Next lifecycle · human LS review → evidence-backed revisions → production validation and learner release.'
     }
   ];
@@ -118,7 +119,7 @@ const AP4_TIMELINE = {
     <div class="timeline-head">
       <div>
         <h2>Where each course sits on the path to Learning Science review</h2>
-        <p class="timeline-sub">Target: a reviewer-visible candidate at approximately 80% blueprint match. Markers show the current recovery locus—not proof that every earlier stage cleared. Hover, focus, or tap for evidence and the next move.</p>
+        <p class="timeline-sub">Target: Learning Science can access the named course and walk a representative path. Markers show the current recovery locus—not proof that every earlier stage cleared. Hover, focus, or tap for evidence and the next move.</p>
       </div>
       <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
     </div>
@@ -143,7 +144,7 @@ const AP4_TIMELINE = {
         <p class="timeline-detail-title"></p>
       </div>
       <div>
-        <p class="timeline-eta" hidden><span>Focused work to LS-QC READY</span><strong></strong></p>
+        <p class="timeline-eta" hidden><span>Focused work to LS REVIEW READY</span><strong></strong></p>
         <p class="timeline-detail-copy"></p>
         <p class="timeline-detail-move" hidden><span>What moves it forward</span><strong></strong></p>
         <p class="timeline-detail-foot"></p>
@@ -207,7 +208,7 @@ const AP4_TIMELINE = {
       AP4_TIMELINE.courses.some(course =>
         !/^\d+[–-]\d+ days$/.test(course.etaDays) ||
         !course.etaNote || !course.next)) {
-    throw new Error('Course LS-QC timeline data is incomplete.');
+    throw new Error('Course LS review timeline data is incomplete.');
   }
   show(locked, true);
 })();
