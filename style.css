@@ -878,7 +878,7 @@ footer {
   position: absolute;
   inset: 0 3% auto;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: start;
 }
 
@@ -929,6 +929,12 @@ footer {
 
 .timeline-stage:focus-visible .timeline-stage-point {
   box-shadow: 0 0 0 3px rgba(37, 88, 216, .3);
+}
+
+.timeline-stage-review .timeline-stage-point {
+  border-color: #d59a2c;
+  background: #fff8e8;
+  color: #7a4b00;
 }
 
 .timeline-stage:last-child .timeline-stage-point {

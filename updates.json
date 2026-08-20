@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T02:57Z",
+    "course": "Cross-course",
+    "text": "Production-stage correction: the four production stages are Define & scope, Build & assemble, Validate & seal, and Publish & integrate. Internal review is now a separate gate after serving-layer readiness and before Release. Human learning-science or subject-matter findings loop back into the relevant production stage; persona and model simulations do not count as human review."
+  },
+  {
     "ts": "2026-08-20T02:49Z",
     "course": "APWH",
     "text": "Live refresh: two fresh repaired-bank legs completed against the same 933-item population and acceptance remains red. Leg A reported 3 failed items and leg B reported 9; the comparator retained 8 stable ordering findings and 6 item/check disagreements, so both-run pass is false and two-run agreement is FAIL. The fleet now adjudicates or repairs those findings, strengthens unstable verdict paths, and reruns two independent empty-cache legs."

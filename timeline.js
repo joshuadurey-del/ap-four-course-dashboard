@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 11:49 KST delivery-gate audit',
+  snapshot: 'Aug 20, 2026 · 11:57 KST production-stage audit',
   courses: [
     {
       id: 'apush',
@@ -23,7 +23,7 @@ const AP4_TIMELINE = {
       color: '#c2413a',
       x: 30,
       y: 88,
-      stage: 'Build content',
+      stage: 'Build & assemble',
       lastCompleted: 'Fleet fix merged · remint verified 36/36 + 18/18',
       summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
       next: 'Fleet lands the image/wave contract and merges seating PR #6; then the staged seating checks can run. New admissions remain held.',
@@ -37,7 +37,7 @@ const AP4_TIMELINE = {
       color: '#7c3aed',
       x: 39,
       y: 134,
-      stage: 'Build content',
+      stage: 'Build & assemble',
       lastCompleted: 'Lambda repaired via their script · walk honestly refused',
       summary: 'Today settled Psych into a fully measured state. The nine dispatched jobs finished 2 completed, 7 failed (their render gate; the last failure was genuine, pre-deadline). The deployed top-up Lambda was proven 3.5 months stale with no job cap, then repaired on the owner\'s word using the factory\'s own setup script — deployed now byte-matches committed, cap of 4 restored, schedule off, nothing dispatched. The factory w7 walk chain ran and refused at its own preflight: the course is not chooser-ready (bank 374 short, lesson-evidence sweep never run), which is the walk working, not failing. An 8-gate registration map with owners is on file.',
       next: 'The factory resolves provenance and scope through course issue #14, or supplies a committed scope-excluding route; then bank completion and the free readiness re-walk can resume.',
@@ -51,7 +51,7 @@ const AP4_TIMELINE = {
       color: '#4f46b8',
       x: 52,
       y: 88,
-      stage: 'Validate',
+      stage: 'Validate & seal',
       lastCompleted: 'Two repaired-bank legs ran · acceptance still failed closed',
       summary: 'Two fresh model-backed legs ran against the same repaired 933-item bank at 243b340 with complete, equal identity sets. Leg A reported 3 failed items and leg B reported 9; the comparator retained 8 stable ordering findings and 6 item/check disagreements. Both-run pass is false and two-run agreement is FAIL, so PR #9 remains open and unmerged.',
       next: 'The fleet adjudicates or repairs the 8 stable ordering findings, strengthens the 6 unstable item-verdict paths, then reruns two independent empty-cache legs until both pass and agree exactly.',
@@ -65,7 +65,7 @@ const AP4_TIMELINE = {
       color: '#2558d8',
       x: 58,
       y: 134,
-      stage: 'Validate',
+      stage: 'Validate & seal',
       lastCompleted: '429/455 re-earned · both commits pushed',
       summary: 'The two campaign legs re-earned 429 of 455 records through the factory judge: 351 plus 78 fresh fingerprint-bound passes. The remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. Both commits are pushed at 43584a54; the outgoing 429 records passed the #642 signature scan with zero flags and the diff contains only intended record files.',
       next: 'PR #43 merges and reads back, the companion filing lands, and the factory supplies the missing regeneration selector and authority.',
@@ -93,9 +93,9 @@ const AP4_TIMELINE = {
       foot: 'Exit evidence · validated blueprint, logged deviations, complete starting inventory, and a named delivery owner and surface.'
     },
     {
-      id: 'stage-2', point: '2', label: 'Build & accept', kicker: 'Production stage 2 of 4', title: 'Build and accept the missing content',
-      copy: 'Generate only real gaps: articles, questions, FRQs, visuals, practice, mastery gates, and their metadata through the factory.',
-      foot: 'Exit evidence · accepted factory outputs with source, retry, deduplication, and grounding receipts.'
+      id: 'stage-2', point: '2', label: 'Build & assemble', kicker: 'Production stage 2 of 4', title: 'Build and assemble the complete course',
+      copy: 'Generate only real gaps through the factory, accept item-level outputs, and assemble the articles, questions, FRQs, visuals, practice, mastery gates, and metadata into one reviewable course.',
+      foot: 'Exit evidence · complete reviewable course bytes plus source, retry, deduplication, grounding, and item-level acceptance receipts.'
     },
     {
       id: 'stage-3', point: '3', label: 'Validate & seal', kicker: 'Production stage 3 of 4', title: 'Validate and seal exact course bytes',
@@ -108,6 +108,11 @@ const AP4_TIMELINE = {
       foot: 'Exit evidence · action-bound authorization, planned or supplied IDs, checkpoint and recovery receipt, stored-object readback, deployment, and registration.'
     },
     {
+      id: 'internal-review', point: 'QC', label: 'Internal review', kicker: 'QC Layer 4', title: 'Human and subject-matter review',
+      copy: 'After serving-layer readiness, a human learning-science or subject-matter reviewer works the reviewable course, including failure paths. Findings reopen the relevant build, validation, or publication work until they are dispositioned.',
+      foot: 'Exit evidence · named human reviewer, dated scope and disposition, revision/readback receipts, and no persona or model simulation presented as human review.'
+    },
+    {
       id: 'release', point: 'Release', label: 'Release', kicker: 'Separate outcome gate', title: 'Release',
       copy: 'The course is learner-visible and its exact deployed bytes pass a dated signed-in end-to-end walk. Registration, publication, or deployment alone does not count.',
       foot: 'Exit evidence · chooser visibility, lesson/practice/gate/scoring checks, no answer-key exposure, and identity/progress readback when those outcomes are claimed.'
@@ -118,15 +123,15 @@ const AP4_TIMELINE = {
     <div class="timeline-head">
       <div>
         <h2>Where each course sits on the path to release</h2>
-        <p class="timeline-sub">Four production stages; Release is a separate outcome gate. Hover, focus, or tap any point for evidence and remaining work. Ranges count recovery work after the named unblock, not time to release.</p>
+        <p class="timeline-sub">Four production stages, then separate Internal review and Release gates. Hover, focus, or tap any point for evidence and remaining work. Ranges count recovery work after the named unblock, not time to release.</p>
       </div>
       <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
     </div>
-    <div class="timeline-canvas" aria-label="Four production stages plus a separate release gate with four course positions">
+    <div class="timeline-canvas" aria-label="Four production stages plus separate internal review and release gates with four course positions">
       <div class="timeline-rail" aria-hidden="true"></div>
       <div class="timeline-stages">
         ${stages.map(stage => `
-          <button class="timeline-stage" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'release'}">
+          <button class="timeline-stage${stage.id === 'internal-review' ? ' timeline-stage-review' : ''}" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'release'}">
             <span class="timeline-stage-point">${stage.point}</span>
             <span class="timeline-stage-label"${stage.id === 'release' ? ' aria-hidden="true"' : ''}>${stage.label}</span>
           </button>`).join('')}
