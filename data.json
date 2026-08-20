@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T18:19Z",
+  "snapshot": "2026-08-20T18:50Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -544,13 +544,13 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T18:19Z",
-      "value": "Current course main remains e7a3df with the previously verified 221 EK articles, 221 passing QC sidecars, and Unit 3 video repository release. Open PR #23 at head 43fbb7b adds the Unit 3 image-stage candidate. Independent static checks on that branch find 34 embedded articles, 34 PNGs, and 34 ledger approvals; the licence/leak check passes, the 71-file delivery copy is byte-identical, and all 11 prose changes carry re-judged sidecars. The full figure-ledger re-derivation could not run on this monitor machine because rsvg-convert is unavailable. PR #23 is clean and mergeable but has no configured checks or review; it also names the missing u3_image_provenance.json as a known gap. These are unmerged branch observations, not current-main completion, course wiring, reviewer visibility, or deployment.",
-      "scope": "current-main article/video state plus open Unit 3 image candidate; not bank acceptance, course wiring, or deployment",
+      "observed_at": "2026-08-20T18:50Z",
+      "value": "Current course main is merge commit 93ddb276 for PR #23. Exact current-byte checks find 221 paired EK articles and passing QC sidecars, 34 embedded Unit 3 articles, 34 PNGs, and 34 ledger approvals; the licence/leak and provenance-consistency check passes, the 71-file delivery copy is byte-identical, and all 11 prose changes carry re-judged sidecars. The machine-readable u3_image_provenance.json now exists. The full figure-ledger re-derivation could not run on this monitor machine because rsvg-convert is unavailable, and PR #23 had no configured checks or GitHub review. This proves a current-main image-stage landing with bounded static readback, not course wiring, reviewer visibility, or deployment.",
+      "scope": "current-main article, video, and merged Unit 3 image-stage state; not bank acceptance, course wiring, or deployment",
       "evidence": [
         {
           "type": "course-repository",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/e7a3df4737ecfc1ceb6e998738e4090c7eddd5f3/articles"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/93ddb276b8ac329166e4a62b05a193d485b7db9c/articles"
         },
         {
           "type": "pull-request",
@@ -561,7 +561,7 @@
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-3-videos"
         },
         {
-          "type": "open-pull-request",
+          "type": "merged-pull-request",
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23"
         }
       ],
@@ -642,10 +642,14 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T18:19Z",
-      "value": "Estimated 4–7 focused build days after a safe Unit 5 scope route clears. Open PR #23 materially advances Unit 3 imagery but remains unmerged and lacks a complete independent renderer-dependent re-derivation on this monitor machine. Remaining work is to review and merge that candidate, rerun its full receipt on main, bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, wire the verified content, and prepare the pinned local package. No paid top-up runs while scope remains unsealed. External TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-20T18:50Z",
+      "value": "Estimated 4–7 focused build days after a safe Unit 5 scope route clears. PR #23 is merged on current main and bounded static readback passes, but a complete independent renderer-dependent re-derivation remains unavailable on this monitor machine. Remaining work is to rerun that full receipt on main, bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, wire the verified content, and prepare the pinned local package. No paid top-up runs while scope remains unsealed. External TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
+        {
+          "type": "merged-pull-request",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23"
+        },
         {
           "type": "issue",
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
