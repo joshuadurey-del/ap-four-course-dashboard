@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T02:39Z",
+    "course": "Cross-course",
+    "text": "Production model clarified: four production stages plus a separate Release outcome gate. The stages are now Define & scope, Build & accept, Validate & seal, and Publish & integrate. Stage 4 is HOLD until the course has its own sealed package, exact action authorization, planned or supplied IDs, readback/recovery rules, learner-surface mapping, and registration; prior-course receipts do not transfer. Filing guidance now routes same-class gaps to existing owning issues and permits a new filing only after current bytes prove BLOCKED_CONTRACT and the duplicate/filing check is clean. Each timeline course now has a dedicated What moves it forward line."
+  },
+  {
     "ts": "2026-08-20T02:18Z",
     "course": "APWH",
     "text": "Faultless Bar moved from pending to measured red: the first two fresh model-backed legs ran against the same 933-item bank and failed closed (12 and 16 failed identities, 9 stable failures, 11 disagreements, agreement FAIL). The fleet repaired all nine stable findings on serialized outputs main through 243b340. Two fresh empty-cache legs against that pinned bank are next; the APWH seat remains watch-only."

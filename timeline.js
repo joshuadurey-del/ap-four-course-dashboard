@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine timeline updates happen ONLY in AP4_TIMELINE 
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 11:18 KST blocker audit',
+  snapshot: 'Aug 20, 2026 · 11:39 KST delivery-gate audit',
   courses: [
     {
       id: 'apush',
@@ -26,7 +26,7 @@ const AP4_TIMELINE = {
       stage: 'Build content',
       lastCompleted: 'Fleet fix merged · remint verified 36/36 + 18/18',
       summary: 'The committed builder re-derived the 49-of-249 ledger byte-exact in a scratch checkout (exit 0), so the count is now builder-receipted. The factory mode split is mandatory wherever it appears: 36 legacy dual-review plus 13 server-strict, of which 11 are successor admissions with a named reviewer. Josh ruled the 36 keep the honest legacy label with no funded re-earn. The 17 hand-rolled P10 scripts are quarantined read-only and the ledger re-derives without them.',
-      next: 'Next · fleet issue #81 remains in rework with PR #82 open; intake #89 is claimed and #90 remains open with Josh\'s correction as its current tail. Seating PR #6 is still open with no reviews. On its merge, run the staged seating plan only after fresh queue, freshness, gate, clean-tree, and liveness checks. New admissions remain held; no paid APUSH packet is sanctioned.',
+      next: 'Fleet lands the image/wave contract and merges seating PR #6; then the staged seating checks can run. New admissions remain held.',
       etaDays: '1–2 days',
       etaNote: 'Work estimate, not a release promise. Covers residual local verification only. Admissions, seating, registration, and serving are fleet-gated and carry no date.'
     },
@@ -40,7 +40,7 @@ const AP4_TIMELINE = {
       stage: 'Build content',
       lastCompleted: 'Lambda repaired via their script · walk honestly refused',
       summary: 'Today settled Psych into a fully measured state. The nine dispatched jobs finished 2 completed, 7 failed (their render gate; the last failure was genuine, pre-deadline). The deployed top-up Lambda was proven 3.5 months stale with no job cap, then repaired on the owner\'s word using the factory\'s own setup script — deployed now byte-matches committed, cap of 4 restored, schedule off, nothing dispatched. The factory w7 walk chain ran and refused at its own preflight: the course is not chooser-ready (bank 374 short, lesson-evidence sweep never run), which is the walk working, not failing. An 8-gate registration map with owners is on file.',
-      next: 'Next · top-up dispatch is HELD as a recorded contract conflict: the lifecycle requires sealed blueprint scope first, and the top-up request carries no bucket-level exclusion (subjects and item types only), so a capped run cannot avoid Unit-5 or provenance-uncertain cells. It clears only when the factory answers the provenance/denominator question (course issue #14 / PS-004) or ships a scope-excluding route. Free re-walk fires when readiness turns. No spend until then.',
+      next: 'The factory resolves provenance and scope through course issue #14, or supplies a committed scope-excluding route; then bank completion and the free readiness re-walk can resume.',
       etaDays: 'fleet-gated',
       etaNote: 'No date while the contract conflict stands — the clearing event belongs to the fleet (issue #14 / Unit-5). The Lambda repair and walk receipts are done and keep their value regardless.'
     },
@@ -54,7 +54,7 @@ const AP4_TIMELINE = {
       stage: 'Validate',
       lastCompleted: 'First two model-backed legs ran · acceptance failed closed',
       summary: 'The first two fresh Faultless Bar legs ran against the same 933-item bank at ba41f90 and failed closed: 12 and 16 failed identities, 9 stable failures, 11 item/check disagreements, and two-run agreement FAIL. The serialized outputs main has since advanced through the fleet\'s repairs to 243b340, but that post-repair bank has not yet earned a passing acceptance receipt.',
-      next: 'Next · the fleet completed the nine stable repairs on issue #48. It must now run two independent empty-cache legs against the identical pinned 243b340 bank, strengthen any unstable adjudication, and accept only when both legs pass and agree exactly. This course seat remains watch-only.',
+      next: 'Two fresh independent empty-cache legs run against one identical pinned post-repair bank, and both pass and agree exactly.',
       etaDays: 'fleet-gated',
       etaNote: 'No date until two fresh post-repair Faultless Bar legs pass and agree exactly. The bank and our local handoff are complete.'
     },
@@ -68,7 +68,7 @@ const AP4_TIMELINE = {
       stage: 'Validate',
       lastCompleted: '429/455 re-earned · both commits pushed',
       summary: 'The two campaign legs re-earned 429 of 455 records through the factory judge: 351 plus 78 fresh fingerprint-bound passes. The remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. Both commits are pushed at 43584a54; the outgoing 429 records passed the #642 signature scan with zero flags and the diff contains only intended record files.',
-      next: 'Next · PR #43 is open at the exact pushed head and currently reads clean, with no review decision or reported checks. Finish its review and merge/readback, then post and verify the companion filing. Intake #92 must then provide the missing factory selector and authority for the machine-checked 332-row regeneration cohort; release readback and a fresh w7 walk follow.',
+      next: 'PR #43 merges and reads back, the companion filing lands, and the factory supplies the missing regeneration selector and authority.',
       etaDays: 'fleet-gated',
       etaNote: 'PR #43 is open; its merge, the companion filing, regeneration, #92 adjudication, and release remain fleet-paced, so no release date is claimed.'
     }
@@ -88,29 +88,29 @@ const AP4_TIMELINE = {
 
   const stages = [
     {
-      id: 'stage-1', point: '1', label: 'Define course', kicker: 'Point 1 of 5', title: 'Define the course',
-      copy: 'Bind the CED, blueprint, knowledge graph, units, topics, skills, assessment types, and the bank-first gap map.',
-      foot: 'Exit evidence · validated blueprint, logged deviations, and a receipted inventory of what already exists.'
+      id: 'stage-1', point: '1', label: 'Define & scope', kicker: 'Production stage 1 of 4', title: 'Define scope and delivery contract',
+      copy: 'Bind the CED, blueprint, knowledge graph, units, topics, skills, assessment types, gap map, and intended delivery path before building.',
+      foot: 'Exit evidence · validated blueprint, logged deviations, complete starting inventory, and a named delivery owner and surface.'
     },
     {
-      id: 'stage-2', point: '2', label: 'Build content', kicker: 'Point 2 of 5', title: 'Build the missing content',
+      id: 'stage-2', point: '2', label: 'Build & accept', kicker: 'Production stage 2 of 4', title: 'Build and accept the missing content',
       copy: 'Generate only real gaps: articles, questions, FRQs, visuals, practice, mastery gates, and their metadata through the factory.',
       foot: 'Exit evidence · accepted factory outputs with source, retry, deduplication, and grounding receipts.'
     },
     {
-      id: 'stage-3', point: '3', label: 'Validate', kicker: 'Point 3 of 5', title: 'Validate and accept',
-      copy: 'Run structural checks, official /v1/qc, course oracles, grading checks, image review, and repair-or-rebuild loops.',
-      foot: 'Exit evidence · current-byte fingerprints, saved verdicts, and no unmeasured dimension presented as passed.'
+      id: 'stage-3', point: '3', label: 'Validate & seal', kicker: 'Production stage 3 of 4', title: 'Validate and seal exact course bytes',
+      copy: 'Run structural checks, official QC, course oracles, grading checks, image review, and repair loops; then freeze the accepted bytes and delivery manifest.',
+      foot: 'Exit evidence · current-byte fingerprints, full object census, sealed course-owned package, and no unmeasured dimension presented as passed.'
     },
     {
-      id: 'stage-4', point: '4', label: 'Place course', kicker: 'Point 4 of 5', title: 'Place the canonical course',
-      copy: 'Assemble the final bank and bundle, publish through the sanctioned TimeBack/AP One path, and read back exact stored versions.',
-      foot: 'Exit evidence · governed manifest, deploy receipt, canonical version readback, and course registration.'
+      id: 'stage-4', point: '4', label: 'Publish & integrate', kicker: 'Production stage 4 of 4', title: 'Publish and integrate the canonical course',
+      copy: 'Run only the course-bound publisher, create the delivery objects, connect the learner surface, register and deploy the course, and read back exact stored versions.',
+      foot: 'Exit evidence · action-bound authorization, planned or supplied IDs, checkpoint and recovery receipt, stored-object readback, deployment, and registration.'
     },
     {
-      id: 'release', point: 'Release', label: 'Release', kicker: 'Final point', title: 'Release',
-      copy: 'The course is learner-visible and its exact deployed bytes pass a dated end-to-end walk. Registration or deployment alone does not count.',
-      foot: 'Exit evidence · chooser visibility, lesson/practice/gate/scoring checks, and no answer-key exposure.'
+      id: 'release', point: 'Release', label: 'Release', kicker: 'Separate outcome gate', title: 'Release',
+      copy: 'The course is learner-visible and its exact deployed bytes pass a dated signed-in end-to-end walk. Registration, publication, or deployment alone does not count.',
+      foot: 'Exit evidence · chooser visibility, lesson/practice/gate/scoring checks, no answer-key exposure, and identity/progress readback when those outcomes are claimed.'
     }
   ];
 
@@ -118,11 +118,11 @@ const AP4_TIMELINE = {
     <div class="timeline-head">
       <div>
         <h2>Where each course sits on the path to release</h2>
-        <p class="timeline-sub">One shared process. Hover, focus, or tap any point for evidence and remaining work. Ranges count recovery work after the named unblock, not time to release.</p>
+        <p class="timeline-sub">Four production stages; Release is a separate outcome gate. Hover, focus, or tap any point for evidence and remaining work. Ranges count recovery work after the named unblock, not time to release.</p>
       </div>
       <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
     </div>
-    <div class="timeline-canvas" aria-label="Five-point course creation timeline with four course positions">
+    <div class="timeline-canvas" aria-label="Four production stages plus a separate release gate with four course positions">
       <div class="timeline-rail" aria-hidden="true"></div>
       <div class="timeline-stages">
         ${stages.map(stage => `
@@ -145,6 +145,7 @@ const AP4_TIMELINE = {
       <div>
         <p class="timeline-eta" hidden><span>Estimated recovery work</span><strong></strong></p>
         <p class="timeline-detail-copy"></p>
+        <p class="timeline-detail-move" hidden><span>What moves it forward</span><strong></strong></p>
         <p class="timeline-detail-foot"></p>
         <a class="timeline-detail-link" hidden>Open course dashboard →</a>
       </div>
@@ -156,7 +157,8 @@ const AP4_TIMELINE = {
       kicker: `${course.label} · ${course.stage}`,
       title: course.lastCompleted,
       copy: course.summary,
-      foot: `${course.next} ${course.etaNote}`,
+      move: course.next,
+      foot: course.etaNote,
       eta: course.etaDays,
       color: course.color,
       href: `${course.id}.html`
@@ -166,6 +168,8 @@ const AP4_TIMELINE = {
   const kicker = root.querySelector('.timeline-detail-kicker');
   const title = root.querySelector('.timeline-detail-title');
   const copy = root.querySelector('.timeline-detail-copy');
+  const move = root.querySelector('.timeline-detail-move');
+  const moveValue = move.querySelector('strong');
   const foot = root.querySelector('.timeline-detail-foot');
   const eta = root.querySelector('.timeline-eta');
   const etaValue = eta.querySelector('strong');
@@ -179,6 +183,8 @@ const AP4_TIMELINE = {
     kicker.style.color = item.color || '';
     title.textContent = item.title;
     copy.textContent = item.copy;
+    move.hidden = !item.move;
+    moveValue.textContent = item.move || '';
     foot.textContent = item.foot;
     eta.hidden = !item.eta;
     etaValue.textContent = item.eta || '';
@@ -198,7 +204,9 @@ const AP4_TIMELINE = {
   });
 
   if (controls.length !== stages.length + AP4_TIMELINE.courses.length ||
-      AP4_TIMELINE.courses.some(course => !/^\d+[–-]\d+ days$/.test(course.etaDays) || !course.etaNote)) {
+      AP4_TIMELINE.courses.some(course =>
+        !(/^\d+[–-]\d+ days$/.test(course.etaDays) || course.etaDays === 'fleet-gated') ||
+        !course.etaNote || !course.next)) {
     throw new Error('Course release timeline data is incomplete.');
   }
   show(locked, true);

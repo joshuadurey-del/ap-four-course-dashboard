@@ -418,6 +418,36 @@ small { color: var(--muted); line-height: 1.45; }
 .section-head a { flex: none; font-size: 13px; font-weight: 650; }
 .last-updated { margin: 8px 0 4px; color: var(--muted); font-size: 13px; }
 
+.delivery-gate-sec {
+  border-color: #e5c98d;
+  background: #fffcf5;
+}
+
+.delivery-gate-sec .section-head { align-items: center; }
+.delivery-gate-sec .section-head h2 { margin-top: 8px; }
+
+.delivery-gate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.delivery-gate-grid > div {
+  padding: 16px 18px;
+  border: 1px solid #ead9b7;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .7);
+}
+
+.delivery-gate-grid h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.delivery-gate-grid ul { margin-bottom: 0; }
+
 .update-list {
   margin: 0;
   padding: 0;
@@ -1016,6 +1046,26 @@ footer {
 
 .timeline-detail-foot { margin-top: 4px; color: var(--muted); }
 
+.timeline-detail-move {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 5px 10px;
+  margin: 9px 0 0;
+  padding-top: 9px;
+  border-top: 1px solid #d9e1ee;
+  color: #334155;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.timeline-detail-move span {
+  color: var(--blue-strong);
+  font-weight: 750;
+}
+
+.timeline-detail-move strong { font-weight: 650; }
+.timeline-detail-move[hidden] { display: none; }
+
 .timeline-detail-link {
   display: inline-block;
   margin-top: 7px;
@@ -1040,6 +1090,7 @@ footer {
 .timeline-eta[hidden] { display: none; }
 
 @media (max-width: 620px) {
+  .delivery-gate-grid { grid-template-columns: 1fr; }
   .timeline-sec { padding: 19px 16px 18px; }
   .timeline-head { display: block; margin-bottom: 8px; }
   .timeline-snapshot { display: block; margin-top: 6px; white-space: normal; }
@@ -1053,6 +1104,7 @@ footer {
   .timeline-course-long { display: none; }
   .timeline-course-short { display: inline; }
   .timeline-detail { grid-template-columns: 1fr; gap: 8px; }
+  .timeline-detail-move { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
