@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 14:52 KST blocker refresh',
+  snapshot: 'Aug 20, 2026 · 14:55 KST blocker refresh',
   courses: [
     {
       id: 'apush',
@@ -52,9 +52,9 @@ const AP4_TIMELINE = {
       x: 55,
       y: 120,
       stage: 'Current recovery locus · Measure and preflight',
-      lastCompleted: '933 banked · APWH seat closeout complete · fleet bar iterating',
-      summary: 'The APWH seat banked the 933 and closed out; the fleet now owns serialized strengthening and the two full model-backed acceptance legs on issue #48. The latest verified thread state has the focused six-item diagnostic green, with ordering and the complete two-leg result still pending.',
-      next: 'Finish the issue #48 L1/L2 pair, rerun the blueprint oracle against the exact readable candidate, stage that candidate in AP One, and seal the measured gap and reviewer handoff packet.',
+      lastCompleted: '933 banked · three stable item repairs pass · ordering remains',
+      summary: 'The APWH seat banked the 933 and closed out. A fresh full pair then failed on three stable item defects, seven stable ordering locations, and eight disagreements. The fleet repaired the three item defects and they pass a targeted model run; a fresh ordering diagnostic still reports eight findings, so the next complete agreeing pair remains pending on issue #48.',
+      next: 'Repair or defensibly adjudicate the remaining ordering findings, run the new issue #48 L1/L2 pair, rerun the blueprint oracle against the exact readable candidate, then stage and seal the AP One reviewer handoff.',
       etaDays: '3–5 days',
       etaNote: 'Focused work to LS-QC READY, not release. Assumes the fleet continues its active bar loop and the governed AP One placement route remains available; named LS/SME disposition follows the handoff.'
     },

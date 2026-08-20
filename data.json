@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T05:52Z",
+  "snapshot": "2026-08-20T05:55Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -286,7 +286,7 @@
       "claim_id": "apwh.qc933",
       "section": "APWH",
       "status": "BLOCKED",
-      "value": "Issue #48 remains open and actively worked. The missing-envelope artifact is corrected. At the latest verified tick, all six recurring items pass a focused model diagnostic; ordering and two fresh complete model-backed 933-item legs remain pending. Pre-LS acceptance requires the current L1/L2 pair to pass and agree; named human disposition follows the handoff.",
+      "value": "Issue #48 remains open and actively worked. A fresh complete pair failed on three stable item defects, seven stable ordering locations, and eight item disagreements. The fleet's subsequent targeted model run passes the three stable item identities, while a fresh ordering diagnostic still reports eight findings. Pre-LS acceptance requires a new L1/L2 pair to pass and agree over one pinned 933-item population; named human disposition follows the handoff.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
@@ -300,7 +300,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "status_at": "2026-08-20T05:02Z"
+      "status_at": "2026-08-20T05:55Z"
     },
     {
       "claim_id": "apwh.pr791",
@@ -343,8 +343,8 @@
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "PLANNED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "Estimated 3–5 focused days to LS-QC READY: finish the active issue #48 two-run pair, rerun the blueprint oracle against the exact readable candidate, verify the governed AP One review path, and seal the coverage/gap/handoff packet. The range reflects fleet-owned full-leg work still pending after the APWH seat closed.",
+      "status_at": "2026-08-20T05:55Z",
+      "value": "Estimated 3–5 focused days to LS-QC READY: clear the remaining ordering/instability residue, complete a new passing issue #48 pair, rerun the blueprint oracle against the exact readable candidate, verify the governed AP One review path, and seal the coverage/gap/handoff packet. The range reflects fleet-owned full-leg work still pending after the APWH seat closed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
