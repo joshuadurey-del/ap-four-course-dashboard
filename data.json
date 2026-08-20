@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T10:16Z",
+  "snapshot": "2026-08-20T10:47Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -104,8 +104,8 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "The lane-bound APWH blueprint matches the home repo and a 235-ID oracle exists. A local run emitted FAIL 1 / MISSING 79 / PASS 56, but its receipt also says course_dir_readable=false and spine_lessons=0; A-197 and those totals are UNMEASURED until rerun against the exact readable candidate. The APWH seat banked the 933 and closed; fleet issue #48 owns the active acceptance loop.",
+      "status_at": "2026-08-20T10:47Z",
+      "value": "The lane-bound APWH blueprint matches the home repo and a 235-ID oracle exists. A local run emitted FAIL 1 / MISSING 79 / PASS 56, but its receipt also says course_dir_readable=false and spine_lessons=0; A-197 and those totals are UNMEASURED until rerun against the exact readable accepted candidate. Faultless Bar acceptance is complete on issue #48; readable blueprint reconciliation remains the current blocker.",
       "scope": "blueprint binding and current-bank acceptance",
       "evidence": [
         {
@@ -350,8 +350,8 @@
       "claim_id": "apwh.sweep.pack",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The APWH seat banked 933 identities at db2ca06d, recorded the population-scoped ratification at dde5a973, passed the break checks, and closed watch-only. The fleet has since advanced the serialized bank through issue #48 repairs; seat closure is not whole-course acceptance.",
-      "scope": "serialized 933-item population and current bank; not acceptance proof",
+      "value": "The APWH seat banked 933 identities at db2ca06d, recorded the population-scoped ratification at dde5a973, passed the break checks, and closed watch-only. The fleet subsequently completed the serialized-bank acceptance loop on issue #48. Seat closure alone was not acceptance proof; the merged final agreement is.",
+      "scope": "serialized 933-item population and bank provenance",
       "evidence": [
         {
           "type": "audit-evidence",
@@ -360,34 +360,33 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T05:02Z"
+      "observed_at": "2026-08-20T10:25Z"
     },
     {
       "claim_id": "apwh.qc933",
       "section": "APWH",
-      "status": "BLOCKED",
-      "value": "Issue #48 remains open and actively worked. The latest signed pair at PR head c64b1e covers 933 identities with equal population binding. Both legs report 932 pass / 1 fail; ordering passes, all 31 terminal evidence gates are evidenced, and there are zero cache hits or model errors. The failed identity differs by leg, leaving two lesson-reachability disagreements and exact agreement red. PR #9 remains unmerged.",
+      "status": "OBSERVED",
+      "value": "Issue #48 closed COMPLETED after PR #9 merged the reproducible evaluator and exact passing acceptance evidence to access-controlled main 1d590422. The final receipt binds both passing legs to the complete 933-item population, reports equal identity sets, zero item disagreements, zero course-status disagreements, and agreement SHA-256 c077a95537ad44be4fc2d41c783042aeb633d5a3f31b36317a6ca42d65d454b5. This is acceptance proof, not a student-surface write or deployment receipt.",
       "scope": "official /v1/qc acceptance sweep",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "THREE-DAY-PLAN.md#day-2",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/THREE-DAY-PLAN.md"
+          "type": "completion-receipt",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48#issuecomment-5354633163"
         },
         {
           "type": "issue",
           "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "status_at": "2026-08-20T09:46Z"
+      "evidence_access": "GITHUB",
+      "observed_at": "2026-08-20T10:25Z"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9. Current pre-LS work is the issue #48 L1/L2 pair, readable blueprint reconciliation, working AP One review access, and a representative walkthrough.",
+      "status_at": "2026-08-20T10:47Z",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The release gate fix still reads practice PASS 9 of 9, and issue #48 now supplies the completed L1/L2 acceptance pair. Current pre-LS work is readable blueprint reconciliation and a pinned local package; external AP One/TimeBack reviewer access remains held for sanctioned instructions.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -400,14 +399,14 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-20T04:13Z"
+      "observed_at": "2026-08-20T10:25Z"
     },
     {
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "The apwh.local_done mark is retired and carries no completion credit. The tree ruling is settled; the first model-backed pair failed closed. Acceptance credit can come only from two fresh post-repair Faultless Bar legs that pass and agree exactly over one pinned 933-item bank.",
+      "status_at": "2026-08-20T10:47Z",
+      "value": "The apwh.local_done mark is retired and carries no completion credit. Acceptance credit now comes from the merged issue-48 receipt: two passing Faultless Bar legs that agree exactly over the complete pinned 933-item bank.",
       "scope": "local completion mark and walk evidence",
       "evidence": [
         {
@@ -417,14 +416,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-20T10:25Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "PLANNED",
-      "status_at": "2026-08-20T09:49Z",
-      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. Repair or strengthen the two unstable lesson-reachability bindings on issue #48, complete a new passing and exactly agreeing pair, rerun the blueprint oracle against the exact readable candidate, and prepare the pinned local package. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-20T10:47Z",
+      "value": "Reprojected estimate: 1–3 focused build days, with external TimeBack wait excluded. Issue #48 has cleared the two-run acceptance gate. Remaining work is to rerun the blueprint oracle against the exact readable accepted candidate, record the measured gaps, and prepare the pinned local package. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {

@@ -15,7 +15,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 19:16 KST live-receipt refresh',
+  snapshot: 'Aug 20, 2026 · 19:47 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -50,14 +50,14 @@ const AP4_TIMELINE = {
       label: 'AP World History',
       short: 'APWH',
       color: '#4f46b8',
-      x: 55,
+      x: 63,
       y: 120,
-      stage: 'Current recovery locus · Measure and preflight',
-      lastCompleted: 'c64b1e acceptance pair · 31/31 gates evidenced · ordering passes',
-      summary: 'Issue #48 reports a fresh signed pair over the complete 933-item population at PR head c64b1e. Each leg passes 932 and fails 1; ordering and all 31 terminal evidence gates pass, with zero cache hits or model errors. The failed identity differs by leg, so two lesson-reachability disagreements keep exact agreement red and PR #9 unmerged.',
-      next: 'Repair or strengthen the two unstable lesson-reachability bindings, then run two new independent empty-cache 933-item legs. After exact passing agreement, rerun readable blueprint reconciliation and prepare the pinned local publication package.',
-      etaDays: '3–5 days',
-      etaNote: 'Focused build work, not release. Assumes the fleet continues its active bar loop. External TimeBack placement and reviewer access wait on sanctioned instructions.'
+      stage: 'Current recovery locus · Reconcile + package',
+      lastCompleted: 'Faultless Bar accepted · both 933-item legs pass · exact agreement',
+      summary: 'Issue #48 closed complete at 10:25Z after PR #9 merged the reproducible evaluator and exact passing acceptance evidence. Both legs cover all 933 identities, both pass, identity sets match, and item and course-status disagreements are zero. This is acceptance proof, not student-surface deployment or reviewer visibility.',
+      next: 'Rerun the existing blueprint oracle against the exact readable accepted candidate, record the measured gaps, and prepare the pinned local publication package. External placement waits for the sanctioned TimeBack instructions.',
+      etaDays: '1–3 days',
+      etaNote: 'Reprojected focused build range after issue #48 closed; it assumes the existing oracle and local packaging chain run without a new blocker. External TimeBack placement and reviewer access wait are excluded.'
     },
     {
       id: 'humgeo',
