@@ -1,5 +1,20 @@
 [
   {
+    "ts": "2026-08-20T09:49Z",
+    "course": "Cross-course",
+    "text": "External publication hold: owner direction states that sanctioned TimeBack publishing instructions are not yet available. All four lanes continue local build, QC, reconciliation, packaging, and walk preparation, but no current candidate may be called reviewer-visible, LS-QC ready, published, deployed, or released until the exact TimeBack placement is authorized and read back. Focused-work ranges now exclude this external wait."
+  },
+  {
+    "ts": "2026-08-20T09:49Z",
+    "course": "APWH",
+    "text": "Issue #48 narrowed again at 09:46Z: a fresh signed 933-item pair at PR head c64b1e passes ordering and all 31 evidence gates in both legs. Each leg passes 932 and fails 1, but the failed lesson-reachability identity differs, leaving two disagreements and exact agreement red. PR #9 remains unmerged; the fleet is already on the next repair attempt."
+  },
+  {
+    "ts": "2026-08-20T09:49Z",
+    "course": "HumGeo",
+    "text": "PR #47 merged a wave-001-only re-arm for the sealed 332-row issue-44 plan. The bounded run requested 6 candidates, received 5, and all 5 failed structural /v1/qc, so wave-002+, corpus apply, and publish stopped with zero corpus writes. Separately, a 10-row uncovered-EK pilot returned 5 passes and 5 fails; it earned five passing EK-bound receipts, but competing counters read 120/150 versus 119/150, so the internal 80% crossing is not yet proven. Of 100 S2/D1 rows, 32 were deterministically hydrated, 48 are blocked by a rejected work-authorized model credential, and 20 lack a committed skill-tag generator route. No external publication occurred."
+  },
+  {
     "ts": "2026-08-20T08:30Z",
     "course": "Cross-course",
     "text": "Target correction: Learning Science has its own review process. LS REVIEW READY now means reviewers can access the pinned course and walk a representative path. The roughly 80% blueprint measure, QC provenance, and gap accounting remain internal build controls; an evidence packet is not an LS intake requirement. LS disposition, revision, release, and learner validation remain later states."
