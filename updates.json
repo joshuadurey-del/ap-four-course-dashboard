@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T18:19Z",
+    "course": "Psych",
+    "text": "Psychology image-stage candidate opened as PR #23 at head 43fbb7b. Branch checks independently confirm 34 embedded Unit 3 articles, 34 PNGs, 34 ledger approvals, a passing licence/leak check, byte-identical 71-file delivery copy, and re-judged sidecars for all 11 prose changes. The full figure-ledger re-derivation could not run on this monitor machine because rsvg-convert is unavailable. The PR is clean and mergeable but has no configured checks or review, and it names missing u3_image_provenance.json as a known gap. This is unmerged branch progress, not current-main completion or candidate wiring; the Unit 5-safe top-up and TimeBack holds remain unchanged."
+  },
+  {
     "ts": "2026-08-20T11:19Z",
     "course": "Psych",
     "text": "Psychology content progress verified on current main e7a3df: the articles subtree is byte-identical to the previously checked af2f733b tree, so the 221/221 passing article-sidecar result still binds. PR #21 added the Unit 3 video repository release; current-byte checks find 15 release assets, 15 linked manifest assets with no name diff, 15/15/15 ledger-to-review agreement, all 34 Unit 3 EKs scored, and 23 prompt rounds within 70–79 words. All 15 clips carry SME approval and zero are dropped. This does not prove candidate wiring or reviewer visibility, and it does not clear the unchanged Unit 5-safe top-up blocker."

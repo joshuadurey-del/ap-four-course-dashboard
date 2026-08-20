@@ -15,7 +15,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 20:19 KST live-receipt refresh',
+  snapshot: 'Aug 21, 2026 · 03:19 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -40,8 +40,8 @@ const AP4_TIMELINE = {
       y: 160,
       stage: 'Current recovery locus · Build and measure local candidate',
       lastCompleted: '221/221 articles pass · Unit 3 video release verified 15/15',
-      summary: 'Current main e7a3df preserves the verified article tree and adds the Unit 3 video records. Its repository release has 15 linked assets with 15/15/15 ledger-to-review agreement and SME approval; course wiring is not yet proven. Bank provenance is cleared, but safe top-up remains held because the broad route cannot exclude unresolved Unit 5 scope; issue #2 remains open.',
-      next: 'Measure the owner-approved blueprint denominator, bind the confirmed generation/QC provenance, establish a committed Unit 5-safe scope route or resolve #2, then top up only proven scope and prepare a pinned local package with an explicit gap ledger.',
+      summary: 'Current main e7a3df preserves the verified article tree and Unit 3 video records. Open PR #23 adds a 34-figure Unit 3 image candidate with static branch checks green, but it has no configured checks or review and the monitor could not re-run its renderer-dependent ledger. Bank provenance is cleared; safe top-up remains held because the broad route cannot exclude unresolved Unit 5 scope.',
+      next: 'Review, merge, and fully re-derive PR #23 on main; measure the owner-approved blueprint denominator; establish a committed Unit 5-safe scope route or resolve #2; then top up only proven scope and prepare a pinned local package with an explicit gap ledger.',
       etaDays: '4–7 days',
       etaNote: 'Focused build work after a safe Unit 5 scope route clears. Provenance is resolved; no paid top-up runs while scope remains unsealed. TimeBack publication and reviewer access wait on sanctioned instructions.'
     },

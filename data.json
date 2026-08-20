@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T11:19Z",
+  "snapshot": "2026-08-20T18:19Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -544,9 +544,9 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T11:19Z",
-      "value": "Current course main e7a3df preserves the exact articles subtree from the previously verified af2f733b state at tree 036c203b, so its 221 EK articles and 221 QC sidecars are byte-unchanged: 204 use covered source bundles and 17 use partial-coverage bundles, with zero failed or blocking results. PR #21 also supplies the Unit 3 video repository release. Current-byte checks report 15 release assets, 15 linked manifest assets with no name diff, 15/15/15 ledger-to-review agreement, all 34 Unit 3 EKs scored, and 23 prompt rounds within the declared 70–79-word band; all 15 clips carry SME approval and zero are dropped. Repository release is not proof of course wiring, reviewer visibility, or deployment.",
-      "scope": "article and Unit 3 video content state; not bank acceptance, course wiring, or deployment",
+      "observed_at": "2026-08-20T18:19Z",
+      "value": "Current course main remains e7a3df with the previously verified 221 EK articles, 221 passing QC sidecars, and Unit 3 video repository release. Open PR #23 at head 43fbb7b adds the Unit 3 image-stage candidate. Independent static checks on that branch find 34 embedded articles, 34 PNGs, and 34 ledger approvals; the licence/leak check passes, the 71-file delivery copy is byte-identical, and all 11 prose changes carry re-judged sidecars. The full figure-ledger re-derivation could not run on this monitor machine because rsvg-convert is unavailable. PR #23 is clean and mergeable but has no configured checks or review; it also names the missing u3_image_provenance.json as a known gap. These are unmerged branch observations, not current-main completion, course wiring, reviewer visibility, or deployment.",
+      "scope": "current-main article/video state plus open Unit 3 image candidate; not bank acceptance, course wiring, or deployment",
       "evidence": [
         {
           "type": "course-repository",
@@ -559,6 +559,10 @@
         {
           "type": "repository-release",
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-3-videos"
+        },
+        {
+          "type": "open-pull-request",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
@@ -638,8 +642,8 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T11:19Z",
-      "value": "Estimated 4–7 focused build days after a safe Unit 5 scope route clears. The Unit 3 video repository release is verified, but wiring those exact assets into the candidate remains unproven and does not clear the bank blocker. Remaining work is to bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, wire the verified content, and prepare the pinned local package. No paid top-up runs while scope remains unsealed. External TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-20T18:19Z",
+      "value": "Estimated 4–7 focused build days after a safe Unit 5 scope route clears. Open PR #23 materially advances Unit 3 imagery but remains unmerged and lacks a complete independent renderer-dependent re-derivation on this monitor machine. Remaining work is to review and merge that candidate, rerun its full receipt on main, bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, wire the verified content, and prepare the pinned local package. No paid top-up runs while scope remains unsealed. External TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
         {
