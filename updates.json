@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T10:16Z",
+    "course": "HumGeo",
+    "text": "Local package checkpoint: candidate 78f6ec4 now has a sealed 13-file, 14,246,142-byte bundle whose served readback matches aggregate SHA-256 17962c5c…e42ab4. Bundle law passes 40/0, including 3,060/3,060 student views without answer-key exposure; gate integrity passes 7/0. The repository suite is not fully green: 530 passed, 121 skipped, and 3 issue-21 fingerprint-drift failures remain, with zero overlap against the sealed issue-44 plan. The server reports ready=false and the walker stops at the readiness preflight with 11 stages skipped, so this proves local package identity—not reviewer visibility or LS-QC readiness. TimeBack publication remains held."
+  },
+  {
     "ts": "2026-08-20T09:49Z",
     "course": "Cross-course",
     "text": "External publication hold: owner direction states that sanctioned TimeBack publishing instructions are not yet available. All four lanes continue local build, QC, reconciliation, packaging, and walk preparation, but no current candidate may be called reviewer-visible, LS-QC ready, published, deployed, or released until the exact TimeBack placement is authorized and read back. Focused-work ranges now exclude this external wait."

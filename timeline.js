@@ -15,7 +15,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 18:49 KST live-receipt refresh',
+  snapshot: 'Aug 20, 2026 · 19:16 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -67,9 +67,9 @@ const AP4_TIMELINE = {
       x: 69,
       y: 200,
       stage: 'Current recovery locus · Reconcile coverage + repair route',
-      lastCompleted: 'PR #47 re-arm merged · two bounded pilots ran · zero corpus apply',
-      summary: 'The 10-row uncovered-EK QC pilot produced 5 fingerprint-valid passes and 5 fails, but two local counters now disagree at 120/150 versus 119/150, so the internal 80% crossing is not yet proven. Separately, issue-44 wave-001 generated 5 of 6 candidates and all 5 failed structural /v1/qc; its required postcondition failed, so wave-002+, corpus apply, and publish stopped.',
-      next: 'Reconcile the accepted-EK counter with the declared verifier, keep PSO-3.D.2 as a contract hold, and obtain a factory-sanctioned structural remediation plan plus a new owner re-arm before any issue-44 scaling. Prepare the local package only; external placement waits for the sanctioned TimeBack instructions.',
+      lastCompleted: '78f6ec4 local bundle sealed · exact served hash match · 40/0 bundle checks',
+      summary: 'The current 13-file local bundle at candidate 78f6ec4 staged, served, and read back byte-equal at hash 17962c5c…. Bundle-law checks pass 40/0, including 3,060/3,060 student views without answer-key exposure, and gate integrity passes 7/0. The server still reports ready=false and the walker stops at the readiness preflight with 11 later stages skipped; local package identity is proven, reviewer visibility is not.',
+      next: 'Preserve the sealed local package; reconcile the 120-versus-119 accepted-EK counter, keep PSO-3.D.2 explicit, and obtain a factory-sanctioned structural remediation plan plus a new owner re-arm before issue-44 scaling. External placement waits for the sanctioned TimeBack instructions.',
       etaDays: '3–5 days',
       etaNote: 'Focused build work plus an external wait. The local serving mechanism is proven, but accepted-EK counters disagree and the issue-44 pilot failed its scale condition. TimeBack placement and reviewer access wait on sanctioned instructions.'
     }

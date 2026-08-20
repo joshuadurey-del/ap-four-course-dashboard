@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T09:49Z",
+  "snapshot": "2026-08-20T10:16Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -54,8 +54,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T09:49Z",
-      "value": "The official CED denominator remains 150 EK / 70 LO. A current-head enumeration oracle at 78f6ec4 reports 26 pass / 0 fail / 0 warn with 14 bundle checks not run, but its coverage section still validates the corrupted 158-code library universe. It therefore proves the enumeration's internal checks, not canonical CED coverage. The 10-row QC pilot added five passing EK-bound receipts, while local counters disagree at 120/150 versus 119/150; the internal 80% crossing remains unproven until the declared counter is reconciled.",
+      "status_at": "2026-08-20T10:16Z",
+      "value": "The official CED denominator remains 150 EK / 70 LO. A current-head bundle oracle at 78f6ec4 reports 40 pass / 0 fail / 0 warn, but its coverage section still validates the corrupted 158-code library universe. It proves the local enumeration and bundle's internal checks, not canonical CED coverage. The 10-row QC pilot added five passing EK-bound receipts, while local counters disagree at 120/150 versus 119/150; the internal 80% crossing remains unproven until the declared counter is reconciled.",
       "scope": "blueprint binding and implementation reconciliation",
       "evidence": [
         {
@@ -76,7 +76,7 @@
         },
         {
           "type": "local-current-head-receipt",
-          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/blueprint-diff-78f6ec4b.json"
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/blueprint-diff-bundle-78f6ec4b.json"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_RECEIPT"
@@ -254,17 +254,21 @@
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T08:30Z",
-      "value": "Candidate be18d12d stages and serves locally through the committed w7 chain. The running server's 13-file bundle hash equals the staged hash byte-for-byte and contains 7 units / 1,225 lessons. The browser walker stops at the expected readiness-chooser preflight and skips the remaining 11 stages. This proves local stage, boot, and bundle identity; it does not prove an LS-reachable surface or a complete reviewer walkthrough.",
-      "scope": "local w7 candidate and chooser preflight only",
+      "observed_at": "2026-08-20T09:53Z",
+      "value": "Candidate 78f6ec4 stages and serves locally through the committed w7 chain. Its 13-file, 14,246,142-byte bundle reads back byte-equal at aggregate SHA-256 17962c5c8cd02f093c2846e71e9ce081298b2cdca1768873720438a1c5e42ab4 and contains 1,306 tree nodes / 7 units / 1,225 lessons / 235 write activities. Bundle law passes 40/0, including 3,060/3,060 student views without answer-key exposure, and gate integrity passes 7/0. The server reports ready=false; the walker fails at the expected readiness preflight and skips 11 later stages. This proves local package identity and deterministic checks, not an LS-reachable surface or complete reviewer walkthrough.",
+      "scope": "local w7 candidate, exact bundle readback, deterministic bundle checks, and chooser preflight only",
       "evidence": [
         {
-          "type": "local-host-proof",
-          "location": "~/.incept/day-20260819/course-recovery-work/humgeo/LOCAL-HOST-PROOF-PACKAGE.md"
+          "type": "local-bundle-receipt",
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/w7-bundle-hash.json"
+        },
+        {
+          "type": "local-walk-receipt",
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/w7-walkthrough.json"
         },
         {
           "type": "merged-candidate",
-          "url": "https://github.com/ilmych/humgeo-rebuild/commit/be18d12db835b3fab55043536910a134a1102504"
+          "url": "https://github.com/ilmych/humgeo-rebuild/commit/78f6ec4b364c9d1a4bc42237968e604aad7c0fd4"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_RECEIPT"
@@ -273,8 +277,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-20T09:49Z",
-      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. The 10-row coverage pilot added five passing EK-bound receipts but exposed a 120-versus-119 counter disagreement. PR #47 re-armed issue-44 wave-001 only; 6 generations were requested, 5 were returned, and all 5 failed structural /v1/qc, so wave-002+, corpus apply, and publish stopped. The next build moves are counter reconciliation and a factory-sanctioned structural remediation plan plus a new owner re-arm. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-20T10:16Z",
+      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. A sealed, hash-bound local package now exists at 78f6ec4 and passes the bundle-law and gate-integrity checks, but server readiness is false and the full walk remains blocked at preflight. Coverage counters still disagree at 120/150 versus 119/150, and issue-44 wave-001 failed its structural QC postcondition. The next build moves are counter reconciliation, a factory-sanctioned remediation plan plus new owner re-arm, credential/skill-route repair, and preservation of the sealed local package. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Science access and walkthrough handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -323,8 +327,8 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T09:49Z",
-      "value": "Release and current-candidate reviewer visibility are not proven. Local w7 stage/serve and byte-identical bundle readback succeeded on candidate be18d12d, but the walker stopped at the readiness chooser. Issue-44 wave-001 then failed its required QC postcondition with zero corpus writes. Owner direction states that sanctioned TimeBack publishing instructions are unavailable, so no TimeBack/AP One/chooser/registration mutation is authorized. Release still requires canonical deployed-byte readback and a released-tier learner walk.",
+      "status_at": "2026-08-20T10:16Z",
+      "value": "Release and current-candidate reviewer visibility are not proven. Local w7 stage/serve and byte-identical bundle readback succeeded on candidate 78f6ec4 at aggregate hash 17962c5c…, but server readiness is false and the walker stopped at preflight with 11 stages skipped. Issue-44 wave-001 also failed its required QC postcondition with zero corpus writes. Owner direction states that sanctioned TimeBack publishing instructions are unavailable, so no TimeBack/AP One/chooser/registration mutation is authorized. Release still requires canonical hosted-byte readback and a released-tier learner walk.",
       "scope": "released and student-visible state",
       "evidence": [
         {
