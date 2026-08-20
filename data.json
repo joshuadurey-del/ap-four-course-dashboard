@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T10:47Z",
+  "snapshot": "2026-08-20T11:19Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -544,13 +544,21 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T04:30Z",
-      "value": "The current course repo at af2f733b contains 221 EK articles and 221 QC sidecars. All sidecars pass: 204 use covered source bundles and 17 use partial-coverage bundles, with zero failed or blocking results. The 17 partial labels are not article failures; the nonblocking tail is three self-findings (one skill-tag confirmation and two soft-cap trims).",
-      "scope": "course content state only; not bank acceptance or release",
+      "observed_at": "2026-08-20T11:19Z",
+      "value": "Current course main e7a3df preserves the exact articles subtree from the previously verified af2f733b state at tree 036c203b, so its 221 EK articles and 221 QC sidecars are byte-unchanged: 204 use covered source bundles and 17 use partial-coverage bundles, with zero failed or blocking results. PR #21 also supplies the Unit 3 video repository release. Current-byte checks report 15 release assets, 15 linked manifest assets with no name diff, 15/15/15 ledger-to-review agreement, all 34 Unit 3 EKs scored, and 23 prompt rounds within the declared 70–79-word band; all 15 clips carry SME approval and zero are dropped. Repository release is not proof of course wiring, reviewer visibility, or deployment.",
+      "scope": "article and Unit 3 video content state; not bank acceptance, course wiring, or deployment",
       "evidence": [
         {
           "type": "course-repository",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/af2f733b501170cbd598d78ed5b9519f2c1c06aa/articles"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/e7a3df4737ecfc1ceb6e998738e4090c7eddd5f3/articles"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/21"
+        },
+        {
+          "type": "repository-release",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-3-videos"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
@@ -630,8 +638,8 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T09:49Z",
-      "value": "Estimated 4–7 focused build days after a safe Unit 5 scope route clears: bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, and prepare the pinned local package. No paid top-up runs while scope remains unsealed. External TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-20T11:19Z",
+      "value": "Estimated 4–7 focused build days after a safe Unit 5 scope route clears. The Unit 3 video repository release is verified, but wiring those exact assets into the candidate remains unproven and does not clear the bank blocker. Remaining work is to bind #14's confirmed generation/QC provenance, measure and top up only proven high-value scope, wire the verified content, and prepare the pinned local package. No paid top-up runs while scope remains unsealed. External TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
         {

@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T11:19Z",
+    "course": "Psych",
+    "text": "Psychology content progress verified on current main e7a3df: the articles subtree is byte-identical to the previously checked af2f733b tree, so the 221/221 passing article-sidecar result still binds. PR #21 added the Unit 3 video repository release; current-byte checks find 15 release assets, 15 linked manifest assets with no name diff, 15/15/15 ledger-to-review agreement, all 34 Unit 3 EKs scored, and 23 prompt rounds within 70–79 words. All 15 clips carry SME approval and zero are dropped. This does not prove candidate wiring or reviewer visibility, and it does not clear the unchanged Unit 5-safe top-up blocker."
+  },
+  {
     "ts": "2026-08-20T10:47Z",
     "course": "APWH",
     "text": "Faultless Bar acceptance cleared: issue #48 closed COMPLETED at 10:25Z after PR #9 merged the reproducible evaluator and exact passing evidence to access-controlled main 1d590422. Both legs cover the complete 933-item population and pass; identity sets are equal, with zero item and zero course-status disagreements. The agreement SHA-256 is c077a955…54b5. This proves population-scoped acceptance only—not student-surface deployment or reviewer visibility. APWH now moves to readable blueprint reconciliation and pinned local packaging; external TimeBack placement remains held. The focused-build planning range is reprojected to 1–3 days, excluding the external wait."
