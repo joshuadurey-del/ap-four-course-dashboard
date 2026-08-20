@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-20T05:52Z",
+    "course": "HumGeo",
+    "text": "Blocker correction from the live #28 thread: Ilma's 2023/24 typed-gold authorization was received and executed on Aug. 14, and the governed pool landed in merged PR #32. Remove #28 from the list of owner asks. Fresh calibration acceptance remains course/fleet work and a later EOC tail unless it breaks the LS review surface or lowers measured coverage below the owner bar."
+  },
+  {
     "ts": "2026-08-20T05:27Z",
     "course": "Cross-course",
     "text": "Milestone and ETA reset from owner direction: the active target is LS-QC READY, a pinned reviewer-visible candidate at roughly 80% blueprint match with measured coverage, inherited generation/QC provenance, explicit gaps, a safe review path, and a Learning Science handoff. It is not LS approval or release. Duplicate generation QC, rebuilt grader calibration, and unnamed pre-review signoff were removed from the critical path. After correcting the APWH break-check/full-bar distinction across the five-model panel, focused-work ranges are APWH 3–5 days, HumGeo 3–5, Psychology 4–7 after issue #14 clears, and APUSH 7–10 with at least four non-colliding lanes. The four dashboard stages are sprint-planning terms; markers remain current recovery loci, not proof of canonical phase completion."

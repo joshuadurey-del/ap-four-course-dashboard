@@ -22,7 +22,7 @@
       <li>The latest retained nightly oracle passes the 68-gate / 204-form shape check but fails served composition: only 69 of 204 forms satisfy the required 4/8/3 composition, leaving 135 nonconforming.</li>
       <li>The declared item store contains 2,513 items; 2,505 lack a fingerprint-matched <code>/v1/qc</code> receipt and 789 fail the structural screen. PR #43 carries 429 current-byte passes but has not landed, so none are deducted from the canonical-store count yet.</li>
       <li>Both old walk marks remain revoked; a fresh factory walk still waits on the release predicates.</li>
-      <li>The EOC grader endpoint now reports a deployed SHA that descends from the merged weak-explain fix. A fresh course calibration is still pending, and the governed 2023/24 typed-gold pool remains open in <a href="https://github.com/ilmych/humgeo-rebuild/issues/28" target="_blank" rel="noopener">issue #28</a>.</li>
+      <li>The EOC grader endpoint now reports a deployed SHA that descends from the merged weak-explain fix. Ilma's authorization was executed and the governed 2023/24 pool landed in <a href="https://github.com/ilmych/humgeo-rebuild/pull/32" target="_blank" rel="noopener">merged PR #32</a>; fresh course calibration remains course/fleet work on <a href="https://github.com/ilmych/humgeo-rebuild/issues/28" target="_blank" rel="noopener">issue #28</a>.</li>
     </ul>
   </section>
 
@@ -44,7 +44,7 @@
       <li><b>Served composition:</b> 135 of 204 served forms fail the required 4/8/3 composition. Keep the measured failure on existing <a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">ap-one #659</a> and in the LS gap ledger. Full 204-form correction is a production tail unless the defect prevents meaningful review.</li>
       <li><b>Receipt coverage:</b> after PR #43 lands, rerun the declared-store coverage verifier and preserve both the fingerprint-matched receipt count and the structural-failure histogram. Do not subtract the 429 before canonical merge/readback.</li>
       <li><b>Current-byte blueprint proof:</b> rerun the existing oracle only after PR #43 lands; the base-branch pass does not transfer to the newer bytes.</li>
-      <li><b>EOC tail:</b> the fixed grader is now present on the EOC endpoint. Rerun calibration when the governed 2023/24 typed-gold pool in #28 is available; record this as a known gap rather than holding the entire LS handoff if the measured review denominator is otherwise honest.</li>
+      <li><b>EOC tail:</b> the fixed grader is present on the EOC endpoint and the governed 2023/24 pool landed in PR #32. Complete the remaining #28 calibration acceptance as course/fleet work; it is no longer an Ilma source-supply ask. Record any residue as a known gap rather than holding the LS handoff if the measured review denominator is otherwise honest.</li>
       <li><b>Human review:</b> no named whole-course LS disposition exists yet because that is the next milestone, not a pre-handoff blocker.</li>
       <li><b>Production delivery:</b> release still needs a sealed HumGeo-owned package, action receipt, IDs, readback/recovery rules, mapping, registration, and learner walk. Existing shared capability is not course-wide cutover proof.</li>
       <li><b>Release:</b> release predicates, canonical deployed-byte readback, and a fresh factory w7 walk remain after landing.</li>
@@ -67,7 +67,7 @@
         </ul>
         <h3>Known gaps that may travel with the candidate</h3>
         <ul class="work-list">
-          <li><b>Form composition and EOC calibration.</b><p>Carry the 69/204 composition result, the #659 production corridor, and #28 typed-gold dependency explicitly. They do not vanish; they move to post-handoff work unless they break the review surface or pull measured coverage below the owner’s bar.</p></li>
+          <li><b>Form composition and EOC calibration.</b><p>Carry the 69/204 composition result, the #659 production corridor, and remaining #28 calibration acceptance explicitly. They do not vanish; they move to post-handoff work unless they break the review surface or pull measured coverage below the owner’s bar.</p></li>
         </ul>
         <h3>After LS-QC READY</h3>
         <ul class="work-list">
@@ -77,7 +77,7 @@
     </details>
   </section>
 
-  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">landing PR #43</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/95" target="_blank" rel="noopener">regeneration intake #95</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">68-gate / 204-form cutover #659</a> · <a href="https://github.com/ilmych/humgeo-rebuild/issues/28" target="_blank" rel="noopener">EOC typed-gold pool #28</a>.</p></section>
+  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">landing PR #43</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/95" target="_blank" rel="noopener">regeneration intake #95</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">68-gate / 204-form cutover #659</a> · <a href="https://github.com/ilmych/humgeo-rebuild/pull/32" target="_blank" rel="noopener">merged EOC pool PR #32</a> · <a href="https://github.com/ilmych/humgeo-rebuild/issues/28" target="_blank" rel="noopener">EOC calibration tracker #28</a>.</p></section>
 </main>
 <footer>Recovery-audited snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 <script src="timeline.js"></script>

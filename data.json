@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T05:27Z",
+  "snapshot": "2026-08-20T05:52Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -233,7 +233,7 @@
       "section": "HumGeo",
       "status": "BLOCKED",
       "status_at": "2026-08-20T05:27Z",
-      "value": "The EOC grader endpoint now reports a deployed SHA that is a descendant of the merged weak-explain fix. A fresh calibration against that endpoint is pending, and the governed 2023/24 typed-gold pool remains unavailable in issue #28. This is a production/EOC tail unless it pulls measured LS-review coverage below the owner bar.",
+      "value": "The EOC grader endpoint reports a deployed SHA that is a descendant of the merged weak-explain fix. Ilma's authorization was received and executed, and the governed 2023/24 pool landed in merged PR #32. Fresh calibration acceptance remains course/fleet work on issue #28, not an owner source-supply ask; it is a production/EOC tail unless it pulls measured LS-review coverage below the owner bar.",
       "scope": "HumGeo EOC calibration; not whole-course LS-QC readiness by itself",
       "evidence": [
         {

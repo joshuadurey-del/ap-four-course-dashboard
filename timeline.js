@@ -14,7 +14,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 20, 2026 · 14:27 KST LS-handoff reset',
+  snapshot: 'Aug 20, 2026 · 14:52 KST blocker refresh',
   courses: [
     {
       id: 'apush',
@@ -67,7 +67,7 @@ const AP4_TIMELINE = {
       y: 200,
       stage: 'Current recovery locus · Measure and preflight',
       lastCompleted: '429 fresh QC passes await merge in PR #43',
-      summary: 'PR #43 is open and mergeable with zero reviews; intake #95 awaits disposition for the 332-record cohort. The served course is already reviewable in part, but 135 of 204 forms miss 4/8/3. The EOC endpoint now contains the grader fix; the governed 2023/24 typed-gold pool remains open in #28.',
+      summary: 'PR #43 is open and mergeable with zero reviews; intake #95 awaits disposition for the 332-record cohort. The served course is already reviewable in part, but 135 of 204 forms miss 4/8/3. The EOC endpoint contains the grader fix, and the governed 2023/24 pool landed in merged PR #32; remaining #28 calibration work belongs to the course/fleet, not Ilma.',
       next: 'Merge/read back PR #43, rerun current-byte coverage, disposition #95, verify a safe representative AP One review surface, and put the form-composition and EOC tails in the gap ledger.',
       etaDays: '3–5 days',
       etaNote: 'Focused work to LS-QC READY, not release. Assumes prompt #43/#95 owner action. Full 204-form remediation, formal EOC calibration, release cutover, and learner walk remain later unless they break the review surface.'
