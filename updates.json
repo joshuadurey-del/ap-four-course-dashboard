@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T06:02Z",
+    "course": "HumGeo",
+    "text": "Gate 0 control refresh: issue #44 emitted a queued attempt-2 claim at 05:58:06Z after the closure receipt. The retry and review labels were actively removed at 06:01:28Z, leaving only the documented stopped state autopilot:attention. A 06:02:05Z readback found no newer comment, no open issue-44 PR, PR #57 still closed unmerged, and canonical main unchanged at 36546a1bd72e775523b77fa1d6628c5dd103b214. Gate 0 therefore remains CLOSED under the explicit rescope. Separately, GitHub records issue #50 CLOSED/COMPLETED via merged PR #58 while its latest fleet review comment remains REWORK; this Gate 0 execution does not adjudicate that later gate. Gates 2-6 remain locked."
+  },
+  {
     "ts": "2026-08-21T05:58Z",
     "course": "HumGeo",
     "text": "Post-closure canonical refresh: Gate 0 remains CLOSED, but a separate writer merged Gate 1 scope PR #58 after the Gate 0 receipt, moving canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214. That later-gate action was not performed or adjudicated in this execution; its live issue #50 review is REWORK. Fresh main readback confirms the six Gate 0 pilot files are byte-unchanged, the residual-plan tests pass 6/6, and both legacy and residual re-arm receipts remain null. The old wave's seal now drifts against the changed scope and fails closed. Gates 2-6 remain locked."

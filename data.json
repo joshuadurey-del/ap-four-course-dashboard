@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T05:58Z",
+  "snapshot": "2026-08-21T06:02Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -55,7 +55,7 @@
       "section": "HumGeo",
       "status": "BLOCKED",
       "status_at": "2026-08-21T05:58Z",
-      "value": "Gate 0 is closed. A separate writer then merged Gate 1 scope PR #58, moving canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214; issue #50's live review immediately returned REWORK for missing final-byte and full-suite proof. That later-gate action was not performed or adjudicated in this execution. No accepted-EK numerator is treated as course progress or as permission to generate content.",
+      "value": "Gate 0 is closed. A separate writer then merged Gate 1 scope PR #58, moving canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214. GitHub records issue #50 CLOSED/COMPLETED via that PR, while its latest fleet review comment remains REWORK for missing final-byte and full-suite proof. That later-gate action was not performed or adjudicated in this execution. No accepted-EK numerator is treated as course progress or as permission to generate content.",
       "scope": "Gate 1 official CED and 68-gate mapping closure; no content generation",
       "evidence": [
         {
@@ -104,8 +104,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:58Z",
-      "value": "HumGeo follows seven sequential completion gates. Gate 0 is CLOSED after the latest issue-44 writer terminated REWORK, PR #57 was closed unmerged, the retry was rescoped, and a writer-free readback found no open issue-44 PR. A separate writer then merged Gate 1 scope PR #58 after the closure receipt; that later-gate action is outside this execution and its live issue #50 review is REWORK. PR #56's sealed 332-row plan remains unarmed as Gate 2 inventory input. Gates 2-6 remain locked.",
+      "observed_at": "2026-08-21T06:02Z",
+      "value": "HumGeo follows seven sequential completion gates. Gate 0 is CLOSED. After the closure receipt, issue #44 emitted a queued attempt-2 claim at 05:58:06Z; the retry and review labels were actively removed at 06:01:28Z, leaving only autopilot:attention. The 06:02:05Z readback found no newer comment or open issue-44 PR, with PR #57 still closed unmerged. Separate Gate 1 scope PR #58 is outside this execution; GitHub records issue #50 CLOSED/COMPLETED, while its latest fleet review comment remains REWORK. PR #56's sealed 332-row plan remains unarmed as Gate 2 inventory input. Gates 2-6 remain locked.",
       "scope": "owner-approved HumGeo completion sequence and active gate",
       "evidence": [
         {
@@ -225,8 +225,8 @@
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:58Z",
-      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. The latest issue-44 writer terminated REWORK at 05:42:13Z; PR #57 was then closed unmerged, the lane was stopped and rescoped, and a writer-free readback found no open issue-44 PR. After the closure receipt, separate Gate 1 PR #58 moved canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214. Fresh current-main readback shows the six Gate 0 files byte-unchanged, the residual-plan tests passing 6/6, and both re-arm receipts null. Gate 0 remains CLOSED; the later Gate 1 action was not evaluated here.",
+      "observed_at": "2026-08-21T06:02Z",
+      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts are null, and PR #56's residual plan remains sealed and unarmed. A queued attempt-2 claim appeared at 05:58:06Z after the closure receipt; its retry/review labels were removed at 06:01:28Z, and the 06:02:05Z readback found no newer comment or open issue-44 PR. Canonical main is 36546a1bd72e775523b77fa1d6628c5dd103b214 after separate Gate 1 PR #58; the six Gate 0 content files remain byte-unchanged and the residual-plan tests pass 6/6. Gate 0 remains CLOSED.",
       "scope": "Gate 0 stabilization and no-active-writer closure",
       "evidence": [
         {
