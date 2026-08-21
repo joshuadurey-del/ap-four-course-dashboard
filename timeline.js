@@ -6,29 +6,29 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 21, 2026 · 19:07 KST',
+  snapshot: 'Aug 21, 2026 · 21:00 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
-    { id: 1, name: 'Lock scope', state: 'active', status: 'Active', detail: 'PR #59 repaired all eight PR #58 regressions and the full suite is green. Official-source authority, exact-set mutations, and zero-difference reconciliation still gate closure.' },
-    { id: 2, name: 'Inventory', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'A sealed 332-row residual plan exists as inventory input. It must be reconciled against the corrected scope and current assets after Gate 1 closes.' },
+    { id: 1, name: 'Lock scope', state: 'active', status: 'Active', detail: 'Canonical main is 54c06cd after PR #61. A local-only worker is preparing the final scope-lock candidate; Codex audit, mutation proof, merge, and issue #50 reconciliation still gate closure.' },
+    { id: 2, name: 'Inventory', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'A sealed 332-row residual plan and PR #61\'s 30 changed corpus files are inventory inputs. PR #61\'s S3 publication is retrying and must be read back after Gate 1 closes.' },
     { id: 3, name: 'Fill gaps', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Earlier work re-earned 429 of 455 records through fresh fingerprint-bound QC. Gate 2 must decide what remains reusable before any new generation.' },
-    { id: 4, name: 'Assemble', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Corpus reconciliation and one passing pilot replacement have landed. They are assembly inputs, not proof of a complete projected course.' },
+    { id: 4, name: 'Assemble', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Repository landings exist, but PR #61\'s S3 publication and live-surface verification are still retrying. No deployment credit is awarded while this gate is locked.' },
     { id: 5, name: 'Learner proof', state: 'locked', status: 'Locked', detail: 'Historical local walks do not prove the current canonical course. Exact deployed-byte learner verification belongs here after assembly.' },
     { id: 6, name: 'Release', state: 'locked', status: 'Locked', detail: 'TimeBack, EOC, production readback, and final approval remain later release obligations.' }
   ],
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 1 active', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 21 · 10:07Z',
-      summary: 'The regression repair is merged and verified; official-scope authority closure remains in flight.',
+      status: 'Gate 1 in flight', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 21 · 12:00Z',
+      summary: 'A local-only scope-lock candidate is in flight for Codex audit; PR #61 is merged, while its S3 publication remains unverified.',
       footprint: [
         { value: '6', label: 'pilot slots measured' },
         { value: '332', label: 'sealed plan rows' },
         { value: '429/455', label: 'fresh QC passes' }
       ],
-      etaDays: 'Gate 1 active',
-      etaNote: 'Gate 0 is closed. Gate 1 verification is active; Gate 2 remains locked.'
+      etaDays: 'Worker active',
+      etaNote: 'Fable is preparing local evidence. Codex remains the final reviewer and sole GitHub writer; Gate 2 stays locked.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -67,10 +67,10 @@ const AP4_DASHBOARD = {
       note: 'HumGeo uses the approved gate sequence. Only Gate 0 has closure credit; later rows show reusable evidence waiting behind the active gate.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
-        { gate: 1, state: 'active', status: 'Active verification', signal: '150 EKs · 70 LOs · 68-map candidate · suite green', copy: 'PR #59 cleared the eight regressions. The candidate still needs official-byte authority, exact-set mutation proof, and zero-difference reconciliation before it earns closure.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/59' },
-        { gate: 2, state: 'evidence', status: 'Evidence · gate locked', signal: '332 classified residual rows', copy: 'The sealed, unarmed plan is useful inventory input. Gate 2 must reconcile every row against corrected scope and current assets.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/56' },
+        { gate: 1, state: 'active', status: 'Worker in flight', signal: '150 EKs · 70 LOs · 68-map candidate · Codex audit pending', copy: 'PR #59 cleared the eight regressions. A local-only worker is integrating the final authority and mutation guards on current main; no remote candidate exists yet.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50' },
+        { gate: 2, state: 'evidence', status: 'Evidence · gate locked', signal: '332 residual-plan rows · 30 PR #61 corpus files', copy: 'Both are inventory inputs only. PR #61 is merged, but its S3 publication and 30-key live readback are retrying after an AWS-credential failure.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/60#issuecomment-5369498130' },
         { gate: 3, state: 'evidence', status: 'Evidence · gate locked', signal: '455 re-screened · 429 fresh passes', copy: 'This is substantial prior QC work, but Gate 2 must decide which records still represent real shortages before generation resumes.', href: 'claims.html' },
-        { gate: 4, state: 'evidence', status: 'Evidence · gate locked', signal: 'Reconciled corpus + 1 passing replacement landed', copy: 'Landing receipts exist for bounded inputs. They do not prove a complete course assembly or learner projection.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/55' }
+        { gate: 4, state: 'evidence', status: 'Evidence · gate locked', signal: 'Repository landings exist · PR #61 S3 publication pending', copy: 'Merged repository bytes do not prove a published or learner-visible course. The fleet retry must finish and read back the exact 30 changed keys before deployment credit is possible.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/61' }
       ]
     },
     apwh: {

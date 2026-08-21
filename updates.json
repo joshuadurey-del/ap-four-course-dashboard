@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T12:00Z",
+    "course": "HumGeo",
+    "text": "Gate 1 remains in flight on canonical main 54c06cd13407a6bb666efc084079018b7137a551 after merged PR #61. Its repository gate is green (737 passed, 128 skipped, 5 subtests), but the 30 changed corpus files have not been published or verified on S3 because the fleet retry lacks AWS credentials; no deployment or later-gate credit is claimed. Fable is preparing a local-only Gate 1 candidate, while Codex remains the independent final reviewer and sole GitHub writer. Issue #50 still carries status:needs_rework, issue #44 remains stopped, and Gates 2-6 remain locked."
+  },
+  {
     "ts": "2026-08-21T10:07Z",
     "course": "HumGeo",
     "text": "Canonical main advanced to 803d8852b41ee3db2d11ba29fe373ff2943b8d15 through merged and approved PR #59, which repaired all eight regressions introduced by PR #58 without reverting its scope bytes. Public PR receipts show the production build, validator, default blueprint diff, and exact eight nodes at exit 0; the complete suite collected 823 tests with 702 passed, 121 skipped, 0 failed, plus 5 subtests passed. Gate 1 remains active: final official-source authority, mutation-backed exact-set proof, zero unresolved mapping differences, and issue #50 reconciliation are still required. Issue #44 remains stopped and unarmed; Gates 2-6 remain locked, and no generation, delivery, serving, or release work is authorized."
