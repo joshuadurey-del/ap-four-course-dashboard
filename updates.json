@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T12:49Z",
+    "course": "HumGeo",
+    "text": "Gate 1 is CLOSED — SCOPE_LOCKED on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd after merged PR #62. The committed Fall 2020 CED authority binds the exact 150 EK, 70 LO, 68-topic, and 68-gate identity sets; clean post-merge verification and fail-closed mutation witnesses report zero missing official codes, zero phantom codes, and zero unresolved mapping differences. Issue #50 is CLOSED/COMPLETED with the merged-SHA receipt and no status:needs_rework label. PR #61's S3/live-key retry remains unverified later-gate evidence and earns no deployment credit. Gate 2 is LOCKED and NOT STARTED; Gates 3-6 remain locked."
+  },
+  {
     "ts": "2026-08-21T12:00Z",
     "course": "HumGeo",
     "text": "Gate 1 remains in flight on canonical main 54c06cd13407a6bb666efc084079018b7137a551 after merged PR #61. Its repository gate is green (737 passed, 128 skipped, 5 subtests), but the 30 changed corpus files have not been published or verified on S3 because the fleet retry lacks AWS credentials; no deployment or later-gate credit is claimed. Fable is preparing a local-only Gate 1 candidate, while Codex remains the independent final reviewer and sole GitHub writer. Issue #50 still carries status:needs_rework, issue #44 remains stopped, and Gates 2-6 remain locked."

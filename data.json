@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T12:00Z",
+  "snapshot": "2026-08-21T12:49Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -72,9 +72,9 @@
     {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
-      "status": "BLOCKED",
-      "status_at": "2026-08-21T12:00Z",
-      "value": "Gate 1 remains active on canonical main 54c06cd13407a6bb666efc084079018b7137a551 after merged PR #61. Its repository gate is green (737 passed, 128 skipped, 5 subtests), but its 30 changed corpus files have not been published or verified on S3 because the fleet retry lacks AWS credentials; that earns no deployment or gate credit. Fable is preparing the final scope-lock candidate locally with no GitHub authority. Codex remains the independent final reviewer and sole GitHub writer. Issue #50 remains CLOSED with status:needs_rework because official-source authority, mutation-backed exact-set proof, zero mapping differences, merge, and canonical reconciliation are still outstanding. Gates 2-6 remain locked.",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-21T12:49Z",
+      "value": "Gate 1 is CLOSED on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd after merged PR #62. The committed Fall 2020 CED authority binds the exact 150 EK, 70 LO, 68-topic, and 68-gate identity sets; clean post-merge production verification and fail-closed mutation witnesses report zero missing official codes, zero phantom codes, and zero unresolved mapping differences. Issue #50 is CLOSED/COMPLETED with the merged-SHA receipt and no status:needs_rework label. PR #61's 30 changed corpus files remain unpublished and unverified on S3 after unavailable AWS credentials; that earns no deployment or later-gate credit. Gate 2 is LOCKED and NOT STARTED; Gates 3-6 remain locked.",
       "scope": "Gate 1 official CED and 68-gate mapping closure; PR #61 S3/live publication explicitly unverified",
       "evidence": [
         {
@@ -95,29 +95,25 @@
         },
         {
           "type": "canonical-main",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/61"
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/62"
         },
         {
           "type": "publication-retry",
           "url": "https://github.com/ilmych/humgeo-rebuild/issues/60#issuecomment-5369498130"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
-        },
-        {
-          "type": "owner-direction",
-          "location": "Fable local worker / Codex final review boundary confirmed by Josh; canonical readback 2026-08-21T12:00Z"
+          "type": "scope-closure-receipt",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183"
         }
       ],
-      "evidence_access": "OWNER_DIRECTION+PUBLIC_COLLEGE_BOARD+GITHUB"
+      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:08Z",
-      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. These are scope identities, not a 150-question target and not a course-completion percentage. Gate 1 must correct and lock the committed map before Gate 2 measures existing assets against it.",
+      "observed_at": "2026-08-21T12:49Z",
+      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. These are scope identities, not a 150-question target and not a course-completion percentage. Gate 1 has locked those identities and all 68 topic-to-gate mappings on canonical main; Gate 2 remains locked until explicitly opened.",
       "scope": "official HumGeo scope denominator only",
       "evidence": [
         {
@@ -139,9 +135,9 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T12:00Z",
-      "value": "HumGeo follows seven sequential completion gates. Gate 0 is CLOSED and issue #44 remains stopped with only autopilot:attention. Gate 1 is IN_PROGRESS on canonical main 54c06cd13407a6bb666efc084079018b7137a551; Fable is preparing a local-only candidate for Codex audit, correction, and any eventual GitHub write. Issue #50 retains status:needs_rework. PR #56's sealed 332-row plan and PR #61's 30 changed corpus files are Gate 2 inventory inputs only; PR #61's S3 publication and live-key verification are retrying after unavailable AWS credentials. Gates 2-6 remain locked.",
-      "scope": "owner-approved HumGeo completion sequence and active gate",
+      "observed_at": "2026-08-21T12:49Z",
+      "value": "HumGeo follows seven sequential completion gates. Gates 0 and 1 are CLOSED. Gate 1 closed on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd through merged PR #62 and the issue #50 reconciliation receipt; issue #50 is CLOSED/COMPLETED with no labels. Issue #44 remains stopped with only autopilot:attention. PR #56's sealed 332-row plan and PR #61's 30 changed corpus files are Gate 2 inventory inputs only; PR #61's S3 publication and live-key verification are retrying after unavailable AWS credentials. Gate 2 is LOCKED and NOT STARTED; Gates 3-6 remain locked.",
+      "scope": "owner-approved HumGeo completion sequence and current gate state",
       "evidence": [
         {
           "type": "course-plan",
@@ -173,18 +169,18 @@
         },
         {
           "type": "canonical-main",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/61"
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/62"
         },
         {
           "type": "publication-retry",
           "url": "https://github.com/ilmych/humgeo-rebuild/issues/60#issuecomment-5369498130"
         },
         {
-          "type": "owner-direction",
-          "location": "Fable local worker / Codex final review boundary confirmed by Josh; canonical readback 2026-08-21T12:00Z"
+          "type": "scope-closure-receipt",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183"
         }
       ],
-      "evidence_access": "OWNER_DIRECTION+GITHUB+DASHBOARD_PLAN"
+      "evidence_access": "GITHUB+DASHBOARD_PLAN"
     },
     {
       "claim_id": "apwh.blueprint.audit",
@@ -276,8 +272,8 @@
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T12:00Z",
-      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts remain recorded as null, and PR #56's residual plan remains sealed and unarmed. The 11:59Z live readback found issue #44 stopped with only autopilot:attention and no assignee. Canonical main is 54c06cd13407a6bb666efc084079018b7137a551 after merged PR #61; that later content landing does not reopen Gate 0. Gate 0 remains CLOSED while Gate 1 closure proof runs.",
+      "observed_at": "2026-08-21T12:49Z",
+      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts remain recorded as null, and PR #56's residual plan remains sealed and unarmed. The current live readback finds issue #44 stopped with only autopilot:attention and no assignee. Canonical main is aa11026aa53e12623bf40a7aeff1931b491065dd after merged PR #62; later scope work does not reopen Gate 0. Gates 0 and 1 are CLOSED, while Gate 2 remains locked and not started.",
       "scope": "Gate 0 stabilization and no-active-writer closure",
       "evidence": [
         {
@@ -332,8 +328,8 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T12:00Z",
-      "value": "Current main is 54c06cd13407a6bb666efc084079018b7137a551 after PR #61 landed a disclosed 58-file Issue-21 chain including 30 corpus files. Its repository gate is green, but S3 publication and exact-key live verification are retrying after unavailable AWS credentials. PR #56's residual plan remains sealed and unarmed. No current whole-course shortage count or deployed-content claim is asserted; Gate 2 remains locked and must reconcile repository and live surfaces after Gate 1 closes.",
+      "observed_at": "2026-08-21T12:49Z",
+      "value": "Current main is aa11026aa53e12623bf40a7aeff1931b491065dd after Gate 1 PR #62 merged. PR #61's disclosed 30 corpus files remain unpublished and unverified on S3 after unavailable AWS credentials. PR #56's residual plan remains sealed and unarmed. No current whole-course shortage count or deployed-content claim is asserted; Gate 2 remains locked and, when explicitly opened, must reconcile repository and live surfaces.",
       "scope": "canonical lane baseline after PR #55; no learner-surface claim",
       "evidence": [
         {
@@ -358,7 +354,7 @@
         },
         {
           "type": "canonical-main",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/61"
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/62"
         },
         {
           "type": "publication-retry",
@@ -390,8 +386,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-21T12:00Z",
-      "value": "HumGeo follows seven sequential completion gates. Gate 1 official-source authority and mapping closure remain the current action on canonical main 54c06cd13407a6bb666efc084079018b7137a551, with a local-only Fable candidate awaiting Codex audit. PR #61's S3 publication retry does not advance the gate or prove learner visibility. Gate 2 inventory and every learner-facing or release stage remain locked. LS review is part of the later learner-evidence path, not a result of the current scope work.",
+      "status_at": "2026-08-21T12:49Z",
+      "value": "HumGeo follows seven sequential completion gates. Gate 1 official-source authority and mapping closure are CLOSED on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd through PR #62 and the issue #50 reconciliation receipt. PR #61's S3 publication retry does not prove learner visibility or earn later-gate credit. Gate 2 inventory is LOCKED and NOT STARTED; every learner-facing and release stage remains locked. LS review is part of the later learner-evidence path, not a result of scope closure.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
