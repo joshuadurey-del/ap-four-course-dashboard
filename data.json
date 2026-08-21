@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T01:05Z",
+  "snapshot": "2026-08-21T03:21Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -54,8 +54,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-21T00:30Z",
-      "value": "The official CED denominator remains 150 EK / 70 LO. A fresh strict current-byte join counts 119 EKs with at least one fingerprint-valid passing artifact: 119 passing-artifact, 25 naked-only, 5 failed-only, and 1 absent. The prior 120 counter used looser receipt treatment and is retired. The 40-pass bundle oracle binds the pre-morning local snapshot and still validates the corrupted 158-code library universe, so it must be rerun after the 60-file local delta is resolved.",
+      "status_at": "2026-08-21T03:21Z",
+      "value": "The official CED denominator remains 150 EK / 70 LO. PR #49 is open and clean at head 16ffbd0f with a strict prospective-merge census of 119 passing-artifact, 29 naked-only, 1 failed-only, and 1 absent. Current main remains 114/150 until that PR merges. The single absent code is PSO-3.D.2; issue #50 records that the committed map also carries nine non-CED codes. The prior bundle oracle predates this candidate, so final blueprint and package proof must be rebuilt after the one-EK follow-up lands.",
       "scope": "blueprint binding and implementation reconciliation",
       "evidence": [
         {
@@ -73,6 +73,14 @@
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/47"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
         },
         {
           "type": "local-current-head-receipt",
@@ -93,8 +101,8 @@
       "claim_id": "humgeo.coverage.denominator",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T00:30Z",
-      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. The committed 158-code library map has nine codes absent from the CED and omits real CED code PSO-3.D.2. A fresh strict read-only rerun against the current local bytes counts 119/150 EKs (79.3%); the same strict baseline before the five local pilot passes was 114/150. The five new passes remain uncommitted. Failed, stale, and phantom-only receipts earn no coverage.",
+      "observed_at": "2026-08-21T02:38Z",
+      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. Current main is 114/150. The exact prospective merge of main 32be2362 plus PR #49 head 16ffbd0f measures 119/150 (79.3%) with 119 passing-artifact, 29 naked-only, 1 failed-only, and 1 absent. PR #49 is not merged, so 119 is candidate coverage rather than canonical-main coverage. Failed, stale, and phantom-only receipts earn no coverage.",
       "scope": "HumGeo internal blueprint-coverage denominator; not an LS intake requirement",
       "evidence": [
         {
@@ -106,8 +114,12 @@
           "location": "~/.incept/day-20260820/humgeo-ek-denominator/HUMGEO-EK-DENOMINATOR-20260820.md"
         },
         {
-          "type": "local-strict-coverage-receipt",
-          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/EK-MATRIX-78f6ec4b-postpilot.json"
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+LOCAL_RECEIPT"
@@ -201,18 +213,25 @@
     {
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
-      "status": "OBSERVED",
-      "observed_at": "2026-08-20T01:55Z",
-      "value": "This historical sealed-plan proof class is superseded for current blocker reporting by the two-leg re-earn: 429 fresh-pass records are on PR #43 and the remaining machine-checked regeneration cohort is 332. Do not use the older wave count as an active blocker or completion claim.",
-      "scope": "sealed-plan regeneration wave only",
+      "status": "BLOCKED",
+      "status_at": "2026-08-21T03:19Z",
+      "value": "Issue #44 is fail-closed after PR #48: wave-002+, corpus apply, and publish remain stopped. Josh posted the execution-outcome receipt and five candidate files once. Fleet's latest review requires a zero-corpus remediation plan now: verify the five attachments, split S1/S2 hydration gaps from the three D4 content failures, bind a new reviewed plan and owner re-arm, and order any corpus apply behind PR #49. The 332-record remediation is active fleet work, not authority to restart the lane.",
+      "scope": "issue #44 remediation planning and execution ordering; no corpus apply while PR #49 is open",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#HG-009",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+          "type": "issue-comment",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5364689477"
+        },
+        {
+          "type": "issue-comment",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5364780927"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/48"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "GITHUB"
     },
     {
       "claim_id": "humgeo.rescreen741.reearn",
@@ -235,9 +254,9 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T00:30Z",
-      "value": "The pre-pilot cut reported 2,578 generated records, with 1,780 never swept; the 10-row pilot reduced that historical tail to 1,770 on its then-current bytes. Morning work then made 48 successful rationale calls covering 47/48 targets, one unsuccessful targeted retry, and 15 additional deterministic metadata applies. A fresh read-only dry run over the exact 100-row S2/D1 cohort finds 47 complete, 52 missing skill tags, and 1 incomplete rationale. The worktree now has 60 modified, uncommitted files. No fresh full record-partition receipt binds these current bytes, so 1,770 is not asserted as today's call queue.",
-      "scope": "HumGeo local execution worktree at 78f6ec4; no corpus apply, no publication, and no claim that local receipts are canonical main",
+      "observed_at": "2026-08-21T02:38Z",
+      "value": "The 60-file local delta is reconciled, not wholesale-landed. PR #49 contains exactly 25 files: 24 distinct item files plus the rationale sidecar. It carries five passing EK verdicts, one failing verdict, 19 scripted metadata hydrations, and 33 new sidecar entries; core fields are byte-identical. Thirty-one queue-pinned item files and four stale W7 manifests remain excluded. The exact 100-row cohort still has 52 missing skill tags and one incomplete rationale. Historical never-swept cuts are not asserted as current counts.",
+      "scope": "PR #49 candidate plus explicitly held local residue; no corpus apply or publication",
       "evidence": [
         {
           "type": "local-partition-report",
@@ -268,8 +287,8 @@
           "location": "~/.incept/day-20260820/overnight-humgeo/receipts/s2d1-apply-15.json"
         },
         {
-          "type": "local-current-dry-run",
-          "location": "read-only rerun of scripts/complete_genfill_metadata.py against the 100-row cohort at 2026-08-21T00:30Z"
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_RECEIPT"
@@ -278,9 +297,9 @@
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T00:30Z",
-      "value": "Candidate 78f6ec4 previously staged and served locally through the committed w7 chain. Its 13-file, 14,246,142-byte bundle read back byte-equal at aggregate SHA-256 17962c5c8cd02f093c2846e71e9ce081298b2cdca1768873720438a1c5e42ab4; bundle law passed 40/0 and gate integrity passed 7/0, while the walker stopped at readiness preflight. Morning work leaves 60 modified, uncommitted files, including four W7 manifests. Those earlier receipts no longer prove the current local bytes; the exact delta must be resolved and the package chain rerun before a current-candidate claim.",
-      "scope": "prior local w7 snapshot plus current dirty-worktree freshness boundary; no LS-reachable surface",
+      "observed_at": "2026-08-21T02:38Z",
+      "value": "The exact prospective merge of repaired main plus PR #49 passes the full repository suite at 684 passed, 121 skipped, 0 failed; the three plan tests pass; blueprint_diff passes 26/0 and gate_integrity passes 7/0. Bundle-stage and answer-key-leak checks remain not applicable until the final 120/150 SHA is staged. The prior 78f6ec4 local bundle remains historical and does not prove PR #49 or the later one-EK candidate.",
+      "scope": "prospective merge validation for PR #49; no current bundle, hosted readback, or LS-reachable surface",
       "evidence": [
         {
           "type": "local-bundle-receipt",
@@ -291,8 +310,8 @@
           "location": "~/.incept/day-20260820/overnight-humgeo/receipts/w7-walkthrough.json"
         },
         {
-          "type": "merged-candidate",
-          "url": "https://github.com/ilmych/humgeo-rebuild/commit/78f6ec4b364c9d1a4bc42237968e604aad7c0fd4"
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_RECEIPT"
@@ -301,8 +320,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-21T01:05Z",
-      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. Strict current-byte coverage is 119/150, one EK below the internal bar. The local tree has 60 modified, uncommitted files; its 100-row S2/D1 cohort has 47 complete, 52 missing skill tags, and 1 incomplete rationale. Prior bundle and walk receipts predate this delta. The immediate path is to reconcile rationale-file provenance, review and land the valid local delta, remeasure the merged SHA, earn one additional strict EK through an owner-authorized bounded QC action, and rerun the exact-byte package checks. Carry the 52 skill-tag gaps, one unresolved rationale, and issue-44 scaling failure as disclosed known gaps unless they break the reviewer path. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-21T03:21Z",
+      "value": "The local path is merge-gated rather than authoring-gated. Ilma must merge PR #49; the merged SHA must remeasure at 119/150; then the already-authorized bounded one-EK action may make at most 10 QC calls and stop at the first new fingerprint-valid pass. That single passing record needs its own reviewed PR and Ilma merge. The resulting exact SHA must measure 120/150 and pass rebuilt W6/W7, suite, blueprint, bundle-law, answer-key-leak, served-byte, and local-walk checks. External reviewer access remains blocked on TimeBack inputs and a fresh go TimeBack.",
       "scope": "Learning Science access and walkthrough handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -322,8 +341,12 @@
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/47"
         },
         {
-          "type": "local-execution-outcome",
-          "location": "~/.incept/day-20260820/issue44-run/OUTCOME-wave-001.json"
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN"
@@ -351,8 +374,8 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-21T00:30Z",
-      "value": "Release and current-candidate reviewer visibility are not proven. Local w7 stage/serve and byte-identical bundle readback succeeded on the prior 78f6ec4 snapshot, but the current local tree has a 60-file uncommitted delta and has not been resealed or read back. Issue-44 wave-001 also failed its required QC postcondition with zero corpus writes. Owner direction states that sanctioned TimeBack publishing instructions are unavailable, so no TimeBack/AP One/chooser/registration mutation is authorized. Release still requires exact current-byte package receipts, canonical hosted-byte readback, and a released-tier learner walk.",
+      "status_at": "2026-08-21T03:21Z",
+      "value": "Release and reviewer visibility are not proven. After the final 120/150 local package passes, TimeBack still requires Ilma's five inputs and a fresh owner go. The TimeBack-direct cutover must preserve the 68 governed gates, re-key AP One gate_map away from demo IDs, retain release_ready=false until exact hosted readback passes, and then complete chooser/tree/gate traversal with a released-tier learner. LS review, any resulting revisions, issue #44 remediation, issue #50 map repair, issue #28 EOC calibration, issue #642 contamination cleanup, and the disclosed metadata/queue residue remain tracked to closure rather than disappearing at the first walk.",
       "scope": "released and student-visible state",
       "evidence": [
         {
@@ -366,6 +389,14 @@
         {
           "type": "issue",
           "url": "https://github.com/InceptTrilogy/ap-one/issues/659"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/642"
+        },
+        {
+          "type": "issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_AUDIT"

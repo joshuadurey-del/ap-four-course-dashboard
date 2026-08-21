@@ -66,12 +66,12 @@ const AP4_TIMELINE = {
       color: '#2558d8',
       x: 69,
       y: 200,
-      stage: 'Current recovery locus · Earn one EK + land local delta',
-      lastCompleted: 'Strict current-byte EK rerun · 119/150 (79.3%) · one EK below internal bar',
-      summary: 'A fresh strict rerun on the current local bytes counts 119/150 EKs; the earlier 120 result is retired. Morning rationale and metadata work leaves 47/100 targets complete, with 52 missing skill tags and one incomplete rationale. The worktree has 60 modified, uncommitted files. The earlier bundle and walk receipts bind the prior local snapshot, not this delta; reviewer visibility remains unproven.',
-      next: 'Reconcile rationale-file provenance, review and land the valid local delta, and remeasure the merged SHA. Earn one additional fingerprint-valid EK through an owner-authorized bounded QC action, then rebuild and rerun the blueprint, suite, bundle, local served-byte readback, and pre-cutover walk against that exact SHA. Carry the 52 missing skill tags, one unresolved rationale, and issue-44 scaling failure as disclosed known gaps unless they break the reviewer path. External publication, hosted readback, and the LS walk wait for sanctioned TimeBack instructions.',
-      etaDays: '3–5 days',
-      etaNote: 'Focused build work plus an external wait. Strict coverage is one EK below the internal bar; the 60-file local delta needs review and fresh package receipts, and the issue-44 pilot failed its scale condition. TimeBack placement and reviewer access wait on sanctioned instructions.'
+      stage: 'Current recovery locus · PR #49 merge gate',
+      lastCompleted: 'Prospective merge validation · 119/150 · 684 passed / 121 skipped / 0 failed',
+      summary: 'The safe 25-file delta is open as clean PR #49 at 16ffbd0f. Repaired main remains 114/150; the exact prospective merge measures 119/150. Thirty-one queue-pinned records and four stale manifests remain excluded. Issue #44 is fail-closed while fleet builds a zero-corpus remediation plan; issue #50 tracks the missing PSO-3.D.2 map entry.',
+      next: 'Ilma merges PR #49. Remeasure the merged SHA; if it is exactly 119/150, run the bounded one-EK action, land its one passing record through a separate reviewed PR, and require 120/150 after Ilma merges it. Then rebuild W6/W7 and rerun the full exact-byte package and local-walk gates. External publication, hosted readback, and the LS walk wait for TimeBack inputs plus a fresh owner go.',
+      etaDays: 'Merge-gated',
+      etaNote: 'No calendar promise. Remaining local work is one merge, one bounded QC pass, one small reviewed merge, and a final package run. TimeBack placement, LS review, and release are external/later stages.'
     }
   ]
 };

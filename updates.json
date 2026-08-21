@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T03:21Z",
+    "course": "HumGeo",
+    "text": "HumGeo's current path is now merge-gated. Fail-closed PR #48 is on main at 32be2362. Clean PR #49 carries exactly 25 safe files; its exact prospective merge passes 684/121/0 and measures 119/150, while canonical main remains 114/150. Thirty-one queue-pinned records and four stale manifests remain excluded. The issue-44 evidence packet is posted once; fleet's latest REWORK requires a zero-corpus remediation plan now, with any apply ordered behind PR #49. Issue #50 separately tracks PSO-3.D.2 plus the nine phantom map codes. Next: Ilma merges #49, remeasure, earn one bounded EK through a separate reviewed PR, require 120/150, rebuild the exact package, then stop at the TimeBack inputs and fresh-go boundary. No publication or release claim is made."
+  },
+  {
     "ts": "2026-08-21T01:05Z",
     "course": "HumGeo",
     "text": "The HumGeo course page and agent-facing LS-readiness claim now match the corrected timeline: land and remeasure the valid local delta, earn one additional strict EK, and revalidate the exact package. Skill-tag, rationale, and issue-44 scaling residue remains disclosed tail work unless it breaks the reviewer path. This is a planning-path correction, not a new course-state observation."
