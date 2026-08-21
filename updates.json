@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T14:29Z",
+    "course": "HumGeo",
+    "text": "Gate 2 ran overnight but did not honestly close. A deterministic local inventory was built and independently reviewed with no generation, course mutation, push, deployment, or learner-surface write. The required item-bank source exposes aggregate status plus an item-level route that updates records when read, so per-slot absence and an exact shortage cannot be proved read-only. Gate 2 is HOLD: BLOCKED_CONTRACT pending a sanctioned side-effect-free slot-level inventory route or equivalent measurement. Canonical main remains aa11026aa53e12623bf40a7aeff1931b491065dd; Gates 3-6 remain locked."
+  },
+  {
     "ts": "2026-08-21T12:49Z",
     "course": "HumGeo",
     "text": "Gate 1 is CLOSED — SCOPE_LOCKED on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd after merged PR #62. The committed Fall 2020 CED authority binds the exact 150 EK, 70 LO, 68-topic, and 68-gate identity sets; clean post-merge verification and fail-closed mutation witnesses report zero missing official codes, zero phantom codes, and zero unresolved mapping differences. Issue #50 is CLOSED/COMPLETED with the merged-SHA receipt and no status:needs_rework label. PR #61's S3/live-key retry remains unverified later-gate evidence and earns no deployment credit. Gate 2 is LOCKED and NOT STARTED; Gates 3-6 remain locked."
