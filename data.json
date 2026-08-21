@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-21T06:19Z",
+  "snapshot": "2026-08-21T06:36Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T08:30Z",
-      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. No universal seven-phase canon is asserted. The dashboard's four stages organize the sprint to LS REVIEW READY; course markers report current recovery locus, not canonical phase completion.",
+      "observed_at": "2026-08-21T06:36Z",
+      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. HumGeo alone currently has an approved seven-gate completion sequence. The dashboard therefore shows one active-course gate rail and files existing work for APWH, APUSH, and Psychology against the same gate names only as a provisional evidence map, never as gate credit.",
       "scope": "accessible onboarding, course-build, dashboard, current factory guide, and skill-pack sources",
       "evidence": [
         {
@@ -15,6 +15,25 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
+    },
+    {
+      "claim_id": "cross.work_evidence_map",
+      "section": "Cross-course",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-21T06:36Z",
+      "value": "Each course page now quantifies observable work in its native units and maps only evidenced work to its likely gate home. Unlike units are not summed, empty gates are omitted, and historical or locked-gate evidence is explicitly labeled as no gate credit. HumGeo remains the only active approved gate sequence.",
+      "scope": "public dashboard presentation and already-published course evidence only",
+      "evidence": [
+        {
+          "type": "dashboard-overview",
+          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/"
+        },
+        {
+          "type": "dashboard-course-pages",
+          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
+        }
+      ],
+      "evidence_access": "PUBLIC_DASHBOARD"
     },
     {
       "claim_id": "cross.ls_qc_target",

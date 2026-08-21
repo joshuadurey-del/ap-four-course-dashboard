@@ -1,218 +1,223 @@
 /*
-CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIMELINE below.
-
-1. Verify current state from updates.json + data.json and each course page before
-   editing. Do not copy an old dashboard number forward.
-2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next,
-   etaDays, and etaNote. x is the horizontal position from 0–100; y staggers
-   labels when multiple courses share a recovery locus.
-3. etaDays must be a focused-work range or an explicit gate state, never a calendar
-   date. ETA notes must name assumptions, exclusions, or the gate postcondition.
-4. LS REVIEW READY means Learning Science can access and walk the named candidate. It is
-   not LS approval or release. Never imply
-   that a current recovery locus proves every earlier gate cleared canonically.
-
-No index.html or style.css edit is needed for ordinary course-status updates.
+Dashboard display contract:
+- Counts describe observable work units. They are never added into a completion score.
+- Only HumGeo currently has an approved seven-gate sequence.
+- Other course mappings are retrospective filing aids, not gate credit.
+- Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
-const AP4_TIMELINE = {
-  snapshot: 'Aug 21, 2026 · 15:19 KST Gate 1 verification dispatch',
+const AP4_DASHBOARD = {
+  snapshot: 'Aug 21, 2026 · 15:36 KST',
+  activeCourse: 'humgeo',
+  gates: [
+    { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
+    { id: 1, name: 'Lock scope', state: 'active', status: 'Active', detail: 'The merged scope candidate is undergoing exact-byte, full-suite, regression-attribution, and mapping verification. No closure is claimed yet.' },
+    { id: 2, name: 'Inventory', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'A sealed 332-row residual plan exists as inventory input. It must be reconciled against the corrected scope and current assets after Gate 1 closes.' },
+    { id: 3, name: 'Fill gaps', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Earlier work re-earned 429 of 455 records through fresh fingerprint-bound QC. Gate 2 must decide what remains reusable before any new generation.' },
+    { id: 4, name: 'Assemble', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Corpus reconciliation and one passing pilot replacement have landed. They are assembly inputs, not proof of a complete projected course.' },
+    { id: 5, name: 'Learner proof', state: 'locked', status: 'Locked', detail: 'Historical local walks do not prove the current canonical course. Exact deployed-byte learner verification belongs here after assembly.' },
+    { id: 6, name: 'Release', state: 'locked', status: 'Locked', detail: 'TimeBack, EOC, production readback, and final approval remain later release obligations.' }
+  ],
   courses: [
     {
-      id: 'apush',
-      label: 'AP US History',
-      short: 'APUSH',
-      color: '#c2413a',
-      x: 28,
-      y: 80,
-      stage: 'Current recovery locus · Build local candidate',
-      lastCompleted: 'Seating PR #6 merged · 2,479 candidates retain factory QC provenance',
-      summary: 'The question candidates were QC checked during generation, so a duplicate blanket pass is not required. The seating reconciler merged at dab70a6, but the canonical article ledger still has 38 accepted positions plus 11 receipted successors outside canon; merge alone does not seat them or prove an approximately 80%-blueprint reviewer candidate.',
-      next: 'Route the 11 receipted successors, measure the exact current candidate against the blueprint denominator, parallel-author only the highest-weight missing scope, and prepare a pinned local publication package. External placement waits for the sanctioned TimeBack instructions.',
-      etaDays: '7–10 days',
-      etaNote: 'Focused build work toward the candidate, not a calendar promise. Assumes at least four non-colliding authoring/QC lanes, prompt intake rulings, and reuse of the merged seating reconciler and hosted grader calibration. TimeBack wait is excluded.'
-    },
-    {
-      id: 'psych',
-      label: 'AP Psychology',
-      short: 'Psych',
-      color: '#7c3aed',
-      x: 43,
-      y: 160,
-      stage: 'Current recovery locus · Build and measure local candidate',
-      lastCompleted: 'Unit 3 image stage merged · 34 embeds and approvals on current main',
-      summary: 'Current main 93ddb includes the merged Unit 3 image stage. Exact-byte static checks find 221 passing article sidecars, 34 embeds, 34 PNGs, 34 ledger approvals, consistent provenance, an exact 71-file delivery copy, and re-judged sidecars for all 11 prose changes. The monitor still cannot re-run the renderer-dependent ledger because rsvg-convert is unavailable. Bank provenance is cleared; safe top-up remains held because the broad route cannot exclude unresolved Unit 5 scope.',
-      next: 'Fully re-derive the Unit 3 figure receipt on current main with rsvg-convert available; measure the owner-approved blueprint denominator; establish a committed Unit 5-safe scope route or resolve #2; then top up only proven scope and prepare a pinned local package with an explicit gap ledger.',
-      etaDays: '4–7 days',
-      etaNote: 'Focused build work after a safe Unit 5 scope route clears. Provenance is resolved; no paid top-up runs while scope remains unsealed. TimeBack publication and reviewer access wait on sanctioned instructions.'
-    },
-    {
-      id: 'apwh',
-      label: 'AP World History',
-      short: 'APWH',
-      color: '#4f46b8',
-      x: 63,
-      y: 120,
-      stage: 'Current recovery locus · Reconcile + package',
-      lastCompleted: 'Faultless Bar accepted · both 933-item legs pass · exact agreement',
-      summary: 'Issue #48 closed complete at 10:25Z after PR #9 merged the reproducible evaluator and exact passing acceptance evidence. Both legs cover all 933 identities, both pass, identity sets match, and item and course-status disagreements are zero. This is acceptance proof, not student-surface deployment or reviewer visibility.',
-      next: 'Rerun the existing blueprint oracle against the exact readable accepted candidate, record the measured gaps, and prepare the pinned local publication package. External placement waits for the sanctioned TimeBack instructions.',
-      etaDays: '1–3 days',
-      etaNote: 'Reprojected focused build range after issue #48 closed; it assumes the existing oracle and local packaging chain run without a new blocker. External TimeBack placement and reviewer access wait are excluded.'
-    },
-    {
-      id: 'humgeo',
-      label: 'AP Human Geography',
-      short: 'HumGeo',
-      color: '#2558d8',
-      x: 18,
-      y: 200,
-      stage: 'Owner completion reset · Gate 1 verification',
-      lastCompleted: 'Gate 0 closed · PR #58 merged the Gate 1 scope candidate',
-      summary: 'Gate 0 is closed and issue #44 remains stopped. PR #58 moved canonical main to 36546a1b and GitHub records issue #50 CLOSED/COMPLETED, but its latest fleet review still requires exact-byte, full-suite, regression-attribution, and mapping proof. The owner has opened Gate 1 and dispatched those proofs in isolated parallel lanes.',
-      next: 'Integrate the four proof receipts against one pinned main SHA. Close Gate 1 only if committed scope bytes reproduce, the complete suite is accounted for, and the sanctioned verifier proves 150 EKs, 70 LOs, 68 valid mappings, and zero scope differences. Gate 2 remains locked.',
+      id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
+      status: 'Gate 1 active', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 21 · 06:19Z',
+      summary: 'Scope verification is in flight; later-gate evidence is retained without receiving closure credit.',
+      footprint: [
+        { value: '6', label: 'pilot slots measured' },
+        { value: '332', label: 'sealed plan rows' },
+        { value: '429/455', label: 'fresh QC passes' }
+      ],
       etaDays: 'Gate 1 active',
-      etaNote: 'Verification is running in parallel on the merged scope candidate. This marker records the active recovery locus; it does not claim Gate 1 closure or authorize Gate 2.'
+      etaNote: 'Gate 0 is closed. Gate 1 verification is active; Gate 2 remains locked.'
+    },
+    {
+      id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
+      status: 'Evidence mapped', statusTone: 'purple', mapping: 'Gate mapping provisional', observed: 'Aug 20 · 10:25Z',
+      summary: 'The accepted item population is substantial and exact; current blueprint reconciliation and learner delivery remain separate.',
+      footprint: [
+        { value: '933', label: 'banked identities' },
+        { value: '2×933', label: 'passing acceptance legs' },
+        { value: '0', label: 'item disagreements' }
+      ],
+      etaDays: '1–3 days',
+      etaNote: 'Focused build range after acceptance; external TimeBack placement is excluded.'
+    },
+    {
+      id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
+      status: 'Evidence mapped', statusTone: 'purple', mapping: 'Gate mapping provisional', observed: 'Aug 20 · 05:27Z',
+      summary: 'A large generation-QC corpus and a smaller accepted ledger exist; admission, measurement, and assembly remain distinct.',
+      footprint: [
+        { value: '2,479', label: 'generation-QC candidates' },
+        { value: '38', label: 'accepted positions' },
+        { value: '+11', label: 'receipted successors' }
+      ],
+      etaDays: '7–10 days',
+      etaNote: 'Focused build range with parallel lanes; external TimeBack placement is excluded.'
+    },
+    {
+      id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
+      status: 'Evidence mapped', statusTone: 'purple', mapping: 'Gate mapping provisional', observed: 'Aug 20 · 18:50Z',
+      summary: 'Articles, QC sidecars, video assets, and image-stage artifacts are present; safe scope and learner wiring remain open.',
+      footprint: [
+        { value: '221', label: 'passing article sidecars' },
+        { value: '15', label: 'video release assets' },
+        { value: '34', label: 'image-stage sets' }
+      ],
+      etaDays: '4–7 days',
+      etaNote: 'Focused build range after a safe Unit 5 scope route clears; external TimeBack placement is excluded.'
     }
-  ]
+  ],
+  evidenceMaps: {
+    humgeo: {
+      title: 'Work footprint mapped to the completion gates',
+      note: 'HumGeo uses the approved gate sequence. Only Gate 0 has closure credit; later rows show reusable evidence waiting behind the active gate.',
+      rows: [
+        { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
+        { gate: 1, state: 'active', status: 'Active verification', signal: '150 EKs · 70 LOs · 68-map candidate', copy: 'These are scope identities. The merged candidate still needs the complete reproducibility and verifier receipt before it earns gate closure.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50' },
+        { gate: 2, state: 'evidence', status: 'Evidence · gate locked', signal: '332 classified residual rows', copy: 'The sealed, unarmed plan is useful inventory input. Gate 2 must reconcile every row against corrected scope and current assets.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/56' },
+        { gate: 3, state: 'evidence', status: 'Evidence · gate locked', signal: '455 re-screened · 429 fresh passes', copy: 'This is substantial prior QC work, but Gate 2 must decide which records still represent real shortages before generation resumes.', href: 'claims.html' },
+        { gate: 4, state: 'evidence', status: 'Evidence · gate locked', signal: 'Reconciled corpus + 1 passing replacement landed', copy: 'Landing receipts exist for bounded inputs. They do not prove a complete course assembly or learner projection.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/55' }
+      ]
+    },
+    apwh: {
+      title: 'Existing work filed against the gate model',
+      note: 'APWH has not adopted HumGeo’s sequence. This retrospective map shows where the published evidence would belong; it awards no gate credit.',
+      rows: [
+        { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '235-ID blueprint oracle exists', copy: 'The instrument belongs with scope lock, but its last result was unreadable and remains unmeasured against the accepted candidate.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48' },
+        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '933 banked identities', copy: 'The complete pinned item population is inventoried and population-scoped.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48' },
+        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '2 passing legs × 933 items · 0 disagreements', copy: 'The accepted population has exact two-leg agreement. This is strong QC evidence, not learner-surface proof.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48#issuecomment-5354633163' },
+        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: 'Practice release gate 9 of 9', copy: 'A governed component gate is green, while full candidate packaging and external placement remain separate work.', href: 'https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000' }
+      ]
+    },
+    apush: {
+      title: 'Existing work filed against the gate model',
+      note: 'APUSH has not adopted HumGeo’s sequence. Counts preserve the difference between generated, accepted, receipted, and actually seated work.',
+      rows: [
+        { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '249-position blueprint · 4 recorded deviations', copy: 'The design reconciliation belongs with scope lock, but it is preparation rather than a current implementation crosswalk.', href: 'claims.html' },
+        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,479 candidates · 249 ledger positions', copy: 'The generation-QC corpus and canonical ledger provide a substantial inventory without implying that every candidate is accepted or seated.', href: 'claims.html' },
+        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '38 accepted · 211 pending · 11 additional receipts', copy: 'The accepted and receipted work is separated from pending scope so the dashboard does not inflate the usable corpus.', href: 'claims.html' },
+        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: 'Seating reconciler merged · 0 of 11 newly seated', copy: 'The assembly mechanism exists on canonical main. The eleven successors still need canonical admission before a guarded seating run can change the count.', href: 'https://github.com/ilmych/apush-course-build/pull/6' }
+      ]
+    },
+    psych: {
+      title: 'Existing work filed against the gate model',
+      note: 'Psychology has not adopted HumGeo’s sequence. The map keeps completed artifact work visible while preserving the unresolved scope and learner-wiring boundaries.',
+      rows: [
+        { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '221 of 221 EK design receipt', copy: 'The blueprint design scope is covered, but no course-level implementation oracle currently proves that design on the learner candidate.', href: 'claims.html' },
+        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '1,105 buckets scanned · 374 underfilled', copy: 'The bank inventory exposes the measurable shortage. Unit 5 scope must be sealed before that shortage becomes a generation order.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14' },
+        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '221 passing sidecars · 15 video assets · 34 image sets', copy: 'Substantial content and QC evidence already exists; the remaining work is selective, not a blank-slate rebuild.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23' },
+        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: '34 embeds + 34 PNGs + 34 approvals · 71-file copy', copy: 'The image-stage delivery is byte-accounted on repository main. This proves bounded landing, not full course wiring.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23' },
+        { gate: 5, state: 'evidence', status: 'Mapped evidence', signal: '262 nodes · 5 units · 221 lessons', copy: 'The course tree reads live, but chooser preflight still fails. Structure evidence is not a learner walkthrough or release receipt.', href: 'claims.html' }
+      ]
+    }
+  }
 };
 
 (() => {
+  const courses = AP4_DASHBOARD.courses;
+  const activeCourse = courses.find(course => course.id === AP4_DASHBOARD.activeCourse);
+  if (!activeCourse || AP4_DASHBOARD.gates.length !== 7 || new Set(AP4_DASHBOARD.gates.map(gate => gate.id)).size !== 7) {
+    throw new Error('Active-course gate data is incomplete.');
+  }
+
   document.querySelectorAll('[data-course-eta]').forEach(section => {
-    const course = AP4_TIMELINE.courses.find(item => item.id === section.dataset.courseEta);
+    const course = courses.find(item => item.id === section.dataset.courseEta);
     if (!course) return;
     section.querySelector('[data-course-eta-days]').textContent = course.etaDays;
     section.querySelector('[data-course-eta-note]').textContent = course.etaNote;
   });
 
+  document.querySelectorAll('[data-gate-evidence]').forEach(root => {
+    const courseId = root.dataset.gateEvidence;
+    const map = AP4_DASHBOARD.evidenceMaps[courseId];
+    const course = courses.find(item => item.id === courseId);
+    if (!map || !course) return;
+    root.classList.add('gate-evidence-sec');
+    root.innerHTML = `
+      <div class="gate-evidence-head">
+        <div><span class="badge b-${course.statusTone}">${course.mapping}</span><h2>${map.title}</h2></div>
+        <span class="gate-observed">Receipt snapshot · ${course.observed}</span>
+      </div>
+      <p class="gate-evidence-note">${map.note} Evidence counts retain their cited scope and are never summed into a completion percentage.</p>
+      <div class="work-footprint" aria-label="${course.label} observable work footprint">
+        ${course.footprint.map(metric => `<div><strong>${metric.value}</strong><span>${metric.label}</span></div>`).join('')}
+      </div>
+      <div class="gate-evidence-list">
+        ${map.rows.map(row => `
+          <article class="gate-evidence-row gate-evidence-${row.state}">
+            <div class="gate-evidence-id"><span>G${row.gate}</span><small>${AP4_DASHBOARD.gates[row.gate].name}</small></div>
+            <div>
+              <span class="gate-evidence-status">${row.status}</span>
+              <h3>${row.signal}</h3>
+              <p>${row.copy}</p>
+              <a href="${row.href}"${row.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>Open receipt →</a>
+            </div>
+          </article>`).join('')}
+      </div>`;
+  });
+
   const root = document.getElementById('course-release-timeline');
   if (!root) return;
-
-  const stages = [
-    {
-      id: 'blueprint', point: '1', label: 'Bind review target', kicker: 'Planning stage 1', title: 'Bind the candidate and internal coverage target',
-      copy: 'Pin the exact blueprint/CED and candidate scope. Measure only what the course-specific plan requires; internal coverage does not become a Learning Science intake requirement.',
-      foot: 'These four planning stages organize the sprint. They are not claimed as universal factory phase names.'
-    },
-    {
-      id: 'build', point: '2', label: 'Build candidate', kicker: 'Planning stage 2', title: 'Build the reviewer candidate',
-      copy: 'Reuse factory-generated, generation-QC-proven content and existing hosted graders. Parallel-author only measured high-value gaps through sanctioned routes; no duplicate blanket QC or calibration work.',
-      foot: 'Exit evidence · exact candidate census and provenance mapped to the bound blueprint dimensions.'
-    },
-    {
-      id: 'measure', point: '3', label: 'Measure + preflight', kicker: 'Planning stage 3', title: 'Measure internally and preflight the walkthrough',
-      copy: 'Run the blueprint crosswalk against the exact candidate, bind existing generation/QC receipts, and test a representative reviewer path. Keep internal measurements separate from the LS intake process.',
-      foot: 'Exit evidence · current internal measurement plus a representative path that is ready to expose to reviewers.'
-    },
-    {
-      id: 'stage', point: '4', label: 'Publish for review', kicker: 'Planning stage 4', title: 'Publish the exact candidate through the sanctioned TimeBack route',
-      copy: 'After the sanctioned publishing instructions arrive, provide a working URL and access to the pinned candidate, then verify the representative walkthrough from a reviewer-equivalent account.',
-      foot: 'HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA. A localhost build is useful proof but is not reviewer visibility.'
-    },
-    {
-      id: 'ls-ready', point: 'LS REVIEW READY', label: 'LS REVIEW READY', kicker: 'Sprint outcome', title: 'Ready for Learning Science review',
-      copy: 'Learning Science can open the named candidate and walk the representative course path. Internal coverage and QC evidence remain available to builders but do not become an LS intake ceremony.',
-      foot: 'Next lifecycle · human LS review → evidence-backed revisions → production validation and learner release.'
-    }
-  ];
 
   root.innerHTML = `
     <div class="timeline-head">
       <div>
-        <h2>Where each course sits on the path to Learning Science review</h2>
-        <p class="timeline-sub">Target: Learning Science can access the named course and walk a representative path. External publication is currently held pending sanctioned TimeBack instructions. Markers show the current recovery locus—not proof that every earlier stage cleared.</p>
+        <span class="badge b-blue">Active course</span>
+        <h2>${activeCourse.label}</h2>
+        <p class="timeline-sub">One approved seven-gate sequence is in flight. Other courses keep their verified work visible below without being rendered as empty gate rows.</p>
       </div>
-      <span class="timeline-snapshot">Verified snapshot · ${AP4_TIMELINE.snapshot}</span>
+      <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
     </div>
-    <div class="timeline-canvas" aria-label="Planning stages and current recovery locus for four courses moving to Learning Scientist review">
-      <div class="timeline-rail" aria-hidden="true"></div>
-      <div class="timeline-stages">
-        ${stages.map(stage => `
-          <button class="timeline-stage" type="button" data-timeline-item="${stage.id}" aria-pressed="${stage.id === 'ls-ready'}">
-            <span class="timeline-stage-point">${stage.point}</span>
-            <span class="timeline-stage-label"${stage.id === 'ls-ready' ? ' aria-hidden="true"' : ''}>${stage.label}</span>
+    <div class="course-card-grid" aria-label="Observable work by course">
+      ${courses.map(course => `
+        <a class="course-summary-card${course.id === activeCourse.id ? ' is-active' : ''}" href="${course.id}.html" style="--course-color:${course.color}"${course.id === activeCourse.id ? ' aria-current="true"' : ''}>
+          <span class="course-card-status b-${course.statusTone}">${course.status}</span>
+          <h3>${course.label}</h3>
+          <div class="course-card-metrics">
+            ${course.footprint.map(metric => `<span><strong>${metric.value}</strong><small>${metric.label}</small></span>`).join('')}
+          </div>
+          <p>${course.summary}</p>
+          <small>${course.mapping} · receipts through ${course.observed}</small>
+        </a>`).join('')}
+    </div>
+    <div class="active-gate-wrap">
+      <div class="active-gate-heading">
+        <div><span class="eyebrow">Active course gates</span><h3>Gate 1 · Lock official AP scope</h3></div>
+        <span class="badge b-blue">In progress</span>
+      </div>
+      <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
+        ${AP4_DASHBOARD.gates.map(gate => `
+          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 1}">
+            <span class="active-gate-dot">G${gate.id}</span>
+            <span class="active-gate-name">${gate.name}</span>
+            <small>${gate.status}</small>
           </button>`).join('')}
       </div>
-      ${AP4_TIMELINE.courses.map(course => `
-        <button class="timeline-course" type="button" data-timeline-item="${course.id}" aria-pressed="false"
-          style="--timeline-course-x:${course.x}%;--timeline-course-y:${course.y}px;--timeline-course-color:${course.color}">
-          <span class="timeline-course-long">${course.label}</span><span class="timeline-course-short">${course.short}</span>
-        </button>`).join('')}
-    </div>
-    <div class="timeline-detail" aria-live="polite">
-      <div>
-        <p class="timeline-detail-kicker"></p>
-        <p class="timeline-detail-title"></p>
+      <div class="active-gate-detail" aria-live="polite">
+        <div><span data-gate-detail-state></span><strong data-gate-detail-title></strong></div>
+        <p data-gate-detail-copy></p>
+        <a href="humgeo.html">Open the full HumGeo evidence map →</a>
       </div>
-      <div>
-        <p class="timeline-eta" hidden><span>Focused work to LS REVIEW READY</span><strong></strong></p>
-        <p class="timeline-detail-copy"></p>
-        <p class="timeline-detail-move" hidden><span>What moves it forward</span><strong></strong></p>
-        <p class="timeline-detail-foot"></p>
-        <a class="timeline-detail-link" hidden>Open course dashboard →</a>
-      </div>
+      <p class="gate-legend"><span class="legend-closed">Closed</span><span class="legend-active">Active</span><span class="legend-evidence">Evidence exists, no gate credit</span><span class="legend-locked">Locked</span></p>
     </div>`;
 
-  const details = Object.fromEntries([
-    ...stages.map(stage => [stage.id, stage]),
-    ...AP4_TIMELINE.courses.map(course => [course.id, {
-      kicker: `${course.label} · ${course.stage}`,
-      title: course.lastCompleted,
-      copy: course.summary,
-      move: course.next,
-      foot: course.etaNote,
-      eta: course.etaDays,
-      color: course.color,
-      href: `${course.id}.html`
-    }])
-  ]);
-  const controls = [...root.querySelectorAll('[data-timeline-item]')];
-  const kicker = root.querySelector('.timeline-detail-kicker');
-  const title = root.querySelector('.timeline-detail-title');
-  const copy = root.querySelector('.timeline-detail-copy');
-  const move = root.querySelector('.timeline-detail-move');
-  const moveValue = move.querySelector('strong');
-  const foot = root.querySelector('.timeline-detail-foot');
-  const eta = root.querySelector('.timeline-eta');
-  const etaLabel = eta.querySelector('span');
-  const etaValue = eta.querySelector('strong');
-  const detailLink = root.querySelector('.timeline-detail-link');
-  let locked = 'ls-ready';
+  const controls = [...root.querySelectorAll('[data-active-gate]')];
+  const detailState = root.querySelector('[data-gate-detail-state]');
+  const detailTitle = root.querySelector('[data-gate-detail-title]');
+  const detailCopy = root.querySelector('[data-gate-detail-copy]');
 
-  function show(key, persist = false) {
-    const item = details[key];
-    if (!item) return;
-    kicker.textContent = item.kicker;
-    kicker.style.color = item.color || '';
-    title.textContent = item.title;
-    copy.textContent = item.copy;
-    move.hidden = !item.move;
-    moveValue.textContent = item.move || '';
-    foot.textContent = item.foot;
-    eta.hidden = !item.eta;
-    etaLabel.textContent = item.href === 'humgeo.html'
-      ? 'Current completion gate'
-      : 'Focused work to LS REVIEW READY';
-    etaValue.textContent = item.eta || '';
-    detailLink.hidden = !item.href;
-    detailLink.href = item.href || '';
-    if (persist) {
-      locked = key;
-      controls.forEach(control => control.setAttribute('aria-pressed', String(control.dataset.timelineItem === key)));
-    }
+  function showGate(id) {
+    const gate = AP4_DASHBOARD.gates.find(item => item.id === Number(id));
+    if (!gate) return;
+    detailState.textContent = gate.status;
+    detailTitle.textContent = `Gate ${gate.id} · ${gate.name}`;
+    detailCopy.textContent = gate.detail;
+    controls.forEach(control => control.setAttribute('aria-pressed', String(control.dataset.activeGate === String(gate.id))));
   }
 
   controls.forEach(control => {
-    const key = control.dataset.timelineItem;
-    control.addEventListener('pointerenter', () => show(key));
-    control.addEventListener('focus', () => show(key));
-    control.addEventListener('click', () => show(key, true));
+    control.addEventListener('click', () => showGate(control.dataset.activeGate));
+    control.addEventListener('focus', () => showGate(control.dataset.activeGate));
   });
-
-  if (controls.length !== stages.length + AP4_TIMELINE.courses.length ||
-      AP4_TIMELINE.courses.some(course =>
-        !(/^(?:\d+[–-]\d+ days|Gate [0-6] (?:active|hold|locked))$/.test(course.etaDays)) ||
-        !course.etaNote || !course.next)) {
-    throw new Error('Course LS review timeline data is incomplete.');
-  }
-  show(locked, true);
+  showGate(1);
 })();
