@@ -5,7 +5,7 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 - `data.json` — claims manifest (same as the agent accounting file)
 - `updates.json` — the "most recent updates" feed (append new entries at the TOP: `{"ts":"YYYY-MM-DDTHH:MMZ","course":"...","text":"..."}`)
 - Course pages are static HTML; the overview and claims explorer render from the JSON.
-- `timeline.js` — shared active-course gate rail, course work-footprint cards, per-course evidence maps, and focused-work ranges.
+- `timeline.js` — shared active-course gate rail, course work-footprint cards, and per-course evidence maps.
 
 Display model: the overview shows all four courses as quantified work footprints, then shows the seven-gate rail only for the active approved course. Course pages map already-published work to the gate where it most likely belongs. Unlike units are never summed, empty gates are omitted, and mapped evidence earns no gate credit without a course-approved closure receipt.
 

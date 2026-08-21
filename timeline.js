@@ -38,9 +38,7 @@ const AP4_DASHBOARD = {
         { value: '933', label: 'banked identities' },
         { value: '2×933', label: 'passing acceptance legs' },
         { value: '0', label: 'item disagreements' }
-      ],
-      etaDays: '1–3 days',
-      etaNote: 'Focused build range after acceptance; external TimeBack placement is excluded.'
+      ]
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
@@ -50,9 +48,7 @@ const AP4_DASHBOARD = {
         { value: '2,479', label: 'generation-QC candidates' },
         { value: '38', label: 'accepted positions' },
         { value: '+11', label: 'receipted successors' }
-      ],
-      etaDays: '7–10 days',
-      etaNote: 'Focused build range with parallel lanes; external TimeBack placement is excluded.'
+      ]
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
@@ -62,9 +58,7 @@ const AP4_DASHBOARD = {
         { value: '221', label: 'passing article sidecars' },
         { value: '15', label: 'video release assets' },
         { value: '34', label: 'image-stage sets' }
-      ],
-      etaDays: '4–7 days',
-      etaNote: 'Focused build range after a safe Unit 5 scope route clears; external TimeBack placement is excluded.'
+      ]
     }
   ],
   evidenceMaps: {
