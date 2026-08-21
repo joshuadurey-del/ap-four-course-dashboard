@@ -15,7 +15,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 21, 2026 · 14:22 KST live-receipt refresh',
+  snapshot: 'Aug 21, 2026 · 15:19 KST Gate 1 verification dispatch',
   courses: [
     {
       id: 'apush',
@@ -64,14 +64,14 @@ const AP4_TIMELINE = {
       label: 'AP Human Geography',
       short: 'HumGeo',
       color: '#2558d8',
-      x: 8,
+      x: 18,
       y: 200,
-      stage: 'Owner completion reset · Gate 0 hold',
-      lastCompleted: 'PR #55 landed the sole passing pilot candidate; five failures preserved',
-      summary: 'HumGeo now follows seven gates in order. PR #55 is merged on canonical main at 9c33e899, but legacy issue-44 attempt 2 is active on plan-only PR #56 and directs downstream residual-plan work before the new scope and inventory gates. Percent counters and retired internal phase names no longer select work.',
-      next: 'Let the active writer terminate, stop or rescope the legacy retry, prove issue #44 writer-free, and close Gate 0. Gate 1 opens only on Josh\'s explicit go; Gates 2-6 remain locked.',
-      etaDays: 'Gate 0 hold',
-      etaNote: 'HOLD: ACTIVE_LEGACY_RETRY. The landing is complete; closure requires the active writer to terminate, the old retry to stop or align to the new sequence, and a fresh no-writer/no-wave readback.'
+      stage: 'Owner completion reset · Gate 1 verification',
+      lastCompleted: 'Gate 0 closed · PR #58 merged the Gate 1 scope candidate',
+      summary: 'Gate 0 is closed and issue #44 remains stopped. PR #58 moved canonical main to 36546a1b and GitHub records issue #50 CLOSED/COMPLETED, but its latest fleet review still requires exact-byte, full-suite, regression-attribution, and mapping proof. The owner has opened Gate 1 and dispatched those proofs in isolated parallel lanes.',
+      next: 'Integrate the four proof receipts against one pinned main SHA. Close Gate 1 only if committed scope bytes reproduce, the complete suite is accounted for, and the sanctioned verifier proves 150 EKs, 70 LOs, 68 valid mappings, and zero scope differences. Gate 2 remains locked.',
+      etaDays: 'Gate 1 active',
+      etaNote: 'Verification is running in parallel on the merged scope candidate. This marker records the active recovery locus; it does not claim Gate 1 closure or authorize Gate 2.'
     }
   ]
 };

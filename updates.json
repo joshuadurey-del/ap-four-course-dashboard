@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T06:19Z",
+    "course": "HumGeo",
+    "text": "HumGeo Gate 1 is now active by owner direction. Gate 0 remains closed and issue #44 remains stopped; canonical main is 36546a1bd72e775523b77fa1d6628c5dd103b214 after merged PR #58. GitHub records issue #50 CLOSED/COMPLETED while its latest fleet review still requires exact-byte, complete-suite, regression-attribution, and mapping proof. Four isolated proof lanes have been dispatched against one pinned SHA with one orchestrator writer. The overview marker moves from x=8 to x=18, into the first planning-stage locus; this is progress of the active verification, not Gate 1 closure. Gate 2 remains locked, and no generation, delivery, serving, or release write is claimed."
+  },
+  {
     "ts": "2026-08-21T06:02Z",
     "course": "HumGeo",
     "text": "Gate 0 control refresh: issue #44 emitted a queued attempt-2 claim at 05:58:06Z after the closure receipt. The retry and review labels were actively removed at 06:01:28Z, leaving only the documented stopped state autopilot:attention. A 06:02:05Z readback found no newer comment, no open issue-44 PR, PR #57 still closed unmerged, and canonical main unchanged at 36546a1bd72e775523b77fa1d6628c5dd103b214. Gate 0 therefore remains CLOSED under the explicit rescope. Separately, GitHub records issue #50 CLOSED/COMPLETED via merged PR #58 while its latest fleet review comment remains REWORK; this Gate 0 execution does not adjudicate that later gate. Gates 2-6 remain locked."

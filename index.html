@@ -8,13 +8,13 @@
 <script src="timeline.js"></script>
 <section aria-labelledby="humgeo-reset-title">
   <div class="section-head">
-    <div><span class="badge b-red">Gate 0 hold</span><h2 id="humgeo-reset-title">HumGeo completion reset</h2></div>
+    <div><span class="badge b-blue">Gate 1 in progress</span><h2 id="humgeo-reset-title">HumGeo completion reset</h2></div>
     <a href="humgeo.html">Open the full gate plan</a>
   </div>
-  <p><b>Current state:</b> PR #55 landed the sole passing issue-44 pilot candidate and preserved the five measured failures. Legacy issue-44 attempt 2 is active and opened plan-only PR #56 for downstream residual-plan work before official scope and inventory, so Gate 0 remains <code>HOLD: ACTIVE_LEGACY_RETRY</code> until its writer terminates, the retry is stopped or rescoped, and the lane is read back writer-free.</p>
+  <p><b>Current state:</b> Gate 0 is closed and issue #44 remains stopped. PR #58 merged the Gate 1 scope candidate on canonical <code>main@36546a1b</code>. GitHub records issue #50 <code>CLOSED/COMPLETED</code>, while its latest fleet review still requires exact-byte and full-verifier proof. The owner has opened Gate 1 and dispatched four isolated proof lanes; no Gate 1 closure is claimed yet.</p>
   <ol>
-    <li><b>Stabilize issue #44</b> — active hold.</li>
-    <li><b>Lock official AP scope</b> — locked.</li>
+    <li><b>Stabilize issue #44</b> — closed.</li>
+    <li><b>Lock official AP scope</b> — verification in progress.</li>
     <li><b>Reconcile existing assets</b> — locked.</li>
     <li><b>Fill only proved gaps through Content Factory</b> — locked.</li>
     <li><b>Land and assemble through the current publisher</b> — locked.</li>
