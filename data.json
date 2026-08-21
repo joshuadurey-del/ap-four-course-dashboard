@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-20T18:50Z",
+  "snapshot": "2026-08-21T00:30Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -54,8 +54,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T10:16Z",
-      "value": "The official CED denominator remains 150 EK / 70 LO. A current-head bundle oracle at 78f6ec4 reports 40 pass / 0 fail / 0 warn, but its coverage section still validates the corrupted 158-code library universe. It proves the local enumeration and bundle's internal checks, not canonical CED coverage. The 10-row QC pilot added five passing EK-bound receipts, while local counters disagree at 120/150 versus 119/150; the internal 80% crossing remains unproven until the declared counter is reconciled.",
+      "status_at": "2026-08-21T00:30Z",
+      "value": "The official CED denominator remains 150 EK / 70 LO. A fresh strict current-byte join counts 119 EKs with at least one fingerprint-valid passing artifact: 119 passing-artifact, 25 naked-only, 5 failed-only, and 1 absent. The prior 120 counter used looser receipt treatment and is retired. The 40-pass bundle oracle binds the pre-morning local snapshot and still validates the corrupted 158-code library universe, so it must be rerun after the 60-file local delta is resolved.",
       "scope": "blueprint binding and implementation reconciliation",
       "evidence": [
         {
@@ -77,6 +77,14 @@
         {
           "type": "local-current-head-receipt",
           "location": "~/.incept/day-20260820/overnight-humgeo/receipts/blueprint-diff-bundle-78f6ec4b.json"
+        },
+        {
+          "type": "local-strict-coverage-receipt",
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/EK-MATRIX-78f6ec4b-postpilot.json"
+        },
+        {
+          "type": "local-current-readback",
+          "location": "read-only rerun of rebuild-ek-matrix.py against wt-humgeo-issue44-exec at 2026-08-21T00:30Z"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_RECEIPT"
@@ -85,8 +93,8 @@
       "claim_id": "humgeo.coverage.denominator",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T08:30Z",
-      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. The committed 158-code library map has nine codes absent from the CED and omits real CED code PSO-3.D.2. Coverage must count distinct accepted artifacts against the 150 official codes; failed receipts and phantom-only mappings earn no accepted coverage. The exact accepted-EK numerator is still unmeasured.",
+      "observed_at": "2026-08-21T00:30Z",
+      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. The committed 158-code library map has nine codes absent from the CED and omits real CED code PSO-3.D.2. A fresh strict read-only rerun against the current local bytes counts 119/150 EKs (79.3%); the same strict baseline before the five local pilot passes was 114/150. The five new passes remain uncommitted. Failed, stale, and phantom-only receipts earn no coverage.",
       "scope": "HumGeo internal blueprint-coverage denominator; not an LS intake requirement",
       "evidence": [
         {
@@ -96,6 +104,10 @@
         {
           "type": "local-denominator-report",
           "location": "~/.incept/day-20260820/humgeo-ek-denominator/HUMGEO-EK-DENOMINATOR-20260820.md"
+        },
+        {
+          "type": "local-strict-coverage-receipt",
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/EK-MATRIX-78f6ec4b-postpilot.json"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+LOCAL_RECEIPT"
@@ -223,8 +235,8 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T09:37Z",
-      "value": "The be18d12d record inventory remains 2,578 generated records: 459 fingerprint-receipted and 2,119 without matching receipts before tonight's bounded work. A separate 10-row uncovered-EK pilot then produced 5 fingerprint-valid passes and 5 fails; never-swept decreased from 1,780 to 1,770. Of the 100 S2/D1 rows, 32 were deterministically hydrated without changing question bytes, 48 remain blocked on a rejected work-authorized model credential for rationale generation, and 20 lack a committed skill-tag generator route. These are local receipt-bound changes not yet applied to canonical course main.",
+      "observed_at": "2026-08-21T00:30Z",
+      "value": "The pre-pilot cut reported 2,578 generated records, with 1,780 never swept; the 10-row pilot reduced that historical tail to 1,770 on its then-current bytes. Morning work then made 48 successful rationale calls covering 47/48 targets, one unsuccessful targeted retry, and 15 additional deterministic metadata applies. A fresh read-only dry run over the exact 100-row S2/D1 cohort finds 47 complete, 52 missing skill tags, and 1 incomplete rationale. The worktree now has 60 modified, uncommitted files. No fresh full record-partition receipt binds these current bytes, so 1,770 is not asserted as today's call queue.",
       "scope": "HumGeo local execution worktree at 78f6ec4; no corpus apply, no publication, and no claim that local receipts are canonical main",
       "evidence": [
         {
@@ -246,6 +258,18 @@
         {
           "type": "local-hydration-receipt",
           "location": "~/.incept/day-20260820/overnight-humgeo/receipts/s2d1-apply-32.json"
+        },
+        {
+          "type": "local-rationale-run-receipt",
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/rationale-48-run.log"
+        },
+        {
+          "type": "local-hydration-receipt",
+          "location": "~/.incept/day-20260820/overnight-humgeo/receipts/s2d1-apply-15.json"
+        },
+        {
+          "type": "local-current-dry-run",
+          "location": "read-only rerun of scripts/complete_genfill_metadata.py against the 100-row cohort at 2026-08-21T00:30Z"
         }
       ],
       "evidence_access": "GITHUB+LOCAL_RECEIPT"
@@ -254,9 +278,9 @@
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T09:53Z",
-      "value": "Candidate 78f6ec4 stages and serves locally through the committed w7 chain. Its 13-file, 14,246,142-byte bundle reads back byte-equal at aggregate SHA-256 17962c5c8cd02f093c2846e71e9ce081298b2cdca1768873720438a1c5e42ab4 and contains 1,306 tree nodes / 7 units / 1,225 lessons / 235 write activities. Bundle law passes 40/0, including 3,060/3,060 student views without answer-key exposure, and gate integrity passes 7/0. The server reports ready=false; the walker fails at the expected readiness preflight and skips 11 later stages. This proves local package identity and deterministic checks, not an LS-reachable surface or complete reviewer walkthrough.",
-      "scope": "local w7 candidate, exact bundle readback, deterministic bundle checks, and chooser preflight only",
+      "observed_at": "2026-08-21T00:30Z",
+      "value": "Candidate 78f6ec4 previously staged and served locally through the committed w7 chain. Its 13-file, 14,246,142-byte bundle read back byte-equal at aggregate SHA-256 17962c5c8cd02f093c2846e71e9ce081298b2cdca1768873720438a1c5e42ab4; bundle law passed 40/0 and gate integrity passed 7/0, while the walker stopped at readiness preflight. Morning work leaves 60 modified, uncommitted files, including four W7 manifests. Those earlier receipts no longer prove the current local bytes; the exact delta must be resolved and the package chain rerun before a current-candidate claim.",
+      "scope": "prior local w7 snapshot plus current dirty-worktree freshness boundary; no LS-reachable surface",
       "evidence": [
         {
           "type": "local-bundle-receipt",
@@ -277,8 +301,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-20T10:16Z",
-      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. A sealed, hash-bound local package now exists at 78f6ec4 and passes the bundle-law and gate-integrity checks, but server readiness is false and the full walk remains blocked at preflight. Coverage counters still disagree at 120/150 versus 119/150, and issue-44 wave-001 failed its structural QC postcondition. The next build moves are counter reconciliation, a factory-sanctioned remediation plan plus new owner re-arm, credential/skill-route repair, and preservation of the sealed local package. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-21T00:30Z",
+      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. Strict current-byte coverage is 119/150, one EK below the internal bar. The local tree has 60 modified, uncommitted files; its 100-row S2/D1 cohort has 47 complete, 52 missing skill tags, and 1 incomplete rationale. Prior bundle and walk receipts predate this delta. Issue-44 wave-001 also failed its structural QC postcondition. Next moves are a sanctioned skill artifact and rationale repair, provenance reconciliation, review and landing of the local delta, one owner-authorized targeted EK pass, fresh package receipts, and a factory remediation plan plus new owner re-arm before issue-44 scaling. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Science access and walkthrough handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -327,8 +351,8 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T10:16Z",
-      "value": "Release and current-candidate reviewer visibility are not proven. Local w7 stage/serve and byte-identical bundle readback succeeded on candidate 78f6ec4 at aggregate hash 17962c5c…, but server readiness is false and the walker stopped at preflight with 11 stages skipped. Issue-44 wave-001 also failed its required QC postcondition with zero corpus writes. Owner direction states that sanctioned TimeBack publishing instructions are unavailable, so no TimeBack/AP One/chooser/registration mutation is authorized. Release still requires canonical hosted-byte readback and a released-tier learner walk.",
+      "status_at": "2026-08-21T00:30Z",
+      "value": "Release and current-candidate reviewer visibility are not proven. Local w7 stage/serve and byte-identical bundle readback succeeded on the prior 78f6ec4 snapshot, but the current local tree has a 60-file uncommitted delta and has not been resealed or read back. Issue-44 wave-001 also failed its required QC postcondition with zero corpus writes. Owner direction states that sanctioned TimeBack publishing instructions are unavailable, so no TimeBack/AP One/chooser/registration mutation is authorized. Release still requires exact current-byte package receipts, canonical hosted-byte readback, and a released-tier learner walk.",
       "scope": "released and student-visible state",
       "evidence": [
         {

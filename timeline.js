@@ -15,7 +15,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 21, 2026 · 03:50 KST live-receipt refresh',
+  snapshot: 'Aug 21, 2026 · 09:30 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -66,12 +66,12 @@ const AP4_TIMELINE = {
       color: '#2558d8',
       x: 69,
       y: 200,
-      stage: 'Current recovery locus · Reconcile coverage + repair route',
-      lastCompleted: '78f6ec4 local bundle sealed · exact served hash match · 40/0 bundle checks',
-      summary: 'The current 13-file local bundle at candidate 78f6ec4 staged, served, and read back byte-equal at hash 17962c5c…. Bundle-law checks pass 40/0, including 3,060/3,060 student views without answer-key exposure, and gate integrity passes 7/0. The server still reports ready=false and the walker stops at the readiness preflight with 11 later stages skipped; local package identity is proven, reviewer visibility is not.',
-      next: 'Preserve the sealed local package; reconcile the 120-versus-119 accepted-EK counter, keep PSO-3.D.2 explicit, and obtain a factory-sanctioned structural remediation plan plus a new owner re-arm before issue-44 scaling. External placement waits for the sanctioned TimeBack instructions.',
+      stage: 'Current recovery locus · Earn one EK + land local delta',
+      lastCompleted: 'Strict current-byte EK rerun · 119/150 (79.3%) · one EK below internal bar',
+      summary: 'A fresh strict rerun on the current local bytes counts 119/150 EKs; the earlier 120 result is retired. Morning rationale and metadata work leaves 47/100 targets complete, with 52 missing skill tags and one incomplete rationale. The worktree has 60 modified, uncommitted files. The earlier bundle and walk receipts bind the prior local snapshot, not this delta; reviewer visibility remains unproven.',
+      next: 'Resolve the 52 skill tags, one rationale, and rationale-file provenance; review and land the local delta; earn one more fingerprint-valid EK through an owner-authorized targeted path; then rerun the blueprint, suite, bundle, served-byte readback, and walk checks. Issue-44 scaling still needs factory remediation and a new owner re-arm. External placement waits for sanctioned TimeBack instructions.',
       etaDays: '3–5 days',
-      etaNote: 'Focused build work plus an external wait. The local serving mechanism is proven, but accepted-EK counters disagree and the issue-44 pilot failed its scale condition. TimeBack placement and reviewer access wait on sanctioned instructions.'
+      etaNote: 'Focused build work plus an external wait. Strict coverage is one EK below the internal bar; the 60-file local delta needs review and fresh package receipts, and the issue-44 pilot failed its scale condition. TimeBack placement and reviewer access wait on sanctioned instructions.'
     }
   ]
 };

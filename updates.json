@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T00:30Z",
+    "course": "HumGeo",
+    "text": "HumGeo current-byte correction: the strict 150-EK verifier now reproduces 119/150 (79.3%); the earlier 120 result used looser receipt treatment and is retired. The five pilot passes remain local and uncommitted, so committed main's strict baseline remains 114/150. Morning rationale work made 48 successful calls and covered 47/48 targets; one retry still failed. Fifteen additional metadata rows were applied, leaving the exact 100-row cohort at 47 complete, 52 missing skill tags, and 1 incomplete rationale. The local issue-44 tree now has 60 modified, uncommitted files. Earlier bundle, suite, served-byte, and walk receipts bind the prior local snapshot, not this delta, and the historical 1,770 never-swept cut has not been re-derived on current bytes. No HumGeo recovery process is active; no corpus apply, GitHub write, or external publication occurred. HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA remains unchanged."
+  },
+  {
     "ts": "2026-08-20T18:50Z",
     "course": "Psych",
     "text": "Psychology PR #23 merged at 18:29Z as current main 93ddb276. Exact current-byte static checks confirm 221 paired EK articles and passing QC sidecars, 34 embedded Unit 3 articles, 34 PNGs, 34 ledger approvals, a passing licence/leak and provenance-consistency check, byte-identical 71-file delivery copy, and re-judged sidecars for all 11 prose changes. The machine-readable Unit 3 provenance file now exists. The monitor still cannot independently re-run the renderer-dependent figure ledger because rsvg-convert is unavailable, and the PR had no configured checks or GitHub review. This is a current-main image-stage landing with bounded readback, not course wiring or reviewer visibility; the Unit 5-safe top-up and TimeBack holds remain unchanged."
