@@ -107,7 +107,7 @@ const AP4_DASHBOARD = {
         { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '1,105 buckets scanned · 374 underfilled', copy: 'The bank inventory exposes the measurable shortage. Unit 5 scope must be sealed before that shortage becomes a generation order.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14' },
         { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '221 passing sidecars · 15 video assets · 34 image sets', copy: 'Substantial content and QC evidence already exists; the remaining work is selective, not a blank-slate rebuild.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23' },
         { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: '34 embeds + 34 PNGs + 34 approvals · 71-file copy', copy: 'The image-stage delivery is byte-accounted on repository main. This proves bounded landing, not full course wiring.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23' },
-        { gate: 5, state: 'evidence', status: 'Mapped evidence', signal: '262 nodes · 5 units · 221 lessons', copy: 'The course tree reads live, but chooser preflight still fails. Structure evidence is not a learner walkthrough or release receipt.', href: 'claims.html' }
+        { gate: 5, state: 'evidence', status: 'Historical evidence · stale', signal: '262 nodes · 5 units · 221 lessons', copy: 'An older course-tree receipt recorded this structure and a failed chooser preflight. It is retained as historical work evidence, not current learner proof.', href: 'claims.html' }
       ]
     }
   }
@@ -136,7 +136,7 @@ const AP4_DASHBOARD = {
     root.innerHTML = `
       <div class="gate-evidence-head">
         <div><span class="badge b-${course.statusTone}">${course.mapping}</span><h2>${map.title}</h2></div>
-        <span class="gate-observed">Receipt snapshot · ${course.observed}</span>
+        <span class="gate-observed">Latest mapped receipt · ${course.observed}</span>
       </div>
       <p class="gate-evidence-note">${map.note} Evidence counts retain their cited scope and are never summed into a completion percentage.</p>
       <div class="work-footprint" aria-label="${course.label} observable work footprint">
