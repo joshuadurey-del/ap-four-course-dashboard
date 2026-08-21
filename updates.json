@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T05:54Z",
+    "course": "HumGeo",
+    "text": "HumGeo Gate 0 is CLOSED. After the latest issue-44 worker terminated REWORK at 05:42:13Z, the lane was stopped and rescoped: PR #57 is closed unmerged, no issue-44 PR remains open, and the sealed 332-row plan from PR #56 stays unarmed as Gate 2 inventory input rather than current execution authority. Canonical main remains 21c6d91e60f68a8ca6a86c8c6ec943eca3c9c000 with PR #55's sole passing pilot record and the five measured failures preserved. Gate 1 is next but NOT STARTED; Gates 2-6 remain locked. No course delivery, serving, or release write is claimed."
+  },
+  {
     "ts": "2026-08-21T05:22Z",
     "course": "HumGeo",
     "text": "HumGeo reset to seven sequential completion gates with one active gate. PR #55 merged the sole fingerprint-matching passing issue-44 pilot candidate at main 9c33e899 and preserved the five measured failures. Legacy issue-44 attempt 2 is active on plan-only PR #56 and directs residual-plan work that belongs after official scope and existing-asset inventory. Gate 0 is therefore HOLD: ACTIVE_LEGACY_RETRY until its writer terminates, the retry is stopped or rescoped, and the lane is read back writer-free; Gates 1-6 remain locked. The dashboard now treats 150 EKs / 70 LOs as official scope identities, not question counts or course progress, excludes retired W6/W7 routing, reuses matching creation-time QC, and records process lessons as reproducible controls rather than blame. No course, serving, or release write is claimed."
