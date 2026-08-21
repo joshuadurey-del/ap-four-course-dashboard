@@ -1,8 +1,13 @@
 [
   {
+    "ts": "2026-08-21T05:58Z",
+    "course": "HumGeo",
+    "text": "Post-closure canonical refresh: Gate 0 remains CLOSED, but a separate writer merged Gate 1 scope PR #58 after the Gate 0 receipt, moving canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214. That later-gate action was not performed or adjudicated in this execution; its live issue #50 review is REWORK. Fresh main readback confirms the six Gate 0 pilot files are byte-unchanged, the residual-plan tests pass 6/6, and both legacy and residual re-arm receipts remain null. The old wave's seal now drifts against the changed scope and fails closed. Gates 2-6 remain locked."
+  },
+  {
     "ts": "2026-08-21T05:54Z",
     "course": "HumGeo",
-    "text": "HumGeo Gate 0 is CLOSED. After the latest issue-44 worker terminated REWORK at 05:42:13Z, the lane was stopped and rescoped: PR #57 is closed unmerged, no issue-44 PR remains open, and the sealed 332-row plan from PR #56 stays unarmed as Gate 2 inventory input rather than current execution authority. Canonical main remains 21c6d91e60f68a8ca6a86c8c6ec943eca3c9c000 with PR #55's sole passing pilot record and the five measured failures preserved. Gate 1 is next but NOT STARTED; Gates 2-6 remain locked. No course delivery, serving, or release write is claimed."
+    "text": "HumGeo Gate 0 is CLOSED. After the latest issue-44 worker terminated REWORK at 05:42:13Z, the lane was stopped and rescoped: PR #57 is closed unmerged, no issue-44 PR remains open, and the sealed 332-row plan from PR #56 stays unarmed as Gate 2 inventory input rather than current execution authority. The closure receipt bound canonical main 21c6d91e60f68a8ca6a86c8c6ec943eca3c9c000 with PR #55's sole passing pilot record and the five measured failures preserved. Gate 1 was NOT STARTED in that execution; Gates 2-6 remained locked. No course delivery, serving, or release write was claimed."
   },
   {
     "ts": "2026-08-21T05:22Z",

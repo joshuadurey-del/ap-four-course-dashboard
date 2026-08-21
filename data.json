@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T05:54Z",
+  "snapshot": "2026-08-21T05:58Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -53,9 +53,9 @@
     {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
-      "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:54Z",
-      "value": "Gate 0 is closed. Gate 1 is next but was NOT STARTED in this execution. The official course scope is 150 EK / 70 LO, but issue #50 remains open: PSO-3.D.2 is missing from the committed map and nine non-CED codes are present. PR #49 is merged, but it did not close the official-scope defect. No accepted-EK numerator is treated as course progress or as permission to generate content.",
+      "status": "BLOCKED",
+      "status_at": "2026-08-21T05:58Z",
+      "value": "Gate 0 is closed. A separate writer then merged Gate 1 scope PR #58, moving canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214; issue #50's live review immediately returned REWORK for missing final-byte and full-suite proof. That later-gate action was not performed or adjudicated in this execution. No accepted-EK numerator is treated as course progress or as permission to generate content.",
       "scope": "Gate 1 official CED and 68-gate mapping closure; no content generation",
       "evidence": [
         {
@@ -65,6 +65,10 @@
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
         },
         {
           "type": "issue",
@@ -100,8 +104,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:54Z",
-      "value": "HumGeo follows seven sequential completion gates with one active gate: 0 stabilize issue #44; 1 lock official scope; 2 reconcile existing assets; 3 fill only proved gaps through Content Factory creation-time QC; 4 land and assemble through the current course-owned publisher; 5 prove the real learner experience; 6 release through TimeBack/EOC readback. Gate 0 is CLOSED after the latest writer terminated REWORK, PR #57 was closed unmerged, the retry was rescoped, and a writer-free readback found no open issue-44 PR. PR #56's sealed 332-row plan remains unarmed as Gate 2 inventory input. Gate 1 is next but NOT STARTED; Gates 2-6 remain locked.",
+      "observed_at": "2026-08-21T05:58Z",
+      "value": "HumGeo follows seven sequential completion gates. Gate 0 is CLOSED after the latest issue-44 writer terminated REWORK, PR #57 was closed unmerged, the retry was rescoped, and a writer-free readback found no open issue-44 PR. A separate writer then merged Gate 1 scope PR #58 after the closure receipt; that later-gate action is outside this execution and its live issue #50 review is REWORK. PR #56's sealed 332-row plan remains unarmed as Gate 2 inventory input. Gates 2-6 remain locked.",
       "scope": "owner-approved HumGeo completion sequence and active gate",
       "evidence": [
         {
@@ -123,6 +127,10 @@
         {
           "type": "closed-unmerged-executor",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/57"
+        },
+        {
+          "type": "later-gate-activity",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN"
@@ -217,8 +225,8 @@
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:54Z",
-      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. The latest issue-44 writer terminated REWORK at 05:42:13Z. PR #57 was then closed unmerged, the lane was stopped and rescoped, and a writer-free readback found no open issue-44 PR. Canonical main is 21c6d91e60f68a8ca6a86c8c6ec943eca3c9c000. PR #56's sealed 332-row plan remains unarmed and may be used only as Gate 2 inventory input. Gate 0 is CLOSED; Gate 1 is next but NOT STARTED.",
+      "observed_at": "2026-08-21T05:58Z",
+      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. The latest issue-44 writer terminated REWORK at 05:42:13Z; PR #57 was then closed unmerged, the lane was stopped and rescoped, and a writer-free readback found no open issue-44 PR. After the closure receipt, separate Gate 1 PR #58 moved canonical main to 36546a1bd72e775523b77fa1d6628c5dd103b214. Fresh current-main readback shows the six Gate 0 files byte-unchanged, the residual-plan tests passing 6/6, and both re-arm receipts null. Gate 0 remains CLOSED; the later Gate 1 action was not evaluated here.",
       "scope": "Gate 0 stabilization and no-active-writer closure",
       "evidence": [
         {
@@ -240,6 +248,10 @@
         {
           "type": "closed-unmerged-executor",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/57"
+        },
+        {
+          "type": "later-gate-activity",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
         }
       ],
       "evidence_access": "GITHUB"
@@ -265,8 +277,8 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:54Z",
-      "value": "PR #49, PR #55, and plan-only PR #56 are merged. Current main is 21c6d91e60f68a8ca6a86c8c6ec943eca3c9c000. PR #55 changed one HumGeo content record—the fingerprint-matching passing candidate 1.1-f2-r01—and the issue receipt says the five measured failures remain unchanged. PR #56 added only a sealed, unarmed residual plan. No current whole-course shortage count is asserted; Gate 2 will derive that only after Gate 1 locks scope.",
+      "observed_at": "2026-08-21T05:58Z",
+      "value": "Current main is 36546a1bd72e775523b77fa1d6628c5dd103b214 after later Gate 1 scope PR #58. Fresh readback confirms PR #55's passing record and the five measured failures are byte-unchanged; PR #56's residual plan remains sealed and unarmed. No current whole-course shortage count is asserted; Gate 2 remains locked.",
       "scope": "canonical lane baseline after PR #55; no learner-surface claim",
       "evidence": [
         {
@@ -280,6 +292,10 @@
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/56"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
         },
         {
           "type": "issue-comment",
