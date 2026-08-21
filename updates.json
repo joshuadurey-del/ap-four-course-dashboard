@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T01:02Z",
+    "course": "HumGeo",
+    "text": "HumGeo critical path corrected: rationale-file provenance, landing and remeasurement of the valid local delta, one additional strict EK, and exact-byte package revalidation are the immediate build steps. The 52 missing skill tags, one unresolved rationale, and issue-44 scaling failure remain disclosed known gaps unless they break the reviewer path; they are not all prerequisites to the first LS walk. External publication, hosted readback, and that walk remain held on sanctioned TimeBack instructions. No underlying course-state claim changed in this update."
+  },
+  {
     "ts": "2026-08-21T00:30Z",
     "course": "HumGeo",
     "text": "HumGeo current-byte correction: the strict 150-EK verifier now reproduces 119/150 (79.3%); the earlier 120 result used looser receipt treatment and is retired. The five pilot passes remain local and uncommitted, so committed main's strict baseline remains 114/150. Morning rationale work made 48 successful calls and covered 47/48 targets; one retry still failed. Fifteen additional metadata rows were applied, leaving the exact 100-row cohort at 47 complete, 52 missing skill tags, and 1 incomplete rationale. The local issue-44 tree now has 60 modified, uncommitted files. Earlier bundle, suite, served-byte, and walk receipts bind the prior local snapshot, not this delta, and the historical 1,770 never-swept cut has not been re-derived on current bytes. No HumGeo recovery process is active; no corpus apply, GitHub write, or external publication occurred. HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA remains unchanged."
