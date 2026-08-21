@@ -1,13 +1,13 @@
 /*
 CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIMELINE below.
 
-1. Verify current state from updates.json + data.json and each course page's current
-   LS review target before editing. Do not copy an old dashboard number forward.
+1. Verify current state from updates.json + data.json and each course page before
+   editing. Do not copy an old dashboard number forward.
 2. Update snapshot, then each course's x/y, stage, lastCompleted, summary, next,
    etaDays, and etaNote. x is the horizontal position from 0–100; y staggers
    labels when multiple courses share a recovery locus.
-3. etaDays must be a focused-work range, never a calendar date. ETA notes must name
-   capacity assumptions and exclusions. External wait time stays explicit.
+3. etaDays must be a focused-work range or an explicit gate state, never a calendar
+   date. ETA notes must name assumptions, exclusions, or the gate postcondition.
 4. LS REVIEW READY means Learning Science can access and walk the named candidate. It is
    not LS approval or release. Never imply
    that a current recovery locus proves every earlier gate cleared canonically.
@@ -15,7 +15,7 @@ CLAUDE UPDATE CONTRACT — routine course-status updates happen ONLY in AP4_TIME
 No index.html or style.css edit is needed for ordinary course-status updates.
 */
 const AP4_TIMELINE = {
-  snapshot: 'Aug 21, 2026 · 09:30 KST live-receipt refresh',
+  snapshot: 'Aug 21, 2026 · 14:22 KST live-receipt refresh',
   courses: [
     {
       id: 'apush',
@@ -64,14 +64,14 @@ const AP4_TIMELINE = {
       label: 'AP Human Geography',
       short: 'HumGeo',
       color: '#2558d8',
-      x: 69,
+      x: 8,
       y: 200,
-      stage: 'Current recovery locus · PR #49 merge gate',
-      lastCompleted: 'Prospective merge validation · 119/150 · 684 passed / 121 skipped / 0 failed',
-      summary: 'The safe 25-file delta is open as clean PR #49 at 16ffbd0f. Repaired main remains 114/150; the exact prospective merge measures 119/150. Thirty-one queue-pinned records and four stale manifests remain excluded. Issue #44 is fail-closed while fleet builds a zero-corpus remediation plan; issue #50 tracks the missing PSO-3.D.2 map entry.',
-      next: 'Ilma merges PR #49. Remeasure the merged SHA; if it is exactly 119/150, run the bounded one-EK action, land its one passing record through a separate reviewed PR, and require 120/150 after Ilma merges it. Then rebuild W6/W7 and rerun the full exact-byte package and local-walk gates. External publication, hosted readback, and the LS walk wait for TimeBack inputs plus a fresh owner go.',
-      etaDays: 'Merge-gated',
-      etaNote: 'No calendar promise. Remaining local work is one merge, one bounded QC pass, one small reviewed merge, and a final package run. TimeBack placement, LS review, and release are external/later stages.'
+      stage: 'Owner completion reset · Gate 0 hold',
+      lastCompleted: 'PR #55 landed the sole passing pilot candidate; five failures preserved',
+      summary: 'HumGeo now follows seven gates in order. PR #55 is merged on canonical main at 9c33e899, but legacy issue-44 attempt 2 is active on plan-only PR #56 and directs downstream residual-plan work before the new scope and inventory gates. Percent counters and retired internal phase names no longer select work.',
+      next: 'Let the active writer terminate, stop or rescope the legacy retry, prove issue #44 writer-free, and close Gate 0. Gate 1 opens only on Josh\'s explicit go; Gates 2-6 remain locked.',
+      etaDays: 'Gate 0 hold',
+      etaNote: 'HOLD: ACTIVE_LEGACY_RETRY. The landing is complete; closure requires the active writer to terminate, the old retry to stop or align to the new sequence, and a fresh no-writer/no-wave readback.'
     }
   ]
 };
@@ -90,7 +90,7 @@ const AP4_TIMELINE = {
   const stages = [
     {
       id: 'blueprint', point: '1', label: 'Bind review target', kicker: 'Planning stage 1', title: 'Bind the candidate and internal coverage target',
-      copy: 'Pin the exact blueprint/CED and candidate scope. Measure coverage honestly for internal planning; the roughly 80% target is not a Learning Science intake requirement.',
+      copy: 'Pin the exact blueprint/CED and candidate scope. Measure only what the course-specific plan requires; internal coverage does not become a Learning Science intake requirement.',
       foot: 'These four planning stages organize the sprint. They are not claimed as universal factory phase names.'
     },
     {
@@ -173,6 +173,7 @@ const AP4_TIMELINE = {
   const moveValue = move.querySelector('strong');
   const foot = root.querySelector('.timeline-detail-foot');
   const eta = root.querySelector('.timeline-eta');
+  const etaLabel = eta.querySelector('span');
   const etaValue = eta.querySelector('strong');
   const detailLink = root.querySelector('.timeline-detail-link');
   let locked = 'ls-ready';
@@ -188,6 +189,9 @@ const AP4_TIMELINE = {
     moveValue.textContent = item.move || '';
     foot.textContent = item.foot;
     eta.hidden = !item.eta;
+    etaLabel.textContent = item.href === 'humgeo.html'
+      ? 'Current completion gate'
+      : 'Focused work to LS REVIEW READY';
     etaValue.textContent = item.eta || '';
     detailLink.hidden = !item.href;
     detailLink.href = item.href || '';
@@ -206,7 +210,7 @@ const AP4_TIMELINE = {
 
   if (controls.length !== stages.length + AP4_TIMELINE.courses.length ||
       AP4_TIMELINE.courses.some(course =>
-        !/^\d+[–-]\d+ days$/.test(course.etaDays) ||
+        !(/^(?:\d+[–-]\d+ days|Gate [0-6] (?:active|hold|locked))$/.test(course.etaDays)) ||
         !course.etaNote || !course.next)) {
     throw new Error('Course LS review timeline data is incomplete.');
   }

@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T05:22Z",
+    "course": "HumGeo",
+    "text": "HumGeo reset to seven sequential completion gates with one active gate. PR #55 merged the sole fingerprint-matching passing issue-44 pilot candidate at main 9c33e899 and preserved the five measured failures. Legacy issue-44 attempt 2 is active on plan-only PR #56 and directs residual-plan work that belongs after official scope and existing-asset inventory. Gate 0 is therefore HOLD: ACTIVE_LEGACY_RETRY until its writer terminates, the retry is stopped or rescoped, and the lane is read back writer-free; Gates 1-6 remain locked. The dashboard now treats 150 EKs / 70 LOs as official scope identities, not question counts or course progress, excludes retired W6/W7 routing, reuses matching creation-time QC, and records process lessons as reproducible controls rather than blame. No course, serving, or release write is claimed."
+  },
+  {
     "ts": "2026-08-21T03:21Z",
     "course": "HumGeo",
     "text": "HumGeo's current path is now merge-gated. Fail-closed PR #48 is on main at 32be2362. Clean PR #49 carries exactly 25 safe files; its exact prospective merge passes 684/121/0 and measures 119/150, while canonical main remains 114/150. Thirty-one queue-pinned records and four stale manifests remain excluded. The issue-44 evidence packet is posted once; fleet's latest REWORK requires a zero-corpus remediation plan now, with any apply ordered behind PR #49. Issue #50 separately tracks PSO-3.D.2 plus the nine phantom map codes. Next: Ilma merges #49, remeasure, earn one bounded EK through a separate reviewed PR, require 120/150, rebuild the exact package, then stop at the TimeBack inputs and fresh-go boundary. No publication or release claim is made."

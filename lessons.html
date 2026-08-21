@@ -21,7 +21,16 @@
 
   <main>
     <h1>Recovery lessons</h1>
-    <p class="sub">The rules the recovery audit and corrected Learning Scientist handoff target established, expressed as decisions an operator can apply.</p>
+    <p class="sub">A reproducible process catalog: each lesson names a trigger, observable failure, missing control, implemented control, and verifier. Ownership sets priority; blame does not close a process gap.</p>
+
+    <section>
+      <h2>How a lesson earns a place here</h2>
+      <p><code>trigger → observable failure → missing control → implemented control → verifier</code></p>
+      <ul>
+        <li><b>Build inside the canonical sequence.</b> Trigger: downstream work begins while upstream authority is unresolved. Observable failure: multiple artifacts can each look green while no one can say what closes the course. Missing control: one active gate with a defined postcondition. Implemented control: HumGeo now runs Gates 0-6 in order; later gates remain locked. Verifier: every handoff returns the named gate, canonical surface, production verifier, residue, owner, and next gate.</li>
+        <li><b>Stop legacy automation at a new boundary.</b> Trigger: an older retry continues after the owner replaces the operating sequence. Observable failure: work that belongs after scope and inventory is pulled back into stabilization. Missing control: retry scope was not rebound to the new gate. Implemented control: the gate remains on hold until the retry is stopped or rescoped. Verifier: live issue readback shows a terminal writer-free transaction before the next gate opens.</li>
+      </ul>
+    </section>
 
     <section>
       <h2>What changed</h2>

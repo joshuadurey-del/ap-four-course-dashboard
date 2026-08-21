@@ -21,7 +21,7 @@
 
   <main>
     <h1>Agent data</h1>
-    <p class="sub">The current machine contract comes first. The active milestone is LS REVIEW READY: Learning Science can access and walk the named candidate. Internal coverage measures remain planning evidence; dated release-quality audits remain historical context.</p>
+    <p class="sub">The current machine contract comes first. HumGeo now uses an owner-approved seven-gate completion sequence with one active gate; dated counters, phase names, and release-quality audits remain historical context unless a current claim binds them.</p>
 
     <section class="agent-brief" aria-labelledby="agent-brief-title">
       <div class="section-head">
@@ -49,6 +49,17 @@
       </div>
     </section>
 
+    <section aria-labelledby="humgeo-contract-title">
+      <div class="section-head"><div><span class="badge b-red">HOLD: ACTIVE_LEGACY_RETRY</span><h2 id="humgeo-contract-title">HumGeo execution contract</h2></div></div>
+      <ul>
+        <li><b>One active gate:</b> Gate 0 stabilizes issue #44. PR #55 landed the sole passing pilot candidate and preserved the five measured failures.</li>
+        <li><b>Current hold:</b> legacy issue-44 attempt 2 is active on plan-only PR #56 and directs residual-plan work that belongs after official scope and asset inventory. Let its writer terminate, stop or rescope the retry, then prove the lane writer-free.</li>
+        <li><b>Later gates:</b> 1 official scope; 2 existing-asset inventory; 3 factory gap fill with creation-time QC; 4 canonical landing and assembly; 5 real learner proof; 6 TimeBack/EOC release. Gates 1-6 are locked.</li>
+        <li><b>Routing exclusions:</b> do not use completion percentages, treat 150 standards as 150 questions, revive W6/W7, blanket re-QC unchanged accepted items, or build local substitutes for current factory/course-owned routes.</li>
+      </ul>
+      <p><a href="humgeo.html">Open the current HumGeo gate plan and evidence.</a></p>
+    </section>
+
     <section aria-labelledby="recovery-posture-title">
       <h2 id="recovery-posture-title">Recovery posture</h2>
       <ul>
@@ -56,13 +67,13 @@
         <li><b>Machinery:</b> 16 hand-rolled targets are listed for approval-gated replacement or deletion. Listing is not deletion authority.</li>
         <li><b>Execution:</b> this dashboard is a read-only status surface. It grants no authority to write course data, spend, file, mark, commit, merge, delete, deploy, or release.</li>
         <li><b>Factory rule:</b> use committed canonical tools exactly as documented. When no route exists, return <code>BLOCKED_CONTRACT</code>; never create a local bridge.</li>
-        <li><b>Current target:</b> provide Learning Science working access to a pinned candidate and verify a representative walkthrough. Internal measurement, QC provenance, and gap tracking continue as builder controls. LS approval, revisions, and release are later states.</li>
+        <li><b>Current HumGeo target:</b> close Gate 0 only after the active legacy writer terminates, the retry is stopped or rescoped, and issue #44 is read back writer-free. Do not begin Gate 1 without Josh's explicit go.</li>
       </ul>
     </section>
 
     <section aria-labelledby="agent-ranges-title">
-      <h2 id="agent-ranges-title">Focused work to LS REVIEW READY</h2>
-      <p>These ranges estimate active work to the Learning Scientist handoff under the stated capacity assumptions. They exclude external waiting time, LS review, revisions, and production release.</p>
+      <h2 id="agent-ranges-title">Course routing snapshot</h2>
+      <p>HumGeo reports its active completion gate. Other courses retain focused-work ranges under their own current planning assumptions.</p>
       <div id="agent-course-ranges" class="agent-source-list"></div>
     </section>
 
@@ -86,6 +97,13 @@
             <p>Authoritative standing state: stable claim ids, status, scope, exclusions, evidence, access, and row-level timestamps.</p>
           </div>
           <a class="agent-source-link" href="data.json">Open data.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>HumGeo completion gates</h3>
+            <p>Current seven-gate sequence, active hold, closure conditions, and evidence links. This is the HumGeo routing view; it grants no execution authority.</p>
+          </div>
+          <a class="agent-source-link" href="humgeo.html">Open HumGeo plan</a>
         </div>
         <div class="agent-source">
           <div>
@@ -153,7 +171,7 @@
         <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
         <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
         <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS review readiness or release by itself.</dd></div>
-        <div><dt>Keep the milestones separate</dt><dd><code>LS REVIEW READY</code> means Learning Science can access and walk the named candidate. It is not an LS disposition, post-review revision, production release, or proof that every earlier factory phase cleared.</dd></div>
+        <div><dt>Keep the milestones separate</dt><dd>For HumGeo, follow Gates 0-6 and report exactly one active gate. For the other current course plans, <code>LS REVIEW READY</code> means Learning Science can access and walk the named candidate; it is not an LS disposition, post-review revision, or production release.</dd></div>
         <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
       </dl>
     </section>
@@ -203,6 +221,7 @@
       overview: new URL('index.html', baseUrl).href,
       claims_explorer: new URL('claims.html', baseUrl).href,
       lessons_learned: new URL('lessons.html', baseUrl).href,
+      humgeo_completion_plan: new URL('humgeo.html', baseUrl).href,
       agent_guide: new URL('agents.html', baseUrl).href
     };
 
@@ -218,6 +237,7 @@ Event chronology: ${sourceUrls.updates_feed}
 Published-byte digests: ${sourceUrls.integrity_manifest}
 Recovery audit evidence: ${sourceUrls.recovery_audit}
 Reading guide: ${sourceUrls.agent_guide}
+HumGeo completion plan: ${sourceUrls.humgeo_completion_plan}
 
 Rules:
 - data.json governs standing claims; updates.json governs event chronology.
@@ -225,8 +245,9 @@ Rules:
 - Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
 - Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
 - Treat dated Markdown reports as historical context, not current standing.
-- The active milestone is LS REVIEW READY: Learning Science can access and walk the pinned candidate; internal coverage and QC evidence remain builder controls.
-- LS REVIEW READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.
+- HumGeo follows Gates 0 through 6 with exactly one active gate. Gate 0 is currently HOLD: ACTIVE_LEGACY_RETRY; Gates 1-6 are locked.
+- Do not use HumGeo completion percentages, treat 150 EKs as 150 questions, revive W6/W7, or duplicate QC for unchanged creation-QC-complete items.
+- For other courses, LS REVIEW READY remains a planning milestone, not LS approval, post-review revision, or production release.
 - Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.
 - Prepared, accepted, merged, deployed, and released are separate states.
 - Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
@@ -251,8 +272,9 @@ Return a concise executive summary of current standing, blockers by owner, stale
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
         'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
         'This dashboard is a read-only status surface and grants no execution authority.',
-        'The active milestone is LS REVIEW READY: Learning Science can access and walk the pinned candidate; internal coverage and QC evidence remain builder controls.',
-        'LS REVIEW READY is not LS approval, post-review revision, production release, or proof that every earlier factory phase cleared.',
+        'HumGeo follows Gates 0 through 6 with exactly one active gate; Gate 0 is currently HOLD: ACTIVE_LEGACY_RETRY and Gates 1-6 are locked.',
+        'Do not use HumGeo completion percentages, treat 150 EKs as 150 questions, revive W6/W7, or duplicate QC for unchanged creation-QC-complete items.',
+        'For other courses, LS REVIEW READY remains a planning milestone, not LS approval, post-review revision, or production release.',
         'Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.',
         'Prepared, accepted, merged, deployed, and released are separate states.',
         'Use committed factory-canonical routes; when none exists, report BLOCKED_CONTRACT rather than creating a local bridge.',
