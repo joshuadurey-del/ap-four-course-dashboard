@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T00:30Z",
+  "snapshot": "2026-08-21T01:05Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -301,8 +301,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-21T00:30Z",
-      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. Strict current-byte coverage is 119/150, one EK below the internal bar. The local tree has 60 modified, uncommitted files; its 100-row S2/D1 cohort has 47 complete, 52 missing skill tags, and 1 incomplete rationale. Prior bundle and walk receipts predate this delta. Issue-44 wave-001 also failed its structural QC postcondition. Next moves are a sanctioned skill artifact and rationale repair, provenance reconciliation, review and landing of the local delta, one owner-authorized targeted EK pass, fresh package receipts, and a factory remediation plan plus new owner re-arm before issue-44 scaling. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
+      "status_at": "2026-08-21T01:05Z",
+      "value": "Estimated 3–5 focused build days remains a planning range, with external TimeBack wait excluded. Strict current-byte coverage is 119/150, one EK below the internal bar. The local tree has 60 modified, uncommitted files; its 100-row S2/D1 cohort has 47 complete, 52 missing skill tags, and 1 incomplete rationale. Prior bundle and walk receipts predate this delta. The immediate path is to reconcile rationale-file provenance, review and land the valid local delta, remeasure the merged SHA, earn one additional strict EK through an owner-authorized bounded QC action, and rerun the exact-byte package checks. Carry the 52 skill-tag gaps, one unresolved rationale, and issue-44 scaling failure as disclosed known gaps unless they break the reviewer path. External reviewer access remains HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA.",
       "scope": "Learning Science access and walkthrough handoff; excludes LS disposition and production release",
       "evidence": [
         {
