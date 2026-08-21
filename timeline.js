@@ -6,11 +6,11 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 21, 2026 · 15:36 KST',
+  snapshot: 'Aug 21, 2026 · 19:07 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
-    { id: 1, name: 'Lock scope', state: 'active', status: 'Active', detail: 'The merged scope candidate is undergoing exact-byte, full-suite, regression-attribution, and mapping verification. No closure is claimed yet.' },
+    { id: 1, name: 'Lock scope', state: 'active', status: 'Active', detail: 'PR #59 repaired all eight PR #58 regressions and the full suite is green. Official-source authority, exact-set mutations, and zero-difference reconciliation still gate closure.' },
     { id: 2, name: 'Inventory', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'A sealed 332-row residual plan exists as inventory input. It must be reconciled against the corrected scope and current assets after Gate 1 closes.' },
     { id: 3, name: 'Fill gaps', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Earlier work re-earned 429 of 455 records through fresh fingerprint-bound QC. Gate 2 must decide what remains reusable before any new generation.' },
     { id: 4, name: 'Assemble', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Corpus reconciliation and one passing pilot replacement have landed. They are assembly inputs, not proof of a complete projected course.' },
@@ -20,8 +20,8 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 1 active', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 21 · 06:19Z',
-      summary: 'Scope verification is in flight; later-gate evidence is retained without receiving closure credit.',
+      status: 'Gate 1 active', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 21 · 10:07Z',
+      summary: 'The regression repair is merged and verified; official-scope authority closure remains in flight.',
       footprint: [
         { value: '6', label: 'pilot slots measured' },
         { value: '332', label: 'sealed plan rows' },
@@ -67,7 +67,7 @@ const AP4_DASHBOARD = {
       note: 'HumGeo uses the approved gate sequence. Only Gate 0 has closure credit; later rows show reusable evidence waiting behind the active gate.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
-        { gate: 1, state: 'active', status: 'Active verification', signal: '150 EKs · 70 LOs · 68-map candidate', copy: 'These are scope identities. The merged candidate still needs the complete reproducibility and verifier receipt before it earns gate closure.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50' },
+        { gate: 1, state: 'active', status: 'Active verification', signal: '150 EKs · 70 LOs · 68-map candidate · suite green', copy: 'PR #59 cleared the eight regressions. The candidate still needs official-byte authority, exact-set mutation proof, and zero-difference reconciliation before it earns closure.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/59' },
         { gate: 2, state: 'evidence', status: 'Evidence · gate locked', signal: '332 classified residual rows', copy: 'The sealed, unarmed plan is useful inventory input. Gate 2 must reconcile every row against corrected scope and current assets.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/56' },
         { gate: 3, state: 'evidence', status: 'Evidence · gate locked', signal: '455 re-screened · 429 fresh passes', copy: 'This is substantial prior QC work, but Gate 2 must decide which records still represent real shortages before generation resumes.', href: 'claims.html' },
         { gate: 4, state: 'evidence', status: 'Evidence · gate locked', signal: 'Reconciled corpus + 1 passing replacement landed', copy: 'Landing receipts exist for bounded inputs. They do not prove a complete course assembly or learner projection.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/55' }

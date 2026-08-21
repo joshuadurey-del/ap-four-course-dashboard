@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T06:51Z",
+  "snapshot": "2026-08-21T10:07Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -73,8 +73,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-21T06:19Z",
-      "value": "Gate 1 is active by owner direction on canonical main 36546a1bd72e775523b77fa1d6628c5dd103b214 after merged PR #58. GitHub records issue #50 CLOSED/COMPLETED, while its latest fleet review remains REWORK for missing exact-byte, complete-suite, regression-attribution, and mapping proof. Four isolated proof lanes are dispatched against one pinned SHA with one orchestrator writer. Gate 1 closure remains unproved, and no accepted-EK numerator authorizes content generation.",
+      "status_at": "2026-08-21T10:07Z",
+      "value": "Gate 1 remains active on canonical main 803d8852b41ee3db2d11ba29fe373ff2943b8d15 after merged and approved PR #59 repaired the eight regressions introduced by PR #58. PR #59 records a green 823-test collection: 702 passed, 121 skipped, 0 failed, plus 5 subtests passed; the production build, validator, default blueprint diff, and exact eight historical nodes also exit 0. Issue #50 remains CLOSED with status:needs_rework because final official-source authority and zero-difference closure proof are still outstanding. Closure proof is in flight; no content generation is authorized and Gates 2-6 remain locked.",
       "scope": "Gate 1 official CED and 68-gate mapping closure; no content generation",
       "evidence": [
         {
@@ -90,12 +90,16 @@
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
         },
         {
+          "type": "regression-repair",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
+        },
+        {
           "type": "issue",
           "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
         },
         {
           "type": "owner-direction",
-          "location": "Gate 1 parallel verification authorized 2026-08-21T06:19Z"
+          "location": "Gate 1 closure proof in flight; canonical readback 2026-08-21T10:07Z"
         }
       ],
       "evidence_access": "OWNER_DIRECTION+PUBLIC_COLLEGE_BOARD+GITHUB"
@@ -127,8 +131,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T06:19Z",
-      "value": "HumGeo follows seven sequential completion gates. Gate 0 is CLOSED and issue #44 remains stopped with only autopilot:attention. Gate 1 is IN_PROGRESS by owner direction on the merged PR #58 scope candidate; four isolated proof lanes are dispatched, but no Gate 1 closure is claimed. PR #56's sealed 332-row plan remains unarmed as Gate 2 inventory input. Gates 2-6 remain locked.",
+      "observed_at": "2026-08-21T10:07Z",
+      "value": "HumGeo follows seven sequential completion gates. Gate 0 is CLOSED and issue #44 remains stopped with only autopilot:attention and null re-arm receipts. Gate 1 is IN_PROGRESS on canonical main 803d8852b41ee3db2d11ba29fe373ff2943b8d15 after merged PR #59 proved the PR #58 regression repair; final authority and mapping reconciliation remain unproved, and issue #50 retains status:needs_rework. PR #56's sealed 332-row plan remains unarmed as Gate 2 inventory input. Gates 2-6 remain locked.",
       "scope": "owner-approved HumGeo completion sequence and active gate",
       "evidence": [
         {
@@ -156,8 +160,12 @@
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
         },
         {
+          "type": "regression-repair",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
+        },
+        {
           "type": "owner-direction",
-          "location": "Gate 1 parallel verification authorized 2026-08-21T06:19Z"
+          "location": "Gate 1 closure proof in flight; canonical readback 2026-08-21T10:07Z"
         }
       ],
       "evidence_access": "OWNER_DIRECTION+GITHUB+DASHBOARD_PLAN"
@@ -252,8 +260,8 @@
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T06:19Z",
-      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts are null, and PR #56's residual plan remains sealed and unarmed. The 06:19Z live readback found issue #44 stopped with only autopilot:attention and no newer writer receipt. Canonical main remains 36546a1bd72e775523b77fa1d6628c5dd103b214 after PR #58. Gate 0 remains CLOSED while Gate 1 verification runs.",
+      "observed_at": "2026-08-21T10:07Z",
+      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts are null, and PR #56's residual plan remains sealed and unarmed. The 10:07Z live readback found issue #44 stopped with only autopilot:attention and no assignee. Canonical main is 803d8852b41ee3db2d11ba29fe373ff2943b8d15 after merged PR #59 repaired the eight PR #58 regressions. Gate 0 remains CLOSED while Gate 1 closure proof runs.",
       "scope": "Gate 0 stabilization and no-active-writer closure",
       "evidence": [
         {
@@ -279,6 +287,10 @@
         {
           "type": "later-gate-activity",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
+        },
+        {
+          "type": "regression-repair",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
         }
       ],
       "evidence_access": "GITHUB"
@@ -304,8 +316,8 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T05:58Z",
-      "value": "Current main is 36546a1bd72e775523b77fa1d6628c5dd103b214 after later Gate 1 scope PR #58. Fresh readback confirms PR #55's passing record and the five measured failures are byte-unchanged; PR #56's residual plan remains sealed and unarmed. No current whole-course shortage count is asserted; Gate 2 remains locked.",
+      "observed_at": "2026-08-21T10:07Z",
+      "value": "Current main is 803d8852b41ee3db2d11ba29fe373ff2943b8d15 after Gate 1 regression-repair PR #59. Its public six-file diff is limited to verifier, planner, and test files, so PR #55's passing record and five measured failures remain untouched; PR #56's residual plan remains sealed and unarmed. No current whole-course shortage count is asserted; Gate 2 remains locked.",
       "scope": "canonical lane baseline after PR #55; no learner-surface claim",
       "evidence": [
         {
@@ -323,6 +335,10 @@
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
+        },
+        {
+          "type": "regression-repair",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
         },
         {
           "type": "issue-comment",
@@ -350,8 +366,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-21T06:19Z",
-      "value": "HumGeo follows seven sequential completion gates. Gate 1 official-scope verification is the current action; Gate 2 inventory and every learner-facing or release stage remain locked. LS review is part of the later learner-evidence path, not a result of the current scope work. Completion percentages and retired W6/W7 phases do not select work.",
+      "status_at": "2026-08-21T10:07Z",
+      "value": "HumGeo follows seven sequential completion gates. The PR #58 regression prerequisite is repaired on canonical main by PR #59, while Gate 1 official-source authority and mapping closure remain the current action. Gate 2 inventory and every learner-facing or release stage remain locked. LS review is part of the later learner-evidence path, not a result of the current scope work.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {

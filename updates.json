@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-21T10:07Z",
+    "course": "HumGeo",
+    "text": "Canonical main advanced to 803d8852b41ee3db2d11ba29fe373ff2943b8d15 through merged and approved PR #59, which repaired all eight regressions introduced by PR #58 without reverting its scope bytes. Public PR receipts show the production build, validator, default blueprint diff, and exact eight nodes at exit 0; the complete suite collected 823 tests with 702 passed, 121 skipped, 0 failed, plus 5 subtests passed. Gate 1 remains active: final official-source authority, mutation-backed exact-set proof, zero unresolved mapping differences, and issue #50 reconciliation are still required. Issue #44 remains stopped and unarmed; Gates 2-6 remain locked, and no generation, delivery, serving, or release work is authorized."
+  },
+  {
     "ts": "2026-08-21T06:51Z",
     "course": "Cross-course",
     "text": "APWH, APUSH, and Psychology course pages now replace the expanded Work to LS REVIEW READY and dated ETA sections with a compact Next governed move block: Now, Blocked by, and Later. HumGeo keeps its Current gate section. LS REVIEW READY remains defined once on the overview; no course, gate, delivery, serving, or release state changed in this presentation update."
