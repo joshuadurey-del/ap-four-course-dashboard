@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-22T10:21Z",
+  "snapshot": "2026-08-22T11:22Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -255,9 +255,9 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T10:21Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at blueprint SHA 8a6ebccbc72451217d1739791d89c14f492ccb60 and frozen AP One projection SHA 2029c52bcf373ee0446925f56a157eb3b8dbf674. Exact current official identity is 9 units, 71 topics, and 71 LOs; the pinned accepted-output/AP One chain has 176 lesson identities and 71 production topic gates. Josh explicitly opened Gate 2. Its first read-only packet targets available, passed MCQs across all 71 topics and stopped fail-closed before a database connection because a sanctioned exhaustive measurement corridor is not available. The public factory census reports 3,823 available APWH MCQs, but that broader count earns no per-topic, passed-QC, placement, or shortage credit. AP One main advanced to bb17b21b856d81de4ba26c468790f0c5896a3c75 only through a HumGeo GET-authority change, so the frozen APWH projection bytes did not change. Gate 2 remains IN_PROGRESS, Gate 3 remains locked, and no APWH remote write occurred.",
-      "scope": "Gate 1 official-scope identity and Gate 2 opening only; excludes inventory closure, full blueprint conformance, deployment, and learner serving",
+      "observed_at": "2026-08-22T11:22Z",
+      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Exact official identity is 9 units, 71 topics, and 71 LOs, with 176 lesson identities and 71 production topic gates. Gate 2 now has a sanctioned live-bank receipt for 2,791 unique available, passed APWH MCQs across all 71 topics in one REPEATABLE READ, server-verified read-only transaction ending in ROLLBACK. A deterministic reconciliation against accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One bb17b21b856d81de4ba26c468790f0c5896a3c75 enumerates 9,633 item identities, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at inventory SHA-256 8ac1bfd286ae67f4bc1ab664770f61d24d34885efd9bb6ef4f39a8bfa9d0fa47; the stable shortage-manifest SHA-256 is 2521f6e8677f4dbc6ecd9c51a385be1105ae8d2da394d6649b49a5bceed46c47. The packet exposes 235 accepted preview identities not landed in the current 698-item AP One projection, four genuinely missing mock-form slots, and nonzero serving and oracle unknowns. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked. No APWH bank or course mutation occurred.",
+      "scope": "Gate 1 official scope plus the first sanctioned Gate 2 inventory packet; excludes inventory closure, generation authority, deployment, and learner serving",
       "evidence": [
         {
           "type": "oracle-source",
@@ -270,7 +270,7 @@
         },
         {
           "type": "ap-one-projection",
-          "url": "https://github.com/InceptTrilogy/ap-one/tree/2029c52bcf373ee0446925f56a157eb3b8dbf674/services/bff/data/courses/ap-world-history-fall-2026-v1"
+          "url": "https://github.com/InceptTrilogy/ap-one/tree/bb17b21b856d81de4ba26c468790f0c5896a3c75/services/bff/data/courses/ap-world-history-fall-2026-v1"
         },
         {
           "type": "issue",
@@ -282,10 +282,18 @@
           "scope": "explicitly open APWH Gate 2"
         },
         {
-          "type": "public-factory-subject-census",
-          "url": "https://test-builder.inceptstore.com/api/subjects",
-          "observed_at": "2026-08-22T10:21Z",
-          "mcq_available": 3823
+          "type": "read-only-bank-receipt",
+          "observed_at": "2026-08-22T10:59Z",
+          "items": 2791,
+          "items_sha256": "4cc89d7092a6a2a68fafe9dd40a683c3ccf91dddb230f3474b9be6c37c19f654",
+          "full_payloads_sha256": "f98b6636ff300de03d601b7a2b4a33e7310bab0add95c80c611770d83b88fc7d",
+          "transaction": "REPEATABLE READ + READ ONLY + ROLLBACK"
+        },
+        {
+          "type": "gate-2-inventory",
+          "observed_at": "2026-08-22T11:22Z",
+          "inventory_sha256": "8ac1bfd286ae67f4bc1ab664770f61d24d34885efd9bb6ef4f39a8bfa9d0fa47",
+          "shortage_manifest_sha256": "2521f6e8677f4dbc6ecd9c51a385be1105ae8d2da394d6649b49a5bceed46c47"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"

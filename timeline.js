@@ -7,7 +7,7 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 22, 2026 · 19:21 KST',
+  snapshot: 'Aug 22, 2026 · 20:22 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -33,12 +33,12 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Gate 2 · IN PROGRESS', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 10:21Z',
-      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Gate 2 is open for read-only inventory; its first exhaustive live-bank packet is fail-closed pending a sanctioned measurement corridor.',
+      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 11:22Z',
+      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. The first sanctioned Gate 2 reconciliation is byte-repeatable but cannot close while unknown and unmeasured rows remain.',
       footprint: [
-        { value: '71', label: 'official topics and LOs' },
-        { value: '176', label: 'lesson identities mapped' },
-        { value: '71', label: 'production topic gates' }
+        { value: '2,791', label: 'live passed/available MCQs' },
+        { value: '9,633', label: 'item identities reconciled' },
+        { value: '5,919', label: 'concrete slots classified' }
       ]
     },
     {
@@ -76,11 +76,11 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH six-gate sequence',
-      note: 'Gate 1 has local closure credit on pinned bytes. Josh opened Gate 2 for read-only inventory; Gate 3 remains locked and later evidence does not advance it.',
+      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 has a sanctioned census and repeatable first reconciliation, but closure is held on nonzero unknowns. Gate 3 remains locked.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'In progress · measurement hold', signal: '71 topics · 3,823 available MCQs · passed/topic census pending', copy: 'The read-only exhaustive packet stopped fail-closed before connecting because the sanctioned measurement corridor is unavailable. The public total proves subject-level availability only; it earns no per-topic, passed-QC, placement, or shortage credit.', href: 'https://test-builder.inceptstore.com/api/subjects' },
-        { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: '0 of 71 tenant gates preserved', copy: 'The current launch expectation records the serving gap. It belongs to assembly and learner proof and does not reopen Gate 1.', href: 'https://github.com/InceptTrilogy/ap-one/tree/2029c52bcf373ee0446925f56a157eb3b8dbf674/services/bff/data/courses/ap-world-history-fall-2026-v1' }
+        { gate: 2, state: 'active', status: 'In progress · zero-unknown hold', signal: '2,791 live · 9,633 identities · 5,919 slots', copy: 'The census used REPEATABLE READ, server-verified read-only mode, and ROLLBACK. The byte-repeatable inventory exposes 235 accepted preview items not landed, four missing mock forms, and unresolved serving and oracle rows; it does not authorize generation.', href: 'apwh.html' },
+        { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: '0 of 71 tenant gates preserved', copy: 'The current launch expectation records the serving gap. A fresh tenant readback remains a Gate 2 unknown and any mutation remains locked to later assembly.', href: 'https://github.com/InceptTrilogy/ap-one/tree/bb17b21b856d81de4ba26c468790f0c5896a3c75/services/bff/data/courses/ap-world-history-fall-2026-v1' }
       ]
     },
     apush: {

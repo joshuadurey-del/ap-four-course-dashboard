@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T11:22Z",
+    "course": "APWH",
+    "text": "Gate 2 now has a sanctioned live-bank receipt and a deterministic first reconciliation. The census found 2,791 unique available, passed APWH MCQs across all 71 official topics using REPEATABLE READ, server-verified READ ONLY, and ROLLBACK. The inventory binds current scope, accepted outputs, and AP One, enumerating 9,633 item identities, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at SHA-256 8ac1bfd286ae67f4bc1ab664770f61d24d34885efd9bb6ef4f39a8bfa9d0fa47. It exposes 235 accepted preview identities not landed in the current 698-item AP One projection, four missing mock-form slots, and nonzero serving and oracle unknowns. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked. No APWH bank or course mutation occurred."
+  },
+  {
     "ts": "2026-08-22T10:21Z",
     "course": "APWH",
     "text": "Josh explicitly opened Gate 2 for read-only inventory; Gate 3 remains locked. The first packet uses an exhaustive metadata-only census of available, passed MCQs across all 71 official topics. It stopped fail-closed before a database connection because a sanctioned measurement corridor is unavailable. The public factory census reports 3,823 available APWH MCQs, but that broader total earns no per-topic, passed-QC, placement, or shortage credit. No bank, course, APWH, or remote mutation occurred."
