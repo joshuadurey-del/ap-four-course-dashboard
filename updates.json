@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T11:56Z",
+    "course": "APWH",
+    "text": "Gate 2 has now exhausted the practice attachment question with 176 learner-route GETs and zero POSTs. Every lesson returned 200 and the exact 698-item overlay; its served content-ID set has zero overlap with the 645 stored/scorable UUID practice-key IDs. Those 645 identities are proved present-unattached, leaving zero unknown item identities and zero unknown concrete slots. Two inventory builds are byte-identical at SHA-256 6c79129b5a5f2c30adee8940f3c2ea13bbca1f4a9806c56a28bc257481447b44; shortage-manifest SHA-256 remains 696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378. Exact unknown residue is now 29 blueprint clauses. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked."
+  },
+  {
     "ts": "2026-08-22T11:43Z",
     "course": "APWH",
     "text": "Gate 2 now has its full byte-repeatable inventory and a fresh GET-only tenant readback. The inventory reconciles 10,511 source/served identities, 5,919 concrete slots, and all 235 blueprint clauses at SHA-256 73c425e3fa86357cd96121b590ac940eeada101185b0b1f881c6e8df0fc14598; shortage-manifest SHA-256 is 696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378. Current AP One evidence binds all 933 stored question identities and 176 article attachments. The learner trace used 72 GETs and zero POSTs: course list 200, all 71 exact gate instruments 404, proving current placement is 0 of 71. Concrete slots have zero unknowns; exact remaining unknowns are 645 practice-key attachment states plus 29 blueprint clauses. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked."
