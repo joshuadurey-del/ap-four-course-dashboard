@@ -33,11 +33,11 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 11:22Z',
-      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. The first sanctioned Gate 2 reconciliation is byte-repeatable but cannot close while unknown and unmeasured rows remain.',
+      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 11:43Z',
+      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. The full Gate 2 reconciliation and fresh tenant GET readback are byte-bound, but 645 practice attachments and 29 blueprint clauses remain unknown.',
       footprint: [
         { value: '2,791', label: 'live passed/available MCQs' },
-        { value: '9,633', label: 'item identities reconciled' },
+        { value: '10,511', label: 'source/served identities reconciled' },
         { value: '5,919', label: 'concrete slots classified' }
       ]
     },
@@ -76,11 +76,11 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH six-gate sequence',
-      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 has a sanctioned census and repeatable first reconciliation, but closure is held on nonzero unknowns. Gate 3 remains locked.',
+      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 has a sanctioned census, repeatable full reconciliation, and fresh GET-only tenant readback, but closure is held on 645 practice attachment states and 29 blueprint clauses. Gate 3 remains locked.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'In progress · zero-unknown hold', signal: '2,791 live · 9,633 identities · 5,919 slots', copy: 'The census used REPEATABLE READ, server-verified read-only mode, and ROLLBACK. The byte-repeatable inventory exposes 235 accepted preview items not landed, four missing mock forms, and unresolved serving and oracle rows; it does not authorize generation.', href: 'apwh.html' },
-        { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: '0 of 71 tenant gates preserved', copy: 'The current launch expectation records the serving gap. A fresh tenant readback remains a Gate 2 unknown and any mutation remains locked to later assembly.', href: 'https://github.com/InceptTrilogy/ap-one/tree/bb17b21b856d81de4ba26c468790f0c5896a3c75/services/bff/data/courses/ap-world-history-fall-2026-v1' }
+        { gate: 2, state: 'active', status: 'In progress · zero-unknown hold', signal: '2,791 live · 10,511 identities · 5,919 slots', copy: 'The inventory binds source and served-ID planes, current handoff/readback evidence, and the live tenant trace. Exact unknown residue is 645 practice attachments plus 29 blueprint clauses; it does not authorize generation.', href: 'apwh.html' },
+        { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: 'fresh GET: 0 of 71 tenant gates', copy: 'Every exact learner gate route returned 404 in a fresh zero-POST readback. Repair and placement remain locked to their owning later gates.', href: 'https://github.com/InceptTrilogy/ap-one/tree/bb17b21b856d81de4ba26c468790f0c5896a3c75/services/bff/data/courses/ap-world-history-fall-2026-v1' }
       ]
     },
     apush: {

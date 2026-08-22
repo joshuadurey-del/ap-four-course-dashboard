@@ -255,9 +255,9 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T11:22Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Exact official identity is 9 units, 71 topics, and 71 LOs, with 176 lesson identities and 71 production topic gates. Gate 2 now has a sanctioned live-bank receipt for 2,791 unique available, passed APWH MCQs across all 71 topics in one REPEATABLE READ, server-verified read-only transaction ending in ROLLBACK. A deterministic reconciliation against accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One bb17b21b856d81de4ba26c468790f0c5896a3c75 enumerates 9,633 item identities, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at inventory SHA-256 8ac1bfd286ae67f4bc1ab664770f61d24d34885efd9bb6ef4f39a8bfa9d0fa47; the stable shortage-manifest SHA-256 is 2521f6e8677f4dbc6ecd9c51a385be1105ae8d2da394d6649b49a5bceed46c47. The packet exposes 235 accepted preview identities not landed in the current 698-item AP One projection, four genuinely missing mock-form slots, and nonzero serving and oracle unknowns. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked. No APWH bank or course mutation occurred.",
-      "scope": "Gate 1 official scope plus the first sanctioned Gate 2 inventory packet; excludes inventory closure, generation authority, deployment, and learner serving",
+      "observed_at": "2026-08-22T11:43Z",
+      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Exact official identity is 9 units, 71 topics, and 71 LOs, with 176 lesson identities and 71 production topic gates. Gate 2 has a sanctioned live-bank receipt for 2,791 unique available, passed APWH MCQs across all 71 topics in one REPEATABLE READ, server-verified read-only transaction ending in ROLLBACK. The full deterministic reconciliation against accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One bb17b21b856d81de4ba26c468790f0c5896a3c75 enumerates 10,511 identities across source and served-ID planes, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at inventory SHA-256 73c425e3fa86357cd96121b590ac940eeada101185b0b1f881c6e8df0fc14598; the stable shortage-manifest SHA-256 is 696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378. Current handoff/readback evidence binds all 933 stored question identities and all 176 article attachments. A fresh GET-only learner trace returned 200 for the course list and 404 for all 71 exact APWH gate instruments, proving current tenant placement is 0 of 71 with zero POSTs. Concrete slots classify as 5,576 attached, 263 unattached, 80 missing, and zero unknown; blueprint clauses classify as 169 attached, 36 missing, 1 stale, and 29 unknown. The 645 practice-key UUID attachment states remain unknown because APWH has no committed serve snapshot and its current overlay serves disjoint prefixed IDs. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked. No APWH bank or course mutation occurred.",
+      "scope": "Gate 1 official scope plus the full sanctioned Gate 2 inventory and GET-only tenant readback; excludes inventory closure, generation authority, deployment, and learner serving",
       "evidence": [
         {
           "type": "oracle-source",
@@ -291,9 +291,18 @@
         },
         {
           "type": "gate-2-inventory",
-          "observed_at": "2026-08-22T11:22Z",
-          "inventory_sha256": "8ac1bfd286ae67f4bc1ab664770f61d24d34885efd9bb6ef4f39a8bfa9d0fa47",
-          "shortage_manifest_sha256": "2521f6e8677f4dbc6ecd9c51a385be1105ae8d2da394d6649b49a5bceed46c47"
+          "observed_at": "2026-08-22T11:43Z",
+          "inventory_sha256": "73c425e3fa86357cd96121b590ac940eeada101185b0b1f881c6e8df0fc14598",
+          "shortage_manifest_sha256": "696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378"
+        },
+        {
+          "type": "learner-get-readback",
+          "observed_at": "2026-08-22T11:43Z",
+          "method": "GET-only",
+          "course_list_status": 200,
+          "gate_routes": 71,
+          "gate_status": 404,
+          "trace_sha256": "caad2f07b3e0b0adeddcda4515c6600868588dfd407c04ebbaa5eff25e34e9f4"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"

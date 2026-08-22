@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T11:43Z",
+    "course": "APWH",
+    "text": "Gate 2 now has its full byte-repeatable inventory and a fresh GET-only tenant readback. The inventory reconciles 10,511 source/served identities, 5,919 concrete slots, and all 235 blueprint clauses at SHA-256 73c425e3fa86357cd96121b590ac940eeada101185b0b1f881c6e8df0fc14598; shortage-manifest SHA-256 is 696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378. Current AP One evidence binds all 933 stored question identities and 176 article attachments. The learner trace used 72 GETs and zero POSTs: course list 200, all 71 exact gate instruments 404, proving current placement is 0 of 71. Concrete slots have zero unknowns; exact remaining unknowns are 645 practice-key attachment states plus 29 blueprint clauses. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked."
+  },
+  {
     "ts": "2026-08-22T11:22Z",
     "course": "APWH",
     "text": "Gate 2 now has a sanctioned live-bank receipt and a deterministic first reconciliation. The census found 2,791 unique available, passed APWH MCQs across all 71 official topics using REPEATABLE READ, server-verified READ ONLY, and ROLLBACK. The inventory binds current scope, accepted outputs, and AP One, enumerating 9,633 item identities, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at SHA-256 8ac1bfd286ae67f4bc1ab664770f61d24d34885efd9bb6ef4f39a8bfa9d0fa47. It exposes 235 accepted preview identities not landed in the current 698-item AP One projection, four missing mock-form slots, and nonzero serving and oracle unknowns. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked. No APWH bank or course mutation occurred."
