@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-22T03:16Z",
+  "snapshot": "2026-08-22T07:26Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -160,8 +160,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T04:07Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally: Gate 2 is INVENTORY_LOCKED with 8,377 classified rows, zero unknown or unmeasured, and four exact shortages; Gate 3 is CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates, one retained placement collision, and zero remaining or nonterminal residue. Delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Evidence-only PR #63 is open at head 7b8a01727426abcf063cc6d86e8222863c1eb111; canonical main remains aa11026aa53e12623bf40a7aeff1931b491065dd. Gate 4 is UNDERWAY by explicit owner direction. No AP One landing, publish, deployment, or learner visibility is claimed; Gates 5-6 remain locked.",
+      "observed_at": "2026-08-22T07:16Z",
+      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally. Gate 2 is INVENTORY_LOCKED with 8,377 classified rows, zero unknown or unmeasured, and four exact shortages. Gate 3 is CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates, one retained placement collision, and zero remaining or nonterminal residue. PR #63 merged the evidence package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db; delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Gate 4 is HOLD: BLOCKED_CONTRACT because the current AP One publisher does not bind that package into its input, seal/version transition, whole-course deployment manifest, authorized writer invocation, recovery path, and exact readback. The unblock request is posted on AP One #659. No AP One, TimeBack, publish, deployment, release, or learner-surface write is claimed; Gates 5-6 remain locked.",
       "scope": "owner-approved HumGeo completion sequence and current gate state",
       "evidence": [
         {
@@ -220,7 +220,12 @@
           "type": "gate-2-3-review",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
           "head": "7b8a01727426abcf063cc6d86e8222863c1eb111",
+          "merge_commit": "4bd35b9ca350924fef2653f71c64270baa3ea9db",
           "delivery_package_sha256": "508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3"
+        },
+        {
+          "type": "publisher-contract-follow-up",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5378967008"
         },
         {
           "type": "owner-direction",
@@ -447,8 +452,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-22T04:07Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally, including Gate 3 CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates and zero residue. Gate 4 is UNDERWAY by owner direction; PR #63 is an unmerged review surface, not canonical landing or deployment. Gate 5 learner proof and Gate 6 release remain locked. No LS readiness or learner visibility is claimed.",
+      "status_at": "2026-08-22T07:16Z",
+      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally, including Gate 3 CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates and zero residue. PR #63 is merged, but Gate 4 is HOLD: BLOCKED_CONTRACT pending an AP One publisher contract that binds the new package, approved seal/version transition, whole-course deployment manifest, authorized writer and recovery path, and exact readback. Gate 5 learner proof and Gate 6 release remain locked. No LS readiness, deployment, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -458,6 +463,10 @@
         {
           "type": "gate-2-3-review",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/63"
+        },
+        {
+          "type": "publisher-contract-follow-up",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5378967008"
         },
         {
           "type": "owner-direction",
