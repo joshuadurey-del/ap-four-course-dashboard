@@ -7,9 +7,11 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 - Course pages are static HTML; the overview and claims explorer render from the JSON.
 - `timeline.js` — shared active-course gate rail, course work-footprint cards, and per-course evidence maps.
 
-Display model: the overview shows all four courses as quantified work footprints, then shows the seven-gate rail only for the active approved course. Course pages map already-published work to the gate where it most likely belongs. Unlike units are never summed, empty gates are omitted, and mapped evidence earns no gate credit without a course-approved closure receipt.
+Display model: the overview shows all four courses as quantified work footprints, then shows the seven-gate rail for the active course. Course pages map already-published work to the gate where it most likely belongs. Unlike units are never summed, empty gates are omitted, and mapped evidence earns no gate credit without a course-approved closure receipt.
 
 HumGeo exception: owner direction on 2026-08-21 replaced that course's sprint routing with seven sequential completion gates: stabilize → scope → inventory → factory gap fill → land/assemble → learner proof → release. At most one gate may be active, and closing a gate does not automatically open its successor. The HumGeo page and `humgeo.completion.gates` claim govern its dashboard routing; percentages, 150-as-question-count, and retired W6/W7 labels do not.
+
+APWH exception: owner direction on 2026-08-22 established six completion gates with optional Gate 0: scope → inventory → factory gap fill → land/assemble → learner proof → release. Gate 1 is closed locally on pinned exact-set evidence; Gate 2 remains locked until Josh opens it. Accepted-bank, projection, serving, and release claims remain separate.
 
 Target rule: Learning Science has its own review process. The current handoff is earned when reviewers can access a pinned candidate and walk a representative course path, with any review-blocking defect disclosed and a feedback owner named. Course-specific blueprint measures, inherited QC provenance, and gap accounting remain internal build controls, not an LS intake packet. LS REVIEW READY is not LS approval, post-review revision, production release, or proof of canonical phase completion.
 

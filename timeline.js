@@ -1,12 +1,13 @@
 /*
 Dashboard display contract:
 - Counts describe observable work units. They are never added into a completion score.
-- Only HumGeo currently has an approved seven-gate sequence.
-- Other course mappings are retrospective filing aids, not gate credit.
+- HumGeo is the active seven-gate rail; APWH has its own owner-directed six-gate plan
+  with optional Gate 0 and a closed Gate 1.
+- APUSH and Psychology mappings are retrospective filing aids, not gate credit.
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 22, 2026 · 16:26 KST',
+  snapshot: 'Aug 22, 2026 · 17:33 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -32,12 +33,12 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Evidence mapped', statusTone: 'purple', mapping: 'Gate mapping provisional', observed: 'Aug 20 · 10:25Z',
-      summary: 'The accepted item population is substantial and exact; current blueprint reconciliation and learner delivery remain separate.',
+      status: 'Gate 1 · CLOSED', statusTone: 'green', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 08:33Z',
+      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Gate 2 inventory is not started; accepted-bank and AP One projection bytes still need reconciliation.',
       footprint: [
-        { value: '933', label: 'banked identities' },
-        { value: '2×933', label: 'passing acceptance legs' },
-        { value: '0', label: 'item disagreements' }
+        { value: '71', label: 'official topics and LOs' },
+        { value: '176', label: 'lesson identities mapped' },
+        { value: '71', label: 'production topic gates' }
       ]
     },
     {
@@ -74,13 +75,12 @@ const AP4_DASHBOARD = {
       ]
     },
     apwh: {
-      title: 'Existing work filed against the gate model',
-      note: 'APWH has not adopted HumGeo’s sequence. This retrospective map shows where the published evidence would belong; it awards no gate credit.',
+      title: 'APWH six-gate sequence',
+      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 is locked and not started; later evidence remains visible without advancing a gate.',
       rows: [
-        { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '235-ID blueprint oracle exists', copy: 'The instrument belongs with scope lock, but its last result was unreadable and remains unmeasured against the accepted candidate.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48' },
-        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '933 banked identities', copy: 'The complete pinned item population is inventoried and population-scoped.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48' },
-        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '2 passing legs × 933 items · 0 disagreements', copy: 'The accepted population has exact two-leg agreement. This is strong QC evidence, not learner-surface proof.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48#issuecomment-5354633163' },
-        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: 'Practice release gate 9 of 9', copy: 'A governed component gate is green, while full candidate packaging and external placement remain separate work.', href: 'https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000' }
+        { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
+        { gate: 2, state: 'locked', status: 'Locked · not started', signal: '933 accepted items · 698 projected items · reconciliation required', copy: 'Accepted-bank proof is real, but the AP One projection differs. Inventory must classify the exact bytes before any shortage or placement credit.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48' },
+        { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: '0 of 71 tenant gates preserved', copy: 'The current launch expectation records the serving gap. It belongs to assembly and learner proof and does not reopen Gate 1.', href: 'https://github.com/InceptTrilogy/ap-one/tree/2029c52bcf373ee0446925f56a157eb3b8dbf674/services/bff/data/courses/ap-world-history-fall-2026-v1' }
       ]
     },
     apush: {
