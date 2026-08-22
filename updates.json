@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T12:30Z",
+    "course": "APWH",
+    "text": "Gate 2 extended the GET-only tree/write receipt to the exact SAQ, LEQ, and DBQ integration learner plans: 180 total GETs and zero POSTs. Each plan exposes one constructed-response objective and byte-matching prompt that explicitly teaches how the rows combine, so A-114 moves from unknown to attached. Two inventory builds are byte-identical at SHA-256 ba5c626951f242c874a72f5e1707a30ab91a07ec4ba3606973d491e7b40df206; shortage-manifest SHA-256 is 39033f929c4e95906a278de1e6e9598b98b77a18b9ea5013ab2e8054dee77736. Blueprint disposition is now 176 attached, 44 genuinely missing, 1 stale, and 14 unknown; item and concrete-slot unknowns remain zero. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked."
+  },
+  {
     "ts": "2026-08-22T12:15Z",
     "course": "APWH",
     "text": "Gate 2 exhausted the current tree/write attachment question with 177 learner GETs and zero POSTs. The live tree has 9 active units, 176 active lessons, 2 retired lessons, and zero S3-EXAMTECH nodes; 113 write routes return 200 and 63 return 404. The authoritative order starts paragraph tier at position 1, partial tier at 4, and full essay at 46. Reviewed disposition is now 175 attached, 44 genuinely missing, 1 stale, and 15 unknown blueprint clauses; item and concrete-slot unknowns remain zero. A-112/A-157 preserve DEVIATION-RECORDED with a governed-deviation closure basis. Two inventory builds are byte-identical at SHA-256 dd4aed604f1721d9c8cb2c3e86e563f01b7d3207909e0076a16d6ab01cec5364; shortage-manifest SHA-256 is e5d87ce181fe408d1779e34ad275afa5f1705d4243f246a4f7a30896da33509d. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked."
