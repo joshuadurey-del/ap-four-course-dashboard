@@ -6,13 +6,13 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 21, 2026 · 23:29 KST',
+  snapshot: 'Aug 22, 2026 · 11:47 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
-    { id: 2, name: 'Inventory', state: 'active', status: 'Hold · contract blocker', detail: 'A reviewed local inventory exists, but the required item-bank source cannot be queried per slot without changing record state. The exact shortage is unproved; Gate 3 stays locked.' },
-    { id: 3, name: 'Fill gaps', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Earlier work re-earned 429 of 455 records through fresh fingerprint-bound QC. Gate 2 must decide what remains reusable before any new generation.' },
+    { id: 2, name: 'Inventory', state: 'closed', status: 'Closed', detail: 'The sanctioned read-only bank audit and deterministic reconciliation account for all 8,377 required rows with zero unknown or unmeasured and prove an exact four-slot shortage.' },
+    { id: 3, name: 'Fill gaps', state: 'locked-evidence', status: 'Locked · exact shortage known', detail: 'Gate 2 proved four missing slots and selected one reusable topic-5.4 item. Gate 3 remains locked until separately opened.' },
     { id: 4, name: 'Assemble', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Repository landings exist, but PR #61\'s S3 publication and live-surface verification are still retrying. No deployment credit is awarded while this gate is locked.' },
     { id: 5, name: 'Learner proof', state: 'locked', status: 'Locked', detail: 'Historical local walks do not prove the current canonical course. Exact deployed-byte learner verification belongs here after assembly.' },
     { id: 6, name: 'Release', state: 'locked', status: 'Locked', detail: 'TimeBack, EOC, production readback, and final approval remain later release obligations.' }
@@ -20,15 +20,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 2 · contract hold', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 21 · 14:29Z',
-      summary: 'Official scope is locked. Gate 2 has a reviewed local inventory but cannot prove an exact shortage through the current read-only contract.',
+      status: 'Gate 2 · closed locally', statusTone: 'green', mapping: 'Approved gate sequence', observed: 'Aug 22 · 02:47Z',
+      summary: 'Official scope and the 8,377-row inventory are locked. The exact Gate 3 shortage is four; Gate 3 remains unopened.',
       footprint: [
-        { value: '6', label: 'pilot slots measured' },
-        { value: '332', label: 'sealed plan rows' },
-        { value: '429/455', label: 'fresh QC passes' }
+        { value: '8,377', label: 'required rows classified' },
+        { value: '0', label: 'unknown or unmeasured' },
+        { value: '4', label: 'exact Gate 3 shortage' }
       ],
-      etaDays: 'BLOCKED_CONTRACT',
-      etaNote: 'Gate 2 needs a sanctioned side-effect-free slot-level inventory route or equivalent measurement. Gate 3 remains locked.'
+      etaDays: 'AWAITING GATE 3',
+      etaNote: 'Gate 2 is closed locally. Gate 3 remains locked until separately opened; no generation, attachment, or deployment is authorized.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -64,12 +64,12 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'HumGeo uses the approved gate sequence. Gates 0 and 1 have closure credit. Gate 2 is on a contract-owned hold; later rows remain locked evidence only.',
+      note: 'HumGeo uses the approved gate sequence. Gates 0, 1, and 2 have closure credit. Later rows remain locked evidence only.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
-        { gate: 2, state: 'active', status: 'Hold · contract blocker', signal: 'Reviewed partial inventory · exact shortage unproved', copy: 'The item-bank contract exposes aggregate status and a mutating item-level lookup, so read-only evidence cannot prove that an individual slot is absent. No candidate was pushed.', href: 'https://test-builder.inceptstore.com/openapi.json' },
-        { gate: 3, state: 'evidence', status: 'Evidence · gate locked', signal: '455 re-screened · 429 fresh passes', copy: 'This is substantial prior QC work, but Gate 2 must decide which records still represent real shortages before generation resumes.', href: 'claims.html' },
+        { gate: 2, state: 'closed', status: 'Closed · local candidate', signal: '8,377 classified · 0 unknown · 4-slot shortage', copy: 'A sanctioned metadata-only factory-bank snapshot and independent deterministic review closed the inventory. The candidate was not pushed or deployed.', href: 'claims.html' },
+        { gate: 3, state: 'evidence', status: 'Evidence · gate locked', signal: '4 exact missing slots · 1 reusable topic-5.4 item', copy: 'The shortage is now measured, but Gate 3 remains locked and no generation or attachment has been authorized.', href: 'claims.html' },
         { gate: 4, state: 'evidence', status: 'Evidence · gate locked', signal: 'Repository landings exist · PR #61 S3 publication pending', copy: 'Merged repository bytes do not prove a published or learner-visible course. The fleet retry must finish and read back the exact 30 changed keys before deployment credit is possible.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/61' }
       ]
     },
@@ -158,7 +158,7 @@ const AP4_DASHBOARD = {
       <div>
         <span class="badge b-blue">Active course</span>
         <h2>${activeCourse.label}</h2>
-        <p class="timeline-sub">HumGeo has two closed gates; Gate 2 is on a contract-owned hold and every later gate remains locked. Other courses keep their verified work visible below without being rendered as empty gate rows.</p>
+        <p class="timeline-sub">HumGeo has three closed gates; Gate 3 and every later gate remain locked. Other courses keep their verified work visible below without being rendered as empty gate rows.</p>
       </div>
       <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
     </div>
@@ -176,8 +176,8 @@ const AP4_DASHBOARD = {
     </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
-        <div><span class="eyebrow">Current course gate</span><h3>Gate 2 · Reconcile existing assets</h3></div>
-        <span class="badge b-blue">HOLD: BLOCKED_CONTRACT</span>
+        <div><span class="eyebrow">Latest closed course gate</span><h3>Gate 2 · Reconcile existing assets</h3></div>
+        <span class="badge b-green">CANDIDATE_INVENTORY_LOCKED</span>
       </div>
       <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
         ${AP4_DASHBOARD.gates.map(gate => `

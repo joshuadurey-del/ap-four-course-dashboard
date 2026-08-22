@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-21T14:29Z",
+  "snapshot": "2026-08-22T02:47Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -73,9 +73,9 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T14:29Z",
-      "value": "Gates 0 and 1 are CLOSED on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd. Gate 2 was opened and inventoried without generation or course mutation, but it did not close: the required item-bank source has aggregate status routes and an item-level route that updates records when read, so per-slot absence and an exact shortage cannot be proved read-only. Gate 2 is HOLD: BLOCKED_CONTRACT pending a sanctioned side-effect-free slot-level inventory route or equivalent measurement. No candidate was pushed and no deployment or learner-surface credit is claimed. Gates 3-6 remain locked.",
-      "scope": "Gate 1 official CED and 68-gate mapping closure; PR #61 S3/live publication explicitly unverified",
+      "observed_at": "2026-08-22T02:47Z",
+      "value": "Gates 0 and 1 are CLOSED on the aa11026aa53e12623bf40a7aeff1931b491065dd course pin. Gate 2 is CLOSED locally as CANDIDATE_INVENTORY_LOCKED. A sanctioned APUSH-derived database auditor observed 713 passed/available HumGeo MCQs across topics 3.4, 4.4, 5.4, 6.4, and 6.6 in one REPEATABLE READ, server-confirmed READ ONLY transaction that was rolled back. Deterministic reconciliation classified all 8,377 required rows as 7,926 attached, 218 unattached, 168 stale, and a 65-row genuinely-missing class comprising 61 policy-excluded missing-by-design rows plus the four true Gate 3 shortages, with zero unknown or unmeasured. One DOK-1 topic-5.4 bank candidate was selected; the exact Gate 3 shortage is four slots. Independent Fable review returned CANDIDATE_INVENTORY_LOCKED. The candidate is local-only: no push, deployment, bank mutation, generation, or learner-surface credit is claimed, and Gates 3-6 remain locked.",
+      "scope": "Gate 1 scope plus local-only Gate 2 inventory closure; no deployment or learner-surface claim",
       "evidence": [
         {
           "type": "official-ced",
@@ -104,16 +104,26 @@
         {
           "type": "scope-closure-receipt",
           "url": "https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183"
+        },
+        {
+          "type": "read-only-bank-receipt",
+          "sha256": "38cd738e8d8447ef462c93b08b1523400a1fc532a9ad25c074bf9bf15cb8d45b"
+        },
+        {
+          "type": "local-candidate",
+          "commit": "675b4bfde6a680198f519e27fde953453d026285",
+          "inventory_sha256": "ba63327c70d3af402db5f76b4828aa8cf264247867a3d99ded6cd381e18f53b9",
+          "summary_sha256": "9ce925ab9047cae149de68ed34ea6f67c60da3838afc6fb7ad48f84fb68d7192"
         }
       ],
-      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB"
+      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T14:29Z",
-      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. These are scope identities, not a 150-question target and not a course-completion percentage. Gate 1 has locked those identities and all 68 topic-to-gate mappings on canonical main. Gate 2 is now on a contract-owned inventory hold; the denominator is locked, but the exact content shortage is not.",
+      "observed_at": "2026-08-22T02:47Z",
+      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. These are scope identities, not a 150-question target and not a course-completion percentage. Gate 1 locked those identities and all 68 topic-to-gate mappings. Gate 2 then exhaustively classified all 8,377 required rows with zero unknown or unmeasured and proved an exact four-slot shortage for Gate 3.",
       "scope": "official HumGeo scope denominator only",
       "evidence": [
         {
@@ -127,16 +137,20 @@
         {
           "type": "issue",
           "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
+        },
+        {
+          "type": "gate-2-inventory-summary",
+          "sha256": "9ce925ab9047cae149de68ed34ea6f67c60da3838afc6fb7ad48f84fb68d7192"
         }
       ],
-      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB"
+      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY"
     },
     {
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T14:29Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0 and 1 are CLOSED. Gate 2 was explicitly opened and a deterministic local inventory was built and independently reviewed, with no generation, course mutation, push, deployment, or learner-surface write. It cannot honestly close because the required item-bank contract lacks a sanctioned side-effect-free slot-level inventory route; aggregate counts cannot prove individual absence. Gate 2 is HOLD: BLOCKED_CONTRACT. Canonical main remains aa11026aa53e12623bf40a7aeff1931b491065dd, issue #44 remains stopped and attention-only, and issue #50 remains CLOSED/COMPLETED. Gates 3-6 remain locked.",
+      "observed_at": "2026-08-22T02:47Z",
+      "value": "HumGeo follows seven sequential completion gates. Gates 0 and 1 are CLOSED. Gate 2 is CLOSED locally as CANDIDATE_INVENTORY_LOCKED after an exhaustive metadata-only, read-only factory-bank audit and deterministic reconciliation of all 8,377 required rows. The exact Gate 3 shortage is four slots and unknown or unmeasured is zero. The local candidate commit is 675b4bfde6a680198f519e27fde953453d026285; no candidate was pushed, deployed, generated, attached, or exposed on a learner surface. Closing Gate 2 does not open Gate 3, so Gates 3-6 remain locked.",
       "scope": "owner-approved HumGeo completion sequence and current gate state",
       "evidence": [
         {
@@ -182,9 +196,17 @@
         {
           "type": "current-item-bank-contract",
           "url": "https://test-builder.inceptstore.com/openapi.json"
+        },
+        {
+          "type": "read-only-bank-receipt",
+          "sha256": "38cd738e8d8447ef462c93b08b1523400a1fc532a9ad25c074bf9bf15cb8d45b"
+        },
+        {
+          "type": "gate-2-inventory-summary",
+          "sha256": "9ce925ab9047cae149de68ed34ea6f67c60da3838afc6fb7ad48f84fb68d7192"
         }
       ],
-      "evidence_access": "GITHUB+DASHBOARD_PLAN"
+      "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY"
     },
     {
       "claim_id": "apwh.blueprint.audit",
@@ -277,7 +299,7 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "observed_at": "2026-08-21T14:29Z",
-      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts remain recorded as null, and PR #56's residual plan remains sealed and unarmed. The current live readback finds issue #44 stopped with only autopilot:attention and no assignee. Canonical main remains aa11026aa53e12623bf40a7aeff1931b491065dd. Gates 0 and 1 are CLOSED; Gate 2 is HOLD: BLOCKED_CONTRACT; Gate 3 remains locked.",
+      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts remain recorded as null, and PR #56's residual plan remains sealed and unarmed. The 2026-08-21T14:29Z readback found issue #44 stopped with only autopilot:attention and no assignee. That Gate 0 evidence is historical; the later Gate 2 state is reported separately under humgeo.completion.gates.",
       "scope": "Gate 0 stabilization and no-active-writer closure",
       "evidence": [
         {
@@ -332,8 +354,8 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T14:29Z",
-      "value": "Current main remains aa11026aa53e12623bf40a7aeff1931b491065dd after Gate 1 PR #62. Gate 2 produced a reviewed local partial inventory, but no exact whole-course shortage is asserted: the required item-bank source cannot be queried per slot without changing record state. The inventory is held locally, no HumGeo candidate was pushed, and no deployed-content or learner-surface claim is made.",
+      "observed_at": "2026-08-22T02:47Z",
+      "value": "The Gate 2 candidate is based on course pin aa11026aa53e12623bf40a7aeff1931b491065dd after Gate 1 PR #62. A sanctioned read-only database snapshot observed 713 passed/available MCQs across the five target topics and rolled back without mutation. The resulting local inventory classifies all 8,377 required rows with zero unknown or unmeasured, selects one reusable topic-5.4 DOK-1 candidate, and proves exactly four missing Gate 3 slots. No HumGeo candidate was pushed or deployed, and no learner-surface claim is made.",
       "scope": "canonical lane baseline after PR #55; no learner-surface claim",
       "evidence": [
         {
@@ -367,9 +389,17 @@
         {
           "type": "issue-comment",
           "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365413244"
+        },
+        {
+          "type": "read-only-bank-receipt",
+          "sha256": "38cd738e8d8447ef462c93b08b1523400a1fc532a9ad25c074bf9bf15cb8d45b"
+        },
+        {
+          "type": "local-candidate",
+          "commit": "675b4bfde6a680198f519e27fde953453d026285"
         }
       ],
-      "evidence_access": "GITHUB"
+      "evidence_access": "GITHUB+SCOPED_LOCAL_READ_ONLY"
     },
     {
       "claim_id": "humgeo.review_surface.local",
@@ -390,8 +420,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-21T14:29Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0 and 1 are CLOSED on canonical main aa11026aa53e12623bf40a7aeff1931b491065dd. Gate 2 is HOLD: BLOCKED_CONTRACT because an exact read-only slot inventory cannot yet be proved through the current item-bank contract. Gate 3 and every learner-facing or release stage remain locked. No local inventory or prior S3 activity proves learner visibility or LS readiness.",
+      "status_at": "2026-08-22T02:47Z",
+      "value": "HumGeo follows seven sequential completion gates. Gates 0, 1, and 2 are CLOSED, with Gate 2 closed locally as CANDIDATE_INVENTORY_LOCKED and an exact four-slot shortage. Gate 3 and every learner-facing or release stage remain locked until separately opened and completed. The local inventory proves neither learner visibility nor LS readiness, and no deployment is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
