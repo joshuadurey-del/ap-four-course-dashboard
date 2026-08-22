@@ -7,7 +7,7 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 22, 2026 · 20:56 KST',
+  snapshot: 'Aug 22, 2026 · 21:15 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -33,8 +33,8 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 11:56Z',
-      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Item and concrete-slot unknowns are zero after exhaustive tenant and practice GET readbacks; 29 blueprint clauses remain unknown.',
+      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 12:15Z',
+      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Item and concrete-slot unknowns are zero after exhaustive tenant, practice, tree, and write GET readbacks; 15 blueprint clauses remain unknown.',
       footprint: [
         { value: '2,791', label: 'live passed/available MCQs' },
         { value: '10,511', label: 'source/served identities reconciled' },
@@ -76,10 +76,10 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH six-gate sequence',
-      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 has a sanctioned census, repeatable full reconciliation, and exhaustive GET-only tenant and practice readbacks. Item and concrete-slot unknowns are zero; closure is held on 29 blueprint clauses. Gate 3 remains locked.',
+      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 has a sanctioned census, repeatable full reconciliation, and exhaustive GET-only tenant, practice, tree, and write readbacks. Item and concrete-slot unknowns are zero; closure is held on 15 blueprint clauses. Gate 3 remains locked.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'In progress · zero-unknown hold', signal: '2,791 live · 10,511 identities · 29 unknown clauses', copy: 'The inventory binds source and served-ID planes plus exhaustive tenant and practice GET readbacks. All items and concrete slots are classified; the exact unknown residue is 29 blueprint clauses, so generation remains locked.', href: 'apwh.html' },
+        { gate: 2, state: 'active', status: 'In progress · zero-unknown hold', signal: '2,791 live · 10,511 identities · 15 unknown clauses', copy: 'The inventory binds source and served-ID planes plus exhaustive tenant, practice, tree, and write GET readbacks. All items and concrete slots are classified; the exact unknown residue is 15 blueprint clauses, so generation remains locked.', href: 'apwh.html' },
         { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: 'fresh GET: 0 of 71 tenant gates', copy: 'Every exact learner gate route returned 404 in a fresh zero-POST readback. Repair and placement remain locked to their owning later gates.', href: 'https://github.com/InceptTrilogy/ap-one/tree/bb17b21b856d81de4ba26c468790f0c5896a3c75/services/bff/data/courses/ap-world-history-fall-2026-v1' }
       ]
     },

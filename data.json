@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-22T11:22Z",
+  "snapshot": "2026-08-22T12:15Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -255,9 +255,9 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T11:56Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Exact official identity is 9 units, 71 topics, and 71 LOs, with 176 lesson identities and 71 production topic gates. Gate 2 has a sanctioned live-bank receipt for 2,791 unique available, passed APWH MCQs across all 71 topics in one REPEATABLE READ, server-verified read-only transaction ending in ROLLBACK. The full deterministic reconciliation against accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One bb17b21b856d81de4ba26c468790f0c5896a3c75 enumerates 10,511 identities across source and served-ID planes, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at inventory SHA-256 6c79129b5a5f2c30adee8940f3c2ea13bbca1f4a9806c56a28bc257481447b44; the stable shortage-manifest SHA-256 is 696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378. Current handoff/readback evidence binds all 933 stored question identities and all 176 article attachments. A fresh GET-only learner trace returned 200 for the course list and 404 for all 71 exact APWH gate instruments, proving current tenant placement is 0 of 71 with zero POSTs. A separate exhaustive learner-practice readback used 176 GETs and zero POSTs, reproduced all 698 current overlay identities, and proved zero served-content overlap with the 645 stored/scorable practice-key UUIDs. Item identities now classify as 3,384 attached and 7,127 unattached with zero unknown; concrete slots classify as 5,576 attached, 263 unattached, 80 missing, and zero unknown; blueprint clauses classify as 169 attached, 36 missing, 1 stale, and 29 unknown. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET on those 29 clauses; Gate 3 remains locked. No APWH bank or course mutation occurred.",
-      "scope": "Gate 1 official scope plus the full sanctioned Gate 2 inventory and GET-only tenant and practice readbacks; excludes inventory closure, generation authority, deployment, and learner serving",
+      "observed_at": "2026-08-22T12:15Z",
+      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Exact official identity is 9 units, 71 topics, and 71 LOs, with 176 lesson identities and 71 production topic gates. Gate 2 has a sanctioned live-bank receipt for 2,791 unique available, passed APWH MCQs across all 71 topics in one REPEATABLE READ, server-verified read-only transaction ending in ROLLBACK. The full deterministic reconciliation against accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One bb17b21b856d81de4ba26c468790f0c5896a3c75 enumerates 10,511 identities across source and served-ID planes, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at inventory SHA-256 dd4aed604f1721d9c8cb2c3e86e563f01b7d3207909e0076a16d6ab01cec5364; the stable shortage-manifest SHA-256 is e5d87ce181fe408d1779e34ad275afa5f1705d4243f246a4f7a30896da33509d. Current handoff/readback evidence binds all 933 stored question identities and all 176 article attachments. A GET-only learner trace returned 200 for the course list and 404 for all 71 exact APWH gate instruments, proving current tenant placement is 0 of 71 with zero POSTs. An exhaustive learner-practice readback used 176 GETs and zero POSTs, reproduced all 698 current overlay identities, and proved zero served-content overlap with the 645 stored/scorable practice-key UUIDs. A second exhaustive readback used 177 GETs and zero POSTs to bind the current 9-unit, 176-active-lesson tree and every lesson write route: the tree has zero S3-EXAMTECH nodes, 113 write routes return 200, 63 return 404, and the authoritative order starts paragraph tier at position 1, partial tier at 4, and full essay at 46. Item identities classify as 3,384 attached and 7,127 unattached with zero unknown; concrete slots classify as 5,576 attached, 263 unattached, 80 missing, and zero unknown; blueprint clauses classify as 175 attached, 44 missing, 1 stale, and 15 unknown. A-112 and A-157 preserve DEVIATION-RECORDED with an explicit governed-deviation closure basis; literal conformance is not claimed. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET on those 15 clauses; Gate 3 remains locked. No APWH bank or course mutation occurred.",
+      "scope": "Gate 1 official scope plus the full sanctioned Gate 2 inventory and GET-only tenant, practice, tree, and write readbacks; excludes inventory closure, generation authority, deployment, and learner serving",
       "evidence": [
         {
           "type": "oracle-source",
@@ -291,9 +291,9 @@
         },
         {
           "type": "gate-2-inventory",
-          "observed_at": "2026-08-22T11:56Z",
-          "inventory_sha256": "6c79129b5a5f2c30adee8940f3c2ea13bbca1f4a9806c56a28bc257481447b44",
-          "shortage_manifest_sha256": "696f9b84d82a59e3b0785f61d0ca64b4c2045647fc9b6969c153d5396483c378"
+          "observed_at": "2026-08-22T12:15Z",
+          "inventory_sha256": "dd4aed604f1721d9c8cb2c3e86e563f01b7d3207909e0076a16d6ab01cec5364",
+          "shortage_manifest_sha256": "e5d87ce181fe408d1779e34ad275afa5f1705d4243f246a4f7a30896da33509d"
         },
         {
           "type": "learner-get-readback",
@@ -313,6 +313,22 @@
           "practice_key_content_ids": 645,
           "served_key_content_overlap": 0,
           "receipt_sha256": "49528b2ff3cae39a4190b84c7a4e17881d6854963295f7233aea149136ae4258"
+        },
+        {
+          "type": "learner-tree-write-get-readback",
+          "observed_at": "2026-08-22T12:15Z",
+          "method": "GET-only",
+          "requests": 177,
+          "active_units": 9,
+          "active_lessons": 176,
+          "retired_lessons": 2,
+          "s3_examtech_nodes": 0,
+          "write_routes_200": 113,
+          "write_routes_404": 63,
+          "first_paragraph_position": 1,
+          "first_partial_position": 4,
+          "first_full_essay_position": 46,
+          "receipt_sha256": "b934d6ca0a62806e14756576c6e8606aff568122cea16821e7a25c5db6bce8ba"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
