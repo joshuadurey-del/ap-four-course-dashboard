@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T04:07Z",
+    "course": "HumGeo",
+    "text": "Gate 3 is CLOSED locally as CONTENT_COMPLETE. The four Gate 2 shortages were generated through the served Content Factory and passed matching full QC; one factory-clean placement collision was retained and regenerated from a course-governed source. Remaining, failed, queued, running, ambiguous, and unmeasured are zero. The hash-bound evidence package is under review in private HumGeo PR #63 at head 7b8a01727426abcf063cc6d86e8222863c1eb111; canonical main is still aa11026aa53e12623bf40a7aeff1931b491065dd. Josh explicitly opened Gate 4, now UNDERWAY. Nothing is yet landed in AP One, published, deployed, or learner-proven; Gates 5-6 remain locked."
+  },
+  {
     "ts": "2026-08-22T03:16Z",
     "course": "HumGeo",
     "text": "Gate 3 is UNDERWAY by owner direction against the exact four-slot shortage proved by Gate 2, with one reusable topic-5.4 DOK-1 bank item identified. This records the gate opening only: no Gate 3 output, completion, attachment, deployment, or learner-surface claim is made. Gates 4-6 remain locked."
