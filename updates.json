@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T13:33Z",
+    "course": "APWH",
+    "text": "Gate 2 overnight closure pass completed 357 learner-surface GETs and zero POSTs, enumerating every write route and all 176 learner plans. Evidence moved A-096 and A-149 to attached and A-148, A-183, and A-198 to genuinely missing. Two full inventory builds were byte-identical at SHA-256 48fd0679e40b145168929621f38212e04a9e6e75d3dee1865881e7824c6f899d; shortage-manifest SHA-256 is 1da92be004308df08cddbb0f86ca2b0664d840492e02fc9f40fa0a2e265ddb5c. Blueprint disposition is 178 attached, 47 genuinely missing, 1 stale, and 9 unknown: A-100, A-101, A-103, A-104, A-105, A-106, A-116, A-154, and A-202. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 was not started. No grading POST, content generation, bank/course mutation, PR, or merge occurred."
+  },
+  {
     "ts": "2026-08-22T13:14Z",
     "course": "APWH",
     "text": "Gate 2 overnight checkpoint: GitHub would not reopen closed intake #72, so the authorized fallback is open as intake #96 for the HumGeo publisher-binding requeue; no publisher, course, deployment, or learner-surface write occurred. APWH input pins remain unchanged and the inventory self-test passes. The current canonical grader repo and stored S3 reports contain three ordinary SAQ/LEQ/DBQ round trips but no adversarial boundary receipt set, so A-100, A-101, A-103, A-104, A-105, A-106, and A-154 remain unknown pending grader-owner evidence. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked."
