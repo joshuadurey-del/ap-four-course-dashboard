@@ -6,13 +6,13 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 22, 2026 · 11:47 KST',
+  snapshot: 'Aug 22, 2026 · 12:16 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
     { id: 2, name: 'Inventory', state: 'closed', status: 'Closed', detail: 'The sanctioned read-only bank audit and deterministic reconciliation account for all 8,377 required rows with zero unknown or unmeasured and prove an exact four-slot shortage.' },
-    { id: 3, name: 'Fill gaps', state: 'locked-evidence', status: 'Locked · exact shortage known', detail: 'Gate 2 proved four missing slots and selected one reusable topic-5.4 item. Gate 3 remains locked until separately opened.' },
+    { id: 3, name: 'Fill gaps', state: 'active', status: 'Underway · four-slot scope', detail: 'Gate 3 is underway by owner direction against the four proved shortages, with one reusable topic-5.4 item identified. No Gate 3 outcome is claimed yet.' },
     { id: 4, name: 'Assemble', state: 'locked-evidence', status: 'Locked · evidence exists', detail: 'Repository landings exist, but PR #61\'s S3 publication and live-surface verification are still retrying. No deployment credit is awarded while this gate is locked.' },
     { id: 5, name: 'Learner proof', state: 'locked', status: 'Locked', detail: 'Historical local walks do not prove the current canonical course. Exact deployed-byte learner verification belongs here after assembly.' },
     { id: 6, name: 'Release', state: 'locked', status: 'Locked', detail: 'TimeBack, EOC, production readback, and final approval remain later release obligations.' }
@@ -20,15 +20,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 2 · closed locally', statusTone: 'green', mapping: 'Approved gate sequence', observed: 'Aug 22 · 02:47Z',
-      summary: 'Official scope and the 8,377-row inventory are locked. The exact Gate 3 shortage is four; Gate 3 remains unopened.',
+      status: 'Gate 3 · underway', statusTone: 'blue', mapping: 'Approved gate sequence', observed: 'Aug 22 · 03:16Z',
+      summary: 'Official scope and the 8,377-row inventory are locked. Gate 3 is underway against the exact four-slot shortage.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
         { value: '4', label: 'exact Gate 3 shortage' }
       ],
-      etaDays: 'AWAITING GATE 3',
-      etaNote: 'Gate 2 is closed locally. Gate 3 remains locked until separately opened; no generation, attachment, or deployment is authorized.'
+      etaDays: 'GATE 3 UNDERWAY',
+      etaNote: 'Gate 2 is closed locally. Gate 3 is underway against the four proved shortages; no Gate 3 outcome or completion is claimed yet.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -64,12 +64,12 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'HumGeo uses the approved gate sequence. Gates 0, 1, and 2 have closure credit. Later rows remain locked evidence only.',
+      note: 'HumGeo uses the approved gate sequence. Gates 0, 1, and 2 have closure credit. Gate 3 is active; later rows remain locked evidence only.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · local candidate', signal: '8,377 classified · 0 unknown · 4-slot shortage', copy: 'A sanctioned metadata-only factory-bank snapshot and independent deterministic review closed the inventory. The candidate was not pushed or deployed.', href: 'claims.html' },
-        { gate: 3, state: 'evidence', status: 'Evidence · gate locked', signal: '4 exact missing slots · 1 reusable topic-5.4 item', copy: 'The shortage is now measured, but Gate 3 remains locked and no generation or attachment has been authorized.', href: 'claims.html' },
+        { gate: 3, state: 'active', status: 'Active · underway', signal: '4 exact missing slots · 1 reusable topic-5.4 item', copy: 'Gate 3 is underway by owner direction against the measured shortage. No Gate 3 output or completion is claimed yet.', href: 'claims.html' },
         { gate: 4, state: 'evidence', status: 'Evidence · gate locked', signal: 'Repository landings exist · PR #61 S3 publication pending', copy: 'Merged repository bytes do not prove a published or learner-visible course. The fleet retry must finish and read back the exact 30 changed keys before deployment credit is possible.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/61' }
       ]
     },
@@ -158,7 +158,7 @@ const AP4_DASHBOARD = {
       <div>
         <span class="badge b-blue">Active course</span>
         <h2>${activeCourse.label}</h2>
-        <p class="timeline-sub">HumGeo has three closed gates; Gate 3 and every later gate remain locked. Other courses keep their verified work visible below without being rendered as empty gate rows.</p>
+        <p class="timeline-sub">HumGeo has three closed gates; Gate 3 is underway and Gates 4-6 remain locked. Other courses keep their verified work visible below without being rendered as empty gate rows.</p>
       </div>
       <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
     </div>
@@ -176,12 +176,12 @@ const AP4_DASHBOARD = {
     </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
-        <div><span class="eyebrow">Latest closed course gate</span><h3>Gate 2 · Reconcile existing assets</h3></div>
-        <span class="badge b-green">CANDIDATE_INVENTORY_LOCKED</span>
+        <div><span class="eyebrow">Current active gate</span><h3>Gate 3 · Fill proved gaps</h3></div>
+        <span class="badge b-blue">UNDERWAY</span>
       </div>
       <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
         ${AP4_DASHBOARD.gates.map(gate => `
-          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 2}">
+          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 3}">
             <span class="active-gate-dot">G${gate.id}</span>
             <span class="active-gate-name">${gate.name}</span>
             <small>${gate.status}</small>

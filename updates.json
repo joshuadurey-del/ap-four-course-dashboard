@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-22T03:16Z",
+    "course": "HumGeo",
+    "text": "Gate 3 is UNDERWAY by owner direction against the exact four-slot shortage proved by Gate 2, with one reusable topic-5.4 DOK-1 bank item identified. This records the gate opening only: no Gate 3 output, completion, attachment, deployment, or learner-surface claim is made. Gates 4-6 remain locked."
+  },
+  {
     "ts": "2026-08-22T02:47Z",
     "course": "HumGeo",
     "text": "Gate 2 is CLOSED locally as CANDIDATE_INVENTORY_LOCKED. A sanctioned APUSH-derived auditor read 713 passed/available HumGeo MCQs across topics 3.4, 4.4, 5.4, 6.4, and 6.6 in one REPEATABLE READ, server-confirmed READ ONLY transaction and rolled it back. Deterministic reconciliation classified all 8,377 required rows as 7,926 attached, 218 unattached, 168 stale, and a 65-row genuinely-missing class comprising 61 policy-excluded missing-by-design rows plus the four true Gate 3 shortages, with zero unknown or unmeasured; one topic-5.4 DOK-1 item is reusable. Independent Fable review returned CANDIDATE_INVENTORY_LOCKED on local commit 675b4bfde6a680198f519e27fde953453d026285. No push, deployment, bank mutation, generation, attachment, or learner-surface write occurred. Gates 3-6 remain locked."
