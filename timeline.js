@@ -2,12 +2,12 @@
 Dashboard display contract:
 - Counts describe observable work units. They are never added into a completion score.
 - HumGeo is the active seven-gate rail; APWH has its own owner-directed six-gate plan
-  with optional Gate 0 and a closed Gate 1.
+  with optional Gate 0, a closed Gate 1, and an open Gate 2.
 - APUSH and Psychology mappings are retrospective filing aids, not gate credit.
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 22, 2026 · 17:33 KST',
+  snapshot: 'Aug 22, 2026 · 19:21 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -21,8 +21,8 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 4 · HOLD', statusTone: 'amber', mapping: 'Approved gate sequence', observed: 'Aug 22 · 07:16Z',
-      summary: 'Official scope, the 8,377-row inventory, and the four-item factory gap fill are closed locally. Gate 4 waits on the AP One publisher contract requested on #659.',
+      status: 'Gate 4 · HOLD', statusTone: 'amber', mapping: 'Approved gate sequence', observed: 'Aug 22 · 10:21Z',
+      summary: 'Official scope, the 8,377-row inventory, and the four-item factory gap fill are closed locally. #659 remains unanswered; GET-only PR #842 does not satisfy the publisher contract.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
@@ -33,8 +33,8 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Gate 1 · CLOSED', statusTone: 'green', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 08:33Z',
-      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Gate 2 inventory is not started; accepted-bank and AP One projection bytes still need reconciliation.',
+      status: 'Gate 2 · IN PROGRESS', statusTone: 'amber', mapping: 'Owner-directed gate sequence', observed: 'Aug 22 · 10:21Z',
+      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Gate 2 is open for read-only inventory; its first exhaustive live-bank packet is fail-closed pending a sanctioned measurement corridor.',
       footprint: [
         { value: '71', label: 'official topics and LOs' },
         { value: '176', label: 'lesson identities mapped' },
@@ -76,10 +76,10 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH six-gate sequence',
-      note: 'Gate 1 has local closure credit on pinned bytes. Gate 2 is locked and not started; later evidence remains visible without advancing a gate.',
+      note: 'Gate 1 has local closure credit on pinned bytes. Josh opened Gate 2 for read-only inventory; Gate 3 remains locked and later evidence does not advance it.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'locked', status: 'Locked · not started', signal: '933 accepted items · 698 projected items · reconciliation required', copy: 'Accepted-bank proof is real, but the AP One projection differs. Inventory must classify the exact bytes before any shortage or placement credit.', href: 'https://github.com/ilmych/apwh-blueprint-build/issues/48' },
+        { gate: 2, state: 'active', status: 'In progress · measurement hold', signal: '71 topics · 3,823 available MCQs · passed/topic census pending', copy: 'The read-only exhaustive packet stopped fail-closed before connecting because the sanctioned measurement corridor is unavailable. The public total proves subject-level availability only; it earns no per-topic, passed-QC, placement, or shortage credit.', href: 'https://test-builder.inceptstore.com/api/subjects' },
         { gate: 4, state: 'evidence', status: 'Locked evidence only', signal: '0 of 71 tenant gates preserved', copy: 'The current launch expectation records the serving gap. It belongs to assembly and learner proof and does not reopen Gate 1.', href: 'https://github.com/InceptTrilogy/ap-one/tree/2029c52bcf373ee0446925f56a157eb3b8dbf674/services/bff/data/courses/ap-world-history-fall-2026-v1' }
       ]
     },

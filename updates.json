@@ -1,5 +1,15 @@
 [
   {
+    "ts": "2026-08-22T10:21Z",
+    "course": "APWH",
+    "text": "Josh explicitly opened Gate 2 for read-only inventory; Gate 3 remains locked. The first packet uses an exhaustive metadata-only census of available, passed MCQs across all 71 official topics. It stopped fail-closed before a database connection because a sanctioned measurement corridor is unavailable. The public factory census reports 3,823 available APWH MCQs, but that broader total earns no per-topic, passed-QC, placement, or shortage credit. No bank, course, APWH, or remote mutation occurred."
+  },
+  {
+    "ts": "2026-08-22T10:21Z",
+    "course": "HumGeo",
+    "text": "Latest Gate 4 readback: AP One #659 has no response after the publisher-contract request. AP One main advanced to bb17b21b856d81de4ba26c468790f0c5896a3c75 through PR #842, but that change is GET-only, explicitly carries no writer authority, and does not bind the Gate 3 package. HumGeo remains HOLD: BLOCKED_CONTRACT; nothing is landed, deployed, released, or learner-proven, and Gates 5-6 remain locked."
+  },
+  {
     "ts": "2026-08-22T08:33Z",
     "course": "APWH",
     "text": "Gate 1 is CLOSED — SCOPE_LOCKED under the owner-directed APWH six-gate plan. Pinned evidence proves the exact current 9-unit, 71-topic, 71-LO identity, 176 lesson identities, and 71 production topic gates; the explicit-course-dir suite passed 356 with 3 skipped and all eight scope mutations failed closed. This does not claim full blueprint conformance, deployment, or learner serving: A-097 plus 37 MISSING remain disclosed, accepted-output/AP One item bytes still need Gate 2 reconciliation, and the tenant expectation still records 0 of 71 gates. Gate 2 is LOCKED — NOT STARTED until Josh opens it."

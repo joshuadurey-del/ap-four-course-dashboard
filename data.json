@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-22T08:33Z",
+  "snapshot": "2026-08-22T10:21Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T08:33Z",
-      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. HumGeo remains the active seven-gate rail. APWH now has its own owner-directed six-gate plan with optional Gate 0: Gate 1 is CLOSED — SCOPE_LOCKED and Gate 2 is LOCKED — NOT STARTED. APUSH and Psychology remain provisional evidence maps without gate credit.",
+      "observed_at": "2026-08-22T10:21Z",
+      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. HumGeo remains the active seven-gate rail at Gate 4 HOLD: BLOCKED_CONTRACT. APWH has its own owner-directed six-gate plan with optional Gate 0: Gate 1 is CLOSED — SCOPE_LOCKED and Josh explicitly opened Gate 2. Gate 2 is IN_PROGRESS; Gate 3 remains locked. APUSH and Psychology remain provisional evidence maps without gate credit.",
       "scope": "accessible onboarding, course-build, dashboard, current factory guide, and skill-pack sources",
       "evidence": [
         {
@@ -15,8 +15,8 @@
         },
         {
           "type": "owner-direction",
-          "observed_at": "2026-08-22T07:16Z",
-          "scope": "draft the APWH six-gate plan and start optional Gate 0 or Gate 1; successor gates require explicit opening"
+          "observed_at": "2026-08-22T10:20Z",
+          "scope": "open APWH Gate 2; successor gates still require explicit opening"
         }
       ],
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T08:33Z",
-      "value": "Each course page quantifies observable work in its native units and maps only evidenced work to its likely gate home. Unlike units are not summed, empty gates are omitted, and historical or locked-gate evidence is explicitly labeled as no gate credit. HumGeo remains the active rail; APWH Gate 1 now has local closure credit while its successor stays locked.",
+      "observed_at": "2026-08-22T10:21Z",
+      "value": "Each course page quantifies observable work in its native units and maps only evidenced work to its likely gate home. Unlike units are not summed, empty gates are omitted, and historical or locked-gate evidence is explicitly labeled as no gate credit. HumGeo remains the active rail; APWH Gate 1 has local closure credit and Gate 2 is now open for read-only reconciliation, with Gate 3 still locked.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -78,9 +78,9 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T04:07Z",
-      "value": "Gates 0-3 are CLOSED locally. Gate 2 exhaustively classified all 8,377 required rows as 7,926 attached, 218 unattached, 168 stale, and 65 genuinely missing, with zero unknown or unmeasured and exactly four Gate 3 shortages. Gate 3 generated only those four shortages through the served Content Factory and accepted all four after matching full QC. One factory-clean placement collision was retained and regenerated from a course-governed source; zero shortage or nonterminal residue remains. Evidence-only PR #63 is open at head 7b8a01727426abcf063cc6d86e8222863c1eb111 while canonical main remains aa11026aa53e12623bf40a7aeff1931b491065dd. Gate 4 is UNDERWAY by explicit owner direction. Nothing is yet landed in AP One, published, deployed, or learner-proven; Gates 5-6 remain locked.",
-      "scope": "Gate 1-3 local closure and Gate 4 review opening; no canonical landing, deployment, or learner-surface claim",
+      "observed_at": "2026-08-22T10:21Z",
+      "value": "Gates 0-3 are CLOSED locally. Gate 2 exhaustively classified all 8,377 required rows as 7,926 attached, 218 unattached, 168 stale, and 65 genuinely missing, with zero unknown or unmeasured and exactly four Gate 3 shortages. Gate 3 filled only those four shortages through the served Content Factory with matching full QC; zero shortage or nonterminal residue remains. PR #63 merged the reviewed package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db. Gate 4 remains HOLD: BLOCKED_CONTRACT. AP One main advanced to bb17b21b856d81de4ba26c468790f0c5896a3c75 through GET-only PR #842, which explicitly adds no writer authority and does not bind the Gate 3 package. No response followed the Gate 4 request on #659 as of this observation. Nothing is yet landed in AP One, published, deployed, or learner-proven; Gates 5-6 remain locked.",
+      "scope": "Gate 1-3 local closure and current Gate 4 publisher-contract hold; no AP One landing, deployment, or learner-surface claim",
       "evidence": [
         {
           "type": "official-ced",
@@ -124,7 +124,13 @@
           "type": "gate-2-3-review",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
           "head": "7b8a01727426abcf063cc6d86e8222863c1eb111",
+          "merge_commit": "4bd35b9ca350924fef2653f71c64270baa3ea9db",
           "delivery_package_sha256": "508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3"
+        },
+        {
+          "type": "get-only-authority-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/842",
+          "ap_one_main": "bb17b21b856d81de4ba26c468790f0c5896a3c75"
         },
         {
           "type": "owner-direction",
@@ -165,8 +171,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T07:16Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally. Gate 2 is INVENTORY_LOCKED with 8,377 classified rows, zero unknown or unmeasured, and four exact shortages. Gate 3 is CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates, one retained placement collision, and zero remaining or nonterminal residue. PR #63 merged the evidence package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db; delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Gate 4 is HOLD: BLOCKED_CONTRACT because the current AP One publisher does not bind that package into its input, seal/version transition, whole-course deployment manifest, authorized writer invocation, recovery path, and exact readback. The unblock request is posted on AP One #659. No AP One, TimeBack, publish, deployment, release, or learner-surface write is claimed; Gates 5-6 remain locked.",
+      "observed_at": "2026-08-22T10:21Z",
+      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally. Gate 2 is INVENTORY_LOCKED with 8,377 classified rows, zero unknown or unmeasured, and four exact shortages. Gate 3 is CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates, one retained placement collision, and zero remaining or nonterminal residue. PR #63 merged the evidence package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db; delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Gate 4 is HOLD: BLOCKED_CONTRACT because the current AP One publisher does not bind that package into its input, seal/version transition, whole-course deployment manifest, authorized writer invocation, recovery path, and exact readback. AP One main is bb17b21b856d81de4ba26c468790f0c5896a3c75 after GET-only PR #842; that change explicitly adds no writer authority and does not satisfy the package contract. The unblock request remains unanswered on AP One #659 as of this observation. No AP One, TimeBack, publish, deployment, release, or learner-surface write is claimed; Gates 5-6 remain locked.",
       "scope": "owner-approved HumGeo completion sequence and current gate state",
       "evidence": [
         {
@@ -233,6 +239,11 @@
           "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5378967008"
         },
         {
+          "type": "get-only-authority-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/842",
+          "ap_one_main": "bb17b21b856d81de4ba26c468790f0c5896a3c75"
+        },
+        {
           "type": "owner-direction",
           "observed_at": "2026-08-22T04:07Z",
           "scope": "Gate 4 opened and underway only"
@@ -244,9 +255,9 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T08:33Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at blueprint SHA 8a6ebccbc72451217d1739791d89c14f492ccb60 and AP One SHA 2029c52bcf373ee0446925f56a157eb3b8dbf674. Exact current official identity is 9 units, 71 topics, and 71 LOs; the pinned accepted-output/AP One chain has 176 lesson identities and 71 production topic gates. A readable explicit-course-dir oracle rerun reports 94 PASS, 97 DOCUMENTED, 37 MISSING, 3 DEVIATION-RECORDED, 1 FAIL A-097, 1 ESCALATED, and 2 WARN; that broad conformance debt is preserved and is not represented as full blueprint completion. Gate 2 remains locked and no APWH remote write occurred.",
-      "scope": "Gate 1 official-scope identity only; excludes inventory, full blueprint conformance, deployment, and learner serving",
+      "observed_at": "2026-08-22T10:21Z",
+      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at blueprint SHA 8a6ebccbc72451217d1739791d89c14f492ccb60 and frozen AP One projection SHA 2029c52bcf373ee0446925f56a157eb3b8dbf674. Exact current official identity is 9 units, 71 topics, and 71 LOs; the pinned accepted-output/AP One chain has 176 lesson identities and 71 production topic gates. Josh explicitly opened Gate 2. Its first read-only packet targets available, passed MCQs across all 71 topics and stopped fail-closed before a database connection because a sanctioned exhaustive measurement corridor is not available. The public factory census reports 3,823 available APWH MCQs, but that broader count earns no per-topic, passed-QC, placement, or shortage credit. AP One main advanced to bb17b21b856d81de4ba26c468790f0c5896a3c75 only through a HumGeo GET-authority change, so the frozen APWH projection bytes did not change. Gate 2 remains IN_PROGRESS, Gate 3 remains locked, and no APWH remote write occurred.",
+      "scope": "Gate 1 official-scope identity and Gate 2 opening only; excludes inventory closure, full blueprint conformance, deployment, and learner serving",
       "evidence": [
         {
           "type": "oracle-source",
@@ -267,8 +278,14 @@
         },
         {
           "type": "owner-direction",
-          "observed_at": "2026-08-22T07:16Z",
-          "scope": "APWH six-gate plan and Gate 0/1 execution"
+          "observed_at": "2026-08-22T10:20Z",
+          "scope": "explicitly open APWH Gate 2"
+        },
+        {
+          "type": "public-factory-subject-census",
+          "url": "https://test-builder.inceptstore.com/api/subjects",
+          "observed_at": "2026-08-22T10:21Z",
+          "mcq_available": 3823
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
