@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T01:16Z",
+    "course": "Cross-course",
+    "text": "The overview course cards now show only each course’s current TimeBack gate and next governed step. The mostly contextless work-unit numbers were removed from the cards; detailed evidence and counts remain on the course pages. No course state, gate state, publication, enrollment, activation, learner, PR, or merge action changed in this presentation update."
+  },
+  {
     "ts": "2026-08-23T00:40Z",
     "course": "Cross-course",
     "text": "The four course plans are realigned around Ilma's AP One native TimeBack runbook. Gates 0-3 now produce accepted source; Gates 4-11 separately bind the profile and Phase 0 authority, seal the graph/preview and all-absent plan, publish dark with exact readback and zero-write replay, enroll owner canaries, activate privately, run fresh-learner acceptance, and approve broader enrollment. No accepted historical receipt was rewritten or discarded: exact evidence moved only to its new credit home. HumGeo is Gate 4 IN_PROGRESS; APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology begin Gate 0 baseline while retaining all mapped evidence. No course, publication, enrollment, activation, PR, or merge action occurred in this dashboard update."

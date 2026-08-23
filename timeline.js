@@ -1,13 +1,13 @@
 /*
 Dashboard display contract:
-- Counts describe observable work units. They are never added into a completion score.
+- Overview cards show only the current TimeBack gate and next governed step.
 - All four courses use the same local source-acceptance gates followed by Ilma's native
   TimeBack publication lifecycle.
 - Historical receipts retain their original scope and move only to a new credit home.
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 23, 2026 · 09:40 KST',
+  snapshot: 'Aug 23, 2026 · 10:16 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -27,7 +27,7 @@ const AP4_DASHBOARD = {
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
       status: 'Gate 4 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 00:40Z',
-      summary: 'Gates 0-3 retain closure credit. #96 and Ilma’s #659 ruling resolve the route and authority; the HumGeo profile and complete Phase-0 packet remain open.',
+      nextStep: 'Finish the reviewed HumGeo profile and Phase 0 source/authority packet, then bind package 508543c1 into AP One’s frozen 68/204 input without rewriting content.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
@@ -39,7 +39,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
       status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 22 · 13:33Z',
-      summary: 'The exact 9-unit, 71-topic, 71-LO scope is locked. Existing read-only evidence is retained, but nine blueprint clauses remain unknown and Gate 3 stays locked.',
+      nextStep: 'Resolve the nine unknown blueprint clauses and rerun the pinned Gate 2 reconciliation to zero unknown before opening Gate 3.',
       footprint: [
         { value: '2,791', label: 'live passed/available MCQs' },
         { value: '10,511', label: 'source/served identities reconciled' },
@@ -48,8 +48,8 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
-      status: 'Gate 0 · BASELINE', statusTone: 'blue', mapping: 'Runbook-aligned migration', observed: 'Aug 23 · 00:40Z',
-      summary: 'The shared lifecycle is adopted. Existing blueprint, inventory, accepted-ledger, and seating evidence is retained while the live writer and canonical-input baseline is established.',
+      status: 'Gate 0 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned migration', observed: 'Aug 23 · 00:40Z',
+      nextStep: 'Complete the live-writer and canonical-input census, then bind the existing evidence into exact Gate 1–3 closure packets without repeating accepted work.',
       footprint: [
         { value: '2,479', label: 'generation-QC candidates' },
         { value: '38', label: 'accepted positions' },
@@ -58,8 +58,8 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
-      status: 'Gate 0 · BASELINE', statusTone: 'blue', mapping: 'Runbook-aligned migration', observed: 'Aug 23 · 00:40Z',
-      summary: 'The shared lifecycle is adopted. Article, QC, video, and image receipts remain credited while the live writer and canonical-input baseline is established.',
+      status: 'Gate 0 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned migration', observed: 'Aug 23 · 00:40Z',
+      nextStep: 'Complete the canonical-input census, bind the issue #2 and PR #28 bytes, and rerun current-source scope checks before any selective top-up.',
       footprint: [
         { value: '221', label: 'passing article sidecars' },
         { value: '15', label: 'video release assets' },
@@ -163,20 +163,16 @@ const AP4_DASHBOARD = {
       <div>
         <span class="badge b-blue">Active course</span>
         <h2>${activeCourse.label}</h2>
-        <p class="timeline-sub">All four courses now share the source-acceptance gates and Ilma's native TimeBack lifecycle. HumGeo has four closed gates and Gate 4 active; later gates remain locked. Prior receipts stay visible at their new credit homes.</p>
+        <p class="timeline-sub">Each card shows only the current TimeBack gate and the next governed step. Open a course page for its receipts and detailed evidence map.</p>
       </div>
       <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
     </div>
-    <div class="course-card-grid" aria-label="Observable work by course">
+    <div class="course-card-grid" aria-label="Current TimeBack gate and next step by course">
       ${courses.map(course => `
         <a class="course-summary-card${course.id === activeCourse.id ? ' is-active' : ''}" href="${course.id}.html" style="--course-color:${course.color}"${course.id === activeCourse.id ? ' aria-current="true"' : ''}>
           <span class="course-card-status b-${course.statusTone}">${course.status}</span>
           <h3>${course.label}</h3>
-          <div class="course-card-metrics">
-            ${course.footprint.map(metric => `<span><strong>${metric.value}</strong><small>${metric.label}</small></span>`).join('')}
-          </div>
-          <p>${course.summary}</p>
-          <small>${course.mapping} · receipts through ${course.observed}</small>
+          <p><strong>Next:</strong> ${course.nextStep}</p>
         </a>`).join('')}
     </div>
     <div class="active-gate-wrap">
