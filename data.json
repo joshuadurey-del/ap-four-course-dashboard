@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-23T00:40Z",
+  "snapshot": "2026-08-23T05:39Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T00:40Z",
-      "value": "All four courses now use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook: Gates 0-3 establish accepted source; Gates 4-11 bind profile/authority, offline graph and preview, sealed all-absent plan, dark publication, canary enrollment, private activation, fresh-learner acceptance, and broader enrollment. Existing receipts retain exact scope and move only to a new credit home. HumGeo is at Gate 4 IN_PROGRESS; APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained.",
+      "observed_at": "2026-08-23T05:39Z",
+      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gates 0-4 are closed; Gate 5 remains locked pending explicit opening. APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained. No HumGeo TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T00:40Z",
-      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo Gates 0-3 and APWH Gate 1 retain closure credit; APWH Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
+      "observed_at": "2026-08-23T05:39Z",
+      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo Gates 0-4 and APWH Gate 1 retain closure credit; APWH Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -78,9 +78,9 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T00:40Z",
-      "value": "Gates 0-3 are CLOSED locally. Gate 2 exhaustively classified all 8,377 required rows with zero unknown or unmeasured and exactly four shortages. The four proved gaps passed matching factory QC, and PR #63 merged the reviewed package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db, closing SOURCE_ACCEPTED. Intake #96 is closed and routed to AP One #659. Ilma's #659 ruling owns the TimeBack-direct bind, authorizes Josh to do what it needs, binds package 508543c1 into the frozen 68/204 input without content rewrite, and excludes Platform3. Gate 4 is IN_PROGRESS on the reviewed profile and Phase-0 authority packet. No TimeBack publication, enrollment, activation, or learner acceptance is claimed; Gates 5-11 remain locked.",
-      "scope": "accepted HumGeo source plus current Gate 4 route/authority; excludes TimeBack publication, enrollment, activation, and learner acceptance",
+      "observed_at": "2026-08-23T05:39Z",
+      "value": "Gates 0-4 are CLOSED. AP One PR #846 merged the exact reviewed HumGeo profile and complete Phase-0 authority bind to canonical main 3c865669fb7df838bd31dc43197de09d63fcedcb. Exact-head CI passed, Deploy run 32620437842 completed semantic verification, and independent staging /version matched the merge SHA and immutable image digest. Gate 5 owns the measured 368-check article deficit and remains locked pending explicit opening. No TimeBack publication, enrollment, activation, or learner acceptance is claimed; Gates 6-11 remain locked.",
+      "scope": "accepted HumGeo source and closed Gate 4 profile/Phase-0 bind; excludes TimeBack publication, enrollment, activation, and learner acceptance",
       "evidence": [
         {
           "type": "official-ced",
@@ -136,6 +136,25 @@
           "type": "owner-direction",
           "observed_at": "2026-08-22T04:07Z",
           "scope": "Gate 4 opened and underway only"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
+          "head": "a839651a2d4f86cbb9068831ee86e7eafeca0de3",
+          "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb"
+        },
+        {
+          "type": "deploy-run",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32620437842",
+          "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
+          "conclusion": "success"
+        },
+        {
+          "type": "staging-version",
+          "url": "https://dds0j64tsey5c.cloudfront.net/version",
+          "observed_at": "2026-08-23T05:36Z",
+          "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
+          "image_digest": "sha256:8033bbe0277c5e60daa8a61e9b283a742bc9c9d086b2e7f5090e7f5f7afdbb48"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
@@ -171,8 +190,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T00:40Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-2 retain STABILIZED, SCOPE_LOCKED, and INVENTORY_LOCKED receipts. Factory CONTENT_COMPLETE plus merged PR #63 close new Gate 3 SOURCE_ACCEPTED on canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db; delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Gate 4 is IN_PROGRESS because #96 and Ilma's #659 ruling establish the TimeBack-direct route and Josh's authority, while the HumGeo profile and exact Phase-0 packet remain open. No TimeBack publication, enrollment, activation, or learner acceptance is claimed; Gates 5-11 remain locked.",
+      "observed_at": "2026-08-23T05:39Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-3 retain STABILIZED, SCOPE_LOCKED, INVENTORY_LOCKED, and SOURCE_ACCEPTED receipts. Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND on AP One main 3c865669fb7df838bd31dc43197de09d63fcedcb; exact-head CI, Deploy semantics, and independent staging /version readback passed. Gate 5 remains locked pending explicit opening; Gates 6-11 remain locked. No TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -247,6 +266,17 @@
           "type": "owner-direction",
           "observed_at": "2026-08-22T04:07Z",
           "scope": "Gate 4 opened and underway only"
+        },
+        {
+          "type": "gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
+          "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb"
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32620437842",
+          "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
+          "conclusion": "success"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
@@ -538,8 +568,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "HumGeo Gates 0-3 are CLOSED, including SOURCE_ACCEPTED on merged PR #63. Gate 4 is IN_PROGRESS: #659 owns the TimeBack-direct bind and Josh has authority, while the course profile and exact Phase-0 authority packet remain open. Gates 5-11 are locked. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
+      "status_at": "2026-08-23T05:39Z",
+      "value": "HumGeo Gates 0-4 are CLOSED, including PROFILE_AND_SOURCE_BOUND on AP One main 3c865669fb7df838bd31dc43197de09d63fcedcb with exact Deploy and staging /version readback. Gate 5 remains locked pending explicit opening; Gates 6-11 remain locked. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -558,6 +588,11 @@
           "type": "owner-direction",
           "observed_at": "2026-08-22T04:07Z",
           "scope": "Gate 4 opened and underway only"
+        },
+        {
+          "type": "gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
+          "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+OWNER_DIRECTION"

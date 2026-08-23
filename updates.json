@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T05:39Z",
+    "course": "HumGeo",
+    "text": "Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. AP One PR #846 merged the exact reviewed profile and complete Phase-0 authority bind to canonical main 3c865669fb7df838bd31dc43197de09d63fcedcb. Exact-head CI passed; Deploy run 32620437842 completed semantic verification; independent staging /version matched the merge SHA and immutable image digest. Gate 5 owns the measured 368-check article deficit and remains locked pending explicit opening. No TimeBack publication, enrollment, activation, or learner acceptance is claimed."
+  },
+  {
     "ts": "2026-08-23T01:16Z",
     "course": "Cross-course",
     "text": "The overview course cards now show only each course’s current TimeBack gate and next governed step. The mostly contextless work-unit numbers were removed from the cards; detailed evidence and counts remain on the course pages. No course state, gate state, publication, enrollment, activation, learner, PR, or merge action changed in this presentation update."

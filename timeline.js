@@ -7,14 +7,14 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 23, 2026 · 10:16 KST',
+  snapshot: 'Aug 23, 2026 · 14:39 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
     { id: 2, name: 'Inventory', state: 'closed', status: 'Closed', detail: 'The sanctioned read-only bank audit and deterministic reconciliation account for all 8,377 required rows with zero unknown or unmeasured and prove an exact four-slot shortage.' },
     { id: 3, name: 'Accept source', state: 'closed', status: 'Closed', detail: 'Four proved shortages passed matching factory QC, and merged PR #63 binds the reviewed package to canonical HumGeo source bytes.' },
-    { id: 4, name: 'Profile + authority', state: 'active', status: 'In progress', detail: 'Ilma routed the TimeBack-direct bind to AP One #659 and authorized Josh to unblock it. The HumGeo profile, exact Phase-0 capture, namespace, and separate authority digests still need a closure packet.' },
+    { id: 4, name: 'Profile + authority', state: 'closed', status: 'Closed', detail: 'PR #846 merged the exact reviewed profile and Phase-0 bind to AP One main 3c865669. Exact-head CI, Deploy semantics, and independent staging /version readback passed.' },
     { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'Seal the complete tree, prices, hosted assets, QTI, and student-surface preview under runbook Phases 1-3.' },
     { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
     { id: 7, name: 'Dark publish', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 4 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 00:40Z',
-      nextStep: 'Finish the reviewed HumGeo profile and Phase 0 source/authority packet, then bind package 508543c1 into AP One’s frozen 68/204 input without rewriting content.',
+      status: 'Gate 4 · CLOSED', statusTone: 'green', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 05:39Z',
+      nextStep: 'Review the Gate 4 closure receipt and explicitly open Gate 5; then seal the offline graph, standalone assets, QTI, and digest-bound preview.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
         { value: '4', label: 'accepted Gate 3 artifacts' }
       ],
-      etaDays: 'GATE 4 ACTIVE',
-      etaNote: 'The accepted source is canonical and AP One #659 owns the TimeBack-direct bind. No dark publication, enrollment, activation, or learner acceptance is claimed.'
+      etaDays: 'GATE 4 CLOSED',
+      etaNote: 'The reviewed profile and Phase-0 bind are canonical and served on staging. Gate 5 remains locked; no TimeBack publication, enrollment, activation, or learner acceptance is claimed.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,13 +70,13 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gates 0-3 retain closure credit. Gate 4 is active because the route and authority are now explicit; the profile and Phase-0 packet remain open. Later gates stay locked.',
+      note: 'Gates 0-4 retain closure credit. PR #846, exact-head CI, Deploy semantics, and independent staging /version readback close Gate 4. Gate 5 awaits explicit opening; later gates stay locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · INVENTORY_LOCKED', signal: '8,377 classified · 0 unknown · 4-slot shortage', copy: 'A sanctioned metadata-only factory-bank snapshot and deterministic review closed the inventory. Its evidence is preserved in merged PR #63.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: '4 accepted · PR #63 merged · 0 residue', copy: 'The four proved shortages have matching terminal factory QC, and PR #63 binds the reviewed package to canonical source bytes.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
-        { gate: 4, state: 'active', status: 'In progress · profile/Phase 0', signal: '#96 routed · #659 owns the direct bind', copy: 'Ilma authorized Josh to bind package 508543c1 into the frozen 68/204 input without a content rewrite or Platform3 bridge. Profile, source capture, namespace, operators, and exact authority digests still need closure.', href: 'https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5381059146' }
+        { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #846 · main 3c865669 · staging exact', copy: 'The reviewed profile and complete Phase-0 authority packet merged through PR #846. Exact-head CI and Deploy passed, and staging /version independently matched the merge SHA.', href: 'https://github.com/InceptTrilogy/ap-one/pull/846' }
       ]
     },
     apwh: {
@@ -177,8 +177,8 @@ const AP4_DASHBOARD = {
     </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
-        <div><span class="eyebrow">Current gate</span><h3>Gate 4 · Profile + authority · IN PROGRESS</h3></div>
-        <span class="badge b-blue">UNDERWAY</span>
+        <div><span class="eyebrow">Latest closed gate</span><h3>Gate 4 · Profile + authority · CLOSED</h3></div>
+        <span class="badge b-green">CLOSED</span>
       </div>
       <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
         ${AP4_DASHBOARD.gates.map(gate => `
