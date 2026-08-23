@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T07:09Z",
+    "course": "HumGeo",
+    "text": "Gate 2 repair prerequisites are ready but not yet closed. HumGeo PR #64 is open and mergeable at exact head b3e0e28d6aa8501ae04043c51a362cc0efdaa90f; its supplemental inventory binds 5,215 checked items and persists only the 203 stale-unusable IDs, with 42 focused and 823 full-suite passes. Ilma merged factory PR #271 at 24b084e223b872b3135b71cb2639d13779fc1b07; exact Deploy API run 32624230465 passed and live /version independently matched that SHA with no newer competing deploy. Generation remains locked until Ilma merges PR #64."
+  },
+  {
     "ts": "2026-08-23T06:47Z",
     "course": "HumGeo",
     "text": "Gate 5 opened and is HOLD — SOURCE_BANK_ANSWER_SHAPE. The exact Gate 4-bound verifier reproduced 85 uniquely-longest correct answers in 2,251 native MCQs, 109 in 1,715 PP100 items, 9 in 34 Train Your Eye items, and 0 in 1,215 sync checks; report self-digest 0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256. Gate 2 is reopened for a bounded 203-record reclassification and replacement chain; Gates 3-11 are locked pending fresh closures. No TimeBack publication, enrollment, activation, or learner acceptance occurred."

@@ -7,7 +7,7 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 23, 2026 · 15:47 KST',
+  snapshot: 'Aug 23, 2026 · 16:09 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -26,8 +26,8 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 2 · REOPENED', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 06:47Z',
-      nextStep: 'Reclassify the exact 203 answer-shape failures, seal the bounded shortage, and replace only those records before rebuilding the Gate 4 bind and resuming Gate 5.',
+      status: 'Gate 2 · REOPENED', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 07:09Z',
+      nextStep: 'Ilma merges HumGeo PR #64; then replace only its 203 sealed records through the now-deployed factory fix before rebuilding the Gate 4 bind and resuming Gate 5.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
@@ -74,7 +74,7 @@ const AP4_DASHBOARD = {
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
-        { gate: 2, state: 'active', status: 'Reopened · bounded repair', signal: '203 exact source failures · 3 affected banks', copy: 'The Gate 5 answer-shape verifier found 85 native MCQ, 109 PP100, and 9 Train Your Eye records whose correct answer is uniquely longest. Reclassify only those exact records before replacement.', href: 'humgeo.html' },
+        { gate: 2, state: 'active', status: 'Reopened · bounded repair', signal: 'PR #64 · 203 exact source failures · factory deployed', copy: 'PR #64 seals the 203-record supplemental shortage at head b3e0e28d. Ilma merged the APHG prompt fix and exact Deploy API run 32624230465 is live at 24b084e2; generation still waits for PR #64 merge.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/64' },
         { gate: 3, state: 'evidence', status: 'Historical closure evidence', signal: '4 accepted · PR #63 merged · prior residue 0', copy: 'The prior four-shortage receipt stays immutable, but Gate 3 cannot regain current closure until the reopened Gate 2 shortage is replaced and QC-bound.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
         { gate: 4, state: 'evidence', status: 'Historical closure evidence', signal: 'PR #846 · main 3c865669 · staging exact', copy: 'PR #846, Deploy, and staging readback remain exact for their bound bytes. Any repaired source bytes require a fresh Gate 4 digest before Gate 5 can resume.', href: 'https://github.com/InceptTrilogy/ap-one/pull/846' },
         { gate: 5, state: 'evidence', status: 'Hold · answer shape', signal: '85 native · 109 PP100 · 9 Train Your Eye · 0 sync', copy: 'The exact Gate 4-bound report has self-digest 0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256 and fails the required zero-uniquely-longest rule.', href: 'humgeo.html' }

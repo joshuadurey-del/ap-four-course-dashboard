@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-23T06:47Z",
+  "snapshot": "2026-08-23T07:09Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -73,6 +73,39 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
+    },
+    {
+      "claim_id": "humgeo.gate2.answer_shape_reopen",
+      "section": "HumGeo",
+      "status": "IN_PROGRESS",
+      "observed_at": "2026-08-23T07:09Z",
+      "value": "HumGeo PR #64 is open and mergeable at exact head b3e0e28d6aa8501ae04043c51a362cc0efdaa90f. Its supplemental Gate 2 inventory binds 5,215 checked items and persists only the 203 stale-unusable IDs; 42 focused tests and the complete 823-pass course suite passed. Ilma merged factory PR #271 at 24b084e223b872b3135b71cb2639d13779fc1b07. Exact Deploy API run 32624230465 succeeded and live /version independently matched that SHA; no newer competing deploy existed. Generation remains locked until Ilma merges PR #64.",
+      "scope": "bounded Gate 2 answer-shape reclassification and deployed APHG prompt prerequisite; excludes generation, source replacement, TimeBack publication, enrollment, activation, and release",
+      "evidence": [
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
+          "head": "b3e0e28d6aa8501ae04043c51a362cc0efdaa90f"
+        },
+        {
+          "type": "factory-pull-request",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/271",
+          "merge_commit": "24b084e223b872b3135b71cb2639d13779fc1b07"
+        },
+        {
+          "type": "factory-deploy-run",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/32624230465",
+          "commit": "24b084e223b872b3135b71cb2639d13779fc1b07",
+          "conclusion": "success"
+        },
+        {
+          "type": "factory-version",
+          "url": "https://test-builder.inceptstore.com/version",
+          "observed_at": "2026-08-23T07:09Z",
+          "commit": "24b084e223b872b3135b71cb2639d13779fc1b07"
+        }
+      ],
+      "evidence_access": "GITHUB+LIVE_FACTORY_READBACK"
     },
     {
       "claim_id": "humgeo.blueprint.audit",
