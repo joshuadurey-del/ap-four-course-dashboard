@@ -238,8 +238,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T08:23Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main 00b5926c41410f47dd48280c915e46422f16bbbe after exact verification of the 203-record supplemental shortage. Gate 3 is IN_PROGRESS for bounded replacement; Gates 4-11 are locked pending fresh closures. The prior Gate 3-4 receipts remain immutable historical evidence for their exact bytes, including AP One main 3c865669fb7df838bd31dc43197de09d63fcedcb and matching Deploy/staging readback. No source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-23T08:46Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main 00b5926c41410f47dd48280c915e46422f16bbbe after exact verification of the 203-record supplemental shortage. Gate 3 is HOLD — BLOCKED_CONTRACT: the deployed factory at 24b084e223b872b3135b71cb2639d13779fc1b07 rejects exact AP Human Geography DOK targeting on the standard generation route, leaving 178 governed DOK-2/3 placements without a sanctioned exact target and acceptance mechanism. No paid generation call was made; all 203 placements remain reconciled as residue and Gates 4-11 remain locked. The prior Gate 3-4 receipts remain immutable historical evidence for their exact bytes. No source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -331,6 +331,11 @@
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
           "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
           "manifest_self_sha256": "7755525e29bf2eb77f0856636b712a95cde974e79ba17a05c52d523b1ed4cdca"
+        },
+        {
+          "type": "gate-3-factory-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/commit/24b084e223b872b3135b71cb2639d13779fc1b07",
+          "openapi_sha256": "784f025c0a46e6c31b5c8d7130326869df1483f7b2370e4d8c0ff11a3efec72a"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
@@ -621,9 +626,9 @@
     {
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
-      "status": "PLANNED",
-      "status_at": "2026-08-23T08:23Z",
-      "value": "HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT and Gate 3 is IN_PROGRESS for the exact bounded source replacement. Gates 4-11 remain locked. The prior PROFILE_AND_SOURCE_BOUND, Deploy, and staging receipts remain exact for their historical source digest but do not clear repaired bytes. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
+      "status": "BLOCKED",
+      "status_at": "2026-08-23T08:46Z",
+      "value": "HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT and Gate 3 is HOLD — BLOCKED_CONTRACT on exact AP Human Geography DOK targeting. All 203 replacement placements remain residue; Gates 4-11 remain locked and were not started. The prior PROFILE_AND_SOURCE_BOUND, Deploy, and staging receipts remain exact for their historical source digest but do not clear repaired bytes. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {

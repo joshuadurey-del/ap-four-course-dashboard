@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T08:46Z",
+    "course": "HumGeo",
+    "text": "Gate 3 is HOLD — BLOCKED_CONTRACT. The 203 repaired-Gate-2 placements resolve to 195 safe request intents: only 8 of 13 shared native/PP100 IDs can share a replacement, while 5 have divergent content and DOK requirements. Deployed factory commit 24b084e223b872b3135b71cb2639d13779fc1b07 rejects exact AP Human Geography dok_level targeting on the standard route, leaving 178 DOK-2/3 placements without the required exact target and acceptance mechanism. No paid generation call was made; all 203 placements remain residue and Gates 4-11 remain locked."
+  },
+  {
     "ts": "2026-08-23T08:23Z",
     "course": "HumGeo",
     "text": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical HumGeo main 00b5926c41410f47dd48280c915e46422f16bbbe after merged PR #64. The byte-stable supplement binds all 5,215 checked items and persists only the 203 stale-unusable IDs with zero unknown or unmeasured; 42 focused tests and the complete suite passed with 823 passed, 121 skipped, and 5 subtests passed. Gate 3 is now IN_PROGRESS for exact bounded source replacement; Gates 4-11 remain locked. No generation, source replacement, TimeBack publication, enrollment, activation, learner acceptance, or release occurred in this gate update."
