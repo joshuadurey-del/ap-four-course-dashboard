@@ -1,13 +1,13 @@
 {
-  "snapshot": "2026-08-22T12:30Z",
+  "snapshot": "2026-08-23T00:40Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T10:21Z",
-      "value": "The lane-bound blueprints are the normative course-design sources and current factory contracts govern execution. HumGeo remains the active seven-gate rail at Gate 4 HOLD: BLOCKED_CONTRACT. APWH has its own owner-directed six-gate plan with optional Gate 0: Gate 1 is CLOSED — SCOPE_LOCKED and Josh explicitly opened Gate 2. Gate 2 is IN_PROGRESS; Gate 3 remains locked. APUSH and Psychology remain provisional evidence maps without gate credit.",
-      "scope": "accessible onboarding, course-build, dashboard, current factory guide, and skill-pack sources",
+      "observed_at": "2026-08-23T00:40Z",
+      "value": "All four courses now use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook: Gates 0-3 establish accepted source; Gates 4-11 bind profile/authority, offline graph and preview, sealed all-absent plan, dark publication, canary enrollment, private activation, fresh-learner acceptance, and broader enrollment. Existing receipts retain exact scope and move only to a new credit home. HumGeo is at Gate 4 IN_PROGRESS; APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained.",
+      "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
           "type": "audit-report",
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T10:21Z",
-      "value": "Each course page quantifies observable work in its native units and maps only evidenced work to its likely gate home. Unlike units are not summed, empty gates are omitted, and historical or locked-gate evidence is explicitly labeled as no gate credit. HumGeo remains the active rail; APWH Gate 1 has local closure credit and Gate 2 is now open for read-only reconciliation, with Gate 3 still locked.",
+      "observed_at": "2026-08-23T00:40Z",
+      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo Gates 0-3 and APWH Gate 1 retain closure credit; APWH Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -63,8 +63,8 @@
       "claim_id": "cross.human_review",
       "section": "Cross-course",
       "status": "PLANNED",
-      "status_at": "2026-08-20T09:49Z",
-      "value": "No named whole-course LS disposition exists yet because Learning Science applies its own process after it receives access. Builders prepare pinned, locally validated candidates; external TimeBack placement and reviewer access remain HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA. The eventual handoff needs working access and a representative walkthrough, not a new LS intake ceremony.",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "No named whole-course LS disposition exists yet because Learning Science applies its own process after it receives access. Ilma's native TimeBack runbook now supplies the publication route; it does not make a candidate reviewer-visible. Each course still must close profile, graph/preview, sealed-plan, dark-publication, canary, activation, and fresh-learner boundaries in order.",
       "scope": "current dashboard plus declared HumGeo, APWH, APUSH, and Psychology build repositories and cited blocker threads",
       "evidence": [
         {
@@ -78,9 +78,9 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T10:21Z",
-      "value": "Gates 0-3 are CLOSED locally. Gate 2 exhaustively classified all 8,377 required rows as 7,926 attached, 218 unattached, 168 stale, and 65 genuinely missing, with zero unknown or unmeasured and exactly four Gate 3 shortages. Gate 3 filled only those four shortages through the served Content Factory with matching full QC; zero shortage or nonterminal residue remains. PR #63 merged the reviewed package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db. Gate 4 remains HOLD: BLOCKED_CONTRACT. AP One main advanced to bb17b21b856d81de4ba26c468790f0c5896a3c75 through GET-only PR #842, which explicitly adds no writer authority and does not bind the Gate 3 package. No response followed the Gate 4 request on #659 as of this observation. Nothing is yet landed in AP One, published, deployed, or learner-proven; Gates 5-6 remain locked.",
-      "scope": "Gate 1-3 local closure and current Gate 4 publisher-contract hold; no AP One landing, deployment, or learner-surface claim",
+      "observed_at": "2026-08-23T00:40Z",
+      "value": "Gates 0-3 are CLOSED locally. Gate 2 exhaustively classified all 8,377 required rows with zero unknown or unmeasured and exactly four shortages. The four proved gaps passed matching factory QC, and PR #63 merged the reviewed package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db, closing SOURCE_ACCEPTED. Intake #96 is closed and routed to AP One #659. Ilma's #659 ruling owns the TimeBack-direct bind, authorizes Josh to do what it needs, binds package 508543c1 into the frozen 68/204 input without content rewrite, and excludes Platform3. Gate 4 is IN_PROGRESS on the reviewed profile and Phase-0 authority packet. No TimeBack publication, enrollment, activation, or learner acceptance is claimed; Gates 5-11 remain locked.",
+      "scope": "accepted HumGeo source plus current Gate 4 route/authority; excludes TimeBack publication, enrollment, activation, and learner acceptance",
       "evidence": [
         {
           "type": "official-ced",
@@ -171,9 +171,9 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T10:21Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally. Gate 2 is INVENTORY_LOCKED with 8,377 classified rows, zero unknown or unmeasured, and four exact shortages. Gate 3 is CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates, one retained placement collision, and zero remaining or nonterminal residue. PR #63 merged the evidence package to canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db; delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Gate 4 is HOLD: BLOCKED_CONTRACT because the current AP One publisher does not bind that package into its input, seal/version transition, whole-course deployment manifest, authorized writer invocation, recovery path, and exact readback. AP One main is bb17b21b856d81de4ba26c468790f0c5896a3c75 after GET-only PR #842; that change explicitly adds no writer authority and does not satisfy the package contract. The unblock request remains unanswered on AP One #659 as of this observation. No AP One, TimeBack, publish, deployment, release, or learner-surface write is claimed; Gates 5-6 remain locked.",
-      "scope": "owner-approved HumGeo completion sequence and current gate state",
+      "observed_at": "2026-08-23T00:40Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-2 retain STABILIZED, SCOPE_LOCKED, and INVENTORY_LOCKED receipts. Factory CONTENT_COMPLETE plus merged PR #63 close new Gate 3 SOURCE_ACCEPTED on canonical main 4bd35b9ca350924fef2653f71c64270baa3ea9db; delivery-package SHA-256 is 508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3. Gate 4 is IN_PROGRESS because #96 and Ilma's #659 ruling establish the TimeBack-direct route and Josh's authority, while the HumGeo profile and exact Phase-0 packet remain open. No TimeBack publication, enrollment, activation, or learner acceptance is claimed; Gates 5-11 remain locked.",
+      "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
           "type": "course-plan",
@@ -236,7 +236,7 @@
         },
         {
           "type": "publisher-contract-follow-up",
-          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5378967008"
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5381059146"
         },
         {
           "type": "get-only-authority-change",
@@ -524,8 +524,8 @@
       "section": "HumGeo",
       "status": "BLOCKED",
       "status_at": "2026-08-21T05:08Z",
-      "value": "Gate 5 learner proof is locked behind Gates 0-4. Historical local bundles and walks do not prove the current canonical course. The eventual closure requires production release verifiers on the exact deployed ref plus a deliberate human success and failure/remediation/retake walkthrough over the complete manifest.",
-      "scope": "Gate 5 learner-visible served proof",
+      "value": "Gate 10 learner acceptance is locked behind separate profile, graph/preview, sealed-plan, dark-publication, canary-enrollment, and private-activation closures. Historical local bundles and walks remain evidence but do not prove a fresh learner on the exact activated course.",
+      "scope": "Gate 10 fresh learner acceptance",
       "evidence": [
         {
           "type": "course-status",
@@ -538,8 +538,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-22T07:16Z",
-      "value": "HumGeo follows seven sequential completion gates. Gates 0-3 are CLOSED locally, including Gate 3 CONTENT_COMPLETE with four factory-generated and full-QC-passed candidates and zero residue. PR #63 is merged, but Gate 4 is HOLD: BLOCKED_CONTRACT pending an AP One publisher contract that binds the new package, approved seal/version transition, whole-course deployment manifest, authorized writer and recovery path, and exact readback. Gate 5 learner proof and Gate 6 release remain locked. No LS readiness, deployment, or learner visibility is claimed.",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "HumGeo Gates 0-3 are CLOSED, including SOURCE_ACCEPTED on merged PR #63. Gate 4 is IN_PROGRESS: #659 owns the TimeBack-direct bind and Josh has authority, while the course profile and exact Phase-0 authority packet remain open. Gates 5-11 are locked. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -552,7 +552,7 @@
         },
         {
           "type": "publisher-contract-follow-up",
-          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5378967008"
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5381059146"
         },
         {
           "type": "owner-direction",
@@ -585,9 +585,9 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-21T05:08Z",
-      "value": "Gate 6 release is locked behind Gates 0-5. It will bind the exact current TimeBack/AP One route, official EOC requirement, release action, recovery rule, production readback, and Josh approval. No local package, PR, test count, or readiness flag is a release claim by itself.",
-      "scope": "Gate 6 production release and learner-visible readback",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "Gate 11 broader enrollment and release is locked behind the complete native TimeBack chain. It requires the full release checklist, preserved repair/rollback chain, exact production readback, and Josh's decision. No local package, PR, test count, or readiness flag is a release claim by itself.",
+      "scope": "Gate 11 broader enrollment and release",
       "evidence": [
         {
           "type": "issue",
@@ -643,7 +643,7 @@
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 now locks the exact official scope. Gate 2 inventory is still locked; accepted outputs, the AP One projection, and serving state must be reconciled through the gated sequence before any publication claim. External AP One/TimeBack reviewer access remains held for sanctioned instructions.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 locks the exact official scope. Gate 2 is now IN_PROGRESS with all sanctioned read-only evidence retained and nine blueprint clauses still unknown or unmeasured. Ilma's native TimeBack runbook governs later publication, but does not skip Gate 2 or make a reviewer surface.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -678,9 +678,9 @@
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
-      "status": "PLANNED",
-      "status_at": "2026-08-22T08:33Z",
-      "value": "Next governed move: Josh opens Gate 2. Until then, inventory is locked. When opened, Gate 2 must reconcile the 933-item accepted bank, 698-item AP One projection, 176 lesson identities, 71 official gates, factory/catalog assets, and learner placements with zero unknown rows. Reviewer access still waits for the sanctioned TimeBack route; package validation and the Learning Science handoff remain later work.",
+      "status": "IN_PROGRESS",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "Next governed move: resolve the nine exact unknown blueprint clauses and rerun the same pinned Gate 2 reconciliation to zero unknown. Later work must accept the complete source, bind the APWH profile, seal graph/preview and the all-absent plan, then keep dark publication, canary enrollment, private activation, learner acceptance, and release separate.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -723,8 +723,8 @@
     {
       "claim_id": "apush.admissions",
       "section": "APUSH",
-      "status": "BLOCKED",
-      "value": "The filed defect on positions 170/244 remains closed end to end on canonical bytes. Still fleet-owned: issue #81 is in rework, PR #82 remains open, intake #89 remains open and claimed, and #90 remains open with Josh's correction as the current tail. The correction proves the original 126-position wall overstated the dependency; residual scope must be remeasured rather than repeated as 126.",
+      "status": "OBSERVED",
+      "value": "The filed defect on positions 170/244 remains closed end to end on canonical bytes. Issue #81 is closed complete, PR #82 merged at b9631f575fa666b8fb3a9eebd027af8939e33d5c, and intake #89 and #90 are closed and routed to completed downstream work. The correction still proves the original 126-position wall overstated the dependency; residual scope must be remeasured. These closures do not change the 38 accepted positions or admit the 11 separately receipted successors.",
       "scope": "future article admissions",
       "evidence": [
         {
@@ -745,7 +745,7 @@
         }
       ],
       "evidence_access": "GITHUB",
-      "observed_at": "2026-08-20T01:55Z"
+      "observed_at": "2026-08-23T00:40Z"
     },
     {
       "claim_id": "apush.seating",
@@ -766,8 +766,8 @@
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "PLANNED",
-      "status_at": "2026-08-21T06:51Z",
-      "value": "Next governed move: resolve canonical admission and seating status for the 11 published successor receipts, then crosswalk the exact current candidate against the blueprint denominator. Only measured high-impact gaps become later authoring work. External placement and reviewer access still wait for the sanctioned TimeBack route.",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "Next governed move: complete Gate 0's live writer/canonical-input census, then resolve canonical admission and seating status for the 11 published successor receipts and crosswalk the exact candidate against the blueprint denominator. Only measured high-impact gaps become later authoring work. Native TimeBack publication remains downstream of accepted source, profile, graph, and sealed-plan closures.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -801,9 +801,9 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T18:50Z",
-      "value": "Current course main is merge commit 93ddb276 for PR #23. Exact current-byte checks find 221 paired EK articles and passing QC sidecars, 34 embedded Unit 3 articles, 34 PNGs, and 34 ledger approvals; the licence/leak and provenance-consistency check passes, the 71-file delivery copy is byte-identical, and all 11 prose changes carry re-judged sidecars. The machine-readable u3_image_provenance.json now exists. The full figure-ledger re-derivation could not run on this monitor machine because rsvg-convert is unavailable, and PR #23 had no configured checks or GitHub review. This proves a current-main image-stage landing with bounded static readback, not course wiring, reviewer visibility, or deployment.",
-      "scope": "current-main article, video, and merged Unit 3 image-stage state; not bank acceptance, course wiring, or deployment",
+      "observed_at": "2026-08-23T00:40Z",
+      "value": "Current GitHub main is 3a67744d9f576c6e6654860ab8369f81c53dde93 after merged PR #28, whose stated accepted scope is 41 Unit 4 figures drawn, approved, embedded, and delivered. The earlier PR #23 checkpoint at 93ddb276 retains its exact bounded receipt: 221 paired article/QC sidecars, 34 embedded Unit 3 articles, 34 PNGs, 34 ledger approvals, a byte-identical 71-file delivery copy, and re-judged sidecars for all 11 prose changes. Those older checks were not re-derived on 3a67744d in this update, so they remain credited evidence rather than a current-main closure claim.",
+      "scope": "current repository head plus preserved Unit 3 receipts; not current-source closure, course wiring, or deployment",
       "evidence": [
         {
           "type": "course-repository",
@@ -820,6 +820,10 @@
         {
           "type": "merged-pull-request",
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23"
+        },
+        {
+          "type": "merged-pull-request",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/28"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL"
@@ -827,9 +831,9 @@
     {
       "claim_id": "psych.bank",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-20T06:45Z",
-      "value": "PROVENANCE CLEARED, SCOPE BLOCKED: issue #14 confirms the served bank came through the Content Factory generation API with its QC. The repaired, capped, disabled top-up route still scans AP Psychology broadly and cannot exclude unresolved Unit 5 scope while lifecycle requires sealed scope. No spend runs until a Unit 5-excluding route is committed or issue #2 resolves. Bank stands at the last measured 374 underfilled of 1,105.",
+      "status": "IN_PROGRESS",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "Issue #14 confirms the served bank came through the Content Factory generation API with its QC, and issue #2 is now closed. The last measured bank scan remains 374 underfilled of 1,105. Before any top-up, Gate 0 must bind current canonical inputs and Gate 1 must re-run the sanctioned scope/acceptance verifier on the issue #2 closing bytes; a closed issue is evidence, not automatic scope closure.",
       "scope": "bank scan and top-up workstream",
       "evidence": [
         {
@@ -847,9 +851,9 @@
     {
       "claim_id": "psych.u5",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-20T01:55Z",
-      "value": "The U5 acceptance gate is not green. The recovery audit measured 26 findings; the public issue remains open under its older 27-finding title.",
+      "status": "OBSERVED",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "Issue #2 is closed on GitHub via a commit reference, but this dashboard update did not independently re-derive the Unit 5 acceptance gate on current main 3a67744d9f576c6e6654860ab8369f81c53dde93. The historical 26-finding audit remains bounded evidence until the current-source verifier is rerun.",
       "scope": "U5 acceptance gate",
       "evidence": [
         {
@@ -898,9 +902,9 @@
     {
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-21T06:51Z",
-      "value": "Next governed move: commit a Unit 5-excluding route or resolve open issue #2, then fully re-derive the renderer-dependent PR #23 receipt on current main. No paid top-up runs while scope remains unsealed. Selective top-up, wiring, package validation, and the Learning Science handoff remain later work; external placement still waits for the sanctioned TimeBack route.",
+      "status": "IN_PROGRESS",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "Next governed move: complete Gate 0's canonical-input census, bind the issue #2 closure and PR #28 bytes, then rerun the scope and renderer-dependent receipts on current main. Selective top-up, accepted-source closure, profile, graph, plan, publication, and Learning Science access remain later work under the native TimeBack sequence.",
       "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
         {
@@ -917,9 +921,9 @@
     {
       "claim_id": "psych.registration",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Registration is not reachable yet, and tonight it is measured rather than assumed: the factory w7 walk chain (pinned 28684ec8) ran against bundle f7b40cca and FAILED at its own preflight - the course is not in the readiness-filtered chooser. The platform's readiness debug names the failing checks: bank fill under threshold (374 of 1,105 buckets underfilled) and the lesson-evidence sweep never run (a fleet-side edit). Course tree itself reads live and healthy (262 nodes / 5 units / 221 lessons). Eight registration gates are mapped with owners; re-walk is free once readiness turns.",
+      "status": "HISTORICAL",
+      "status_at": "2026-08-23T00:40Z",
+      "value": "The historical w7 walk against bundle f7b40cca failed its chooser preflight with 374 of 1,105 buckets underfilled and no lesson-evidence sweep. Its 262-node / 5-unit / 221-lesson tree observation is retained as old Gate 5 and Gate 10 evidence only. The native TimeBack runbook replaces chooser registration as the forward publication path; current-source profile, graph, plan, publication, activation, and learner acceptance remain unproved.",
       "scope": "registration and learner visibility",
       "evidence": [
         {
