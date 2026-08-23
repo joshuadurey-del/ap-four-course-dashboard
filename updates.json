@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T13:50Z",
+    "course": "HumGeo",
+    "text": "Repaired Gate 3 is CLOSED — SOURCE_ACCEPTED. Deployed factory commit fb6a56ea81c091b600e5d827c5eb200fa33112fa supported the governed repair: 195 accepted candidates cover all 203 exact placements, every accepted candidate has terminal creation, full-QC, exact-DOK, answer-shape, and collision receipts, 36 superseded attempts are preserved as dropped, and remaining/nonterminal counts are zero. Delivery package SHA-256 f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4. HumGeo PR #65 is open at exact head 71fddd538ba7bdca9a47b021a0f71d1d878959b3 for owner ilmych to merge; Codex did not merge. Gate 4 is next but remains locked until its required preflight rereads; Gates 5-11 remain locked."
+  },
+  {
     "ts": "2026-08-23T08:46Z",
     "course": "HumGeo",
     "text": "Gate 3 is HOLD — BLOCKED_CONTRACT. The 203 repaired-Gate-2 placements resolve to 195 safe request intents: only 8 of 13 shared native/PP100 IDs can share a replacement, while 5 have divergent content and DOK requirements. Deployed factory commit 24b084e223b872b3135b71cb2639d13779fc1b07 rejects exact AP Human Geography dok_level targeting on the standard route, leaving 178 DOK-2/3 placements without the required exact target and acceptance mechanism. No paid generation call was made; all 203 placements remain residue and Gates 4-11 remain locked."
