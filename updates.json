@@ -1,5 +1,10 @@
 [
-  {
+ {
+  "ts": "2026-08-23T16:03Z",
+  "course": "HumGeo",
+  "text": "Repaired Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. Canonical HumGeo main b56c26403cf15fa859a30a250e625cef39e3cfbb supplies the accepted repair corpus. AP One profile 9d50ae77c5b95d6617ff6e34c1039dc717876e5a49c61c7b4b3ce81abd6b5c91, source capture 48ddea2a9dd4cb334224c9d916cff12dc61e4419f7ff5f1e105d0ba46a8a4477, and native bind cc41a995491490ed212bb6dd00577b32ac48effb3b052c7964f846c50aeebdd1 bind 68 gates, 204 forms, and all 203 repaired placements. Owner ilmych merged AP One PR #847 at 9582e3087798880d6c9cbfb54175c861741be27a; exact Deploy run 32649699317 succeeded and independent staging /version served that exact SHA and immutable image digest. Codex did not merge. Gate 4 made zero TimeBack writes. Gate 5 is next but remains locked until its required handoff, full-plan, and native-runbook rereads."
+ },
+ {
     "ts": "2026-08-23T13:50Z",
     "course": "HumGeo",
     "text": "Repaired Gate 3 is CLOSED — SOURCE_ACCEPTED. Deployed factory commit fb6a56ea81c091b600e5d827c5eb200fa33112fa supported the governed repair: 195 accepted candidates cover all 203 exact placements, every accepted candidate has terminal creation, full-QC, exact-DOK, answer-shape, and collision receipts, 36 superseded attempts are preserved as dropped, and remaining/nonterminal counts are zero. Delivery package SHA-256 f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4. HumGeo PR #65 is open at exact head 71fddd538ba7bdca9a47b021a0f71d1d878959b3 for owner ilmych to merge; Codex did not merge. Gate 4 is next but remains locked until its required preflight rereads; Gates 5-11 remain locked."

@@ -238,8 +238,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T13:50Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main 00b5926c41410f47dd48280c915e46422f16bbbe. Repaired Gate 3 is CLOSED — SOURCE_ACCEPTED at clean review commit 71fddd538ba7bdca9a47b021a0f71d1d878959b3: 195 factory candidates cover all 203 exact placements, every accepted candidate has terminal creation, full-QC, exact-DOK, answer-shape, and collision receipts, 36 superseded attempts are preserved as dropped, and all residue/nonterminal counts are zero. HumGeo PR #65 is open for ilmych to merge; Codex did not merge. Gate 4 is next but remains locked for the required preflight rereads; Gates 5-11 remain locked. No source-bank, TimeBack, AP One, object-storage, enrollment, activation, learner-acceptance, or release mutation is claimed.",
+      "observed_at": "2026-08-23T16:03Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main 00b5926c41410f47dd48280c915e46422f16bbbe. Repaired Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main b56c26403cf15fa859a30a250e625cef39e3cfbb: 195 factory candidates cover all 203 exact placements with zero residue. Repaired Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND: owner ilmych merged AP One PR #847 at 9582e3087798880d6c9cbfb54175c861741be27a, exact Deploy run 32649699317 succeeded, and independent staging /version served that exact SHA with image digest sha256:19a0b7bf89ca1f94e30a157b8096ed5b36937d8ae02625830a7e52cbf703a4ec. Codex did not merge. Gate 5 is next but remains locked for its required preflight rereads; Gates 6-11 remain locked. Gate 4 made no TimeBack, object-storage, enrollment, activation, learner-acceptance, or release write.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -342,10 +342,27 @@
           "type": "gate-3-source-accepted-review",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/65",
           "head": "71fddd538ba7bdca9a47b021a0f71d1d878959b3",
+          "merge_commit": "b56c26403cf15fa859a30a250e625cef39e3cfbb",
           "accepted_candidates": 195,
           "accepted_placements": 203,
           "remaining": 0,
           "delivery_package_sha256": "f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4"
+        },
+        {
+          "type": "gate-4-source-rebind",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/847",
+          "review_commit": "fff15e9d1bea0b23f36e3d2882ed026c8f1eb367",
+          "merge_commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "profile_sha256": "9d50ae77c5b95d6617ff6e34c1039dc717876e5a49c61c7b4b3ce81abd6b5c91",
+          "source_capture_sha256": "48ddea2a9dd4cb334224c9d916cff12dc61e4419f7ff5f1e105d0ba46a8a4477",
+          "native_bind_sha256": "cc41a995491490ed212bb6dd00577b32ac48effb3b052c7964f846c50aeebdd1"
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32649699317",
+          "commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "image_digest": "sha256:19a0b7bf89ca1f94e30a157b8096ed5b36937d8ae02625830a7e52cbf703a4ec",
+          "conclusion": "success"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
@@ -637,8 +654,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-23T13:50Z",
-      "value": "HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT and repaired Gate 3 is CLOSED — SOURCE_ACCEPTED: 195 accepted factory candidates cover all 203 exact placements with zero residue. HumGeo PR #65 is the open owner-review surface at 71fddd538ba7bdca9a47b021a0f71d1d878959b3; ilmych owns the merge and Codex did not merge. Gate 4 is next but remains locked for its required preflight rereads; Gates 5-11 remain locked. The prior PROFILE_AND_SOURCE_BOUND, Deploy, and staging receipts remain exact for their historical source digest but do not clear repaired bytes. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
+      "status_at": "2026-08-23T16:03Z",
+      "value": "HumGeo Gates 2-4 are closed on repaired bytes. Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main b56c26403cf15fa859a30a250e625cef39e3cfbb with 195 accepted candidates covering 203 placements and zero residue. Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main 9582e3087798880d6c9cbfb54175c861741be27a; exact Deploy run 32649699317 succeeded and independent staging /version matched that SHA and immutable image digest. Gate 5 is next but remains locked for its required preflight rereads; Gates 6-11 remain locked. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -672,7 +689,21 @@
           "type": "gate-3-source-accepted-review",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/65",
           "head": "71fddd538ba7bdca9a47b021a0f71d1d878959b3",
+          "merge_commit": "b56c26403cf15fa859a30a250e625cef39e3cfbb",
           "delivery_package_sha256": "f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4"
+        },
+        {
+          "type": "gate-4-source-rebind",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/847",
+          "merge_commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "profile_sha256": "9d50ae77c5b95d6617ff6e34c1039dc717876e5a49c61c7b4b3ce81abd6b5c91",
+          "source_capture_sha256": "48ddea2a9dd4cb334224c9d916cff12dc61e4419f7ff5f1e105d0ba46a8a4477"
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32649699317",
+          "commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "conclusion": "success"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+OWNER_DIRECTION"
