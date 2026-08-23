@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T08:23Z",
+    "course": "HumGeo",
+    "text": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical HumGeo main 00b5926c41410f47dd48280c915e46422f16bbbe after merged PR #64. The byte-stable supplement binds all 5,215 checked items and persists only the 203 stale-unusable IDs with zero unknown or unmeasured; 42 focused tests and the complete suite passed with 823 passed, 121 skipped, and 5 subtests passed. Gate 3 is now IN_PROGRESS for exact bounded source replacement; Gates 4-11 remain locked. No generation, source replacement, TimeBack publication, enrollment, activation, learner acceptance, or release occurred in this gate update."
+  },
+  {
     "ts": "2026-08-23T07:09Z",
     "course": "HumGeo",
     "text": "Gate 2 repair prerequisites are ready but not yet closed. HumGeo PR #64 is open and mergeable at exact head b3e0e28d6aa8501ae04043c51a362cc0efdaa90f; its supplemental inventory binds 5,215 checked items and persists only the 203 stale-unusable IDs, with 42 focused and 823 full-suite passes. Ilma merged factory PR #271 at 24b084e223b872b3135b71cb2639d13779fc1b07; exact Deploy API run 32624230465 passed and live /version independently matched that SHA with no newer competing deploy. Generation remains locked until Ilma merges PR #64."

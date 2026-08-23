@@ -7,13 +7,13 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 23, 2026 · 16:09 KST',
+  snapshot: 'Aug 23, 2026 · 17:23 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
-    { id: 2, name: 'Inventory', state: 'active', status: 'Reopened', detail: 'Gate 5 reproduced 203 frozen-source answer-length violations. Reclassify those exact native MCQ, PP100, and Train Your Eye records before bounded replacement.' },
-    { id: 3, name: 'Accept source', state: 'locked', status: 'Locked', detail: 'After Gate 2 seals the corrected shortage, replace only the proved unusable records through the current factory contract and exact QC.' },
+    { id: 2, name: 'Inventory', state: 'closed', status: 'Closed', detail: 'Merged PR #64 seals the exact 203-record stale-unusable amendment with zero unknown or unmeasured and byte-stable verification.' },
+    { id: 3, name: 'Accept source', state: 'active', status: 'In progress', detail: 'Replace only the 203 records proved unusable by Gate 2 through the current factory contract and exact QC.' },
     { id: 4, name: 'Profile + authority', state: 'locked', status: 'Locked', detail: 'The prior PR #846 receipt remains exact historical evidence. Rebind the profile and Phase-0 digest only after repaired source bytes are canonical.' },
     { id: 5, name: 'Graph + preview', state: 'evidence', status: 'Hold', detail: 'Opened by Josh, then held by the mandatory zero-uniquely-longest answer-shape check: native MCQ 85, PP100 109, Train Your Eye 9, sync 0.' },
     { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 2 · REOPENED', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 07:09Z',
-      nextStep: 'Ilma merges HumGeo PR #64; then replace only its 203 sealed records through the now-deployed factory fix before rebuilding the Gate 4 bind and resuming Gate 5.',
+      status: 'Gate 3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 08:23Z',
+      nextStep: 'Seal the exact request-to-placement map, then replace and QC only the 203 Gate 2 stale-unusable records through the deployed factory contract.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
         { value: '203', label: 'answer-shape failures' }
       ],
       etaDays: 'GATE 5 HOLD',
-      etaNote: 'Gate 5 opened and failed closed on frozen source banks. Gate 2 is the active bounded repair gate; no TimeBack publication, enrollment, activation, or learner acceptance is claimed.'
+      etaNote: 'Gate 2 is closed on the exact amendment bytes. Gate 3 is the active bounded source-repair gate; no source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,12 +70,12 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gate 5 opened and failed closed on a digest-bound answer-shape report. Prior Gate 2-4 receipts remain historical evidence; Gate 2 is reopened for the exact 203-record source repair and later gates stay locked.',
+      note: 'Gate 2 is closed on a digest-bound, byte-stable 203-record amendment. Gate 3 is active for exact bounded replacement; prior Gate 3-4 receipts remain historical evidence and later gates stay locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
-        { gate: 2, state: 'active', status: 'Reopened · bounded repair', signal: 'PR #64 · 203 exact source failures · factory deployed', copy: 'PR #64 seals the 203-record supplemental shortage at head b3e0e28d. Ilma merged the APHG prompt fix and exact Deploy API run 32624230465 is live at 24b084e2; generation still waits for PR #64 merge.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/64' },
-        { gate: 3, state: 'evidence', status: 'Historical closure evidence', signal: '4 accepted · PR #63 merged · prior residue 0', copy: 'The prior four-shortage receipt stays immutable, but Gate 3 cannot regain current closure until the reopened Gate 2 shortage is replaced and QC-bound.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
+        { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #64 merged · 203 stale-unusable · zero unknown', copy: 'Canonical main 00b5926 binds all 5,215 checked items and only the 203-record supplemental shortage. Rebuilds were byte-stable; 42 focused and 823 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/64' },
+        { gate: 3, state: 'active', status: 'In progress · bounded repair', signal: '203 exact replacements · factory prerequisite deployed', copy: 'The prior four-shortage receipt stays immutable historical evidence. Current Gate 3 must replace and QC only the repaired Gate 2 shortage on fresh bytes.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
         { gate: 4, state: 'evidence', status: 'Historical closure evidence', signal: 'PR #846 · main 3c865669 · staging exact', copy: 'PR #846, Deploy, and staging readback remain exact for their bound bytes. Any repaired source bytes require a fresh Gate 4 digest before Gate 5 can resume.', href: 'https://github.com/InceptTrilogy/ap-one/pull/846' },
         { gate: 5, state: 'evidence', status: 'Hold · answer shape', signal: '85 native · 109 PP100 · 9 Train Your Eye · 0 sync', copy: 'The exact Gate 4-bound report has self-digest 0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256 and fails the required zero-uniquely-longest rule.', href: 'humgeo.html' }
       ]
@@ -178,12 +178,12 @@ const AP4_DASHBOARD = {
     </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
-        <div><span class="eyebrow">Active repair gate</span><h3>Gate 2 · Inventory · REOPENED</h3></div>
+        <div><span class="eyebrow">Active repair gate</span><h3>Gate 3 · Accept source</h3></div>
         <span class="badge b-amber">IN PROGRESS</span>
       </div>
       <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
         ${AP4_DASHBOARD.gates.map(gate => `
-          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 2}">
+          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 3}">
             <span class="active-gate-dot">G${gate.id}</span>
             <span class="active-gate-name">${gate.name}</span>
             <small>${gate.status}</small>

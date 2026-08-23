@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-23T07:09Z",
+  "snapshot": "2026-08-23T08:23Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T06:47Z",
-      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 5 opened and failed closed on 203 frozen-source answer-shape violations, reopening Gate 2 for bounded repair; Gates 3-11 are locked pending fresh closures. APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained. No HumGeo TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-23T08:23Z",
+      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT after canonical merge and clean verification of the 203-record supplemental shortage; Gate 3 is now the sole active bounded-repair gate and Gates 4-11 are locked pending fresh closures. APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained. No HumGeo source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T06:47Z",
-      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo's prior Gate 2-4 receipts remain historical evidence while Gate 2 is reopened for bounded repair; APWH Gate 1 retains closure credit and Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
+      "observed_at": "2026-08-23T08:23Z",
+      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo's repaired Gate 2 is closed on its exact amendment bytes, Gate 3 is active, and prior Gate 3-4 receipts remain historical evidence only; APWH Gate 1 retains closure credit and Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -77,15 +77,18 @@
     {
       "claim_id": "humgeo.gate2.answer_shape_reopen",
       "section": "HumGeo",
-      "status": "IN_PROGRESS",
-      "observed_at": "2026-08-23T07:09Z",
-      "value": "HumGeo PR #64 is open and mergeable at exact head b3e0e28d6aa8501ae04043c51a362cc0efdaa90f. Its supplemental Gate 2 inventory binds 5,215 checked items and persists only the 203 stale-unusable IDs; 42 focused tests and the complete 823-pass course suite passed. Ilma merged factory PR #271 at 24b084e223b872b3135b71cb2639d13779fc1b07. Exact Deploy API run 32624230465 succeeded and live /version independently matched that SHA; no newer competing deploy existed. Generation remains locked until Ilma merges PR #64.",
-      "scope": "bounded Gate 2 answer-shape reclassification and deployed APHG prompt prerequisite; excludes generation, source replacement, TimeBack publication, enrollment, activation, and release",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-23T08:23Z",
+      "value": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical HumGeo main 00b5926c41410f47dd48280c915e46422f16bbbe after merged PR #64. Its byte-stable supplemental inventory binds all 5,215 checked items and persists only the 203 stale-unusable IDs, with zero unknown or unmeasured; 42 focused tests and the complete course suite passed with 823 passed, 121 skipped, and 5 subtests passed. The deployed factory prerequisite remains exact at 24b084e223b872b3135b71cb2639d13779fc1b07. Gate 3 is now active for bounded source replacement.",
+      "scope": "closed Gate 2 answer-shape reclassification and deployed APHG prompt prerequisite; excludes generation, source replacement, TimeBack publication, enrollment, activation, and release",
       "evidence": [
         {
           "type": "pull-request",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
-          "head": "b3e0e28d6aa8501ae04043c51a362cc0efdaa90f"
+          "head": "b3e0e28d6aa8501ae04043c51a362cc0efdaa90f",
+          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
+          "manifest_self_sha256": "7755525e29bf2eb77f0856636b712a95cde974e79ba17a05c52d523b1ed4cdca",
+          "raw_sha256": "01f01241a4584dd8fd6e4bd97b0805ec94c0917e54decd737a1af4c2c7b9107d"
         },
         {
           "type": "factory-pull-request",
@@ -111,8 +114,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T06:47Z",
-      "value": "Gate 5 opened and is HOLD — SOURCE_BANK_ANSWER_SHAPE. A digest-bound verifier against the exact Gate 4 inputs found 85 uniquely-longest correct answers in 2,251 native MCQs, 109 in 1,715 PP100 items, 9 in 34 Train Your Eye items, and 0 in 1,215 sync checks. Gate 2 is reopened for the exact 203-record bounded repair; Gates 3-11 are locked pending fresh closures. AP One PR #846, Deploy run 32620437842, and staging /version remain exact evidence for the prior source digest. No TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-23T08:23Z",
+      "value": "Gate 5 remains a historical HOLD — SOURCE_BANK_ANSWER_SHAPE on its prior digest-bound source: 85 uniquely-longest correct answers in 2,251 native MCQs, 109 in 1,715 PP100 items, 9 in 34 Train Your Eye items, and 0 in 1,215 sync checks. The resulting 203-record Gate 2 amendment is now closed on canonical main; Gate 3 is active for exact bounded replacement and Gates 4-11 remain locked. AP One PR #846, Deploy run 32620437842, and staging /version remain exact evidence only for the prior source digest. No source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "Gate 5 answer-shape preflight against exact Gate 4-bound source; excludes source repair, TimeBack publication, enrollment, activation, and learner acceptance",
       "evidence": [
         {
@@ -194,6 +197,12 @@
           "observed_at": "2026-08-23T06:47Z",
           "manifest_self_sha256": "0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256",
           "raw_sha256": "470b3325ec88285e29c214645231832139d60f551088ba8fd30cd608108539c0"
+        },
+        {
+          "type": "gate-2-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
+          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
+          "manifest_self_sha256": "7755525e29bf2eb77f0856636b712a95cde974e79ba17a05c52d523b1ed4cdca"
         }
       ],
       "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
@@ -229,8 +238,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-23T06:47Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gate 5 opened and failed closed on 203 exact frozen-source answer-shape violations. Gate 2 is reopened and IN_PROGRESS for bounded reclassification; Gates 3-11 are locked pending fresh closures. The prior Gate 2-4 receipts remain immutable evidence for their exact bytes, including AP One main 3c865669fb7df838bd31dc43197de09d63fcedcb and matching Deploy/staging readback. No TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-23T08:23Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main 00b5926c41410f47dd48280c915e46422f16bbbe after exact verification of the 203-record supplemental shortage. Gate 3 is IN_PROGRESS for bounded replacement; Gates 4-11 are locked pending fresh closures. The prior Gate 3-4 receipts remain immutable historical evidence for their exact bytes, including AP One main 3c865669fb7df838bd31dc43197de09d63fcedcb and matching Deploy/staging readback. No source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -316,6 +325,12 @@
           "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32620437842",
           "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
           "conclusion": "success"
+        },
+        {
+          "type": "gate-2-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
+          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
+          "manifest_self_sha256": "7755525e29bf2eb77f0856636b712a95cde974e79ba17a05c52d523b1ed4cdca"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
@@ -607,8 +622,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-23T06:47Z",
-      "value": "HumGeo Gate 5 opened and is HOLD — SOURCE_BANK_ANSWER_SHAPE after 203 exact frozen-source violations. Gate 2 is reopened for bounded repair and Gates 3-11 are locked pending fresh closures. The prior PROFILE_AND_SOURCE_BOUND, Deploy, and staging receipts remain exact for their bound source digest but do not clear repaired bytes. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
+      "status_at": "2026-08-23T08:23Z",
+      "value": "HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT and Gate 3 is IN_PROGRESS for the exact bounded source replacement. Gates 4-11 remain locked. The prior PROFILE_AND_SOURCE_BOUND, Deploy, and staging receipts remain exact for their historical source digest but do not clear repaired bytes. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -632,6 +647,11 @@
           "type": "gate-4-merge",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
           "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb"
+        },
+        {
+          "type": "gate-2-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
+          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+OWNER_DIRECTION"
