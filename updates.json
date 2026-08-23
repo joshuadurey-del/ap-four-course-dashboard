@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-23T06:47Z",
+    "course": "HumGeo",
+    "text": "Gate 5 opened and is HOLD — SOURCE_BANK_ANSWER_SHAPE. The exact Gate 4-bound verifier reproduced 85 uniquely-longest correct answers in 2,251 native MCQs, 109 in 1,715 PP100 items, 9 in 34 Train Your Eye items, and 0 in 1,215 sync checks; report self-digest 0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256. Gate 2 is reopened for a bounded 203-record reclassification and replacement chain; Gates 3-11 are locked pending fresh closures. No TimeBack publication, enrollment, activation, or learner acceptance occurred."
+  },
+  {
     "ts": "2026-08-23T05:39Z",
     "course": "HumGeo",
     "text": "Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. AP One PR #846 merged the exact reviewed profile and complete Phase-0 authority bind to canonical main 3c865669fb7df838bd31dc43197de09d63fcedcb. Exact-head CI passed; Deploy run 32620437842 completed semantic verification; independent staging /version matched the merge SHA and immutable image digest. Gate 5 owns the measured 368-check article deficit and remains locked pending explicit opening. No TimeBack publication, enrollment, activation, or learner acceptance is claimed."

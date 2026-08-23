@@ -7,15 +7,15 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 23, 2026 · 14:39 KST',
+  snapshot: 'Aug 23, 2026 · 15:47 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
-    { id: 2, name: 'Inventory', state: 'closed', status: 'Closed', detail: 'The sanctioned read-only bank audit and deterministic reconciliation account for all 8,377 required rows with zero unknown or unmeasured and prove an exact four-slot shortage.' },
-    { id: 3, name: 'Accept source', state: 'closed', status: 'Closed', detail: 'Four proved shortages passed matching factory QC, and merged PR #63 binds the reviewed package to canonical HumGeo source bytes.' },
-    { id: 4, name: 'Profile + authority', state: 'closed', status: 'Closed', detail: 'PR #846 merged the exact reviewed profile and Phase-0 bind to AP One main 3c865669. Exact-head CI, Deploy semantics, and independent staging /version readback passed.' },
-    { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'Seal the complete tree, prices, hosted assets, QTI, and student-surface preview under runbook Phases 1-3.' },
+    { id: 2, name: 'Inventory', state: 'active', status: 'Reopened', detail: 'Gate 5 reproduced 203 frozen-source answer-length violations. Reclassify those exact native MCQ, PP100, and Train Your Eye records before bounded replacement.' },
+    { id: 3, name: 'Accept source', state: 'locked', status: 'Locked', detail: 'After Gate 2 seals the corrected shortage, replace only the proved unusable records through the current factory contract and exact QC.' },
+    { id: 4, name: 'Profile + authority', state: 'locked', status: 'Locked', detail: 'The prior PR #846 receipt remains exact historical evidence. Rebind the profile and Phase-0 digest only after repaired source bytes are canonical.' },
+    { id: 5, name: 'Graph + preview', state: 'evidence', status: 'Hold', detail: 'Opened by Josh, then held by the mandatory zero-uniquely-longest answer-shape check: native MCQ 85, PP100 109, Train Your Eye 9, sync 0.' },
     { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
     { id: 7, name: 'Dark publish', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 8, name: 'Canary enroll', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 4 · CLOSED', statusTone: 'green', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 05:39Z',
-      nextStep: 'Review the Gate 4 closure receipt and explicitly open Gate 5; then seal the offline graph, standalone assets, QTI, and digest-bound preview.',
+      status: 'Gate 2 · REOPENED', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 23 · 06:47Z',
+      nextStep: 'Reclassify the exact 203 answer-shape failures, seal the bounded shortage, and replace only those records before rebuilding the Gate 4 bind and resuming Gate 5.',
       footprint: [
         { value: '8,377', label: 'required rows classified' },
         { value: '0', label: 'unknown or unmeasured' },
-        { value: '4', label: 'accepted Gate 3 artifacts' }
+        { value: '203', label: 'answer-shape failures' }
       ],
-      etaDays: 'GATE 4 CLOSED',
-      etaNote: 'The reviewed profile and Phase-0 bind are canonical and served on staging. Gate 5 remains locked; no TimeBack publication, enrollment, activation, or learner acceptance is claimed.'
+      etaDays: 'GATE 5 HOLD',
+      etaNote: 'Gate 5 opened and failed closed on frozen source banks. Gate 2 is the active bounded repair gate; no TimeBack publication, enrollment, activation, or learner acceptance is claimed.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,13 +70,14 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gates 0-4 retain closure credit. PR #846, exact-head CI, Deploy semantics, and independent staging /version readback close Gate 4. Gate 5 awaits explicit opening; later gates stay locked.',
+      note: 'Gate 5 opened and failed closed on a digest-bound answer-shape report. Prior Gate 2-4 receipts remain historical evidence; Gate 2 is reopened for the exact 203-record source repair and later gates stay locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
-        { gate: 2, state: 'closed', status: 'Closed · INVENTORY_LOCKED', signal: '8,377 classified · 0 unknown · 4-slot shortage', copy: 'A sanctioned metadata-only factory-bank snapshot and deterministic review closed the inventory. Its evidence is preserved in merged PR #63.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
-        { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: '4 accepted · PR #63 merged · 0 residue', copy: 'The four proved shortages have matching terminal factory QC, and PR #63 binds the reviewed package to canonical source bytes.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
-        { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #846 · main 3c865669 · staging exact', copy: 'The reviewed profile and complete Phase-0 authority packet merged through PR #846. Exact-head CI and Deploy passed, and staging /version independently matched the merge SHA.', href: 'https://github.com/InceptTrilogy/ap-one/pull/846' }
+        { gate: 2, state: 'active', status: 'Reopened · bounded repair', signal: '203 exact source failures · 3 affected banks', copy: 'The Gate 5 answer-shape verifier found 85 native MCQ, 109 PP100, and 9 Train Your Eye records whose correct answer is uniquely longest. Reclassify only those exact records before replacement.', href: 'humgeo.html' },
+        { gate: 3, state: 'evidence', status: 'Historical closure evidence', signal: '4 accepted · PR #63 merged · prior residue 0', copy: 'The prior four-shortage receipt stays immutable, but Gate 3 cannot regain current closure until the reopened Gate 2 shortage is replaced and QC-bound.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/63' },
+        { gate: 4, state: 'evidence', status: 'Historical closure evidence', signal: 'PR #846 · main 3c865669 · staging exact', copy: 'PR #846, Deploy, and staging readback remain exact for their bound bytes. Any repaired source bytes require a fresh Gate 4 digest before Gate 5 can resume.', href: 'https://github.com/InceptTrilogy/ap-one/pull/846' },
+        { gate: 5, state: 'evidence', status: 'Hold · answer shape', signal: '85 native · 109 PP100 · 9 Train Your Eye · 0 sync', copy: 'The exact Gate 4-bound report has self-digest 0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256 and fails the required zero-uniquely-longest rule.', href: 'humgeo.html' }
       ]
     },
     apwh: {
@@ -177,12 +178,12 @@ const AP4_DASHBOARD = {
     </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
-        <div><span class="eyebrow">Latest closed gate</span><h3>Gate 4 · Profile + authority · CLOSED</h3></div>
-        <span class="badge b-green">CLOSED</span>
+        <div><span class="eyebrow">Active repair gate</span><h3>Gate 2 · Inventory · REOPENED</h3></div>
+        <span class="badge b-amber">IN PROGRESS</span>
       </div>
       <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
         ${AP4_DASHBOARD.gates.map(gate => `
-          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 4}">
+          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 2}">
             <span class="active-gate-dot">G${gate.id}</span>
             <span class="active-gate-name">${gate.name}</span>
             <small>${gate.status}</small>
@@ -214,5 +215,5 @@ const AP4_DASHBOARD = {
     control.addEventListener('click', () => showGate(control.dataset.activeGate));
     control.addEventListener('focus', () => showGate(control.dataset.activeGate));
   });
-  showGate(4);
+  showGate(2);
 })();
