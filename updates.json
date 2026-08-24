@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T14:36Z",
+    "course": "HumGeo",
+    "text": "Gate 3 remains HOLD while one bounded, owner-authorized HumGeo recovery runs against the current factory contract. The prior recovery did not return an accepted candidate; the current request corrects its source-guidance mismatch while preserving the governed lesson source, APHG binding, target DOK, answer shape, and every QC gate. Twenty candidates remain accepted, the other 49 placements remain sealed-unsubmitted, and chunk 3 stays locked pending the terminal result."
+  },
+  {
     "ts": "2026-08-24T14:09Z",
     "course": "APWH",
     "text": "Gate 2 remains HOLD — GRADER_OWNER_EVIDENCE after the current-version receipt-existence audit. Current factory main and deployed AP grader are 9b4f60fffa386ced008a9c4c42629747394a6090. Current source/tests, every file in the latest 70-file calibration artifact, APWH S3 receipt versions, and exact-fixture CloudWatch phrases produced no qualifying boundary receipt. The six post-build dispositions are now explicit: A-100/A-101 are authority DRIFT because the pinned 3/6 and 3-document rules conflict with the released factory's 3/4 and 2-document contract; A-103 through A-106 are MISSING current SHA-bound controlled receipts. The last deterministic inventory remains unchanged at 179 attached, 49 missing, 1 stale, and 6 unknown until the APWH lane can ingest the factory answer and rerun. Named ask: InceptTrilogy/incept-test-builder AP grader lane — '[grader][APWH] Publish SHA-bound adversarial receipts for A-100/A-101/A-103–A-106 and adjudicate 3/6 vs 3/4 rubric drift.' Use sanctioned /v1/qc for the all-DBQ wrong-rule audit and POST /v1/frq/ap-world-history/grade for response-scoring fixtures. No issue, grading POST, QC submission, APWH lane edit, bank/course mutation, or Gate 3 action occurred."
