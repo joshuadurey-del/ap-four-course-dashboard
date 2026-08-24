@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T18:23Z",
+    "course": "HumGeo",
+    "text": "Gate 3 has reached SOURCE_ACCEPTED on the prepared HumGeo closure branch: all 70 placements are factory-accepted, the frozen source-admissibility oracle reports exactly zero remaining failures with exact coverage, and the sealed delivery package verifies with SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b. The isolated full repository suite passes 847 tests with 121 governed skips and five passing subtests. Canonical main remains HOLD pending protected branch publication, Ilmych's owner merge, and post-merge zero-residue verification. Gate 4 and all publication, upload, enrollment, activation, learner, and release writes remain locked."
+  },
+  {
     "ts": "2026-08-24T17:47Z",
     "course": "HumGeo",
     "text": "Gate 3 is IN PROGRESS. Both chunk-6 terminal slots passed the factory's anchor-preserving QC regeneration path, making chunk 6 disposition-clean with 61 accepted candidates. The source-admissibility oracle reports exactly nine remaining answer-shape failures with coverage still exact, and all nine final chunk-7 placements have distinct factory jobs queued. Gate 4 and all publication, upload, enrollment, activation, learner, and release writes remain locked."
