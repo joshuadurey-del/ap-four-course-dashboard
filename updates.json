@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T13:52Z",
+    "course": "HumGeo",
+    "text": "Gate 3 remains HOLD — TERMINAL_REGENERATION_EXHAUSTED after factory rebind. Live /version and /api/ready now both serve canonical factory commit 9b4f60fffa386ced008a9c4c42629747394a6090; readiness is ok and the raw OpenAPI SHA-256 is 7c70a89f80f0f23d57e7d2a6d9a1e36344722d84b612d88047c732914049328c. The commit changes AP English grader transport handling only and introduces no HumGeo contextual-generation or typed-recovery path. The governed jobs remain settled 0/1/1 for slots 017/018/021, with 20 accepted, 49 sealed-unsubmitted, one terminal reject, and 50 remaining. No slot-017 retry or chunk 3 is authorized."
+  },
+  {
     "ts": "2026-08-24T13:42Z",
     "course": "HumGeo",
     "text": "Gate 3 remains HOLD — TERMINAL_REGENERATION_EXHAUSTED. Canonical factory main advanced from 350d25f60cddca65cf6226080a618ec9f2aa9f50 to 9b4f60fffa386ced008a9c4c42629747394a6090 for an AP English grader transport-only change; live /version and /api/ready still serve 350d25f60cddca65cf6226080a618ec9f2aa9f50, so deployment/rebind is pending and the change creates no HumGeo typed recovery path. The governed jobs remain settled 0/1/1 for slots 017/018/021, with 20 accepted, 49 sealed-unsubmitted, one terminal reject, and 50 remaining. No slot-017 retry or chunk 3 is authorized."
