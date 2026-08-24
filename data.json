@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-24T00:47Z",
+  "snapshot": "2026-08-24T09:13Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T00:47Z",
-      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399 after the previously omitted rehearsal bank rederived 655 checked, 585 present, 70 stale-unusable, and zero unknown or unmeasured. Gate 3 remains locked until the graph-derived source-admissibility guard proves exact expected-versus-audited equality and freezes its digests; prior Gate 3-4 receipts remain historical evidence only. APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained. No HumGeo generation, source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-24T09:13Z",
+      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399. Its frozen graph-derived source-admissibility oracle is green on all 5,870 expected and audited coordinates with zero missing, extra, duplicate, or unknown rows. Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274 after the held pilot failed mandatory full QC; prior Gate 3-4 receipts remain historical evidence only. APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained. Gates 4-11 remain locked and no publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T00:47Z",
-      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo's Gate 2 rehearsal amendment is closed on exact canonical bytes; Gate 3 is locked pending the pre-spend source-admissibility guard, and prior Gate 3-4 receipts remain historical evidence only. APWH Gate 1 retains closure credit and Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
+      "observed_at": "2026-08-24T09:13Z",
+      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo's Gate 2 rehearsal amendment is closed on exact canonical bytes; the pre-spend source-admissibility oracle is frozen and green, and Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274 with 70 placements remaining. Prior Gate 3-4 receipts remain historical evidence only. APWH Gate 1 retains closure credit and Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -78,8 +78,8 @@
       "claim_id": "humgeo.gate2.answer_shape_reopen",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T00:47Z",
-      "value": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical HumGeo main e16aebeb96957f1d498d21e0eda6a7c033e51399 after owner-merged PR #66. The byte-stable rehearsal amendment rederived 655 checked, 585 present-attached, 70 stale-unusable, zero unknown or unmeasured, and zero at least 1.25x; 43 focused tests and the complete course suite passed with 837 passed, 121 skipped, and 5 subtests passed. Gate 3 remains locked until the shared graph-derived source-admissibility guard proves exact audit coverage and freezes its digests.",
+      "observed_at": "2026-08-24T09:13Z",
+      "value": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical HumGeo main e16aebeb96957f1d498d21e0eda6a7c033e51399 after owner-merged PR #66. The byte-stable rehearsal amendment rederived 655 checked, 585 present-attached, 70 stale-unusable, zero unknown or unmeasured, and zero at least 1.25x; 43 focused tests and the complete course suite passed with 837 passed, 121 skipped, and 5 subtests passed. The subsequent pre-spend oracle is frozen and green; current Gate 3 status is reported separately.",
       "scope": "closed Gate 2 rehearsal answer-shape amendment; excludes generation, source replacement, TimeBack publication, enrollment, activation, and release",
       "evidence": [
         {
@@ -105,11 +105,34 @@
       "evidence_access": "GITHUB+LIVE_FACTORY_READBACK"
     },
     {
+      "claim_id": "humgeo.gate3.contextual_steering_blocker",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "status_at": "2026-08-24T09:13Z",
+      "value": "Gate 3 is HOLD — BLOCKED_CONTRACT. The frozen source-admissibility oracle reports exact equality across 5,870 expected and audited coordinates with zero missing, extra, duplicate, or unknown rows; rehearsal alone retains 70 answer-shape failures. The held pilot returned 0 of 1 after five internal attempts with G5 failures. One quarantined distinct-candidate probe returned 1 of 1 but mandatory full POST /v1/qc rejected it on fatal C1. Factory issue #274 has been claimed by intake-autopilot and records the byte-proven blocker: contextual generation accepts the advertised steer_template field but silently discards it on both sync and async paths. Production reconciliation remains 0 accepted, 1 rejected, 69 pending, 70 remaining, with queued, running, ambiguous, and unmeasured all zero. Resume only after a canonical fix is merged, deployed, and proven to propagate a sentinel to the real contextual prompt; then retry only the held pilot before releasing the other 69.",
+      "scope": "current Gate 3 blocker, factory contract, one held pilot, and exact 70-placement reconciliation; excludes Gate 4, publication, upload, enrollment, activation, and release",
+      "evidence": [
+        {
+          "type": "factory-issue",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/274",
+          "state": "OPEN — autopilot:working",
+          "observed_at": "2026-08-24T09:13Z"
+        },
+        {
+          "type": "factory-version",
+          "url": "https://test-builder.inceptstore.com/version",
+          "observed_at": "2026-08-24T09:09Z",
+          "commit": "c352ce96d946fae7e38eed1b2644faba1ae1126c"
+        }
+      ],
+      "evidence_access": "GITHUB+LIVE_FACTORY_READBACK"
+    },
+    {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T00:47Z",
-      "value": "Gate 5 remains a historical HOLD — SOURCE_BANK_ANSWER_SHAPE on its prior digest-bound source: the earlier four-family audit found 203 uniquely-longest-correct placements, and the later corrected verifier found the omitted rehearsal lane with 655 checked and 70 additional failures. Current Gate 2 is closed on owner-merged canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399 with zero unknown or unmeasured. Gate 3 is locked pending the graph-derived source-admissibility guard; prior Gate 3-4 receipts remain exact historical evidence only. No generation, source replacement, TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-24T09:13Z",
+      "value": "Gate 5 remains a historical HOLD — SOURCE_BANK_ANSWER_SHAPE on its prior digest-bound source: the earlier four-family audit found 203 uniquely-longest-correct placements, and the later corrected verifier found the omitted rehearsal lane with 655 checked and 70 additional failures. Current Gate 2 is closed on owner-merged canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399. The replacement graph-derived oracle now proves exact expected-versus-audited equality across 5,870 coordinates with zero missing, extra, duplicate, or unknown rows. Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274; prior Gate 3-4 receipts remain exact historical evidence only. No TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "Gate 5 answer-shape preflight against exact Gate 4-bound source; excludes source repair, TimeBack publication, enrollment, activation, and learner acceptance",
       "evidence": [
         {
@@ -232,8 +255,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T00:47Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399 after the rehearsal amendment rederived 655 checked and exactly 70 stale-unusable rows with zero unknown or unmeasured. Gate 3 is locked pending the frozen graph-derived source-admissibility guard and then the exact 70-placement repair. Prior Gate 3 SOURCE_ACCEPTED evidence for 203 placements and Gate 4 PROFILE_AND_SOURCE_BOUND evidence on AP One 9582e3087798880d6c9cbfb54175c861741be27a remain immutable history for their old source digests; they do not retain current closure credit. Gates 4-11 remain locked. No generation, TimeBack, object-storage, enrollment, activation, learner-acceptance, or release write occurred in this gate.",
+      "observed_at": "2026-08-24T09:13Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399. The frozen graph-derived source-admissibility oracle is green on all 5,870 expected and audited coordinates with zero missing, extra, duplicate, or unknown rows. Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274 with 0 accepted, 1 rejected, 69 pending, and 70 remaining; the other 69 stay locked until one C1-steered held-slot pilot passes generation, full QC, placement, collision, answer-shape, and oracle checks after a canonical merged and deployed fix. Prior Gate 3 SOURCE_ACCEPTED evidence for 203 placements and Gate 4 PROFILE_AND_SOURCE_BOUND evidence on AP One 9582e3087798880d6c9cbfb54175c861741be27a remain immutable history for their old source digests; they do not retain current closure credit. Gates 4-11 remain locked. No TimeBack, object-storage, enrollment, activation, learner-acceptance, or release write occurred.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -648,8 +671,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "PLANNED",
-      "status_at": "2026-08-24T00:47Z",
-      "value": "HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399 with exactly 70 rehearsal shortages and zero unknown or unmeasured. Gate 3 is locked pending the pre-spend source-admissibility guard; prior Gate 3-4 closures remain historical evidence for old source digests only, and Gates 4-11 remain locked. No LS readiness, generation, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
+      "status_at": "2026-08-24T09:13Z",
+      "value": "HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399 with exactly 70 rehearsal shortages and zero unknown or unmeasured. The pre-spend source-admissibility oracle is frozen and green. Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274; prior Gate 3-4 closures remain historical evidence for old source digests only, and Gates 4-11 remain locked. No LS readiness, TimeBack publication, enrollment, activation, or learner visibility is claimed.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {

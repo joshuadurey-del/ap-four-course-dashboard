@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 2 · CLOSED', statusTone: 'green', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 00:47Z',
-      nextStep: 'Prove and digest-freeze the graph-derived source-admissibility oracle before any Gate 3 factory spend.',
+      status: 'Gate 3 · HOLD', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 09:13Z',
+      nextStep: 'Wait for factory issue #274 to merge and deploy, prove contextual steering reaches the prompt, then retry only the held pilot.',
       footprint: [
-        { value: '655', label: 'rehearsal rows checked' },
-        { value: '70', label: 'exact Gate 3 shortage' },
-        { value: '0', label: 'unknown or unmeasured' }
+        { value: '5,870', label: 'exact source coordinates' },
+        { value: '70', label: 'Gate 3 placements remaining' },
+        { value: '0', label: 'queued, running, or ambiguous' }
       ],
-      etaDays: 'ORACLE NEXT',
-      etaNote: 'Gate 2 is closed on canonical PR #66 bytes. Gate 3 stays locked until exact source-coordinate coverage and digest freezing pass; prior Gate 3-4 receipts remain historical.'
+      etaDays: 'FACTORY HOLD',
+      etaNote: 'The frozen oracle is green. Factory issue #274 blocks the governed C1-steered pilot; prior Gate 3-4 receipts remain historical.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,12 +70,12 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gate 2 is closed on the byte-stable rehearsal amendment. Gate 3 is locked pending one graph-derived source-admissibility oracle; prior Gate 3-4 receipts remain historical for their exact old source digests.',
+      note: 'Gate 2 is closed and the frozen graph-derived source-admissibility oracle is green. Gate 3 is held on factory issue #274; prior Gate 3-4 receipts remain historical for their exact old source digests.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
-        { gate: 3, state: 'locked', status: 'Next · oracle guard', signal: '70 exact placements · factory spend still locked', copy: 'Prove exact expected-versus-audited source-coordinate equality, reject unknown banks and tiers, and freeze the oracle digests before the first paid repair call.', href: 'humgeo.html' },
+        { gate: 3, state: 'active', status: 'Hold · blocked contract', signal: '5,870 exact coordinates · 70 remaining · issue #274 claimed', copy: 'The oracle is green. Intake-autopilot has claimed the contextual-steering defect; wait for a canonical merged and deployed fix, prove prompt propagation, then retry only the held pilot.', href: 'https://github.com/InceptTrilogy/incept-test-builder/issues/274' },
         { gate: 4, state: 'locked', status: 'Locked · historical evidence retained', signal: 'Prior PR #847 receipt binds old source digests only', copy: 'The prior profile/source bind and Deploy readback remain immutable evidence, but the new 70-placement source must be owner-merged and rebound before current Gate 4 closure.', href: 'https://github.com/InceptTrilogy/ap-one/pull/847' },
         { gate: 5, state: 'locked', status: 'Locked', signal: 'Late rehearsal finding preserved as process evidence', copy: 'Gate 5 cannot restart until Gates 3-4 reclose and the same frozen source-admissibility oracle is green on rebound bytes.', href: 'humgeo.html' }
       ]
