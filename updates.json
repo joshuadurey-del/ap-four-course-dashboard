@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T15:04Z",
+    "course": "HumGeo",
+    "text": "Gate 3 is IN PROGRESS. The bounded slot-017 source-guidance correction produced a DOK-3 candidate, and the factory's targeted single-check repair then passed the complete QC battery. Chunk 3 is disposition-clean: 31 candidates are accepted, 39 placements remain sealed-unsubmitted, and the source-admissibility oracle reports exactly 39 remaining answer-shape failures with coverage still exact. Chunk 4's bounded ten placements are now active. Gate 4 and all publication, upload, enrollment, activation, learner, and release writes remain locked."
+  },
+  {
     "ts": "2026-08-24T14:36Z",
     "course": "HumGeo",
     "text": "Gate 3 remains HOLD while one bounded, owner-authorized HumGeo recovery runs against the current factory contract. The prior recovery did not return an accepted candidate; the current request corrects its source-guidance mismatch while preserving the governed lesson source, APHG binding, target DOK, answer shape, and every QC gate. Twenty candidates remain accepted, the other 49 placements remain sealed-unsubmitted, and chunk 3 stays locked pending the terminal result."
