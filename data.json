@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-24T11:35Z",
+  "snapshot": "2026-08-24T11:54Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T09:13Z",
-      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399. Its frozen graph-derived source-admissibility oracle is green on all 5,870 expected and audited coordinates with zero missing, extra, duplicate, or unknown rows. Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274 after the held pilot failed mandatory full QC; prior Gate 3-4 receipts remain historical evidence only. APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology are at Gate 0 baseline with prior evidence retained. Gates 4-11 remain locked and no publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-24T11:54Z",
+      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 3 is active with 11 accepted candidates, 59 sealed-unsubmitted placements, and zero disposition residue. APWH Gate 2 is HOLD — GRADER_OWNER_EVIDENCE with six unknown grader-boundary clauses; its KC-terminal carrier and current typed-KG denominator are now classified genuinely missing, and the current row-feedback contract is attached. APUSH and Psychology remain at Gate 0 baseline with prior evidence retained. Gates 4-11 remain locked and no publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T09:13Z",
-      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo's Gate 2 rehearsal amendment is closed on exact canonical bytes; the pre-spend source-admissibility oracle is frozen and green, and Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274 with 70 placements remaining. Prior Gate 3-4 receipts remain historical evidence only. APWH Gate 1 retains closure credit and Gate 2 evidence remains credited but open; APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
+      "observed_at": "2026-08-24T11:54Z",
+      "value": "Each course page quantifies observable work in native units and maps it to the shared gate spine without summing unlike evidence. Historical receipts remain immutable. HumGeo's Gate 2 rehearsal amendment is closed and Gate 3 is active on the exact remaining repair. APWH Gate 1 retains closure credit; Gate 2 now credits the sanctioned 2,791-MCQ and 5,465-constructed-response censuses while preserving a six-clause grader-evidence hold. APUSH and Psychology retain blueprint, inventory, QC, media, and assembly evidence without premature gate closure.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -388,9 +388,9 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T13:33Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Exact official identity is 9 units, 71 topics, and 71 LOs, with 176 lesson identities and 71 production topic gates. Gate 2 has a sanctioned live-bank receipt for 2,791 unique available, passed APWH MCQs across all 71 topics in one REPEATABLE READ, server-verified read-only transaction ending in ROLLBACK. The full deterministic reconciliation against accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One bb17b21b856d81de4ba26c468790f0c5896a3c75 enumerates 10,511 identities across source and served-ID planes, 5,919 concrete slots, and all 235 blueprint clauses. Two builds were byte-identical at inventory SHA-256 48fd0679e40b145168929621f38212e04a9e6e75d3dee1865881e7824c6f899d; the stable shortage-manifest SHA-256 is 1da92be004308df08cddbb0f86ca2b0664d840492e02fc9f40fa0a2e265ddb5c. Current handoff/readback evidence binds all 933 stored question identities and all 176 article attachments. A GET-only learner trace returned 200 for the course list and 404 for all 71 exact APWH gate instruments, proving current tenant placement is 0 of 71 with zero POSTs. An exhaustive learner-practice readback used 176 GETs and zero POSTs, reproduced all 698 current overlay identities, and proved zero served-content overlap with the 645 stored/scorable practice-key UUIDs. A second exhaustive readback used 357 GETs and zero POSTs to bind the current 9-unit, 176-active-lesson tree, every lesson write route, and all 176 learner plans. The first Row-1 task is at position 4 after three content lessons and its plan orders probe, exposition, then production. All 49 organiser panels are served across 33 host lessons, but zero carry target_schema and zero carry conceptual_gap. Item identities classify as 3,384 attached and 7,127 unattached with zero unknown; concrete slots classify as 5,576 attached, 263 unattached, 80 missing, and zero unknown; blueprint clauses classify as 178 attached, 47 missing, 1 stale, and 9 unknown. The exact unknowns are A-100, A-101, A-103, A-104, A-105, A-106, A-116, A-154, and A-202. Gate 2 remains IN_PROGRESS with HOLD: ZERO_UNKNOWN_NOT_MET; Gate 3 remains locked. No APWH bank or course mutation occurred.",
-      "scope": "Gate 1 official scope plus the full sanctioned Gate 2 inventory and GET-only tenant, practice, tree, write, and learner-plan readbacks; excludes inventory closure, generation authority, deployment, and learner serving",
+      "observed_at": "2026-08-24T11:54Z",
+      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Gate 2 recon is bound to accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751, AP One 216ab63f5b65daa74bc82c36e0af3caf894b6bf8, and grader/factory 350d25f60cddca65cf6226080a618ec9f2aa9f50. Sanctioned read-only censuses found 2,791 available, passed MCQs plus 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs; all transactions were REPEATABLE READ, server-verified read-only, and rolled back. The constructed-response total is 5,465, so A-116 is not an empty-bank problem: the genuinely missing artifact is the canonical join from all 375 typed mandatory concept KCs to terminal E4 constructed-response surfaces. The current 28-concept KG delta also leaves A-202 genuinely missing because the authoritative typing overlay has no template axis for an exact current join denominator. Six APWH FRQ assessment states contain 616 scored criterion rows, including earned and not-earned cases, with zero missing reasoning or evidence fields, resolving A-154 as attached. Two complete no-write reconciliation runs over identical inputs were byte-identical at inventory SHA-256 f8c3cb03830ac89d094338071f2e7fafccd791ca23aaf358a1554587e4f2ef96; shortage-manifest SHA-256 is ccfd3707559f0be39509985f9d0bebcc8c14e151ac08eaa45fb9429919cc23a7. Item and concrete-slot unknowns remain zero; blueprint clauses classify as 179 attached, 49 missing, 1 stale, and 6 unknown. The remaining unknowns are A-100, A-101, A-103, A-104, A-105, and A-106. Current grader source, ordinary stored outcomes, organization-wide exact-phrase code search, S3 key census, and Actions-artifact inventory did not produce the required current-version adversarial fixture receipts. A-100/A-101 also require an explicit authority disposition between the pinned blueprint's superseded 3/6 and 3-document rules and the released 2025 factory's 3/4 and 2-document contract. Gate 2 remains HOLD — GRADER_OWNER_EVIDENCE; Gate 3 remains locked. No APWH bank or course mutation occurred.",
+      "scope": "Gate 1 official scope plus exhaustive read-only repo, AWS bank, S3 metadata, grader-artifact, and learner-readback recon; excludes new grading, inventory closure, Gate 3 authority, course mutation, deployment, and learner serving",
       "evidence": [
         {
           "type": "oracle-source",
@@ -403,7 +403,7 @@
         },
         {
           "type": "ap-one-projection",
-          "url": "https://github.com/InceptTrilogy/ap-one/tree/bb17b21b856d81de4ba26c468790f0c5896a3c75/services/bff/data/courses/ap-world-history-fall-2026-v1"
+          "url": "https://github.com/InceptTrilogy/ap-one/tree/216ab63f5b65daa74bc82c36e0af3caf894b6bf8/services/bff/data/courses/ap-world-history-fall-2026-v1"
         },
         {
           "type": "issue",
@@ -416,7 +416,7 @@
         },
         {
           "type": "read-only-bank-receipt",
-          "observed_at": "2026-08-22T10:59Z",
+          "observed_at": "2026-08-24T10:32Z",
           "items": 2791,
           "items_sha256": "4cc89d7092a6a2a68fafe9dd40a683c3ccf91dddb230f3474b9be6c37c19f654",
           "full_payloads_sha256": "f98b6636ff300de03d601b7a2b4a33e7310bab0add95c80c611770d83b88fc7d",
@@ -424,9 +424,34 @@
         },
         {
           "type": "gate-2-inventory",
-          "observed_at": "2026-08-22T13:33Z",
-          "inventory_sha256": "48fd0679e40b145168929621f38212e04a9e6e75d3dee1865881e7824c6f899d",
-          "shortage_manifest_sha256": "1da92be004308df08cddbb0f86ca2b0664d840492e02fc9f40fa0a2e265ddb5c"
+          "observed_at": "2026-08-24T11:54Z",
+          "inventory_sha256": "f8c3cb03830ac89d094338071f2e7fafccd791ca23aaf358a1554587e4f2ef96",
+          "shortage_manifest_sha256": "ccfd3707559f0be39509985f9d0bebcc8c14e151ac08eaa45fb9429919cc23a7",
+          "unknown_blueprint_clauses": 6
+        },
+        {
+          "type": "constructed-response-bank-readonly-census",
+          "observed_from": "2026-08-24T11:37Z",
+          "observed_to": "2026-08-24T11:38Z",
+          "short_frq": 1097,
+          "long_frq": 1938,
+          "dbq": 2430,
+          "total": 5465,
+          "short_items_sha256": "164319ef85dbbc17dfc79efa8d637d2300b40e52a696e3e727fc3b1ec781911b",
+          "long_items_sha256": "b2abe71dc6eaeb5e9b991f7cfe944e240fb94bed46ed823ba86e8ef62ca3b6e1",
+          "dbq_items_sha256": "2027114b567cbdcdfae671065588184b85cf5bb667d349979776f9f4420cde33",
+          "transaction": "REPEATABLE READ + READ ONLY + ROLLBACK"
+        },
+        {
+          "type": "current-sanctioned-grader",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/tree/350d25f60cddca65cf6226080a618ec9f2aa9f50/engine/grader_api/graders/ap_us_history",
+          "commit": "350d25f60cddca65cf6226080a618ec9f2aa9f50"
+        },
+        {
+          "type": "unmerged-dbq-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/189",
+          "head": "3eb248fd0e9b3b05cc18a0f5b4ed11ef58c6a9f6",
+          "scope": "historical unmerged evidence only; not current production authority"
         },
         {
           "type": "learner-get-readback",
@@ -471,7 +496,7 @@
           "receipt_sha256": "1489c2434da33552c5e94dbc2d5fc2c53c67a77193588ef7293f22b626624b2e"
         }
       ],
-      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
+      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_AWS_READ_ONLY+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -806,7 +831,7 @@
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 locks the exact official scope. Gate 2 is now IN_PROGRESS with all sanctioned read-only evidence retained and nine blueprint clauses still unknown or unmeasured. Ilma's native TimeBack runbook governs later publication, but does not skip Gate 2 or make a reviewer surface.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 locks the exact official scope. Gate 2 retains all sanctioned read-only evidence and is now held on six grader-boundary clauses. Ilma's native TimeBack runbook governs later publication, but does not skip Gate 2 or make a reviewer surface.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -819,7 +844,7 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-22T08:33Z"
+      "observed_at": "2026-08-24T11:54Z"
     },
     {
       "claim_id": "apwh.local_done",
@@ -842,8 +867,8 @@
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "Next governed move: resolve the nine exact unknown blueprint clauses and rerun the same pinned Gate 2 reconciliation to zero unknown. Later work must accept the complete source, bind the APWH profile, seal graph/preview and the all-absent plan, then keep dark publication, canary enrollment, private activation, learner acceptance, and release separate.",
+      "status_at": "2026-08-24T11:54Z",
+      "value": "Next governed move: retrieve already-stored current-version adversarial receipts through the sanctioned grader route for A-100, A-101, A-103, A-104, A-105, and A-106. If those instruments do not exist, route the gap as an owner ask; do not use an unnamed local content judge. Then rerun the pinned Gate 2 reconciliation to zero unknown. Later work must accept the complete source, bind the APWH profile, seal graph/preview and the all-absent plan, then keep dark publication, canary enrollment, private activation, learner acceptance, and release separate.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {

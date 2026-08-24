@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T11:54Z",
+    "course": "APWH",
+    "text": "Gate 2 recon narrowed the exact unknown residue from nine blueprint clauses to six, but did not close the gate. Sanctioned read-only censuses found 2,791 passed/available MCQs and 5,465 passed/available constructed responses: 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs. A-116 and A-202 are now genuinely missing carrier/schema contracts; A-154 is attached from 616 current scored criterion rows with zero missing reasoning or evidence fields. Two complete no-write reconciliation runs were byte-identical at SHA-256 f8c3cb03830ac89d094338071f2e7fafccd791ca23aaf358a1554587e4f2ef96; shortage-manifest SHA-256 is ccfd3707559f0be39509985f9d0bebcc8c14e151ac08eaa45fb9429919cc23a7. Blueprint disposition is 179 attached, 49 missing, 1 stale, and 6 unknown: A-100, A-101, A-103, A-104, A-105, and A-106. Current sanctioned grader source and stored repo, S3, and Actions evidence do not contain the required current-version adversarial fixture receipts; open PR #189 is historical unmerged evidence only. Gate 2 is HOLD — GRADER_OWNER_EVIDENCE and Gate 3 remains locked. No grading POST, generation, bank/course mutation, PR, or merge occurred."
+  },
+  {
     "ts": "2026-08-24T11:35Z",
     "course": "HumGeo",
     "text": "Gate 3 is IN PROGRESS on the exact 70-placement rehearsal answer-shape repair. Owner ilmych merged factory PR #275; Deploy run 32714652217 succeeded and live /version plus /api/ready served exact commit 350d25f60cddca65cf6226080a618ec9f2aa9f50 before execution. The pilot and first bounded chunk are now disposition-clean: 11 candidates are accepted, 59 placements remain sealed-unsubmitted, and rejected, running, ambiguous, and unmeasured counts are zero. Two one-check STRUCT_D8 rejects followed the factory repair route; one passed full re-QC, while the other exposed fatal C2 and its single steered regeneration passed. The source-admissibility oracle reports exactly 59 remaining answer-shape failures, so chunk 2 is green to act. Gates 4-11 are locked; no TimeBack, object-storage, publication, upload, enrollment, activation, learner, or release write occurred."
