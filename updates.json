@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T17:27Z",
+    "course": "HumGeo",
+    "text": "Gate 3 remains HOLD at chunk 6. The factory's fixed-passage analysis control resolved both terminal DOK-generation failures and produced candidates, but unchanged full QC rejected one on the fatal S7 cover test and the other on fatal S6/C3 parallelism and functional-stimulus checks. Their single anchor-preserving QC regenerations are queued. Fifty-nine candidates are accepted, nine chunk-7 placements remain sealed-unsubmitted, two governed recoveries are active, and the source-admissibility oracle reports exactly 11 remaining answer-shape failures with coverage still exact. Chunk 7, Gate 4, and all publication, upload, enrollment, activation, learner, and release writes remain locked."
+  },
+  {
     "ts": "2026-08-24T16:36Z",
     "course": "HumGeo",
     "text": "Gate 3 is HOLD at chunk 6 while two bounded, owner-authorized source-guidance corrections run against the unchanged factory gates. Fifty-nine candidates are accepted, nine chunk-7 placements remain sealed-unsubmitted, two governed recoveries are queued, and the source-admissibility oracle reports exactly 11 remaining answer-shape failures with coverage still exact. Chunk 7, Gate 4, and all publication, upload, enrollment, activation, learner, and release writes remain locked."
