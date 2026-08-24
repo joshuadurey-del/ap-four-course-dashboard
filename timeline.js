@@ -7,13 +7,13 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 24, 2026 · 20:54 KST',
+  snapshot: 'Aug 24, 2026 · 21:21 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
     { id: 2, name: 'Inventory', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
-    { id: 3, name: 'Accept source', state: 'active', status: 'In progress · 11 accepted', detail: 'The exact 70-placement rehearsal repair has 11 accepted candidates and 59 sealed-unsubmitted placements; rejected, running, ambiguous, and unmeasured counts are zero.' },
+    { id: 3, name: 'Accept source', state: 'active', status: 'Hold · terminal recovery exhausted', detail: 'The exact 70-placement rehearsal repair has 20 accepted candidates, 49 sealed-unsubmitted placements, one terminal reject, and 50 remaining by the frozen oracle.' },
     { id: 4, name: 'Profile + authority', state: 'locked', status: 'Locked · new source pending', detail: 'The prior Gate 4 receipt remains historical evidence. Current profile/source binding waits for the reopened Gate 3 source to close on exact bytes.' },
     { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'The answer-shape finding is now owned by Gate 3. Graph and preview work stays locked until fresh Gate 3 and Gate 4 closure receipts exist.' },
     { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 11:35Z',
-      nextStep: 'Run the next bounded Gate 3 chunk, then apply the same factory disposition and oracle barrier before advancing again.',
+      status: 'Gate 3 · HOLD', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 12:21Z',
+      nextStep: 'Owner disposition is required for slot 017; chunk 3 stays locked because the single governed DOK-3 recovery also exhausted.',
       footprint: [
-        { value: '11', label: 'accepted replacements' },
-        { value: '59', label: 'sealed-unsubmitted' },
-        { value: '0', label: 'disposition residue' }
+        { value: '20', label: 'accepted replacements' },
+        { value: '49', label: 'sealed-unsubmitted' },
+        { value: '1', label: 'terminal reject' }
       ],
-      etaDays: 'GATE 3 ACTIVE',
-      etaNote: 'Factory PR #275 is deployed on exact served SHA. The 11/59/0 disposition and source-admissibility oracle barrier is green; chunk 2 is next.'
+      etaDays: 'OWNER HOLD',
+      etaNote: 'Factory PR #275 remains deployed on exact served SHA. Slot 017 exhausted its original factory run and its single governed steered recovery; no outer retry is authorized.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,12 +70,12 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gate 2 remains closed. Gate 3 is reopened for the exact 70-placement rehearsal answer-shape repair; current effective state is 11 accepted, 59 sealed-unsubmitted, and zero disposition residue. Prior Gate 3-4 receipts remain historical evidence only.',
+      note: 'Gate 2 remains closed. Gate 3 is held on one terminally exhausted recovery: 20 accepted, 49 sealed-unsubmitted, one rejected, and 50 remaining by the frozen oracle. Prior Gate 3-4 receipts remain historical evidence only.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
-        { gate: 3, state: 'active', status: 'In progress', signal: '11 accepted · 59 unsubmitted · 0 disposition residue', copy: 'The pilot and first chunk are disposition-clean. One D8 repair passed full re-QC; the other exposed C2 and its single steered regeneration passed. The exact 11/59/0 oracle barrier is green.', href: 'https://github.com/InceptTrilogy/incept-test-builder/pull/275' },
+        { gate: 3, state: 'active', status: 'Hold · terminal recovery exhausted', signal: '20 accepted · 49 unsubmitted · 1 rejected · 50 remaining', copy: 'Chunk 2 accepted six directly, one D8 repair, and two S6 regenerations. Slot 017 exhausted its original five attempts and its single DOK-3-steered recovery, so chunk 3 is locked pending owner disposition.', href: 'https://github.com/InceptTrilogy/incept-test-builder/pull/275' },
         { gate: 4, state: 'locked', status: 'Locked · historical evidence retained', signal: 'Prior PR #847 receipt binds old source digests only', copy: 'The prior profile/source bind remains historical evidence but cannot bind source bytes that Gate 3 has not yet accepted.', href: 'https://github.com/InceptTrilogy/ap-one/pull/847' },
         { gate: 5, state: 'locked', status: 'Locked', signal: 'Answer-shape defect owned by Gate 3', copy: 'Graph and preview work waits for fresh Gate 3 source acceptance and Gate 4 profile/source binding.', href: 'humgeo.html' }
       ]
