@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T11:35Z",
+    "course": "HumGeo",
+    "text": "Gate 3 is IN PROGRESS on the exact 70-placement rehearsal answer-shape repair. Owner ilmych merged factory PR #275; Deploy run 32714652217 succeeded and live /version plus /api/ready served exact commit 350d25f60cddca65cf6226080a618ec9f2aa9f50 before execution. The pilot and first bounded chunk are now disposition-clean: 11 candidates are accepted, 59 placements remain sealed-unsubmitted, and rejected, running, ambiguous, and unmeasured counts are zero. Two one-check STRUCT_D8 rejects followed the factory repair route; one passed full re-QC, while the other exposed fatal C2 and its single steered regeneration passed. The source-admissibility oracle reports exactly 59 remaining answer-shape failures, so chunk 2 is green to act. Gates 4-11 are locked; no TimeBack, object-storage, publication, upload, enrollment, activation, learner, or release write occurred."
+  },
+  {
     "ts": "2026-08-24T09:13Z",
     "course": "HumGeo",
     "text": "Gate 3 is HOLD — BLOCKED_CONTRACT. The frozen graph-derived source-admissibility oracle is green on all 5,870 expected and audited coordinates with zero missing, extra, duplicate, or unknown rows, while rehearsal alone retains the exact 70-placement shortage. The first governed slot exhausted five contextual attempts at G5; one quarantined distinct-candidate probe returned an item but mandatory full /v1/qc rejected it on fatal C1. Factory issue #274 has been claimed by intake-autopilot and records that contextual generation accepts the advertised steer_template field but silently discards it on both sync and async paths. Reconciliation remains 0 accepted, 1 rejected, 69 pending, 70 remaining, and zero queued, running, ambiguous, or unmeasured. Wait for a canonical merged and deployed fix, prove exact prompt propagation, then retry only the held pilot before releasing the other 69. Gates 4-11 remain locked; no publication, upload, enrollment, activation, or release write occurred."

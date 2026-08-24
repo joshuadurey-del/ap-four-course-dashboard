@@ -7,15 +7,15 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 24, 2026 · 09:47 KST',
+  snapshot: 'Aug 24, 2026 · 20:35 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
     { id: 2, name: 'Inventory', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
-    { id: 3, name: 'Accept source', state: 'locked', status: 'Next · oracle guard', detail: 'First prove and freeze one graph-derived source-admissibility oracle, then replace only the exact 70 rehearsal placements.' },
-    { id: 4, name: 'Profile + authority', state: 'locked', status: 'Locked', detail: 'Rebind the reviewed profile and complete Phase-0 source capture only after the 70-placement Gate 3 source is owner-merged.' },
-    { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'Seal the graph, pricing, assets, QTI, article checks, and preview only after Gate 4 rebind closes on the same frozen oracle.' },
+    { id: 3, name: 'Accept source', state: 'active', status: 'In progress · 11 accepted', detail: 'The exact 70-placement rehearsal repair has 11 accepted candidates and 59 sealed-unsubmitted placements; rejected, running, ambiguous, and unmeasured counts are zero.' },
+    { id: 4, name: 'Profile + authority', state: 'locked', status: 'Locked · new source pending', detail: 'The prior Gate 4 receipt remains historical evidence. Current profile/source binding waits for the reopened Gate 3 source to close on exact bytes.' },
+    { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'The answer-shape finding is now owned by Gate 3. Graph and preview work stays locked until fresh Gate 3 and Gate 4 closure receipts exist.' },
     { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
     { id: 7, name: 'Dark publish', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 8, name: 'Canary enroll', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 3 · HOLD', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 09:13Z',
-      nextStep: 'Wait for factory issue #274 to merge and deploy, prove contextual steering reaches the prompt, then retry only the held pilot.',
+      status: 'Gate 3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 11:35Z',
+      nextStep: 'Run the next bounded Gate 3 chunk, then apply the same factory disposition and oracle barrier before advancing again.',
       footprint: [
-        { value: '5,870', label: 'exact source coordinates' },
-        { value: '70', label: 'Gate 3 placements remaining' },
-        { value: '0', label: 'queued, running, or ambiguous' }
+        { value: '11', label: 'accepted replacements' },
+        { value: '59', label: 'sealed-unsubmitted' },
+        { value: '0', label: 'disposition residue' }
       ],
-      etaDays: 'FACTORY HOLD',
-      etaNote: 'The frozen oracle is green. Factory issue #274 blocks the governed C1-steered pilot; prior Gate 3-4 receipts remain historical.'
+      etaDays: 'GATE 3 ACTIVE',
+      etaNote: 'Factory PR #275 is deployed on exact served SHA. The 11/59/0 disposition and source-admissibility oracle barrier is green; chunk 2 is next.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,14 +70,14 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gate 2 is closed and the frozen graph-derived source-admissibility oracle is green. Gate 3 is held on factory issue #274; prior Gate 3-4 receipts remain historical for their exact old source digests.',
+      note: 'Gate 2 remains closed. Gate 3 is reopened for the exact 70-placement rehearsal answer-shape repair; current effective state is 11 accepted, 59 sealed-unsubmitted, and zero disposition residue. Prior Gate 3-4 receipts remain historical evidence only.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
-        { gate: 3, state: 'active', status: 'Hold · blocked contract', signal: '5,870 exact coordinates · 70 remaining · issue #274 claimed', copy: 'The oracle is green. Intake-autopilot has claimed the contextual-steering defect; wait for a canonical merged and deployed fix, prove prompt propagation, then retry only the held pilot.', href: 'https://github.com/InceptTrilogy/incept-test-builder/issues/274' },
-        { gate: 4, state: 'locked', status: 'Locked · historical evidence retained', signal: 'Prior PR #847 receipt binds old source digests only', copy: 'The prior profile/source bind and Deploy readback remain immutable evidence, but the new 70-placement source must be owner-merged and rebound before current Gate 4 closure.', href: 'https://github.com/InceptTrilogy/ap-one/pull/847' },
-        { gate: 5, state: 'locked', status: 'Locked', signal: 'Late rehearsal finding preserved as process evidence', copy: 'Gate 5 cannot restart until Gates 3-4 reclose and the same frozen source-admissibility oracle is green on rebound bytes.', href: 'humgeo.html' }
+        { gate: 3, state: 'active', status: 'In progress', signal: '11 accepted · 59 unsubmitted · 0 disposition residue', copy: 'The pilot and first chunk are disposition-clean. One D8 repair passed full re-QC; the other exposed C2 and its single steered regeneration passed. The exact 11/59/0 oracle barrier is green.', href: 'https://github.com/InceptTrilogy/incept-test-builder/pull/275' },
+        { gate: 4, state: 'locked', status: 'Locked · historical evidence retained', signal: 'Prior PR #847 receipt binds old source digests only', copy: 'The prior profile/source bind remains historical evidence but cannot bind source bytes that Gate 3 has not yet accepted.', href: 'https://github.com/InceptTrilogy/ap-one/pull/847' },
+        { gate: 5, state: 'locked', status: 'Locked', signal: 'Answer-shape defect owned by Gate 3', copy: 'Graph and preview work waits for fresh Gate 3 source acceptance and Gate 4 profile/source binding.', href: 'humgeo.html' }
       ]
     },
     apwh: {
