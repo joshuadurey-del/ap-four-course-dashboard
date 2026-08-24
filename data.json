@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-24T12:21Z",
+  "snapshot": "2026-08-24T14:09Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T12:21Z",
-      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 3 is HOLD — TERMINAL_REGENERATION_EXHAUSTED with 20 accepted candidates, 49 sealed-unsubmitted placements, one terminal reject, and 50 remaining; chunk 3 is locked. APWH Gate 2 is HOLD — GRADER_OWNER_EVIDENCE with six unknown grader-boundary clauses; its KC-terminal carrier and current typed-KG denominator are now classified genuinely missing, and the current row-feedback contract is attached. APUSH and Psychology remain at Gate 0 baseline with prior evidence retained. Gates 4-11 remain locked and no publication, enrollment, activation, or learner acceptance is claimed.",
+      "observed_at": "2026-08-24T14:09Z",
+      "value": "All four courses use one 12-gate local sequence organized around Ilma's AP One native TimeBack runbook. HumGeo Gate 3 is HOLD — TERMINAL_REGENERATION_EXHAUSTED with 20 accepted candidates, 49 sealed-unsubmitted placements, one terminal reject, and 50 remaining; chunk 3 is locked. APWH Gate 2 is HOLD — GRADER_OWNER_EVIDENCE with six owner-bound grader gaps: A-100/A-101 are authority drift and A-103 through A-106 lack current-version boundary receipts. Its KC-terminal carrier and current typed-KG denominator are genuinely missing, and the current row-feedback contract is attached. APUSH and Psychology remain at Gate 0 baseline with prior evidence retained. Gates 4-11 remain locked and no publication, enrollment, activation, or learner acceptance is claimed.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -388,8 +388,8 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T11:54Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Gate 2 recon is bound to accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751, AP One 216ab63f5b65daa74bc82c36e0af3caf894b6bf8, and grader/factory 350d25f60cddca65cf6226080a618ec9f2aa9f50. Sanctioned read-only censuses found 2,791 available, passed MCQs plus 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs; all transactions were REPEATABLE READ, server-verified read-only, and rolled back. The constructed-response total is 5,465, so A-116 is not an empty-bank problem: the genuinely missing artifact is the canonical join from all 375 typed mandatory concept KCs to terminal E4 constructed-response surfaces. The current 28-concept KG delta also leaves A-202 genuinely missing because the authoritative typing overlay has no template axis for an exact current join denominator. Six APWH FRQ assessment states contain 616 scored criterion rows, including earned and not-earned cases, with zero missing reasoning or evidence fields, resolving A-154 as attached. Two complete no-write reconciliation runs over identical inputs were byte-identical at inventory SHA-256 f8c3cb03830ac89d094338071f2e7fafccd791ca23aaf358a1554587e4f2ef96; shortage-manifest SHA-256 is ccfd3707559f0be39509985f9d0bebcc8c14e151ac08eaa45fb9429919cc23a7. Item and concrete-slot unknowns remain zero; blueprint clauses classify as 179 attached, 49 missing, 1 stale, and 6 unknown. The remaining unknowns are A-100, A-101, A-103, A-104, A-105, and A-106. Current grader source, ordinary stored outcomes, organization-wide exact-phrase code search, S3 key census, and Actions-artifact inventory did not produce the required current-version adversarial fixture receipts. A-100/A-101 also require an explicit authority disposition between the pinned blueprint's superseded 3/6 and 3-document rules and the released 2025 factory's 3/4 and 2-document contract. Gate 2 remains HOLD — GRADER_OWNER_EVIDENCE; Gate 3 remains locked. No APWH bank or course mutation occurred.",
+      "observed_at": "2026-08-24T14:09Z",
+      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Gate 2 recon remains bound to accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751 and AP One 216ab63f5b65daa74bc82c36e0af3caf894b6bf8; the current factory and deployed AP grader are now 9b4f60fffa386ced008a9c4c42629747394a6090. Sanctioned read-only censuses found 2,791 available, passed MCQs plus 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs; all transactions were REPEATABLE READ, server-verified read-only, and rolled back. The constructed-response total is 5,465, so A-116 is not an empty-bank problem: the genuinely missing artifact is the canonical join from all 375 typed mandatory concept KCs to terminal E4 constructed-response surfaces. The current 28-concept KG delta leaves A-202 genuinely missing because the authoritative typing overlay has no template axis for an exact current join denominator. Six APWH FRQ assessment states contain 616 scored criterion rows, including earned and not-earned cases, with zero missing reasoning or evidence fields, resolving A-154 as attached. Two complete no-write reconciliation runs over identical inputs were byte-identical at inventory SHA-256 f8c3cb03830ac89d094338071f2e7fafccd791ca23aaf358a1554587e4f2ef96; shortage-manifest SHA-256 is ccfd3707559f0be39509985f9d0bebcc8c14e151ac08eaa45fb9429919cc23a7. That last deterministic inventory records 179 attached, 49 missing, 1 stale, and 6 unknown clauses. A later current-version existence audit found no qualifying sanctioned receipt for those six: A-100/A-101 are authority DRIFT because the pinned 3/6 and 3-document rules conflict with the released factory's 3/4 and 2-document contract, while A-103 through A-106 are MISSING controlled boundary receipts. This post-build disposition does not rewrite or close the pinned inventory. The named factory ask is InceptTrilogy/incept-test-builder, AP grader lane: '[grader][APWH] Publish SHA-bound adversarial receipts for A-100/A-101/A-103–A-106 and adjudicate 3/6 vs 3/4 rubric drift.' It must use sanctioned /v1/qc for the all-DBQ wrong-rule audit and POST /v1/frq/ap-world-history/grade for response-scoring fixtures, then publish source/deploy/prompt/model/request/response-bound machine-readable receipts. Gate 2 remains HOLD — GRADER_OWNER_EVIDENCE; Gate 3 remains locked. No APWH bank or course mutation occurred.",
       "scope": "Gate 1 official scope plus exhaustive read-only repo, AWS bank, S3 metadata, grader-artifact, and learner-readback recon; excludes new grading, inventory closure, Gate 3 authority, course mutation, deployment, and learner serving",
       "evidence": [
         {
@@ -444,14 +444,41 @@
         },
         {
           "type": "current-sanctioned-grader",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/tree/350d25f60cddca65cf6226080a618ec9f2aa9f50/engine/grader_api/graders/ap_us_history",
-          "commit": "350d25f60cddca65cf6226080a618ec9f2aa9f50"
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/tree/9b4f60fffa386ced008a9c4c42629747394a6090/engine/grader_api/graders/ap_us_history",
+          "commit": "9b4f60fffa386ced008a9c4c42629747394a6090"
+        },
+        {
+          "type": "current-grader-deploy",
+          "observed_at": "2026-08-24T13:58Z",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/32734756753",
+          "commit": "9b4f60fffa386ced008a9c4c42629747394a6090",
+          "task_definition": "ap-grader:25",
+          "health": "ok"
         },
         {
           "type": "unmerged-dbq-contract",
           "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/189",
           "head": "3eb248fd0e9b3b05cc18a0f5b4ed11ef58c6a9f6",
           "scope": "historical unmerged evidence only; not current production authority"
+        },
+        {
+          "type": "grader-receipt-existence-audit",
+          "observed_at": "2026-08-24T14:04Z",
+          "current_commit": "9b4f60fffa386ced008a9c4c42629747394a6090",
+          "current_test_run": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/32733375685",
+          "calibration_artifact_id": 9509065579,
+          "calibration_files_checked": 70,
+          "calibration_apwh_or_exact_fixture_hits": 0,
+          "s3_roundtrip_objects_checked": 2,
+          "s3_current_boundary_receipts": 0,
+          "cloudwatch_exact_fixture_hits": 0,
+          "disposition": {
+            "authority_drift": ["A-100", "A-101"],
+            "missing_receipts": ["A-103", "A-104", "A-105", "A-106"]
+          },
+          "factory_ask_target": "InceptTrilogy/incept-test-builder",
+          "factory_ask_title": "[grader][APWH] Publish SHA-bound adversarial receipts for A-100/A-101/A-103–A-106 and adjudicate 3/6 vs 3/4 rubric drift",
+          "material_limit": "No issue was filed and no live grading or QC submission was made under the recon-only boundary."
         },
         {
           "type": "learner-get-readback",
@@ -831,7 +858,7 @@
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 locks the exact official scope. Gate 2 retains all sanctioned read-only evidence and is now held on six grader-boundary clauses. Ilma's native TimeBack runbook governs later publication, but does not skip Gate 2 or make a reviewer surface.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 locks the exact official scope. Gate 2 retains all sanctioned read-only evidence and is held on six owner-bound grader gaps: two authority-drift clauses and four missing boundary-receipt clauses. Ilma's native TimeBack runbook governs later publication, but does not skip Gate 2 or make a reviewer surface.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -844,7 +871,7 @@
         }
       ],
       "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-24T11:54Z"
+      "observed_at": "2026-08-24T14:09Z"
     },
     {
       "claim_id": "apwh.local_done",
@@ -867,8 +894,8 @@
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-24T11:54Z",
-      "value": "Next governed move: retrieve already-stored current-version adversarial receipts through the sanctioned grader route for A-100, A-101, A-103, A-104, A-105, and A-106. If those instruments do not exist, route the gap as an owner ask; do not use an unnamed local content judge. Then rerun the pinned Gate 2 reconciliation to zero unknown. Later work must accept the complete source, bind the APWH profile, seal graph/preview and the all-absent plan, then keep dark publication, canary enrollment, private activation, learner acceptance, and release separate.",
+      "status_at": "2026-08-24T14:09Z",
+      "value": "Next governed move: InceptTrilogy/incept-test-builder's AP grader lane owns the named ask '[grader][APWH] Publish SHA-bound adversarial receipts for A-100/A-101/A-103–A-106 and adjudicate 3/6 vs 3/4 rubric drift.' The factory must resolve the A-100/A-101 authority conflict, run A-100's all-DBQ wrong-rule audit through sanctioned /v1/qc, run the controlled response boundaries through POST /v1/frq/ap-world-history/grade, and publish current source/deploy/prompt/model/request/response-bound receipts. Do not substitute an unnamed local content judge. After the receipts land, rerun the pinned Gate 2 reconciliation to zero unknown. Later work must accept the complete source, bind the APWH profile, seal graph/preview and the all-absent plan, then keep dark publication, canary enrollment, private activation, learner acceptance, and release separate.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {

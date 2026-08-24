@@ -38,12 +38,12 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 11:54Z',
-      nextStep: 'Supply current-version sanctioned adversarial receipts for the six remaining grader boundaries, then rerun Gate 2 to zero unknown before opening Gate 3.',
+      status: 'Gate 2 · HOLD', statusTone: 'amber', mapping: 'Runbook-aligned sequence', observed: 'Aug 24 · 14:09Z',
+      nextStep: 'Factory ask: adjudicate the two rubric-drift clauses and publish current SHA-bound receipts for all six grader boundaries, then rerun Gate 2 before opening Gate 3.',
       footprint: [
         { value: '2,791', label: 'live passed/available MCQs' },
         { value: '5,465', label: 'live passed constructed responses' },
-        { value: '6', label: 'unknown grader boundaries' }
+        { value: '2 + 4', label: 'drift + missing receipts' }
       ]
     },
     {
@@ -82,10 +82,10 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'Gate 1 retains closure credit. Gate 2 keeps its sanctioned census, repeatable reconciliation, and exhaustive GET-only readbacks; closure is held on six grader-boundary clauses. Gate 3 remains locked.',
+      note: 'Gate 1 retains closure credit. Gate 2 keeps its sanctioned census, repeatable reconciliation, and exhaustive GET-only readbacks; closure is held on two authority-drift clauses and four missing boundary-receipt clauses. Gate 3 remains locked.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'In progress · grader-evidence hold', signal: '2,791 MCQ · 5,465 CR · 6 unknown clauses', copy: 'A-116 and A-202 are proved missing and A-154 is attached. Six exact grader boundaries still lack current-version sanctioned adversarial receipts, so source acceptance stays locked.', href: 'apwh.html' },
+        { gate: 2, state: 'active', status: 'In progress · grader-evidence hold', signal: '2,791 MCQ · 5,465 CR · 2 drift + 4 missing receipts', copy: 'A-116 and A-202 are proved missing and A-154 is attached. A-100/A-101 need factory authority adjudication; A-103–A-106 need current SHA-bound receipts, so source acceptance stays locked.', href: 'apwh.html' },
         { gate: 6, state: 'evidence', status: 'Historical absence evidence', signal: 'fresh GET: 0 of 71 tenant gates', copy: 'The zero-POST readback is retained as live-state evidence. It is not the runbook’s sealed all-absent checkpoint and earns no Gate 6 closure.', href: 'apwh.html' }
       ]
     },
