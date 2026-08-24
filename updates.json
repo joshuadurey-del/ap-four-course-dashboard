@@ -1,5 +1,10 @@
 [
- {
+  {
+    "ts": "2026-08-24T00:47Z",
+    "course": "HumGeo",
+    "text": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on owner-merged canonical HumGeo main e16aebeb96957f1d498d21e0eda6a7c033e51399. The byte-stable rehearsal amendment rederived 655 checked, 585 present-attached, 70 stale-unusable, zero unknown or unmeasured, and zero at least 1.25x; 43 focused tests and the complete suite passed with 837 passed, 121 skipped, and 5 subtests passed. The prior 203-placement Gate 3 and Gate 4 receipts remain immutable history for their exact old digests. Gate 3 is locked until the shared graph-derived source-admissibility guard proves exact expected-versus-audited equality and freezes its code, registry, source, and report digests. No generation, source replacement, TimeBack, AP One, object-storage, enrollment, activation, publication, or release write occurred in Gate 2."
+  },
+  {
   "ts": "2026-08-23T16:03Z",
   "course": "HumGeo",
   "text": "Repaired Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. Canonical HumGeo main b56c26403cf15fa859a30a250e625cef39e3cfbb supplies the accepted repair corpus. AP One profile 9d50ae77c5b95d6617ff6e34c1039dc717876e5a49c61c7b4b3ce81abd6b5c91, source capture 48ddea2a9dd4cb334224c9d916cff12dc61e4419f7ff5f1e105d0ba46a8a4477, and native bind cc41a995491490ed212bb6dd00577b32ac48effb3b052c7964f846c50aeebdd1 bind 68 gates, 204 forms, and all 203 repaired placements. Owner ilmych merged AP One PR #847 at 9582e3087798880d6c9cbfb54175c861741be27a; exact Deploy run 32649699317 succeeded and independent staging /version served that exact SHA and immutable image digest. Codex did not merge. Gate 4 made zero TimeBack writes. Gate 5 is next but remains locked until its required handoff, full-plan, and native-runbook rereads."
