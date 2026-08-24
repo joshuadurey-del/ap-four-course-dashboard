@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-24T13:42Z",
+    "course": "HumGeo",
+    "text": "Gate 3 remains HOLD — TERMINAL_REGENERATION_EXHAUSTED. Canonical factory main advanced from 350d25f60cddca65cf6226080a618ec9f2aa9f50 to 9b4f60fffa386ced008a9c4c42629747394a6090 for an AP English grader transport-only change; live /version and /api/ready still serve 350d25f60cddca65cf6226080a618ec9f2aa9f50, so deployment/rebind is pending and the change creates no HumGeo typed recovery path. The governed jobs remain settled 0/1/1 for slots 017/018/021, with 20 accepted, 49 sealed-unsubmitted, one terminal reject, and 50 remaining. No slot-017 retry or chunk 3 is authorized."
+  },
+  {
     "ts": "2026-08-24T12:21Z",
     "course": "HumGeo",
     "text": "Gate 3 is HOLD — TERMINAL_REGENERATION_EXHAUSTED after chunk 2. The effective ledger has 20 accepted candidates, 49 sealed-unsubmitted placements, one terminal reject, and 50 remaining; the rerun frozen oracle reports exactly 50 rehearsal answer-shape failures with coverage still exact at 5,870 expected and audited and zero missing, extra, duplicate, or unknown coordinates. Chunk 2 accepted six candidates directly, accepted slot 016 through the factory's single-check STRUCT_D8 repair plus full re-QC, and accepted one S6-steered regeneration each for slots 018 and 021. Slot 017 exhausted its original five factory attempts and its single governed DOK-3-steered recovery, with all 15 candidates rejected on G5 in each run. No outer retry is authorized, so chunk 3 and Gates 4-11 are locked pending owner disposition. No TimeBack, object-storage, publication, upload, enrollment, activation, learner, or release write occurred."
