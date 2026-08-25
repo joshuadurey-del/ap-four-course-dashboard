@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-24T14:09Z",
+  "snapshot": "2026-08-25T00:17Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -105,27 +105,34 @@
       "evidence_access": "GITHUB+LIVE_FACTORY_READBACK"
     },
     {
-      "claim_id": "humgeo.gate3.contextual_steering_blocker",
+      "claim_id": "humgeo.gate3.source_accepted",
       "section": "HumGeo",
-      "status": "BLOCKED",
-      "status_at": "2026-08-24T09:13Z",
-      "value": "Gate 3 is HOLD — BLOCKED_CONTRACT. The frozen source-admissibility oracle reports exact equality across 5,870 expected and audited coordinates with zero missing, extra, duplicate, or unknown rows; rehearsal alone retains 70 answer-shape failures. The held pilot returned 0 of 1 after five internal attempts with G5 failures. One quarantined distinct-candidate probe returned 1 of 1 but mandatory full POST /v1/qc rejected it on fatal C1. Factory issue #274 has been claimed by intake-autopilot and records the byte-proven blocker: contextual generation accepts the advertised steer_template field but silently discards it on both sync and async paths. Production reconciliation remains 0 accepted, 1 rejected, 69 pending, 70 remaining, with queued, running, ambiguous, and unmeasured all zero. Resume only after a canonical fix is merged, deployed, and proven to propagate a sentinel to the real contextual prompt; then retry only the held pilot before releasing the other 69.",
-      "scope": "current Gate 3 blocker, factory contract, one held pilot, and exact 70-placement reconciliation; excludes Gate 4, publication, upload, enrollment, activation, and release",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-25T00:17Z",
+      "value": "Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 after merged PR #67. The canonical offline verifier reproduced exact source coverage, 70 accepted placements for 70, 30 preserved superseded attempts, zero answer-shape failures, and zero failed, queued, running, unmeasured, or remaining records. Delivery package SHA-256 is 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b. Focused and affected gates passed 9 and 14 tests; the complete suite passed 847 with 121 governed skips and five passing subtests at the required factory pin. Gate 4 is now the sole active HumGeo gate; AP One remains unchanged and Gate 5 plus every TimeBack or learner-surface write remain locked.",
+      "scope": "canonical Gate 3 source acceptance and transition to Gate 4; excludes AP One mutation, TimeBack, publication, upload, enrollment, activation, learner acceptance, and release",
       "evidence": [
         {
-          "type": "factory-issue",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/274",
-          "state": "OPEN — autopilot:working",
-          "observed_at": "2026-08-24T09:13Z"
+          "type": "gate-3-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/67",
+          "head": "19ac99a83566c90d594f690d5b35d9507ae67b5a",
+          "merge_commit": "8495d75929f2e25d6f7fa50fc24ce3d47481a887",
+          "merged_by": "joshuadurey-del"
         },
         {
           "type": "factory-version",
           "url": "https://test-builder.inceptstore.com/version",
-          "observed_at": "2026-08-24T09:09Z",
-          "commit": "c352ce96d946fae7e38eed1b2644faba1ae1126c"
+          "observed_at": "2026-08-25T00:16Z",
+          "commit": "9b4f60fffa386ced008a9c4c42629747394a6090"
+        },
+        {
+          "type": "gate-3-delivery-package",
+          "accepted_placements": 70,
+          "remaining": 0,
+          "sha256": "37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b"
         }
       ],
-      "evidence_access": "GITHUB+LIVE_FACTORY_READBACK"
+      "evidence_access": "GITHUB+CANONICAL_VERIFIER+LIVE_FACTORY_READBACK"
     },
     {
       "claim_id": "humgeo.blueprint.audit",
@@ -255,8 +262,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T12:21Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399; merged PR #66 seals 655 checked, exactly 70 stale-unusable, and zero unknown or unmeasured. Gate 3 is the sole active gate and is HOLD — TERMINAL_REGENERATION_EXHAUSTED. The pilot plus two bounded chunks yield 20 accepted candidates; 49 placements remain sealed-unsubmitted, one governed recovery is terminally rejected, and the oracle reports exactly 50 remaining answer-shape failures. Chunk 2 accepted six candidates directly, repaired slot 016 through the factory's single-check D8 path, and accepted S6-steered regenerations for slots 018 and 021. Slot 017 exhausted both its original five factory attempts and its single DOK-3-steered recovery, each on G5, so chunk 3 is locked pending owner disposition and no outer retry is authorized. Factory PR #275 remains deployed at exact commit 350d25f60cddca65cf6226080a618ec9f2aa9f50. Prior Gate 3-4 receipts remain historical evidence only; Gates 4-11 are locked. No TimeBack, object-storage, publication, upload, enrollment, activation, learner-acceptance, or release write is claimed.",
+      "observed_at": "2026-08-25T00:17Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-2 retain closure credit. Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 after merged PR #67: 70 accepted placements for 70, exact source coverage, 30 superseded attempts preserved, zero answer-shape failures, and zero failed, queued, running, unmeasured, or remaining residue. Delivery package SHA-256 is 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; canonical focused, affected, and full repository gates passed. Gate 4 is the sole active gate and will rebind the reviewed profile and exhaustive Phase 0 capture to this accepted source through an AP One review PR. AP One is unchanged at 216ab63f5b65daa74bc82c36e0af3caf894b6bf8. Gates 5-11 remain locked. No TimeBack, object-storage, publication, upload, enrollment, activation, learner-acceptance, or release write is claimed.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -380,6 +387,15 @@
           "commit": "9582e3087798880d6c9cbfb54175c861741be27a",
           "image_digest": "sha256:19a0b7bf89ca1f94e30a157b8096ed5b36937d8ae02625830a7e52cbf703a4ec",
           "conclusion": "success"
+        },
+        {
+          "type": "current-gate-3-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/67",
+          "head": "19ac99a83566c90d594f690d5b35d9507ae67b5a",
+          "merge_commit": "8495d75929f2e25d6f7fa50fc24ce3d47481a887",
+          "accepted_placements": 70,
+          "remaining": 0,
+          "delivery_package_sha256": "37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
