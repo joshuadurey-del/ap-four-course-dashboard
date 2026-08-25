@@ -158,10 +158,8 @@ const AP4_DASHBOARD = {
 
   const root = document.getElementById('course-release-timeline');
   if (!root) return;
-  const runbookOnly = root.hasAttribute('data-runbook-only');
 
   root.innerHTML = `
-    ${runbookOnly ? '' : `
     <div class="timeline-head">
       <div>
         <span class="badge b-blue">Active course</span>
@@ -177,7 +175,7 @@ const AP4_DASHBOARD = {
           <h3>${course.label}</h3>
           <p><strong>Next:</strong> ${course.nextStep}</p>
         </a>`).join('')}
-    </div>`}
+    </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
         <div><span class="eyebrow">Current runbook state</span><h3>Phases 1-3 · Offline graph and student-surface preview</h3></div>
