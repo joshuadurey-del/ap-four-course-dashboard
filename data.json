@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-25T00:17Z",
+  "snapshot": "2026-08-25T02:23Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -135,6 +135,41 @@
       "evidence_access": "GITHUB+CANONICAL_VERIFIER+LIVE_FACTORY_READBACK"
     },
     {
+      "claim_id": "humgeo.gate4.profile_source_bound",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-25T02:23Z",
+      "value": "Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. Owner ilmych merged AP One PR #851 at canonical merge e46586c39c0ad0075c0cf45952f1f91503118d51 from exact reviewed head 9216ee8c484f6a74ab312ebfb771a6fad089f0ac. The canonical rebuild reproduced the profile, exhaustive Phase 0 source capture, native bind, source-admissibility report, and dry-run receipt byte-for-byte. The unchanged oracle passed exact 5,870/5,870 coverage with zero missing, extra, duplicate, unknown, uniquely-longest, or 1.25-times failures across all five source banks. Exact Deploy run 32799920454 succeeded with no newer competitor, and staging /version served the merge SHA with immutable image digest sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994. The read-only HumGeo launch path returned the expected unreleased holds for all 68 gates. Gate 4 made zero TimeBack or learner-surface writes. Gate 5 remains locked pending a new explicit owner instruction.",
+      "scope": "canonical Gate 4 profile, exhaustive source, oracle, owner merge, exact staging deployment, and read-only launch proof; excludes Gate 5, TimeBack, object storage, publication, upload, enrollment, activation, learner acceptance, release, undo, and replay writes",
+      "evidence": [
+        {
+          "type": "gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/851",
+          "review_head": "9216ee8c484f6a74ab312ebfb771a6fad089f0ac",
+          "merge_commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
+          "merged_by": "ilmych"
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32799920454",
+          "commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
+          "image_digest": "sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994",
+          "conclusion": "success"
+        },
+        {
+          "type": "canonical-verifier",
+          "expected_coordinates": 5870,
+          "audited_coordinates": 5870,
+          "answer_shape_failures": 0,
+          "affected_tests_passed": 221,
+          "profile_sha256": "9dc1468a433c7f6e34d99a0b2355aeb510b52d0606a4982d5d362eba4ca0f621",
+          "source_capture_sha256": "183ecf2d84c1c6973d0b754e3a0e06cd2844a944dda7b12b677886f2570bdeb7",
+          "native_bind_sha256": "4cc86661e8f945016aaaae036188f5da921a42bff53ad1f4b44637f0ff6ab748"
+        }
+      ],
+      "evidence_access": "GITHUB+CANONICAL_VERIFIER+STAGING_READBACK"
+    },
+    {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
@@ -262,8 +297,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T00:17Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-2 retain closure credit. Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 after merged PR #67: 70 accepted placements for 70, exact source coverage, 30 superseded attempts preserved, zero answer-shape failures, and zero failed, queued, running, unmeasured, or remaining residue. Delivery package SHA-256 is 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; canonical focused, affected, and full repository gates passed. Gate 4 is the sole active gate and will rebind the reviewed profile and exhaustive Phase 0 capture to this accepted source through an AP One review PR. AP One is unchanged at 216ab63f5b65daa74bc82c36e0af3caf894b6bf8. Gates 5-11 remain locked. No TimeBack, object-storage, publication, upload, enrollment, activation, learner-acceptance, or release write is claimed.",
+      "observed_at": "2026-08-25T02:23Z",
+      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-2 retain closure credit. Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70, exact coverage, delivery package SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b, and zero residue. Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51: canonical bytes reproduce the profile, exhaustive Phase 0 source capture, native bind, unchanged 5,870-coordinate oracle, and zero-write dry run; exact Deploy 32799920454 and independent staging readback match the merge with no newer competitor. Gate 5 and Gates 6-11 remain locked. No TimeBack, object-storage, publication, upload, enrollment, activation, learner-acceptance, release, undo, or replay write occurred.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -396,6 +431,22 @@
           "accepted_placements": 70,
           "remaining": 0,
           "delivery_package_sha256": "37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b"
+        },
+        {
+          "type": "current-gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/851",
+          "review_head": "9216ee8c484f6a74ab312ebfb771a6fad089f0ac",
+          "merge_commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
+          "profile_sha256": "9dc1468a433c7f6e34d99a0b2355aeb510b52d0606a4982d5d362eba4ca0f621",
+          "source_capture_sha256": "183ecf2d84c1c6973d0b754e3a0e06cd2844a944dda7b12b677886f2570bdeb7",
+          "native_bind_sha256": "4cc86661e8f945016aaaae036188f5da921a42bff53ad1f4b44637f0ff6ab748"
+        },
+        {
+          "type": "current-gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32799920454",
+          "commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
+          "image_digest": "sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994",
+          "conclusion": "success"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"

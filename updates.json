@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-25T02:23Z",
+    "course": "HumGeo",
+    "text": "Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. Owner ilmych merged AP One PR #851 at canonical merge e46586c39c0ad0075c0cf45952f1f91503118d51 from exact reviewed head 9216ee8c484f6a74ab312ebfb771a6fad089f0ac. Canonical reconstruction reproduced the profile, exhaustive Phase 0 source capture, native bind, unchanged 5,870-coordinate source-admissibility oracle, and dry-run receipt byte-for-byte; 221 affected tests passed, every source bank has zero answer-shape failures, and the dry run made zero network calls and zero writes. Exact Deploy run 32799920454 succeeded with no newer competitor, staging /version served the merge with immutable image digest sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994, and the read-only HumGeo launch path returned the expected unreleased hold for all 68 gates. Gate 5 remains locked pending a new explicit owner instruction; no TimeBack, publication, enrollment, activation, learner, release, undo, or replay write occurred."
+  },
+  {
     "ts": "2026-08-25T00:17Z",
     "course": "HumGeo",
     "text": "Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 after merged PR #67. The canonical verifier reproduced 70 accepted placements for 70, exact source coverage, zero answer-shape or execution residue, and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused and affected gates passed 9 and 14 tests, and the exact-pin full suite passed 847 with 121 governed skips and five passing subtests. Gate 4 is now the sole active HumGeo gate. AP One remains unchanged; Gate 5 and every TimeBack, publication, enrollment, activation, learner, and release write remain locked."

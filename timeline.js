@@ -7,15 +7,15 @@ Dashboard display contract:
 - Evidence on a locked gate stays evidence; it does not unlock that gate.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 25, 2026 · 09:17 KST',
+  snapshot: 'Aug 25, 2026 · 11:23 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
     { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
     { id: 2, name: 'Inventory', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
     { id: 3, name: 'Accept source', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
-    { id: 4, name: 'Profile + authority', state: 'active', status: 'In progress', detail: 'Rebind the reviewed profile, exhaustive Phase 0 capture, native package, and create-only identities to canonical Gate 3 source through AP One review.' },
-    { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'Gate 5 remains locked pending a fresh Gate 4 closure and a new explicit owner instruction.' },
+    { id: 4, name: 'Profile + authority', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
+    { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'Gate 5 remains locked pending a new explicit owner instruction. Gate 4 closure does not open it.' },
     { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
     { id: 7, name: 'Dark publish', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 8, name: 'Canary enroll', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
@@ -26,15 +26,15 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 4 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-aligned sequence', observed: 'Aug 25 · 00:17Z',
-      nextStep: 'Bind the reviewed HumGeo profile and exhaustive Phase 0 source capture to canonical Gate 3 bytes, then submit the clean AP One review PR.',
+      status: 'Gate 4 · CLOSED', statusTone: 'green', mapping: 'Runbook-aligned sequence', observed: 'Aug 25 · 02:23Z',
+      nextStep: 'Stop before Gate 5. Graph and preview work stays locked until a new explicit owner instruction.',
       footprint: [
-        { value: '70/70', label: 'accepted placements' },
-        { value: '0', label: 'Gate 3 residue' },
-        { value: 'Gate 4', label: 'sole active gate' }
+        { value: '5,870/5,870', label: 'oracle coverage' },
+        { value: '0', label: 'answer-shape failures' },
+        { value: '0', label: 'Gate 4 writes' }
       ],
-      etaDays: 'IN PROGRESS',
-      etaNote: 'Canonical Gate 3 is closed at HumGeo main 8495d759. AP One remains unchanged while Gate 4 prepares the profile/source bind; Gate 5 is locked.'
+      etaDays: 'GATE 5 LOCKED',
+      etaNote: 'Canonical HumGeo main 8495d759 and owner-merged AP One main e46586c3 bind the accepted source, profile, exhaustive capture, exact Deploy, and staging readback. A new owner instruction is required before Gate 5.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -70,14 +70,14 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the completion gates',
-      note: 'Gate 3 is closed on canonical main 8495d759 with 70/70 accepted placements, exact coverage, the pinned delivery digest, and zero residue. Gate 4 is the sole active gate; prior Gate 4 evidence remains historical until rebound.',
+      note: 'Gates 3 and 4 are closed on canonical HumGeo main 8495d759 and owner-merged AP One main e46586c3. Gate 4 binds the exhaustive profile/source package, exact 5,870-coordinate oracle, zero-write dry run, Deploy, and staging proof. Gate 5 remains locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: 'PR #67 merged · 70/70 accepted · zero residue', copy: 'Canonical verification reproduced exact source coverage and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused, affected, and full repository gates passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/67' },
-        { gate: 4, state: 'active', status: 'In progress', signal: 'Profile + exhaustive Phase 0 source bind', copy: 'The prior PR #847 receipt remains historical evidence. Gate 4 is rebuilding the bind against canonical Gate 3 source before AP One review.', href: 'https://github.com/InceptTrilogy/ap-one/issues/659' },
-        { gate: 5, state: 'locked', status: 'Locked', signal: 'Fresh Gate 4 closure required', copy: 'Gate 5 remains locked pending the profile/source closure and a new explicit owner instruction.', href: 'humgeo.html' }
+        { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
+        { gate: 5, state: 'locked', status: 'Locked', signal: 'New owner instruction required', copy: 'Gate 5 remains locked. No graph, preview, TimeBack, publication, or learner action is opened by Gate 4 closure.', href: 'humgeo.html' }
       ]
     },
     apwh: {
