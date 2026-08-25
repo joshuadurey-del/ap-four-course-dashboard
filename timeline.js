@@ -148,7 +148,7 @@ const AP4_DASHBOARD = {
       <div class="gate-evidence-list">
         ${map.rows.map(row => `
           <article class="gate-evidence-row gate-evidence-${row.state}">
-            <div class="gate-evidence-id"><span>${AP4_DASHBOARD.gates[row.gate].canonCode}</span><small>${AP4_DASHBOARD.gates[row.gate].canonName}</small></div>
+            <div class="gate-evidence-id"><span title="${AP4_DASHBOARD.gates[row.gate].canonName}" aria-label="${AP4_DASHBOARD.gates[row.gate].canonName}">${AP4_DASHBOARD.gates[row.gate].canonCode}</span><small aria-hidden="true">${AP4_DASHBOARD.gates[row.gate].railName}</small></div>
             <div>
               <span class="gate-evidence-status">${row.status}</span>
               <h3>${row.signal}</h3>
