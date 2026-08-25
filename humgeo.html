@@ -11,11 +11,13 @@
 <a href="index.html">Overview</a><a href="humgeo.html" class="active" aria-current="page">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP Human Geography</h1>
-  <p class="sub">HumGeo now follows the shared 12-gate sequence: accepted source first, then Ilma's native TimeBack profile, graph, sealed-plan, dark-publication, canary, activation, learner-acceptance, and release boundaries.</p>
+  <p class="sub">HumGeo follows the AP One native TimeBack lifecycle: accepted source, deterministic offline graph and student-surface preview, sealed all-absent plan, dark publication and replay, canary enrollment, private activation, fresh-learner acceptance, and broader enrollment.</p>
+  <p><a href="GATE-CANON-MAP.md">Historical alias → runbook canon map</a>. Historical receipts below retain their original labels and bytes.</p>
 
   <section>
-    <div class="section-head"><div><span class="badge b-green">Gate 4 · CLOSED</span><h2>Current verified state</h2></div></div>
+    <div class="section-head"><div><span class="badge b-blue">Phases 1-3 · IN PROGRESS</span><h2>Current verified state</h2></div></div>
     <ul>
+      <li><b>Phases 1-3 — offline graph and student-surface preview · IN PROGRESS:</b> the factory generation/QC batch campaign remains primary. This canon relabel is additive only; the running driver, receipt directories, digest-pinned paths, and legacy execution-state fields are unchanged. Phases 4-10 remain locked, and no TimeBack publication, enrollment, activation, learner-acceptance, release, undo, or replay write is claimed.</li>
       <li><b>Canonical Gate 4 closure, 02:23Z:</b> owner <code>ilmych</code> merged <a href="https://github.com/InceptTrilogy/ap-one/pull/851" target="_blank" rel="noopener">AP One PR #851</a> at canonical merge <code>e46586c39c0ad0075c0cf45952f1f91503118d51</code>. A fresh canonical rebuild reproduced profile <code>9dc1468a…</code>, exhaustive Phase 0 source capture <code>183ecf2d…</code>, native bind <code>4cc86661…</code>, the unchanged 5,870-coordinate oracle, and all four raw evidence files byte-for-byte. The oracle has exact coverage and zero answer-shape failures across all five banks; 221 affected tests passed and the dry run recorded zero network calls and zero writes. <a href="https://github.com/InceptTrilogy/ap-one/actions/runs/32799920454" target="_blank" rel="noopener">Exact Deploy run 32799920454</a> succeeded with no newer competitor, staging <code>/version</code> served the merge with immutable image digest <code>sha256:d33773ca…</code>, and the read-only launch path returned the expected unreleased hold for all 68 gates. Gate 5 remains locked; no TimeBack or learner-surface write occurred.</li>
       <li><b>Canonical Gate 3 closure, 00:17Z:</b> authorized <code>joshuadurey-del</code> merged <a href="https://github.com/ilmych/humgeo-rebuild/pull/67" target="_blank" rel="noopener">HumGeo PR #67</a> to canonical main <code>8495d75929f2e25d6f7fa50fc24ce3d47481a887</code>. The canonical verifier reproduced 70 accepted placements for 70, exact source coverage, 30 preserved superseded attempts, zero answer-shape failures, and zero failed, queued, running, unmeasured, or remaining records. Delivery package SHA-256 is <code>37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b</code>; focused and affected gates passed 9 and 14 tests, and the exact-pin full suite passed 847 with 121 governed skips and five passing subtests. Gate 4 is now the sole active gate. AP One remains unchanged and Gate 5 plus every TimeBack or learner-surface write remain locked.</li>
       <li><b>Latest Gate 3 checkpoint, 12:21Z:</b> chunk 2 is disposition-complete at 20 accepted, 49 sealed-unsubmitted, one terminal reject, and 50 remaining by the frozen oracle. Six candidates passed directly; slot 016 passed the factory's single-check <code>STRUCT_D8</code> repair and full re-QC; slots 018 and 021 passed one <code>S6</code>-steered regeneration each. Slot 017 exhausted its original five factory attempts and its single DOK-3-steered recovery, each with 15/15 candidates rejected on G5. Verdict: <b>HOLD — TERMINAL_REGENERATION_EXHAUSTED</b>. Chunk 3 and Gates 4-11 are locked pending owner disposition; no outer retry, publication, or learner-surface write occurred.</li>
@@ -48,20 +50,20 @@
   </section>
 
   <section>
-    <h2>The completion gates</h2>
+    <h2>Runbook lifecycle</h2>
     <ol class="work-list">
-      <li><b>Gate 0 — Stabilize issue #44 · CLOSED.</b><p>The passing pilot landed, five failures remain preserved, residual execution is stopped and rescoped, and the lane was read back writer-free.</p></li>
-      <li><b>Gate 1 — Lock official AP scope · CLOSED.</b><p><a href="https://github.com/ilmych/humgeo-rebuild/pull/62" target="_blank" rel="noopener">PR #62</a> binds the official CED bytes to the exact 150 EKs, 70 LOs, and 68 valid mappings. Clean post-merge production checks and fail-closed mutations prove zero missing codes, zero phantom codes, and zero unresolved mapping differences; <a href="https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183" target="_blank" rel="noopener">issue #50</a> carries the merged-SHA receipt.</p></li>
-      <li><b>Gate 2 — Reconcile existing assets · CLOSED: INVENTORY_LOCKED_AMENDMENT.</b><p>Merged PR #66 seals the omitted rehearsal lane: 655 checked, exactly 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification. The original inventory and prior 203-record amendment remain immutable history.</p></li>
-      <li><b>Gate 3 — Accept the complete source · CLOSED: SOURCE_ACCEPTED.</b><p>Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.</p></li>
-      <li><b>Gate 4 — Bind profile and Phase 0 · CLOSED: PROFILE_AND_SOURCE_BOUND.</b><p>Owner-merged AP One main, canonical artifact reconstruction, exact source-admissibility coverage, zero-write dry run, exact Deploy, staging readback, and the unreleased read-only launch path are all bound.</p></li>
-      <li><b>Gate 5 — Seal graph, assets, QTI, and preview · LOCKED.</b><p>Gate 5 remains locked pending a new explicit owner instruction. This Gate 4 closure does not open it.</p></li>
-      <li><b>Gate 6 — Seal plan and all-absent checkpoint · LOCKED.</b><p>Runbook Phases 4-5.</p></li>
-      <li><b>Gate 7 — Dark publication and zero-write replay · LOCKED.</b><p>Runbook Phase 6 under the global writer lock.</p></li>
-      <li><b>Gate 8 — Canary enrollment and zero-write replay · LOCKED.</b><p>Runbook Phase 7 under a separate enrollment authority.</p></li>
-      <li><b>Gate 9 — Private activation and zero-write replay · LOCKED.</b><p>Runbook Phase 8 under a separate activation authority.</p></li>
-      <li><b>Gate 10 — Fresh learner acceptance · LOCKED.</b><p>Prove identity isolation, full-course paths, retries, writing grading, XP, persistence, and visuals.</p></li>
-      <li><b>Gate 11 — Broader enrollment and release · LOCKED.</b><p>Complete the release checklist and obtain the owner decision.</p></li>
+      <li><b>Accepted-source preparation · CLOSED — STABILIZED.</b><p>The passing pilot landed, five failures remain preserved, residual execution is stopped and rescoped, and the lane was read back writer-free.</p></li>
+      <li><b>Accepted-source preparation · CLOSED — SCOPE_LOCKED.</b><p><a href="https://github.com/ilmych/humgeo-rebuild/pull/62" target="_blank" rel="noopener">PR #62</a> binds the official CED bytes to the exact 150 EKs, 70 LOs, and 68 valid mappings. Clean post-merge production checks and fail-closed mutations prove zero missing codes, zero phantom codes, and zero unresolved mapping differences; <a href="https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183" target="_blank" rel="noopener">issue #50</a> carries the merged-SHA receipt.</p></li>
+      <li><b>Accepted-source preparation · CLOSED — INVENTORY_LOCKED.</b><p>Merged PR #66 seals the omitted rehearsal lane: 655 checked, exactly 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification. The original inventory and prior 203-record amendment remain immutable history.</p></li>
+      <li><b>Accepted source · CLOSED — SOURCE_ACCEPTED.</b><p>Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.</p></li>
+      <li><b>Course profile + Phase 0 — establish authority · CLOSED — PROFILE_AND_SOURCE_BOUND.</b><p>Owner-merged AP One main, canonical artifact reconstruction, exact source-admissibility coverage, zero-write dry run, exact Deploy, staging readback, and the unreleased read-only launch path are all bound.</p></li>
+      <li><b>Phases 1-3 — deterministic offline graph and student-surface preview · IN PROGRESS.</b><p>The factory generation/QC batch campaign remains primary; no later publication state is opened by this bookkeeping change.</p></li>
+      <li><b>Phases 4-5 — sealed all-absent plan · LOCKED.</b><p>Build and seal the publication plan and exact live all-absent checkpoint.</p></li>
+      <li><b>Phase 6 — dark TimeBack publication and exact zero-write publication replay · LOCKED.</b><p>Execute under the global writer lock.</p></li>
+      <li><b>Phase 7 — owner-controlled canary enrollments · LOCKED.</b><p>Use a separate enrollment plan and authority, exact readback, and zero-write replay.</p></li>
+      <li><b>Phase 8 — separate private activation · LOCKED.</b><p>Use a separate activation authority, exact readback, and zero-write replay.</p></li>
+      <li><b>Phases 9.1-9.5 — fresh-learner acceptance and identity isolation · LOCKED.</b><p>Prove full-course paths, retries, writing grading, XP, persistence, identity isolation, and visuals.</p></li>
+      <li><b>Phase 9.6 + release checklist — broader enrollment · LOCKED.</b><p>Complete the release checklist and obtain the owner decision.</p></li>
     </ol>
   </section>
 
@@ -70,13 +72,13 @@
     <ul>
       <li><b>150 EKs and 70 LOs identify official scope.</b> They are standards in the College Board framework, not a target of 150 questions and not a completion percentage.</li>
       <li><b>Historical repairs remain reusable only on matching hashes.</b> The prior four-slot and 203-placement receipts remain immutable; the only new shortage is the exact 70-row rehearsal delta.</li>
-      <li><b>The Content Factory creates only proved shortages.</b> Josh opens gates and makes product decisions; the factory generates and QCs content through its canonical route.</li>
+      <li><b>The Content Factory creates only proved shortages.</b> Josh opens runbook states and makes product decisions; the factory generates and QCs content through its canonical route.</li>
       <li><b>A green PR is an intermediate state.</b> Course completion requires canonical landing, sanctioned deployment, exact production readback, a real learner walk, release prerequisites, and owner approval.</li>
     </ul>
   </section>
 
   <section id="eta" data-course-eta="humgeo">
-    <h2>Current gate</h2>
+    <h2>Current runbook state</h2>
     <div class="eta"><div><span>Execution state</span><b data-course-eta-days>—</b></div></div>
     <p data-course-eta-note></p>
   </section>

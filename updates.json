@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-25T09:12Z",
+    "course": "HumGeo",
+    "text": "Phases 1-3 — offline graph and student-surface preview is IN PROGRESS. The factory generation/QC batch campaign remains primary. This canon relabel is additive only: the running driver, receipt directories, digest-pinned paths, and legacy execution-state fields are unchanged. Phases 4-10 remain locked, and no TimeBack publication, enrollment, activation, learner-acceptance, release, undo, or replay write is claimed. Historical aliases translate through GATE-CANON-MAP.md."
+  },
+  {
     "ts": "2026-08-25T02:23Z",
     "course": "HumGeo",
     "text": "Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. Owner ilmych merged AP One PR #851 at canonical merge e46586c39c0ad0075c0cf45952f1f91503118d51 from exact reviewed head 9216ee8c484f6a74ab312ebfb771a6fad089f0ac. Canonical reconstruction reproduced the profile, exhaustive Phase 0 source capture, native bind, unchanged 5,870-coordinate source-admissibility oracle, and dry-run receipt byte-for-byte; 221 affected tests passed, every source bank has zero answer-shape failures, and the dry run made zero network calls and zero writes. Exact Deploy run 32799920454 succeeded with no newer competitor, staging /version served the merge with immutable image digest sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994, and the read-only HumGeo launch path returned the expected unreleased hold for all 68 gates. Gate 5 remains locked pending a new explicit owner instruction; no TimeBack, publication, enrollment, activation, learner, release, undo, or replay write occurred."

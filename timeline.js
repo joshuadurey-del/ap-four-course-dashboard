@@ -1,40 +1,39 @@
 /*
 Dashboard display contract:
-- Overview cards show only the current TimeBack gate and next governed step.
-- All four courses use the same local source-acceptance gates followed by Ilma's native
-  TimeBack publication lifecycle.
+- Overview cards show only the current TimeBack lifecycle state and next governed step.
+- HumGeo uses the AP One Native TimeBack Course Publication Runbook lifecycle and phases.
 - Historical receipts retain their original scope and move only to a new credit home.
-- Evidence on a locked gate stays evidence; it does not unlock that gate.
+- Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 25, 2026 · 11:23 KST',
+  snapshot: 'Aug 25, 2026 · 18:12 KST',
   activeCourse: 'humgeo',
   gates: [
-    { id: 0, name: 'Stabilize', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
-    { id: 1, name: 'Lock scope', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
-    { id: 2, name: 'Inventory', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
-    { id: 3, name: 'Accept source', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
-    { id: 4, name: 'Profile + authority', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
-    { id: 5, name: 'Graph + preview', state: 'locked', status: 'Locked', detail: 'Gate 5 remains locked pending a new explicit owner instruction. Gate 4 closure does not open it.' },
-    { id: 6, name: 'Seal plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint under Phases 4-5.' },
-    { id: 7, name: 'Dark publish', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
-    { id: 8, name: 'Canary enroll', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
-    { id: 9, name: 'Activate', state: 'locked', status: 'Locked', detail: 'Activate privately under its own authority, restore-proof checkpoint, exact readback, and zero-write replay.' },
-    { id: 10, name: 'Learner accept', state: 'locked', status: 'Locked', detail: 'Fresh isolated learners prove start, middle, end, retries, writing grading, XP, persistence, identity isolation, and visuals.' },
-    { id: 11, name: 'Release', state: 'locked', status: 'Locked', detail: 'Broader enrollment waits for the full release checklist, preserved repair chain, and owner decision.' }
+    { id: 0, name: 'Stabilize', canonCode: 'AS', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
+    { id: 1, name: 'Lock scope', canonCode: 'AS', canonName: 'Accepted-source preparation · SCOPE_LOCKED', state: 'closed', status: 'Closed', detail: 'PR #62 and the issue #50 reconciliation receipt close the exact 150-EK, 70-LO, 68-topic, and 68-gate scope on canonical main aa11026.' },
+    { id: 2, name: 'Inventory', canonCode: 'AS', canonName: 'Accepted-source preparation · INVENTORY_LOCKED', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
+    { id: 3, name: 'Accept source', canonCode: 'AS', canonName: 'Accepted source · SOURCE_ACCEPTED', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
+    { id: 4, name: 'Profile + authority', canonCode: 'P0', canonName: 'Course profile + Phase 0 · PROFILE_AND_SOURCE_BOUND', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
+    { id: 5, name: 'Graph + preview', canonCode: 'P1-3', canonName: 'Phases 1-3 · Offline graph and student-surface preview', state: 'active', status: 'In progress', detail: 'The factory generation/QC batch campaign remains primary. This relabel changes no driver, receipt directory, digest-pinned path, or later-state lock.' },
+    { id: 6, name: 'Seal plan', canonCode: 'P4-5', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint.' },
+    { id: 7, name: 'Dark publish', canonCode: 'P6', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
+    { id: 8, name: 'Canary enroll', canonCode: 'P7', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
+    { id: 9, name: 'Activate', canonCode: 'P8', canonName: 'Phase 8 · Separate private activation', state: 'locked', status: 'Locked', detail: 'Activate privately under its own authority, restore-proof checkpoint, exact readback, and zero-write replay.' },
+    { id: 10, name: 'Learner accept', canonCode: 'P9.1-9.5', canonName: 'Phases 9.1-9.5 · Fresh-learner acceptance and identity isolation', state: 'locked', status: 'Locked', detail: 'Fresh isolated learners prove start, middle, end, retries, writing grading, XP, persistence, identity isolation, and visuals.' },
+    { id: 11, name: 'Release', canonCode: 'P9.6', canonName: 'Phase 9.6 + release checklist · Broader enrollment', state: 'locked', status: 'Locked', detail: 'Broader enrollment waits for the full release checklist, preserved repair chain, and owner decision.' }
   ],
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Gate 4 · CLOSED', statusTone: 'green', mapping: 'Runbook-aligned sequence', observed: 'Aug 25 · 02:23Z',
-      nextStep: 'Stop before Gate 5. Graph and preview work stays locked until a new explicit owner instruction.',
+      status: 'Phases 1-3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 25 · 09:04Z',
+      nextStep: 'Continue the offline graph and student-surface preview batch campaign; keep Phases 4-10 locked.',
       footprint: [
         { value: '5,870/5,870', label: 'oracle coverage' },
         { value: '0', label: 'answer-shape failures' },
-        { value: '0', label: 'Gate 4 writes' }
+        { value: '0', label: 'Phase 0 writes' }
       ],
-      etaDays: 'GATE 5 LOCKED',
-      etaNote: 'Canonical HumGeo main 8495d759 and owner-merged AP One main e46586c3 bind the accepted source, profile, exhaustive capture, exact Deploy, and staging readback. A new owner instruction is required before Gate 5.'
+      etaDays: 'PHASES 1-3 IN PROGRESS',
+      etaNote: 'Accepted source and Phase 0 are bound. The offline graph and student-surface preview batch campaign is active; Phases 4-10 remain locked.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
@@ -69,15 +68,15 @@ const AP4_DASHBOARD = {
   ],
   evidenceMaps: {
     humgeo: {
-      title: 'Work footprint mapped to the completion gates',
-      note: 'Gates 3 and 4 are closed on canonical HumGeo main 8495d759 and owner-merged AP One main e46586c3. Gate 4 binds the exhaustive profile/source package, exact 5,870-coordinate oracle, zero-write dry run, Deploy, and staging proof. Gate 5 remains locked.',
+      title: 'Work footprint mapped to the runbook lifecycle',
+      note: 'Accepted source and Phase 0 are closed on canonical HumGeo main 8495d759 and owner-merged AP One main e46586c3. Phases 1-3 are in progress; later publication states remain locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: 'PR #67 merged · 70/70 accepted · zero residue', copy: 'Canonical verification reproduced exact source coverage and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused, affected, and full repository gates passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/67' },
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
-        { gate: 5, state: 'locked', status: 'Locked', signal: 'New owner instruction required', copy: 'Gate 5 remains locked. No graph, preview, TimeBack, publication, or learner action is opened by Gate 4 closure.', href: 'humgeo.html' }
+        { gate: 5, state: 'active', status: 'In progress', signal: 'Factory generation/QC batch campaign active', copy: 'Phases 1-3 cover the deterministic offline graph and student-surface preview. Phases 4-10 remain locked.', href: 'humgeo.html' }
       ]
     },
     apwh: {
@@ -117,7 +116,7 @@ const AP4_DASHBOARD = {
   const courses = AP4_DASHBOARD.courses;
   const activeCourse = courses.find(course => course.id === AP4_DASHBOARD.activeCourse);
   if (!activeCourse || AP4_DASHBOARD.gates.length !== 12 || new Set(AP4_DASHBOARD.gates.map(gate => gate.id)).size !== 12) {
-    throw new Error('Active-course gate data is incomplete.');
+    throw new Error('Active-course lifecycle data is incomplete.');
   }
 
   document.querySelectorAll('[data-course-eta]').forEach(section => {
@@ -132,6 +131,7 @@ const AP4_DASHBOARD = {
     const map = AP4_DASHBOARD.evidenceMaps[courseId];
     const course = courses.find(item => item.id === courseId);
     if (!map || !course) return;
+    const useCanon = courseId === 'humgeo';
     root.classList.add('gate-evidence-sec');
     root.innerHTML = `
       <div class="gate-evidence-head">
@@ -145,7 +145,7 @@ const AP4_DASHBOARD = {
       <div class="gate-evidence-list">
         ${map.rows.map(row => `
           <article class="gate-evidence-row gate-evidence-${row.state}">
-            <div class="gate-evidence-id"><span>G${row.gate}</span><small>${AP4_DASHBOARD.gates[row.gate].name}</small></div>
+            <div class="gate-evidence-id"><span>${useCanon ? AP4_DASHBOARD.gates[row.gate].canonCode : `G${row.gate}`}</span><small>${useCanon ? AP4_DASHBOARD.gates[row.gate].canonName : AP4_DASHBOARD.gates[row.gate].name}</small></div>
             <div>
               <span class="gate-evidence-status">${row.status}</span>
               <h3>${row.signal}</h3>
@@ -164,11 +164,11 @@ const AP4_DASHBOARD = {
       <div>
         <span class="badge b-blue">Active course</span>
         <h2>${activeCourse.label}</h2>
-        <p class="timeline-sub">Each card shows only the current TimeBack gate and the next governed step. Open a course page for its receipts and detailed evidence map.</p>
+        <p class="timeline-sub">Each card shows the current TimeBack lifecycle state and next governed step. Open a course page for receipts and the detailed evidence map.</p>
       </div>
       <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
     </div>
-    <div class="course-card-grid" aria-label="Current TimeBack gate and next step by course">
+    <div class="course-card-grid" aria-label="Current TimeBack state and next step by course">
       ${courses.map(course => `
         <a class="course-summary-card${course.id === activeCourse.id ? ' is-active' : ''}" href="${course.id}.html" style="--course-color:${course.color}"${course.id === activeCourse.id ? ' aria-current="true"' : ''}>
           <span class="course-card-status b-${course.statusTone}">${course.status}</span>
@@ -178,14 +178,14 @@ const AP4_DASHBOARD = {
     </div>
     <div class="active-gate-wrap">
       <div class="active-gate-heading">
-        <div><span class="eyebrow">Latest closed gate</span><h3>Gate 4 · Profile + authority</h3></div>
-        <span class="badge b-green">CLOSED</span>
+        <div><span class="eyebrow">Current runbook state</span><h3>Phases 1-3 · Offline graph and student-surface preview</h3></div>
+        <span class="badge b-blue">IN PROGRESS</span>
       </div>
-      <div class="active-gate-rail" role="list" aria-label="Human Geography completion gates">
+      <div class="active-gate-rail" role="list" aria-label="Human Geography runbook lifecycle">
         ${AP4_DASHBOARD.gates.map(gate => `
-          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 4}">
-            <span class="active-gate-dot">G${gate.id}</span>
-            <span class="active-gate-name">${gate.name}</span>
+          <button class="active-gate active-gate-${gate.state}" type="button" role="listitem" data-active-gate="${gate.id}" aria-pressed="${gate.id === 5}">
+            <span class="active-gate-dot">${gate.canonCode}</span>
+            <span class="active-gate-name">${gate.canonName}</span>
             <small>${gate.status}</small>
           </button>`).join('')}
       </div>
@@ -194,7 +194,7 @@ const AP4_DASHBOARD = {
         <p data-gate-detail-copy></p>
         <a href="humgeo.html">Open the full HumGeo evidence map →</a>
       </div>
-      <p class="gate-legend"><span class="legend-closed">Closed</span><span class="legend-active">Active</span><span class="legend-evidence">Evidence exists, no gate credit</span><span class="legend-locked">Locked</span></p>
+      <p class="gate-legend"><span class="legend-closed">Closed</span><span class="legend-active">Active</span><span class="legend-evidence">Evidence exists, no lifecycle credit</span><span class="legend-locked">Locked</span></p>
     </div>`;
 
   const controls = [...root.querySelectorAll('[data-active-gate]')];
@@ -206,7 +206,7 @@ const AP4_DASHBOARD = {
     const gate = AP4_DASHBOARD.gates.find(item => item.id === Number(id));
     if (!gate) return;
     detailState.textContent = gate.status;
-    detailTitle.textContent = `Gate ${gate.id} · ${gate.name}`;
+    detailTitle.textContent = gate.canonName;
     detailCopy.textContent = gate.detail;
     controls.forEach(control => control.setAttribute('aria-pressed', String(control.dataset.activeGate === String(gate.id))));
   }
@@ -215,5 +215,5 @@ const AP4_DASHBOARD = {
     control.addEventListener('click', () => showGate(control.dataset.activeGate));
     control.addEventListener('focus', () => showGate(control.dataset.activeGate));
   });
-  showGate(2);
+  showGate(5);
 })();
