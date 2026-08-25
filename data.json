@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-25T13:27Z",
+  "snapshot": "2026-08-25T13:44Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T13:27Z",
-      "value": "All four courses remain governed by the shared native TimeBack sequence. HumGeo is in Phases 1-3 with 143 of 440 article checks accepted and 297 remaining; execution is HOLD — MISSING_FACTORY_MODULE, the replacement batch is 0 of 10 posted, and all live writes remain zero. APWH Gate 2 is HOLD after 44 of 123 authorized grading calls settled; 79 were not resumed and seven closure classifications remain unresolved. APUSH remains Gate 0 IN PROGRESS with 38 accepted, 211 pending, and 11 receipted-but-unadmitted successors. Psychology remains Gate 0 IN PROGRESS; open PR #32 is a bounded Unit 1 retrieval candidate with 407 of 407 MCQs retrieved, zero generated, and nine publish-blocking unverified citations. No course claims publication, enrollment, activation, learner acceptance, or release.",
+      "observed_at": "2026-08-25T13:44Z",
+      "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are HOLD — MISSING_FACTORY_MODULE with 143 of 440 article checks accepted, 297 remaining, 0 of 10 replacement requests posted, and all live writes zero. APWH is HOLD in accepted source after 44 of 123 authorized grading calls settled; 79 were not resumed and seven closure classifications remain unresolved. APUSH is IN PROGRESS in accepted source with 38 accepted, 211 pending, and 11 receipted-but-unadmitted successors. Psychology is IN PROGRESS in accepted source; open PR #32 retrieved 407 of 407 Unit 1 MCQs, generated zero, and retains nine publish-blocking unverified citations. APWH, APUSH, and Psychology have not started Phase 0. No course claims publication, enrollment, activation, learner acceptance, or release.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -25,8 +25,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T13:27Z",
-      "value": "Each course page reports current work in its native units without summing unlike evidence. HumGeo reports 143 of 440 article checks accepted and a factory-module hold. APWH reports 44 of 123 grading calls settled and 79 not resumed under the current authority boundary. APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts. Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations. Historical receipts remain immutable and none of these measurements alone closes a later gate.",
+      "observed_at": "2026-08-25T13:44Z",
+      "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 143 of 440 article checks accepted in Phases 1-3. APWH reports 44 of 123 grading calls settled while accepted source remains open. APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts inside accepted-source preparation. Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations inside accepted-source preparation. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -298,7 +298,7 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "observed_at": "2026-08-25T13:06Z",
-      "value": "HumGeo follows the shared 12-gate sequence. Gates 0-2 retain closure credit. Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero Phase 0 writes. Phases 1-3 are IN PROGRESS with 143 of 440 article checks accepted and 297 remaining, but execution is HOLD — MISSING_FACTORY_MODULE: the required factory-owned mechanical operator is absent, 0 of 10 replacement requests were posted, and all TimeBack, object-storage, publication, enrollment, activation, learner, release, repair, undo, replay, and merge writes remain zero. Phases 4-10 remain locked.",
+      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero writes. Phases 1-3 are HOLD — MISSING_FACTORY_MODULE with 143 of 440 article checks accepted and 297 remaining: the required factory-owned mechanical operator is absent, 0 of 10 replacement requests were posted, and all TimeBack, object-storage, publication, enrollment, activation, learner, release, repair, undo, replay, and merge writes remain zero. Phases 4-10 remain locked.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -456,8 +456,8 @@
       "section": "APWH",
       "status": "OBSERVED",
       "observed_at": "2026-08-24T14:09Z",
-      "value": "APWH Gate 1 is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Gate 2 remains bound to accepted outputs bc903c1969e8586e0b75b6a2776594c9862e8751; current AP One main is 460d047a573f4034fb6496ddb61fda692a7965dc, current factory main is 7d05d0251594e9424e1bf668d2b89eb281970a2d, and the live deployed grader serves 8ba956317a58061c3d434dfc7c77dc36bf4b496d. Sanctioned read-only censuses found 2,791 available, passed MCQs plus 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs; all transactions were REPEATABLE READ, server-verified read-only, and rolled back. The constructed-response total is 5,465, so A-116 is not an empty-bank problem: the genuinely missing artifact is the canonical join from all 375 typed mandatory concept KCs to terminal E4 constructed-response surfaces. A-202 also remains genuinely missing because the authoritative typing overlay has no template axis for an exact current join denominator. The prior deterministic inventory recorded 179 attached, 49 missing, 1 stale, and 6 unknown clauses. The authorized grading campaign has since settled 44 of 123 calls, including a GREEN-OUTCOME replacement for ordinal 44; 79 were not resumed. The latest closure review remains HOLD with seven unresolved classifications: A-100, A-101, A-103 through A-106, and A-154. Gate 3 remains locked and no APWH bank, course, publication, or learner-surface mutation is claimed.",
-      "scope": "Gate 1 official scope plus exhaustive read-only repo, AWS bank, S3 metadata, grader-artifact, and learner-readback recon; excludes new grading, inventory closure, Gate 3 authority, course mutation, deployment, and learner serving",
+      "value": "APWH's accepted-source scope sub-receipt is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Accepted source remains HOLD on outputs bc903c1969e8586e0b75b6a2776594c9862e8751; current AP One main is 460d047a573f4034fb6496ddb61fda692a7965dc, current factory main is 7d05d0251594e9424e1bf668d2b89eb281970a2d, and the live deployed grader serves 8ba956317a58061c3d434dfc7c77dc36bf4b496d. Sanctioned read-only censuses found 2,791 available, passed MCQs plus 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs; all transactions were REPEATABLE READ, server-verified read-only, and rolled back. The constructed-response total is 5,465, so A-116 is not an empty-bank problem: the genuinely missing artifact is the canonical join from all 375 typed mandatory concept KCs to terminal E4 constructed-response surfaces. A-202 also remains genuinely missing because the authoritative typing overlay has no template axis for an exact current join denominator. The prior deterministic inventory recorded 179 attached, 49 missing, 1 stale, and 6 unknown clauses. The authorized grading campaign has since settled 44 of 123 calls, including a GREEN-OUTCOME replacement for ordinal 44; 79 were not resumed. The latest closure review remains HOLD with seven unresolved classifications: A-100, A-101, A-103 through A-106, and A-154. Phase 0 has not started, and no APWH bank, course, publication, or learner-surface mutation is claimed.",
+      "scope": "accepted-source official scope plus exhaustive read-only repo, AWS bank, S3 metadata, grader-artifact, and learner-readback reconciliation; excludes accepted-source closure, Phase 0 authority, course mutation, deployment, and learner serving",
       "evidence": [
         {
           "type": "oracle-source",
@@ -791,7 +791,7 @@
       "section": "HumGeo",
       "status": "BLOCKED",
       "status_at": "2026-08-25T13:06Z",
-      "value": "HumGeo is not LS review ready. Gates 3 and 4 retain closure credit; Phases 1-3 contain 440 required article checks, of which 143 are accepted and 297 remain. The current execution verdict is HOLD — MISSING_FACTORY_MODULE because the enforced route found no sanctioned factory-owned mechanical operator. The replacement batch remains 0 of 10 posted, no replacement factory request is authorized, and every live publication or learner-surface write remains zero. Resume only after the factory-owned operator lands and route, controller, pool, authority, and collision checks recertify.",
+      "value": "HumGeo is not LS review ready. Accepted source and Phase 0 retain closure credit; Phases 1-3 contain 440 required article checks, of which 143 are accepted and 297 remain. The current execution verdict is HOLD — MISSING_FACTORY_MODULE because the enforced route found no sanctioned factory-owned mechanical operator. The replacement batch remains 0 of 10 posted, no replacement factory request is authorized, and every live publication or learner-surface write remains zero. Resume only after the factory-owned operator lands and route, controller, pool, authority, and collision checks recertify.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -925,7 +925,7 @@
       "claim_id": "apwh.pr791",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. Gate 1 locks the exact official scope. This row preserves the Aug 24 Gate 2 evidence state of two authority-drift clauses and four missing boundary receipts; the current 44-of-123 campaign state and seven unresolved closure classifications are reported separately under apwh.ls_qc_ready. Ilma's native TimeBack runbook governs later publication but does not skip Gate 2 or make a reviewer surface.",
+      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The accepted-source scope sub-receipt locks the exact official scope. This row preserves the Aug 24 accepted-source evidence state of two authority-drift clauses and four missing boundary receipts; the current 44-of-123 campaign state and seven unresolved closure classifications are reported separately under apwh.ls_qc_ready. The native TimeBack runbook does not skip accepted-source closure or make a reviewer surface.",
       "scope": "APWH shadow-tree successor PR",
       "evidence": [
         {
@@ -960,9 +960,9 @@
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
-      "status": "IN_PROGRESS",
+      "status": "BLOCKED",
       "status_at": "2026-08-25T09:22Z",
-      "value": "APWH Gate 2 remains HOLD. The authorized grading campaign has 44 of 123 calls settled: the first 43 receipts remain intact and the replacement for ordinal 44 is GREEN-OUTCOME. The remaining 79 calls were not resumed under the current authority boundary. The latest closure review still carries seven unresolved classifications—A-100, A-101, A-103 through A-106, and A-154—while A-116 and A-202 remain genuinely missing. Rerun the pinned closure review only after the remaining receipt authority is explicitly settled; Gate 3 and all publication states remain locked.",
+      "value": "APWH accepted source remains HOLD. The authorized grading campaign has 44 of 123 calls settled: the first 43 receipts remain intact and the replacement for ordinal 44 is GREEN-OUTCOME. The remaining 79 calls were not resumed under the current authority boundary. The latest closure review still carries seven unresolved classifications—A-100, A-101, A-103 through A-106, and A-154—while A-116 and A-202 remain genuinely missing. Rerun accepted-source closure only after the remaining receipt authority is explicitly settled; Phase 0 has not started and all later publication states remain locked.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1049,7 +1049,7 @@
       "section": "APUSH",
       "status": "IN_PROGRESS",
       "status_at": "2026-08-25T11:41Z",
-      "value": "APUSH remains Gate 0 IN PROGRESS after a current exact-ref recheck. Canonical outputs remain 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c and the course-build mechanism remains dab70a6: the ledger still contains 38 accepted and 211 pending positions, while 11 successor receipts remain outside canonical admission. The 2,479 generation-QC candidates retain bounded provenance. No accepted-source closure, native course profile, sealed graph, publication plan, or learner surface is proven; later gates remain locked.",
+      "value": "APUSH accepted source remains IN PROGRESS after a current exact-ref recheck. Canonical outputs remain 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c and the course-build mechanism remains dab70a6: the ledger still contains 38 accepted and 211 pending positions, while 11 successor receipts remain outside canonical admission. The 2,479 generation-QC candidates retain bounded provenance. Accepted source is not closed; the reviewed course profile and Phase 0 authority capture have not started, and Phases 1-10 remain locked.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -1120,7 +1120,7 @@
       "section": "Psych",
       "status": "IN_PROGRESS",
       "status_at": "2026-08-23T00:40Z",
-      "value": "Issue #14 confirms the served bank came through the Content Factory generation API with its QC, and issue #2 is now closed. The last measured bank scan remains 374 underfilled of 1,105. Before any top-up, Gate 0 must bind current canonical inputs and Gate 1 must re-run the sanctioned scope/acceptance verifier on the issue #2 closing bytes; a closed issue is evidence, not automatic scope closure.",
+      "value": "Issue #14 confirms the served bank came through the Content Factory generation API with its QC, and issue #2 is now closed. The last measured bank scan remains 374 underfilled of 1,105. Before any top-up, accepted-source preparation must bind current canonical inputs and rerun the sanctioned scope/acceptance verifier on the issue #2 closing bytes; a closed issue is evidence, not accepted-source closure.",
       "scope": "bank scan and top-up workstream",
       "evidence": [
         {
@@ -1191,7 +1191,7 @@
       "section": "Psych",
       "status": "IN_PROGRESS",
       "status_at": "2026-08-25T11:16Z",
-      "value": "Psychology remains Gate 0 IN PROGRESS. Current main is e93d8529567bdefab0230b3330c388246a9683f5 with 221 paired article/QC sidecars. Open PR #32 is bounded retrieval evidence, not Gate closure: 407 of 407 Unit 1 MCQs were retrieved with zero generated, four AAQs and four EBQs are retained, and nine distinct EBQ citations remain unverified and publish-blocking. Complete the canonical-input census and resolve those citation blockers before current-source closure; accepted source, profile, graph, plan, publication, and Learning Science access remain later work.",
+      "value": "Psychology accepted source remains IN PROGRESS. Current main is e93d8529567bdefab0230b3330c388246a9683f5 with 221 paired article/QC sidecars. Open PR #32 is bounded retrieval evidence, not accepted-source closure: 407 of 407 Unit 1 MCQs were retrieved with zero generated, four AAQs and four EBQs are retained, and nine distinct EBQ citations remain unverified and publish-blocking. Complete the canonical-input census and resolve those citation blockers before closure; the reviewed course profile and Phase 0 authority capture have not started, and Phases 1-10 remain locked.",
       "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
       "evidence": [
         {

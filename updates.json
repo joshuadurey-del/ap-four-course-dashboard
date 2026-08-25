@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-25T13:44Z",
+    "course": "Cross-course",
+    "text": "Canonical lifecycle correction: current course status now uses the AP One Native TimeBack runbook's accepted-source entry state and Phases 0-10, not historical local gate numbers. HumGeo has closed accepted source and Phase 0 and is held in Phases 1-3. APWH is HOLD in accepted source; APUSH and Psychology are IN PROGRESS in accepted source. APWH, APUSH, and Psychology have not started Phase 0. Historical receipts retain their original labels only as history."
+  },
+  {
     "ts": "2026-08-25T13:06Z",
     "course": "HumGeo",
     "text": "Phases 1-3 remain the active lifecycle state but execution is HOLD — MISSING_FACTORY_MODULE. The article-check census is 143 of 440 accepted and 297 remaining; the replacement batch is 0 of 10 posted because the enforced route found no sanctioned factory-owned mechanical operator. No replacement factory request was authorized, all live writes remain zero, and Phases 4-10 stay locked."
@@ -7,17 +12,17 @@
   {
     "ts": "2026-08-25T11:41Z",
     "course": "APUSH",
-    "text": "A current exact-ref recheck leaves APUSH at Gate 0 IN PROGRESS. Canonical outputs remain 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c and the course-build mechanism remains dab70a6; the ledger still has 38 accepted and 211 pending positions, while 11 successor receipts remain outside canonical admission. No accepted-source, native profile, sealed graph, publication-plan, or learner-surface closure is claimed."
+    "text": "A current exact-ref recheck leaves APUSH accepted source IN PROGRESS. Canonical outputs remain 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c and the course-build mechanism remains dab70a6; the ledger still has 38 accepted and 211 pending positions, while 11 successor receipts remain outside canonical admission. Phase 0 has not started; no native profile, sealed graph, publication-plan, or learner-surface closure is claimed."
   },
   {
     "ts": "2026-08-25T11:16Z",
     "course": "Psych",
-    "text": "Psychology remains Gate 0 IN PROGRESS on current main e93d8529567bdefab0230b3330c388246a9683f5. Open PR #32 is bounded Unit 1 retrieval evidence: 407 of 407 MCQs retrieved, zero generated, four AAQs and four EBQs retained, and nine distinct EBQ citations still UNVERIFIED and publish-blocking. It does not prove accepted-source closure, native publication, or release."
+    "text": "Psychology accepted source remains IN PROGRESS on current main e93d8529567bdefab0230b3330c388246a9683f5. Open PR #32 is bounded Unit 1 retrieval evidence: 407 of 407 MCQs retrieved, zero generated, four AAQs and four EBQs retained, and nine distinct EBQ citations still UNVERIFIED and publish-blocking. Phase 0 has not started; the PR does not prove accepted-source closure, native publication, or release."
   },
   {
     "ts": "2026-08-25T09:22Z",
     "course": "APWH",
-    "text": "APWH Gate 2 remains HOLD after 44 of 123 authorized grading calls settled. The first 43 receipts remain intact and ordinal 44 has a GREEN-OUTCOME replacement receipt; the remaining 79 calls were not resumed under the current authority boundary. The latest closure review still carries seven unresolved classifications, so Gate 3 remains locked."
+    "text": "APWH accepted source remains HOLD after 44 of 123 authorized grading calls settled. The first 43 receipts remain intact and ordinal 44 has a GREEN-OUTCOME replacement receipt; the remaining 79 calls were not resumed under the current authority boundary. The latest closure review still carries seven unresolved classifications, so Phase 0 has not started."
   },
   {
     "ts": "2026-08-25T09:12Z",
