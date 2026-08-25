@@ -1,6 +1,6 @@
 /*
 Dashboard display contract:
-- Overview cards show only the current TimeBack lifecycle state and next governed step.
+- Overview cards show the current TimeBack lifecycle state, landed work, and next governed step.
 - HumGeo uses the AP One Native TimeBack Course Publication Runbook lifecycle and phases.
 - Historical receipts retain their original scope and move only to a new credit home.
 - Evidence on a locked state stays evidence; it does not unlock that state.
@@ -26,6 +26,7 @@ const AP4_DASHBOARD = {
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
       status: 'Phases 1-3 · HOLD', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 25 · 13:06Z',
+      landed: '70/70 source placements · Phase 0 bound · AP One staging verified',
       nextStep: 'Wait for the factory-owned article-check operator, then recertify route, controller, pool, authority, and collisions before resuming.',
       footprint: [
         { value: '143/440', label: 'article checks accepted' },
@@ -38,6 +39,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
       status: 'Accepted source · HOLD', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 25 · 09:22Z',
+      landed: '933-item acceptance proof · Scope locked · 44/123 grading calls settled',
       nextStep: 'Settle authority for the remaining 79 grading calls, then rerun accepted-source closure; Phase 0 has not started.',
       footprint: [
         { value: '2,791', label: 'live passed/available MCQs' },
@@ -48,6 +50,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 25 · 11:41Z',
+      landed: '38 canonical acceptances · 11 receipted successors · Seating reconciler merged',
       nextStep: 'Complete the live-writer and canonical-input census, then close the accepted-source entry state without repeating credited work; Phase 0 has not started.',
       footprint: [
         { value: '2,479', label: 'generation-QC candidates' },
@@ -58,6 +61,7 @@ const AP4_DASHBOARD = {
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 25 · 11:16Z',
+      landed: '221 article/QC pairs on main · 227 unit images · Five-unit delivery set',
       nextStep: 'Complete the canonical-input census and resolve PR #32\'s nine publish-blocking citation checks before accepted-source closure; Phase 0 has not started.',
       footprint: [
         { value: '221', label: 'paired article/QC sidecars' },
@@ -163,14 +167,17 @@ const AP4_DASHBOARD = {
       <div>
         <span class="badge b-blue">Active course</span>
         <h2>${activeCourse.label}</h2>
-        <p class="timeline-sub">Each card shows the current TimeBack lifecycle state and next governed step. Open a course page for receipts and the detailed evidence map.</p>
+        <p class="timeline-sub">Each card shows the current TimeBack lifecycle state, landed work, and next governed step. Open a course page for receipts and the detailed evidence map.</p>
       </div>
       <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
     </div>
-    <div class="course-card-grid" aria-label="Current TimeBack state and next step by course">
+    <div class="course-card-grid" aria-label="Current TimeBack state, landed work, and next step by course">
       ${courses.map(course => `
         <a class="course-summary-card${course.id === activeCourse.id ? ' is-active' : ''}" href="${course.id}.html" style="--course-color:${course.color}"${course.id === activeCourse.id ? ' aria-current="true"' : ''}>
-          <span class="course-card-status b-${course.statusTone}">${course.status}</span>
+          <div class="course-card-headline">
+            <span class="course-card-status b-${course.statusTone}">${course.status}</span>
+            <span class="course-card-landed"><strong>Landed so far:</strong> ${course.landed}</span>
+          </div>
           <h3>${course.label}</h3>
           <p><strong>Next:</strong> ${course.nextStep}</p>
         </a>`).join('')}

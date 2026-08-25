@@ -5,9 +5,9 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 - `data.json` — claims manifest (same as the agent accounting file)
 - `updates.json` — the "most recent updates" feed (append new entries at the TOP: `{"ts":"YYYY-MM-DDTHH:MMZ","course":"...","text":"..."}`)
 - Course pages are static HTML; the overview and claims explorer render from the JSON.
-- `timeline.js` — shared active-course gate rail, simple status/next-step cards, and per-course evidence maps.
+- `timeline.js` — shared active-course gate rail, status/landed/next-step cards, and per-course evidence maps.
 
-Display model: each overview card shows only the course's current TimeBack gate and next governed step, followed by the shared 12-gate rail for the active course. Detailed counts and receipts stay on course pages, where existing work maps to its exact credit home. Mapped evidence earns no gate credit without a course-approved closure receipt.
+Display model: each overview card shows the course's current TimeBack gate, one scope-bound `Landed so far` line, and the next governed step, followed by the shared 12-gate rail for the active course. Detailed counts and receipts stay on course pages, where existing work maps to its exact credit home. Mapped evidence earns no gate credit without a course-approved closure receipt.
 
 Runbook alignment: owner direction on 2026-08-23 establishes Ilma's AP One native TimeBack runbook as the publication source of truth for all four courses. Local Gates 0-3 stabilize work, lock source scope, inventory existing assets, and accept the source. Gates 4-11 then bind the course profile, seal the offline graph and all-absent plan, publish dark, enroll canaries, activate privately, run fresh-learner acceptance, and approve broader enrollment. Publication, enrollment, activation, learner acceptance, and release remain separate operators.
 
