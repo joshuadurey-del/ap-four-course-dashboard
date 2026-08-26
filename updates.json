@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-26T12:12Z",
+    "course": "HumGeo",
+    "text": "The existing controller recorded Packet 2 as HOLD: CANONICAL_OPERATOR_SCHEMA_MISMATCH at unchanged counts of 353 accepted and 87 factory-terminal nonaccepted, then returned HONEST_STOP with execution disabled and no course-completion claim. Pilot job 84c176086e104cd589e93f18e869109c remains the only submitted recovery job: 1/1 terminal, 0 replacements accepted, and the 86-row remainder was not submitted. Packet 4 remains HOLD — BLOCKED_CONTRACT with no closing receipt; Packet 3 remains HOLD — WAITING_ON_ARTICLE_SEAL_AND_OFFLINE_ARTIFACTS with no new preparation artifacts. P1-04 remains IN PROGRESS and is not a factory HOLD. Resume only after the factory owner deploys a corrected canonical operator and a fresh /100 binds current bytes. No retry, scale-up, TimeBack, publication, enrollment, activation, learner, release, PR, merge, or course-completion action is claimed."
+  },
+  {
     "ts": "2026-08-26T11:48Z",
     "course": "HumGeo",
     "text": "Packet 2 remains 353 accepted and 87 factory-terminal nonaccepted. Factory PR #283 is merged and served at a70df7ef7adf3b307948aba6f03cbcb70fcb1625. Its canonical recovery operator submitted one authorized pilot job; that exact job completed and passed creation full-QC, but the operator's independent /v1/qc request was rejected with HTTP 422 because generated null values were forwarded into array-only QCRequest fields. The pilot remains nonaccepted, the 86 remainder rows were not submitted, and all submitted recovery jobs are terminal (1/1). Issue #282 is closed with status:needs_review. P1-04 remains IN PROGRESS; this is not a factory HOLD. No local operator patch, TimeBack, object-storage, publication, enrollment, activation, learner, release, PR, merge, or course-completion action is claimed."

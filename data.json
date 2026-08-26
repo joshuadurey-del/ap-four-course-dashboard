@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-26T11:48Z",
+  "snapshot": "2026-08-26T12:12Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -332,8 +332,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T11:48Z",
-      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. Packet 2 remains terminal across all 440 source rows: 353 passed creation full-content QC and independent /v1/qc; 87 are factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures; zero source rows are queued or running. PR #283 merged and the live factory now serves a70df7ef7adf3b307948aba6f03cbcb70fcb1625 with its bounded APHG recovery operator. One authorized pilot replacement job was submitted through that exact operator. The job completed and passed creation full-QC, but the operator's independent /v1/qc request was rejected with HTTP 422 because it forwarded generated null values for big_idea_codes and target_topic_codes into QCRequest fields that require arrays. No independent QC verdict was produced, so the pilot row remains nonaccepted; 86 remainder rows were not submitted; all submitted recovery jobs are terminal (1/1). Issue #282 is closed with status:needs_review. Canonical course requirement P1-04 remains IN PROGRESS; it is not a factory HOLD. No local operator patch, TimeBack, object-storage, publication, enrollment, activation, learner, release, PR, merge, or course-completion action is claimed. Phases 4-10 remain locked.",
+      "observed_at": "2026-08-26T12:12Z",
+      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. Packet 2 remains terminal across all 440 source rows: 353 passed creation full-content QC and independent /v1/qc; 87 are factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures; zero source rows are queued or running. PR #283 merged and the live factory now serves a70df7ef7adf3b307948aba6f03cbcb70fcb1625 with its bounded APHG recovery operator. One authorized pilot replacement job was submitted through that exact operator. The job completed and passed creation full-QC, but the operator's independent /v1/qc request was rejected with HTTP 422 because it forwarded generated null values for big_idea_codes and target_topic_codes into QCRequest fields that require arrays. No independent QC verdict was produced, so the pilot row remains nonaccepted; 86 remainder rows were not submitted; all submitted recovery jobs are terminal (1/1). Issue #282 is closed with status:needs_review. The existing controller recorded Packet 2 as HOLD: CANONICAL_OPERATOR_SCHEMA_MISMATCH at the unchanged 353/87 counts, then returned HONEST_STOP with execution disabled and no course-completion claim. Packet 4 remains HOLD — BLOCKED_CONTRACT with no closing receipt; Packet 3 remains HOLD — WAITING_ON_ARTICLE_SEAL_AND_OFFLINE_ARTIFACTS with no new preparation artifacts. Canonical course requirement P1-04 remains IN PROGRESS; it is not a factory HOLD. Resume only after the factory owner deploys a corrected canonical operator and a fresh /100 binds current bytes. No retry, scale-up, local operator patch, TimeBack, object-storage, publication, enrollment, activation, learner, release, PR, merge, or course-completion action is claimed. Phases 4-10 remain locked.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -413,6 +413,15 @@
           "independent_qc_schema_rejected": 1,
           "accepted_replacements": 0,
           "operator_source": "https://github.com/InceptTrilogy/incept-test-builder/blob/a70df7ef7adf3b307948aba6f03cbcb70fcb1625/tools/regenerate_contextual_failures.py#L81-L93"
+        },
+        {
+          "type": "controller-checkpoint",
+          "observed_at": "2026-08-26T12:06Z",
+          "packet_2": "HOLD: CANONICAL_OPERATOR_SCHEMA_MISMATCH",
+          "controller_state": "HONEST_STOP",
+          "execution_permitted": false,
+          "course_completion_claim": false,
+          "event_sha256": "7e33a6633f629e2f6efb75872bb3fbc48034bffb188338969d75fb25dc7cc776"
         },
         {
           "type": "read-only-bank-receipt",
