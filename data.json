@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-25T13:44Z",
+  "snapshot": "2026-08-26T10:06Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T13:44Z",
-      "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are HOLD — MISSING_FACTORY_MODULE with 143 of 440 article checks accepted, 297 remaining, 0 of 10 replacement requests posted, and all live writes zero. APWH is HOLD in accepted source after 44 of 123 authorized grading calls settled; 79 were not resumed and seven closure classifications remain unresolved. APUSH is IN PROGRESS in accepted source with 38 accepted, 211 pending, and 11 receipted-but-unadmitted successors. Psychology is IN PROGRESS in accepted source; open PR #32 retrieved 407 of 407 Unit 1 MCQs, generated zero, and retains nine publish-blocking unverified citations. APWH, APUSH, and Psychology have not started Phase 0. No course claims publication, enrollment, activation, learner acceptance, or release.",
+      "observed_at": "2026-08-26T10:06Z",
+      "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are IN PROGRESS. Packet 2 is terminal across all 440 article-check rows: 353 are accepted and 87 are factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures, with zero queued or running. The 87 are marked for fresh factory regeneration; factory issue #282 is open and autopilot:working after a 2026-08-26T10:03Z fleet claim, but no recovery contract has landed. The APWH, APUSH, and Psychology statements retain their 2026-08-25T13:44Z observation: APWH is HOLD in accepted source after 44 of 123 authorized grading calls settled; APUSH is IN PROGRESS in accepted source with 38 accepted, 211 pending, and 11 receipted-but-unadmitted successors; Psychology is IN PROGRESS in accepted source with 407 of 407 Unit 1 MCQs retrieved and nine publish-blocking unverified citations. Those three courses have not started Phase 0. No course claims publication, enrollment, activation, learner acceptance, or release.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -17,6 +17,13 @@
           "type": "owner-direction",
           "observed_at": "2026-08-22T10:20Z",
           "scope": "open APWH Gate 2; successor gates still require explicit opening"
+        },
+        {
+          "type": "factory-recovery-issue",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/282",
+          "observed_at": "2026-08-26T10:06Z",
+          "state": "open",
+          "label": "autopilot:working"
         }
       ],
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
@@ -25,8 +32,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T13:44Z",
-      "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 143 of 440 article checks accepted in Phases 1-3. APWH reports 44 of 123 grading calls settled while accepted source remains open. APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts inside accepted-source preparation. Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations inside accepted-source preparation. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
+      "observed_at": "2026-08-26T10:06Z",
+      "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 353 of 440 article checks accepted in Phases 1-3, with 87 factory-terminal nonaccepted rows marked for fresh factory regeneration and factory issue #282 in progress for the missing bounded recovery contract. The other course measurements retain their 2026-08-25T13:44Z observation: APWH reports 44 of 123 grading calls settled while accepted source remains open; APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts; Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -36,6 +43,10 @@
         {
           "type": "dashboard-course-pages",
           "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
+        },
+        {
+          "type": "factory-recovery-issue",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/282"
         }
       ],
       "evidence_access": "PUBLIC_DASHBOARD"
@@ -297,8 +308,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T09:02Z",
-      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. Packet 2 factory execution is terminal across all 440 current article-check rows: 351 passed creation full-content QC and independent /v1/qc, while 89 are factory-terminal residue; zero rows are queued, running, ambiguous, unmeasured, or otherwise actionable under the current factory contract. The prior MISSING_FACTORY_MODULE claim is resolved: universal-qgen and /v1/qc ran against served factory commit dcdba21ca640c0d13386a10099760380690828a6. The exact 72 frozen legacy items failed current /v1/qc; 72 fresh contextual replacements were submitted once, with 63 accepted and 9 terminal failures. This is not a factory HOLD: canonical course requirement P1-04 remains IN PROGRESS because the final bank requires 440 accepted checks. Resume Packet 2 only if canon supplies a recovery contract for terminal rows or changes that requirement. No TimeBack, object-storage, publication, enrollment, activation, learner, release, undo, replay, PR, merge, or course-completion action is claimed. Phases 4-10 remain locked.",
+      "observed_at": "2026-08-26T10:06Z",
+      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. Packet 2 is terminal across all 440 article-check rows: 353 passed creation full-content QC and independent /v1/qc; 87 are factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures; zero are queued or running. The two prior failed generation jobs were recovered with changed contextual requests and new factory identities. Both reached completed and passed creation full-content QC plus independent /v1/qc; one used the factory's exactly-one eligible structural repair. The 87 original failures remain rejected and are marked for fresh factory regeneration. Factory issue #282 is open, autopilot:working, and was claimed at 2026-08-26T10:03Z; it asks for the missing bounded canonical recovery contract. No such contract has landed, so no 87-row outer regeneration campaign has started. Canonical course requirement P1-04 remains IN PROGRESS because 440 accepted checks are required. No TimeBack, object-storage, publication, enrollment, activation, learner, release, undo, replay, PR, merge, or course-completion action is claimed. Phases 4-10 remain locked.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -352,8 +363,16 @@
         {
           "type": "factory-version",
           "url": "https://test-builder.inceptstore.com/version",
-          "observed_at": "2026-08-26T09:00Z",
+          "observed_at": "2026-08-26T10:02Z",
           "commit": "dcdba21ca640c0d13386a10099760380690828a6"
+        },
+        {
+          "type": "factory-recovery-issue",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/282",
+          "observed_at": "2026-08-26T10:06Z",
+          "state": "open",
+          "label": "autopilot:working",
+          "claimed_at": "2026-08-26T10:03Z"
         },
         {
           "type": "read-only-bank-receipt",
