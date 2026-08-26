@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-26T13:34Z",
+    "course": "HumGeo",
+    "text": "Factory issue #284 is closed and PR #285 is merged and deployed at 9da35978d34f781fb2f0692235564aae2fccd078, correcting the canonical recovery operator's nullable-array handling. Packet 2 remains 353 accepted and 87 factory-terminal nonaccepted: the prior pilot remains 1/1 terminal with zero accepted replacements, and 86 rows remain unsubmitted. The controller bound the new execution state and reopened Packet 2 at HOLD: RECOVERY_PILOT_RECERTIFICATION_REQUIRED; fresh /100 recertification must pass before one new pilot, and no scale-up has begun. Packet 3 has partial PREP_ONLY evidence but remains blocked on its complete compiler/output contract; Packet 4 remains blocked on downstream operators. Five AP One asks are now filed against main b31bd10e8592d1951c721b5bbb91dd6720a83adb: compiler #865, materializer comment on #659, enrollment #866, activation #864, and learner acceptance #867. Filing is not implementation proof. No new pilot, scale-up, TimeBack, publication, enrollment, activation, learner, release, AP One PR, AP One merge, or course-completion action is claimed."
+  },
+  {
     "ts": "2026-08-26T12:12Z",
     "course": "HumGeo",
     "text": "The existing controller recorded Packet 2 as HOLD: CANONICAL_OPERATOR_SCHEMA_MISMATCH at unchanged counts of 353 accepted and 87 factory-terminal nonaccepted, then returned HONEST_STOP with execution disabled and no course-completion claim. Pilot job 84c176086e104cd589e93f18e869109c remains the only submitted recovery job: 1/1 terminal, 0 replacements accepted, and the 86-row remainder was not submitted. Packet 4 remains HOLD — BLOCKED_CONTRACT with no closing receipt; Packet 3 remains HOLD — WAITING_ON_ARTICLE_SEAL_AND_OFFLINE_ARTIFACTS with no new preparation artifacts. P1-04 remains IN PROGRESS and is not a factory HOLD. Resume only after the factory owner deploys a corrected canonical operator and a fresh /100 binds current bytes. No retry, scale-up, TimeBack, publication, enrollment, activation, learner, release, PR, merge, or course-completion action is claimed."
