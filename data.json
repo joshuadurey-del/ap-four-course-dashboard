@@ -297,8 +297,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T14:11Z",
-      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero writes. Phases 1-3 are HOLD: 143 of 440 article checks are accepted with 297 remaining, the required factory-owned mechanical operator is absent, and 0 of 10 replacement requests were posted. The overnight controller reached HONEST_STOP with no completion claim and execution disabled. Its Packet 3 zero-write pilot passed 102 checks but did not close the article seal or canonical Gate 5 artifacts; Packet 4 passed 35 controller tests, 16 route cases, and 199 step-gate checks, while the exact action remained LOCAL_ADAPTER and BLOCKED_CONTRACT. Blocker owners are the factory repository owner and AP One HumGeo Gate 5 owner; resume only on an execution-state change that exposes current factory-owned operators and sealed inputs. All factory, TimeBack, object-storage, publication, enrollment, activation, learner, release, repair, undo, replay, and merge writes remain zero. Phases 4-10 remain locked.",
+      "observed_at": "2026-08-26T09:02Z",
+      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. Packet 2 factory execution is terminal across all 440 current article-check rows: 351 passed creation full-content QC and independent /v1/qc, while 89 are factory-terminal residue; zero rows are queued, running, ambiguous, unmeasured, or otherwise actionable under the current factory contract. The prior MISSING_FACTORY_MODULE claim is resolved: universal-qgen and /v1/qc ran against served factory commit dcdba21ca640c0d13386a10099760380690828a6. The exact 72 frozen legacy items failed current /v1/qc; 72 fresh contextual replacements were submitted once, with 63 accepted and 9 terminal failures. This is not a factory HOLD: canonical course requirement P1-04 remains IN PROGRESS because the final bank requires 440 accepted checks. Resume Packet 2 only if canon supplies a recovery contract for terminal rows or changes that requirement. No TimeBack, object-storage, publication, enrollment, activation, learner, release, undo, replay, PR, merge, or course-completion action is claimed. Phases 4-10 remain locked.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -344,6 +344,16 @@
         {
           "type": "current-item-bank-contract",
           "url": "https://test-builder.inceptstore.com/openapi.json"
+        },
+        {
+          "type": "contextual-repair-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/281"
+        },
+        {
+          "type": "factory-version",
+          "url": "https://test-builder.inceptstore.com/version",
+          "observed_at": "2026-08-26T09:00Z",
+          "commit": "dcdba21ca640c0d13386a10099760380690828a6"
         },
         {
           "type": "read-only-bank-receipt",
