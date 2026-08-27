@@ -1,12 +1,12 @@
 {
-  "snapshot": "2026-08-26T13:34Z",
+  "snapshot": "2026-08-26T14:47Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T13:34Z",
-      "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are IN PROGRESS. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting the canonical recovery operator's nullable-array handling. This changes the available operator, not the accepted bank: Packet 2 remains 353 accepted and 87 factory-terminal nonaccepted, the prior pilot remains 1/1 terminal with zero replacements accepted, and the 86-row remainder remains unsubmitted. The controller bound the new execution state and reopened Packet 2 at HOLD: RECOVERY_PILOT_RECERTIFICATION_REQUIRED; the next governed action is fresh /100 recertification before any one-row pilot. Four AP One issues (#864-#867) and one comment on #659 were filed against AP One main b31bd10e8592d1951c721b5bbb91dd6720a83adb for the missing Packet 3-4 contracts; filing does not mean those module implementations have landed. The APWH, APUSH, and Psychology statements retain their 2026-08-25T13:44Z observation. No course claims publication, enrollment, activation, learner acceptance, or release.",
+      "observed_at": "2026-08-26T14:47Z",
+      "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are IN PROGRESS. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting the canonical recovery operator's nullable-array handling. The accepted bank remains 353 of 440, with 87 factory-terminal nonaccepted. A corrected three-cycle pilot and at least eleven later factory-reaching operator invocations were observed after the prior dashboard snapshot. Across the scale invocations, 76 contextual submissions returned 21 distinct job IDs and 27 independent-QC calls occurred; 55 submissions replayed prior scale job identities. Five local receipts landed for 9 rows, recording 6 observed acceptances and 3 replacement failures, but remain unbound. Twenty job IDs have factory-terminal evidence; the final row-10 job is UNMEASURED because no job-stage event or row receipt landed. The scale action lacked a current-SHA /100 and RUNNING bind. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST at 14:31:48.257Z through 14:45:43Z. No result is controller-adopted, and no retry or resume is permitted. Packet 2 is HOLD: UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS; the next governed event is an owner-scoped landing receipt or disposition, not another pilot. The five SHA-bound dependency asks remain the filed authority, but AP One main advanced to 113f80c8479079a87f29226eb1a4b7e5f53349d0 through merged compiler PR #869. The post-merge fleet review marked #865 status:needs_rework and claimed attempt 2, so the compiler is NONCONFORMING_FACTORY_MODULE rather than Packet 3 closure. Activation #864 is on attempt 2 after queued rework; enrollment #866 and learner acceptance #867 remain open and unclaimed; the materializer bind request remains on #659. The APWH, APUSH, and Psychology statements retain their 2026-08-25T13:44Z observation. No course claims publication, enrollment, activation, learner acceptance, or release.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
         {
@@ -30,11 +30,37 @@
           "merge_commit": "9da35978d34f781fb2f0692235564aae2fccd078"
         },
         {
-          "type": "factory-recovery-pilot",
-          "receipt_sha256": "f804cfd77b7bd1160f3364b4ee8060be45a5380e515cbbb477ae72073184ad65",
-          "submitted_jobs": 1,
-          "terminal_jobs": 1,
-          "accepted_replacements": 0
+          "type": "factory-recovery-reconciliation",
+          "observed_at": "2026-08-26T14:45Z",
+          "receipt_sha256": "9755d9540fa6b85c8a4f84268213e22c26be9edc087be2e88eb7722b2f0affdc",
+          "pilot_submission_posts": 3,
+          "pilot_new_jobs": 2,
+          "pilot_independent_qc_calls": 2,
+          "scale_submission_posts": 76,
+          "scale_distinct_job_ids": 21,
+          "scale_terminal_jobs": 20,
+          "scale_unmeasured_job_ids": 1,
+          "scale_independent_qc_calls": 27,
+          "scale_replayed_submissions": 55,
+          "factory_reaching_invocations_minimum": 11,
+          "receipt_rows_landed": 9,
+          "acceptances_observed": 6,
+          "replacement_failures_observed": 3,
+          "conflicting_controller_stop_acknowledged": true,
+          "controller_adopted": false,
+          "runner_active": false
+        },
+        {
+          "type": "module-owner-clock-readback",
+          "observed_at": "2026-08-26T14:47Z",
+          "receipt_sha256": "8690c2127a785b6445e339b920f40b15c163058b4f48fb3f28be8d4452380178",
+          "ap_one_main_sha": "113f80c8479079a87f29226eb1a4b7e5f53349d0",
+          "compiler_pr": 869,
+          "compiler_issue": 865,
+          "compiler_disposition": "NONCONFORMING_FACTORY_MODULE",
+          "activation_issue": 864,
+          "enrollment_issue": 866,
+          "learner_acceptance_issue": 867
         }
       ],
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
@@ -43,8 +69,8 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T13:34Z",
-      "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 353 of 440 article checks accepted in Phases 1-3 and 87 factory-terminal nonaccepted rows. The corrected recovery operator is live at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078; Packet 2 is held for fresh /100 recertification before a one-row pilot, not scale-up. Packet 3 has partial PREP_ONLY evidence but remains blocked on its complete canonical compiler and output contract. Packet 4 remains blocked on the materializer, enrollment, activation, and learner-acceptance modules. The five SHA-bound dependency asks are filed as AP One issue #865, a comment on #659, and issues #866, #864, and #867; none is implementation proof. The other course measurements retain their 2026-08-25T13:44Z observation: APWH reports 44 of 123 grading calls settled while accepted source remains open; APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts; Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
+      "observed_at": "2026-08-26T14:47Z",
+      "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 353 of 440 article checks accepted in Phases 1-3 and 87 factory-terminal nonaccepted rows. The corrected recovery operator is live at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078. A corrected pilot and at least eleven factory-reaching scale operator invocations returned 21 distinct scale job IDs, but no result is controller-adopted because the current action bind and complete owner-scoped QC landing set are missing. Five local receipts cover 9 rows and remain unbound; 20 job IDs are terminal and one is UNMEASURED. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST through 14:45:43Z. Packet 2 now waits for disposition of the exact outputs, not a retry or resumed scale. Packet 3 has partial PREP_ONLY evidence but remains blocked on a conforming canonical compiler and output contract: compiler PR #869 merged to AP One main 113f80c8479079a87f29226eb1a4b7e5f53349d0, then the post-merge fleet review marked #865 status:needs_rework and claimed attempt 2. Packet 4 remains blocked on the materializer, enrollment, activation, and learner-acceptance modules. Activation #864 is on attempt 2 after queued rework; #866 and #867 remain open and unclaimed; the materializer bind request remains on #659. The other course measurements retain their 2026-08-25T13:44Z observation: APWH reports 44 of 123 grading calls settled while accepted source remains open; APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts; Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
         {
@@ -65,11 +91,37 @@
           "merge_commit": "9da35978d34f781fb2f0692235564aae2fccd078"
         },
         {
-          "type": "factory-recovery-pilot",
-          "receipt_sha256": "f804cfd77b7bd1160f3364b4ee8060be45a5380e515cbbb477ae72073184ad65",
-          "submitted_jobs": 1,
-          "terminal_jobs": 1,
-          "accepted_replacements": 0
+          "type": "factory-recovery-reconciliation",
+          "observed_at": "2026-08-26T14:45Z",
+          "receipt_sha256": "9755d9540fa6b85c8a4f84268213e22c26be9edc087be2e88eb7722b2f0affdc",
+          "pilot_submission_posts": 3,
+          "pilot_new_jobs": 2,
+          "pilot_independent_qc_calls": 2,
+          "scale_submission_posts": 76,
+          "scale_distinct_job_ids": 21,
+          "scale_terminal_jobs": 20,
+          "scale_unmeasured_job_ids": 1,
+          "scale_independent_qc_calls": 27,
+          "scale_replayed_submissions": 55,
+          "factory_reaching_invocations_minimum": 11,
+          "receipt_rows_landed": 9,
+          "acceptances_observed": 6,
+          "replacement_failures_observed": 3,
+          "conflicting_controller_stop_acknowledged": true,
+          "controller_adopted": false,
+          "runner_active": false
+        },
+        {
+          "type": "module-owner-clock-readback",
+          "observed_at": "2026-08-26T14:47Z",
+          "receipt_sha256": "8690c2127a785b6445e339b920f40b15c163058b4f48fb3f28be8d4452380178",
+          "ap_one_main_sha": "113f80c8479079a87f29226eb1a4b7e5f53349d0",
+          "compiler_pr": 869,
+          "compiler_issue": 865,
+          "compiler_disposition": "NONCONFORMING_FACTORY_MODULE",
+          "activation_issue": 864,
+          "enrollment_issue": 866,
+          "learner_acceptance_issue": 867
         }
       ],
       "evidence_access": "PUBLIC_DASHBOARD+PUBLIC_GITHUB+SCOPED_LOCAL_READ_ONLY"
@@ -331,8 +383,8 @@
       "claim_id": "humgeo.completion.gates",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T13:34Z",
-      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. Packet 2 remains terminal across all 440 source rows: 353 passed creation full-content QC and independent /v1/qc; 87 are factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures; zero source rows are queued or running. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting nullable array fields in the canonical recovery operator. The prior pilot remains 1/1 terminal with zero accepted replacements, and the 86-row remainder remains unsubmitted. The controller bound execution-state SHA 0428a54be8a7b844850affeba83f5e00c476ebb3827a59a6f6465aa6312941ff and reopened Packet 2 at HOLD: RECOVERY_PILOT_RECERTIFICATION_REQUIRED. The next governed action is fresh /100 recertification and, only if GREEN, one new pilot; no scale-up is allowed before acceptance. Packet 3 has partial PREP_ONLY evidence but remains HOLD — BLOCKED_CONTRACT_MISSING_CANONICAL_PACKET3_COMPILER_AND_DESIGNATED_OUTPUT. Packet 4 remains HOLD — BLOCKED_CONTRACT_MISSING_HUMGEO_OFFLINE_ENROLLMENT_ACTIVATION_AND_ACCEPTANCE_OPERATORS. The compiler ask is filed as AP One issue #865; the materializer bind is filed as a comment on #659; enrollment, activation, and learner acceptance are filed as issues #866, #864, and #867. All five asks are bound to AP One main b31bd10e8592d1951c721b5bbb91dd6720a83adb; filing is not implementation proof. Canonical course requirement P1-04 remains IN PROGRESS. No new recovery pilot, scale-up, TimeBack, object-storage, publication, enrollment, activation, learner, release, AP One PR, AP One merge, or course-completion action is claimed. Phases 4-10 remain locked.",
+      "observed_at": "2026-08-26T14:47Z",
+      "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. The controller-adopted Packet 2 census remains 353 of 440 accepted and 87 factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting nullable array fields in the canonical recovery operator. After that deploy, a corrected three-cycle pilot receipt recorded acceptance on its third cycle, and at least eleven stale-bound scale operator invocations issued 76 contextual-generation calls plus 27 independent-QC calls. Fifty-five submissions replayed prior scale job identities. Five local receipts landed for 9 rows, recording 6 observed acceptances and 3 replacement failures, but remain unbound. Twenty of 21 distinct scale job IDs have factory-terminal evidence; the last row-10 job is UNMEASURED. Those observations are not controller-adopted: the scale action lacked a current-SHA /100 and RUNNING bind, and the complete owner-authorized landing set did not land. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST at 14:31:48.257Z through 14:45:43Z. Exact job IDs are preserved, counts remain 353 and 87, and no retry or resume is permitted. Packet 2 is HOLD — UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS. Its next governed event is an owner-scoped landing receipt or disposition, followed by /100 for any local controller-adoption action. Packet 3 has partial PREP_ONLY evidence but remains HOLD — BLOCKED_CONTRACT_NONCONFORMING_PACKET3_COMPILER_AND_DESIGNATED_OUTPUT. Compiler PR #869 merged to AP One main 113f80c8479079a87f29226eb1a4b7e5f53349d0, then the post-merge fleet review marked #865 status:needs_rework and claimed attempt 2; the merged compiler is not conforming authority. Packet 4 remains HOLD — BLOCKED_CONTRACT_MISSING_HUMGEO_OFFLINE_ENROLLMENT_ACTIVATION_AND_ACCEPTANCE_OPERATORS. Activation #864 is on attempt 2 after queued rework; enrollment #866 and learner acceptance #867 remain open and unclaimed; the materializer bind request remains on #659. Canonical course requirement P1-04 remains IN PROGRESS. Codex did not open or merge PR #869. No TimeBack, object-storage, publication, enrollment, activation, learner, release, or course-completion action is claimed. Phases 4-10 remain locked.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -409,6 +461,41 @@
           "independent_qc_schema_rejected": 1,
           "accepted_replacements": 0,
           "operator_source": "https://github.com/InceptTrilogy/incept-test-builder/blob/a70df7ef7adf3b307948aba6f03cbcb70fcb1625/tools/regenerate_contextual_failures.py#L81-L93"
+        },
+        {
+          "type": "factory-recovery-reconciliation",
+          "observed_at": "2026-08-26T14:45Z",
+          "receipt_sha256": "9755d9540fa6b85c8a4f84268213e22c26be9edc087be2e88eb7722b2f0affdc",
+          "pilot_submission_posts": 3,
+          "pilot_new_jobs": 2,
+          "pilot_independent_qc_calls": 2,
+          "scale_submission_posts": 76,
+          "scale_distinct_job_ids": 21,
+          "scale_terminal_jobs": 20,
+          "scale_unmeasured_job_ids": 1,
+          "scale_independent_qc_calls": 27,
+          "scale_replayed_submissions": 55,
+          "factory_reaching_invocations_minimum": 11,
+          "receipt_rows_landed": 9,
+          "acceptances_observed": 6,
+          "replacement_failures_observed": 3,
+          "conflicting_controller_stop_acknowledged": true,
+          "scale_qc_verdicts_landed": false,
+          "controller_adopted": false,
+          "runner_active": false,
+          "hold": "UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS"
+        },
+        {
+          "type": "module-owner-clock-readback",
+          "observed_at": "2026-08-26T14:47Z",
+          "receipt_sha256": "8690c2127a785b6445e339b920f40b15c163058b4f48fb3f28be8d4452380178",
+          "ap_one_main_sha": "113f80c8479079a87f29226eb1a4b7e5f53349d0",
+          "compiler_pr": 869,
+          "compiler_issue": 865,
+          "compiler_disposition": "NONCONFORMING_FACTORY_MODULE",
+          "activation_issue": 864,
+          "enrollment_issue": 866,
+          "learner_acceptance_issue": 867
         },
         {
           "type": "controller-checkpoint",
