@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-27T01:13Z",
+    "course": "Cross-course",
+    "text": "New Retro page: the course-creation history map. It records the three process generations (direct push, runbook corridor, 12-gate canon), the eleven-stage map with fleet-wide proof status mined from 167 cited trace rows, the five paid-for process lessons, the typed detour classes, and the measured training picture: 431 fail-then-fix repair pairs are trainable now, while verdict prediction stays blocked at 437 passes against 7 fails until historical fails are mined. The page is additive history and direction; live course state stays on the course pages, and this entry claims no lifecycle change."
+  },
+  {
     "ts": "2026-08-26T14:47Z",
     "course": "HumGeo",
     "text": "Stop landing and module-owner clock check: the conflicting local controller is idle, the final process census is empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST through 14:45:43Z. Counts remain 353 accepted and 87 factory-terminal nonaccepted; the final job remains UNMEASURED, nothing is controller-adopted, and no retry or resume is permitted. Compiler PR #869 merged to AP One main 113f80c8479079a87f29226eb1a4b7e5f53349d0, but the post-merge fleet review marked issue #865 status:needs_rework and claimed attempt 2. The reviewer named hardcoded tree checks, unfalsifiable coverage, stub QTI/oracle output, zeroed activity economics, and a synthetic 353-row fixture as rework items. The merged compiler is therefore NONCONFORMING_FACTORY_MODULE, not Packet 3 closure. Activation issue #864 is on attempt 2 after queued rework. Enrollment issue #866 and learner-acceptance issue #867 remain open and unclaimed. Packet 3 and Packet 4 remain blocked. Codex did not open or merge PR #869, and no TimeBack, publication, enrollment, activation, learner, release, or course-completion action is claimed."
