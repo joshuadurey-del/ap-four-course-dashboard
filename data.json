@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-26T14:47Z",
+  "snapshot": "2026-08-27T08:50Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -129,255 +129,163 @@
     {
       "claim_id": "cross.ls_qc_target",
       "section": "Cross-course",
-      "status": "PLANNED",
-      "status_at": "2026-08-21T06:51Z",
-      "value": "LS REVIEW READY remains the overview-level handoff definition: Learning Science can access the pinned candidate and walk a representative course path. Individual course pages now report only the next governed move, its blocker, and later work; they no longer present dated time estimates as current forecasts.",
-      "scope": "overview handoff definition; not course completion or release",
+      "status": "BLOCKED",
+      "value": "BLOCKED across all four courses in this same-window reconciliation. HumGeo lacks the complete publisher/learner path on open issue #659; APWH lacks a current full course-dir accepted-source verdict; APUSH exact ledger bytes are build-only with no live wiring or rendering; Psychology's exact-SHA audit finds no assembled student-safe MCQ HTML and blocks narrow-width review. LS REVIEW READY remains a handoff definition, not a current course or release outcome.",
+      "scope": "same-window representative reviewer-path readiness across HumGeo, APWH, APUSH, and Psychology; excludes course completion and release",
       "evidence": [
         {
-          "type": "owner-direction",
-          "location": "Ilma Cohadzic direction dated 2026-08-07, supplied by Josh on 2026-08-20"
+          "type": "humgeo-component",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659",
+          "status": "BLOCKED"
         },
         {
-          "type": "dashboard-overview",
-          "location": "index.html"
+          "type": "apwh-component",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/32794423811",
+          "status": "MISSING_FULL_ORACLE"
+        },
+        {
+          "type": "apush-component",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json",
+          "status": "BUILD_ONLY"
+        },
+        {
+          "type": "psych-component",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md",
+          "status": "BLOCKED"
         }
       ],
-      "evidence_access": "OWNER_DIRECTION+DASHBOARD"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_AUDIT",
+      "status_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "cross.human_review",
       "section": "Cross-course",
-      "status": "PLANNED",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "No named whole-course LS disposition exists yet because Learning Science applies its own process after it receives access. Ilma's native TimeBack runbook now supplies the publication route; it does not make a candidate reviewer-visible. Each course still must close profile, graph/preview, sealed-plan, dark-publication, canary, activation, and fresh-learner boundaries in order.",
-      "scope": "current dashboard plus declared HumGeo, APWH, APUSH, and Psychology build repositories and cited blocker threads",
+      "status": "MISSING",
+      "value": "MISSING: no same-window named whole-course Learning Science disposition was produced by the HumGeo, APWH, APUSH, or Psychology verifiers used here. The course evidence establishes blocked or missing handoff prerequisites only. Factory mechanisms, local previews, and historical audit prose do not substitute for a named human disposition.",
+      "scope": "same-window named whole-course Learning Science disposition across all four courses; excludes prerequisite status and local review artifacts",
       "evidence": [
         {
-          "type": "audit-report",
-          "url": "https://github.com/joshuadurey-del/ap-four-course-dashboard/blob/main/agents/FOUR-COURSE-BLUEPRINT-AUDIT-20260820.md#human-review-finding"
+          "type": "component-reconciliation",
+          "claim_ids": [
+            "humgeo.review_surface.local",
+            "apwh.blueprint.audit",
+            "apush.platform",
+            "psych.ls_qc_ready"
+          ]
+        },
+        {
+          "type": "human-disposition-receipt",
+          "status": "MISSING"
         }
       ],
-      "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
+      "evidence_access": "DASHBOARD_COMPONENT_CLAIMS+DECLARED_EVIDENCE_GAP",
+      "status_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "humgeo.gate2.answer_shape_reopen",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-24T09:13Z",
-      "value": "Gate 2 is CLOSED — INVENTORY_LOCKED_AMENDMENT on canonical HumGeo main e16aebeb96957f1d498d21e0eda6a7c033e51399 after owner-merged PR #66. The byte-stable rehearsal amendment rederived 655 checked, 585 present-attached, 70 stale-unusable, zero unknown or unmeasured, and zero at least 1.25x; 43 focused tests and the complete course suite passed with 837 passed, 121 skipped, and 5 subtests passed. The subsequent pre-spend oracle is frozen and green; current Gate 3 status is reported separately.",
-      "scope": "closed Gate 2 rehearsal answer-shape amendment; excludes generation, source replacement, TimeBack publication, enrollment, activation, and release",
+      "value": "Live GitHub readback confirms PR #66 remains merged as e16aebeb96957f1d498d21e0eda6a7c033e51399 and current HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 is two commits ahead with zero commits behind. This preserves the historical Gate 2 amendment in canonical ancestry. The prior verifier counts remain dated receipt evidence; this refresh did not rerun that production verifier and makes no later-phase claim.",
+      "scope": "historical Gate 2 amendment retention in current canonical ancestry; excludes a fresh Gate 2 verifier run, current article-check state, publication, learner visibility, and release",
       "evidence": [
         {
-          "type": "pull-request",
+          "type": "gate-2-merge",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/66",
-          "head": "67ebf6293483d71e988b7a2b0369c3469d7ad337",
-          "merge_commit": "e16aebeb96957f1d498d21e0eda6a7c033e51399",
-          "manifest_self_sha256": "c3a6bfe218b77d030ee3789b7b36209e042845527893a616ccbbc7d559f14211",
-          "raw_sha256": "d0c446d541cea3a95f4f36b74ff07dfef4f14e6a0139dbbb529b441c84aa9fcf"
+          "merge_commit": "e16aebeb96957f1d498d21e0eda6a7c033e51399"
         },
         {
-          "type": "factory-pull-request",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/272",
-          "merge_commit": "fb6a56ea81c091b600e5d827c5eb200fa33112fa"
-        },
-        {
-          "type": "factory-version",
-          "url": "https://test-builder.inceptstore.com/version",
-          "observed_at": "2026-08-24T00:47Z",
-          "commit": "fb6a56ea81c091b600e5d827c5eb200fa33112fa"
+          "type": "current-canonical-main",
+          "url": "https://github.com/ilmych/humgeo-rebuild/tree/8495d75929f2e25d6f7fa50fc24ce3d47481a887"
         }
       ],
-      "evidence_access": "GITHUB+LIVE_FACTORY_READBACK"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.gate3.source_accepted",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T00:17Z",
-      "value": "Gate 3 is CLOSED — SOURCE_ACCEPTED on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 after merged PR #67. The canonical offline verifier reproduced exact source coverage, 70 accepted placements for 70, 30 preserved superseded attempts, zero answer-shape failures, and zero failed, queued, running, unmeasured, or remaining records. Delivery package SHA-256 is 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b. Focused and affected gates passed 9 and 14 tests; the complete suite passed 847 with 121 governed skips and five passing subtests at the required factory pin. Gate 4 is now the sole active HumGeo gate; AP One remains unchanged and Gate 5 plus every TimeBack or learner-surface write remain locked.",
-      "scope": "canonical Gate 3 source acceptance and transition to Gate 4; excludes AP One mutation, TimeBack, publication, upload, enrollment, activation, learner acceptance, and release",
+      "value": "Current HumGeo main is still the exact PR #67 merge 8495d75929f2e25d6f7fa50fc24ce3d47481a887. The opened Gate 3 closure receipt hashes to b7845917c690f39f4568c1efa7006be3d08f0df6fbc0c14d97780d16d9ce713e and records SOURCE_ACCEPTED with 70 of 70 accepted placements and zero remaining, failed, nonterminal, or unmeasured records. This is accepted-source closure only; it does not prove current article-check completion or any native publication outcome.",
+      "scope": "Gate 3 accepted-source closure on exact HumGeo main; excludes current P1-04 residue, TimeBack writes, publication, learner acceptance, and release",
       "evidence": [
         {
           "type": "gate-3-merge",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/67",
-          "head": "19ac99a83566c90d594f690d5b35d9507ae67b5a",
-          "merge_commit": "8495d75929f2e25d6f7fa50fc24ce3d47481a887",
-          "merged_by": "joshuadurey-del"
+          "merge_commit": "8495d75929f2e25d6f7fa50fc24ce3d47481a887"
         },
         {
-          "type": "factory-version",
-          "url": "https://test-builder.inceptstore.com/version",
-          "observed_at": "2026-08-25T00:16Z",
-          "commit": "9b4f60fffa386ced008a9c4c42629747394a6090"
-        },
-        {
-          "type": "gate-3-delivery-package",
-          "accepted_placements": 70,
-          "remaining": 0,
-          "sha256": "37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b"
+          "type": "gate-3-closure-receipt",
+          "location": "INCEPT/out/humgeo-gate4-profile-source-bind-20260825/gate3-closure.md",
+          "sha256": "b7845917c690f39f4568c1efa7006be3d08f0df6fbc0c14d97780d16d9ce713e"
         }
       ],
-      "evidence_access": "GITHUB+CANONICAL_VERIFIER+LIVE_FACTORY_READBACK"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
+      "observed_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.gate4.profile_source_bound",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T02:23Z",
-      "value": "Gate 4 is CLOSED — PROFILE_AND_SOURCE_BOUND. Owner ilmych merged AP One PR #851 at canonical merge e46586c39c0ad0075c0cf45952f1f91503118d51 from exact reviewed head 9216ee8c484f6a74ab312ebfb771a6fad089f0ac. The canonical rebuild reproduced the profile, exhaustive Phase 0 source capture, native bind, source-admissibility report, and dry-run receipt byte-for-byte. The unchanged oracle passed exact 5,870/5,870 coverage with zero missing, extra, duplicate, unknown, uniquely-longest, or 1.25-times failures across all five source banks. Exact Deploy run 32799920454 succeeded with no newer competitor, and staging /version served the merge SHA with immutable image digest sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994. The read-only HumGeo launch path returned the expected unreleased holds for all 68 gates. Gate 4 made zero TimeBack or learner-surface writes. Phases 1-3 were opened later and their current hold is reported separately under humgeo.completion.gates.",
-      "scope": "canonical Gate 4 profile, exhaustive source, oracle, owner merge, exact staging deployment, and read-only launch proof; excludes Gate 5, TimeBack, object storage, publication, upload, enrollment, activation, learner acceptance, release, undo, and replay writes",
+      "value": "Live AP One ancestry confirms PR #851 merge e46586c39c0ad0075c0cf45952f1f91503118d51 is retained in current main 79f3b5b75c4fd85c461cb8c144a9b3f8569bb7fe, 27 commits ahead and zero behind. The opened Gate 4 closure receipt hashes to 941a3bcb92fe9c9940a6eb809f27370a8477b8c07996d92bf5c8e6d6290327ce and records PROFILE_AND_SOURCE_BOUND. This refresh preserves that bounded closure without asserting that the receipt's former next-gate text is still current.",
+      "scope": "Gate 4 profile and Phase 0 source closure retained in current AP One ancestry; excludes current P1-04 state and every publication, enrollment, activation, learner, and release outcome",
       "evidence": [
         {
           "type": "gate-4-merge",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/851",
-          "review_head": "9216ee8c484f6a74ab312ebfb771a6fad089f0ac",
-          "merge_commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
-          "merged_by": "ilmych"
+          "merge_commit": "e46586c39c0ad0075c0cf45952f1f91503118d51"
         },
         {
-          "type": "gate-4-deploy",
-          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32799920454",
-          "commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
-          "image_digest": "sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994",
-          "conclusion": "success"
-        },
-        {
-          "type": "canonical-verifier",
-          "expected_coordinates": 5870,
-          "audited_coordinates": 5870,
-          "answer_shape_failures": 0,
-          "affected_tests_passed": 221,
-          "profile_sha256": "9dc1468a433c7f6e34d99a0b2355aeb510b52d0606a4982d5d362eba4ca0f621",
-          "source_capture_sha256": "183ecf2d84c1c6973d0b754e3a0e06cd2844a944dda7b12b677886f2570bdeb7",
-          "native_bind_sha256": "4cc86661e8f945016aaaae036188f5da921a42bff53ad1f4b44637f0ff6ab748"
+          "type": "gate-4-closure-receipt",
+          "location": "INCEPT/out/humgeo-gate4-profile-source-bind-20260825/gate4-closure.md",
+          "sha256": "941a3bcb92fe9c9940a6eb809f27370a8477b8c07996d92bf5c8e6d6290327ce"
         }
       ],
-      "evidence_access": "GITHUB+CANONICAL_VERIFIER+STAGING_READBACK"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
+      "observed_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
-      "status": "OBSERVED",
-      "observed_at": "2026-08-24T09:13Z",
-      "value": "Gate 5 remains a historical HOLD — SOURCE_BANK_ANSWER_SHAPE on its prior digest-bound source: the earlier four-family audit found 203 uniquely-longest-correct placements, and the later corrected verifier found the omitted rehearsal lane with 655 checked and 70 additional failures. Current Gate 2 is closed on owner-merged canonical main e16aebeb96957f1d498d21e0eda6a7c033e51399. The replacement graph-derived oracle now proves exact expected-versus-audited equality across 5,870 coordinates with zero missing, extra, duplicate, or unknown rows. Gate 3 is HOLD — BLOCKED_CONTRACT on factory issue #274; prior Gate 3-4 receipts remain exact historical evidence only. No TimeBack publication, enrollment, activation, or learner acceptance is claimed.",
-      "scope": "Gate 5 answer-shape preflight against exact Gate 4-bound source; excludes source repair, TimeBack publication, enrollment, activation, and learner acceptance",
+      "status": "MISSING",
+      "value": "MISSING: the committed HumGeo blueprint oracle exists on current main, but this task did not run its course-bound production invocation and did not open the protected P1-04 receipt root. The current article-check total, terminal residue, and final article-inclusive answer-shape verdict are therefore not established on this claim. Historical counts are not promoted to current state.",
+      "scope": "current P1-04 article-check and final answer-shape verdict; mechanism existence only is observed",
       "evidence": [
         {
-          "type": "official-ced",
-          "url": "https://apcentral.collegeboard.org/media/pdf/ap-human-geography-course-and-exam-description.pdf"
+          "type": "oracle-mechanism",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/8495d75929f2e25d6f7fa50fc24ce3d47481a887/scripts/blueprint_diff.py"
         },
         {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
-        },
-        {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
-        },
-        {
-          "type": "regression-repair",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
-        },
-        {
-          "type": "canonical-main",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/62"
-        },
-        {
-          "type": "publication-retry",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/60#issuecomment-5369498130"
-        },
-        {
-          "type": "scope-closure-receipt",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183"
-        },
-        {
-          "type": "read-only-bank-receipt",
-          "sha256": "38cd738e8d8447ef462c93b08b1523400a1fc532a9ad25c074bf9bf15cb8d45b"
-        },
-        {
-          "type": "local-candidate",
-          "commit": "675b4bfde6a680198f519e27fde953453d026285",
-          "inventory_sha256": "ba63327c70d3af402db5f76b4828aa8cf264247867a3d99ded6cd381e18f53b9",
-          "summary_sha256": "9ce925ab9047cae149de68ed34ea6f67c60da3838afc6fb7ad48f84fb68d7192"
-        },
-        {
-          "type": "gate-2-3-review",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
-          "head": "7b8a01727426abcf063cc6d86e8222863c1eb111",
-          "merge_commit": "4bd35b9ca350924fef2653f71c64270baa3ea9db",
-          "delivery_package_sha256": "508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3"
-        },
-        {
-          "type": "get-only-authority-change",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/842",
-          "ap_one_main": "bb17b21b856d81de4ba26c468790f0c5896a3c75"
-        },
-        {
-          "type": "owner-direction",
-          "observed_at": "2026-08-22T04:07Z",
-          "scope": "Gate 4 opened and underway only"
-        },
-        {
-          "type": "pull-request",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
-          "head": "a839651a2d4f86cbb9068831ee86e7eafeca0de3",
-          "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb"
-        },
-        {
-          "type": "deploy-run",
-          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32620437842",
-          "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
-          "conclusion": "success"
-        },
-        {
-          "type": "staging-version",
-          "url": "https://dds0j64tsey5c.cloudfront.net/version",
-          "observed_at": "2026-08-23T05:36Z",
-          "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
-          "image_digest": "sha256:8033bbe0277c5e60daa8a61e9b283a742bc9c9d086b2e7f5090e7f5f7afdbb48"
-        },
-        {
-          "type": "gate-5-answer-shape-report",
-          "observed_at": "2026-08-23T06:47Z",
-          "manifest_self_sha256": "0d28b8c879196fbf19f033c3681b7382cca880deedb80782863f37dfe8cbd256",
-          "raw_sha256": "470b3325ec88285e29c214645231832139d60f551088ba8fd30cd608108539c0"
-        },
-        {
-          "type": "gate-2-amendment-merge",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
-          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
-          "manifest_self_sha256": "7755525e29bf2eb77f0856636b712a95cde974e79ba17a05c52d523b1ed4cdca"
+          "type": "verifier-gap",
+          "status": "NOT_RUN",
+          "reason": "protected P1-04 receipt root and course checkout excluded by plan v3"
         }
       ],
-      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
+      "evidence_access": "PRIVATE_GITHUB+DECLARED_SCOPE_HOLD",
+      "status_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
       "section": "HumGeo",
-      "status": "OBSERVED",
-      "observed_at": "2026-08-22T02:47Z",
-      "value": "The official Fall-2020 College Board CED contains 150 unique EK codes and 70 unique LO codes. These are scope identities, not a 150-question target and not a course-completion percentage. Gate 1 locked those identities and all 68 topic-to-gate mappings. Gate 2 then exhaustively classified all 8,377 required rows with zero unknown or unmeasured and proved an exact four-slot shortage for Gate 3.",
-      "scope": "official HumGeo scope denominator only",
+      "status": "MISSING",
+      "value": "MISSING: the current canonical repository contains the HumGeo coverage oracle, but no same-window production run over the exact course inputs was permitted in this dashboard-only task. The prior CED identity counts remain historical and are not re-dated. A current denominator requires the committed oracle at its documented course-bound flags.",
+      "scope": "current production-oracle HumGeo coverage denominator; excludes historical CED identity notes and all course mutations",
       "evidence": [
+        {
+          "type": "oracle-mechanism",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/8495d75929f2e25d6f7fa50fc24ce3d47481a887/scripts/blueprint_diff.py"
+        },
         {
           "type": "official-ced",
           "url": "https://apcentral.collegeboard.org/media/pdf/ap-human-geography-course-and-exam-description.pdf"
         },
         {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
-        },
-        {
-          "type": "issue",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
-        },
-        {
-          "type": "gate-2-inventory-summary",
-          "sha256": "9ce925ab9047cae149de68ed34ea6f67c60da3838afc6fb7ad48f84fb68d7192"
+          "type": "verifier-gap",
+          "status": "NOT_RUN",
+          "reason": "course checkout and executor runs excluded by plan v3"
         }
       ],
-      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_LOCAL_READ_ONLY"
+      "evidence_access": "PUBLIC_WEB+PRIVATE_GITHUB+DECLARED_SCOPE_HOLD",
+      "status_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.completion.gates",
@@ -645,233 +553,115 @@
     {
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
-      "status": "OBSERVED",
-      "observed_at": "2026-08-24T14:09Z",
-      "value": "APWH's accepted-source scope sub-receipt is CLOSED — SCOPE_LOCKED at scope SHA 8a6ebccbc72451217d1739791d89c14f492ccb60. Accepted source remains HOLD on outputs bc903c1969e8586e0b75b6a2776594c9862e8751; current AP One main is 460d047a573f4034fb6496ddb61fda692a7965dc, current factory main is 7d05d0251594e9424e1bf668d2b89eb281970a2d, and the live deployed grader serves 8ba956317a58061c3d434dfc7c77dc36bf4b496d. Sanctioned read-only censuses found 2,791 available, passed MCQs plus 1,097 short FRQs, 1,938 long FRQs, and 2,430 DBQs; all transactions were REPEATABLE READ, server-verified read-only, and rolled back. The constructed-response total is 5,465, so A-116 is not an empty-bank problem: the genuinely missing artifact is the canonical join from all 375 typed mandatory concept KCs to terminal E4 constructed-response surfaces. A-202 also remains genuinely missing because the authoritative typing overlay has no template axis for an exact current join denominator. The prior deterministic inventory recorded 179 attached, 49 missing, 1 stale, and 6 unknown clauses. The authorized grading campaign has since settled 44 of 123 calls, including a GREEN-OUTCOME replacement for ordinal 44; 79 were not resumed. The latest closure review remains HOLD with seven unresolved classifications: A-100, A-101, A-103 through A-106, and A-154. Phase 0 has not started, and no APWH bank, course, publication, or learner-surface mutation is claimed.",
-      "scope": "accepted-source official scope plus exhaustive read-only repo, AWS bank, S3 metadata, grader-artifact, and learner-readback reconciliation; excludes accepted-source closure, Phase 0 authority, course mutation, deployment, and learner serving",
+      "status": "MISSING",
+      "value": "MISSING: current FBLUE main is 408d677f179afba14dc252e87ce88c26d8d4068f. The latest successful CI run is tree-identical to main, but its logs show manifest reproducibility and blueprint_diff --self-test only; it did not run the required course-bound blueprint_diff invocation with --course-dir. Accepted-source conformance therefore remains unmeasured in this claim, and prior local inventory or grading counts are not promoted.",
+      "scope": "APWH accepted-source conformance through the full current course-dir oracle; excludes oracle self-test, local inventory, grading campaigns, publication, and learner serving",
       "evidence": [
         {
-          "type": "oracle-source",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/blob/8a6ebccbc72451217d1739791d89c14f492ccb60/scripts/blueprint_diff.py"
+          "type": "current-fblue-main",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/408d677f179afba14dc252e87ce88c26d8d4068f"
         },
         {
-          "type": "official-ced",
-          "url": "https://apcentral.collegeboard.org/media/pdf/ap-world-history-modern-course-and-exam-description.pdf",
-          "sha256": "b2e62178a8669289ef2b78a4632b39d03393ff4841f9ed7a4febdd58e8c5fcfd"
-        },
-        {
-          "type": "ap-one-projection",
-          "url": "https://github.com/InceptTrilogy/ap-one/tree/460d047a573f4034fb6496ddb61fda692a7965dc/services/bff/data/courses/ap-world-history-fall-2026-v1"
-        },
-        {
-          "type": "issue",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
-        },
-        {
-          "type": "owner-direction",
-          "observed_at": "2026-08-22T10:20Z",
-          "scope": "explicitly open APWH Gate 2"
-        },
-        {
-          "type": "read-only-bank-receipt",
-          "observed_at": "2026-08-24T10:32Z",
-          "items": 2791,
-          "items_sha256": "4cc89d7092a6a2a68fafe9dd40a683c3ccf91dddb230f3474b9be6c37c19f654",
-          "full_payloads_sha256": "f98b6636ff300de03d601b7a2b4a33e7310bab0add95c80c611770d83b88fc7d",
-          "transaction": "REPEATABLE READ + READ ONLY + ROLLBACK"
-        },
-        {
-          "type": "gate-2-inventory",
-          "observed_at": "2026-08-24T11:54Z",
-          "inventory_sha256": "f8c3cb03830ac89d094338071f2e7fafccd791ca23aaf358a1554587e4f2ef96",
-          "shortage_manifest_sha256": "ccfd3707559f0be39509985f9d0bebcc8c14e151ac08eaa45fb9429919cc23a7",
-          "unknown_blueprint_clauses": 6
-        },
-        {
-          "type": "constructed-response-bank-readonly-census",
-          "observed_from": "2026-08-24T11:37Z",
-          "observed_to": "2026-08-24T11:38Z",
-          "short_frq": 1097,
-          "long_frq": 1938,
-          "dbq": 2430,
-          "total": 5465,
-          "short_items_sha256": "164319ef85dbbc17dfc79efa8d637d2300b40e52a696e3e727fc3b1ec781911b",
-          "long_items_sha256": "b2abe71dc6eaeb5e9b991f7cfe944e240fb94bed46ed823ba86e8ef62ca3b6e1",
-          "dbq_items_sha256": "2027114b567cbdcdfae671065588184b85cf5bb667d349979776f9f4420cde33",
-          "transaction": "REPEATABLE READ + READ ONLY + ROLLBACK"
-        },
-        {
-          "type": "current-sanctioned-grader",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/tree/8ba956317a58061c3d434dfc7c77dc36bf4b496d/engine/grader_api/graders/ap_us_history",
-          "commit": "8ba956317a58061c3d434dfc7c77dc36bf4b496d"
-        },
-        {
-          "type": "prior-grader-deploy",
-          "observed_at": "2026-08-24T13:58Z",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/32734756753",
-          "commit": "9b4f60fffa386ced008a9c4c42629747394a6090",
-          "task_definition": "ap-grader:25",
-          "health": "ok"
-        },
-        {
-          "type": "unmerged-dbq-contract",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/189",
-          "head": "3eb248fd0e9b3b05cc18a0f5b4ed11ef58c6a9f6",
-          "scope": "historical unmerged evidence only; not current production authority"
-        },
-        {
-          "type": "grader-receipt-existence-audit",
-          "observed_at": "2026-08-24T14:04Z",
-          "current_commit": "9b4f60fffa386ced008a9c4c42629747394a6090",
-          "current_test_run": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/32733375685",
-          "calibration_artifact_id": 9509065579,
-          "calibration_files_checked": 70,
-          "calibration_apwh_or_exact_fixture_hits": 0,
-          "s3_roundtrip_objects_checked": 2,
-          "s3_current_boundary_receipts": 0,
-          "cloudwatch_exact_fixture_hits": 0,
-          "disposition": {
-            "authority_drift": ["A-100", "A-101"],
-            "missing_receipts": ["A-103", "A-104", "A-105", "A-106"]
-          },
-          "factory_ask_target": "InceptTrilogy/incept-test-builder",
-          "factory_ask_title": "[grader][APWH] Publish SHA-bound adversarial receipts for A-100/A-101/A-103–A-106 and adjudicate 3/6 vs 3/4 rubric drift",
-          "material_limit": "No issue was filed and no live grading or QC submission was made under the recon-only boundary."
-        },
-        {
-          "type": "learner-get-readback",
-          "observed_at": "2026-08-22T11:43Z",
-          "method": "GET-only",
-          "course_list_status": 200,
-          "gate_routes": 71,
-          "gate_status": 404,
-          "trace_sha256": "caad2f07b3e0b0adeddcda4515c6600868588dfd407c04ebbaa5eff25e34e9f4"
-        },
-        {
-          "type": "learner-practice-get-readback",
-          "observed_at": "2026-08-22T11:56Z",
-          "method": "GET-only",
-          "lesson_routes": 176,
-          "served_content_ids": 698,
-          "practice_key_content_ids": 645,
-          "served_key_content_overlap": 0,
-          "receipt_sha256": "49528b2ff3cae39a4190b84c7a4e17881d6854963295f7233aea149136ae4258"
-        },
-        {
-          "type": "learner-tree-write-get-readback",
-          "observed_at": "2026-08-22T13:33Z",
-          "method": "GET-only",
-          "requests": 357,
-          "active_units": 9,
-          "active_lessons": 176,
-          "retired_lessons": 2,
-          "s3_examtech_nodes": 0,
-          "write_routes_200": 113,
-          "write_routes_404": 63,
-          "first_paragraph_position": 1,
-          "first_partial_position": 4,
-          "first_full_essay_position": 46,
-          "learner_plan_routes": 176,
-          "integration_assemblies": ["DBQ", "LEQ", "SAQ"],
-          "row_1_position": 4,
-          "organiser_panels": 49,
-          "organiser_hosts": 33,
-          "target_schema_fields": 0,
-          "conceptual_gap_fields": 0,
-          "receipt_sha256": "1489c2434da33552c5e94dbc2d5fc2c53c67a77193588ef7293f22b626624b2e"
+          "type": "latest-ci",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/32794423811",
+          "conclusion": "success",
+          "limitation": "self-test only; no --course-dir production verdict"
         }
       ],
-      "evidence_access": "PUBLIC_COLLEGE_BOARD+GITHUB+SCOPED_AWS_READ_ONLY+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:49Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
-      "status": "BLOCKED",
-      "status_at": "2026-08-20T04:13Z",
-      "value": "The deterministic builder pins the lane-bound APUSH blueprint. Its reconciliation manifest is BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS, but the detailed ledger is chiefly PREPARED design state, not current learner implementation. A denominator-aware current-byte crosswalk and reviewer-visible candidate remain missing; named human disposition follows the handoff.",
-      "scope": "blueprint design reconciliation versus current implementation",
+      "status": "OBSERVED",
+      "value": "Exact remote bytes at apush-build-outputs main 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c report BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS and generation_authorized=false. This is build-only accepted-source design evidence. It does not establish a complete native tree, learner implementation, publication, or release.",
+      "scope": "APUSH build-only blueprint reconciliation at exact current output SHA; excludes native tree completion, generation authority, learner implementation, and release",
       "evidence": [
         {
           "type": "reconciliation-manifest",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase1/blueprint-reconciliation/reconciliation_manifest.json"
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "status": "BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS"
         }
       ],
-      "evidence_access": "GITHUB"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T04:13Z",
-      "value": "Psychology is blueprint-first and its Phase 1 design receipt covers 221 of 221 EKs. The current course repo has 221 passing QC sidecars: 204 fully covered and 17 partial-source-coverage, with zero blocking findings. No course-level implementation oracle exists. Psychology-specialist review remains later human evidence, but unnamed signoff does not block the LS handoff under current owner direction.",
-      "scope": "blueprint design reconciliation, implementation, and specialist completion gates",
+      "status_at": "2026-08-27T07:54Z",
+      "value": "At Psychology main 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb, the bounded Units 1-3 QC/assembly audit is BLOCKED for a complete Phase 3.6/3.7 pass. The raw-bank render gate exited 1 for all three units with 21 / 28 / 26 blocking hits, while the existing publish-tree verifier exited 0 over 716 / 694 / 593 XML files. Unit 1 also has one DOK-ceiling breach at EK 1.6.E.1 (DOK 3 vs ceiling 2), and Units 1-2 have empty ledger MCQ arrays. The render hit totals overlap and are verifier hits, not distinct-item counts.",
+      "scope": "Units 1-3 exact-SHA committed item banks, publish trees, receipt predicates, and bounded local review; excludes complete Phase 3 semantics, learner app, grader, deployment, and release",
       "evidence": [
         {
-          "type": "build-seed",
-          "url": "https://github.com/ilmych/ap-psychology-build/blob/25319b8051f4351b1629bc65df565eede153a812/BUILD_SEED.md"
+          "type": "audit-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
         },
         {
-          "type": "phase-status",
-          "url": "https://github.com/ilmych/ap-psychology-build/blob/25319b8051f4351b1629bc65df565eede153a812/phase1/STATUS.md"
+          "type": "unit-1-dok-detail",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-dok-ceiling-details.stdout"
+        },
+        {
+          "type": "unit-1-ledger-check",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-committed-block.stdout"
+        },
+        {
+          "type": "unit-2-ledger-check",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit2-committed-block.stdout"
         }
       ],
-      "evidence_access": "GITHUB"
+      "evidence_access": "LOCAL_INCEPT_AUDIT"
     },
     {
       "claim_id": "cross.recovery.audit",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-19T04:13Z",
-      "value": "Recovery audit complete: 25 claims classified as 2 valid factory-proof classes, 8 salvageable-input classes, 5 factory re-earns, 6 void classes, and 4 blocked unknowns. The older dashboard standings are superseded by these dispositions.",
-      "scope": "local recovery audit and dashboard truth surface",
+      "value": "The exact recovery register at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb still contains 25 rows: 2 VALID_FACTORY_PROOF, 8 SALVAGEABLE_INPUT_ONLY, 5 FACTORY_REEARN_REQUIRED, 6 VOID, and 4 UNKNOWN_BLOCKED. This is an immutable historical classification, not a current course-state or completion verdict.",
+      "scope": "historical 25-row recovery classification at exact evidence-repo SHA; excludes current course state and release readiness",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "~/.incept/day-20260819/course-recovery-audit/",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex"
+          "type": "recovery-register",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/fe839ffc0caf59fe17868c0e64f09c1b90e60bfb/evidence/recovery/20260819-course-recovery-audit/codex/DAMAGE-REGISTER.jsonl"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "cross.handrolled.machinery",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Sixteen purge-manifest rows identify hand-rolled proof, apply, and walk machinery; owner sweep 2026-08-19 evening added a provenance rule (sanctioned = fleet-authored or fleet-merged) and struck two self-merged scripts from humgeo-rebuild main (build_issue21_regeneration_plan.py, run_issue21_regeneration_wave.py \u2014 PRs #38/#39/#42, no fleet review). Local coverage tool demoted to bookkeeping. Struck tools banned from every process; staged filing discloses them.",
-      "scope": "local course machinery only; data classified separately",
+      "value": "The exact historical purge manifest at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb enumerates P1 through P16 hand-rolled machinery classes and states that deletion requires owner approval. Current INCEPT rules give those local tools no factory-proof authority and require committed factory routes. This claim does not assert that the inventoried files were deleted or that their present filesystem state was checked.",
+      "scope": "historical P1-P16 machinery inventory plus current factory-first authority rule; excludes current filesystem removal status",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "PURGE-AND-REPLACEMENT-MANIFEST.md",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md"
+          "type": "purge-manifest",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/fe839ffc0caf59fe17868c0e64f09c1b90e60bfb/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md"
+        },
+        {
+          "type": "current-seat-rule",
+          "location": "INCEPT/ORIENTATION.md",
+          "rule": "factory-first; no local substitutes"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-19T08:57Z"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RULE",
+      "observed_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "humgeo.wave.proof",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-21T14:29Z",
-      "value": "PR #55 merged the sole passing pilot candidate and retained the five measured failures. PR #57 is closed unmerged, both re-arm receipts remain recorded as null, and PR #56's residual plan remains sealed and unarmed. The 2026-08-21T14:29Z readback found issue #44 stopped with only autopilot:attention and no assignee. That Gate 0 evidence is historical; the later Gate 2 state is reported separately under humgeo.completion.gates.",
-      "scope": "Gate 0 stabilization and no-active-writer closure",
+      "value": "Live GitHub readback preserves the historical Gate 0 record: PRs #55 and #56 are merged, PR #57 is closed unmerged, and issue #44 remains open with label autopilot:attention and no assignee. Current HumGeo main is later accepted-source commit 8495d75929f2e25d6f7fa50fc24ce3d47481a887. This row reports PR/issue history only and gives no current P1-04, writer, bank, or release verdict.",
+      "scope": "historical Gate 0 PR disposition and present issue #44 metadata; excludes current writer absence, P1-04 state, bank state, and release",
       "evidence": [
         {
-          "type": "pull-request",
+          "type": "merged-pilot",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/55"
         },
         {
-          "type": "issue-comment",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365413244"
-        },
-        {
-          "type": "gate-closure-receipt",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989"
-        },
-        {
-          "type": "sealed-unarmed-plan",
+          "type": "merged-plan",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/56"
         },
         {
@@ -879,103 +669,71 @@
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/57"
         },
         {
-          "type": "later-gate-activity",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
-        },
-        {
-          "type": "regression-repair",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
+          "type": "residual-issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44",
+          "state": "open"
         }
       ],
-      "evidence_access": "GITHUB"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.rescreen741.reearn",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "Two legs re-earned 429 of 455 records through fresh fingerprint-bound factory verdicts: 351 plus 78 passes. Remaining measured dispositions are 8 content fails, 17 unmeasured, and 1 unresolved rationale. The regeneration cohort is machine-checked at 332. PR #43 merged the 429 records at be18d12; intake #95 closed with owner delegation to choose regeneration or enrich-plus-QC and approval of associated API costs.",
-      "scope": "741 rescreen records; 464/277 lists survive only as inputs",
+      "value": "Live PR #43 remains merged as be18d12db835b3fab55043536910a134a1102504. Current issue #44 separately records 429 fingerprint-bound passing rows and a 332-row residual disposition. This preserves the bounded historical admission and residual split; it does not re-run per-item QC, establish current factory verdicts, or authorize the residual campaign.",
+      "scope": "historical PR #43 admission plus the separately tracked 332-row residual queue; excludes fresh per-item QC and execution authority",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#HG-004",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#humgeo"
+          "type": "rescreen-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/43",
+          "merge_commit": "be18d12db835b3fab55043536910a134a1102504"
+        },
+        {
+          "type": "residual-issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44",
+          "state": "open"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T06:45Z"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "observed_at": "2026-08-22T04:07Z",
-      "value": "The Gate 2 inventory is based on course pin aa11026aa53e12623bf40a7aeff1931b491065dd after Gate 1 PR #62. A sanctioned read-only database snapshot observed 713 passed or available MCQs across the five target topics and rolled back without mutation. Deterministic reconciliation classified all 8,377 required rows with zero unknown or unmeasured and proved four missing Gate 3 slots. Gate 3 filled those four slots through factory generation and matching full QC. The evidence candidate is pushed only to review PR #63; it is not merged, deployed, or learner-visible.",
-      "scope": "Gate 2 bank measurement and Gate 3 evidence review; no learner-surface claim",
+      "value": "Live GitHub readback confirms PR #63 is merged as 4bd35b9ca350924fef2653f71c64270baa3ea9db and is retained in later HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887. The row is now bounded to that historical Gate 2/Gate 3 package landing. It does not assert a current bank denominator, learner deployment, or publication state; those require their own current verifiers.",
+      "scope": "historical PR #63 package landing in canonical ancestry; excludes current bank counts, current QC, learner deployment, and publication",
       "evidence": [
         {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/49"
-        },
-        {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/55"
-        },
-        {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/56"
-        },
-        {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
-        },
-        {
-          "type": "regression-repair",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
-        },
-        {
-          "type": "canonical-main",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/62"
-        },
-        {
-          "type": "publication-retry",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/60#issuecomment-5369498130"
-        },
-        {
-          "type": "issue-comment",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365413244"
-        },
-        {
-          "type": "read-only-bank-receipt",
-          "sha256": "38cd738e8d8447ef462c93b08b1523400a1fc532a9ad25c074bf9bf15cb8d45b"
-        },
-        {
-          "type": "local-candidate",
-          "commit": "675b4bfde6a680198f519e27fde953453d026285"
-        },
-        {
-          "type": "gate-2-3-review",
+          "type": "package-merge",
           "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
-          "head": "7b8a01727426abcf063cc6d86e8222863c1eb111"
+          "merge_commit": "4bd35b9ca350924fef2653f71c64270baa3ea9db"
+        },
+        {
+          "type": "current-canonical-main",
+          "url": "https://github.com/ilmych/humgeo-rebuild/tree/8495d75929f2e25d6f7fa50fc24ce3d47481a887"
         }
       ],
-      "evidence_access": "GITHUB+SCOPED_LOCAL_READ_ONLY"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-21T05:08Z",
-      "value": "Gate 10 learner acceptance is locked behind separate profile, graph/preview, sealed-plan, dark-publication, canary-enrollment, and private-activation closures. Historical local bundles and walks remain evidence but do not prove a fresh learner on the exact activated course.",
-      "scope": "Gate 10 fresh learner acceptance",
+      "value": "BLOCKED: AP One issue #659 remains open. Its latest owner comment requests the missing complete publisher-contract bind and explicitly reports no publication, enrollment, activation, learner, or release write. No current canonical learner/reviewer-path receipt was produced in this task, so local review artifacts do not establish reviewer visibility.",
+      "scope": "current native learner/reviewer visibility; excludes local preview artifacts and historical demo surfaces",
       "evidence": [
         {
-          "type": "course-status",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44"
+          "type": "publisher-contract-tracker",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659",
+          "state": "open",
+          "observed_at": "2026-08-27T08:47Z"
         }
       ],
-      "evidence_access": "GITHUB+DASHBOARD_PLAN"
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.ls_qc_ready",
@@ -1039,114 +797,124 @@
       "claim_id": "humgeo.eoc",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T05:27Z",
-      "value": "The EOC grader endpoint reports a deployed SHA that is a descendant of the merged weak-explain fix. Ilma's authorization was received and executed, and the governed 2023/24 pool landed in merged PR #32. Fresh calibration acceptance remains course/fleet work on issue #28, not an owner source-supply ask; it is a production/EOC tail unless it pulls measured LS-review coverage below the owner bar.",
-      "scope": "HumGeo EOC calibration; not whole-course LS review readiness by itself",
+      "value": "BLOCKED: HumGeo EOC issue #28 remains open. The live grader health endpoint serves git SHA 7d05d0251594e9424e1bf668d2b89eb281970a2d, but no fresh calibration acceptance receipt bound to that served build was identified. Service health proves availability and identity only; it does not clear EOC calibration.",
+      "scope": "HumGeo EOC calibration against the currently served grader build; excludes service-health-only inference and whole-course readiness",
       "evidence": [
         {
-          "type": "issue",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/28"
+          "type": "eoc-calibration-issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/28",
+          "state": "open"
         },
         {
           "type": "grader-health",
-          "url": "https://ap-grader.inceptstore.com/api/health"
+          "url": "https://ap-grader.inceptstore.com/api/health",
+          "git_sha": "7d05d0251594e9424e1bf668d2b89eb281970a2d",
+          "observed_at": "2026-08-27T08:47Z"
         }
       ],
-      "evidence_access": "PUBLIC_ENDPOINT+GITHUB"
+      "evidence_access": "PUBLIC_SERVICE+PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "Gate 11 broader enrollment and release is locked behind the complete native TimeBack chain. It requires the full release checklist, preserved repair/rollback chain, exact production readback, and Josh's decision. No local package, PR, test count, or readiness flag is a release claim by itself.",
-      "scope": "Gate 11 broader enrollment and release",
+      "value": "BLOCKED: AP One issues #659 and #642 are both open, with #642 reopened. The current #659 owner comment requests the missing complete publisher-contract bind and states that no publication, enrollment, activation, learner, or release write is reported. Broader enrollment and release remain separate owner decisions after the full native chain; no intermediate merge or local receipt upgrades that outcome.",
+      "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/ap-one/issues/659"
+          "type": "publisher-contract-tracker",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659",
+          "state": "open"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/ap-one/issues/642"
-        },
-        {
-          "type": "issue",
-          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50"
+          "type": "contamination-repair-tracker",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/642",
+          "state": "open",
+          "state_reason": "reopened"
         }
       ],
-      "evidence_access": "GITHUB+DASHBOARD_PLAN"
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:48Z"
     },
     {
       "claim_id": "apwh.sweep.pack",
       "section": "APWH",
-      "status": "OBSERVED",
-      "value": "The APWH seat banked 933 identities at db2ca06d, recorded the population-scoped ratification at dde5a973, passed the break checks, and closed watch-only. The fleet subsequently completed the serialized-bank acceptance loop on issue #48. Seat closure alone was not acceptance proof; the merged final agreement is.",
-      "scope": "serialized 933-item population and bank provenance",
+      "status": "MISSING",
+      "value": "MISSING: issue #48 remains closed and preserves a historical 933-item acceptance narrative, but the cited PR #9 and commit 1d59042235117bddbd0a2065baf2b2d68359c0a1 do not resolve in the current APWH remotes. Current canon also excludes that local ceremony from accepted-source proof. No current canonical serialized-bank receipt was identified, so the historical population is not re-dated as current.",
+      "scope": "historical 933-item serialized population and its current canonical resolvability; excludes accepted-source closure and learner serving",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "COURSE-RECOVERY-DECISION-BOOK.md#5",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"
+          "type": "historical-issue-record",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48",
+          "state": "closed"
+        },
+        {
+          "type": "unresolved-canonical-ref",
+          "sha": "1d59042235117bddbd0a2065baf2b2d68359c0a1",
+          "result": "NOT_FOUND"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T10:25Z"
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:49Z"
     },
     {
       "claim_id": "apwh.qc933",
       "section": "APWH",
-      "status": "OBSERVED",
-      "value": "Issue #48 closed COMPLETED after PR #9 merged the reproducible evaluator and exact passing acceptance evidence to access-controlled main 1d590422. The final receipt binds both passing legs to the complete 933-item population, reports equal identity sets, zero item disagreements, zero course-status disagreements, and agreement SHA-256 c077a95537ad44be4fc2d41c783042aeb633d5a3f31b36317a6ca42d65d454b5. This is acceptance proof, not a student-surface write or deployment receipt.",
-      "scope": "official /v1/qc acceptance sweep",
+      "status": "MISSING",
+      "value": "MISSING: the closed issue #48 comment reports two passing legs over 933 identities, but its cited merged ref no longer resolves in the current remote and the 2026-08-27 APWH canon assigns the local Faultless Bar campaign no publication-proof weight. Without a current canonical factory receipt, exact item agreement and acceptance remain historical assertions only.",
+      "scope": "historical 933-item acceptance receipt and current factory provenance; excludes accepted-source closure, QTI parity, and learner acceptance",
       "evidence": [
         {
-          "type": "completion-receipt",
+          "type": "historical-completion-record",
           "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48#issuecomment-5354633163"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
+          "type": "current-canon-limit",
+          "location": "INCEPT/APWH-CANON-REQUIREMENTS.md",
+          "rule": "local 933-item ceremony carries no runbook row"
         }
       ],
-      "evidence_access": "GITHUB",
-      "observed_at": "2026-08-20T10:25Z"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_CANON",
+      "status_at": "2026-08-27T08:49Z"
     },
     {
       "claim_id": "apwh.pr791",
       "section": "APWH",
-      "status": "OBSERVED",
-      "value": "Historical authority conflict is settled: native governed placement is authoritative, PR #791 is closed unmerged, and no #591 or Josh tree decision remains. The accepted-source scope sub-receipt locks the exact official scope. This row preserves the Aug 24 accepted-source evidence state of two authority-drift clauses and four missing boundary receipts; the current 44-of-123 campaign state and seven unresolved closure classifications are reported separately under apwh.ls_qc_ready. The native TimeBack runbook does not skip accepted-source closure or make a reviewer surface.",
-      "scope": "APWH shadow-tree successor PR",
+      "status": "BLOCKED",
+      "value": "BLOCKED: live PR #791 remains closed unmerged, but issue #591 is still open and its latest thread ends in unresolved worker rework rather than a terminal placement receipt. The shadow-tree PR is not authority for accepted-source closure or reviewer visibility, and this refresh does not infer completion from the local pointer page.",
+      "scope": "APWH study-skills placement authority and current issue disposition; excludes accepted-source closure and learner/reviewer visibility",
       "evidence": [
         {
-          "type": "pull-request",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/791"
+          "type": "closed-unmerged-pr",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/791",
+          "state": "closed",
+          "merged": false
         },
         {
-          "type": "owner-comment",
-          "url": "https://github.com/InceptTrilogy/ap-one/issues/591#issuecomment-5304612000"
+          "type": "placement-issue",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/591",
+          "state": "open"
         }
       ],
-      "evidence_access": "PUBLIC_GITHUB",
-      "observed_at": "2026-08-24T14:09Z"
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:49Z"
     },
     {
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "status_at": "2026-08-20T10:47Z",
-      "value": "The apwh.local_done mark is retired and carries no completion credit. Acceptance credit now comes from the merged issue-48 receipt: two passing Faultless Bar legs that agree exactly over the complete pinned 933-item bank.",
-      "scope": "local completion mark and walk evidence",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Current APWH canon assigns accepted-source proof only to the factory course-bound conformance oracle and later runbook receipts; the local 933-item and grading ceremonies remain history. No current accepted-source, publication, or learner outcome is asserted here.",
+      "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#AW-001",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apwh"
+          "type": "current-canon-limit",
+          "location": "INCEPT/APWH-CANON-REQUIREMENTS.md",
+          "rule": "local ceremonies eliminated from proof on 2026-08-27"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL",
-      "observed_at": "2026-08-20T10:25Z"
+      "evidence_access": "LOCAL_INCEPT_CANON",
+      "observed_at": "2026-08-27T08:49Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
@@ -1167,73 +935,88 @@
       "claim_id": "apush.ledger.mixed",
       "section": "APUSH",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T04:30Z",
-      "value": "The canonical ledger contains 38 ACCEPTED and 211 PENDING positions. The 38 split into 36 legacy_dual_review and 2 server_strict. Eleven additional successor records have receipts but are not committed admissions; route them through the fleet's canonical ledger path before quoting 49. Josh ruled that the 36 keep the legacy label with no funded re-earn.",
-      "scope": "article acceptance ledger; not course release",
+      "value": "Exact current ledger bytes at apush-build-outputs main 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c report PASS / IN_PROGRESS over 249 positions: 38 ACCEPTED and 211 PENDING, with the accepted split fixed at 36 legacy_dual_review and 2 server_strict. Its write policy is build-only with platform ingest, live wiring, and rendering all false. The 11 successor receipts remain outside this committed admission count.",
+      "scope": "current committed APUSH article-acceptance ledger; excludes the 11 unadmitted successors, native article checks, platform ingest, learner serving, and release",
       "evidence": [
         {
           "type": "canonical-ledger",
           "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "apush.generated_qc",
       "section": "APUSH",
-      "status": "OBSERVED",
-      "observed_at": "2026-08-20T05:27Z",
-      "value": "Owner direction confirms that the 2,479 question candidates passed QC during generation and that hosted grading corpora/calibration already exist. The LS sprint must bind this provenance to the selected candidate; it must not schedule duplicate blanket QC or rebuild calibration merely because later folders are empty.",
-      "scope": "generation-QC and hosted grader inheritance; not current blueprint coverage",
+      "status": "MISSING",
+      "value": "MISSING: the stale dashboard row cites only an owner-direction sentence for 2,479 generation-QC candidates and provides no resolvable current factory receipt. Current canon preserves that number as bounded historical source evidence but explicitly does not treat it as native QTI, display, persisted-result, or accepted-source proof. This task did not locate a same-scope live verifier, so the count is not re-dated.",
+      "scope": "current factory provenance for the historical 2,479 generation-QC candidate assertion; excludes hosted-grader existence and native publication readiness",
       "evidence": [
         {
-          "type": "owner-direction",
-          "location": "Ilma Cohadzic direction dated 2026-08-07, supplied by Josh on 2026-08-20"
+          "type": "current-canon-limit",
+          "location": "INCEPT/APUSH-CANON-REQUIREMENTS.md",
+          "result": "bounded historical evidence only"
+        },
+        {
+          "type": "verifier-gap",
+          "status": "MISSING",
+          "reason": "no resolvable current factory receipt in the claim or canon row"
         }
       ],
-      "evidence_access": "OWNER_DIRECTION"
+      "evidence_access": "LOCAL_INCEPT_CANON+DECLARED_EVIDENCE_GAP",
+      "status_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "The filed defect on positions 170/244 remains closed end to end on canonical bytes. Issue #81 is closed complete, PR #82 merged at b9631f575fa666b8fb3a9eebd027af8939e33d5c, and intake #89 and #90 are closed and routed to completed downstream work. The correction still proves the original 126-position wall overstated the dependency; residual scope must be remeasured. These closures do not change the 38 accepted positions or admit the 11 separately receipted successors.",
-      "scope": "future article admissions",
+      "value": "Live GitHub readback confirms incept-hole-filler issue #81 is closed, PR #82 merged as b9631f575fa666b8fb3a9eebd027af8939e33d5c, and APUSH intakes #89 and #90 are closed. These facts remove the cited visual-contract and citation-apparatus dependency claims only. They do not change the exact committed ledger, which remains 38 accepted and 211 pending, and they do not admit the 11 successor receipts.",
+      "scope": "APUSH visual-contract and citation-apparatus dependency unblocks; excludes ledger admission, generation, platform ingest, and learner serving",
       "evidence": [
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/incept-hole-filler/issues/81"
+          "type": "classification-issue",
+          "url": "https://github.com/InceptTrilogy/incept-hole-filler/issues/81",
+          "state": "closed"
         },
         {
-          "type": "pull-request",
-          "url": "https://github.com/InceptTrilogy/incept-hole-filler/pull/82"
+          "type": "classification-merge",
+          "url": "https://github.com/InceptTrilogy/incept-hole-filler/pull/82",
+          "merge_commit": "b9631f575fa666b8fb3a9eebd027af8939e33d5c"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/ilmych/incept-agent-intake/issues/89"
+          "type": "intake",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/89",
+          "state": "closed"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/ilmych/incept-agent-intake/issues/90"
+          "type": "intake",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/90",
+          "state": "closed"
         }
       ],
-      "evidence_access": "GITHUB",
-      "observed_at": "2026-08-23T00:40Z"
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "status_at": "2026-08-20T06:45Z",
-      "value": "Seating PR #6 merged at dab70a6. Its offline dry-run had passed all 11 receipted successor positions without writes, but merge does not admit or seat them. The 11 must first land in the canonical acceptance ledger; seating then runs only behind fresh queue, freshness, gate, clean-tree, and liveness checks.",
-      "scope": "successor seating only",
+      "value": "BLOCKED: PR #6 remains merged as current apush-course-build main dab70a6ed7ef5105f2e6fcafc05b198617ff1d08, proving the reconciler mechanism. Exact current ledger bytes still contain only 38 accepted positions; the 11 separately receipted successors remain outside committed admission. The mechanism does not itself admit or seat them, and no execution was authorized.",
+      "scope": "11 APUSH successor admissions and seating; excludes reconciler mechanism existence and the 38 committed accepted positions",
       "evidence": [
         {
-          "type": "pull-request",
-          "url": "https://github.com/ilmych/apush-course-build/pull/6"
+          "type": "reconciler-merge",
+          "url": "https://github.com/ilmych/apush-course-build/pull/6",
+          "merge_commit": "dab70a6ed7ef5105f2e6fcafc05b198617ff1d08"
+        },
+        {
+          "type": "canonical-ledger",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json"
         }
       ],
-      "evidence_access": "PUBLIC_GITHUB"
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "apush.ls_qc_ready",
@@ -1258,159 +1041,192 @@
       "claim_id": "apush.platform",
       "section": "APUSH",
       "status": "MISSING",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "No course registration or learner-serving surface is proven. Registration, serving, and a learner walk are later stages, not implied by the build ledger.",
-      "scope": "released and student-visible state",
+      "value": "MISSING: the exact current APUSH ledger is explicitly build-only, with platform_ingest=false, live_wiring=false, and rendering=false. No sanctioned live learner-surface verifier receipt was produced in this task. Therefore native registration, publication, learner visibility, and release remain unproved; no repository mechanism or build count fills that gap.",
+      "scope": "current APUSH native learner-serving and release state; excludes build-only blueprint, ledger, and reconciler mechanisms",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "COURSE-RECOVERY-DECISION-BOOK.md#6",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush"
+          "type": "canonical-ledger",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json",
+          "write_policy": "build-only"
+        },
+        {
+          "type": "learner-verifier-gap",
+          "status": "MISSING"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB+DECLARED_EVIDENCE_GAP",
+      "status_at": "2026-08-27T08:50Z"
     },
     {
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-25T11:16Z",
-      "value": "Current Psychology main is e93d8529567bdefab0230b3330c388246a9683f5. Its tree contains 221 article files paired with 221 QC sidecars, 227 unit PNGs, five figure ledgers, five delivery documents, and five video manifests, with no missing or orphan article sidecars. Open PR #32 at 7fec2621ee934ff56e67df77ea7f8ba6ca6b9f4a is a bounded Unit 1 retrieval candidate: all 407 MCQs were retrieved, zero were generated, zero fall below the mastery floor, and four AAQs plus four EBQs are retained. Nine distinct EBQ citations remain UNVERIFIED and publish-blocking. Neither current main nor PR #32 proves course wiring, native publication, or release.",
-      "scope": "current repository head plus preserved Unit 3 receipts; not current-source closure, course wiring, or deployment",
+      "observed_at": "2026-08-27T07:54Z",
+      "value": "Psychology main was observed at 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb from 07:46Z through 07:54Z with zero ref drift. The committed publish-tree verifier exited 0 with zero problems over 716 / 694 / 593 XML files for Units 1 / 2 / 3. This proves existing XML parseability and JSON-wrapper/XML-sibling equality only; it does not clear the raw source banks or every Phase 3.6 semantic clause.",
+      "scope": "existing Unit 1-3 publish trees at exact source SHA; excludes raw-bank clearance, complete semantic QC, course wiring, deployment, and learner visibility",
       "evidence": [
         {
-          "type": "course-repository",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/e93d8529567bdefab0230b3330c388246a9683f5/articles"
+          "type": "audit-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
         },
         {
-          "type": "pull-request",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/21"
+          "type": "unit-1-publish-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-publish-verify.stdout"
         },
         {
-          "type": "repository-release",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-3-videos"
+          "type": "unit-2-publish-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit2-publish-verify.stdout"
         },
         {
-          "type": "merged-pull-request",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23"
-        },
-        {
-          "type": "merged-pull-request",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/28"
-        },
-        {
-          "type": "open-retrieval-candidate",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/32",
-          "head": "7fec2621ee934ff56e67df77ea7f8ba6ca6b9f4a"
+          "type": "unit-3-publish-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit3-publish-verify.stdout"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "LOCAL_INCEPT_AUDIT"
     },
     {
       "claim_id": "psych.bank",
       "section": "Psych",
-      "status": "IN_PROGRESS",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "Issue #14 confirms the served bank came through the Content Factory generation API with its QC, and issue #2 is now closed. The last measured bank scan remains 374 underfilled of 1,105. Before any top-up, accepted-source preparation must bind current canonical inputs and rerun the sanctioned scope/acceptance verifier on the issue #2 closing bytes; a closed issue is evidence, not accepted-source closure.",
-      "scope": "bank scan and top-up workstream",
+      "status": "BLOCKED",
+      "status_at": "2026-08-27T07:54Z",
+      "value": "The committed raw-bank render verifier exits 1 for every audited unit: Unit 1 has 21 blocking hits, Unit 2 has 28, and Unit 3 has 26. The totals overlap where one malformed character causes an XHTML parse hit. Units 1-2 also have empty ledger mcq arrays; Unit 3's committed count check finds 34 entries. No remediation or top-up was run.",
+      "scope": "exact-SHA Unit 1-3 repository item-bank renderability and ledger count predicates; not the served factory bank, admissions, or top-up denominator",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#PS-003",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+          "type": "unit-1-render-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-check-render.stdout"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
+          "type": "unit-2-render-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit2-check-render.stdout"
+        },
+        {
+          "type": "unit-3-render-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit3-check-render.stdout"
+        },
+        {
+          "type": "audit-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "LOCAL_INCEPT_AUDIT"
     },
     {
       "claim_id": "psych.u5",
       "section": "Psych",
-      "status": "OBSERVED",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "Issue #2 is closed on GitHub via a commit reference, but this dashboard update did not independently re-derive the Unit 5 acceptance gate on current main 3a67744d9f576c6e6654860ab8369f81c53dde93. The historical 26-finding audit remains bounded evidence until the current-source verifier is rerun.",
-      "scope": "U5 acceptance gate",
+      "status": "BLOCKED",
+      "status_at": "2026-08-27T07:54Z",
+      "value": "At exact source SHA 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb, Units 4-5 have no assessment or publish directories, and out/publish/capstone contains only its README. This is a Phase 4 artifact-readiness blocker; the audit did not re-derive or negate any historical Unit 5 article-acceptance result.",
+      "scope": "Phase 4 assessment/publish artifact readiness for Units 4-5 and capstone; excludes historical Unit 5 article acceptance",
       "evidence": [
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/2"
+          "type": "phase-4-filename-census",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/phase4-filename-census.txt"
+        },
+        {
+          "type": "audit-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
         }
       ],
-      "evidence_access": "PUBLIC_GITHUB+LOCAL_AUDIT"
+      "evidence_access": "LOCAL_INCEPT_AUDIT"
     },
     {
       "claim_id": "psych.ebq",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-19T04:13Z",
-      "value": "The EBQ receipt records two items admitted and zero buckets closed. The old milestone credit is not accepted; direct factory readback and a local verifier that actually opens the receipt are required.",
-      "scope": "EBQ milestone only",
+      "status_at": "2026-08-27T08:45Z",
+      "value": "The exact historical EBQ canary receipt was opened and hash-bound this session: it records two admitted items, zero closed buckets, and no job IDs. Live GitHub readback confirms factory issue #248 closed through merged PR #249, while current factory main is 9da35978d34f781fb2f0692235564aae2fccd078. The engine-fix evidence does not prove current served-bank admission or QC, and the missing stable job identity prevents the required direct factory service readback. The old EBQ milestone therefore remains BLOCKED, with no retry or generation action authorized.",
+      "scope": "historical EBQ canary receipt and factory engine-fix provenance; excludes current served-bank contents, current item QC, accepted-source closure, and publication readiness",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#PS-002",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+          "type": "receipt-hardening-audit",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/fe839ffc0caf59fe17868c0e64f09c1b90e60bfb/evidence/recovery/20260819-course-recovery-audit/codex/DAMAGE-REGISTER.jsonl",
+          "record": "PS-002"
+        },
+        {
+          "type": "opened-local-receipt",
+          "location": "~/.incept/day-20260811/psych-topup/verify-after-23.json",
+          "sha256": "71df77ca1dc8b060cb23cfdab9296c56b4f4c0b34e4525c9866a3a3834ecea09",
+          "observed_at": "2026-08-27T08:45Z"
+        },
+        {
+          "type": "factory-engine-fix",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/249",
+          "merge_commit": "ba05c78236f40137178d18009a6ebb4f82cab5fa"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB+SCOPED_LOCAL_RECEIPT"
     },
     {
       "claim_id": "psych.provenance",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-20T06:45Z",
-      "value": "Course issue #14 is closed with owner confirmation that the 1,105 served-bank buckets were produced through the Content Factory generation API and include that API's QC. Provenance is resolved; the separate Unit 5 scope/exclusion blocker remains.",
-      "scope": "served bank provenance",
+      "observed_at": "2026-08-27T08:45Z",
+      "value": "Live GitHub API readback at Psychology main 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb confirms issue #14 remains closed. The factory-owner comment states that the served bank was produced through the same generation API exposed by Content Factory and that generation includes that API's QC. This establishes the origin asserted for the historical 2026-08-16 1,105-bucket scan only; current bank counts, current per-item QC, accepted-source admission, and publication readiness remain unmeasured.",
+      "scope": "factory-generation origin of the historical 2026-08-16 served-bank scan; excludes current bank contents/counts, current per-item QC, accepted-source closure, and publication readiness",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "DAMAGE-REGISTER.jsonl#PS-004",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+          "type": "course-repository",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/16ee34846fe539e2ee7d5c21a3f40fc1a49082cb"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
+          "type": "factory-owner-provenance",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14",
+          "observed_at": "2026-08-27T08:45Z",
+          "state": "closed"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "PRIVATE_GITHUB"
     },
     {
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
-      "status": "IN_PROGRESS",
-      "status_at": "2026-08-25T11:16Z",
-      "value": "Psychology accepted source remains IN PROGRESS. Current main is e93d8529567bdefab0230b3330c388246a9683f5 with 221 paired article/QC sidecars. Open PR #32 is bounded retrieval evidence, not accepted-source closure: 407 of 407 Unit 1 MCQs were retrieved with zero generated, four AAQs and four EBQs are retained, and nine distinct EBQ citations remain unverified and publish-blocking. Complete the canonical-input census and resolve those citation blockers before closure; the reviewed course profile and Phase 0 authority capture have not started, and Phases 1-10 remain locked.",
-      "scope": "Learning Science access and walkthrough handoff; excludes specialist disposition, LS review, and production release",
+      "status": "BLOCKED",
+      "status_at": "2026-08-27T07:54Z",
+      "value": "The bounded local review surface is not reviewer-safe: Unit 1 visibly leaks three @@SEC@@ authoring markers, and all three units clip over-wide child figure/table content inside overflow-hidden cards at 390x844. The exact-SHA HTML inventory contains no assembled student-safe MCQ surface, so that surface is MISSING. Desktop review samples do not upgrade the narrow-width HOLD, and the review pages are not learner pages.",
+      "scope": "exact-SHA local FRQ review HTML at 1440x1000 and 390x844 plus the permitted Unit 1-3 HTML inventory; excludes canonical learner app, full accessibility, and LS disposition",
       "evidence": [
         {
-          "type": "merged-pull-request",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23"
+          "type": "audit-preview-findings",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
         },
         {
-          "type": "issue",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14"
+          "type": "unit-1-narrow-overflow",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/browser-verified/unit1-narrow-overflow.json"
+        },
+        {
+          "type": "unit-2-narrow-overflow",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/browser-verified/unit2-narrow-overflow.json"
+        },
+        {
+          "type": "unit-3-narrow-overflow",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/browser-verified/unit3-narrow-overflow.json"
+        },
+        {
+          "type": "html-inventory",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/html-inventory.txt"
         }
       ],
-      "evidence_access": "GITHUB+DASHBOARD_PLAN"
+      "evidence_access": "LOCAL_INCEPT_AUDIT"
     },
     {
       "claim_id": "psych.registration",
       "section": "Psych",
-      "status": "HISTORICAL",
-      "status_at": "2026-08-23T00:40Z",
-      "value": "The historical w7 walk against bundle f7b40cca failed its chooser preflight with 374 of 1,105 buckets underfilled and no lesson-evidence sweep. Its 262-node / 5-unit / 221-lesson tree observation is retained as old Gate 5 and Gate 10 evidence only. The native TimeBack runbook replaces chooser registration as the forward publication path; current-source profile, graph, plan, publication, activation, and learner acceptance remain unproved.",
-      "scope": "registration and learner visibility",
+      "status": "PLANNED",
+      "status_at": "2026-08-27T07:54Z",
+      "value": "Phase 4 remains a readiness inventory only. Seven prerequisites are missing: immutable source capture plus reviewed profile; a complete human- and machine-readable course tree; Units 4-5 assessment/publish artifacts plus populated capstone; a course-wide immutable operation/readback manifest; a pinned dependency-ordered plan digest; zero-enrollment/testing-state proof plus separately bounded enrollment/activation plans; and offline semantic comparison of plan against source capture and tree. No Phase 4 seal exists or is claimed.",
+      "scope": "Phase 4 readiness inventory at exact Psychology source SHA; no publication, registration, enrollment, activation, learner acceptance, or release action",
       "evidence": [
         {
-          "type": "audit-evidence",
-          "location": "COURSE-RECOVERY-DECISION-BOOK.md#7",
-          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#psych"
+          "type": "phase-4-filename-census",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/phase4-filename-census.txt"
+        },
+        {
+          "type": "audit-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL"
+      "evidence_access": "LOCAL_INCEPT_AUDIT"
     }
   ]
 }

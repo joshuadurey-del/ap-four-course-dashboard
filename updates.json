@@ -1,5 +1,35 @@
 [
   {
+    "ts": "2026-08-27T08:50Z",
+    "course": "Cross",
+    "text": "Four-course stale-claim reconciliation: same-window evidence leaves reviewer-path readiness BLOCKED and a named whole-course LS disposition MISSING. HumGeo's publisher contract is incomplete, APWH lacks a full --course-dir conformance verdict, APUSH remains build-only, and Psychology's exact-SHA review surface is blocked. Historical recovery evidence was re-read at ap-ss-evidence@fe839ffc: 25 rows split 2 valid factory proof / 8 salvageable input / 5 factory re-earn / 6 void / 4 unknown blocked; the P1-P16 hand-rolled manifest remains historical and does not prove deletion."
+  },
+  {
+    "ts": "2026-08-27T08:50Z",
+    "course": "APUSH",
+    "text": "Exact current remote bytes reverified: blueprint state is BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS with generation unauthorized; the build-only ledger remains 249 positions = 38 ACCEPTED (36 legacy_dual_review + 2 server_strict) / 211 PENDING. Issue #81, PR #82, and intakes #89/#90 are closed, removing those dependency claims only. The 11 successor receipts remain unadmitted; their seating is BLOCKED. The unlinked 2,479 generation-QC assertion and live learner platform state are MISSING, not inferred."
+  },
+  {
+    "ts": "2026-08-27T08:49Z",
+    "course": "APWH",
+    "text": "Current FBLUE main is 408d677f. Latest CI is tree-identical and green for manifest reproducibility plus blueprint_diff --self-test, but it did not run the required --course-dir conformance verifier, so accepted-source audit is MISSING. Issue #48's historical 933-item narrative remains accessible, while its cited PR/commit no longer resolves in the current remote and current canon gives that local ceremony no publication-proof weight. PR #791 is closed unmerged; issue #591 remains open, so placement is BLOCKED."
+  },
+  {
+    "ts": "2026-08-27T08:48Z",
+    "course": "HumGeo",
+    "text": "Live ancestry plus opened receipts preserve Gate 2, SOURCE_ACCEPTED, and PROFILE_AND_SOURCE_BOUND within their exact historical scopes. Current P1-04/coverage production receipts were intentionally not opened because plan v3 excludes the protected seal and course checkouts; those two claims are now MISSING rather than re-dated. PR/issue history was narrowed to what GitHub currently proves. EOC, reviewer visibility, and release remain BLOCKED on open issue/readback gaps. No protected bytes, course checkout, paid call, or platform write was used."
+  },
+  {
+    "ts": "2026-08-27T08:45Z",
+    "course": "Psych",
+    "text": "Two remaining Psychology claims were reverified from their owning paths. Provenance is narrowly OBSERVED: live issue #14 still binds the historical 2026-08-16 served-bank scan to the Content Factory generation API and its API QC, without asserting current bank counts or readiness. The historical EBQ milestone remains BLOCKED: the exact receipt hashes to 71df77ca... and opens to two admissions, zero closed buckets, and no job IDs, so the required direct factory service readback cannot run. Factory issue #248 / merged PR #249 prove the engine fix only. Zero paid or factory calls; no retry, course write, or publication action."
+  },
+  {
+    "ts": "2026-08-27T08:30Z",
+    "course": "Psych",
+    "text": "Exact-SHA audit folded into standing claims: Psychology main 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb held steady through 07:54Z. Raw-bank render gates exit 1 for Units 1-3 with 21 / 28 / 26 blocking hits; existing publish-tree verification exits 0 over 716 / 694 / 593 XML. HOLDs also include three leaked @@SEC@@ markers on Unit 1 review HTML, narrow-width card clipping across all three units, one Unit 1 DOK-ceiling breach (EK 1.6.E.1, DOK 3 vs ceiling 2), and empty Unit 1-2 ledger MCQ arrays. No assembled student-safe MCQ HTML surface exists. Phase 4 is readiness inventory only: seven prerequisites are missing, including Units 4-5 assessment/publish artifacts; no seal or publication action is claimed. Zero paid/factory calls; course repo remained read-only."
+  },
+  {
     "ts": "2026-08-27T06:37Z",
     "course": "APUSH",
     "text": "Exhaustive factory-first audit landed (APUSH-CANON-REQUIREMENTS.md, dated section): the factory wait is LIFTED - intakes #89/#90 closed 08-21 with byte-verified routed receipts (course-build issue #7 remint at 90c57a88/44e4a09a; hole-filler PR #82 merged b9631f57). Fresh org lists show no moved lane; zero open issues/PRs/intakes; both repos quiet since 08-20. Ledger re-measured at main: 249 positions = 38 ACCEPTED (36 legacy_dual_review + 2 server_strict) / 211 PENDING. Next step is ours to select from 272 committed scripts; spend stays behind the cross-course queue. Executor pins re-verified; 64 tests green; shadow apush SHADOW_NEXT/CURRENT."
