@@ -37,6 +37,20 @@
   </section>
 
   <section>
+    <h2>Where the time went — measured spans</h2>
+    <p>Calendar spans from the trace dates. They include waiting and repair time, so they measure the process, not effort. The number to drive down is the first-time cost of a step; the mechanism that drives it down is a named operator plus a closure packet the next course replays.</p>
+    <table>
+      <thead><tr><th>Step</th><th>First time</th><th>With the worked example</th><th>Receipts</th></tr></thead>
+      <tbody>
+        <tr><td>Content build in the dedicated repo (stages A-D)</td><td>AP Lang: 42 days, 2026-06-04 to 07-16 (101 commits)</td><td>AP Lit: 34 days, 2026-07-10 to 08-13 (100 commits, 17 PRs)</td><td>The two build repos linked below</td></tr>
+        <tr><td>Publication operators built and proven (stage G)</td><td>AP Lang: 4 days, 2026-08-14 to 08-17</td><td>AP Lit: 1 day, 2026-08-20 — authority census through dark settlement and a first learner start</td><td><a href="https://github.com/InceptTrilogy/ap-one/pull/697" target="_blank" rel="noopener">#697</a>…<a href="https://github.com/InceptTrilogy/ap-one/pull/722" target="_blank" rel="noopener">#722</a>; <a href="https://github.com/InceptTrilogy/ap-one/pull/811" target="_blank" rel="noopener">#811</a></td></tr>
+        <tr><td>Gen-3 gate closures, scope lock through profile bind (stages A-E)</td><td>HumGeo: 4 days, 2026-08-21 to 08-25 — including two byte-driven reopens inside</td><td>No second gen-3 course has replayed it yet</td><td><a href="https://github.com/ilmych/humgeo-rebuild/pull/62" target="_blank" rel="noopener">#62</a>…<a href="https://github.com/ilmych/humgeo-rebuild/pull/67" target="_blank" rel="noopener">#67</a>; <a href="https://github.com/InceptTrilogy/ap-one/pull/851" target="_blank" rel="noopener">#851</a></td></tr>
+      </tbody>
+    </table>
+    <p><small>Per-stage spans for all 167 trace rows live in <a href="crosswalk.json">crosswalk.json</a>; this table keeps only the spans with clean start and end receipts.</small></p>
+  </section>
+
+  <section>
     <h2>The map — eleven stages, and who has proven what</h2>
     <p>Mined from three full course traces: AP Lang 40 cited rows, AP Lit 49, HumGeo 78 — 167 rows total, every row citing a commit, PR, or receipt. "Worked example" means a gen-2 run did it once; "packet" means a gen-3 closure receipt binds it to exact bytes; "unproven" means the stage is written from the runbook alone.</p>
     <table>
@@ -103,6 +117,7 @@
   <section>
     <h2>How this page fits the dashboard</h2>
     <p>Course pages hold live lifecycle state. <a href="claims.html">Claims</a> holds the evidence behind every standing. <a href="lessons.html">Lessons</a> holds the standing operating rules. This page holds the history those rules came from, the fleet-wide proof map, and the measured distance to a build an AI can run end to end. Sources: the three course traces (2026-08-26), the five-course fleet recon, the training-data census, and the TimeBack course handbook draft v0.3, all in the Alpha workspace; the GitHub receipts they cite are linked above. Historical gate labels translate through <a href="GATE-CANON-MAP.md">GATE-CANON-MAP.md</a>.</p>
+    <p><b>Machine-readable companions</b> (same content, for agents and pipelines): <a href="process.json">process.json</a> — the eleven stage contracts, hold classes, and each course's current stage; <a href="crosswalk.json">crosswalk.json</a> — all 167 trace rows mapped to stages under the v0.3 precedence rule; <a href="training.json">training.json</a> — the training-assets register with counts, digests, and status. The <a href="agents.html">Agent data page</a> explains how to consume them.</p>
   </section>
 </main>
 <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>

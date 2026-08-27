@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-27T01:43Z",
+    "course": "Cross-course",
+    "text": "Machine-readable process layer added for the course-build training goal. New process.json carries the eleven A-J stage contracts (entry predicate, artifacts, closing receipt, hold classes, reopen target, resume evidence), the eleven hold classes, and each course's current stage. New crosswalk.json maps all 167 mined trace rows to stages under the v0.3 precedence rule (91 replay-clean, 76 rule-applied, receipts per row). New training.json registers the corpora: repair pairs 431 rows (GO at pilot scale), prescreen labels 444 rows (437 pass vs 7 fail, not trainable yet), decision events 161 rows (new content-free controller-ledger export), plus two planned mining rounds. Agent data page rebuilt: course states now render from the shared timeline data instead of hardcoded text (the old block still taught the retired seven-gate frame), a builder handoff joins the reviewer handoff, the bundle carries the new files, and a broken data reference that stopped the page scripts is fixed. Retro page adds measured first-time-vs-replay spans and links the machine files. No lifecycle state change is claimed."
+  },
+  {
     "ts": "2026-08-27T01:13Z",
     "course": "Cross-course",
     "text": "New Retro page: the course-creation history map. It records the three process generations (direct push, runbook corridor, 12-gate canon), the eleven-stage map with fleet-wide proof status mined from 167 cited trace rows, the five paid-for process lessons, the typed detour classes, and the measured training picture: 431 fail-then-fix repair pairs are trainable now, while verdict prediction stays blocked at 437 passes against 7 fails until historical fails are mined. The page is additive history and direction; live course state stays on the course pages, and this entry claims no lifecycle change."

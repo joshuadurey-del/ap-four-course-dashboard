@@ -22,7 +22,7 @@
 
   <main>
     <h1>Agent data</h1>
-    <p class="sub">The current machine contract comes first. HumGeo now uses an owner-approved seven-gate completion sequence with one active gate; dated counters, phase names, and release-quality audits remain historical context unless a current claim binds them.</p>
+    <p class="sub">The current machine contract comes first: data.json for standing claims, updates.json for chronology, process.json for the stage contracts and hold classes, training.json for the corpora register. Course states render below from the same shared data the overview uses; nothing on this page hardcodes a course state.</p>
 
     <section class="agent-brief" aria-labelledby="agent-brief-title">
       <div class="section-head">
@@ -50,15 +50,14 @@
       </div>
     </section>
 
-    <section aria-labelledby="humgeo-contract-title">
-      <div class="section-head"><div><span class="badge b-red">HOLD: ACTIVE_LEGACY_RETRY</span><h2 id="humgeo-contract-title">HumGeo execution contract</h2></div></div>
+    <section aria-labelledby="course-states-title">
+      <div class="section-head"><div><span class="badge b-blue">Rendered from shared data</span><h2 id="course-states-title">Current course states</h2></div></div>
+      <p>These cards render from the same timeline data the overview uses, at page load, so this section cannot silently disagree with the rest of the site. The machine form — stage contracts, hold classes, and each course's current stage — is <a href="process.json">process.json</a>.</p>
+      <div id="agent-course-states" class="agent-source-list"></div>
       <ul>
-        <li><b>One active gate:</b> Gate 0 stabilizes issue #44. PR #55 landed the sole passing pilot candidate and preserved the five measured failures.</li>
-        <li><b>Current hold:</b> legacy issue-44 attempt 2 is active on plan-only PR #56 and directs residual-plan work that belongs after official scope and asset inventory. Let its writer terminate, stop or rescope the retry, then prove the lane writer-free.</li>
-        <li><b>Later gates:</b> 1 official scope; 2 existing-asset inventory; 3 factory gap fill with creation-time QC; 4 canonical landing and assembly; 5 real learner proof; 6 TimeBack/EOC release. Gates 1-6 are locked.</li>
-        <li><b>Routing exclusions:</b> do not use completion percentages, treat 150 standards as 150 questions, revive W6/W7, blanket re-QC unchanged accepted items, or build local substitutes for current factory/course-owned routes.</li>
+        <li><b>Standing routing exclusions:</b> do not use completion percentages, treat 150 standards as 150 questions, blanket re-QC unchanged accepted items, or build local substitutes for current factory or course-owned routes.</li>
       </ul>
-      <p><a href="humgeo.html">Open the current HumGeo gate plan and evidence.</a></p>
+      <p><a href="humgeo.html">Open the active course's evidence map.</a></p>
     </section>
 
     <section aria-labelledby="recovery-posture-title">
@@ -68,24 +67,19 @@
         <li><b>Machinery:</b> 16 hand-rolled targets are listed for approval-gated replacement or deletion. Listing is not deletion authority.</li>
         <li><b>Execution:</b> this dashboard is a read-only status surface. It grants no authority to write course data, spend, file, mark, commit, merge, delete, deploy, or release.</li>
         <li><b>Factory rule:</b> use committed canonical tools exactly as documented. When no route exists, return <code>BLOCKED_CONTRACT</code>; never create a local bridge.</li>
-        <li><b>Current HumGeo target:</b> close Gate 0 only after the active legacy writer terminates, the retry is stopped or rescoped, and issue #44 is read back writer-free. Do not begin Gate 1 without Josh's explicit go.</li>
+        <li><b>Current course targets:</b> read them from the shared timeline data and <a href="process.json">process.json</a> at render time. This page holds no hardcoded course state; if a course-state literal appears in this file, treat it as a bug.</li>
       </ul>
-    </section>
-
-    <section aria-labelledby="agent-ranges-title">
-      <h2 id="agent-ranges-title">Course routing snapshot</h2>
-      <p>HumGeo reports its active completion gate. Other courses retain focused-work ranges under their own current planning assumptions.</p>
-      <div id="agent-course-ranges" class="agent-source-list"></div>
     </section>
 
     <section class="agent-handoff" aria-labelledby="agent-handoff-title">
       <h2 id="agent-handoff-title">Hand off to an agent</h2>
-      <p>Copy a ready-to-use instruction for a web-capable agent, or download one JSON file for an agent that needs an upload. Both actions use the current structured sources below.</p>
+      <p>Three handoffs, all built from the current structured sources at click time. The <b>reviewer</b> handoff asks for a standing summary. The <b>builder</b> handoff instructs an agent advancing the active course at its current stage, with the stage contract inline. The <b>bundle</b> is one JSON file for an agent that needs an upload.</p>
       <div class="agent-actions">
-        <button id="copy-agent-handoff" class="agent-action" type="button">Copy agent handoff</button>
+        <button id="copy-agent-handoff" class="agent-action" type="button">Copy reviewer handoff</button>
+        <button id="copy-builder-handoff" class="agent-action" type="button">Copy builder handoff</button>
         <button id="download-agent-bundle" class="agent-action agent-action-secondary" type="button" disabled>Preparing download…</button>
       </div>
-      <p id="agent-action-status" class="agent-action-status" role="status" aria-live="polite">The bundle is assembled when clicked; no additional current-state file is stored on the site.</p>
+      <p id="agent-action-status" class="agent-action-status" role="status" aria-live="polite">Handoffs are assembled when clicked; no additional current-state file is stored on the site.</p>
     </section>
 
     <section aria-labelledby="current-sources-title">
@@ -101,8 +95,29 @@
         </div>
         <div class="agent-source">
           <div>
-            <h3>HumGeo completion gates</h3>
-            <p>Current seven-gate sequence, active hold, closure conditions, and evidence links. This is the HumGeo routing view; it grants no execution authority.</p>
+            <h3>Process contracts</h3>
+            <p>The eleven A-J stage contracts (entry predicate, artifacts, closing receipt, hold classes, reopen target, resume evidence), the eleven hold classes, and each course's current stage.</p>
+          </div>
+          <a class="agent-source-link" href="process.json">Open process.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Trace crosswalk</h3>
+            <p>All 167 mined process rows mapped to stages under the v0.3 precedence rule, with per-row receipts, hold classes, and a clean-vs-rule-applied basis flag. Seed data for "what is the next legal step" evals.</p>
+          </div>
+          <a class="agent-source-link" href="crosswalk.json">Open crosswalk.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Training-assets register</h3>
+            <p>Counts, SHA-256 digests, status, and private homes for the model-training and eval corpora. The register is public; the corpora never are.</p>
+          </div>
+          <a class="agent-source-link" href="training.json">Open training.json</a>
+        </div>
+        <div class="agent-source">
+          <div>
+            <h3>Active course plan</h3>
+            <p>The active course's lifecycle position, hold, and evidence links. Routing view only; it grants no execution authority.</p>
           </div>
           <a class="agent-source-link" href="humgeo.html">Open HumGeo plan</a>
         </div>
@@ -135,6 +150,15 @@
           <a class="agent-source-link" href="hashes.json">Open hashes.json</a>
         </div>
       </div>
+    </section>
+
+    <section aria-labelledby="training-register-title">
+      <h2 id="training-register-title">Training-assets register</h2>
+      <p>The catalog of model-training and eval corpora: counts, digests, status, and where the private bytes live. The corpora hold course content and answer text, so the data itself never lands on this site; a SHA-256 here lets a holder of the private bytes verify identity. Measured verdicts behind the register are on the <a href="retro.html">Retro page</a>.</p>
+      <table id="trainingTbl">
+        <tr><th>Asset</th><th>Rows</th><th>Status</th><th>Purpose</th></tr>
+        <tr><td colspan="4">Loading training.json…</td></tr>
+      </table>
     </section>
 
     <section aria-labelledby="historical-reports-title">
@@ -172,7 +196,7 @@
         <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
         <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
         <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS review readiness or release by itself.</dd></div>
-        <div><dt>Keep the milestones separate</dt><dd>For HumGeo, follow Gates 0-6 and report exactly one active gate. For the other current course plans, <code>LS REVIEW READY</code> means Learning Science can access and walk the named candidate; it is not an LS disposition, post-review revision, or production release.</dd></div>
+        <div><dt>Keep the milestones separate</dt><dd>Course lifecycle follows the runbook canon: accepted source, then Phases 0-10 — stages A-J in <a href="process.json">process.json</a> — with exactly one active state per course. <code>LS REVIEW READY</code> means Learning Science can access and walk the named candidate; it is not an LS disposition, post-review revision, or production release.</dd></div>
         <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
       </dl>
     </section>
@@ -218,53 +242,105 @@
       claims_manifest: new URL('data.json', baseUrl).href,
       updates_feed: new URL('updates.json', baseUrl).href,
       integrity_manifest: new URL('hashes.json', baseUrl).href,
+      process_contracts: new URL('process.json', baseUrl).href,
+      trace_crosswalk: new URL('crosswalk.json', baseUrl).href,
+      training_register: new URL('training.json', baseUrl).href,
       recovery_audit: 'https://github.com/joshuadurey-del/ap-ss-evidence/tree/main/evidence/recovery/20260819-course-recovery-audit/codex',
       overview: new URL('index.html', baseUrl).href,
       claims_explorer: new URL('claims.html', baseUrl).href,
       lessons_learned: new URL('lessons.html', baseUrl).href,
+      process_retro: new URL('retro.html', baseUrl).href,
       humgeo_completion_plan: new URL('humgeo.html', baseUrl).href,
       agent_guide: new URL('agents.html', baseUrl).href
     };
 
     const contractPromise = Promise.all([fetchJson('data.json'), fetchJson('updates.json')]);
     const integrityPromise = fetchJson('hashes.json');
-    const agentBundlePromise = Promise.all([contractPromise, integrityPromise])
-      .then(([[manifest, updates], integrity]) => ({manifest, updates, integrity}));
+    const processPromise = fetchJson('process.json');
+    const trainingPromise = fetchJson('training.json');
+    const agentBundlePromise = Promise.all([contractPromise, integrityPromise, processPromise, trainingPromise])
+      .then(([[manifest, updates], integrity, processContracts, trainingRegister]) =>
+        ({manifest, updates, integrity, processContracts, trainingRegister}));
+
+    const courseStateLines = () => AP4_DASHBOARD.courses
+      .map(course => `- ${course.label}: ${course.status} (observed ${course.observed}). Next: ${course.nextStep}`)
+      .join('\n');
+
+    const sharedRules = `- data.json governs standing claims; updates.json governs event chronology; process.json holds the stage contracts and hold classes.
+- This site is a read-only status view, not execution authority.
+- Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
+- Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
+- Treat dated Markdown reports as historical context, not current standing.
+- Course lifecycle is the runbook canon: accepted source, then Phases 0-10 (stages A-J in process.json), exactly one active state per course.
+- Do not use completion percentages, treat 150 EKs as 150 questions, or duplicate QC for unchanged creation-QC-complete items.
+- LS REVIEW READY is a planning milestone, not LS approval, post-review revision, or production release.
+- Prepared, accepted, merged, deployed, and released are separate states.
+- Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
+- Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.`;
 
     const buildAgentHandoff = () => `Read the AP Four-Course Dashboard contract.
 
 Standing claims: ${sourceUrls.claims_manifest}
 Event chronology: ${sourceUrls.updates_feed}
+Process contracts: ${sourceUrls.process_contracts}
+Training register: ${sourceUrls.training_register}
 Published-byte digests: ${sourceUrls.integrity_manifest}
 Recovery audit evidence: ${sourceUrls.recovery_audit}
 Reading guide: ${sourceUrls.agent_guide}
-HumGeo completion plan: ${sourceUrls.humgeo_completion_plan}
+
+Course states from the dashboard snapshot (${AP4_DASHBOARD.snapshot}) — reverify against data.json row timestamps:
+${courseStateLines()}
 
 Rules:
-- data.json governs standing claims; updates.json governs event chronology.
-- This site is a read-only status surface, not execution authority.
-- Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
-- Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
-- Treat dated Markdown reports as historical context, not current standing.
-- HumGeo follows Gates 0 through 6 with exactly one active gate. Gate 0 is currently HOLD: ACTIVE_LEGACY_RETRY; Gates 1-6 are locked.
-- Do not use HumGeo completion percentages, treat 150 EKs as 150 questions, revive W6/W7, or duplicate QC for unchanged creation-QC-complete items.
-- For other courses, LS REVIEW READY remains a planning milestone, not LS approval, post-review revision, or production release.
-- Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.
-- Prepared, accepted, merged, deployed, and released are separate states.
-- Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
-- Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.
+${sharedRules}
 
-Return a concise executive summary of current standing, blockers by owner, stale or unknown rows, and material evidence gaps.`;
+Return a concise executive summary of current standing, holds by owner, stale or unknown rows, and material evidence gaps.`;
 
-    const buildAgentBundle = ({manifest, updates, integrity}) => ({
-      schema_version: 1,
+    const buildBuilderHandoff = async () => {
+      const proc = await processPromise;
+      const courseId = AP4_DASHBOARD.activeCourse;
+      const course = proc.courses[courseId];
+      const stage = proc.stages.find(item => item.id === course.current_stage);
+      const stageBlock = stage
+        ? `Current stage ${stage.id} — ${stage.name} (contract status: ${stage.contract_status})
+Entry predicate: ${stage.entry_predicate}
+Required artifacts: ${stage.required_artifacts.join('; ')}
+Closing receipt: ${stage.pass_receipt}
+Hold classes that can fire here: ${stage.hold_classes.join(', ')} (definitions in process.json)`
+        : `Current stage: ${course.current_stage}. Read the stage contracts in process.json for the active range.`;
+
+      return `You are advancing ${course.label} on the AP One native TimeBack lifecycle. State as of ${course.as_of}: ${course.state}. ${course.detail}
+
+${stageBlock}
+
+Sources, in order:
+Process contracts: ${sourceUrls.process_contracts}
+Standing claims: ${sourceUrls.claims_manifest}
+Event chronology: ${sourceUrls.updates_feed}
+Trace crosswalk (worked examples per stage): ${sourceUrls.trace_crosswalk}
+Active course plan: ${sourceUrls.humgeo_completion_plan}
+
+Builder rules:
+- Check the entry predicate against live receipts before any work; never assume it.
+- Produce exactly the named closing receipt; a green intermediate state closes nothing.
+- On any hold condition, stop, name the hold class and its owner, and report — never adapt a runner locally or waive a failed gate.
+- A closure binds exact digests; if upstream bytes moved, reopen per the hold class instead of proceeding.
+${sharedRules}
+
+Report back: the stage you verified, the receipts you produced or found missing, and any hold class you hit with its owner.`;
+    };
+
+    const buildAgentBundle = ({manifest, updates, integrity, processContracts, trainingRegister}) => ({
+      schema_version: 2,
       assembled_at: new Date().toISOString(),
-      purpose: 'Portable handoff for an agent reviewing the AP Four-Course Dashboard.',
+      purpose: 'Portable handoff for an agent reviewing or advancing an AP Four-Course Dashboard course.',
       source_urls: sourceUrls,
       authority: {
         standing_claims: 'manifest (data.json)',
         event_chronology: 'updates (updates.json)',
         byte_identity: 'integrity (hashes.json)',
+        process_contracts: 'processContracts (process.json) — requirements only, never permissions.',
+        training_register: 'trainingRegister (training.json) — the catalog; the corpora stay private.',
         recovery_audit: 'Private SS evidence packet at source_urls.recovery_audit.',
         historical_reports: 'Dated Markdown reports are context only.'
       },
@@ -273,8 +349,8 @@ Return a concise executive summary of current standing, blockers by owner, stale
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
         'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
         'This dashboard is a read-only status surface and grants no execution authority.',
-        'HumGeo follows Gates 0 through 6 with exactly one active gate; Gate 0 is currently HOLD: ACTIVE_LEGACY_RETRY and Gates 1-6 are locked.',
-        'Do not use HumGeo completion percentages, treat 150 EKs as 150 questions, revive W6/W7, or duplicate QC for unchanged creation-QC-complete items.',
+        'Course lifecycle is the runbook canon: accepted source, then Phases 0-10 (stages A-J in processContracts), exactly one active state per course. Read current course states from manifest rows and processContracts.courses, never from this bundle prose.',
+        'Do not use completion percentages, treat 150 EKs as 150 questions, or duplicate QC for unchanged creation-QC-complete items.',
         'For other courses, LS REVIEW READY remains a planning milestone, not LS approval, post-review revision, or production release.',
         'Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.',
         'Prepared, accepted, merged, deployed, and released are separate states.',
@@ -285,20 +361,22 @@ Return a concise executive summary of current standing, blockers by owner, stale
       receipt_pointer_path: 'manifest.claims[].evidence[]',
       manifest,
       updates,
-      integrity
+      integrity,
+      processContracts,
+      trainingRegister
     });
 
     const setActionStatus = message => {
       document.getElementById('agent-action-status').textContent = message;
     };
 
-    document.getElementById('agent-course-ranges').innerHTML = AP4_TIMELINE.courses.map(course => `
+    document.getElementById('agent-course-states').innerHTML = AP4_DASHBOARD.courses.map(course => `
       <div class="agent-source">
         <div>
           <h3>${course.label}</h3>
-          <p>${course.etaNote}</p>
+          <p><b>${course.status}</b> · observed ${course.observed}. ${course.nextStep}</p>
         </div>
-        <strong>${course.etaDays}</strong>
+        <a class="agent-source-link" href="${course.id}.html">Open ${course.short}</a>
       </div>`).join('');
 
     const copyText = async text => {
@@ -334,7 +412,22 @@ Return a concise executive summary of current standing, blockers by owner, stale
         setActionStatus('Copy failed. Open the three current source links below and send those URLs instead.');
       } finally {
         button.disabled = false;
-        button.textContent = 'Copy agent handoff';
+        button.textContent = 'Copy reviewer handoff';
+      }
+    });
+
+    document.getElementById('copy-builder-handoff').addEventListener('click', async event => {
+      const button = event.currentTarget;
+      button.disabled = true;
+      button.textContent = 'Copying…';
+      try {
+        await copyText(await buildBuilderHandoff());
+        setActionStatus('Builder handoff copied: active course, current stage contract, and rules.');
+      } catch {
+        setActionStatus('Copy failed. Open process.json and data.json directly and hand those URLs over.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Copy builder handoff';
       }
     });
 
@@ -457,6 +550,42 @@ Return a concise executive summary of current standing, blockers by owner, stale
       })
       .catch(() => {
         document.querySelector('#hashTbl tr:last-child td').textContent = 'Integrity manifest unavailable. Open hashes.json directly.';
+      });
+
+    trainingPromise
+      .then(register => {
+        const table = document.getElementById('trainingTbl');
+        table.textContent = '';
+        const head = document.createElement('tr');
+        ['Asset', 'Rows', 'Status', 'Purpose'].forEach(label => {
+          const th = document.createElement('th');
+          th.textContent = label;
+          head.appendChild(th);
+        });
+        table.appendChild(head);
+        register.assets.forEach(asset => {
+          const row = document.createElement('tr');
+          const idCell = document.createElement('td');
+          const code = document.createElement('code');
+          code.textContent = asset.id;
+          idCell.appendChild(code);
+          if (asset.sha256) {
+            const small = document.createElement('small');
+            small.textContent = ` sha256 ${asset.sha256.slice(0, 12)}…`;
+            idCell.appendChild(small);
+          }
+          const rowsCell = document.createElement('td');
+          rowsCell.textContent = asset.rows === null ? '—' : asset.rows.toLocaleString();
+          const statusCell = document.createElement('td');
+          statusCell.textContent = asset.snapshot ? `${asset.status} (snapshot ${asset.snapshot})` : asset.status;
+          const purposeCell = document.createElement('td');
+          purposeCell.textContent = asset.purpose;
+          row.append(idCell, rowsCell, statusCell, purposeCell);
+          table.appendChild(row);
+        });
+      })
+      .catch(() => {
+        document.querySelector('#trainingTbl tr:last-child td').textContent = 'Register unavailable. Open training.json directly.';
       });
   </script>
 </body>

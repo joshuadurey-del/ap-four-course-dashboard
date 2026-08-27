@@ -1,0 +1,62 @@
+{
+ "schema_version": 1,
+ "generated_utc": "2026-08-27T01:38:58Z",
+ "what_this_is": "Register of training and eval corpora for the course-build model program: the catalog, never the data. Corpora hold course content and answer text, so the files stay in the private Alpha workspace and evidence homes; this register carries counts, digests, and status so 'what can we train on today' is a lookup.",
+ "boundary": "No corpus file is ever published to this site. A SHA-256 here lets a holder of the private bytes verify identity.",
+ "assets": [
+  {
+   "id": "repair_pairs.v0",
+   "purpose": "Repair model: failing item + structural repair + accepted retry, full content inline.",
+   "rows": 431,
+   "sha256": "6f60e664f94aee78d7ecbba20ebe09a05714077e282495999c37daea0efd963a",
+   "snapshot": "2026-08-26",
+   "status": "GO at pilot scale",
+   "home": "Alpha workspace, training-data census 2026-08-26"
+  },
+  {
+   "id": "prescreen_labels.v0",
+   "purpose": "Verdict prediction: predict the factory verdict before spend.",
+   "rows": 444,
+   "sha256": "257a95ca64010f493000fd59ff7e28ebc146446c4984ebe14aeced9f5e885121",
+   "snapshot": "2026-08-26",
+   "status": "NOT trainable yet: 437 pass vs 7 fail \u2014 failures get repaired out of the bank",
+   "home": "Alpha workspace, training-data census 2026-08-26"
+  },
+  {
+   "id": "decision_events.v0",
+   "purpose": "Process corpus / agent-run eval log: content-free typed controller events (state, action, outcome, digests), each row source-traceable to its ledger line.",
+   "rows": 161,
+   "sha256": "efa01c2024cd99146b731340ab999f8b592546181665d2d294bfdc77d812ac22",
+   "snapshot": "2026-08-27",
+   "status": "GROWING: v0 covers the HumGeo Gate 5 controller ledgers; grows as courses walk F through J",
+   "home": "Alpha workspace, decision-log v0 2026-08-27 (exporter: tools/decision_log_export.py)"
+  },
+  {
+   "id": "historical_fails.v0",
+   "purpose": "Fix the verdict-prediction class imbalance by mining the fail class from history.",
+   "rows": null,
+   "sha256": null,
+   "snapshot": null,
+   "status": "PLANNED, not started. A 2026-08-12 sweep receipt alone recorded 2,513 judged / 1,274 pass / 1,239 fail (snapshot, not yet reconciled to item identity).",
+   "home": "To be mined from workspace receipts and git history"
+  },
+  {
+   "id": "cross_course_verdicts.v0",
+   "purpose": "Verdict evidence for APWH, APUSH, Psychology (all yielded zero item-level factory verdicts in the 2026-08-26 census pass).",
+   "rows": null,
+   "sha256": null,
+   "snapshot": null,
+   "status": "PLANNED, not started. Named leads: ilmych/incept-agent-intake and ap-psychology-build phase 7-8 receipts.",
+   "home": "https://github.com/ilmych/incept-agent-intake (private, linkable per owner 2026-08-27)"
+  }
+ ],
+ "observability": {
+  "langfuse": "https://us.cloud.langfuse.com (project incept-durey; org invite required)",
+  "evidence_repo": "https://github.com/joshuadurey-del/ap-ss-evidence (private)"
+ },
+ "verdicts_2026_08_26": {
+  "process_model": "Do not train: 167 process rows across three courses is a step table for a deterministic controller, not a corpus. Encode the process; grow decision_events for evals.",
+  "repair_model": "Train at pilot scale now (431 pairs).",
+  "verdict_prediction": "Wait for historical-fail mining; current labels are 437 pass / 7 fail."
+ }
+}
