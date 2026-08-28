@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 28, 2026 · 21:57 KST',
+  snapshot: 'Aug 28, 2026 · 23:08 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -38,13 +38,13 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:37Z',
-      landed: 'Accepted source — in progress · Course profile required before Phase 0 — implementation landed · Phase 3.5 Writing — DBQ scoring repair mapped; no Phase 3 credit',
-      nextStep: 'Rework the authoring-wave candidate after two QA rejects and choose the landing route for the A-146/A-186 artifact branch; Phase 0 has not started.',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 14:05Z',
+      landed: 'Course profile required before Phase 0 — DONE · Accepted source — IN PROGRESS · Phase 0 — NOT ENTERED · Phases 1-10 — NOT STARTED',
+      nextStep: 'Settle accepted source through the paid slice after the HumGeo pool drain and spend go, plus the Platform3 study-skills write when its window opens; then run Phase 0.1-0.3.',
       footprint: [
-        { value: '95', label: 'working-state oracle PASS rows' },
-        { value: '34', label: 'working-state oracle MISSING rows' },
-        { value: '3 + 1', label: 'oracle FAIL + ESCALATED rows' }
+        { value: '235', label: 'accepted-source ledger rows' },
+        { value: '95', label: 'receipt-bound PASS rows' },
+        { value: '34', label: 'receipt-bound MISSING rows' }
       ]
     },
     {
@@ -85,11 +85,12 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'Accepted-source remediation is IN PROGRESS. The latest clean 235-row working-state oracle is 95 PASS / 34 MISSING, but its two contributing branches are not merged and the authoring-wave candidate failed both QA reviews. Phase 0 has not started.',
+      note: 'APWH is before Phase 0. The required course profile is done, accepted source is IN PROGRESS at a receipt-bound 95 PASS / 34 MISSING, Phase 0 is NOT ENTERED, and Phases 1-10 are NOT STARTED.',
       rows: [
-        { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'Accepted source · in progress', signal: '95 PASS / 34 MISSING working state · 3 FAIL · 1 ESCALATED', copy: 'A-146 moves to PASS on the artifact branch. Candidate 8974add requires rework after two QA rejects; neither working branch is merged.', href: 'apwh.html' },
-        { gate: 6, state: 'evidence', status: 'Historical absence evidence', signal: 'fresh GET: 0 of 71 tenant gates', copy: 'The zero-POST readback is retained as live-state evidence. It is not the Phase 5 sealed all-absent checkpoint and earns no Phase 4-5 closure.', href: 'apwh.html' }
+        { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile + consumer landed through PR #889 at 8d4ab63a', copy: 'Ilma merged the reviewed, validator-consumed profile and consumer. PR #891 remains open for the authoring and profile-hash refresh; this prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/889' },
+        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: '235 rows · 95 PASS · 34 MISSING', copy: 'The receipt-bound position also contains 97 DOCUMENTED, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A-059, A-163, and A-146 closed today; A-186 landed to its designed ceiling.', href: 'https://github.com/ilmych/apwh-blueprint-build/commit/e955e81667b1c71cd2a4855aacae77e499415c99' },
+        { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.2 capture tool authored; accepted source still moving', copy: 'After AS-01 settles: bind the environment under 0.1, capture immutable source authority under 0.2, then freeze the versioned namespace under 0.3.', href: 'apwh.html' },
+        { gate: 5, code: 'P1-10', name: 'Phases 1-10', label: 'Later lifecycle', state: 'locked', status: 'Not started', signal: 'Nothing after Phase 0 has started', copy: 'Course-tree mapping begins only after Phase 0 exists; every later runbook phase remains untouched.', href: 'apwh.html' }
       ]
     },
     apush: {
@@ -147,7 +148,7 @@ const AP4_DASHBOARD = {
       <div class="gate-evidence-list">
         ${map.rows.map(row => `
           <article class="gate-evidence-row gate-evidence-${row.state}">
-            <div class="gate-evidence-id"><span title="${AP4_DASHBOARD.gates[row.gate].canonName}" aria-label="${AP4_DASHBOARD.gates[row.gate].canonName}">${AP4_DASHBOARD.gates[row.gate].canonCode}</span><small aria-hidden="true">${AP4_DASHBOARD.gates[row.gate].railName}</small></div>
+            <div class="gate-evidence-id"><span title="${row.name || AP4_DASHBOARD.gates[row.gate].canonName}" aria-label="${row.name || AP4_DASHBOARD.gates[row.gate].canonName}">${row.code || AP4_DASHBOARD.gates[row.gate].canonCode}</span><small aria-hidden="true">${row.label || AP4_DASHBOARD.gates[row.gate].railName}</small></div>
             <div>
               <span class="gate-evidence-status">${row.status}</span>
               <h3>${row.signal}</h3>

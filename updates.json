@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-28T14:05Z",
+  "course": "apwh",
+  "text": "APWH runbook-state fold: APWH sits BEFORE Phase 0 in accepted source, which is IN PROGRESS and not settled. The pre-Phase-0 course profile requirement is DONE through Ilma-merged AP One PR #889 at 8d4ab63a; the authoring/profile-hash refresh remains open on PR #891. The exact receipt-bound 235-row position is 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A-059, A-163, and A-146 closed today; A-186 landed to its designed ceiling. About 19 MISSING rows are Ilma-side work packages/platform gaps, about 12 are paid or judgment content, and the remainder are ceiling or convention rows. The paid slice waits for the HumGeo pool drain and spend go; the Platform3 study-skills write waits for its write window. Phase 0 is NOT ENTERED, its 0.2 capture tool is authored but waits for source settlement, and Phases 1-10 are NOT STARTED. Runbook pin 32d079c2; $0 dashboard spend."
+ },
+ {
   "ts": "2026-08-28T12:57Z",
   "course": "cross",
   "text": "Runbook binding correction: every Overview Landed so far milestone now names its exact AP One Native TimeBack publication phase or item. HumGeo names accepted source, the required pre-Phase-0 course profile, Phase 0 Establish authority, and active Phases 1-3. APWH maps its profile implementation and DBQ repair to the pre-Phase-0 profile requirement and Phase 3.5 Writing. APUSH maps composer/binding evidence to Phase 1 and 1.7 and wrapper evidence to Phase 3. Psychology maps renderer/media evidence to Phase 3 and 3.1 and surface-repair evidence to 3.7. Because APWH, APUSH, and Psychology have not started Phase 0, later-phase artifacts explicitly receive no phase credit. No course or platform state changed; $0 spend."

@@ -11,29 +11,52 @@
 <a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP World History</h1>
-  <p class="sub">Accepted-source remediation is <strong>IN PROGRESS</strong>. The latest clean working-state oracle is 95 PASS / 34 MISSING, with 3 FAIL and 1 ESCALATED; Phase 0 has not started.</p>
-
-  <section>
-    <h2>Current verified state</h2>
-    <ul>
-      <li>The exact 235-row oracle on the clean working branches reports 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. A-146 is the newest MISSING-to-PASS move.</li>
-      <li>Authoring-wave candidate <code>8974add</code> failed both independent QA reviews for non-verbatim rule wording and out-of-scope edits. It requires rework and is not PR-ready or merged.</li>
-      <li>The A-146/A-186 artifact branch is also local and awaits its owner-selected landing form. AP One main <code>8d4ab63a</code>, landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">PR #889</a>, contains the APWH profile and consumer.</li>
-      <li><a href="https://github.com/InceptTrilogy/incept-test-builder/pull/287" target="_blank" rel="noopener">Test-builder PR #287</a> repairs the DBQ middle tier. Current test-builder main <code>081af829</code> retains AP World History AI-only readiness.</li>
-      <li>Those landed mechanisms do not convert the non-green oracle into accepted-source closure.</li>
-    </ul>
-  </section>
+  <p class="sub">APWH sits <strong>BEFORE PHASE 0</strong>. Its current runbook lifecycle state is <strong>accepted source — IN PROGRESS</strong>. The required pre-Phase-0 course profile is done; Phase 0 is not entered, and Phases 1-10 are not started.</p>
 
   <section class="reading-guide">
-    <h2>Current constraints and next governed move</h2>
+    <h2>Current runbook position</h2>
     <dl>
-      <div><dt>Status</dt><dd>Accepted source IN PROGRESS. Phase 0 not started.</dd></div>
-      <div><dt>Current constraints</dt><dd>The authoring-wave candidate needs QA rework; the artifact branch needs a landing decision; the oracle still contains 34 MISSING, 3 FAIL, and 1 ESCALATED row.</dd></div>
-      <div><dt>Next</dt><dd>Rework and re-review the authoring-wave candidate, choose the artifact landing route, then rerun the exact course-bound oracle after each landing.</dd></div>
+      <div><dt>Pre-Phase-0 requirement — course profile</dt><dd><strong>DONE.</strong> The profile and validator consumer landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">AP One PR #889</a> at <code>8d4ab63a</code>, merged by Ilma. The authoring and profile-hash refresh remains open on <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">PR #891</a>.</dd></div>
+      <div><dt>Lifecycle state 1 — accepted source</dt><dd><strong>IN PROGRESS.</strong> The 235-row blueprint-conformance ledger is not yet settled.</dd></div>
+      <div><dt>Phase 0 — Establish authority</dt><dd><strong>NOT ENTERED.</strong> The capture tool is authored, but Phase 0 waits for accepted source to settle.</dd></div>
+      <div><dt>Phases 1-10</dt><dd><strong>NOT STARTED.</strong> Nothing after Phase 0 begins until the Phase 0 authority capture exists.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p>Clean working-state course-bound oracle receipt · two independent authoring-wave QA verdicts · local A-146/A-186 artifact branch · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/pull/287" target="_blank" rel="noopener">DBQ repair PR #287</a>.</p></section>
+  <section>
+    <h2>Accepted source — in progress</h2>
+    <ul>
+      <li>The exact receipt-bound position is 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN across 235 rows.</li>
+      <li>Today's movement closes A-059, A-163, and A-146. A-186 landed to its designed ceiling. The A-146/A-186 carrier is canonical on <a href="https://github.com/ilmych/apwh-blueprint-build/commit/e955e81667b1c71cd2a4855aacae77e499415c99" target="_blank" rel="noopener">blueprint main <code>e955e81</code></a>; A-059/A-163 and the profile-hash refresh are on open AP One PR #891.</li>
+      <li>Of the 34 MISSING rows, about 19 are Ilma-side work packages or platform gaps, about 12 are paid or judgment content rows, and the remainder are ceiling or convention rows.</li>
+      <li>The two owner-side levers are the paid slice after the HumGeo pool drains and spend is approved, plus the Platform3 study-skills write when its write window opens. Ilma-side rows move on her schedule.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Phase 0 — not entered; tool ready</h2>
+    <ul>
+      <li>Runbook item 0.2 requires a read-only capture of source authority at an immutable version. The capture module is authored and remains unstaged on the corridor branch.</li>
+      <li>It deliberately waits for accepted source to settle: capturing a moving source would pin moving bytes.</li>
+      <li>When AS-01 settles, bind the environment under 0.1, run the source-authority capture under 0.2, and freeze the versioned namespace under 0.3.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Phases 1-10 — not started</h2>
+    <p>After Phase 0, the runbook order is: map the complete course tree (Phase 1); price activities (Phase 2, with today's XP work feeding the profile pricing consumed by validators); generate hosted assets and QTI (Phase 3); QTI validation (3.6); student-surface preview (3.7); seal the publication plan (Phase 4); capture live state (Phase 5); publish dark under one writer (Phase 6); enroll owner-controlled canaries (Phase 7); activate last (Phase 8); and run learner acceptance (Phase 9). Phase 10 repairs and rollback are a later post-publication state. No later phase has started.</p>
+  </section>
+
+  <section class="reading-guide">
+    <h2>Next steps — runbook order</h2>
+    <dl>
+      <div><dt>1. Settle accepted source</dt><dd>Fire the paid slice after the HumGeo pool drains and spend is approved; take the Platform3 study-skills write when its write window opens. Ilma-side rows move on her schedule.</dd></div>
+      <div><dt>2. Enter Phase 0</dt><dd>The moment AS-01 settles, re-pin and run the Phase 0 capture, then freeze the namespace.</dd></div>
+      <div><dt>3. Enter Phase 1</dt><dd>Start complete course-tree mapping only after Phase 0 exists.</dd></div>
+    </dl>
+  </section>
+
+  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">open authoring/profile-hash PR #891</a> · <a href="https://github.com/ilmych/apwh-blueprint-build/commit/e955e81667b1c71cd2a4855aacae77e499415c99" target="_blank" rel="noopener">blueprint main <code>e955e81</code></a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">study-skills write issue #591</a> · 235-row course-bound oracle receipt.</p></section>
 
 <section data-gate-evidence="apwh">
     <noscript>Enable JavaScript to view the quantified lifecycle evidence map.</noscript>
