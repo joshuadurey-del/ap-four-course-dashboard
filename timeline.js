@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 28, 2026 · 23:13 KST',
+  snapshot: 'Aug 28, 2026 · 23:23 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -60,13 +60,13 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
-      landed: 'Accepted source — in progress · Phase 3 — Generate hosted assets and QTI / 3.1 Static assets — mapped renderer, chart, and Unit 3 media evidence · 3.7 Student-surface preview gate — mapped repair evidence; no phase credit',
-      nextStep: 'Obtain the Unit 5 FRQ/receipt-safe route from intake #104, then re-enter through the committed course route; Phase 0 has not started.',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 14:20Z',
+      landed: 'Accepted source — IN PROGRESS · Units 1-4 assessment and publish artifacts staged · P1-04, P3-05, and P3-06 — bounded IN_PROGRESS evidence with no phase credit · Course profile, Phase 0, and handoff — NOT_YET_MEASURED',
+      nextStep: 'Land the one remaining Unit 5 mechanism issue, #51; then run bounded Unit 5 generation after the HumGeo-first queue and spend go, close AS-01, and build the reviewed course profile.',
       footprint: [
-        { value: '3,173', label: 'publish-tree XML files verified clean' },
-        { value: '33', label: 'chart stimuli converted' },
-        { value: '1', label: 'remaining Unit 5 factory gap' }
+        { value: '0', label: 'canon rows proven' },
+        { value: '3', label: 'implementation rows in progress' },
+        { value: '1', label: 'Unit 5 mechanism issue remains' }
       ]
     }
   ],
@@ -104,14 +104,16 @@ const AP4_DASHBOARD = {
       ]
     },
     psych: {
-      title: 'Existing work mapped to the runbook lifecycle',
-      note: 'Psychology accepted source remains IN PROGRESS at 11f7028e. Six repository/control repairs are landed; Unit 5 remains held on intake #104 and absent assessment/publish artifacts. Phase 0 has not started.',
+      title: 'Psychology runbook-aligned sequence',
+      note: 'Psychology remains before Phase 0 at the accepted-source entry boundary. Zero canon rows are PROVEN. P1-04, P3-05, and P3-06 carry bounded IN_PROGRESS evidence beneath AS-01; the course profile through the handoff packet remains NOT_YET_MEASURED.',
       rows: [
-        { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '221 of 221 EK design receipt', copy: 'The blueprint design scope is covered, but no course-level implementation oracle currently proves that design on the learner candidate.', href: 'claims.html' },
-        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '1,105 buckets scanned · 374 underfilled', copy: 'The bank inventory exposes the measurable shortage. Unit 5 scope must be sealed before that shortage becomes a generation order.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14' },
-        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '221 paired sidecars · PR #32 retrieves 407/407 MCQs', copy: 'PR #32 generated nothing and retains nine publish-blocking unverified citations. It is bounded candidate evidence, not accepted-source closure.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/32' },
-        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: '34 embeds + 34 PNGs + 34 approvals · 71-file copy', copy: 'The PR #23 image-stage delivery is byte-accounted on its named checkpoint. This proves bounded landing, not current-source binding or full course wiring.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/23' },
-        { gate: 10, state: 'evidence', status: 'Historical evidence · stale', signal: '262 nodes · 5 units · 221 lessons', copy: 'An older course-tree receipt and failed chooser preflight remain historical learner-surface evidence, not current Phase 9 learner acceptance.', href: 'claims.html' }
+        { gate: 3, code: 'AS-01', name: 'Accepted source', label: 'Entry boundary', state: 'active', status: 'In progress', signal: 'One Unit 5 mechanism issue remains: #51', copy: 'The assessment tree has 68 tracked files, with zero under Unit 5; the 3,173 Units 1-4 publish XML files are parse-clean. Three earlier mechanism gaps are closed; #51 owns the bounded generation route and claim-rules oracle.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51' },
+        { gate: 5, code: 'P1-04', name: 'Phase 1.3 article check sets', label: 'Article checks', state: 'active', status: 'In progress', signal: 'Units 1-4 pipeline evidence landed', copy: 'The assessment pipeline supplies bounded source-bound check-set evidence. Course-wide exact-set and answer-shape seals do not exist, so this does not enter Phase 1.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/11f7028eee30e705594c47b72a1d36c29318e534/3.%20Assessment' },
+        { gate: 5, code: 'P3-05', name: 'Phase 3.4 native MCQs', label: 'Native MCQs', state: 'active', status: 'In progress', signal: 'Bounded item-pipeline evidence; QTI seal absent', copy: 'Units 1-4 are staged, but no complete native-MCQ QTI, reference, or final answer-shape report exists. The row has evidence, not phase credit.', href: 'psych.html' },
+        { gate: 5, code: 'P3-06', name: 'Phase 3.5 writing tasks', label: 'Writing tasks', state: 'active', status: 'In progress', signal: 'FRQ PR #20 open · grader readiness false', copy: 'Writing content work exists, but the AP Psychology AI_ONLY_READY flag is false. QTI, rubric, grader-parity, and writing-display seals remain open, capping P3-06 and RLS-14.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20' },
+        { gate: 4, code: 'PROFILE', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'locked', status: 'Not yet measured', signal: 'PR-01 through PR-08, RLS-01, and HO-01 remain open', copy: 'Author the reviewed, validator-consumed Psychology profile only after Unit 5 content exists. Its source digest waits for the immutable source capture.', href: 'psych.html' },
+        { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.1-0.3 wait for accepted-source closure', copy: 'After AS-01 closes: bind the environment, capture immutable source authority, then freeze a fresh versioned namespace.', href: 'psych.html' },
+        { gate: 11, code: 'HO', name: 'Required handoff packet', label: 'Handoff packet', state: 'locked', status: 'Not yet measured', signal: 'No runbook handoff artifact set exists', copy: 'The course remains at the entry boundary. END-01 still requires the real learner path plus persisted TimeBack readback.', href: 'psych.html' }
       ]
     }
   }

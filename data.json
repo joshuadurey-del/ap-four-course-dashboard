@@ -600,25 +600,26 @@
     {
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-28T09:10Z",
-      "value": "At Psychology main 11f7028eee30e705594c47b72a1d36c29318e534, merged PRs #44, #47, #49, #50, #52, and #53 clear the measured review-page overflow, convert the chart stimuli, fix the Unit 5 video-manifest denominator, correct publish-report identity, declare the renderer environment, and add job-ID-aware spend preflight. Raw-bank reports still record 18 / 16 / 19 / 55 blocking non-chart findings for Units 1-4. Unit 5 assessment and publish trees remain absent, so complete QC/assembly clearance remains BLOCKED.",
-      "scope": "exact-SHA Psychology repository render, chart, report-identity, and Unit 5 artifact state; excludes learner app, grader, accepted-source closure, deployment, and release",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-28T14:20Z",
+      "value": "Psychology remains at the publication-runbook entry boundary before Phase 0. AS-01 accepted source is IN_PROGRESS and not closed; no canon row is PROVEN. P1-04, P3-05, and P3-06 carry bounded IN_PROGRESS evidence from the merged Units 1-4 assessment pipeline, but no lifecycle phase credit. Course profile rows PR-01 through PR-08, Phase 0, later lifecycle phases, release checks, and the required handoff packet remain NOT_YET_MEASURED. Current course main is 11f7028eee30e705594c47b72a1d36c29318e534.",
+      "scope": "current Psychology position against the pinned AP One Native TimeBack publication runbook; excludes accepted-source closure, phase entry, publication, enrollment, activation, learner acceptance, and release",
       "evidence": [
         {
-          "type": "render-repair",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/44"
+          "type": "course-main",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/11f7028eee30e705594c47b72a1d36c29318e534"
         },
         {
-          "type": "chart-renderer",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/47"
+          "type": "remaining-accepted-source-mechanism",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51"
         },
         {
-          "type": "course-identity-repair",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/50"
+          "type": "canon-ledger",
+          "location": "INCEPT/PSYCH-CANON-REQUIREMENTS.md",
+          "runbook_sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER"
     },
     {
       "claim_id": "cross.recovery.audit",
@@ -1092,21 +1093,21 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-28T09:10Z",
-      "value": "Psychology main is 11f7028eee30e705594c47b72a1d36c29318e534. PRs #44, #47, #49, and #50 clear the measured overflow, chart, Unit 5 video-manifest, and report-identity defects; PRs #52 and #53 declare the renderer environment and add job-ID-aware spend preflight. The 3,173 publish XML files remain present. These are repository controls, not learner visibility or accepted-source closure.",
-      "scope": "exact-SHA Unit 1-4 repository publish trees, chart manifests, and report headings; excludes raw-bank clearance, complete semantic QC, course wiring, deployment, and learner visibility",
+      "observed_at": "2026-08-28T14:20Z",
+      "value": "At Psychology main 11f7028eee30e705594c47b72a1d36c29318e534, the assessment tree has 68 tracked files, with zero under Unit 5; the committed publish-tree verifier parses 3,173 Units 1-4 XML files with zero problems. PRs #49, #52, and #53 close the video-manifest, renderer-environment, and job-ID-preflight mechanism gaps; issue #48 is CLOSED/COMPLETED after the fresh manifest check returned all six denominators at 12. These are accepted-source inputs, not accepted-source closure or later-phase credit.",
+      "scope": "exact-SHA Unit 1-4 tracked assessment inventory, committed publish-tree XML verification, and Unit 5 mechanism closures; excludes complete content QC, accepted-source closure, course wiring, deployment, and learner visibility",
       "evidence": [
         {
-          "type": "render-repair",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/44"
+          "type": "video-manifest-fix",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/49"
         },
         {
-          "type": "chart-renderer",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/47"
+          "type": "video-manifest-closure",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/48"
         },
         {
-          "type": "course-identity-repair",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/50"
+          "type": "course-main",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/11f7028eee30e705594c47b72a1d36c29318e534"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB"
@@ -1114,14 +1115,18 @@
     {
       "claim_id": "psych.bank",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-28T09:10Z",
-      "value": "At exact source SHA 11f7028eee30e705594c47b72a1d36c29318e534, PR #47 converts all 33 chart-spec items and PR #52 declares the renderer environment. The committed raw-bank reports still retain 18 / 16 / 19 / 55 blocking non-chart findings for Units 1-4, so repository-bank render clearance remains BLOCKED. No top-up or paid call was run.",
-      "scope": "exact-SHA Unit 1-4 repository item-bank chart conversion and raw-bank renderability; not the served factory bank, admissions, or top-up denominator",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-28T14:20Z",
+      "value": "Runbook rows P1-04, P3-05, and P3-06 are IN_PROGRESS through the merged Units 1-4 assessment pipeline. Course-wide exact-set, answer-shape, native-QTI, writing-QTI, rubric, grader-parity, and student-display seals do not exist. PR #20 remains the only open course PR, and current incept-test-builder main 081af82925d2ce5c30ecd820aba151109a8d7fb4 keeps AI_ONLY_READY[ap-psychology] false, which caps P3-06 and RLS-14 until certification. No phase is entered and no paid call ran.",
+      "scope": "P1-04, P3-05, P3-06, and RLS-14 evidence state; excludes complete exact-set/QTI/grader seals, phase credit, paid generation, learner behavior, and publication",
       "evidence": [
         {
-          "type": "chart-renderer",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/47"
+          "type": "open-frq-half",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20"
+        },
+        {
+          "type": "grader-readiness-flag",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/081af82925d2ce5c30ecd820aba151109a8d7fb4/engine/grader_api/calibration/thresholds.py#L194-L222"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB"
@@ -1130,25 +1135,25 @@
       "claim_id": "psych.u5",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T09:10Z",
-      "value": "At exact source SHA 11f7028eee30e705594c47b72a1d36c29318e534, Unit 5 assessment and publish trees remain absent and capstone remains README-only. PRs #49, #52, and #53 answer the video-manifest, renderer-environment, and job-ID-aware pool-preflight gaps. Unit 5 generation remains HELD on intake #104 for the FRQ rules and bounded receipt-safe route; course issue #48 remains open although its mechanism fix is merged.",
-      "scope": "exact-SHA Unit 5 assessment/publish artifact inventory and filed factory-mechanism gaps; excludes generation, paid calls, platform actions, and historical article acceptance",
+      "status_at": "2026-08-28T14:20Z",
+      "value": "At exact source SHA 11f7028eee30e705594c47b72a1d36c29318e534, Unit 5 has zero tracked assessment files. Three of four filed mechanism gaps are closed through PRs #49, #52, and #53, and issue #48 is CLOSED/COMPLETED. Only course issue #51 remains: the bounded Unit 5 generation route plus the Unit 5 claim-rules oracle. It is assigned to Jayesh and Josh; Jayesh was tagged at 12:24Z with no reply observed by 14:20Z. Unit 5 paid generation remains blocked behind #51, the HumGeo-first queue, and explicit spend go.",
+      "scope": "exact-SHA Unit 5 tracked assessment inventory and current course-owned mechanism issue state; excludes generation, paid calls, accepted-source closure, platform actions, and learner visibility",
       "evidence": [
         {
-          "type": "video-manifest-route",
+          "type": "remaining-u5-route",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51"
+        },
+        {
+          "type": "video-manifest-closure",
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/48"
         },
         {
-          "type": "u5-assessment-route-filing",
-          "url": "https://github.com/ilmych/incept-agent-intake/issues/104"
+          "type": "job-id-preflight",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/53"
         },
         {
-          "type": "job-id-preflight-filing",
-          "url": "https://github.com/ilmych/incept-agent-intake/issues/105"
-        },
-        {
-          "type": "rsvg-environment-filing",
-          "url": "https://github.com/ilmych/incept-agent-intake/issues/106"
+          "type": "renderer-environment",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/52"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB"
@@ -1204,18 +1209,14 @@
     {
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
-      "status": "BLOCKED",
-      "status_at": "2026-08-28T09:10Z",
-      "value": "At exact source SHA 11f7028eee30e705594c47b72a1d36c29318e534, six repository/control repairs are merged. They do not establish a pinned reviewer candidate or learner path. Raw-bank reports retain 18 / 16 / 19 / 55 blocking findings, Unit 5 assessment/publish artifacts are absent, and Learning Science readiness remains BLOCKED.",
-      "scope": "exact-SHA repository review and publish-tree repairs; excludes canonical learner app, full accessibility, accepted-source closure, and LS disposition",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-28T14:20Z",
+      "value": "The retired LS REVIEW READY sprint marker supplies no publication-runbook lifecycle credit. Psychology remains before Phase 0: AS-01 is IN_PROGRESS with one Unit 5 mechanism issue remaining; three implementation rows have bounded IN_PROGRESS evidence; zero canon rows are PROVEN; the reviewed course profile, Phase 0, every later phase, release checklist, and required handoff packet remain NOT_YET_MEASURED.",
+      "scope": "retired LS sprint marker mapped to current publication-runbook state; excludes accepted-source closure, phase entry, LS disposition, learner acceptance, and release",
       "evidence": [
         {
-          "type": "render-repair",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/44"
-        },
-        {
-          "type": "chart-renderer",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/47"
+          "type": "remaining-accepted-source-mechanism",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB"
@@ -1223,17 +1224,22 @@
     {
       "claim_id": "psych.registration",
       "section": "Psych",
-      "status": "PLANNED",
-      "status_at": "2026-08-28T09:10Z",
-      "value": "Psychology main 11f7028eee30e705594c47b72a1d36c29318e534 has repository/control repairs through PR #53 plus the merged Unit 5 video-manifest fix in PR #49, but no AP One Native TimeBack runbook Phase 0 source-capture receipt is claimed. Unit 5 generation remains HELD on intake #104, and no publication transition is selected.",
-      "scope": "current Psychology repository state mapped to the native-TimeBack runbook; no publication, registration, enrollment, activation, learner acceptance, or release action",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-28T14:20Z",
+      "value": "Psychology main 11f7028eee30e705594c47b72a1d36c29318e534 is still before Phase 0. After AS-01 closes, the governed order is: author and validate the reviewed course profile; bind environment 0.1; capture immutable source authority 0.2; freeze the namespace 0.3; then enter Phases 1-10. No profile, Phase 0 capture, publication plan, handoff packet, registration, enrollment, activation, or learner-acceptance transition is measured or selected.",
+      "scope": "current Psychology runbook ordering and absent phase/profile/handoff receipts; no publication, registration, enrollment, activation, learner acceptance, or release action",
       "evidence": [
         {
           "type": "course-repository",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c1011f25c7964d161b0f0a360311fd16efc96c30"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/11f7028eee30e705594c47b72a1d36c29318e534"
+        },
+        {
+          "type": "canon-ledger",
+          "location": "INCEPT/PSYCH-CANON-REQUIREMENTS.md",
+          "runbook_sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER"
     }
   ]
 }
