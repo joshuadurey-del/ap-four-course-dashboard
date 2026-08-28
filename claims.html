@@ -9,7 +9,7 @@
 <script>
 const SC={OBSERVED:'b-green',PLANNED:'b-blue',BLOCKED:'b-amber',MISSING:'b-red',DERIVED:'b-purple'};
 let DATA=null, course='All', status='All';
-fetch('data.json').then(r=>r.json()).then(d=>{DATA=d;mkFilters();render();jump();});
+fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{DATA=d;mkFilters();render();jump();});
 function jump(){
  const id=decodeURIComponent(location.hash.slice(1));
  if(!id) return;

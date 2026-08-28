@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-28T14:13Z",
+  "course": "cross",
+  "text": "Dashboard cache-boundary completion: dynamic update, claim, and agent-contract JSON reads now bypass the browser HTTP cache, and both activity-feed pages load the current updates script through the per-visit module boundary. The Update history page no longer names LS REVIEW READY as the current target; current course state follows the TimeBack native runbook. No course claim or lifecycle state changed; $0 spend."
+ },
+ {
   "ts": "2026-08-28T14:10Z",
   "course": "cross",
   "text": "Dashboard cache-boundary repair: the deployed HTML was current but normal browser navigation could still execute an older cached timeline.js, leaving generated Overview cards and course evidence maps stale. All six timeline consumers now load the current shared script with a per-visit cache key. No course claim or lifecycle state changed; $0 spend."

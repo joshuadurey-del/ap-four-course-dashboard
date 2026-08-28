@@ -232,7 +232,7 @@
           }).format(date);
     };
 
-    const fetchJson = path => fetch(path).then(response => {
+    const fetchJson = path => fetch(path, { cache: 'no-store' }).then(response => {
       if (!response.ok) throw new Error(`${path} returned ${response.status}`);
       return response.json();
     });

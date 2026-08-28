@@ -10,6 +10,6 @@
 <p id="lastupd" class="last-updated"></p>
 <ol class="update-list" data-update-list data-limit="5" aria-live="polite"></ol>
 </section>
-<script src="updates.js"></script>
+<script type="module">import(`./updates.js?v=${Date.now()}`)</script>
 </main>
 <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>

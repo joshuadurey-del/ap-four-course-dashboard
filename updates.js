@@ -12,7 +12,7 @@
     year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
   });
 
-  fetch('updates.json').then(response => response.json()).then(updates => {
+  fetch('updates.json', { cache: 'no-store' }).then(response => response.json()).then(updates => {
     const limit = Number(list.dataset.limit) || updates.length;
     const lastUpdated = document.getElementById('lastupd');
     if (lastUpdated && updates.length) {
