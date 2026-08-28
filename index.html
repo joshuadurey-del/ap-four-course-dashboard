@@ -5,7 +5,7 @@
 <section id="course-release-timeline" class="timeline-sec" aria-label="Current TimeBack states and next steps">
 <noscript>Enable JavaScript to view each course's current TimeBack state and next step.</noscript>
 </section>
-<script src="timeline.js"></script>
+<script type="module">import(`./timeline.js?v=${Date.now()}`)</script>
 <section class="updates-sec"><div class="section-head"><h2>Latest activity</h2><a href="updates.html">View full history</a></div>
 <p id="lastupd" class="last-updated"></p>
 <ol class="update-list" data-update-list data-limit="5" aria-live="polite"></ol>
