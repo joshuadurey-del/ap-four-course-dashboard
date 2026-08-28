@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-28T02:48Z",
+    "course": "Psych",
+    "text": "Psychology main 9cec95d3 re-verification folded: 2 of 5 prior findings remain. Raw-bank render gates exit 1 at 24 / 20 / 29 / 71 hits for Units 1-4, and review-card clipping persists at 390x844, including 3 Unit 4 measurements. Fixed: @@SEC@@ markers are 0, Unit 1 EK 1.6.E.1 has 0 DOK-ceiling violations across 8 current items, and Unit 1-2 ledger MCQ arrays now contain 46 / 47 entries. Unit 4 assessment and publish trees are present; Unit 5 remains absent and capstone README-only. Zero paid calls; no course-repo or platform action."
+  },
+  {
     "ts": "2026-08-28T01:07Z",
     "course": "HumGeo",
     "text": "Overnight: the certified 87-row replacement run reached terminal state (receipt 19:40 KST, sha fb4aeb05..., independently re-counted). 62 accepted / 25 terminal at the 3-cycle cap; derived 415 of 440 article checks accepted. 25 residue slots queued behind SOURCE_SELECTION. WAITING_OWNER: banking the 62; source mapping for the 25."

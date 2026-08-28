@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-27T01:38:58Z",
+ "generated_utc": "2026-08-28T02:48Z",
  "what_this_is": "Every row of the three 2026-08-26 process traces mapped to the handbook's A-J stages under the v0.3 row-mapping precedence rule. 91 rows mapped cleanly in the replay review; the 76 contested rows (8 none, 37 multiple, 31 strain \u2014 codex finding 3) are marked basis=precedence_rule: this build applied the rule to them, and those assignments are one seat's application of the rule, not replay-confirmed.",
  "precedence_rule": "A trace row maps to the stage whose closing receipt it produces or repairs. A control, status, or approval row inherits the stage it affects. A row spanning stages splits by artifact. Stage 0 is A's entry predicate, so every row lands inside A-J.",
  "stage_ids": [

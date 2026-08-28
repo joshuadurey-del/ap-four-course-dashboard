@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-28T01:28Z",
+  "snapshot": "2026-08-28T02:48Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -591,25 +591,37 @@
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-27T07:54Z",
-      "value": "At Psychology main 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb, the bounded Units 1-3 QC/assembly audit is BLOCKED for a complete Phase 3.6/3.7 pass. The raw-bank render gate exited 1 for all three units with 21 / 28 / 26 blocking hits, while the existing publish-tree verifier exited 0 over 716 / 694 / 593 XML files. Unit 1 also has one DOK-ceiling breach at EK 1.6.E.1 (DOK 3 vs ceiling 2), and Units 1-2 have empty ledger MCQ arrays. The render hit totals overlap and are verifier hits, not distinct-item counts.",
-      "scope": "Units 1-3 exact-SHA committed item banks, publish trees, receipt predicates, and bounded local review; excludes complete Phase 3 semantics, learner app, grader, deployment, and release",
+      "status_at": "2026-08-28T02:48Z",
+      "value": "At Psychology main 9cec95d3d252e3e92444a315a1b8924b14eb3073, the bounded 2026-08-28 re-verification leaves 2 of 5 audit findings still true and verifies 3 fixed since the prior audit. The committed raw-bank render gate exits 1 with 24 / 20 / 29 / 71 blocking hits for Units 1-4. Narrow review-page content still clips at 390x844 across Units 1-4; page-wide overflow is 0 and Unit 4 records 3 overflow measurements. Fixed at the same SHA: committed HTML and source JSON contain 0 @@SEC@@ markers; Unit 1 EK 1.6.E.1 has 8 current items and 0 DOK-ceiling violations; Unit 1-2 ledger MCQ arrays contain 46 / 47 entries. Unit 4 assessment and publish trees are present; Unit 5's are absent; capstone is README-only. This remains BLOCKED for complete QC/assembly clearance. Render totals are verifier hits and can overlap, not distinct-item counts.",
+      "scope": "exact-SHA Units 1-4 committed item banks and review pages plus Unit 4-5 assessment/publish inventory; excludes complete Phase 3 semantics, learner app, grader, deployment, and release",
       "evidence": [
         {
-          "type": "audit-report",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
+          "type": "reverification-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/REPORT.md"
         },
         {
-          "type": "unit-1-dok-detail",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-dok-ceiling-details.stdout"
+          "type": "raw-bank-render-receipts",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit1-check-render.stdout"
         },
         {
-          "type": "unit-1-ledger-check",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-committed-block.stdout"
+          "type": "narrow-width-browser-receipt",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/narrow-overflow-current.json"
         },
         {
-          "type": "unit-2-ledger-check",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit2-committed-block.stdout"
+          "type": "fixed-finding-receipts",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/sec-sentinel-counts.txt"
+        },
+        {
+          "type": "dok-ceiling-receipt",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit1-dok-ceiling-current.json"
+        },
+        {
+          "type": "ledger-count-receipt",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/ledger-mcq-counts.txt"
+        },
+        {
+          "type": "unit-4-5-inventory",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit45-inventory.txt"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_AUDIT"
@@ -1108,25 +1120,29 @@
       "claim_id": "psych.bank",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-27T07:54Z",
-      "value": "The committed raw-bank render verifier exits 1 for every audited unit: Unit 1 has 21 blocking hits, Unit 2 has 28, and Unit 3 has 26. The totals overlap where one malformed character causes an XHTML parse hit. Units 1-2 also have empty ledger mcq arrays; Unit 3's committed count check finds 34 entries. No remediation or top-up was run.",
-      "scope": "exact-SHA Unit 1-3 repository item-bank renderability and ledger count predicates; not the served factory bank, admissions, or top-up denominator",
+      "status_at": "2026-08-28T02:48Z",
+      "value": "At exact source SHA 9cec95d3d252e3e92444a315a1b8924b14eb3073, the committed raw-bank render verifier exits 1 for every audited unit: Units 1-4 have 24 / 20 / 29 / 71 blocking hits. The totals can overlap where one malformed character causes an XHTML parse hit. The ledger MCQ arrays now contain 46 / 47 / 34 / 40 entries for Units 1-4. No remediation or top-up was run.",
+      "scope": "exact-SHA Unit 1-4 repository item-bank renderability and ledger count predicates; not the served factory bank, admissions, or top-up denominator",
       "evidence": [
         {
           "type": "unit-1-render-verifier",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit1-check-render.stdout"
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit1-check-render.stdout"
         },
         {
           "type": "unit-2-render-verifier",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit2-check-render.stdout"
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit2-check-render.stdout"
         },
         {
           "type": "unit-3-render-verifier",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/commands/unit3-check-render.stdout"
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit3-check-render.stdout"
         },
         {
-          "type": "audit-report",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
+          "type": "unit-4-render-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit4-check-render.stdout"
+        },
+        {
+          "type": "ledger-count-receipt",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/ledger-mcq-counts.txt"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_AUDIT"
@@ -1135,17 +1151,17 @@
       "claim_id": "psych.u5",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-27T07:54Z",
-      "value": "At exact source SHA 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb, Units 4-5 have no assessment or publish directories, and out/publish/capstone contains only its README. This is a Phase 4 artifact-readiness blocker; the audit did not re-derive or negate any historical Unit 5 article-acceptance result.",
+      "status_at": "2026-08-28T02:48Z",
+      "value": "At exact source SHA 9cec95d3d252e3e92444a315a1b8924b14eb3073, Unit 4 assessment is present with 14 files, 349 MCQs, 7 FRQs split 3 served / 4 reserve, and a 40-entry ledger. Its publish tree is present with 1,361 files; the committed verify-only check reports 673 XML files and 0 problems. Unit 5 assessment and publish trees remain absent, and capstone contains one file: out/publish/capstone/README.md. The Phase 4 artifact-readiness claim remains BLOCKED on Unit 5 and capstone, not Unit 4; the re-verification did not re-derive any historical Unit 5 article-acceptance result.",
       "scope": "Phase 4 assessment/publish artifact readiness for Units 4-5 and capstone; excludes historical Unit 5 article acceptance",
       "evidence": [
         {
-          "type": "phase-4-filename-census",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/phase4-filename-census.txt"
+          "type": "unit-4-5-inventory",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit45-inventory.txt"
         },
         {
-          "type": "audit-report",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
+          "type": "unit-4-publish-verifier",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit4-publish-verify.stdout"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_AUDIT"
@@ -1202,29 +1218,17 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-27T07:54Z",
-      "value": "The bounded local review surface is not reviewer-safe: Unit 1 visibly leaks three @@SEC@@ authoring markers, and all three units clip over-wide child figure/table content inside overflow-hidden cards at 390x844. The exact-SHA HTML inventory contains no assembled student-safe MCQ surface, so that surface is MISSING. Desktop review samples do not upgrade the narrow-width HOLD, and the review pages are not learner pages.",
-      "scope": "exact-SHA local FRQ review HTML at 1440x1000 and 390x844 plus the permitted Unit 1-3 HTML inventory; excludes canonical learner app, full accessibility, and LS disposition",
+      "status_at": "2026-08-28T02:48Z",
+      "value": "At exact source SHA 9cec95d3d252e3e92444a315a1b8924b14eb3073, the prior Unit 1 @@SEC@@ leak is fixed: committed HTML and source JSON contain 0 markers. The bounded local review surface remains not reviewer-safe because Units 1-4 still clip over-wide figure/table content inside review cards at 390x844. Page-wide overflow is 0, but Unit 4's review page records 3 child-overflow measurements. Desktop samples do not upgrade this narrow-width HOLD, and the review pages are not learner pages.",
+      "scope": "exact-SHA local FRQ review HTML at 390x844 for Units 1-4; excludes canonical learner app, full accessibility, and LS disposition",
       "evidence": [
         {
-          "type": "audit-preview-findings",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
+          "type": "narrow-width-browser-receipt",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/narrow-overflow-current.json"
         },
         {
-          "type": "unit-1-narrow-overflow",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/browser-verified/unit1-narrow-overflow.json"
-        },
-        {
-          "type": "unit-2-narrow-overflow",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/browser-verified/unit2-narrow-overflow.json"
-        },
-        {
-          "type": "unit-3-narrow-overflow",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/browser-verified/unit3-narrow-overflow.json"
-        },
-        {
-          "type": "html-inventory",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/html-inventory.txt"
+          "type": "author-marker-receipt",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/sec-sentinel-counts.txt"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_AUDIT"
@@ -1233,17 +1237,17 @@
       "claim_id": "psych.registration",
       "section": "Psych",
       "status": "PLANNED",
-      "status_at": "2026-08-27T07:54Z",
-      "value": "Phase 4 remains a readiness inventory only. Seven prerequisites are missing: immutable source capture plus reviewed profile; a complete human- and machine-readable course tree; Units 4-5 assessment/publish artifacts plus populated capstone; a course-wide immutable operation/readback manifest; a pinned dependency-ordered plan digest; zero-enrollment/testing-state proof plus separately bounded enrollment/activation plans; and offline semantic comparison of plan against source capture and tree. No Phase 4 seal exists or is claimed.",
+      "status_at": "2026-08-28T02:48Z",
+      "value": "Phase 4 remains a readiness inventory only at Psychology main 9cec95d3d252e3e92444a315a1b8924b14eb3073. The re-verification proves Unit 4 assessment and publish trees are present, while Unit 5 assessment and publish trees are absent and capstone remains one README file. The packet did not re-derive the other prerequisites from the prior readiness inventory, so their current state is UNMEASURED. No Phase 4 seal exists or is claimed.",
       "scope": "Phase 4 readiness inventory at exact Psychology source SHA; no publication, registration, enrollment, activation, learner acceptance, or release action",
       "evidence": [
         {
-          "type": "phase-4-filename-census",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/phase4-filename-census.txt"
+          "type": "unit-4-5-inventory",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/unit45-inventory.txt"
         },
         {
-          "type": "audit-report",
-          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md"
+          "type": "reverification-report",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/reverify-20260828/REPORT.md"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_AUDIT"
