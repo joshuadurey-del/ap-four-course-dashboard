@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 28, 2026 · 21:02 KST',
+  snapshot: 'Aug 28, 2026 · 21:24 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -14,7 +14,7 @@ const AP4_DASHBOARD = {
     { id: 2, name: 'Inventory', canonCode: 'AS', railName: 'Source prep · inventory', canonName: 'Accepted-source preparation · INVENTORY_LOCKED', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
     { id: 3, name: 'Accept source', canonCode: 'AS', railName: 'Accepted source', canonName: 'Accepted source · SOURCE_ACCEPTED', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
     { id: 4, name: 'Profile + authority', canonCode: 'P0', railName: 'Profile + source bound', canonName: 'Course profile + Phase 0 · PROFILE_AND_SOURCE_BOUND', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
-    { id: 5, name: 'Graph + preview', canonCode: 'P1-3', railName: 'Graph + preview', canonName: 'Phases 1-3 · Offline graph and student-surface preview', state: 'active', status: 'Blocked · terminal residue', detail: '424 of 440 article checks are accepted; 16 are factory-terminal residue and every nonterminal or unmeasured count is zero. The staging chooser has no HumGeo row.' },
+    { id: 5, name: 'Graph + preview', canonCode: 'P1-3', railName: 'Graph + preview', canonName: 'Phases 1-3 · Offline graph and student-surface preview', state: 'active', status: 'In progress · HOLD on 16 terminal rows + chooser', detail: '424 of 440 article checks are accepted; 16 are factory-terminal residue and every nonterminal or unmeasured count is zero. The staging chooser has no HumGeo row.' },
     { id: 6, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint.' },
     { id: 7, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 8, name: 'Canary enroll', canonCode: 'P7', railName: 'Canary enrollments', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
@@ -25,7 +25,7 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Phases 1-3 · BLOCKED', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      status: 'Phases 1-3 · IN PROGRESS · HOLD', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:24Z',
       landed: '424/440 article checks accepted · S10 false-reject repair landed · Accepted source and Phase 0 retain closure credit',
       nextStep: 'Disposition the 16 factory-terminal rows and close the TimeBack-direct chooser contract; phases 4-10 remain locked.',
       footprint: [
@@ -38,13 +38,13 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Accepted source · BLOCKED', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      status: 'Accepted source · IN PROGRESS · HOLD', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:24Z',
       landed: 'Profile + consumer landed · DBQ middle-tier repair landed · AI-only readiness retained',
       nextStep: 'Resolve the non-green 235-row oracle through owning factory routes, then rerun it; Phase 0 has not started.',
       footprint: [
         { value: '92', label: 'oracle PASS rows' },
         { value: '37', label: 'oracle MISSING rows' },
-        { value: '3', label: 'oracle FAIL rows' }
+        { value: '3 + 1', label: 'oracle FAIL + ESCALATED rows' }
       ]
     },
     {
@@ -73,22 +73,22 @@ const AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Accepted source and Phase 0 retain closure credit. Phases 1-3 are blocked with 424/440 accepted, 16 factory-terminal rows, and no HumGeo staging chooser row; later phases remain locked.',
+      note: 'Accepted source and Phase 0 retain closure credit. Phases 1-3 are IN PROGRESS with advancement on HOLD for 16 factory-terminal rows and the missing HumGeo staging chooser row; later phases remain locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: 'PR #67 merged · 70/70 accepted · zero residue', copy: 'Canonical verification reproduced exact source coverage and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused, affected, and full repository gates passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/67' },
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
-        { gate: 5, state: 'active', status: 'Blocked · terminal residue', signal: '424/440 accepted · 16 terminal · 0 HumGeo chooser rows', copy: 'The current census has zero failed, queued, running, ambiguous, unmeasured, or remaining rows. Terminal disposition and the TimeBack-direct chooser contract block the next phase.', href: 'humgeo.html' }
+        { gate: 5, state: 'active', status: 'In progress · HOLD', signal: '424/440 accepted · HOLD: 16 terminal + 0 HumGeo chooser rows', copy: 'The current census has zero failed, queued, running, ambiguous, unmeasured, or remaining rows. Terminal disposition and the TimeBack-direct chooser contract block advancement.', href: 'humgeo.html' }
       ]
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'Accepted source is blocked on the current 235-row course-bound oracle: 92 PASS, 97 DOCUMENTED, 37 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. Phase 0 has not started.',
+      note: 'Accepted-source remediation is IN PROGRESS with closure on HOLD for the current 235-row oracle: 37 MISSING, 3 FAIL, and 1 ESCALATED. Phase 0 has not started.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'Accepted source · blocked', signal: '92 PASS · 37 MISSING · 3 FAIL · 1 ESCALATED', copy: 'The profile, DBQ repair, and grader-readiness mechanisms have landed, but the exact course-bound oracle remains non-green.', href: 'apwh.html' },
+        { gate: 2, state: 'active', status: 'Accepted source · in progress · HOLD', signal: 'HOLD: 37 MISSING · 3 FAIL · 1 ESCALATED', copy: 'The profile, DBQ repair, and grader-readiness mechanisms have landed, but the exact course-bound oracle remains non-green and blocks closure.', href: 'apwh.html' },
         { gate: 6, state: 'evidence', status: 'Historical absence evidence', signal: 'fresh GET: 0 of 71 tenant gates', copy: 'The zero-POST readback is retained as live-state evidence. It is not the Phase 5 sealed all-absent checkpoint and earns no Phase 4-5 closure.', href: 'apwh.html' }
       ]
     },

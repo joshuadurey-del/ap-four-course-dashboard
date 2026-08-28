@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-28T12:24Z",
+  "course": "cross",
+  "text": "Status clarification: HumGeo Phases 1-3 and APWH accepted-source remediation are IN PROGRESS with advancement on explicit HOLDs, not idle/terminal blocks. HumGeo advancement waits on 16 factory-terminal rows plus a missing served chooser row. APWH closure waits on 37 MISSING, 3 FAIL, and 1 ESCALATED row in the current 235-row oracle. Underlying readiness claims remain blocked until those receipts close; $0 spend."
+ },
+ {
   "ts": "2026-08-28T11:58Z",
   "course": "cross",
   "text": "Correction: all four individual course pages now show only their current receipt-bound fold. APUSH accepted source is IN PROGRESS, not parked. Current APUSH build-output main c1be6fb1 retains 49 accepted / 200 pending and adds PR #4's 53 safe build-only migrated wrappers; 21 bindings still require re-derivation through open issue #9. The Overview shared course-state source is corrected to match. $0 spend; no course or platform action."
