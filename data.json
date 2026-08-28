@@ -947,16 +947,16 @@
       "claim_id": "apush.ledger.mixed",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "Exact current ledger bytes at apush-build-outputs main 758c9545b8be809cf1f46fa4c51d4caa449cfe21 report 49 ACCEPTED and 200 PENDING over 249 positions, split 36 legacy_dual_review and 13 server_strict. The ledger remains build-only evidence and does not establish native seating, learner implementation, publication, or release.",
-      "scope": "current committed APUSH article-acceptance ledger; excludes the 11 unadmitted successors, native article checks, platform ingest, learner serving, and release",
+      "value": "Exact current ledger bytes at apush-build-outputs main c1be6fb19f5ce0bde5c592437749e1bb81628741 report 49 ACCEPTED and 200 PENDING over 249 positions, split 36 legacy_dual_review and 13 server_strict. The ledger remains build-only evidence and does not establish native seating, learner implementation, publication, or release.",
+      "scope": "current committed APUSH article-acceptance ledger; excludes native seating, platform ingest, learner serving, and release",
       "evidence": [
         {
           "type": "canonical-ledger",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json"
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/c1be6fb19f5ce0bde5c592437749e1bb81628741/phase2/article-acceptance-ledger-v2-succ11/ledger.json"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-28T09:06Z"
+      "observed_at": "2026-08-28T11:58Z"
     },
     {
       "claim_id": "apush.generated_qc",
@@ -983,8 +983,8 @@
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "APUSH build-output PR #3 admits the 11 successors for a current 49 accepted / 200 pending ledger. Course-build PRs #11, #12, and #13 land the wave-3 composer, release-packet bridge, and binding census. Issue #9 remains open, so these landed mechanisms do not close accepted source or authorize factory or learner execution.",
-      "scope": "APUSH visual-contract and citation-apparatus dependency unblocks; excludes ledger admission, generation, platform ingest, and learner serving",
+      "value": "APUSH build-output PR #3 admits the 11 successors for a current 49 accepted / 200 pending ledger. Course-build PRs #11, #12, and #13 land the wave-3 composer, release-packet bridge, and 74-binding census. Build-output PR #4 then lands the 53 safe migrated wrappers in six immutable chunks. Issue #9 remains open for the 21 bindings requiring re-derivation; accepted source is IN PROGRESS, not parked.",
+      "scope": "APUSH committed admission and build-only migrated-wrapper state; excludes factory posts, platform ingest, learner serving, and later lifecycle closure",
       "evidence": [
         {
           "type": "classification-issue",
@@ -1005,17 +1005,22 @@
           "type": "intake",
           "url": "https://github.com/ilmych/incept-agent-intake/issues/90",
           "state": "closed"
+        },
+        {
+          "type": "migrated-wrapper-merge",
+          "url": "https://github.com/ilmych/apush-build-outputs/pull/4",
+          "merge_commit": "c1be6fb19f5ce0bde5c592437749e1bb81628741"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-28T09:06Z"
+      "observed_at": "2026-08-28T11:58Z"
     },
     {
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "value": "BLOCKED: current apush-course-build main c3bd05158c2cd9fd6a1bff1e9794ee52584d3f2e classifies 74 old bindings into 53 safe rebinds and 21 requiring re-derivation; 13 tests pass. No factory or learner execution was authorized, and issue #9 remains open.",
-      "scope": "11 APUSH successor admissions and seating; excludes reconciler mechanism existence and the 38 committed accepted positions",
+      "value": "BLOCKED: build-output PR #4 lands the 53 safe migrated wrappers identified by current course-build main c3bd05158c2cd9fd6a1bff1e9794ee52584d3f2e. The other 21 bindings still require re-derivation through open issue #9. No factory post, ingest, wiring, deployment, or learner execution is claimed.",
+      "scope": "APUSH 74-binding migration state; excludes factory posts, platform ingest, learner wiring, and later lifecycle closure",
       "evidence": [
         {
           "type": "reconciler-merge",
@@ -1024,18 +1029,18 @@
         },
         {
           "type": "canonical-ledger",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json"
+          "url": "https://github.com/ilmych/apush-build-outputs/pull/4"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-28T09:06Z"
+      "status_at": "2026-08-28T11:58Z"
     },
     {
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-28T09:06Z",
-      "value": "APUSH accepted source remains IN PROGRESS. Current ledger is 49 accepted / 200 pending, the local canonical queue is complete at 2,480 of 2,480 candidates with zero deficit, and PR #13 classifies 53 safe rebinds plus 21 that require re-derivation. Issue #9 remains open; no learner execution or release readiness is claimed.",
+      "status_at": "2026-08-28T11:58Z",
+      "value": "APUSH accepted source is IN PROGRESS, not parked. Current ledger is 49 accepted / 200 pending, the canonical queue is complete at 2,480 of 2,480 candidates with zero deficit, and build-output PR #4 lands the 53 safe migrated wrappers. Twenty-one bindings still require re-derivation through open issue #9; no learner execution or later lifecycle closure is claimed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {

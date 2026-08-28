@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 28, 2026 · 18:14 KST',
+  snapshot: 'Aug 28, 2026 · 21:02 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -14,7 +14,7 @@ const AP4_DASHBOARD = {
     { id: 2, name: 'Inventory', canonCode: 'AS', railName: 'Source prep · inventory', canonName: 'Accepted-source preparation · INVENTORY_LOCKED', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
     { id: 3, name: 'Accept source', canonCode: 'AS', railName: 'Accepted source', canonName: 'Accepted source · SOURCE_ACCEPTED', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
     { id: 4, name: 'Profile + authority', canonCode: 'P0', railName: 'Profile + source bound', canonName: 'Course profile + Phase 0 · PROFILE_AND_SOURCE_BOUND', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
-    { id: 5, name: 'Graph + preview', canonCode: 'P1-3', railName: 'Graph + preview', canonName: 'Phases 1-3 · Offline graph and student-surface preview', state: 'active', status: 'Active · census current', detail: '410 of 440 article checks are accepted through the factory census validator; 5 re-judge flips are actionable and 25 are terminal (10 policy, 10 S10-held, 5 amendment-14). All live writes remain zero.' },
+    { id: 5, name: 'Graph + preview', canonCode: 'P1-3', railName: 'Graph + preview', canonName: 'Phases 1-3 · Offline graph and student-surface preview', state: 'active', status: 'Blocked · terminal residue', detail: '424 of 440 article checks are accepted; 16 are factory-terminal residue and every nonterminal or unmeasured count is zero. The staging chooser has no HumGeo row.' },
     { id: 6, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint.' },
     { id: 7, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 8, name: 'Canary enroll', canonCode: 'P7', railName: 'Canary enrollments', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
@@ -25,86 +25,86 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Phases 1-3 · ACTIVE', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 05:30Z',
-      landed: '410/440 article checks accepted via the factory census validator · 70/70 source placements · Phase 0 bound',
-      nextStep: 'One census-convention pass for the 5 re-judge flips, then bank-wide answer-shape validation and the Phase 3 asset/QTI chain.',
+      status: 'Phases 1-3 · BLOCKED', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      landed: '424/440 article checks accepted · S10 false-reject repair landed · Accepted source and Phase 0 retain closure credit',
+      nextStep: 'Disposition the 16 factory-terminal rows and close the TimeBack-direct chooser contract; phases 4-10 remain locked.',
       footprint: [
-        { value: '410/440', label: 'article checks accepted (census reconcile)' },
-        { value: '5', label: 're-judge flips actionable' },
-        { value: '25', label: 'terminal: 10 policy · 10 S10-held · 5 amendment-14' }
+        { value: '424/440', label: 'article checks accepted' },
+        { value: '16', label: 'factory-terminal residue' },
+        { value: '0', label: 'HumGeo rows in staging chooser' }
       ],
-      etaDays: 'FLIPS PASS NEXT',
-      etaNote: 'Census rebuilt through the factory validator (410 is the number; earlier 415/420 were bookkeeping). Certify now refuses generation campaigns lacking a downstream consumer-contract row. Phases 4-10 remain locked.'
+      etaDays: '16 ROWS HELD',
+      etaNote: 'The census has zero failed, queued, running, ambiguous, unmeasured, or remaining rows. Terminal residue and the missing chooser row block the next phase.'
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 05:30Z',
-      landed: '933-item acceptance proof · Scope locked · 123/123 grading calls settled (274 criteria receipt-verified)',
-      nextStep: 'Close the accepted-source entry state on the settled grading evidence; deficit queue dispositioned 4 lane-owned / 36 board-owned; Phase 0 has not started.',
+      status: 'Accepted source · BLOCKED', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      landed: 'Profile + consumer landed · DBQ middle-tier repair landed · AI-only readiness retained',
+      nextStep: 'Resolve the non-green 235-row oracle through owning factory routes, then rerun it; Phase 0 has not started.',
       footprint: [
-        { value: '2,791', label: 'live passed/available MCQs' },
-        { value: '5,465', label: 'live passed constructed responses' },
-        { value: '123/123', label: 'grading calls settled' }
+        { value: '92', label: 'oracle PASS rows' },
+        { value: '37', label: 'oracle MISSING rows' },
+        { value: '3', label: 'oracle FAIL rows' }
       ]
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
-      status: 'Accepted source · PARKED (owner)', statusTone: 'amber', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 05:30Z',
-      landed: '38 canonical acceptances · 11 receipted successors staged on open PR #3 · Seating reconciler merged',
-      nextStep: 'Owner merge word on build-outputs PR #3 admits the 11 successors (38 to 49 accepted); wave-2 residue needs fleet-minted fix rounds. Not in flight today by owner word.',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      landed: '49 canonical acceptances · 53 safe migrated wrappers landed in build-output PR #4 · Composer and binding census landed',
+      nextStep: 'Re-derive the remaining 21 bindings through issue #9, preserve the 53 landed wrappers, and rerun the owning verifier.',
       footprint: [
-        { value: '2,479', label: 'generation-QC candidates' },
-        { value: '38', label: 'accepted positions' },
-        { value: '+11', label: 'receipted successors' }
+        { value: '49/249', label: 'accepted ledger positions' },
+        { value: '53', label: 'safe migrated wrappers landed' },
+        { value: '21', label: 'bindings require re-derivation' }
       ]
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 05:30Z',
-      landed: '221 article/QC pairs · U1-U4 assessments with sanitized publish trees · render-repair PR #44 MERGED (26/26 overflows cleared, 3,173 XML verified)',
-      nextStep: 'Chart renderer per repo issue #45 (fleet spec, assigned to owner lane); Unit 5 generation held on four mechanism gaps pending filings; Phase 0 has not started.',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      landed: 'Six repository/control repairs landed · 26/26 overflows cleared · 33 chart stimuli converted · 3,173 XML verified',
+      nextStep: 'Obtain the Unit 5 FRQ/receipt-safe route from intake #104, then re-enter through the committed course route; Phase 0 has not started.',
       footprint: [
         { value: '3,173', label: 'publish-tree XML files verified clean' },
-        { value: '33', label: 'chart stimuli awaiting renderer (#45)' },
-        { value: '4', label: 'U5 mechanism gaps to file' }
+        { value: '33', label: 'chart stimuli converted' },
+        { value: '1', label: 'remaining Unit 5 factory gap' }
       ]
     }
   ],
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Accepted source and Phase 0 are closed on canonical HumGeo main 8495d759 and owner-merged AP One main e46586c3. Phases 1-3 are active with the receipt census current at 410/440; later publication states remain locked.',
+      note: 'Accepted source and Phase 0 retain closure credit. Phases 1-3 are blocked with 424/440 accepted, 16 factory-terminal rows, and no HumGeo staging chooser row; later phases remain locked.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: 'PR #67 merged · 70/70 accepted · zero residue', copy: 'Canonical verification reproduced exact source coverage and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused, affected, and full repository gates passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/67' },
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
-        { gate: 5, state: 'active', status: 'Active · census current', signal: '410/440 accepted · 5 flips actionable · 25 terminal', copy: 'The census was rebuilt through the factory validator: original job bodies pulled free, independent QC re-run per item, 5 verdicts honestly flipped out. Certification now requires a downstream consumer-contract evidence row.', href: 'humgeo.html' }
+        { gate: 5, state: 'active', status: 'Blocked · terminal residue', signal: '424/440 accepted · 16 terminal · 0 HumGeo chooser rows', copy: 'The current census has zero failed, queued, running, ambiguous, unmeasured, or remaining rows. Terminal disposition and the TimeBack-direct chooser contract block the next phase.', href: 'humgeo.html' }
       ]
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'The accepted-source scope sub-receipt retains credit. All 123 authorized grading calls are settled (113 activities, 274 criteria receipt-verified). Closure classification proceeds on that evidence; Phase 0 has not started.',
+      note: 'Accepted source is blocked on the current 235-row course-bound oracle: 92 PASS, 97 DOCUMENTED, 37 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. Phase 0 has not started.',
       rows: [
         { gate: 1, state: 'closed', status: 'Closed · SCOPE_LOCKED', signal: '9 units · 71 topics · 71 LOs · 71 production gates', copy: 'Pinned official, blueprint, accepted-lesson, and AP One identities agree. Eight known-bad mutations fail closed; broad conformance debt is preserved separately.', href: 'https://github.com/ilmych/apwh-blueprint-build/tree/8a6ebccbc72451217d1739791d89c14f492ccb60' },
-        { gate: 2, state: 'active', status: 'Accepted source · in progress', signal: '123/123 calls settled · 274 criteria verified', copy: 'The resume window settled the remaining 79 grading calls through the committed AP One grading route, receipt-verified per criterion. Accepted-source closure proceeds on this evidence.', href: 'apwh.html' },
+        { gate: 2, state: 'active', status: 'Accepted source · blocked', signal: '92 PASS · 37 MISSING · 3 FAIL · 1 ESCALATED', copy: 'The profile, DBQ repair, and grader-readiness mechanisms have landed, but the exact course-bound oracle remains non-green.', href: 'apwh.html' },
         { gate: 6, state: 'evidence', status: 'Historical absence evidence', signal: 'fresh GET: 0 of 71 tenant gates', copy: 'The zero-POST readback is retained as live-state evidence. It is not the Phase 5 sealed all-absent checkpoint and earns no Phase 4-5 closure.', href: 'apwh.html' }
       ]
     },
     apush: {
       title: 'Existing work mapped to the runbook lifecycle',
-      note: 'APUSH remains in accepted-source preparation after a current exact-ref recheck. Existing work is credited without converting generated, receipted, accepted, and seated counts into one number; Phase 0 has not started.',
+      note: 'APUSH accepted source is IN PROGRESS, not parked. The ledger is 49 accepted / 200 pending, 53 safe migrated wrappers are landed, and 21 bindings still require re-derivation. Phase 0 has not started.',
       rows: [
         { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '249-position blueprint · 4 recorded deviations', copy: 'The design reconciliation belongs with scope lock, but it is preparation rather than a current implementation crosswalk.', href: 'claims.html' },
-        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,479 candidates · 249 ledger positions', copy: 'The generation-QC corpus and canonical ledger provide a substantial inventory without implying that every candidate is accepted or seated.', href: 'claims.html' },
-        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '38 accepted · 211 pending · 11 additional receipts', copy: 'The accepted and receipted work is separated from pending scope so the dashboard does not inflate the usable corpus.', href: 'claims.html' },
-        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: 'Seating reconciler merged · 0 of 11 newly seated', copy: 'The assembly mechanism exists on canonical main. The eleven successors still need canonical admission before a guarded seating run can change the count.', href: 'https://github.com/ilmych/apush-course-build/pull/6' }
+        { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,480 candidates · 249 ledger positions', copy: 'The candidate queue is complete, but candidate-budget completeness is not factory-QC or learner-readiness proof.', href: 'claims.html' },
+        { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '49 accepted · 200 pending', copy: 'The exact current ledger separates accepted from pending positions without inflating the usable corpus.', href: 'claims.html' },
+        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: '53 wrappers landed · 21 require re-derivation', copy: 'Build-output PR #4 lands the 53 safe migrated wrappers. Open issue #9 owns the remaining 21 bindings.', href: 'https://github.com/ilmych/apush-build-outputs/pull/4' }
       ]
     },
     psych: {
       title: 'Existing work mapped to the runbook lifecycle',
-      note: 'Psychology remains in accepted-source preparation. Render-repair PR #44 is merged on main (1fc6d10); the chart renderer is specified as repo issue #45; Unit 5 generation is held on four mechanism gaps pending filings. Phase 0 has not started.',
+      note: 'Psychology accepted source remains IN PROGRESS at 11f7028e. Six repository/control repairs are landed; Unit 5 remains held on intake #104 and absent assessment/publish artifacts. Phase 0 has not started.',
       rows: [
         { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '221 of 221 EK design receipt', copy: 'The blueprint design scope is covered, but no course-level implementation oracle currently proves that design on the learner candidate.', href: 'claims.html' },
         { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '1,105 buckets scanned · 374 underfilled', copy: 'The bank inventory exposes the measurable shortage. Unit 5 scope must be sealed before that shortage becomes a generation order.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14' },

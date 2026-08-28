@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-28T11:58Z",
+  "course": "cross",
+  "text": "Correction: all four individual course pages now show only their current receipt-bound fold. APUSH accepted source is IN PROGRESS, not parked. Current APUSH build-output main c1be6fb1 retains 49 accepted / 200 pending and adds PR #4's 53 safe build-only migrated wrappers; 21 bindings still require re-derivation through open issue #9. The Overview shared course-state source is corrected to match. $0 spend; no course or platform action."
+ },
+ {
   "ts": "2026-08-28T09:06Z",
   "course": "humgeo",
   "text": "Current P1-04 reconciliation: 424 of 440 article checks accepted (72 canonical-existing + 352 validated-factory), with 16 factory-terminal residue and every nonterminal/unmeasured count at zero. Test-builder PR #289 fixes the S10 retrieval false reject. Staging exposes 7 courses but 0 HumGeo matches; release_ready remains false and the TimeBack-direct dependency is routed to open AP One issue #659. Phases 1-3 HOLD; phases 4-10 locked; $0 spend."
