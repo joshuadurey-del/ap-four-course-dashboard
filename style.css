@@ -418,48 +418,6 @@ small { color: var(--muted); line-height: 1.45; }
 .section-head a { flex: none; font-size: 13px; font-weight: 650; }
 .last-updated { margin: 8px 0 4px; color: var(--muted); font-size: 13px; }
 
-.delivery-gate-sec {
-  border-color: #e5c98d;
-  background: #fffcf5;
-}
-
-.ls-target-sec {
-  border-color: #b9c9ef;
-  background: #fbfdff;
-}
-
-.delivery-gate-sec .section-head { align-items: center; }
-.delivery-gate-sec .section-head h2 { margin-top: 8px; }
-.ls-target-sec .section-head { align-items: center; }
-.ls-target-sec .section-head h2 { margin-top: 8px; }
-
-.ls-target-sec .delivery-gate-grid > div {
-  border-color: #ccd8f2;
-  background: #fff;
-}
-
-.delivery-gate-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.delivery-gate-grid > div {
-  padding: 16px 18px;
-  border: 1px solid #ead9b7;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, .7);
-}
-
-.delivery-gate-grid h3 {
-  margin: 0 0 8px;
-  font-size: 15px;
-  line-height: 1.35;
-}
-
-.delivery-gate-grid ul { margin-bottom: 0; }
-
 .update-list {
   margin: 0;
   padding: 0;
@@ -840,7 +798,7 @@ footer {
   .agent-action { transition: none; }
 }
 
-/* Shared LS-QC readiness timeline; routine content updates live in timeline.js. */
+/* Shared course-state timeline; routine content updates live in timeline.js. */
 .timeline-sec { margin: 8px 0 20px; padding: 22px 24px 24px; }
 
 .timeline-head {
@@ -1105,7 +1063,6 @@ footer {
 .timeline-eta[hidden] { display: none; }
 
 @media (max-width: 620px) {
-  .delivery-gate-grid { grid-template-columns: 1fr; }
   .timeline-sec { padding: 19px 16px 18px; }
   .timeline-head { display: block; margin-bottom: 8px; }
   .timeline-snapshot { display: block; margin-top: 6px; white-space: normal; }
@@ -1127,7 +1084,7 @@ footer {
   .timeline-course { transition: none; }
 }
 
-/* Active-course gate rail and retrospective work maps. */
+/* All-course state cards and retrospective work maps. */
 .course-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1153,8 +1110,6 @@ footer {
   color: var(--ink);
   box-shadow: 0 6px 18px rgba(23, 32, 51, .07);
 }
-
-.course-summary-card.is-active { background: #f8faff; }
 
 .course-card-headline {
   display: flex;
@@ -1188,116 +1143,6 @@ footer {
 }
 .course-summary-card p { margin: 12px 0 8px; color: #3f4b60; font-size: 13px; line-height: 1.5; }
 .course-summary-card > small { font-size: 11px; }
-
-.active-gate-wrap {
-  margin-top: 20px;
-  padding: 18px;
-  border: 1px solid #b9c9ef;
-  border-radius: 12px;
-  background: #fbfdff;
-}
-
-.active-gate-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.active-gate-heading h3 { margin: 3px 0 0; font-size: 17px; }
-.eyebrow { color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
-
-.active-gate-rail {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(86px, 1fr));
-  gap: 7px;
-  margin: 17px 0 12px;
-  overflow-x: auto;
-  padding: 2px 1px 7px;
-}
-
-.active-gate {
-  position: relative;
-  display: flex;
-  min-width: 86px;
-  min-height: 103px;
-  padding: 10px 7px 9px;
-  cursor: pointer;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  background: #fff;
-  color: #4d5a6d;
-  font: inherit;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.active-gate:hover,
-.active-gate:focus-visible,
-.active-gate[aria-pressed="true"] { border-color: var(--blue); background: var(--blue-soft); color: var(--blue-strong); }
-
-.active-gate-dot {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.active-gate-name,
-.active-gate small { max-width: 100%; overflow-wrap: anywhere; }
-.active-gate-name { font-size: 11px; font-weight: 750; line-height: 1.2; text-wrap: balance; }
-.active-gate small { font-size: 9px; line-height: 1.25; }
-.active-gate-closed { border-color: #a9d8c6; color: var(--green); background: #f3fbf7; }
-.active-gate-active { border-color: #9eb5ed; color: var(--blue-strong); background: var(--blue-soft); }
-.active-gate-locked-evidence { border-style: dashed; color: var(--purple); background: #fcfaff; }
-.active-gate-locked { color: #7a8597; background: #f7f8fa; }
-
-.active-gate-detail {
-  display: grid;
-  padding: 13px 14px;
-  border-radius: 9px;
-  background: #fff;
-  grid-template-columns: minmax(160px, .45fr) minmax(0, 1fr) auto;
-  gap: 10px 18px;
-  align-items: center;
-}
-
-.active-gate-detail span,
-.active-gate-detail strong { display: block; }
-.active-gate-detail span { color: var(--blue-strong); font-size: 11px; font-weight: 750; }
-.active-gate-detail strong { margin-top: 3px; font-size: 14px; }
-.active-gate-detail p { margin: 0; color: #3f4b60; font-size: 13px; line-height: 1.5; }
-.active-gate-detail a { font-size: 12px; font-weight: 750; white-space: nowrap; }
-
-.gate-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 14px;
-  margin: 11px 0 0;
-  color: var(--muted);
-  font-size: 10px;
-}
-
-.gate-legend span::before {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 5px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  content: "";
-}
-
-.legend-closed { color: var(--green); }
-.legend-active { color: var(--blue-strong); }
-.legend-evidence { color: var(--purple); }
-.legend-locked { color: #7a8597; }
 
 .gate-evidence-sec { border-color: #c8d3eb; background: #fbfdff; }
 .gate-evidence-head { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; }
@@ -1348,8 +1193,6 @@ footer {
 
 @media (max-width: 760px) {
   .course-card-grid { grid-template-columns: 1fr; }
-  .active-gate-detail { grid-template-columns: 1fr; align-items: start; }
-  .active-gate-detail a { white-space: normal; }
   .gate-evidence-head { display: block; }
   .gate-observed { display: block; margin: -3px 0 10px; white-space: normal; }
 }

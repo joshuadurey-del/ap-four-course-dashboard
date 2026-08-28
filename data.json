@@ -247,7 +247,7 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo P1-04 is IN PROGRESS at an operational 437 of 440: 13 of the prior 16 enriched replacements now hold dual-QC acceptance, and three residue slots remain after the round-5 stop. The last formal module-reconciled baseline is 424/440; the 437 position becomes formal after the accepted bytes land and the module reconcile runs.",
+      "value": "HumGeo P1-04 is IN PROGRESS at an operational 437 of 440: 13 of 16 enriched replacements hold dual-QC acceptance, and Round 6 is active on the three residue slots. The owner selected the scenario-enriched route; one job is in flight with eight pool slots free and active_hold is null. The last formal module-reconciled baseline is 424/440; the 437 position becomes formal after accepted bytes land and the module reconcile runs.",
       "scope": "current P1-04 operational article-check position and remaining residue; formal reconcile remains pending",
       "evidence": [
         {
@@ -261,7 +261,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "status_at": "2026-08-28T12:28Z"
+      "status_at": "2026-08-28T12:34Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -554,7 +554,7 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH accepted-source remediation is IN PROGRESS. The current committed authoring-wave candidate moved A-059 and A-163 to PASS, and its exact course-bound 235-row oracle reports 94 PASS, 97 DOCUMENTED, 35 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. Candidate commit 8974add2e09f9c4c358f6943abf04114cebe3f0a is not merged main, so closure remains on HOLD for 35 MISSING, 3 FAIL, and 1 ESCALATED; no later phase receives closure credit.",
+      "value": "APWH accepted-source remediation is IN PROGRESS. The latest clean 235-row working-state oracle reports 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. A-146 is the newest MISSING-to-PASS move. Authoring-wave candidate 8974add2e09f9c4c358f6943abf04114cebe3f0a failed both independent QA reviews and requires rework; the A-146/A-186 artifact branch also remains unmerged. No later phase receives closure credit.",
       "scope": "APWH accepted-source conformance through the full current course-dir oracle; excludes oracle self-test, local inventory, grading campaigns, publication, and learner serving",
       "evidence": [
         {
@@ -569,7 +569,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-28T12:30Z"
+      "status_at": "2026-08-28T12:37Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -698,7 +698,7 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "The active P1-04 operator counter is 437 of 440: 13 of 16 enriched replacements hold dual-QC acceptance and three residue slots remain. The formal module-reconciled baseline remains 424/440 until those accepted bytes land and reconcile. This is article-check progress evidence only; it does not establish learner deployment or later lifecycle closure.",
+      "value": "The active P1-04 operator counter is 437 of 440: 13 of 16 enriched replacements hold dual-QC acceptance, and Round 6 is running on three residue slots with one job in flight and eight pool slots free. The formal module-reconciled baseline remains 424/440 until accepted bytes land and reconcile. This is article-check progress evidence only; it does not establish learner deployment or later lifecycle closure.",
       "scope": "historical PR #63 package landing in canonical ancestry; excludes current bank counts, current QC, learner deployment, and publication",
       "evidence": [
         {
@@ -712,7 +712,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "observed_at": "2026-08-28T12:28Z"
+      "observed_at": "2026-08-28T12:34Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
@@ -735,8 +735,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T12:28Z",
-      "value": "HumGeo is not LS review ready, but Phases 1-3 are actively IN PROGRESS at an operational 437/440. Thirteen of 16 enriched replacements hold dual-QC acceptance; three residue slots remain after the round-5 stop. Formal module reconcile follows landing, and the later staging chooser contract remains separate.",
+      "status_at": "2026-08-28T12:34Z",
+      "value": "HumGeo Phases 1-3 are actively IN PROGRESS at an operational 437/440. Thirteen of 16 enriched replacements hold dual-QC acceptance, and Round 6 is active on three residue slots with fleet capacity available. Formal module reconcile follows landing, and the later staging chooser contract remains separate.",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -908,7 +908,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. AP One main 8d4ab63a contains the APWH course profile and consumer; test-builder PR #287 repairs the DBQ middle tier. The committed authoring-wave candidate advances the exact course-bound oracle to 94 PASS / 35 MISSING, but is not merged main and does not establish accepted-source closure, publication, or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. AP One main 8d4ab63a contains the APWH course profile and consumer; test-builder PR #287 repairs the DBQ middle tier. The latest clean working-state oracle is 95 PASS / 34 MISSING, but authoring-wave candidate 8974add failed both QA reviews and the A-146/A-186 artifact branch is also unmerged. These working branches do not establish accepted-source closure, publication, or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -918,14 +918,14 @@
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-28T12:30Z"
+      "observed_at": "2026-08-28T12:37Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T12:30Z",
-      "value": "APWH accepted-source remediation is IN PROGRESS but is not LS review ready. The current committed authoring-wave candidate reports 94 PASS, 97 DOCUMENTED, 35 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN across 235 rows. The candidate is not merged main; closure remains on HOLD for the 35 MISSING, 3 FAIL, and 1 ESCALATED rows, and Phase 0 has not started.",
+      "status_at": "2026-08-28T12:37Z",
+      "value": "APWH accepted-source remediation is IN PROGRESS. The latest clean working-state oracle reports 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN across 235 rows. The authoring-wave candidate requires QA rework and the artifact branch remains unmerged; Phase 0 has not started.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {

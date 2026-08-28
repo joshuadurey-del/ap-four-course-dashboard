@@ -11,28 +11,29 @@
 <a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP World History</h1>
-  <p class="sub">Accepted-source remediation is <strong>IN PROGRESS · HOLD</strong>: the current authoring-wave candidate moved the oracle to 94 PASS / 35 MISSING. Closure waits on 35 MISSING, 3 FAIL, and 1 ESCALATED; Phase 0 has not started.</p>
+  <p class="sub">Accepted-source remediation is <strong>IN PROGRESS</strong>. The latest clean working-state oracle is 95 PASS / 34 MISSING, with 3 FAIL and 1 ESCALATED; Phase 0 has not started.</p>
 
   <section>
     <h2>Current verified state</h2>
     <ul>
-      <li>The exact 235-row oracle over committed authoring-wave candidate <code>8974add</code> reports 94 PASS, 97 DOCUMENTED, 35 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. A-059 and A-163 moved from MISSING to PASS.</li>
-      <li>The candidate is not merged main. AP One main <code>8d4ab63a</code>, landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">PR #889</a>, contains the APWH profile and consumer.</li>
+      <li>The exact 235-row oracle on the clean working branches reports 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN. A-146 is the newest MISSING-to-PASS move.</li>
+      <li>Authoring-wave candidate <code>8974add</code> failed both independent QA reviews for non-verbatim rule wording and out-of-scope edits. It requires rework and is not PR-ready or merged.</li>
+      <li>The A-146/A-186 artifact branch is also local and awaits its owner-selected landing form. AP One main <code>8d4ab63a</code>, landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">PR #889</a>, contains the APWH profile and consumer.</li>
       <li><a href="https://github.com/InceptTrilogy/incept-test-builder/pull/287" target="_blank" rel="noopener">Test-builder PR #287</a> repairs the DBQ middle tier. Current test-builder main <code>081af829</code> retains AP World History AI-only readiness.</li>
       <li>Those landed mechanisms do not convert the non-green oracle into accepted-source closure.</li>
     </ul>
   </section>
 
   <section class="reading-guide">
-    <h2>Hold and next governed move</h2>
+    <h2>Current constraints and next governed move</h2>
     <dl>
-      <div><dt>Status</dt><dd>Accepted source IN PROGRESS; closure HOLD. Phase 0 not started.</dd></div>
-      <div><dt>Held by</dt><dd>The current candidate oracle still contains 35 MISSING, 3 FAIL, and 1 ESCALATED row; the authoring-wave commit is not merged main.</dd></div>
-      <div><dt>Next</dt><dd>Disposition the non-green rows through their owning factory routes, then rerun the exact course-bound oracle.</dd></div>
+      <div><dt>Status</dt><dd>Accepted source IN PROGRESS. Phase 0 not started.</dd></div>
+      <div><dt>Current constraints</dt><dd>The authoring-wave candidate needs QA rework; the artifact branch needs a landing decision; the oracle still contains 34 MISSING, 3 FAIL, and 1 ESCALATED row.</dd></div>
+      <div><dt>Next</dt><dd>Rework and re-review the authoring-wave candidate, choose the artifact landing route, then rerun the exact course-bound oracle after each landing.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p>Current course-bound oracle receipt · committed authoring-wave candidate <code>8974add</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/pull/287" target="_blank" rel="noopener">DBQ repair PR #287</a>.</p></section>
+  <section><h2>Primary evidence</h2><p>Clean working-state course-bound oracle receipt · two independent authoring-wave QA verdicts · local A-146/A-186 artifact branch · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/pull/287" target="_blank" rel="noopener">DBQ repair PR #287</a>.</p></section>
 </main>
 <footer>Current receipt-bound snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 <script src="timeline.js"></script>
