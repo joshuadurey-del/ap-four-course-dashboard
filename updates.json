@@ -1,5 +1,25 @@
 [
  {
+  "ts": "2026-08-28T09:06Z",
+  "course": "humgeo",
+  "text": "Current P1-04 reconciliation: 424 of 440 article checks accepted (72 canonical-existing + 352 validated-factory), with 16 factory-terminal residue and every nonterminal/unmeasured count at zero. Test-builder PR #289 fixes the S10 retrieval false reject. Staging exposes 7 courses but 0 HumGeo matches; release_ready remains false and the TimeBack-direct dependency is routed to open AP One issue #659. Phases 1-3 HOLD; phases 4-10 locked; $0 spend."
+ },
+ {
+  "ts": "2026-08-28T09:06Z",
+  "course": "apwh",
+  "text": "Executor receipt-0005 ran the course-bound 235-row oracle at FBLUE main 408d677f: 92 PASS / 97 DOCUMENTED / 37 MISSING / 3 DEVIATION-RECORDED / 3 FAIL / 1 ESCALATED / 2 WARN. AP One PR #889 lands the profile and consumer; test-builder PR #287 repairs the DBQ middle tier and current main marks AP World History AI-only ready. Accepted source remains BLOCKED and Phase 0 has not started; $0 spend."
+ },
+ {
+  "ts": "2026-08-28T09:06Z",
+  "course": "apush",
+  "text": "Current ledger at build-outputs 758c9545 is 49 accepted / 200 pending (36 legacy_dual_review + 13 server_strict). The canonical queue is complete at 2,480/2,480 candidates with zero deficit. Course-build PRs #11-#13 landed; PR #13 classifies 74 bindings as 53 safe rebinds and 21 requiring re-derivation, while issue #9 remains open. Accepted source IN PROGRESS; no learner execution; $0 spend."
+ },
+ {
+  "ts": "2026-08-28T09:06Z",
+  "course": "psych",
+  "text": "Psych main 11f7028e after six merges: PRs #44/#47/#49/#50 repair measured overflow, chart, Unit 5 video-manifest, and report-identity defects; PR #52 declares the renderer environment and PR #53 adds job-ID-aware spend preflight. Raw-bank reports retain 18 / 16 / 19 / 55 blocking findings for Units 1-4. Unit 5 assessment/publish trees remain absent; generation stays HELD on intake #104; $0 paid calls."
+ },
+ {
   "ts": "2026-08-28T05:36Z",
   "course": "humgeo",
   "text": "Receipt census rebuilt through the factory validator: 410 of 440 article checks accepted. 5 re-judge flips are actionable; 25 terminal (10 policy, 10 S10-held with a filing draft, 5 amendment-14). Earlier 415/420 figures were packager bookkeeping; 410 is the census number. Certification now refuses generation campaigns without a downstream consumer-contract evidence row."

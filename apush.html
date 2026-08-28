@@ -16,13 +16,12 @@
   <section>
     <h2>Verified now</h2>
     <ul>
-      <li><b>Current recheck, 11:41Z:</b> accepted source remains <code>IN PROGRESS</code>. Canonical outputs remain <code>44e4a09a</code> and the merged seating mechanism remains <code>dab70a6</code>; no current evidence changes the accepted, pending, or successor-admission counts, and Phase 0 has not started.</li>
-      <li>The canonical outputs ledger contains 249 positions: 38 <code>ACCEPTED</code> and 211 <code>PENDING</code>.</li>
-      <li>The accepted 38 split into 36 honestly labeled <code>legacy_dual_review</code> records and 2 <code>server_strict</code> records. Eleven additional successor records have receipts, but they are not committed admissions and must not be added to the denominator yet.</li>
-      <li>Owner direction confirms that the 2,479 question candidates passed QC during generation. Bind that provenance to the selected candidate; do not schedule a duplicate blanket QC round or rebuild the hosted grader calibration.</li>
+      <li><b>Current recheck, 09:06Z:</b> accepted source remains <code>IN PROGRESS</code>. Build outputs are <code>758c9545</code> and course-build main is <code>c3bd0515</code>; Phase 0 has not started.</li>
+      <li>The canonical outputs ledger contains 249 positions: 49 <code>ACCEPTED</code> and 200 <code>PENDING</code>, split 36 <code>legacy_dual_review</code> and 13 <code>server_strict</code>.</li>
+      <li>The canonical candidate queue is complete at 2,480 of 2,480 candidates with zero deficit. That is candidate-budget evidence, not a factory-QC or learner-readiness verdict.</li>
+      <li>Course-build PRs #11-#13 land the wave-3 composer, release-packet bridge, and binding census. The census classifies 74 old bindings into 53 safe rebinds and 21 requiring re-derivation; 13 tests pass.</li>
       <li>The filed defect on positions 170/244 is CLOSED end to end: their remint landed on the canonical outputs tree (44e4a09a) and their own validator passes 36/36 and 18/18 against the landed bytes.</li>
-      <li>Seating is proven ready offline for the 11 receipted successor positions: the blessed reconciler dry-ran them at the seating PR head; the runbook fires only after their canonical admission, PR merge, and fresh checks. The 74 wave-2 contracts survive as factory inputs; new admissions remain held.</li>
-      <li><a href="https://github.com/ilmych/apush-course-build/pull/6" target="_blank" rel="noopener">Seating PR #6</a> merged at <code>dab70a6</code>. The reconciler is now canonical, but the 11 successors still require ledger admission and a guarded seating run before their accepted count changes.</li>
+      <li>Seating remains blocked on the 21 bindings that require re-derivation and open course-build issue #9. No factory or learner execution was authorized.</li>
       <li>No cited receipt proves a course registry entry or learner-serving surface. The accepted-source census must close before the reviewed profile and Phase 0 authority work begin.</li>
     </ul>
   </section>
@@ -45,7 +44,7 @@
     <ul>
       <li><b>Image and wave-2 contracts:</b> <a href="https://github.com/InceptTrilogy/incept-hole-filler/issues/81" target="_blank" rel="noopener">issue #81</a> is closed complete and <a href="https://github.com/InceptTrilogy/incept-hole-filler/pull/82" target="_blank" rel="noopener">PR #82</a> merged at <code>b9631f57</code>. Re-derive held-post classifications only from those canonical bytes.</li>
       <li><b>Seating:</b> <a href="https://github.com/ilmych/apush-course-build/pull/6" target="_blank" rel="noopener">PR #6</a> merged at <code>dab70a6</code>. After the 11 successors enter the canonical ledger, run the staged seating runbook only behind fresh queue, authority, clean-tree, freshness, and liveness checks.</li>
-      <li><b>Successor admission:</b> route the 11 receipted successor records through the fleet's committed admission path and prove the resulting canonical-ledger readback. Until then, the honest accepted count remains 38.</li>
+      <li><b>Successor admission:</b> the 11 successor records are now committed; the honest accepted count is 49. Resolve the 21 re-derivations before seating.</li>
       <li><b>Intake disposition:</b> <a href="https://github.com/ilmych/incept-agent-intake/issues/89" target="_blank" rel="noopener">#89</a> and <a href="https://github.com/ilmych/incept-agent-intake/issues/90" target="_blank" rel="noopener">#90</a> are closed and routed to completed downstream work. Josh's correction still retires the original 126-position wall; remeasure from the corrected contract.</li>
       <li><b>Implementation crosswalk:</b> the blueprint builder's historical “Phase 1” reconciliation proves design preparation, not runbook Phase 1 or current coverage. This measurement is the first sprint action and decides the minimum parallel authoring queue.</li>
       <li><b>Authoring sprint:</b> article completion is materially low, but 249/249 articles is not automatically the only review denominator. Use the blueprint's actual dimension weights, target the highest-impact missing scope, and preserve one writer per shared surface.</li>
@@ -57,13 +56,13 @@
   <section class="reading-guide">
     <h2>Next governed move</h2>
     <dl>
-      <div><dt>Now</dt><dd>Complete the accepted-source live-writer/canonical-input census, then resolve canonical admission and seating status for the 11 receipted successors.</dd></div>
+      <div><dt>Now</dt><dd>Resolve issue #9 and re-derive the 21 unsafe bindings; preserve the 53 safe rebinds and the 49 accepted ledger rows.</dd></div>
       <div><dt>Blocked by</dt><dd>No accepted-source closure, course profile, sealed graph, publication plan, or learner-serving surface is proven.</dd></div>
       <div><dt>Later</dt><dd>Author only the measured high-impact gaps, validate the pinned package, and expose that exact candidate to Learning Science.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p><a href="https://github.com/joshuadurey-del/ap-ss-evidence/blob/main/evidence/recovery/20260819-course-recovery-audit/codex/README.md#apush" target="_blank" rel="noopener">Recovery-audit findings</a> · <a href="https://github.com/InceptTrilogy/incept-hole-filler/issues/81" target="_blank" rel="noopener">hole-filler issue #81</a> · <a href="https://github.com/InceptTrilogy/incept-hole-filler/pull/82" target="_blank" rel="noopener">hole-filler PR #82</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/89" target="_blank" rel="noopener">intake #89</a> · <a href="https://github.com/ilmych/incept-agent-intake/issues/90" target="_blank" rel="noopener">intake #90</a> · <a href="https://github.com/ilmych/apush-course-build/pull/6" target="_blank" rel="noopener">seating PR #6</a>.</p></section>
+  <section><h2>Primary evidence</h2><p><a href="https://github.com/ilmych/apush-build-outputs/pull/3" target="_blank" rel="noopener">admission PR #3</a> · <a href="https://github.com/ilmych/apush-course-build/pull/11" target="_blank" rel="noopener">composer PR #11</a> · <a href="https://github.com/ilmych/apush-course-build/pull/12" target="_blank" rel="noopener">packet bridge PR #12</a> · <a href="https://github.com/ilmych/apush-course-build/pull/13" target="_blank" rel="noopener">binding census PR #13</a> · <a href="https://github.com/ilmych/apush-course-build/issues/9" target="_blank" rel="noopener">open issue #9</a>.</p></section>
 </main>
 <footer>Recovery-audited snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 <script src="timeline.js"></script>
