@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 28, 2026 · 21:54 KST',
+  snapshot: 'Aug 28, 2026 · 21:57 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -26,7 +26,7 @@ const AP4_DASHBOARD = {
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
       status: 'Phases 1-3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:34Z',
-      landed: 'Accepted source closed · Course profile and Phase 0 closed · Offline graph and student-surface preview underway',
+      landed: 'Accepted source — closed · Course profile required before Phase 0 — closed · Phase 0 — Establish authority — closed · Phases 1-3 — Map the complete course tree, Price activities, Generate hosted assets and QTI, and 3.7 Student-surface preview — in progress',
       nextStep: 'Round 6 is running on the three scenario-enriched residue slots with fleet capacity available; then land accepted bytes and formally reconcile to 440/440.',
       footprint: [
         { value: '437/440', label: 'operational article-check position' },
@@ -39,7 +39,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:37Z',
-      landed: 'Scope locked · AP One course profile and consumer landed · DBQ scoring repair landed',
+      landed: 'Accepted source — in progress · Course profile required before Phase 0 — implementation landed · Phase 3.5 Writing — DBQ scoring repair mapped; no Phase 3 credit',
       nextStep: 'Rework the authoring-wave candidate after two QA rejects and choose the landing route for the A-146/A-186 artifact branch; Phase 0 has not started.',
       footprint: [
         { value: '95', label: 'working-state oracle PASS rows' },
@@ -50,7 +50,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
-      landed: 'Course scope and candidate queue locked · Course composer and release-packet bridge landed · Build-only wrapper migration landed',
+      landed: 'Accepted source — in progress · Phase 1 — Map the complete course tree / 1.7 Tree invariants — mapped composer and binding-census evidence · Phase 3 — Generate hosted assets and QTI — mapped wrapper evidence; no phase credit',
       nextStep: 'Re-derive the remaining 21 bindings through issue #9, preserve the 53 landed wrappers, and rerun the owning verifier.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
@@ -61,7 +61,7 @@ const AP4_DASHBOARD = {
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
-      landed: 'Units 1-4 article and question corpus assembled · Course renderer and chart pipeline repaired · Unit 3 media stages landed',
+      landed: 'Accepted source — in progress · Phase 3 — Generate hosted assets and QTI / 3.1 Static assets — mapped renderer, chart, and Unit 3 media evidence · 3.7 Student-surface preview gate — mapped repair evidence; no phase credit',
       nextStep: 'Obtain the Unit 5 FRQ/receipt-safe route from intake #104, then re-enter through the committed course route; Phase 0 has not started.',
       footprint: [
         { value: '3,173', label: 'publish-tree XML files verified clean' },

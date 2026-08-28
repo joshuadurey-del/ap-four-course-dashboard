@@ -7,7 +7,7 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 - Course pages are static HTML; the overview and claims explorer render from the JSON.
 - `timeline.js` — shared all-course status/landed/next-step cards and per-course evidence maps.
 
-Display model: the Overview's current-runbook section shows all four courses. Each card names the current TimeBack state, one milestone-level `Landed so far` line, and the next governed step. Detailed phase maps, counts, receipts, and the preserved historical record stay on course pages, where existing work maps to its exact credit home. Mapped evidence earns no gate credit without a course-approved closure receipt.
+Display model: the Overview's current-runbook section shows all four courses. Each card names the current TimeBack state, one runbook-bound milestone-level `Landed so far` line, and the next governed step. Detailed phase maps, counts, receipts, and the preserved historical record stay on course pages, where existing work maps to its exact credit home. Mapped evidence earns no gate credit without a course-approved closure receipt.
 
 Runbook alignment: owner direction on 2026-08-23 establishes Ilma's AP One native TimeBack runbook as the publication source of truth for all four courses. Local Gates 0-3 stabilize work, lock source scope, inventory existing assets, and accept the source. Gates 4-11 then bind the course profile, seal the offline graph and all-absent plan, publish dark, enroll canaries, activate privately, run fresh-learner acceptance, and approve broader enrollment. Publication, enrollment, activation, learner acceptance, and release remain separate operators.
 
