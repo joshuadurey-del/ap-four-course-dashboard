@@ -1,5 +1,10 @@
 [
  {
+  "ts": "2026-08-28T12:52Z",
+  "course": "cross",
+  "text": "Course-page recovery: all four pages again carry the detailed historical record and receipt sections removed by 586b573, beneath the current receipt-bound status and live evidence map. Historical status labels and counts are explicitly superseded by the current fold. Overview Landed so far copy now names major lifecycle and repository milestones instead of operational counts and repair minutiae. No course or platform state changed; $0 spend."
+ },
+ {
   "ts": "2026-08-28T12:42Z",
   "course": "cross",
   "text": "Overview simplification: Current runbook state now presents all four courses through the shared course cards; the HumGeo-only 12-phase rail and obsolete LS REVIEW READY sprint-target section are removed. HumGeo and APWH display as IN PROGRESS, with constraints stated in Next rather than course-level HOLD badges. HumGeo is operationally 437/440 with Round 6 active on three residue slots and fleet capacity available. APWH's latest clean working-state oracle is 95 PASS / 34 MISSING; candidate 8974add requires rework after two QA rejects, and neither working branch is merged. $0 dashboard spend."

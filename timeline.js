@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 28, 2026 · 21:46 KST',
+  snapshot: 'Aug 28, 2026 · 21:54 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -26,7 +26,7 @@ const AP4_DASHBOARD = {
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
       status: 'Phases 1-3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:34Z',
-      landed: '437/440 operational article-check position · 13/16 enriched replacements dual-QC accepted · Accepted source and Phase 0 retain closure credit',
+      landed: 'Accepted source closed · Course profile and Phase 0 closed · Offline graph and student-surface preview underway',
       nextStep: 'Round 6 is running on the three scenario-enriched residue slots with fleet capacity available; then land accepted bytes and formally reconcile to 440/440.',
       footprint: [
         { value: '437/440', label: 'operational article-check position' },
@@ -39,7 +39,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 12:37Z',
-      landed: 'Profile + consumer merged on AP One main · DBQ middle-tier repair landed · latest clean working-state oracle is 95 PASS / 34 MISSING',
+      landed: 'Scope locked · AP One course profile and consumer landed · DBQ scoring repair landed',
       nextStep: 'Rework the authoring-wave candidate after two QA rejects and choose the landing route for the A-146/A-186 artifact branch; Phase 0 has not started.',
       footprint: [
         { value: '95', label: 'working-state oracle PASS rows' },
@@ -50,7 +50,7 @@ const AP4_DASHBOARD = {
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
-      landed: '49 canonical acceptances · 53 safe migrated wrappers landed in build-output PR #4 · Composer and binding census landed',
+      landed: 'Course scope and candidate queue locked · Course composer and release-packet bridge landed · Build-only wrapper migration landed',
       nextStep: 'Re-derive the remaining 21 bindings through issue #9, preserve the 53 landed wrappers, and rerun the owning verifier.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
@@ -61,7 +61,7 @@ const AP4_DASHBOARD = {
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
-      landed: 'Six repository/control repairs landed · 26/26 overflows cleared · 33 chart stimuli converted · 3,173 XML verified',
+      landed: 'Units 1-4 article and question corpus assembled · Course renderer and chart pipeline repaired · Unit 3 media stages landed',
       nextStep: 'Obtain the Unit 5 FRQ/receipt-safe route from intake #104, then re-enter through the committed course route; Phase 0 has not started.',
       footprint: [
         { value: '3,173', label: 'publish-tree XML files verified clean' },
