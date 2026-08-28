@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-27T08:50Z",
+  "snapshot": "2026-08-28T01:07Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -739,8 +739,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-25T13:06Z",
-      "value": "HumGeo is not LS review ready. Accepted source and Phase 0 retain closure credit; Phases 1-3 contain 440 required article checks, of which 143 are accepted and 297 remain. The current execution verdict is HOLD — MISSING_FACTORY_MODULE because the enforced route found no sanctioned factory-owned mechanical operator. The replacement batch remains 0 of 10 posted, no replacement factory request is authorized, and every live publication or learner-surface write remains zero. Resume only after the factory-owned operator lands and route, controller, pool, authority, and collision checks recertify.",
+      "status_at": "2026-08-28T01:07Z",
+      "value": "HumGeo is not LS review ready, but the article-check gap closed substantially overnight. The certified 87-row replacement run reached terminal state 2026-08-27 19:40 KST: 62 rows accepted (dual-pass) and 25 terminal at the factory's 3-cycle cap. Derived: 353 prior + 62 = 415 of 440 required article checks accepted. The 25 residue slots are queued for fresh-identity regeneration behind a typed SOURCE_SELECTION hold (sources are never inferred). Banking of the 62 and source mapping for the 25 are WAITING_OWNER. Terminal receipt sha256 fb4aeb05... was independently re-counted from bytes by the orchestrator seat (87 receipts = 62 accepted + 25 replacement_failed).",
       "scope": "owner-approved HumGeo completion sequence",
       "evidence": [
         {
@@ -789,6 +789,14 @@
           "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32649699317",
           "commit": "9582e3087798880d6c9cbfb54175c861741be27a",
           "conclusion": "success"
+        },
+        {
+          "type": "terminal-receipt",
+          "location": "INCEPT/out/humgeo-gate5-offline-preview-seal-20260825/private-factory/factory-e2e-9da35978-20260827T011526Z/terminal-receipt.json"
+        },
+        {
+          "type": "residue-queue",
+          "location": "INCEPT/out/humgeo-gate5-offline-preview-seal-20260825/RESIDUE-REGENERATION-QUEUE-20260827.json"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+OWNER_DIRECTION"
@@ -920,13 +928,21 @@
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-25T09:22Z",
-      "value": "APWH accepted source remains HOLD. The authorized grading campaign has 44 of 123 calls settled: the first 43 receipts remain intact and the replacement for ordinal 44 is GREEN-OUTCOME. The remaining 79 calls were not resumed under the current authority boundary. The latest closure review still carries seven unresolved classifications—A-100, A-101, A-103 through A-106, and A-154—while A-116 and A-202 remain genuinely missing. Rerun accepted-source closure only after the remaining receipt authority is explicitly settled; Phase 0 has not started and all later publication states remain locked.",
+      "status_at": "2026-08-28T01:07Z",
+      "value": "APWH accepted source remains HOLD. Re-measured from receipts 2026-08-28T01:07Z: GRADING-RECEIPTS.jsonl holds 43 settled calls and the ordinal-44 replacement receipt is GREEN-OUTCOME, so 44 of 123 authorized grading calls are settled and 79 remain not resumed under the current authority boundary. Overnight deficit disposition (235 rows swept): 40 deficit rows = 0 landed, 4 lane-owned with links, 36 board-owned (including 5 withdrawn filings), 0 spend-gated; $0 spent. Ledger cite integrity restored: 12 of 26 cites under a current header pin carried old-runbook line numbers, fixed by content anchoring, verifier probe fired before the zero was trusted.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
           "type": "issue",
           "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
+        },
+        {
+          "type": "disposition-summary",
+          "location": "INCEPT/out/apwh-overnight-20260827/DISPOSITION-SUMMARY-FOR-FOLD.md"
+        },
+        {
+          "type": "ledger-repin-receipt",
+          "location": "INCEPT/out/apwh-overnight-20260827/ledger-repin-receipt.md"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN"
@@ -1022,8 +1038,8 @@
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-25T11:41Z",
-      "value": "APUSH accepted source remains IN PROGRESS after a current exact-ref recheck. Canonical outputs remain 44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c and the course-build mechanism remains dab70a6: the ledger still contains 38 accepted and 211 pending positions, while 11 successor receipts remain outside canonical admission. The 2,479 generation-QC candidates retain bounded provenance. Accepted source is not closed; the reviewed course profile and Phase 0 authority capture have not started, and Phases 1-10 remain locked.",
+      "status_at": "2026-08-28T01:07Z",
+      "value": "APUSH accepted source remains IN PROGRESS after a current exact-ref recheck (2026-08-28T01:07Z: course-build main dab70a6e and build-outputs main 44e4a09a, both unmoved per gh api). Overnight receipts: the 249-position ledger re-derived byte-identical as 38 ACCEPTED (36 legacy_dual_review + 2 server_strict) / 211 PENDING; the successor chain re-verified 11/11 via the committed admission CLI; queue readback complete (candidate_budget_complete true, 2480/2480, zero deficit); $0 spent. A successor-chain staging PR is staged locally and waits on the owner's typed go.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -1033,6 +1049,10 @@
         {
           "type": "reconciliation-manifest",
           "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase1/blueprint-reconciliation/reconciliation_manifest.json"
+        },
+        {
+          "type": "morning-report",
+          "location": "INCEPT/out/apush-overnight-20260827/MORNING-REPORT.md"
         }
       ],
       "evidence_access": "GITHUB+OWNER_DIRECTION+DASHBOARD_PLAN"
@@ -1228,5 +1248,6 @@
       ],
       "evidence_access": "LOCAL_INCEPT_AUDIT"
     }
-  ]
+  ],
+  "generated": null
 }

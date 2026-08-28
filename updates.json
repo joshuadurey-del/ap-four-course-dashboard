@@ -1,5 +1,20 @@
 [
   {
+    "ts": "2026-08-28T01:07Z",
+    "course": "HumGeo",
+    "text": "Overnight: the certified 87-row replacement run reached terminal state (receipt 19:40 KST, sha fb4aeb05..., independently re-counted). 62 accepted / 25 terminal at the 3-cycle cap; derived 415 of 440 article checks accepted. 25 residue slots queued behind SOURCE_SELECTION. WAITING_OWNER: banking the 62; source mapping for the 25."
+  },
+  {
+    "ts": "2026-08-28T01:07Z",
+    "course": "APWH",
+    "text": "Overnight window: 235 rows swept, 40 deficit rows dispositioned (0 landed / 4 lane-owned / 36 board-owned incl. 5 withdrawn filings / 0 spend-gated), $0. Ledger patchwork fixed: 12 stale cites under a current header pin, content-anchored, 26/26 verified. Staged #12 comment awaits owner word."
+  },
+  {
+    "ts": "2026-08-28T01:07Z",
+    "course": "APUSH",
+    "text": "Overnight window: ledger re-derived byte-identical (38 accepted: 36 legacy_dual_review + 2 server_strict / 211 pending of 249); successor chain 11/11; queue readback zero-deficit (2480/2480); $0. Runbook cites re-anchored + header repinned for APUSH and PSYCH ledgers (139/0 each). Staging PR waits on owner typed go."
+  },
+  {
     "ts": "2026-08-27T08:50Z",
     "course": "Cross",
     "text": "Four-course stale-claim reconciliation: same-window evidence leaves reviewer-path readiness BLOCKED and a named whole-course LS disposition MISSING. HumGeo's publisher contract is incomplete, APWH lacks a full --course-dir conformance verdict, APUSH remains build-only, and Psychology's exact-SHA review surface is blocked. Historical recovery evidence was re-read at ap-ss-evidence@fe839ffc: 25 rows split 2 valid factory proof / 8 salvageable input / 5 factory re-earn / 6 void / 4 unknown blocked; the P1-P16 hand-rolled manifest remains historical and does not prove deletion."
