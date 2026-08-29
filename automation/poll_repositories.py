@@ -12,6 +12,7 @@ import hmac
 import json
 import os
 from pathlib import Path
+import sys
 import tempfile
 import urllib.error
 import urllib.parse
@@ -123,7 +124,7 @@ def load_inventory(evidence):
     if (not isinstance(repos, dict) or len(repos) != 10
             or any(not isinstance(repo, str) or course not in {"humgeo", "apwh", "apush", "psych", "cross"}
                    for repo, course in repos.items())):
-        raise RuntimeError("private source inventory is missing or invalid")
+        raise RuntimeError("EVIDENCE_BACKEND_UNAVAILABLE_OR_INVENTORY_INVALID")
     return repos
 
 
@@ -392,11 +393,16 @@ def main():
     sub.add_parser("probe")
     sub.add_parser("selftest")
     args = parser.parse_args()
-    if args.command == "prepare": prepare(args.transaction)
-    elif args.command == "finalize": finalize(args.transaction, args.dashboard_commit, args.pages_build_id)
-    elif args.command == "probe": probe()
-    else: selftest()
+    try:
+        if args.command == "prepare": prepare(args.transaction)
+        elif args.command == "finalize": finalize(args.transaction, args.dashboard_commit, args.pages_build_id)
+        elif args.command == "probe": probe()
+        else: selftest()
+    except RuntimeError as error:
+        print(f"HOLD: {error}", file=sys.stderr)
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
