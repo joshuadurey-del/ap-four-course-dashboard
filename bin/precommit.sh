@@ -19,6 +19,7 @@ if ! python3 - <<'PY'
 import datetime
 import json
 import re
+import urllib.parse
 
 with open('updates.json') as f:
     updates = json.load(f)
@@ -32,6 +33,15 @@ for index, update in enumerate(updates):
     assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z', update['ts']), \
         f"update {index} has invalid ts: {update['ts']}"
     datetime.datetime.fromisoformat(update['ts'].replace('Z', '+00:00'))
+    event_fields = {'event_type', 'evidence_url'} & update.keys()
+    assert not event_fields or event_fields == {'event_type', 'evidence_url'}, \
+        f'update {index} must carry event_type and evidence_url together'
+    if event_fields:
+        assert update['event_type'] in {'push', 'pull_request', 'issues'}, \
+            f'update {index} has invalid event_type'
+        url = urllib.parse.urlparse(update['evidence_url'])
+        assert url.scheme == 'https' and url.hostname == 'github.com' and url.path.strip('/'), \
+            f'update {index} has invalid evidence_url'
 
 print(f'UPDATES OK: {len(updates)} schema-valid entries')
 PY

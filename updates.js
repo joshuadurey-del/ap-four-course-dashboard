@@ -1,7 +1,4 @@
 (() => {
-  const list = document.querySelector('[data-update-list]');
-  if (!list) return;
-
   const relative = ms => {
     const minutes = Math.round((Date.now() - ms) / 60000);
     if (minutes < 60) return `${minutes}m ago`;
@@ -16,22 +13,92 @@
     .replace(/\bIlma's\b/gi, "the repository owner's")
     .replace(/\bIlma\b|\bilmych\b/gi, 'the repository owner');
 
-  fetch('updates.json', { cache: 'no-store' }).then(response => response.json()).then(updates => {
+  const evidenceUrl = value => {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && url.hostname === 'github.com' ? url.href : null;
+    } catch {
+      return null;
+    }
+  };
+
+  if (typeof document === 'undefined') {
+    if (displayText('Ilma') !== 'the repository owner') throw new Error('display text self-test failed');
+    if (!evidenceUrl('https://github.com/example/course/commit/abc')) throw new Error('evidence URL self-test failed');
+    if (evidenceUrl('https://example.com/not-allowed')) throw new Error('unsafe URL self-test failed');
+    return;
+  }
+
+  const lists = [...document.querySelectorAll('[data-update-list]')];
+  if (!lists.length) return;
+
+  const render = (list, updates) => {
     const course = list.dataset.course?.toLowerCase();
-    const visibleUpdates = course
-      ? updates.filter(update => update.course.toLowerCase() === course)
-      : updates;
-    const limit = Number(list.dataset.limit) || visibleUpdates.length;
+    const eventOnly = list.hasAttribute('data-event-only');
+    const visible = updates.filter(update =>
+      typeof update?.ts === 'string' && !Number.isNaN(Date.parse(update.ts)) &&
+      typeof update?.course === 'string' && typeof update?.text === 'string' &&
+      (!course || update.course.toLowerCase() === course) &&
+      (!eventOnly || (typeof update.event_type === 'string' && evidenceUrl(update.evidence_url)))
+    );
+    const limit = Number(list.dataset.limit) || visible.length;
+    const items = visible.slice(0, limit).map(update => {
+      const ms = Date.parse(update.ts);
+      const item = document.createElement('li');
+      item.className = 'update-item';
+      const meta = document.createElement('div');
+      meta.className = 'update-meta';
+      const courseName = document.createElement('strong');
+      courseName.textContent = update.course;
+      const time = document.createElement('time');
+      time.dateTime = update.ts;
+      time.textContent = `${local(ms)} · ${relative(ms)}`;
+      meta.append(courseName, time);
+      const copy = document.createElement('p');
+      copy.textContent = displayText(update.text);
+      const href = evidenceUrl(update.evidence_url);
+      if (href) {
+        const link = document.createElement('a');
+        link.className = 'update-evidence';
+        link.href = href;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = 'Evidence';
+        copy.append(' ', link);
+      }
+      item.append(meta, copy);
+      return item;
+    });
+    list.replaceChildren(...items);
+    if (!items.length) {
+      const empty = document.createElement('li');
+      empty.className = 'update-empty';
+      empty.textContent = eventOnly ? 'No verified repository activity yet.' : 'No verified updates yet.';
+      list.append(empty);
+    }
+    return visible;
+  };
+
+  fetch('updates.json', { cache: 'no-store' }).then(response => response.json()).then(updates => {
+    if (!Array.isArray(updates)) throw new Error('updates.json must be an array');
+    const visibleUpdates = render(lists[0], updates);
+    lists.slice(1).forEach(list => render(list, updates));
     const lastUpdated = document.getElementById('lastupd');
     if (lastUpdated && visibleUpdates.length) {
       const newest = Math.max(...visibleUpdates.map(update => Date.parse(update.ts)));
-      lastUpdated.innerHTML = `<strong>Last updated:</strong> ${local(newest)} <span class="badge b-blue">${relative(newest)}</span>`;
+      const label = document.createElement('strong');
+      label.textContent = 'Last updated:';
+      const badge = document.createElement('span');
+      badge.className = 'badge b-blue';
+      badge.textContent = relative(newest);
+      lastUpdated.replaceChildren(label, ` ${local(newest)} `, badge);
     }
-    list.innerHTML = visibleUpdates.slice(0, limit).map(update => {
-      const ms = Date.parse(update.ts);
-      return `<li class="update-item"><div class="update-meta"><strong>${update.course}</strong><time datetime="${update.ts}">${local(ms)} · ${relative(ms)}</time></div><p>${displayText(update.text)}</p></li>`;
-    }).join('');
   }).catch(() => {
-    list.innerHTML = '<li class="update-empty">The update feed is temporarily unavailable.</li>';
+    lists.forEach(list => {
+      const empty = document.createElement('li');
+      empty.className = 'update-empty';
+      empty.textContent = 'The update feed is temporarily unavailable.';
+      list.replaceChildren(empty);
+    });
   });
 })();

@@ -273,6 +273,41 @@ small { color: var(--muted); line-height: 1.45; }
 
 .course-page #eta > h2 { color: var(--blue-strong); }
 
+.course-activity {
+  margin: 0 0 var(--space-xl);
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.course-activity h2 { margin: 0 0 4px; font-size: 17px; }
+.course-activity > p { margin: 0 0 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.course-activity .update-item { grid-template-columns: 1fr; gap: 6px; padding: 13px 0; }
+.course-activity .update-meta { gap: 2px; }
+.course-activity .update-item p { font-size: 13px; line-height: 1.5; }
+.update-evidence { white-space: nowrap; font-size: 12px; font-weight: 700; }
+
+@media (min-width: 1180px) {
+  .course-page main {
+    width: min(calc(100% - 48px), 1232px);
+    display: grid;
+    grid-template-columns: minmax(0, 920px) 280px;
+    column-gap: 32px;
+  }
+
+  .course-page main > * { grid-column: 1; }
+  .course-page main > .course-activity {
+    position: sticky;
+    top: 76px;
+    grid-column: 2;
+    grid-row: 2 / span 6;
+    align-self: start;
+    max-height: calc(100vh - 96px);
+    overflow: auto;
+  }
+}
+
 .eta {
   display: flex;
   flex-wrap: wrap;
