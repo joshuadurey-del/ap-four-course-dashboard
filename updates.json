@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-29T01:42Z",
+    "course": "cross",
+    "text": "Overview palette cache fix: the first-page stylesheet URL is now versioned so browsers immediately load the teal, bronze, crimson, and violet course-card treatments instead of retaining the previous blue-heavy cached CSS. Course data and lifecycle claims are unchanged. $0 dashboard spend."
+  },
+  {
     "ts": "2026-08-29T01:40Z",
     "course": "cross",
     "text": "HumGeo history and overview wayfinding: the collapsed HumGeo Historical course record now includes its full 95-entry receipt-by-receipt chronology. The four overview course cards now use distinct accessible category colors—teal for HumGeo, bronze for APWH, crimson for APUSH, and violet for Psychology—with lightly tinted surfaces and course-colored status labels. Current course state and lifecycle claims are unchanged. $0 dashboard spend."
