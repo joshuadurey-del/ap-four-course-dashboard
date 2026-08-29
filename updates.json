@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-29T01:56Z",
+    "course": "cross",
+    "text": "Course-page information hierarchy: the shared Current runbook state evidence map now appears immediately below the title summary on HumGeo, APWH, APUSH, and Psychology, before all supporting current detail and well above each collapsed Historical course record. The duplicate HumGeo current-state widget was removed from inside history. Course data and lifecycle claims are unchanged. $0 dashboard spend."
+  },
+  {
     "ts": "2026-08-29T01:42Z",
     "course": "cross",
     "text": "Overview palette cache fix: the first-page stylesheet URL is now versioned so browsers immediately load the teal, bronze, crimson, and violet course-card treatments instead of retaining the previous blue-heavy cached CSS. Course data and lifecycle claims are unchanged. $0 dashboard spend."
