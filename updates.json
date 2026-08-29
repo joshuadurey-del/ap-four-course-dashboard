@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-29T01:29Z",
+    "course": "cross",
+    "text": "Course history depth restored: the collapsed APWH, APUSH, and Psychology historical course records now render their complete course-filtered append-only dashboard chronologies—57 APWH events, 18 APUSH events, and 22 Psychology events at this snapshot—with original timestamps and evidentiary scope. Current verified-state folds remain separate and authoritative. $0 dashboard spend."
+  },
+  {
     "ts": "2026-08-29T01:18Z",
     "course": "cross",
     "text": "Course-page verification refresh: HumGeo remains IN PROGRESS in Phases 1-3 at 440/440 operator receipts, with landing and formal reconcile next. APWH remains before Phase 0 in accepted source; PR #891 is now merged, blueprint main is c9c47afe, and the last complete-surface ledger remains 95 PASS / 34 MISSING. Its fresh current-tree recheck stayed non-green but omitted registry and app-source surfaces, so the partial 89 PASS / 41 MISSING diagnostic does not supersede that complete ledger. APUSH remains IN PROGRESS at 49 accepted / 200 pending, 53 landed wrappers, and 21 re-derivations on open issue #9. Psychology remains before Phase 0 with issue #51 open and assigned to the course owner. Historical course records are preserved but collapsed and explicitly labeled superseded. Josh owns course merges; no current course status waits on another person's merge. Visible colleague-name references were removed. $0 dashboard spend."
