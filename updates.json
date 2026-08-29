@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-29T01:01Z",
+    "course": "cross",
+    "text": "Stale-claim cleanup: cross.process.authority and cross.work_evidence_map are settled as dated 2026-08-26 historical snapshots and now point to the current HumGeo, APWH, APUSH, and Psychology component claims. Their original observations remain unchanged; no course state changed."
+  },
+  {
     "ts": "2026-08-29T00:55Z",
     "course": "humgeo",
     "text": "HumGeo article-check campaign reached 440/440 at the operator-receipt position. Final slot d833b559-article-05 accepted in Round 13, cycle 1, after creation full-QC and independent /v1/qc at 0.979. Every one of the 440 slots now holds dual-QC factory acceptance; all 161 job bodies are persisted and every round was certified and receipted. The formal census reconcile follows landing the five enriched lessons because its plan binds landed article bytes. Phase 1.3 bank-wide validation and the Phase 3.4 answer-shape report remain OPEN; Phase 2 pricing is UNMEASURED this session; Phase 3.6 QTI validation, 3.7 student-surface preview, and Phases 4-10 are not started at the enriched bytes. Next: prepare and gate the exact PR package, obtain typed go, Ilma merges, ingest, then formal reconcile."

@@ -1,11 +1,20 @@
 {
-  "snapshot": "2026-08-29T00:55Z",
+  "snapshot": "2026-08-29T01:01Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
       "observed_at": "2026-08-26T14:47Z",
+      "settled": true,
+      "settled_at": "2026-08-29T01:01Z",
+      "settlement_reason": "Point-in-time cross-course snapshot superseded by current per-course claims; historical observation retained without re-dating.",
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.ls_qc_ready",
+        "psych.blueprint.audit"
+      ],
       "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are IN PROGRESS. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting the canonical recovery operator's nullable-array handling. The accepted bank remains 353 of 440, with 87 factory-terminal nonaccepted. A corrected three-cycle pilot and at least eleven later factory-reaching operator invocations were observed after the prior dashboard snapshot. Across the scale invocations, 76 contextual submissions returned 21 distinct job IDs and 27 independent-QC calls occurred; 55 submissions replayed prior scale job identities. Five local receipts landed for 9 rows, recording 6 observed acceptances and 3 replacement failures, but remain unbound. Twenty job IDs have factory-terminal evidence; the final row-10 job is UNMEASURED because no job-stage event or row receipt landed. The scale action lacked a current-SHA /100 and RUNNING bind. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST at 14:31:48.257Z through 14:45:43Z. No result is controller-adopted, and no retry or resume is permitted. Packet 2 is HOLD: UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS; the next governed event is an owner-scoped landing receipt or disposition, not another pilot. The five SHA-bound dependency asks remain the filed authority, but AP One main advanced to 113f80c8479079a87f29226eb1a4b7e5f53349d0 through merged compiler PR #869. The post-merge fleet review marked #865 status:needs_rework and claimed attempt 2, so the compiler is NONCONFORMING_FACTORY_MODULE rather than Packet 3 closure. Activation #864 is on attempt 2 after queued rework; enrollment #866 and learner acceptance #867 remain open and unclaimed; the materializer bind request remains on #659. The APWH, APUSH, and Psychology statements retain their 2026-08-25T13:44Z observation. No course claims publication, enrollment, activation, learner acceptance, or release.",
       "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
       "evidence": [
@@ -70,6 +79,15 @@
       "section": "Cross-course",
       "status": "OBSERVED",
       "observed_at": "2026-08-26T14:47Z",
+      "settled": true,
+      "settled_at": "2026-08-29T01:01Z",
+      "settlement_reason": "Point-in-time cross-course snapshot superseded by current per-course claims; historical observation retained without re-dating.",
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.ls_qc_ready",
+        "psych.blueprint.audit"
+      ],
       "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 353 of 440 article checks accepted in Phases 1-3 and 87 factory-terminal nonaccepted rows. The corrected recovery operator is live at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078. A corrected pilot and at least eleven factory-reaching scale operator invocations returned 21 distinct scale job IDs, but no result is controller-adopted because the current action bind and complete owner-scoped QC landing set are missing. Five local receipts cover 9 rows and remain unbound; 20 job IDs are terminal and one is UNMEASURED. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST through 14:45:43Z. Packet 2 now waits for disposition of the exact outputs, not a retry or resumed scale. Packet 3 has partial PREP_ONLY evidence but remains blocked on a conforming canonical compiler and output contract: compiler PR #869 merged to AP One main 113f80c8479079a87f29226eb1a4b7e5f53349d0, then the post-merge fleet review marked #865 status:needs_rework and claimed attempt 2. Packet 4 remains blocked on the materializer, enrollment, activation, and learner-acceptance modules. Activation #864 is on attempt 2 after queued rework; #866 and #867 remain open and unclaimed; the materializer bind request remains on #659. The other course measurements retain their 2026-08-25T13:44Z observation: APWH reports 44 of 123 grading calls settled while accepted source remains open; APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts; Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
       "scope": "public dashboard presentation and already-published course evidence only",
       "evidence": [
