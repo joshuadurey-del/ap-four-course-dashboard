@@ -293,7 +293,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-28T14:46Z"
+      "status_at": "2026-08-29T00:55Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -588,12 +588,12 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH sits before Phase 0 in the runbook's first lifecycle state, accepted source, which is IN PROGRESS and not settled. The required pre-Phase-0 course profile and validator consumer are DONE through AP One PR #889 at merge 8d4ab63a; authoring and the profile-hash refresh remain open on PR #891. The exact receipt-bound 235-row position is 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A-059, A-163, and A-146 closed today; A-186 landed to its designed ceiling. About 19 MISSING rows are Ilma-side work packages or platform gaps, about 12 are paid or judgment content rows, and the remainder are ceiling or convention rows. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
+      "value": "APWH sits before Phase 0 in the runbook's first lifecycle state, accepted source, which is IN PROGRESS and not settled. The required pre-Phase-0 course profile and validator consumer are DONE through AP One PR #889; the authoring wave and profile-hash refresh are now MERGED through PR #891. The last complete-surface 235-row receipt remains 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A fresh Aug 29 executor recheck against AP One d255a855 and blueprint main c9c47afe remained non-green, but its materialized tree omitted registry and app-source surfaces; its partial 89 PASS / 41 MISSING diagnostic does not supersede the complete-surface ledger. Current blockers are unsettled accepted-source rows, including paid or judgment content and open study-skills platform work. APWH is not waiting on another person to merge a course PR; Josh owns course merges. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
       "scope": "APWH accepted-source conformance through the full current course-dir oracle; excludes oracle self-test, local inventory, grading campaigns, publication, and learner serving",
       "evidence": [
         {
           "type": "current-blueprint-main",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/e955e81667b1c71cd2a4855aacae77e499415c99"
+          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/c9c47afef75b7af70bc312cb486801ebad3a4e3f"
         },
         {
           "type": "profile-and-consumer",
@@ -604,8 +604,8 @@
         {
           "type": "authoring-and-profile-hash-refresh",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/891",
-          "state": "open",
-          "head_commit": "df35d7b91db40135b767147f3f119bbd42dc9849"
+          "state": "merged",
+          "merge_commit": "3ab26f2402646cbff5b7804e5f5ac9f2eb5ff489"
         },
         {
           "type": "runbook-pin",
@@ -613,7 +613,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-28T14:05Z"
+      "status_at": "2026-08-29T01:16Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -635,7 +635,7 @@
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-28T14:20Z",
+      "observed_at": "2026-08-29T01:16Z",
       "value": "Psychology remains at the publication-runbook entry boundary before Phase 0. AS-01 accepted source is IN_PROGRESS and not closed; no canon row is PROVEN. P1-04, P3-05, and P3-06 carry bounded IN_PROGRESS evidence from the merged Units 1-4 assessment pipeline, but no lifecycle phase credit. Course profile rows PR-01 through PR-08, Phase 0, later lifecycle phases, release checks, and the required handoff packet remain NOT_YET_MEASURED. Current course main is 11f7028eee30e705594c47b72a1d36c29318e534.",
       "scope": "current Psychology position against the pinned AP One Native TimeBack publication runbook; excludes accepted-source closure, phase entry, publication, enrollment, activation, learner acceptance, and release",
       "evidence": [
@@ -758,7 +758,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "observed_at": "2026-08-28T14:46Z"
+      "observed_at": "2026-08-29T00:55Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
@@ -781,7 +781,7 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T14:46Z",
+      "status_at": "2026-08-29T00:55Z",
       "value": "HumGeo Phases 1-3 remain IN PROGRESS. P1-04 has reached 440/440 at the operator-receipt position, but review-surface readiness remains blocked on landing the five enriched lessons, formal census reconcile, the Phase 1.3 bank-wide validation sweep, the Phase 3.4 answer-shape report, Phase 3.6 QTI validation, and Phase 3.7 student-surface preview. Phases 4-10 have not been reached.",
       "scope": "current HumGeo runbook sequence and unmet offline validation/preview work; excludes publication and learner readiness",
       "evidence": [
@@ -953,13 +953,13 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-28T14:05Z"
+      "status_at": "2026-08-29T01:16Z"
     },
     {
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. The pre-Phase-0 profile requirement is done through AP One PR #889 at 8d4ab63a. Accepted source remains IN PROGRESS at the receipt-bound 95 PASS / 34 MISSING position: A-146 and the A-186 ceiling carrier are canonical on blueprint main e955e81, while A-059/A-163 and the profile-hash refresh remain on open AP One PR #891. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. The pre-Phase-0 profile, authoring wave, and profile-hash refresh are landed through AP One PRs #889 and #891. Accepted source remains IN PROGRESS; 95 PASS / 34 MISSING is the last complete-surface receipt, while the Aug 29 partial materialization is diagnostic only. Blueprint main is c9c47afe. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -969,14 +969,14 @@
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-28T14:05Z"
+      "observed_at": "2026-08-29T01:16Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T14:05Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH is before Phase 0: its required course profile is done, accepted source is IN PROGRESS at 95 PASS / 34 MISSING across 235 rows, Phase 0 is NOT ENTERED, and Phases 1-10 are NOT STARTED. The next governed work is to settle accepted source, then run Phase 0.1-0.3 in order.",
+      "status_at": "2026-08-29T01:16Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH is before Phase 0: its required course profile and profile-hash refresh are landed, accepted source remains IN PROGRESS, Phase 0 is NOT ENTERED, and Phases 1-10 are NOT STARTED. The last complete-surface receipt is 95 PASS / 34 MISSING across 235 rows; the newer incomplete-surface diagnostic does not supersede it. The next governed work is to settle accepted source, then run Phase 0.1-0.3 in order.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1007,7 +1007,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-28T11:58Z"
+      "observed_at": "2026-08-29T01:16Z"
     },
     {
       "claim_id": "apush.generated_qc",
@@ -1064,7 +1064,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-28T11:58Z"
+      "observed_at": "2026-08-29T01:16Z"
     },
     {
       "claim_id": "apush.seating",
@@ -1084,13 +1084,13 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-28T11:58Z"
+      "status_at": "2026-08-29T01:16Z"
     },
     {
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-28T11:58Z",
+      "status_at": "2026-08-29T01:16Z",
       "value": "APUSH accepted source is IN PROGRESS, not parked. Current ledger is 49 accepted / 200 pending, the canonical queue is complete at 2,480 of 2,480 candidates with zero deficit, and build-output PR #4 lands the 53 safe migrated wrappers. Twenty-one bindings still require re-derivation through open issue #9; no learner execution or later lifecycle closure is claimed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
@@ -1133,7 +1133,7 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-28T14:20Z",
+      "observed_at": "2026-08-29T01:16Z",
       "value": "At Psychology main 11f7028eee30e705594c47b72a1d36c29318e534, the assessment tree has 68 tracked files, with zero under Unit 5; the committed publish-tree verifier parses 3,173 Units 1-4 XML files with zero problems. PRs #49, #52, and #53 close the video-manifest, renderer-environment, and job-ID-preflight mechanism gaps; issue #48 is CLOSED/COMPLETED after the fresh manifest check returned all six denominators at 12. These are accepted-source inputs, not accepted-source closure or later-phase credit.",
       "scope": "exact-SHA Unit 1-4 tracked assessment inventory, committed publish-tree XML verification, and Unit 5 mechanism closures; excludes complete content QC, accepted-source closure, course wiring, deployment, and learner visibility",
       "evidence": [
@@ -1156,7 +1156,7 @@
       "claim_id": "psych.bank",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-28T14:20Z",
+      "observed_at": "2026-08-29T01:16Z",
       "value": "Runbook rows P1-04, P3-05, and P3-06 are IN_PROGRESS through the merged Units 1-4 assessment pipeline. Course-wide exact-set, answer-shape, native-QTI, writing-QTI, rubric, grader-parity, and student-display seals do not exist. PR #20 remains the only open course PR, and current incept-test-builder main 081af82925d2ce5c30ecd820aba151109a8d7fb4 keeps AI_ONLY_READY[ap-psychology] false, which caps P3-06 and RLS-14 until certification. No phase is entered and no paid call ran.",
       "scope": "P1-04, P3-05, P3-06, and RLS-14 evidence state; excludes complete exact-set/QTI/grader seals, phase credit, paid generation, learner behavior, and publication",
       "evidence": [
@@ -1175,8 +1175,8 @@
       "claim_id": "psych.u5",
       "section": "Psych",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T14:20Z",
-      "value": "At exact source SHA 11f7028eee30e705594c47b72a1d36c29318e534, Unit 5 has zero tracked assessment files. Three of four filed mechanism gaps are closed through PRs #49, #52, and #53, and issue #48 is CLOSED/COMPLETED. Only course issue #51 remains: the bounded Unit 5 generation route plus the Unit 5 claim-rules oracle. It is assigned to Jayesh and Josh; Jayesh was tagged at 12:24Z with no reply observed by 14:20Z. Unit 5 paid generation remains blocked behind #51, the HumGeo-first queue, and explicit spend go.",
+      "status_at": "2026-08-29T01:16Z",
+      "value": "At exact source SHA 11f7028eee30e705594c47b72a1d36c29318e534, Unit 5 has zero tracked assessment files. Three of four filed mechanism gaps are closed through PRs #49, #52, and #53, and issue #48 is CLOSED/COMPLETED. Only course issue #51 remains: the bounded Unit 5 generation route plus the Unit 5 claim-rules oracle. It is open and assigned to the course owner. Unit 5 paid generation remains blocked behind #51, the HumGeo-first queue, and explicit spend go.",
       "scope": "exact-SHA Unit 5 tracked assessment inventory and current course-owned mechanism issue state; excludes generation, paid calls, accepted-source closure, platform actions, and learner visibility",
       "evidence": [
         {
@@ -1250,7 +1250,7 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-28T14:20Z",
+      "observed_at": "2026-08-29T01:16Z",
       "value": "The retired LS REVIEW READY sprint marker supplies no publication-runbook lifecycle credit. Psychology remains before Phase 0: AS-01 is IN_PROGRESS with one Unit 5 mechanism issue remaining; three implementation rows have bounded IN_PROGRESS evidence; zero canon rows are PROVEN; the reviewed course profile, Phase 0, every later phase, release checklist, and required handoff packet remain NOT_YET_MEASURED.",
       "scope": "retired LS sprint marker mapped to current publication-runbook state; excludes accepted-source closure, phase entry, LS disposition, learner acceptance, and release",
       "evidence": [
@@ -1265,7 +1265,7 @@
       "claim_id": "psych.registration",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-28T14:20Z",
+      "observed_at": "2026-08-29T01:16Z",
       "value": "Psychology main 11f7028eee30e705594c47b72a1d36c29318e534 is still before Phase 0. After AS-01 closes, the governed order is: author and validate the reviewed course profile; bind environment 0.1; capture immutable source authority 0.2; freeze the namespace 0.3; then enter Phases 1-10. No profile, Phase 0 capture, publication plan, handoff packet, registration, enrollment, activation, or learner-acceptance transition is measured or selected.",
       "scope": "current Psychology runbook ordering and absent phase/profile/handoff receipts; no publication, registration, enrollment, activation, learner acceptance, or release action",
       "evidence": [

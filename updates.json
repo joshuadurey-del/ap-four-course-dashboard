@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-29T01:18Z",
+    "course": "cross",
+    "text": "Course-page verification refresh: HumGeo remains IN PROGRESS in Phases 1-3 at 440/440 operator receipts, with landing and formal reconcile next. APWH remains before Phase 0 in accepted source; PR #891 is now merged, blueprint main is c9c47afe, and the last complete-surface ledger remains 95 PASS / 34 MISSING. Its fresh current-tree recheck stayed non-green but omitted registry and app-source surfaces, so the partial 89 PASS / 41 MISSING diagnostic does not supersede that complete ledger. APUSH remains IN PROGRESS at 49 accepted / 200 pending, 53 landed wrappers, and 21 re-derivations on open issue #9. Psychology remains before Phase 0 with issue #51 open and assigned to the course owner. Historical course records are preserved but collapsed and explicitly labeled superseded. Josh owns course merges; no current course status waits on another person's merge. Visible colleague-name references were removed. $0 dashboard spend."
+  },
+  {
     "ts": "2026-08-29T01:01Z",
     "course": "cross",
     "text": "Stale-claim cleanup: cross.process.authority and cross.work_evidence_map are settled as dated 2026-08-26 historical snapshots and now point to the current HumGeo, APWH, APUSH, and Psychology component claims. Their original observations remain unchanged; no course state changed."
@@ -7,7 +12,7 @@
   {
     "ts": "2026-08-29T00:55Z",
     "course": "humgeo",
-    "text": "HumGeo article-check campaign reached 440/440 at the operator-receipt position. Final slot d833b559-article-05 accepted in Round 13, cycle 1, after creation full-QC and independent /v1/qc at 0.979. Every one of the 440 slots now holds dual-QC factory acceptance; all 161 job bodies are persisted and every round was certified and receipted. The formal census reconcile follows landing the five enriched lessons because its plan binds landed article bytes. Phase 1.3 bank-wide validation and the Phase 3.4 answer-shape report remain OPEN; Phase 2 pricing is UNMEASURED this session; Phase 3.6 QTI validation, 3.7 student-surface preview, and Phases 4-10 are not started at the enriched bytes. Next: prepare and gate the exact PR package, obtain typed go, Ilma merges, ingest, then formal reconcile."
+    "text": "HumGeo article-check campaign reached 440/440 at the operator-receipt position. Final slot d833b559-article-05 accepted in Round 13, cycle 1, after creation full-QC and independent /v1/qc at 0.979. Every one of the 440 slots now holds dual-QC factory acceptance; all 161 job bodies are persisted and every round was certified and receipted. The formal census reconcile follows landing the five enriched lessons because its plan binds landed article bytes. Phase 1.3 bank-wide validation and the Phase 3.4 answer-shape report remain OPEN; Phase 2 pricing is UNMEASURED this session; Phase 3.6 QTI validation, 3.7 student-surface preview, and Phases 4-10 are not started at the enriched bytes. Next: prepare and gate the exact PR package, obtain typed go, Josh merges, ingest, then formal reconcile."
   },
   {
   "ts": "2026-08-28T14:20Z",
@@ -27,7 +32,7 @@
  {
   "ts": "2026-08-28T14:05Z",
   "course": "apwh",
-  "text": "APWH runbook-state fold: APWH sits BEFORE Phase 0 in accepted source, which is IN PROGRESS and not settled. The pre-Phase-0 course profile requirement is DONE through Ilma-merged AP One PR #889 at 8d4ab63a; the authoring/profile-hash refresh remains open on PR #891. The exact receipt-bound 235-row position is 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A-059, A-163, and A-146 closed today; A-186 landed to its designed ceiling. About 19 MISSING rows are Ilma-side work packages/platform gaps, about 12 are paid or judgment content, and the remainder are ceiling or convention rows. The paid slice waits for the HumGeo pool drain and spend go; the Platform3 study-skills write waits for its write window. Phase 0 is NOT ENTERED, its 0.2 capture tool is authored but waits for source settlement, and Phases 1-10 are NOT STARTED. Runbook pin 32d079c2; $0 dashboard spend."
+  "text": "APWH runbook-state fold: APWH sits BEFORE Phase 0 in accepted source, which is IN PROGRESS and not settled. The pre-Phase-0 course profile requirement is DONE through repository-owner-merged AP One PR #889 at 8d4ab63a; the authoring/profile-hash refresh remains open on PR #891. The exact receipt-bound 235-row position is 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A-059, A-163, and A-146 closed today; A-186 landed to its designed ceiling. About 19 MISSING rows are repository-side work packages/platform gaps, about 12 are paid or judgment content, and the remainder are ceiling or convention rows. The paid slice waits for the HumGeo pool drain and spend go; the Platform3 study-skills write waits for its write window. Phase 0 is NOT ENTERED, its 0.2 capture tool is authored but waits for source settlement, and Phases 1-10 are NOT STARTED. Runbook pin 32d079c2; $0 dashboard spend."
  },
  {
   "ts": "2026-08-28T12:57Z",
@@ -167,7 +172,7 @@
  {
   "ts": "2026-08-27T06:18Z",
   "course": "APWH",
-  "text": "Factory-first rewrite: grading campaign + local ceremony eliminated from the ledger; grader trust = factory cert (Ilma 07-17). Blueprint oracle at current refs: 92 PASS / 97 DOCUMENTED / 37 MISSING / 3 FAIL / 1 ESCALATED / 2 WARN over 235 rows (receipts ~/.incept/course-build/apwh/). Executor + contracts re-pinned; shadow = SHADOW_NEXT."
+  "text": "Factory-first rewrite: grading campaign + local ceremony eliminated from the ledger; grader trust = factory cert (owner ruling 07-17). Blueprint oracle at current refs: 92 PASS / 97 DOCUMENTED / 37 MISSING / 3 FAIL / 1 ESCALATED / 2 WARN over 235 rows (receipts ~/.incept/course-build/apwh/). Executor + contracts re-pinned; shadow = SHADOW_NEXT."
  },
  {
   "ts": "2026-08-27T06:18Z",
@@ -282,7 +287,7 @@
  {
   "ts": "2026-08-24T18:23Z",
   "course": "HumGeo",
-  "text": "Gate 3 has reached SOURCE_ACCEPTED on the prepared HumGeo closure branch: all 70 placements are factory-accepted, the frozen source-admissibility oracle reports exactly zero remaining failures with exact coverage, and the sealed delivery package verifies with SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b. The isolated full repository suite passes 847 tests with 121 governed skips and five passing subtests. Canonical main remains HOLD pending protected branch publication, Ilmych's owner merge, and post-merge zero-residue verification. Gate 4 and all publication, upload, enrollment, activation, learner, and release writes remain locked."
+  "text": "Gate 3 has reached SOURCE_ACCEPTED on the prepared HumGeo closure branch: all 70 placements are factory-accepted, the frozen source-admissibility oracle reports exactly zero remaining failures with exact coverage, and the sealed delivery package verifies with SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b. The isolated full repository suite passes 847 tests with 121 governed skips and five passing subtests. Canonical main remains HOLD pending protected branch publication, repository-owner merge, and post-merge zero-residue verification. Gate 4 and all publication, upload, enrollment, activation, learner, and release writes remain locked."
  },
  {
   "ts": "2026-08-24T17:47Z",
@@ -367,7 +372,7 @@
  {
   "ts": "2026-08-23T13:50Z",
   "course": "HumGeo",
-  "text": "Repaired Gate 3 is CLOSED — SOURCE_ACCEPTED. Deployed factory commit fb6a56ea81c091b600e5d827c5eb200fa33112fa supported the governed repair: 195 accepted candidates cover all 203 exact placements, every accepted candidate has terminal creation, full-QC, exact-DOK, answer-shape, and collision receipts, 36 superseded attempts are preserved as dropped, and remaining/nonterminal counts are zero. Delivery package SHA-256 f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4. HumGeo PR #65 is open at exact head 71fddd538ba7bdca9a47b021a0f71d1d878959b3 for owner ilmych to merge; Codex did not merge. Gate 4 is next but remains locked until its required preflight rereads; Gates 5-11 remain locked."
+  "text": "Repaired Gate 3 is CLOSED — SOURCE_ACCEPTED. Deployed factory commit fb6a56ea81c091b600e5d827c5eb200fa33112fa supported the governed repair: 195 accepted candidates cover all 203 exact placements, every accepted candidate has terminal creation, full-QC, exact-DOK, answer-shape, and collision receipts, 36 superseded attempts are preserved as dropped, and remaining/nonterminal counts are zero. Delivery package SHA-256 f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4. HumGeo PR #65 is open at exact head 71fddd538ba7bdca9a47b021a0f71d1d878959b3 for repository-owner merge; Codex did not merge. Gate 4 is next but remains locked until its required preflight rereads; Gates 5-11 remain locked."
  },
  {
   "ts": "2026-08-23T08:46Z",
@@ -382,7 +387,7 @@
  {
   "ts": "2026-08-23T07:09Z",
   "course": "HumGeo",
-  "text": "Gate 2 repair prerequisites are ready but not yet closed. HumGeo PR #64 is open and mergeable at exact head b3e0e28d6aa8501ae04043c51a362cc0efdaa90f; its supplemental inventory binds 5,215 checked items and persists only the 203 stale-unusable IDs, with 42 focused and 823 full-suite passes. Ilma merged factory PR #271 at 24b084e223b872b3135b71cb2639d13779fc1b07; exact Deploy API run 32624230465 passed and live /version independently matched that SHA with no newer competing deploy. Generation remains locked until Ilma merges PR #64."
+  "text": "Gate 2 repair prerequisites are ready but not yet closed. HumGeo PR #64 is open and mergeable at exact head b3e0e28d6aa8501ae04043c51a362cc0efdaa90f; its supplemental inventory binds 5,215 checked items and persists only the 203 stale-unusable IDs, with 42 focused and 823 full-suite passes. The repository owner merged factory PR #271 at 24b084e223b872b3135b71cb2639d13779fc1b07; exact Deploy API run 32624230465 passed and live /version independently matched that SHA with no newer competing deploy. Generation remains locked until Josh merges PR #64."
  },
  {
   "ts": "2026-08-23T06:47Z",
@@ -402,12 +407,12 @@
  {
   "ts": "2026-08-23T00:40Z",
   "course": "Cross-course",
-  "text": "The four course plans are realigned around Ilma's AP One native TimeBack runbook. Gates 0-3 now produce accepted source; Gates 4-11 separately bind the profile and Phase 0 authority, seal the graph/preview and all-absent plan, publish dark with exact readback and zero-write replay, enroll owner canaries, activate privately, run fresh-learner acceptance, and approve broader enrollment. No accepted historical receipt was rewritten or discarded: exact evidence moved only to its new credit home. HumGeo is Gate 4 IN_PROGRESS; APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology begin Gate 0 baseline while retaining all mapped evidence. No course, publication, enrollment, activation, PR, or merge action occurred in this dashboard update."
+  "text": "The four course plans are realigned around the AP One native TimeBack runbook. Gates 0-3 now produce accepted source; Gates 4-11 separately bind the profile and Phase 0 authority, seal the graph/preview and all-absent plan, publish dark with exact readback and zero-write replay, enroll owner canaries, activate privately, run fresh-learner acceptance, and approve broader enrollment. No accepted historical receipt was rewritten or discarded: exact evidence moved only to its new credit home. HumGeo is Gate 4 IN_PROGRESS; APWH remains Gate 2 IN_PROGRESS with nine unknown blueprint clauses; APUSH and Psychology begin Gate 0 baseline while retaining all mapped evidence. No course, publication, enrollment, activation, PR, or merge action occurred in this dashboard update."
  },
  {
   "ts": "2026-08-23T00:40Z",
   "course": "HumGeo",
-  "text": "HumGeo's old HOLD: BLOCKED_CONTRACT is retired. Intake #96 is closed and routed to AP One #659; Ilma's latest #659 ruling owns the TimeBack-direct bind, authorizes Josh to do what it needs, binds package 508543c1 into the frozen 68/204 input without content rewrite, and excludes Platform3. Gates 0-3 retain closure credit, with merged PR #63 completing SOURCE_ACCEPTED. Gate 4 is IN_PROGRESS on the reviewed course profile and exact Phase 0 authority packet. No TimeBack publication, enrollment, activation, or learner acceptance is claimed."
+  "text": "HumGeo's old HOLD: BLOCKED_CONTRACT is retired. Intake #96 is closed and routed to AP One #659; the repository owner's latest #659 ruling owns the TimeBack-direct bind, authorizes Josh to do what it needs, binds package 508543c1 into the frozen 68/204 input without content rewrite, and excludes Platform3. Gates 0-3 retain closure credit, with merged PR #63 completing SOURCE_ACCEPTED. Gate 4 is IN_PROGRESS on the reviewed course profile and exact Phase 0 authority packet. No TimeBack publication, enrollment, activation, or learner acceptance is claimed."
  },
  {
   "ts": "2026-08-22T13:33Z",
@@ -537,7 +542,7 @@
  {
   "ts": "2026-08-21T03:21Z",
   "course": "HumGeo",
-  "text": "HumGeo's current path is now merge-gated. Fail-closed PR #48 is on main at 32be2362. Clean PR #49 carries exactly 25 safe files; its exact prospective merge passes 684/121/0 and measures 119/150, while canonical main remains 114/150. Thirty-one queue-pinned records and four stale manifests remain excluded. The issue-44 evidence packet is posted once; fleet's latest REWORK requires a zero-corpus remediation plan now, with any apply ordered behind PR #49. Issue #50 separately tracks PSO-3.D.2 plus the nine phantom map codes. Next: Ilma merges #49, remeasure, earn one bounded EK through a separate reviewed PR, require 120/150, rebuild the exact package, then stop at the TimeBack inputs and fresh-go boundary. No publication or release claim is made."
+  "text": "HumGeo's current path is now merge-gated. Fail-closed PR #48 is on main at 32be2362. Clean PR #49 carries exactly 25 safe files; its exact prospective merge passes 684/121/0 and measures 119/150, while canonical main remains 114/150. Thirty-one queue-pinned records and four stale manifests remain excluded. The issue-44 evidence packet is posted once; fleet's latest REWORK requires a zero-corpus remediation plan now, with any apply ordered behind PR #49. Issue #50 separately tracks PSO-3.D.2 plus the nine phantom map codes. Next: Josh merges #49, remeasure, earn one bounded EK through a separate reviewed PR, require 120/150, rebuild the exact package, then stop at the TimeBack inputs and fresh-go boundary. No publication or release claim is made."
  },
  {
   "ts": "2026-08-21T01:05Z",
@@ -552,7 +557,7 @@
  {
   "ts": "2026-08-21T00:30Z",
   "course": "HumGeo",
-  "text": "HumGeo current-byte correction: the strict 150-EK verifier now reproduces 119/150 (79.3%); the earlier 120 result used looser receipt treatment and is retired. The five pilot passes remain local and uncommitted, so committed main's strict baseline remains 114/150. Morning rationale work made 48 successful calls and covered 47/48 targets; one retry still failed. Fifteen additional metadata rows were applied, leaving the exact 100-row cohort at 47 complete, 52 missing skill tags, and 1 incomplete rationale. The local issue-44 tree now has 60 modified, uncommitted files. Earlier bundle, suite, served-byte, and walk receipts bind the prior local snapshot, not this delta, and the historical 1,770 never-swept cut has not been re-derived on current bytes. No HumGeo recovery process is active; no corpus apply, GitHub write, or external publication occurred. HOLD: TIMEBACK_INSTRUCTIONS_FROM_ILMA remains unchanged."
+  "text": "HumGeo current-byte correction: the strict 150-EK verifier now reproduces 119/150 (79.3%); the earlier 120 result used looser receipt treatment and is retired. The five pilot passes remain local and uncommitted, so committed main's strict baseline remains 114/150. Morning rationale work made 48 successful calls and covered 47/48 targets; one retry still failed. Fifteen additional metadata rows were applied, leaving the exact 100-row cohort at 47 complete, 52 missing skill tags, and 1 incomplete rationale. The local issue-44 tree now has 60 modified, uncommitted files. Earlier bundle, suite, served-byte, and walk receipts bind the prior local snapshot, not this delta, and the historical 1,770 never-swept cut has not been re-derived on current bytes. No HumGeo recovery process is active; no corpus apply, GitHub write, or external publication occurred. HOLD: TIMEBACK_INSTRUCTIONS_FROM_OWNER remains unchanged."
  },
  {
   "ts": "2026-08-20T18:50Z",
@@ -622,7 +627,7 @@
  {
   "ts": "2026-08-20T05:52Z",
   "course": "HumGeo",
-  "text": "Blocker correction from the live #28 thread: Ilma's 2023/24 typed-gold authorization was received and executed on Aug. 14, and the governed pool landed in merged PR #32. Remove #28 from the list of owner asks. Fresh calibration acceptance remains course/fleet work and a later EOC tail unless it breaks the LS review surface or lowers measured coverage below the owner bar."
+  "text": "Blocker correction from the live #28 thread: the repository owner's 2023/24 typed-gold authorization was received and executed on Aug. 14, and the governed pool landed in merged PR #32. Remove #28 from the list of owner asks. Fresh calibration acceptance remains course/fleet work and a later EOC tail unless it breaks the LS review surface or lowers measured coverage below the owner bar."
  },
  {
   "ts": "2026-08-20T05:27Z",
@@ -647,7 +652,7 @@
  {
   "ts": "2026-08-20T04:16Z",
   "course": "APWH",
-  "text": "Live correction from issue #48: attempt 1 on current bank adcc641 is REWORK because the acceptance invocation omitted its evidence envelope. The reported 9-of-31 clear gates is an invocation artifact, not measured course residue. Fleet attempt 2 was claimed at 04:13Z and has no disposition yet; it must generate the envelope, rerun with retained fresh caches, repair the three recurring identities still failing, and receipt the missing Ilma audit and named human-SME dispositions."
+  "text": "Live correction from issue #48: attempt 1 on current bank adcc641 is REWORK because the acceptance invocation omitted its evidence envelope. The reported 9-of-31 clear gates is an invocation artifact, not measured course residue. Fleet attempt 2 was claimed at 04:13Z and has no disposition yet; it must generate the envelope, rerun with retained fresh caches, repair the three recurring identities still failing, and receipt the missing owner audit and named human-SME dispositions."
  },
  {
   "ts": "2026-08-20T03:10Z",
@@ -777,7 +782,7 @@
  {
   "ts": "2026-08-19T08:57Z",
   "course": "HumGeo",
-  "text": "Factory chain running: Ilma-core hydrator 373/373 complete; factory screens 0 repair-eligible + 0 lexical fatals; 10-row /v1/qc pilot 10/10 PASS post-hydration. 363-row /v1/qc batch in flight, chunks of 10 behind drained-pool receipts, seat attended. 82 miskey rows held for a sanctioned rationale pass after the batch boundary."
+  "text": "Factory chain running: factory-core hydrator 373/373 complete; factory screens 0 repair-eligible + 0 lexical fatals; 10-row /v1/qc pilot 10/10 PASS post-hydration. 363-row /v1/qc batch in flight, chunks of 10 behind drained-pool receipts, seat attended. 82 miskey rows held for a sanctioned rationale pass after the batch boundary."
  },
  {
   "ts": "2026-08-19T08:57Z",

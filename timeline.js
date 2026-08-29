@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 29, 2026 · 10:02 KST',
+  snapshot: 'Aug 29, 2026 · 10:22 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -25,9 +25,9 @@ const AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
-      status: 'Phases 1-3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 14:46Z',
+      status: 'Phases 1-3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 00:55Z',
       landed: 'Accepted source — closed · Course profile required before Phase 0 — closed · Phase 0 — Establish authority — closed · Phase 1.3 article depth — 440/440 operator receipts; bank-wide validation open · Phase 2 — unmeasured · Phase 3 — in progress',
-      nextStep: 'Gate and show the five-lesson PR package; after typed go, Ilma merge, and ingest, run the formal census reconcile, bank-wide validation, and answer-shape report.',
+      nextStep: 'Gate and show the five-lesson PR package; after Josh opens and merges the course PR and the bytes are ingested, run the formal census reconcile, bank-wide validation, and answer-shape report.',
       footprint: [
         { value: '440/440', label: 'operator-receipt article-check position' },
         { value: '161', label: 'persisted generation job bodies' },
@@ -38,18 +38,18 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 14:05Z',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 01:16Z',
       landed: 'Course profile required before Phase 0 — DONE · Accepted source — IN PROGRESS · Phase 0 — NOT ENTERED · Phases 1-10 — NOT STARTED',
-      nextStep: 'Settle accepted source through the paid slice after the HumGeo pool drain and spend go, plus the Platform3 study-skills write when its window opens; then run Phase 0.1-0.3.',
+      nextStep: 'Settle the remaining accepted-source rows, including paid or judgment content and open study-skills platform work; no course-merge-owner wait applies. Then run Phase 0.1-0.3.',
       footprint: [
         { value: '235', label: 'accepted-source ledger rows' },
-        { value: '95', label: 'receipt-bound PASS rows' },
-        { value: '34', label: 'receipt-bound MISSING rows' }
+        { value: '95', label: 'last complete-surface PASS rows' },
+        { value: '34', label: 'last complete-surface MISSING rows' }
       ]
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 11:58Z',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 01:16Z',
       landed: 'Accepted source — in progress · Phase 1 — Map the complete course tree / 1.7 Tree invariants — mapped composer and binding-census evidence · Phase 3 — Generate hosted assets and QTI — mapped wrapper evidence; no phase credit',
       nextStep: 'Re-derive the remaining 21 bindings through issue #9, preserve the 53 landed wrappers, and rerun the owning verifier.',
       footprint: [
@@ -60,7 +60,7 @@ const AP4_DASHBOARD = {
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 28 · 14:20Z',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 01:16Z',
       landed: 'Accepted source — IN PROGRESS · Units 1-4 assessment and publish artifacts staged · P1-04, P3-05, and P3-06 — bounded IN_PROGRESS evidence with no phase credit · Course profile, Phase 0, and handoff — NOT_YET_MEASURED',
       nextStep: 'Land the one remaining Unit 5 mechanism issue, #51; then run bounded Unit 5 generation after the HumGeo-first queue and spend go, close AS-01, and build the reviewed course profile.',
       footprint: [
@@ -85,10 +85,10 @@ const AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'APWH is before Phase 0. The required course profile is done, accepted source is IN PROGRESS at a receipt-bound 95 PASS / 34 MISSING, Phase 0 is NOT ENTERED, and Phases 1-10 are NOT STARTED.',
+      note: 'APWH is before Phase 0. The required course profile and profile-hash refresh are landed. Accepted source remains IN PROGRESS; 95 PASS / 34 MISSING is the last complete-surface receipt, while the Aug 29 partial materialization remains diagnostic only. Phase 0 is NOT ENTERED, and Phases 1-10 are NOT STARTED.',
       rows: [
-        { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile + consumer landed through PR #889 at 8d4ab63a', copy: 'Ilma merged the reviewed, validator-consumed profile and consumer. PR #891 remains open for the authoring and profile-hash refresh; this prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/889' },
-        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: '235 rows · 95 PASS · 34 MISSING', copy: 'The receipt-bound position also contains 97 DOCUMENTED, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. A-059, A-163, and A-146 closed today; A-186 landed to its designed ceiling.', href: 'https://github.com/ilmych/apwh-blueprint-build/commit/e955e81667b1c71cd2a4855aacae77e499415c99' },
+        { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile, consumer, authoring wave, and hash refresh landed', copy: 'PR #889 landed the reviewed, validator-consumed profile and consumer; PR #891 then landed the authoring wave and profile-hash refresh. This prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/891' },
+        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: '235 rows · last complete receipt 95 PASS / 34 MISSING', copy: 'The Aug 29 current-tree recheck remained non-green, but its materialized tree omitted registry and app-source surfaces. That partial diagnostic does not supersede the last complete-surface ledger. The blocker is unsettled accepted-source evidence, not merge ownership.', href: 'https://github.com/ilmych/apwh-blueprint-build/commit/c9c47afef75b7af70bc312cb486801ebad3a4e3f' },
         { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.2 capture tool authored; accepted source still moving', copy: 'After AS-01 settles: bind the environment under 0.1, capture immutable source authority under 0.2, then freeze the versioned namespace under 0.3.', href: 'apwh.html' },
         { gate: 5, code: 'P1-10', name: 'Phases 1-10', label: 'Later lifecycle', state: 'locked', status: 'Not started', signal: 'Nothing after Phase 0 has started', copy: 'Course-tree mapping begins only after Phase 0 exists; every later runbook phase remains untouched.', href: 'apwh.html' }
       ]

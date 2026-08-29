@@ -16,7 +16,7 @@
   <section class="reading-guide">
     <h2>Current runbook position</h2>
     <dl>
-      <div><dt>Pre-Phase-0 requirement — course profile</dt><dd><strong>DONE.</strong> The profile and validator consumer landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">AP One PR #889</a> at <code>8d4ab63a</code>, merged by Ilma. The authoring and profile-hash refresh remains open on <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">PR #891</a>.</dd></div>
+      <div><dt>Pre-Phase-0 requirement — course profile</dt><dd><strong>DONE.</strong> The profile and validator consumer landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">AP One PR #889</a> at <code>8d4ab63a</code>. The authoring and profile-hash refresh also landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">PR #891</a>.</dd></div>
       <div><dt>Lifecycle state 1 — accepted source</dt><dd><strong>IN PROGRESS.</strong> The 235-row blueprint-conformance ledger is not yet settled.</dd></div>
       <div><dt>Phase 0 — Establish authority</dt><dd><strong>NOT ENTERED.</strong> The capture tool is authored, but Phase 0 waits for accepted source to settle.</dd></div>
       <div><dt>Phases 1-10</dt><dd><strong>NOT STARTED.</strong> Nothing after Phase 0 begins until the Phase 0 authority capture exists.</dd></div>
@@ -26,10 +26,10 @@
   <section>
     <h2>Accepted source — in progress</h2>
     <ul>
-      <li>The exact receipt-bound position is 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN across 235 rows.</li>
-      <li>Today's movement closes A-059, A-163, and A-146. A-186 landed to its designed ceiling. The A-146/A-186 carrier is canonical on <a href="https://github.com/ilmych/apwh-blueprint-build/commit/e955e81667b1c71cd2a4855aacae77e499415c99" target="_blank" rel="noopener">blueprint main <code>e955e81</code></a>; A-059/A-163 and the profile-hash refresh are on open AP One PR #891.</li>
-      <li>Of the 34 MISSING rows, about 19 are Ilma-side work packages or platform gaps, about 12 are paid or judgment content rows, and the remainder are ceiling or convention rows.</li>
-      <li>The two owner-side levers are the paid slice after the HumGeo pool drains and spend is approved, plus the Platform3 study-skills write when its write window opens. Ilma-side rows move on her schedule.</li>
+      <li>The last complete-surface 235-row receipt remains 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. No later complete-surface receipt has superseded it.</li>
+      <li>PR #891 is merged. Blueprint main has advanced to <a href="https://github.com/ilmych/apwh-blueprint-build/commit/c9c47afef75b7af70bc312cb486801ebad3a4e3f" target="_blank" rel="noopener"><code>c9c47afe</code></a> with the TimeBack QTI readback fix.</li>
+      <li>A fresh executor recheck against AP One <code>d255a855</code> remained non-green. Its materialized tree lacked the registry and app-source surfaces, so its partial 89 PASS / 41 MISSING result is diagnostic only and does not replace the complete-surface ledger.</li>
+      <li>The real blockers are unsettled accepted-source rows: paid or judgment content, open platform work including <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">study-skills issue #591</a>, and remaining convention or ceiling rows. APWH is not waiting on another person to merge a course PR; Josh owns course merges.</li>
     </ul>
   </section>
 
@@ -50,26 +50,26 @@
   <section class="reading-guide">
     <h2>Next steps — runbook order</h2>
     <dl>
-      <div><dt>1. Settle accepted source</dt><dd>Fire the paid slice after the HumGeo pool drains and spend is approved; take the Platform3 study-skills write when its write window opens. Ilma-side rows move on her schedule.</dd></div>
+      <div><dt>1. Settle accepted source</dt><dd>Run the paid slice after the HumGeo pool drains and spend is approved, close the Platform3 study-skills work when its write window opens, and resolve the remaining convention and ceiling rows. No course-merge-owner wait applies.</dd></div>
       <div><dt>2. Enter Phase 0</dt><dd>The moment AS-01 settles, re-pin and run the Phase 0 capture, then freeze the namespace.</dd></div>
       <div><dt>3. Enter Phase 1</dt><dd>Start complete course-tree mapping only after Phase 0 exists.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">open authoring/profile-hash PR #891</a> · <a href="https://github.com/ilmych/apwh-blueprint-build/commit/e955e81667b1c71cd2a4855aacae77e499415c99" target="_blank" rel="noopener">blueprint main <code>e955e81</code></a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">study-skills write issue #591</a> · 235-row course-bound oracle receipt.</p></section>
+  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">merged authoring/profile-hash PR #891</a> · <a href="https://github.com/ilmych/apwh-blueprint-build/commit/c9c47afef75b7af70bc312cb486801ebad3a4e3f" target="_blank" rel="noopener">blueprint main <code>c9c47afe</code></a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">study-skills write issue #591</a> · latest complete-surface 235-row oracle receipt.</p></section>
 
 <section data-gate-evidence="apwh">
     <noscript>Enable JavaScript to view the quantified lifecycle evidence map.</noscript>
   </section>
 
-  <details class="eta-details" open>
-    <summary>Historical course record through Aug 28 · 18:14 KST</summary>
+  <details class="eta-details">
+    <summary>Historical course record — superseded snapshots through Aug 28 · 18:14 KST</summary>
     <p class="sub">Preserved from the last full page before <code>586b573</code>. Current status above supersedes historical status labels and counts.</p>
 
 <p class="sub">Accepted source is BLOCKED. The current 235-row course-bound oracle is non-green; landed profile, DBQ, and grader-readiness mechanisms do not start Phase 0.</p>
 
   <section>
-    <h2>Verified now</h2>
+    <h2>Historical verified state</h2>
     <ul>
       <li><b>Accepted-source scope sub-receipt — <code>CLOSED · SCOPE_LOCKED</code>:</b> the current College Board CED resolves to 9 units, 71 topics, and 71 learning objectives. The pinned blueprint, accepted lesson identities, and AP One projection reproduce that exact official set.</li>
       <li><b>Accepted source — <code>BLOCKED · ORACLE NON-GREEN</code>:</b> executor receipt-0005 classifies 235 rows as 92 PASS, 97 DOCUMENTED, 37 MISSING, 3 DEVIATION-RECORDED, 3 FAIL, 1 ESCALATED, and 2 WARN.</li>
@@ -102,7 +102,7 @@
       <li><b>Accepted source is measured, not closed:</b> item identities classify as 3,384 attached and 7,127 unattached, with zero unknown. The slot inventory classifies 5,576 attached, 263 unattached, 80 genuinely missing, and zero unknown. The prior deterministic 235-clause build records 179 attached, 49 missing, one stale failure, and six unknown. A-116 and A-202 remain proved missing. Although an earlier read-only view attached A-154 from 616 scored criterion rows, the current closure review again classifies A-154 with A-100, A-101, and A-103 through A-106 as unresolved; the current review governs dashboard status.</li>
       <li><b>Current hold:</b> resolve the 37 MISSING, 3 FAIL, and 1 ESCALATED oracle rows through their owning factory routes; do not promote the profile or grader mechanisms into closure.</li>
       <li><b>Runbook lifecycle:</b> accepted source must close before Phase 0 authority capture begins.</li>
-      <li><b>Human review:</b> Ilma/SME/LS dispositions remain real later evidence, but owner direction does not require an unnamed completion signoff before sharing the candidate with Learning Science.</li>
+      <li><b>Human review:</b> SME and Learning Science dispositions remain real later evidence, but owner direction does not require an unnamed completion signoff before sharing the candidate with Learning Science.</li>
       <li><b>Production delivery:</b> a passing bar and LS handoff do not publish the course. Release still needs exact action/readback/recovery evidence and a dated learner walk.</li>
       <li><b>Ownership:</b> Josh explicitly authorized the accepted-source grading work. The remaining 79 grading calls were not resumed under the current authority boundary; no APWH bank, course, publication, or learner-surface mutation is claimed. Phase 0 has not started.</li>
     </ul>
