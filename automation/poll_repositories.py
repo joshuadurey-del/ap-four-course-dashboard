@@ -7,20 +7,24 @@ import argparse
 import base64
 from concurrent.futures import ThreadPoolExecutor
 import datetime as dt
+import hashlib
+import hmac
 import json
 import os
 from pathlib import Path
+import tempfile
 import urllib.error
 import urllib.parse
 import urllib.request
 
-from dashboard_event import poll_key, process_polled_item
+from dashboard_event import poll_key, process_local_item, process_polled_item, verify_signature
 
 EVIDENCE_REPO = "joshuadurey-del/ap-ss-evidence"
 INVENTORY_PATH = "dashboard-automation/v1/inventory.json"
 STATE_PATH = "dashboard-automation/v1/state.json"
 MAX_PER_ENDPOINT = 100
 MAX_PUBLIC_UPDATES = 40
+MAX_LOCAL_BATCH = 80
 
 
 def now_utc():
@@ -131,7 +135,41 @@ def collect_all(api, inventory):
     return sorted(unique.values(), key=lambda item: item["occurred_at"], reverse=True)
 
 
-def select_updates(items, state, existing_urls, observed_at, inventory):
+def ref_hashes(item):
+    repo = item["repository"]
+    name = repo.split("/", 1)[1]
+    values = {item["evidence_url"]}
+    sha = item.get("source_sha")
+    if sha:
+        values |= {sha, sha[:7], sha[:8], sha[:12], f"{name}@{sha}", f"{name}@{sha[:8]}"}
+    if item.get("number"):
+        values |= {f"{repo}#{item['number']}", f"{name}#{item['number']}", f"#{item['number']}"}
+    return {hashlib.sha256(value.encode()).hexdigest() for value in values}
+
+
+def load_local_dispatch():
+    if os.environ.get("GITHUB_EVENT_NAME") != "repository_dispatch":
+        return []
+    try:
+        event = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())
+        payload = event["client_payload"]
+        document = payload["document"]
+        signature = payload["signature"]
+        body = json.dumps(document, sort_keys=True, separators=(",", ":")).encode()
+        secret = os.environ.get("LOCAL_EVENT_DISPATCH_SECRET", "").encode()
+        if not secret or not verify_signature(secret, body, signature):
+            raise ValueError("signature")
+        if (set(document) != {"schema", "events"}
+                or document["schema"] != "dashboard-local-event-batch/v1"
+                or not isinstance(document["events"], list)
+                or not 1 <= len(document["events"]) <= MAX_LOCAL_BATCH):
+            raise ValueError("batch")
+        return document["events"]
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError, OSError) as error:
+        raise RuntimeError(f"DASHBOARD_AUTOMATION_EVENTS_LOG_INVALID: dispatch {error}") from None
+
+
+def select_updates(items, state, existing_urls, observed_at, inventory, local_items=()):
     seen = set(state.get("seen", []))
     bootstrap = not state.get("initialized")
     if not bootstrap:
@@ -167,6 +205,26 @@ def select_updates(items, state, existing_urls, observed_at, inventory):
             "status": decision["status"], "reason": decision["reason"],
             "latency_seconds": max(0, int((observed_at - dt.datetime.fromisoformat(item["occurred_at"].replace("Z", "+00:00"))).total_seconds())),
         })
+    local_seen = set(state.get("local_seen", []))
+    github_refs = set().union(*(ref_hashes(item) for item in items)) if items else set()
+    for item in local_items:
+        decision = process_local_item(item, local_seen, github_refs, observed_at)
+        safe_item = item if isinstance(item, dict) else {}
+        occurred_at = str(safe_item.get("ts", iso(observed_at)))
+        try:
+            latency = max(0, int((observed_at - dt.datetime.fromisoformat(occurred_at.replace("Z", "+00:00"))).total_seconds()))
+        except ValueError:
+            latency = 0
+        decisions.append({
+            "key": str(safe_item.get("delivery_id", "invalid")), "repository": "LOCAL",
+            "event": "local", "occurred_at": occurred_at,
+            "status": decision["status"], "reason": decision["reason"],
+            "latency_seconds": latency,
+        })
+        if decision["status"] == "UPDATE" and len(updates) < MAX_PUBLIC_UPDATES:
+            updates.append(decision["update"])
+        if decision["status"] != "HOLD" and isinstance(safe_item.get("delivery_id"), str):
+            local_seen.add(safe_item["delivery_id"])
     current_keys = [poll_key(item) for item in items]
     current_set = set(current_keys)
     prior_keys = [key for key in state.get("seen", []) if key not in current_set]
@@ -174,6 +232,7 @@ def select_updates(items, state, existing_urls, observed_at, inventory):
         "schema": "dashboard-poller-state/v1", "initialized": True,
         "updated_at": iso(observed_at),
         "seen": (current_keys + prior_keys)[:20000],
+        "local_seen": sorted(local_seen)[-20000:],
     }
     return updates, decisions, next_state, bootstrap
 
@@ -194,6 +253,7 @@ def prepare(transaction_path):
     key = run_key(observed_at)
     receipt_path = f"runs/{observed_at:%Y-%m-%d}/dashboard-automation/{key}.json"
     try:
+        local_items = load_local_dispatch()
         items = collect_all(source, inventory)
     except RuntimeError as error:
         receipt = {
@@ -207,7 +267,9 @@ def prepare(transaction_path):
     public_path = Path("updates.json")
     public = json.loads(public_path.read_text())
     existing_urls = {row.get("evidence_url") for row in public if row.get("evidence_url")}
-    updates, decisions, next_state, bootstrap = select_updates(items, state, existing_urls, observed_at, inventory)
+    updates, decisions, next_state, bootstrap = select_updates(
+        items, state, existing_urls, observed_at, inventory, local_items,
+    )
     holds = [decision for decision in decisions if decision["status"] == "HOLD"]
     receipt = {
         "schema": "dashboard-poller-receipt/v1", "run_key": key,
@@ -228,7 +290,8 @@ def prepare(transaction_path):
     }
     Path(transaction_path).write_text(json.dumps(transaction, indent=2, sort_keys=True) + "\n")
     if updates:
-        public_path.write_text(json.dumps(updates + public, indent=2) + "\n")
+        combined = sorted(updates + public, key=lambda row: row["ts"], reverse=True)
+        public_path.write_text(json.dumps(combined, indent=2) + "\n")
     print(f"prepare: repositories={len(inventory)} candidates={len(items)} updates={len(updates)} bootstrap={bootstrap}")
 
 
@@ -289,6 +352,31 @@ def selftest():
     ]
     _, page_decisions, _, _ = select_updates(full_page, {"initialized": True, "seen": []}, set(), observed, inventory)
     assert page_decisions[0]["reason"] == "PAGINATION_BOUNDARY_UNRESOLVED"
+    local = {
+        "schema": "incept-course-event-v1", "delivery_id": "1" * 16,
+        "ts": "2026-08-29T02:00:00Z", "course": "humgeo", "phase": "P1",
+        "kind": "landed", "text": "Local packet landed.", "backfill": False,
+        "ref_hashes": [],
+    }
+    local_updates, local_decisions, local_state, _ = select_updates(
+        [], {"initialized": True, "seen": []}, set(), observed, inventory, [local],
+    )
+    assert len(local_updates) == 1 and local_decisions[0]["status"] == "UPDATE"
+    assert local["delivery_id"] in local_state["local_seen"]
+    document = {"schema": "dashboard-local-event-batch/v1", "events": [local]}
+    body = json.dumps(document, sort_keys=True, separators=(",", ":")).encode()
+    with tempfile.TemporaryDirectory() as directory:
+        event_path = Path(directory) / "event.json"
+        event_path.write_text(json.dumps({"client_payload": {
+            "document": document,
+            "signature": "sha256=" + hmac.new(b"test", body, hashlib.sha256).hexdigest(),
+        }}))
+        old = {key: os.environ.get(key) for key in ("GITHUB_EVENT_NAME", "GITHUB_EVENT_PATH", "LOCAL_EVENT_DISPATCH_SECRET")}
+        os.environ.update({"GITHUB_EVENT_NAME": "repository_dispatch", "GITHUB_EVENT_PATH": str(event_path), "LOCAL_EVENT_DISPATCH_SECRET": "test"})
+        assert load_local_dispatch() == [local]
+        for key, value in old.items():
+            if value is None: os.environ.pop(key, None)
+            else: os.environ[key] = value
     print("selftest: all checks passed")
 
 

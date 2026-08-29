@@ -21,11 +21,15 @@
       return null;
     }
   };
+  const newestLocal = (updates, course) => updates
+    .filter(update => update?.course === course && typeof update?.kind === 'string' && !Number.isNaN(Date.parse(update.ts)))
+    .sort((a, b) => Date.parse(b.ts) - Date.parse(a.ts))[0];
 
   if (typeof document === 'undefined') {
     if (displayText('Ilma') !== 'the repository owner') throw new Error('display text self-test failed');
     if (!evidenceUrl('https://github.com/example/course/commit/abc')) throw new Error('evidence URL self-test failed');
     if (evidenceUrl('https://example.com/not-allowed')) throw new Error('unsafe URL self-test failed');
+    if (newestLocal([{ course: 'psych', kind: 'landed', ts: '2026-08-29T00:00Z' }], 'psych')?.kind !== 'landed') throw new Error('local freshness self-test failed');
     return;
   }
 
@@ -83,6 +87,14 @@
     if (!Array.isArray(updates)) throw new Error('updates.json must be an array');
     const visibleUpdates = render(lists[0], updates);
     lists.slice(1).forEach(list => render(list, updates));
+    lists.filter(list => list.hasAttribute('data-event-only')).forEach(list => {
+      const latest = newestLocal(updates, list.dataset.course?.toLowerCase());
+      if (!latest) return;
+      const status = document.createElement('p');
+      status.className = 'local-freshness';
+      status.textContent = `Last local landing: ${local(Date.parse(latest.ts))} · ${relative(Date.parse(latest.ts))}`;
+      list.before(status);
+    });
     const lastUpdated = document.getElementById('lastupd');
     if (lastUpdated && visibleUpdates.length) {
       const newest = Math.max(...visibleUpdates.map(update => Date.parse(update.ts)));

@@ -42,6 +42,14 @@ for index, update in enumerate(updates):
         url = urllib.parse.urlparse(update['evidence_url'])
         assert url.scheme == 'https' and url.hostname == 'github.com' and url.path.strip('/'), \
             f'update {index} has invalid evidence_url'
+    local_fields = {'phase', 'kind'} & update.keys()
+    assert not local_fields or local_fields == {'phase', 'kind'}, \
+        f'update {index} must carry phase and kind together'
+    if local_fields:
+        assert not event_fields, f'update {index} cannot be both local and GitHub activity'
+        assert update['kind'] in {'landed', 'merged', 'filed', 'closed', 'receipt-sealed', 'state-change', 'milestone', 'hold', 'executor-step', 'note'}, \
+            f'update {index} has invalid local kind'
+        assert isinstance(update['phase'], str), f'update {index} has invalid phase'
 
 print(f'UPDATES OK: {len(updates)} schema-valid entries')
 PY

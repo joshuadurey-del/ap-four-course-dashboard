@@ -13,6 +13,8 @@ Required Actions secrets:
 - `SOURCE_REPO_READ_TOKEN` — owner-minted classic PAT with `repo` read access.
 - `EVIDENCE_REPO_WRITE_TOKEN` — separate fine-grained PAT scoped only to
   `joshuadurey-del/ap-ss-evidence`, Contents read-write.
+- `LOCAL_EVENT_DISPATCH_SECRET` — HMAC secret shared only with the local INCEPT
+  appender through macOS Keychain.
 
 Set each secret interactively; never place its value on a command line:
 
@@ -37,6 +39,11 @@ and baselines all observed cursor keys. Later runs publish unseen events, capped
 40 rows per run. Single-writer workflow concurrency and evidence-URL dedup prevent
 duplicate commits. Actual event-to-decision latency is recorded by each run; the
 ten-minute schedule is a target, not a promise.
+
+Local landings use authenticated `repository_dispatch: course-event`. The
+receipt-free signed payload contract is fixed in `automation/ADR.md`; row IDs are
+persisted with the private cursor. Local `backfill` rows baseline as NOOP, and the
+course pages compute “Last local landing” from the newest projected row timestamp.
 
 Phase B replaces `SOURCE_REPO_READ_TOKEN` repo by repo with short-lived,
 read-only GitHub App installation tokens. External real-time webhook ingress is

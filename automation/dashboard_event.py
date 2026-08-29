@@ -22,6 +22,12 @@ POLL_EVENTS = EVENTS | {"release", "workflow_run"}
 SHA = re.compile(r"[0-9a-f]{40}")
 REPOSITORY = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
 TOKEN = re.compile(r"[A-Za-z0-9._:-]{1,128}")
+HEX16 = re.compile(r"[0-9a-f]{16}")
+HEX64 = re.compile(r"[0-9a-f]{64}")
+LOCAL_KINDS = {
+    "landed", "merged", "filed", "closed", "receipt-sealed",
+    "state-change", "milestone", "hold", "executor-step", "note",
+}
 
 
 def _decision(status, reason, delivery_id="unknown", source_sha="unknown", now=None, **extra):
@@ -171,6 +177,50 @@ def process_polled_item(item, inventory, seen, now=None):
     )
 
 
+def process_local_item(item, seen, github_ref_hashes, now=None):
+    allowed = {
+        "schema", "delivery_id", "ts", "course", "phase", "kind", "text",
+        "backfill", "ref_hashes",
+    }
+    if not isinstance(item, dict) or set(item) != allowed:
+        return _decision("HOLD", "LOCAL_EVENT_INVALID: fields", now=now)
+    try:
+        dt.datetime.fromisoformat(str(item["ts"]).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return _decision("HOLD", "LOCAL_EVENT_INVALID: timestamp", now=now)
+    text = item["text"]
+    hashes = item["ref_hashes"]
+    timestamp = str(item["ts"])
+    if (item["schema"] != "incept-course-event-v1"
+            or not HEX16.fullmatch(str(item["delivery_id"]))
+            or len(timestamp) != 20 or not timestamp.endswith("Z")
+            or item["course"] not in COURSES | {"cross"}
+            or item["kind"] not in LOCAL_KINDS
+            or not isinstance(item["phase"], str) or len(item["phase"]) > 128
+            or not isinstance(text, str) or not text.strip() or len(text) > 500
+            or any(ord(char) < 32 for char in text)
+            or any(token in text for token in ("/Users/", "file://", "-----BEGIN", "ghp_", "github_pat_"))
+            or not isinstance(item["backfill"], bool)
+            or not isinstance(hashes, list) or len(hashes) > 32
+            or any(not HEX64.fullmatch(str(value)) for value in hashes)):
+        return _decision("HOLD", "LOCAL_EVENT_INVALID: authority or privacy field", now=now)
+    delivery_id = item["delivery_id"]
+    base = {"delivery_id": delivery_id, "source_sha": "none", "now": now}
+    if delivery_id in seen:
+        return _decision("REDELIVERY", "DUPLICATE_LOCAL_ROW_ID", **base)
+    if item["backfill"]:
+        return _decision("NOOP", "LOCAL_BACKFILL_BASELINED", **base)
+    if set(hashes) & github_ref_hashes:
+        return _decision("NOOP", "GITHUB_EVIDENCE_PREFERRED", **base)
+    return _decision(
+        "UPDATE", "VERIFIED_LOCAL_LANDING", **base,
+        update={
+            "ts": item["ts"][:16] + "Z", "course": item["course"],
+            "phase": item["phase"], "kind": item["kind"], "text": text,
+        },
+    )
+
+
 def claim_delivery(state_dir, delivery_id, source_sha):
     """Atomically claim one delivery/SHA in a caller-owned private directory."""
     os.makedirs(state_dir, mode=0o700, exist_ok=True)
@@ -218,6 +268,15 @@ def _self_test():
     assert decision["status"] == "UPDATE" and "commit aaaaaaaa" in decision["update"]["text"]
     assert process_polled_item(polled, {"example/course": "humgeo"}, {poll_key(polled)}, now)["status"] == "REDELIVERY"
     assert process_polled_item({**polled, "phase": "10"}, {"example/course": "humgeo"}, set(), now)["status"] == "HOLD"
+    local = {
+        "schema": "incept-course-event-v1", "delivery_id": "1" * 16,
+        "ts": "2026-08-29T02:29:00Z", "course": "humgeo", "phase": "P1",
+        "kind": "landed", "text": "Local packet landed.", "backfill": False,
+        "ref_hashes": [],
+    }
+    assert process_local_item(local, set(), set(), now)["status"] == "UPDATE"
+    assert process_local_item(local, {local["delivery_id"]}, set(), now)["status"] == "REDELIVERY"
+    assert process_local_item({**local, "text": "/Users/private"}, set(), set(), now)["status"] == "HOLD"
 
 
 if __name__ == "__main__":
