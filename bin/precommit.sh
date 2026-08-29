@@ -37,7 +37,7 @@ for index, update in enumerate(updates):
     assert not event_fields or event_fields == {'event_type', 'evidence_url'}, \
         f'update {index} must carry event_type and evidence_url together'
     if event_fields:
-        assert update['event_type'] in {'push', 'pull_request', 'issues'}, \
+        assert update['event_type'] in {'push', 'pull_request', 'issues', 'release', 'workflow_run'}, \
             f'update {index} has invalid event_type'
         url = urllib.parse.urlparse(update['evidence_url'])
         assert url.scheme == 'https' and url.hostname == 'github.com' and url.path.strip('/'), \
@@ -61,6 +61,8 @@ fi
 
 if [ -n "$SKIP_CLAIMS_LINT" ]; then
   echo "pre-commit: claims lint SKIPPED by SKIP_CLAIMS_LINT"
+elif ! echo "$STAGED" | grep -qx 'data.json'; then
+  echo "pre-commit: claims lint not needed (data.json unchanged)"
 elif [ ! -f "$LINT" ]; then
   echo "pre-commit: BLOCKED — claims linter not found at $LINT."
   echo "  Set INCEPT_ZONE, or commit with SKIP_CLAIMS_LINT=1 and say so in the message."

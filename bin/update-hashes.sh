@@ -28,11 +28,9 @@ git add hashes.json
 # 2026-08-28: the date must move at each update; the hand-set stamp went
 # stale twice). Runs after hashes so both are staged together.
 python3 - <<'PYEOF'
-import re, subprocess
-stamp = subprocess.check_output(
-    ['date', '-u', '-v+9H', '+%b %-d, %Y %H:%M']).decode().strip()
-month_day, year, hhmm = stamp.rsplit(' ', 2)
-kst = f"{month_day} {year} \u00b7 {hhmm} KST"
+import datetime, re
+now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
+kst = f"{now:%b} {now.day}, {now.year} \u00b7 {now:%H:%M} KST"
 src = open('timeline.js').read()
 new = re.sub(r"snapshot: '[^']*'", f"snapshot: '{kst}'", src, count=1)
 if new != src:

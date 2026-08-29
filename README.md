@@ -19,4 +19,8 @@ Status rule: prepared, factory-accepted, merged, deployed, and released are sepa
 
 Public-repo boundary: never paste machine-local paths, private handoffs, credential detail, or private receipt bodies into this repository. Keep operational handoffs inside the Alpha workspace; this site carries only the public-safe status view.
 
-Update flow: edit the JSON (and any page text), commit, push. Pages redeploys in about a minute.
+Update flow: `.github/workflows/dashboard-repo-poll.yml` polls the ten private
+source repositories every ten minutes and on `repository_dispatch: course-event`.
+It persists cursors and receipts in private `joshuadurey-del/ap-ss-evidence`, then
+commits only verified, public-safe activity rows. Lifecycle claims remain manual
+and verifier-bound. Setup and credential boundaries: `automation/README.md`.

@@ -1,0 +1,96 @@
+name: Update private repository activity
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [course-event]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: dashboard-repository-activity
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    if: vars.DASHBOARD_AUTOMATION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Require scoped credentials
+        env:
+          SOURCE_REPO_READ_TOKEN: ${{ secrets.SOURCE_REPO_READ_TOKEN }}
+          EVIDENCE_REPO_WRITE_TOKEN: ${{ secrets.EVIDENCE_REPO_WRITE_TOKEN }}
+        run: |
+          test -n "$SOURCE_REPO_READ_TOKEN" || { echo "HOLD: SOURCE_REPO_READ_TOKEN is missing"; exit 1; }
+          test -n "$EVIDENCE_REPO_WRITE_TOKEN" || { echo "HOLD: EVIDENCE_REPO_WRITE_TOKEN is missing"; exit 1; }
+
+      - name: Verify contracts and clean base
+        run: |
+          python3 automation/dashboard_event.py
+          python3 automation/poll_repositories.py selftest
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+
+      - name: Prepare private receipt and dashboard update
+        env:
+          SOURCE_REPO_READ_TOKEN: ${{ secrets.SOURCE_REPO_READ_TOKEN }}
+          EVIDENCE_REPO_WRITE_TOKEN: ${{ secrets.EVIDENCE_REPO_WRITE_TOKEN }}
+          DASHBOARD_BASE_SHA: ${{ github.sha }}
+        run: python3 automation/poll_repositories.py prepare --transaction /tmp/dashboard-poll.json
+
+      - name: Commit and push semantic updates
+        id: publish
+        run: |
+          if git diff --quiet -- updates.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git add updates.json
+          bin/precommit.sh
+          git diff --cached --check
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git commit -m "Update verified repository activity [skip ci]"
+          expected_base=$(git rev-parse HEAD^)
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$expected_base" || { echo "HOLD: DASHBOARD_HEAD_DRIFT"; exit 1; }
+          git push origin HEAD:main
+          test "$(git ls-remote origin refs/heads/main | awk '{print $1}')" = "$(git rev-parse HEAD)"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Request Pages build
+        id: pages
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "build_id=$(gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --jq .id)" >> "$GITHUB_OUTPUT"
+
+      - name: Finalize private cursor and receipt
+        if: success()
+        env:
+          EVIDENCE_REPO_WRITE_TOKEN: ${{ secrets.EVIDENCE_REPO_WRITE_TOKEN }}
+          PAGES_BUILD_ID: ${{ steps.pages.outputs.build_id }}
+        run: python3 automation/poll_repositories.py finalize --transaction /tmp/dashboard-poll.json --dashboard-commit "$(git rev-parse HEAD)" --pages-build-id "${PAGES_BUILD_ID:-NOT_REQUESTED}"
+
+      - name: Record measured trigger latency
+        if: always()
+        run: |
+          if test -f /tmp/dashboard-poll.json; then
+            python3 - <<'PY'
+          import json
+          tx = json.load(open('/tmp/dashboard-poll.json'))
+          values = [row['latency_seconds'] for row in tx['receipt']['decisions']]
+          print('event_to_decision_seconds_min=' + (str(min(values)) if values else 'UNMEASURED'))
+          print('event_to_decision_seconds_max=' + (str(max(values)) if values else 'UNMEASURED'))
+          PY
+          fi
