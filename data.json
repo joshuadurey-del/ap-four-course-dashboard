@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-28T14:05Z",
+  "snapshot": "2026-08-29T00:55Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -247,21 +247,35 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo P1-04 is IN PROGRESS at an operational 437 of 440: 13 of 16 enriched replacements hold dual-QC acceptance, and Round 6 is active on the three residue slots. The owner selected the scenario-enriched route; one job is in flight with eight pool slots free and active_hold is null. The last formal module-reconciled baseline is 424/440; the 437 position becomes formal after accepted bytes land and the module reconcile runs.",
-      "scope": "current P1-04 operational article-check position and remaining residue; formal reconcile remains pending",
+      "value": "HumGeo Phases 1-3 remain IN PROGRESS. Phase 0 authority is DONE for this work. P1-04 article exercise depth is MET at the operator-receipt position: all 440 of 440 article-check slots hold factory acceptances after creation full-QC and an independent /v1/qc call. The final slot, d833b559-article-05, accepted in Round 13 on cycle 1 with independent-QC score 0.979. All 161 generation job bodies are persisted, and every regeneration round was certified and receipted. The formal census number remains pending: its reconcile runs only after the five enriched lesson commits db842d0 through 3087400 land, because the plan binds landed article bytes. Still OPEN in Phase 1.3 is the bank-wide validation sweep; Phase 2 pricing is UNMEASURED this session; Phase 3.2 waits on landing; Phase 3.4 answer-shape is OPEN; Phase 3.6 QTI validation and 3.7 student-surface preview are NOT STARTED at the enriched bytes; Phases 4-10 are NOT REACHED.",
+      "scope": "current HumGeo runbook position at local enriched article bytes; 440/440 is the operator-receipt position, not the formal landed-byte census or a publication, activation, learner-acceptance, release, or course-completion claim",
       "evidence": [
         {
-          "type": "oracle-mechanism",
-          "url": "https://github.com/ilmych/humgeo-rebuild/blob/8495d75929f2e25d6f7fa50fc24ce3d47481a887/scripts/blueprint_diff.py"
+          "type": "controller-execution-state",
+          "observed_at": "2026-08-28T14:46:48Z",
+          "sha256": "7b47ec6435d1e8b7b5ffff531edd6051111370580bc23ab0eb726b24c7dfeed0",
+          "operator_receipt_position": "440/440",
+          "persisted_job_bodies": 161,
+          "formal_reconcile": "PENDING_LANDED_ARTICLE_BYTES"
         },
         {
-          "type": "verifier-gap",
-          "status": "NOT_RUN",
-          "reason": "protected P1-04 receipt root and course checkout excluded by plan v3"
+          "type": "final-slot-dual-qc-receipt",
+          "observed_at": "2026-08-28T14:45:48Z",
+          "sha256": "02c18c45244e242729ab11c5b04719769d48f99a12a56893d204586b57d69e51",
+          "slot": "d833b559-article-05",
+          "round": 13,
+          "cycle": 1,
+          "creation_full_qc": "PASS",
+          "independent_qc": "PASS",
+          "independent_qc_score": 0.9785714285714285
+        },
+        {
+          "type": "factory-recovery-operator",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/9da35978d34f781fb2f0692235564aae2fccd078/tools/regenerate_contextual_failures.py"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "status_at": "2026-08-28T12:34Z"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
+      "status_at": "2026-08-28T14:46Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -292,6 +306,8 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "observed_at": "2026-08-26T14:47Z",
+      "settled": true,
+      "superseded_by": "humgeo.blueprint.audit",
       "value": "HumGeo follows the canonical native TimeBack lifecycle. Accepted-source preparation and accepted source retain closure credit on canonical HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 with 70 accepted placements for 70 and zero residue. Phase 0 is CLOSED — PROFILE_AND_SOURCE_BOUND on owner-merged AP One main e46586c39c0ad0075c0cf45952f1f91503118d51 with exact 5,870-coordinate coverage and zero course writes. Phases 1-3 are IN PROGRESS. The controller-adopted Packet 2 census remains 353 of 440 accepted and 87 factory-terminal nonaccepted, split into 76 creation full-QC failures and 11 independent /v1/qc failures. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting nullable array fields in the canonical recovery operator. After that deploy, a corrected three-cycle pilot receipt recorded acceptance on its third cycle, and at least eleven stale-bound scale operator invocations issued 76 contextual-generation calls plus 27 independent-QC calls. Fifty-five submissions replayed prior scale job identities. Five local receipts landed for 9 rows, recording 6 observed acceptances and 3 replacement failures, but remain unbound. Twenty of 21 distinct scale job IDs have factory-terminal evidence; the last row-10 job is UNMEASURED. Those observations are not controller-adopted: the scale action lacked a current-SHA /100 and RUNNING bind, and the complete owner-authorized landing set did not land. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST at 14:31:48.257Z through 14:45:43Z. Exact job IDs are preserved, counts remain 353 and 87, and no retry or resume is permitted. Packet 2 is HOLD — UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS. Its next governed event is an owner-scoped landing receipt or disposition, followed by /100 for any local controller-adoption action. Packet 3 has partial PREP_ONLY evidence but remains HOLD — BLOCKED_CONTRACT_NONCONFORMING_PACKET3_COMPILER_AND_DESIGNATED_OUTPUT. Compiler PR #869 merged to AP One main 113f80c8479079a87f29226eb1a4b7e5f53349d0, then the post-merge fleet review marked #865 status:needs_rework and claimed attempt 2; the merged compiler is not conforming authority. Packet 4 remains HOLD — BLOCKED_CONTRACT_MISSING_HUMGEO_OFFLINE_ENROLLMENT_ACTIVATION_AND_ACCEPTANCE_OPERATORS. Activation #864 is on attempt 2 after queued rework; enrollment #866 and learner acceptance #867 remain open and unclaimed; the materializer bind request remains on #659. Canonical course requirement P1-04 remains IN PROGRESS. Codex did not open or merge PR #869. No TimeBack, object-storage, publication, enrollment, activation, learner, release, or course-completion action is claimed. Phases 4-10 remain locked.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
@@ -709,21 +725,22 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "The active P1-04 operator counter is 437 of 440: 13 of 16 enriched replacements hold dual-QC acceptance, and Round 6 is running on three residue slots with one job in flight and eight pool slots free. The formal module-reconciled baseline remains 424/440 until accepted bytes land and reconcile. This is article-check progress evidence only; it does not establish learner deployment or later lifecycle closure.",
-      "scope": "historical PR #63 package landing in canonical ancestry; excludes current bank counts, current QC, learner deployment, and publication",
+      "value": "The P1-04 operator-receipt position is 440 of 440. Every article-check slot holds a factory acceptance backed by creation full-QC and independent /v1/qc; 161 job bodies are persisted. The final slot accepted in Round 13, cycle 1, at independent-QC 0.979. The formal census reconcile remains pending until the five enriched lessons land, and the bank-wide validation and Phase 3.4 answer-shape sweeps remain open. This is article-check acceptance evidence only; it does not establish landed-byte reconciliation, learner deployment, or later lifecycle closure.",
+      "scope": "current P1-04 operator-receipt position at enriched local bytes; formal landed-byte census and downstream lifecycle excluded",
       "evidence": [
         {
-          "type": "package-merge",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
-          "merge_commit": "4bd35b9ca350924fef2653f71c64270baa3ea9db"
+          "type": "controller-execution-state",
+          "observed_at": "2026-08-28T14:46:48Z",
+          "sha256": "7b47ec6435d1e8b7b5ffff531edd6051111370580bc23ab0eb726b24c7dfeed0"
         },
         {
-          "type": "current-canonical-main",
-          "url": "https://github.com/ilmych/humgeo-rebuild/tree/8495d75929f2e25d6f7fa50fc24ce3d47481a887"
+          "type": "final-slot-dual-qc-receipt",
+          "observed_at": "2026-08-28T14:45:48Z",
+          "sha256": "02c18c45244e242729ab11c5b04719769d48f99a12a56893d204586b57d69e51"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "observed_at": "2026-08-28T12:34Z"
+      "observed_at": "2026-08-28T14:46Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
@@ -746,10 +763,15 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-28T12:34Z",
-      "value": "HumGeo Phases 1-3 are actively IN PROGRESS at an operational 437/440. Thirteen of 16 enriched replacements hold dual-QC acceptance, and Round 6 is active on three residue slots with fleet capacity available. Formal module reconcile follows landing, and the later staging chooser contract remains separate.",
-      "scope": "owner-approved HumGeo completion sequence",
+      "status_at": "2026-08-28T14:46Z",
+      "value": "HumGeo Phases 1-3 remain IN PROGRESS. P1-04 has reached 440/440 at the operator-receipt position, but review-surface readiness remains blocked on landing the five enriched lessons, formal census reconcile, the Phase 1.3 bank-wide validation sweep, the Phase 3.4 answer-shape report, Phase 3.6 QTI validation, and Phase 3.7 student-surface preview. Phases 4-10 have not been reached.",
+      "scope": "current HumGeo runbook sequence and unmet offline validation/preview work; excludes publication and learner readiness",
       "evidence": [
+        {
+          "type": "controller-execution-state",
+          "observed_at": "2026-08-28T14:46:48Z",
+          "sha256": "7b47ec6435d1e8b7b5ffff531edd6051111370580bc23ab0eb726b24c7dfeed0"
+        },
         {
           "type": "dashboard-plan",
           "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
