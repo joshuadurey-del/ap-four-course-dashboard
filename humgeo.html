@@ -117,6 +117,12 @@
   </section>
 
   <section>
+    <h2>Receipt-by-receipt chronology</h2>
+    <p class="sub">Every HumGeo dashboard event, newest first, preserved with its original timestamp and evidentiary scope. Use the current verified state above—not an older entry—for present status.</p>
+    <ol class="update-list update-list-full" data-update-list data-course="humgeo" aria-live="polite"></ol>
+  </section>
+
+  <section>
     <h2>Primary evidence</h2>
     <p><a href="https://github.com/InceptTrilogy/incept-test-builder/pull/289" target="_blank" rel="noopener">S10 retrieval repair PR #289</a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/659" target="_blank" rel="noopener">TimeBack-direct issue #659</a> · <a href="https://github.com/ilmych/humgeo-rebuild/pull/67" target="_blank" rel="noopener">SOURCE_ACCEPTED PR #67</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/851" target="_blank" rel="noopener">PROFILE_AND_SOURCE_BOUND PR #851</a>.</p>
   </section>
@@ -124,5 +130,6 @@
 </main>
 <footer>Current receipt-bound snapshot · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 <script type="module">import(`./timeline.js?v=${Date.now()}`)</script>
+<script type="module">import(`./updates.js?v=${Date.now()}`)</script>
 </body>
 </html>

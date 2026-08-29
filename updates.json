@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-29T01:40Z",
+    "course": "cross",
+    "text": "HumGeo history and overview wayfinding: the collapsed HumGeo Historical course record now includes its full 95-entry receipt-by-receipt chronology. The four overview course cards now use distinct accessible category colors—teal for HumGeo, bronze for APWH, crimson for APUSH, and violet for Psychology—with lightly tinted surfaces and course-colored status labels. Current course state and lifecycle claims are unchanged. $0 dashboard spend."
+  },
+  {
     "ts": "2026-08-29T01:29Z",
     "course": "cross",
     "text": "Course history depth restored: the collapsed APWH, APUSH, and Psychology historical course records now render their complete course-filtered append-only dashboard chronologies—57 APWH events, 18 APUSH events, and 22 Psychology events at this snapshot—with original timestamps and evidentiary scope. Current verified-state folds remain separate and authoritative. $0 dashboard spend."

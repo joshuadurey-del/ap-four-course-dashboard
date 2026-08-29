@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = {
-  snapshot: 'Aug 29, 2026 · 10:32 KST',
+  snapshot: 'Aug 29, 2026 · 10:40 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -24,7 +24,7 @@ const AP4_DASHBOARD = {
   ],
   courses: [
     {
-      id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: '#2558d8',
+      id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
       status: 'Phases 1-3 · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 00:55Z',
       landed: 'Accepted source — closed · Course profile required before Phase 0 — closed · Phase 0 — Establish authority — closed · Phase 1.3 article depth — 440/440 operator receipts; bank-wide validation open · Phase 2 — unmeasured · Phase 3 — in progress',
       nextStep: 'Gate and show the five-lesson PR package; after Josh opens and merges the course PR and the bytes are ingested, run the formal census reconcile, bank-wide validation, and answer-shape report.',
@@ -37,7 +37,7 @@ const AP4_DASHBOARD = {
       etaNote: '440/440 is the operator-receipt position. The census module mints the formal number only after the enriched article bytes land; its plan binds those landed bytes.'
     },
     {
-      id: 'apwh', label: 'AP World History', short: 'APWH', color: '#4f46b8',
+      id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 01:16Z',
       landed: 'Course profile required before Phase 0 — DONE · Accepted source — IN PROGRESS · Phase 0 — NOT ENTERED · Phases 1-10 — NOT STARTED',
       nextStep: 'Settle the remaining accepted-source rows, including paid or judgment content and open study-skills platform work; no course-merge-owner wait applies. Then run Phase 0.1-0.3.',
@@ -48,7 +48,7 @@ const AP4_DASHBOARD = {
       ]
     },
     {
-      id: 'apush', label: 'AP US History', short: 'APUSH', color: '#c2413a',
+      id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 01:16Z',
       landed: 'Accepted source — in progress · Phase 1 — Map the complete course tree / 1.7 Tree invariants — mapped composer and binding-census evidence · Phase 3 — Generate hosted assets and QTI — mapped wrapper evidence; no phase credit',
       nextStep: 'Re-derive the remaining 21 bindings through issue #9, preserve the 53 landed wrappers, and rerun the owning verifier.',
@@ -59,7 +59,7 @@ const AP4_DASHBOARD = {
       ]
     },
     {
-      id: 'psych', label: 'AP Psychology', short: 'Psych', color: '#7c3aed',
+      id: 'psych', label: 'AP Psychology', short: 'Psych', color: 'oklch(48% 0.16 305)',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 29 · 01:16Z',
       landed: 'Accepted source — IN PROGRESS · Units 1-4 assessment and publish artifacts staged · P1-04, P3-05, and P3-06 — bounded IN_PROGRESS evidence with no phase credit · Course profile, Phase 0, and handoff — NOT_YET_MEASURED',
       nextStep: 'Land the one remaining Unit 5 mechanism issue, #51; then run bounded Unit 5 generation after the HumGeo-first queue and spend go, close AS-01, and build the reviewed course profile.',
