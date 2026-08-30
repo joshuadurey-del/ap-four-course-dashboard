@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-28T02:48Z",
+ "generated_utc": "2026-08-30T04:34Z",
  "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
  "sources": [
   "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
@@ -238,13 +238,11 @@
    "name": "Offline preview seal",
    "entry_predicate": "Gate 4 bound.",
    "required_artifacts": [
-    "Deterministic offline graph",
-    "Pricing",
-    "Assets",
-    "QTI",
-    "Student-surface preview \u2014 all offline"
+    "Phase 1 \u2014 map the complete course tree",
+    "Phase 2 \u2014 price activities",
+    "Phase 3 \u2014 generate hosted assets and QTI; validate the student surface"
    ],
-   "pass_receipt": "OFFLINE_PREVIEW_SEALED packet (Gate 5, runbook Phases 1-3).",
+   "pass_receipt": "OFFLINE_PREVIEW_SEALED packet (Gate 5; separate Phase 1, Phase 2, and Phase 3 evidence).",
    "hold_classes": [
     1,
     4
@@ -254,7 +252,7 @@
    "contract_status": "COMPLETE",
    "proven": {
     "level": "in_progress",
-    "note": "HumGeo's live edge as of 2026-08-26; no course has sealed it."
+    "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is unmeasured. No course has sealed this stage."
    },
    "evidence": []
   },

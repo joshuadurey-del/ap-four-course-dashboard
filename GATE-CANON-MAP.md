@@ -13,7 +13,7 @@ to translate historical records into the runbook's lifecycle and Phase 0-10 cano
 | 2 | Pre-runbook accepted-source prep | `INVENTORY_LOCKED` |
 | 3 | Pre-runbook accepted-source prep | `SOURCE_ACCEPTED` |
 | 4 | Course profile + Phase 0 — establish authority | `PROFILE_AND_SOURCE_BOUND` |
-| 5 | Phases 1-3 — deterministic offline graph and student-surface preview | `OFFLINE_PREVIEW_SEALED` |
+| 5 | Phase 1 — map the complete course tree; Phase 2 — price activities; Phase 3 — generate hosted assets and QTI, including student-surface preview | `OFFLINE_PREVIEW_SEALED` |
 | 6 | Phases 4-5 — sealed all-absent plan | `PUBLICATION_PLAN_SEALED` |
 | 7 | Phase 6 — dark TimeBack publication and exact zero-write publication replay | `DARK_PUBLISHED_REPLAYED` |
 | 8 | Phase 7 — owner-controlled canary enrollments | `CANARIES_ENROLLED_REPLAYED` |

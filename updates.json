@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-30T04:34Z",
+    "course": "cross",
+    "text": "Runbook display correction: the dashboard now reports Phase 1 Map the complete course tree, Phase 2 Price activities, and Phase 3 Generate hosted assets and QTI separately on the overview, all four course pages, Claims, Retro, and Agent data. HumGeo Phase 1 and Phase 3 are IN PROGRESS; Phase 2 is UNMEASURED because no current pricing receipt exists. APWH, APUSH, and Psychology remain before Phase 0, so P1, P2, and P3 are NOT STARTED. No course or platform state changed; $0 spend."
+  },
+  {
     "ts": "2026-08-30T04:24Z",
     "course": "apush",
     "event_type": "pull_request",

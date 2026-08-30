@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Agent data</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260830-1">
 </head>
 <body class="agent-page">
   <nav>
@@ -216,8 +216,9 @@
 
   <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 
-<script type="module">import(`./timeline.js?v=${Date.now()}`)</script>
-  <script>
+  <script type="module">
+    await import(`./timeline.js?v=${Date.now()}`);
+    const AP4_DASHBOARD = window.AP4_DASHBOARD;
     const formatTimestamp = value => {
       const date = new Date(value);
       return Number.isNaN(date.getTime())
@@ -263,7 +264,7 @@
         ({manifest, updates, integrity, processContracts, trainingRegister}));
 
     const courseStateLines = () => AP4_DASHBOARD.courses
-      .map(course => `- ${course.label}: ${course.status} (observed ${course.observed}). Next: ${course.nextStep}`)
+      .map(course => `- ${course.label}: ${course.status} (observed ${course.observed}).\n${course.phaseStates.map(phase => `  - ${phase.code} ${phase.status}: ${phase.name}`).join('\n')}\n  Next: ${course.nextStep}`)
       .join('\n');
 
     const sharedRules = `- data.json governs standing claims; updates.json governs event chronology; process.json holds the stage contracts and hold classes.
@@ -271,7 +272,7 @@
 - Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
 - Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
 - Treat dated Markdown reports as historical context, not current standing.
-- Course lifecycle is the runbook canon: accepted source, then Phases 0-10 (stages A-J in process.json), exactly one active state per course.
+- Course lifecycle is the runbook canon: accepted source, then Phases 0-10 (stages A-J in process.json), exactly one active lifecycle stage per course; within stage F, P1, P2, and P3 are reported separately.
 - Do not use completion percentages, treat 150 EKs as 150 questions, or duplicate QC for unchanged creation-QC-complete items.
 - LS REVIEW READY is a planning milestone, not LS approval, post-review revision, or production release.
 - Prepared, accepted, merged, deployed, and released are separate states.
@@ -375,6 +376,7 @@ Report back: the stage you verified, the receipts you produced or found missing,
         <div>
           <h3>${course.label}</h3>
           <p><b>${course.status}</b> · observed ${course.observed}. ${course.nextStep}</p>
+          <ul>${course.phaseStates.map(phase => `<li><b>${phase.code} ${phase.status}:</b> ${phase.name}</li>`).join('')}</ul>
         </div>
         <a class="agent-source-link" href="${course.id}.html">Open ${course.short}</a>
       </div>`).join('');
