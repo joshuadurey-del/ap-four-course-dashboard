@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-30T04:55Z",
+    "course": "humgeo",
+    "phase": "2",
+    "kind": "note",
+    "text": "Phase 2 receipt wording corrected: the receipt measured existing xp_worth values; it did not price or write them. Denominators are now explicit: 3,633 served practice-key items (3,167 at 1 XP, including 53 equivalent 1.0 floats; 466 at 2 XP), a 403-item demo practice snapshot (356/47), and zero XP fields in the demo tree. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. No course or platform write occurred; $0 spend."
+  },
+  {
     "ts": "2026-08-30T04:45Z",
     "course": "humgeo",
     "phase": "2",

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-30T04:45Z",
+  "snapshot": "2026-08-30T04:55Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -281,7 +281,7 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its current measured scope. Its 2026-08-29 receipt measures 3,633 served-key items: 3,167 at 1 XP and 466 at 2 XP. Resource-level base XP remains UNMEASURED because it lives in platform metadata, not a local surface. The five enriched lessons and all 440 article-check slots are landed at humgeo-build-outputs main c0ec5ed8e4cf. The operator receipt position is 440/440; the formal census remains blocked by its current contract and has not minted a replacement denominator. Phase 3.1-3.2 assets are built and locally validated: 88 script-free XHTML files plus 440 two-attempt QTI packages, 528 assets total. Nothing was uploaded, published, enrolled, activated, or released; Phases 4-10 are NOT REACHED.",
+      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The 2026-08-29 receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP, matching the runbook 2.2 anchors. It also measures the demo practice snapshot at 403 items (356 at 1 XP and 47 at 2 XP) and finds zero XP fields in the demo tree. Of the 3,167 served-key values normalized as 1 XP, 53 are stored as the equivalent float 1.0. Resource-level base XP remains UNMEASURED locally; per the runbook it lives in platform resource metadata and binds in the Phase 4 plan. The five enriched lessons and all 440 article-check slots are landed at humgeo-build-outputs main c0ec5ed8e4cf. The operator receipt position is 440/440; the formal census remains blocked by its current contract and has not minted a replacement denominator. Phase 3.1-3.2 assets are built and locally validated: 88 script-free XHTML files plus 440 two-attempt QTI packages, 528 assets total. Nothing was uploaded, published, enrolled, activated, or released; Phases 4-10 are NOT REACHED.",
       "scope": "current HumGeo runbook position at local enriched article bytes; 440/440 is the operator-receipt position, not the formal landed-byte census or a publication, activation, learner-acceptance, release, or course-completion claim",
       "evidence": [
         {
@@ -313,12 +313,17 @@
           "sha256": "fce8a39426c1253623dfce5c12b8df57fb5db2fb0feb538eebe6ace4a3e7fdd6",
           "served_key_items": 3633,
           "xp_worth_1": 3167,
+          "xp_worth_1_stored_as_float": 53,
           "xp_worth_2": 466,
-          "resource_level_base_xp": "UNMEASURED_PLATFORM_METADATA"
+          "demo_snapshot_items": 403,
+          "demo_snapshot_xp_worth_1": 356,
+          "demo_snapshot_xp_worth_2": 47,
+          "demo_tree_xp_fields": 0,
+          "resource_level_base_xp": "UNMEASURED_LOCALLY_BINDS_IN_PHASE_4_PLAN"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-30T04:45Z"
+      "status_at": "2026-08-30T04:55Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -820,8 +825,8 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-30T04:45Z",
-      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its current measured item-level scope: 3,167 served-key items at 1 XP and 466 at 2 XP. Resource-level base XP remains UNMEASURED platform metadata. The five lessons and 440/440 operator-receipt article checks are landed, and 528 Phase 3.1-3.2 assets pass local validation. Review-surface readiness remains blocked on the formal census contract, bank-wide validation, answer-shape reporting, QTI validation on the governed surface, and student preview. Phases 4-10 have not been reached.",
+      "status_at": "2026-08-30T04:55Z",
+      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The receipt measures 3,633 served practice-key items at 3,167/466 for 1/2 XP, a 403-item demo snapshot at 356/47, and zero XP fields in the demo tree. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The five lessons and 440/440 operator-receipt article checks are landed, and 528 Phase 3.1-3.2 assets pass local validation. Review-surface readiness remains blocked on the formal census contract, bank-wide validation, answer-shape reporting, QTI validation on the governed surface, and student preview. Phases 4-10 have not been reached.",
       "scope": "current HumGeo runbook sequence and unmet offline validation/preview work; excludes publication and learner readiness",
       "evidence": [
         {
@@ -913,7 +918,7 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: HumGeo Phase 1 and Phase 3 are IN PROGRESS, while Phase 2 is DONE on its current measured item-level scope; resource-level base XP remains UNMEASURED platform metadata. The locally validated assets have not been uploaded; Phases 4-5 are not sealed and Phases 6-10 are not reached. No publication, enrollment, activation, learner, or release write is claimed.",
+      "value": "BLOCKED: HumGeo Phase 1 and Phase 3 are IN PROGRESS, while Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The locally validated assets have not been uploaded; Phases 4-5 are not sealed and Phases 6-10 are not reached. No publication, enrollment, activation, learner, or release write is claimed.",
       "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
@@ -922,7 +927,7 @@
         }
       ],
       "evidence_access": "DASHBOARD_COMPONENT_CLAIM",
-      "status_at": "2026-08-30T04:45Z"
+      "status_at": "2026-08-30T04:55Z"
     },
     {
       "claim_id": "apwh.sweep.pack",
