@@ -406,8 +406,8 @@
    "label": "AP World History",
    "current_stage": "A-D (accepted-source preparation)",
    "state": "IN_PROGRESS",
-   "as_of": "2026-08-30T14:06Z",
-   "detail": "PR #905, the E3 fix, and tier-1 PR #65 are merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle; the paired serving change and 14-item residue remain, and Phase 0 is not started."
+   "as_of": "2026-08-30T14:08Z",
+   "detail": "PR #905, the E3 fix, and tier-1 PR #65 are merged. Paired serving PR #912 is open at 7b7cd2b3; the 14-item residue remains and Phase 0 is not started."
   },
   "apush": {
    "label": "AP US History",
@@ -420,8 +420,8 @@
    "label": "AP Psychology",
    "current_stage": "A-D (accepted-source preparation)",
    "state": "IN_PROGRESS",
-   "as_of": "2026-08-30T13:53Z",
-   "detail": "The Unit 0 release contains 12 SME-accepted prerequisite clips; it is not AP exam coverage. A read-only check confirms 910/1,709 staged items live by ID, with 2 drift and 799 unmeasured behind the unpublished filter; factory course QC remains blocked. Phase 0 is not started."
+   "as_of": "2026-08-30T14:10Z",
+   "detail": "A prep-only tree draft at current main 037cc168 measures 253 canonical articles and 236 illustrated; owner/factory fields remain deferred. The Unit 0 release contains 12 SME-accepted prerequisite clips, while factory course QC remains blocked. Phase 0 is not started."
   }
  }
 }

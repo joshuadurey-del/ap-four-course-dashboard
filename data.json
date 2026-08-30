@@ -631,7 +631,7 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH remains before Phase 0 with accepted source IN PROGRESS. Blueprint main ea721a32 includes PR #64's safe wired-advisory E3 contract and merged tier-1 PR #65. AP One PR #905 is merged at e61ffc3b with the A-168 served-bank envelopes. PR #65 banks 45 of 58 replacements; its oracle reports 96 PASS / 33 MISSING / 3 pre-existing FAIL rows, with A-168 PASS at 1,217 tagged items. The paired AP One serving change, fourteen residue items, and A-187 contract issue #290 remain. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
+      "value": "APWH remains before Phase 0 with accepted source IN PROGRESS. Blueprint main ea721a32 includes PR #64's safe wired-advisory E3 contract and merged tier-1 PR #65. AP One PR #905 is merged at e61ffc3b with the A-168 served-bank envelopes. PR #65 banks 45 of 58 replacements; paired AP One serving PR #912 is open at 7b7cd2b3. Fourteen residue items and A-187 contract issue #290 remain. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
       "scope": "APWH accepted-source conformance through the full current course-dir oracle; excludes oracle self-test, local inventory, grading campaigns, publication, and learner serving",
       "evidence": [
         {
@@ -644,6 +644,12 @@
           "state": "merged",
           "head": "d7eb13bcc3e5991d8e1667d551281fd1fd42f5c4",
           "merge_commit": "ea721a32c1ff614b6f9caf76bed1b0575e861334"
+        },
+        {
+          "type": "paired-serving-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/912",
+          "state": "open",
+          "head": "7b7cd2b3cdd2336262a44a535fc645f6247a7dd6"
         },
         {
           "type": "a-168-serving-merge",
@@ -669,7 +675,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-30T13:48Z"
+      "status_at": "2026-08-30T14:08Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -691,13 +697,13 @@
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T04:24Z",
-      "value": "Psychology remains at the publication-runbook entry boundary before Phase 0. The Unit 0 video release contains 12 SME-accepted clips covering 11 of 22 prerequisite records and 11 of 32 CED bullets; Unit 0 is not AP exam-unit coverage. Course main c349f4349742 contains the Unit 5 assessment set: 457 MCQs, two AAQs, and one EBQ. The staged bank remains 1,912 MCQs + 37 FRQs across five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter. The acceptance instrument remains the factory Faultless Bar course-QC job; its access-controlled evaluator and unpublished-course dependency remain unresolved. AS-01 is not closed and no lifecycle phase credit is claimed.",
+      "observed_at": "2026-08-30T14:10Z",
+      "value": "Psychology remains at the publication-runbook entry boundary before Phase 0. Current main 037cc168 includes the Unit 0 video merge. A prep-only local profile and tree draft measures 253 canonical articles and 236 illustrated; owner/factory fields remain deferred. The staged bank remains 1,912 MCQs + 37 FRQs across five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter. The factory Faultless Bar evaluator and unpublished-course dependency remain unresolved. AS-01 is not closed and no lifecycle phase credit is claimed.",
       "scope": "current Psychology position against the pinned AP One Native TimeBack publication runbook; excludes accepted-source closure, phase entry, publication, enrollment, activation, learner acceptance, and release",
       "evidence": [
         {
           "type": "course-main",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b"
         },
         {
           "type": "remaining-accepted-source-mechanism",
@@ -710,7 +716,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER+LOCAL_INCEPT_EVENT",
-      "status_at": "2026-08-30T13:53Z"
+      "status_at": "2026-08-30T14:10Z"
     },
     {
       "claim_id": "cross.recovery.audit",
@@ -1035,7 +1041,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Accepted source remains IN PROGRESS. Blueprint main ea721a32 includes the merged E3 fix and tier-1 PR #65; AP One PR #905 is merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle. Its paired AP One serving change, A-187 issue #290, and 14 residue items remain. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Accepted source remains IN PROGRESS. Blueprint main ea721a32 includes the merged E3 fix and tier-1 PR #65; AP One PR #905 is merged. Paired AP One serving PR #912 is open at 7b7cd2b3. A-187 issue #290 and 14 residue items remain. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1045,14 +1051,14 @@
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T14:06Z"
+      "observed_at": "2026-08-30T14:08Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-30T14:06Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH remains before Phase 0 with accepted source IN PROGRESS. PR #905, the E3 fix, and tier-1 PR #65 are merged. The paired AP One serving change, A-187 issue #290, and 14 residue items remain. The next governed work is to land that paired serving change, settle accepted source, then run Phase 0.1-0.3 in order.",
+      "status_at": "2026-08-30T14:08Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH remains before Phase 0 with accepted source IN PROGRESS. PR #905, the E3 fix, and tier-1 PR #65 are merged; paired AP One serving PR #912 is open. A-187 issue #290 and 14 residue items remain. The next governed work is to land PR #912, settle accepted source, then run Phase 0.1-0.3 in order.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1226,8 +1232,8 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T13:53Z",
-      "value": "The Unit 0 video release contains 12 SME-accepted clips covering 11 of 22 prerequisite records and 11 of 32 CED bullets; Unit 0 is not AP exam-unit coverage. At Psychology main c349f4349742, Unit 5 assessment content is landed: 457 MCQs, two AAQs, and one EBQ. The staged bank contains 1,912 MCQs and 37 FRQs across all five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter. Content generation is PROVEN; accepted-source closure and course-QC green are not.",
+      "observed_at": "2026-08-30T14:10Z",
+      "value": "At Psychology main 037cc168, the Unit 0 video release contains 12 SME-accepted clips and the Unit 5 assessment set remains landed. A prep-only tree draft measures 253 canonical articles and 236 illustrated. The staged bank contains 1,912 MCQs and 37 FRQs across all five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter. Content generation is PROVEN; accepted-source closure and course-QC green are not.",
       "scope": "exact-SHA Unit 1-4 tracked assessment inventory, committed publish-tree XML verification, and Unit 5 mechanism closures; excludes complete content QC, accepted-source closure, course wiring, deployment, and learner visibility",
       "evidence": [
         {
@@ -1240,7 +1246,7 @@
         },
         {
           "type": "course-main",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b"
         },
         {
           "type": "unit-0-video-release",
@@ -1265,8 +1271,8 @@
       "claim_id": "psych.bank",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T05:13Z",
-      "value": "Runbook rows P1-04, P3-05, and P3-06 remain bounded IN_PROGRESS evidence. The staged bank at c349f434 contains 1,912 MCQs and 37 FRQs. A read-only retrieved-item check confirmed 910 of 1,709 checked items live by ID and found 2 content-drift cases; 799 remain UNMEASURED behind the unpublished eligibility filter. The required acceptance instrument is the factory Faultless Bar course-QC job, whose access-controlled evaluator and unpublished-course dependency remain unresolved. Factory-side EBQ readback and grader certification are absent, with no phase entry or learner outcome claimed.",
+      "observed_at": "2026-08-30T14:10Z",
+      "value": "Runbook rows P1-04, P3-05, and P3-06 remain bounded evidence. A prep-only tree draft at current main 037cc168 measures 253 canonical articles and 236 illustrated; owner/factory fields are deferred. The staged bank contains 1,912 MCQs and 37 FRQs. A read-only retrieved-item check confirmed 910 of 1,709 checked items live by ID and found 2 content-drift cases; 799 remain UNMEASURED behind the unpublished eligibility filter. Faultless Bar evaluation, factory-side EBQ readback, and grader certification remain absent, with no phase entry or learner outcome claimed.",
       "scope": "P1-04, P3-05, P3-06, and RLS-14 evidence state; excludes complete exact-set/QTI/grader seals, phase credit, paid generation, learner behavior, and publication",
       "evidence": [
         {
@@ -1284,8 +1290,8 @@
       "claim_id": "psych.u5",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T04:24Z",
-      "value": "At exact source main c349f4349742, Unit 5 has landed 457 MCQs, two AAQs, and one EBQ. Course issue #51 remains open, so this content receipt does not close accepted source or prove the full claim-rules, QTI, grader, student-display, or learner path.",
+      "observed_at": "2026-08-30T14:10Z",
+      "value": "At exact source main 037cc168b43b, Unit 5 remains landed with 457 MCQs, two AAQs, and one EBQ; the same main includes the Unit 0 video merge. Course issue #51 remains open, so this content does not close accepted source or prove the full claim-rules, QTI, grader, student-display, or learner path.",
       "scope": "exact-SHA Unit 5 tracked assessment inventory and current course-owned mechanism issue state; excludes generation, paid calls, accepted-source closure, platform actions, and learner visibility",
       "evidence": [
         {
@@ -1367,8 +1373,8 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T05:13Z",
-      "value": "The retired LS REVIEW READY sprint marker supplies no publication-runbook lifecycle credit. Psychology remains before Phase 0: content generation is PROVEN, while a read-only retrieved-item check confirms 910/1,709 staged items live by ID, finds 2 content drift, and leaves 799 UNMEASURED behind the unpublished filter. Faultless Bar course QC, factory-side EBQ readback, and grader certification remain blocked. AS-01 remains IN_PROGRESS; the reviewed course profile, Phase 0, later phases, release checklist, and handoff packet remain NOT_YET_MEASURED.",
+      "observed_at": "2026-08-30T14:10Z",
+      "value": "The retired LS REVIEW READY sprint marker supplies no publication-runbook lifecycle credit. Psychology remains before Phase 0: content generation is PROVEN and a prep-only tree draft measures 253 canonical articles and 236 illustrated, but owner/factory profile fields are deferred. A read-only check confirms 910/1,709 staged items live by ID and leaves 799 UNMEASURED. Faultless Bar course QC, EBQ readback, and grader certification remain blocked; no phase entry or learner outcome is claimed.",
       "scope": "retired LS sprint marker mapped to current publication-runbook state; excludes accepted-source closure, phase entry, LS disposition, learner acceptance, and release",
       "evidence": [
         {
@@ -1382,13 +1388,13 @@
       "claim_id": "psych.registration",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T04:19Z",
-      "value": "Psychology main c349f4349742 is still before Phase 0. After AS-01 closes, the governed order is: author and validate the reviewed course profile; bind environment 0.1; capture immutable source authority 0.2; freeze the namespace 0.3; then enter Phases 1-10. No profile, Phase 0 capture, publication plan, handoff packet, registration, enrollment, activation, or learner-acceptance transition is measured or selected.",
+      "observed_at": "2026-08-30T14:10Z",
+      "value": "Psychology main 037cc168b43b is still before Phase 0. A prep-only profile and tree draft now measures 253 canonical articles and 236 illustrated, but owner/factory fields are deferred and it is not reviewed or validator-consumed. After AS-01 closes, the governed order is: finish the reviewed course profile; bind environment 0.1; capture immutable source authority 0.2; freeze the namespace 0.3; then enter Phases 1-10. No Phase 0 capture, publication plan, handoff packet, registration, enrollment, activation, or learner-acceptance transition is measured or selected.",
       "scope": "current Psychology runbook ordering and absent phase/profile/handoff receipts; no publication, registration, enrollment, activation, learner acceptance, or release action",
       "evidence": [
         {
           "type": "course-repository",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b"
         },
         {
           "type": "canon-ledger",

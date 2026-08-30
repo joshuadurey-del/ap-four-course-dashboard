@@ -1,5 +1,33 @@
 [
   {
+    "ts": "2026-08-30T14:16Z",
+    "course": "humgeo",
+    "event_type": "workflow_run",
+    "text": "AP One CI run #1816 completed successfully for the HumGeo Phase 3.3 video-assets change at f8fe9ed6.",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33315707482"
+  },
+  {
+    "ts": "2026-08-30T14:10Z",
+    "course": "psych",
+    "phase": "runbook prep",
+    "kind": "note",
+    "text": "Psychology runbook prep now has a local course-profile and tree draft from current main 037cc168: 253 canonical articles, 236 illustrated, 1,912 staged MCQs, and 37 FRQs. Owner/factory fields remain deferred and the grader route remains BLOCKED_CONTRACT; no phase credit or write is claimed."
+  },
+  {
+    "ts": "2026-08-30T14:08Z",
+    "course": "apwh",
+    "phase": "Phase 1 (blueprint conformance)",
+    "kind": "merged",
+    "text": "APWH tier-1 blueprint PR #65 is merged at ea721a32 with 45 of 58 replacements; paired AP One serving PR #912 is open at 7b7cd2b3. Its merge remains fleet-side, and accepted source is still in progress."
+  },
+  {
+    "ts": "2026-08-30T14:07Z",
+    "course": "apwh",
+    "phase": "fix-round tier-1",
+    "kind": "filed",
+    "text": "Paired AP One serving PR #912 opened at 7b7cd2b3 with the 45 replacements and rationale delta from merged blueprint PR #65. A demo-walker check follows the fleet-side merge."
+  },
+  {
     "ts": "2026-08-30T14:06Z",
     "course": "apwh",
     "phase": "fix-round tier-1",

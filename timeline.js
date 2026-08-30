@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 30, 2026 · 23:09 KST',
+  snapshot: 'Aug 30, 2026 · 23:19 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -45,9 +45,9 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:06Z',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:08Z',
       landed: 'Course profile — done · A-168 PR #905 — merged · E3 issue #63 — closed by PR #64 · Tier-1 fix PR #65 — merged with 45/58 replacements · Current oracle — 96 PASS / 33 MISSING / 3 pre-existing FAIL',
-      nextStep: 'Land the paired AP One serving change for PR #65, resolve the 14-item residue and A-187 issue #290, then settle accepted source and run Phase 0.1-0.3.',
+      nextStep: 'Land paired AP One PR #912, resolve the 14-item residue and A-187 issue #290, then settle accepted source and run Phase 0.1-0.3.',
       footprint: [
         { value: '45/58', label: 'tier-1 replacements merged in PR #65' },
         { value: '96', label: 'current branch oracle PASS rows' },
@@ -77,10 +77,12 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: 'oklch(48% 0.16 305)',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 13:53Z',
-      landed: 'Content generation — PROVEN · Unit 0 video release — 12 SME-accepted clips for 11/22 prerequisite records · staged bank — 1,912 MCQs + 37 FRQs · Retrieved-item check — 910/1,709 live by ID, 2 content drift, 799 UNMEASURED behind the unpublished filter',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:10Z',
+      landed: 'Content generation — PROVEN · Current main — 037cc168 · Runbook-prep tree draft — 253 canonical articles, 236 illustrated · Unit 0 video release — 12 SME-accepted clips for 11/22 prerequisite records · staged bank — 1,912 MCQs + 37 FRQs',
       nextStep: 'Resolve the Faultless Bar evaluator and unpublished-course contract, obtain factory-side EBQ readback and grader certification, then rerun course QC. No local course step is currently executable.',
       footprint: [
+        { value: '253', label: 'canonical articles measured in tree draft' },
+        { value: '236', label: 'illustrated articles measured in tree draft' },
         { value: '12', label: 'SME-accepted Unit 0 video clips released' },
         { value: '910/1,709', label: 'retrieved staged items confirmed live by ID' },
         { value: '799', label: 'items UNMEASURED behind unpublished filter' }
@@ -109,10 +111,10 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'APWH is before Phase 0. A-168 PR #905, E3 fix PR #64, and tier-1 PR #65 are merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle. The paired serving change, A-187 issue #290, and 14 residue items remain.',
+      note: 'APWH is before Phase 0. A-168 PR #905, E3 fix PR #64, and tier-1 PR #65 are merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle. Paired serving PR #912 is open; A-187 issue #290 and 14 residue items remain.',
       rows: [
         { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile, consumer, authoring wave, and hash refresh landed', copy: 'PR #889 landed the reviewed, validator-consumed profile and consumer; PR #891 then landed the authoring wave and profile-hash refresh. This prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/891' },
-        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: 'PR #65 merged · 45/58 replacements · 96 PASS / 33 MISSING / 3 FAIL', copy: 'Main ea721a32 includes the E3 contract fix and merged tier-1 fix round; AP One PR #905 carries the A-168 envelopes. PR #65\'s three FAIL rows are pre-existing exclusions. Its paired serving change, A-187 issue #290, and 14 residue items remain.', href: 'https://github.com/ilmych/apwh-blueprint-build/pull/65' },
+        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: 'PR #65 merged · paired PR #912 open · 45/58 replacements', copy: 'Main ea721a32 includes the E3 contract fix and merged tier-1 fix round; AP One PR #905 carries the A-168 envelopes. Paired serving PR #912 is open at 7b7cd2b3. A-187 issue #290 and 14 residue items remain.', href: 'https://github.com/InceptTrilogy/ap-one/pull/912' },
         { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.2 capture tool authored; accepted source still moving', copy: 'After AS-01 settles: bind the environment under 0.1, capture immutable source authority under 0.2, then freeze the versioned namespace under 0.3.', href: 'apwh.html' }
       ]
     },
@@ -128,13 +130,13 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     psych: {
       title: 'Psychology runbook-aligned sequence',
-      note: 'Psychology remains before Phase 0 at the accepted-source entry boundary. The Unit 0 video release contains 12 SME-accepted clips for 11 of 22 prerequisite records; it is not AP exam coverage. A read-only check confirms 910/1,709 staged items live by ID and leaves 799 UNMEASURED. Course QC remains factory-blocked.',
+      note: 'Psychology remains before Phase 0 at the accepted-source entry boundary. A prep-only tree draft measures 253 canonical articles and 236 illustrated at current main 037cc168; owner/factory fields are deferred. A read-only check confirms 910/1,709 staged items live by ID and leaves 799 UNMEASURED. Course QC remains factory-blocked.',
       rows: [
-        { gate: 3, code: 'AS-01', name: 'Accepted source', label: 'Entry boundary', state: 'active', status: 'In progress', signal: '910/1,709 live by ID · 799 UNMEASURED', copy: 'The staged bank has 1,912 MCQs and 37 FRQs. Read-only retrieval confirms 910 of 1,709 checked staged items live by ID, with two content-drift findings; 799 remain unmeasured behind the unpublished filter. Faultless Bar evaluation, EBQ readback, and grader certification remain.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742' },
-        { gate: 5, code: 'P1-04', name: 'Phase 1.3 article check sets', label: 'Article checks', state: 'evidence', status: 'Evidence only', signal: 'Units 1-5 pipeline evidence landed', copy: 'The assessment pipeline supplies bounded source-bound evidence through Unit 5. Course-wide exact-set and answer-shape seals do not exist, so this does not enter Phase 1.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742/3.%20Assessment' },
+        { gate: 3, code: 'AS-01', name: 'Accepted source', label: 'Entry boundary', state: 'active', status: 'In progress', signal: '910/1,709 live by ID · 799 UNMEASURED', copy: 'The staged bank has 1,912 MCQs and 37 FRQs. Read-only retrieval confirms 910 of 1,709 checked staged items live by ID, with two content-drift findings; 799 remain unmeasured behind the unpublished filter. Faultless Bar evaluation, EBQ readback, and grader certification remain.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b' },
+        { gate: 5, code: 'P1-04', name: 'Phase 1.3 article check sets', label: 'Article checks', state: 'evidence', status: 'Evidence only', signal: '253 canonical articles · 236 illustrated in prep draft', copy: 'The prep-only tree draft measures the current source, but owner/factory fields and course-wide exact-set and answer-shape seals remain open, so this does not enter Phase 1.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b/3.%20Assessment' },
         { gate: 7, code: 'P3-05', name: 'Phase 3.4 native MCQs', label: 'Native MCQs', state: 'evidence', status: 'Evidence only', signal: 'Bounded item-pipeline evidence; QTI seal absent', copy: 'Units 1-4 are staged, but no complete native-MCQ QTI, reference, or final answer-shape report exists. The row has evidence, not phase credit.', href: 'psych.html' },
         { gate: 7, code: 'P3-06', name: 'Phase 3.5 writing tasks', label: 'Writing tasks', state: 'evidence', status: 'Evidence only', signal: 'FRQ PR #20 open · grader readiness false', copy: 'Writing content work exists, but the AP Psychology AI_ONLY_READY flag is false. QTI, rubric, grader-parity, and writing-display seals remain open, capping P3-06 and RLS-14.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20' },
-        { gate: 4, code: 'PROFILE', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'locked', status: 'Not yet measured', signal: 'PR-01 through PR-08, RLS-01, and HO-01 remain open', copy: 'Author the reviewed, validator-consumed Psychology profile only after Unit 5 content exists. Its source digest waits for the immutable source capture.', href: 'psych.html' },
+        { gate: 4, code: 'PROFILE', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'locked', status: 'Prep only', signal: 'Draft: 253 canonical articles · 236 illustrated · owner fields deferred', copy: 'A local profile and tree draft now measures the current source. It is not reviewed or validator-consumed, its owner/factory fields are deferred, and its source digest waits for immutable Phase 0 capture.', href: 'psych.html' },
         { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.1-0.3 wait for accepted-source closure', copy: 'After AS-01 closes: bind the environment, capture immutable source authority, then freeze a fresh versioned namespace.', href: 'psych.html' },
         { gate: 13, code: 'HO', name: 'Required handoff packet', label: 'Handoff packet', state: 'locked', status: 'Not yet measured', signal: 'No runbook handoff artifact set exists', copy: 'The course remains at the entry boundary. END-01 still requires the real learner path plus persisted TimeBack readback.', href: 'psych.html' }
       ]
