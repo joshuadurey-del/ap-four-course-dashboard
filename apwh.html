@@ -37,9 +37,9 @@
     <h2>Accepted source — in progress</h2>
     <ul>
       <li>The last complete-surface 235-row receipt remains 95 PASS, 97 DOCUMENTED, 34 MISSING, 3 FAIL, 3 DEVIATION-RECORDED, 1 ESCALATED, and 2 WARN. No later complete-surface receipt has superseded it.</li>
-      <li>PR #891 is merged. Blueprint main has advanced to <a href="https://github.com/ilmych/apwh-blueprint-build/commit/c9c47afef75b7af70bc312cb486801ebad3a4e3f" target="_blank" rel="noopener"><code>c9c47afe</code></a> with the TimeBack QTI readback fix.</li>
-      <li>A fresh executor recheck against AP One <code>d255a855</code> remained non-green. Its materialized tree lacked the registry and app-source surfaces, so its partial 89 PASS / 41 MISSING result is diagnostic only and does not replace the complete-surface ledger.</li>
-      <li>The real blockers are unsettled accepted-source rows: paid or judgment content, open platform work including <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">study-skills issue #591</a>, and remaining convention or ceiling rows. APWH is not waiting on another person to merge a course PR; Josh owns course merges.</li>
+      <li>Blueprint main is <a href="https://github.com/ilmych/apwh-blueprint-build/commit/520435e6346d" target="_blank" rel="noopener"><code>520435e6</code></a> after PR #62 merged the full pool slice. T050 is 2101/2101, A-168 is 311/312, seven A-187 alternates and the E3 form are present, and the suite reports 373 passing tests.</li>
+      <li><a href="https://github.com/InceptTrilogy/ap-one/pull/905" target="_blank" rel="noopener">AP One PR #905</a> is open at <code>cd7e8b74</code> to land the A-168 mechanism envelopes into the served rationale bank; it is not merged.</li>
+      <li>Two contract defects are open: <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">#290</a> records the A-187 raw-versus-stripped FK mismatch and measured 7/176 qualifying yield; <a href="https://github.com/ilmych/apwh-blueprint-build/issues/63" target="_blank" rel="noopener">#63</a> records the mutually incompatible wired E3 predicates.</li>
     </ul>
   </section>
 
@@ -60,13 +60,13 @@
   <section class="reading-guide">
     <h2>Next steps — runbook order</h2>
     <dl>
-      <div><dt>1. Settle accepted source</dt><dd>Run the paid slice after the HumGeo pool drains and spend is approved, close the Platform3 study-skills work when its write window opens, and resolve the remaining convention and ceiling rows. No course-merge-owner wait applies.</dd></div>
+      <div><dt>1. Settle accepted source</dt><dd>Resolve A-187 contract issue #290 and E3 predicate issue #63, land or disposition AP One PR #905, and close the remaining accepted-source rows.</dd></div>
       <div><dt>2. Enter Phase 0</dt><dd>The moment AS-01 settles, re-pin and run the Phase 0 capture, then freeze the namespace.</dd></div>
       <div><dt>3. Enter Phase 1</dt><dd>Start complete course-tree mapping only after Phase 0 exists.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">profile/consumer PR #889</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">merged authoring/profile-hash PR #891</a> · <a href="https://github.com/ilmych/apwh-blueprint-build/commit/c9c47afef75b7af70bc312cb486801ebad3a4e3f" target="_blank" rel="noopener">blueprint main <code>c9c47afe</code></a> · <a href="https://github.com/InceptTrilogy/ap-one/issues/591" target="_blank" rel="noopener">study-skills write issue #591</a> · latest complete-surface 235-row oracle receipt.</p></section>
+  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/ilmych/apwh-blueprint-build/commit/520435e6346d" target="_blank" rel="noopener">blueprint main <code>520435e6</code></a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/905" target="_blank" rel="noopener">open A-168 served-bank PR #905</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">A-187 FK contract issue #290</a> · <a href="https://github.com/ilmych/apwh-blueprint-build/issues/63" target="_blank" rel="noopener">E3 predicate issue #63</a> · latest complete-surface 235-row oracle receipt.</p></section>
 
   <details class="eta-details">
     <summary>Historical course record — superseded snapshots through Aug 28 · 18:14 KST</summary>

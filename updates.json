@@ -1,5 +1,68 @@
 [
   {
+    "ts": "2026-08-30T04:24Z",
+    "course": "apush",
+    "event_type": "pull_request",
+    "text": "APUSH build-output PR #8 is open at 2ce4e8ca to restore the complete KC-8.2.II.C sentence. It fixes issue #6, but PR #7 touches the same manifest and must merge first; #8 then requires a rebase, recomputed bindings, and rerun gates. This is build-only and makes no student-deployment claim.",
+    "evidence_url": "https://github.com/ilmych/apush-build-outputs/pull/8"
+  },
+  {
+    "ts": "2026-08-30T04:24Z",
+    "course": "psych",
+    "phase": "accepted-source",
+    "kind": "state-change",
+    "text": "A read-only Psychology coverage run measured the live bank at 8,665 MCQs / 32,853 FRQs and the staged bank at c349f434 at 1,912 MCQs + 37 FRQs across all five units. Content generation is PROVEN, but 0/1,912 staged MCQs have /v1/qc receipts and the oracle exits 2 because the store and third layout are undeclared. QC green remains BLOCKED_CONTRACT on factory-side EBQ readback and grader certification. Nothing was written."
+  },
+  {
+    "ts": "2026-08-30T04:23Z",
+    "course": "apwh",
+    "event_type": "pull_request",
+    "text": "AP One PR #905 is open at cd7e8b74 to carry the A-168 mechanism envelopes into the served APWH rationale bank: 1,200 envelopes added, 164 agreed thin-knowledge tags removed, one judge disagreement retained unchanged, and no other fields changed. The PR is not merged and earns no serving or lifecycle credit.",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/905"
+  },
+  {
+    "ts": "2026-08-30T04:22Z",
+    "course": "apwh",
+    "event_type": "issues",
+    "text": "Test-builder issue #290 is open for the A-187 readability contract mismatch: the service gates allowlist-stripped FK while the blueprint reads raw FK. Two receipted passes measured only 7 of 176 qualifying alternates, about 4%; rerunning the same route cannot close the remaining 169 rows.",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/issues/290"
+  },
+  {
+    "ts": "2026-08-30T04:21Z",
+    "course": "apwh",
+    "event_type": "issues",
+    "text": "APWH blueprint issue #63 is open because the E3 oracle predicates cannot accept a wired advisory form: absence keeps A-055/A-056/A-060/A-113 missing, while any detected wiring makes A-057 fail. The defect affects five of 235 swept rows; no course bytes moved with the filing.",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/issues/63"
+  },
+  {
+    "ts": "2026-08-30T04:19Z",
+    "course": "apwh",
+    "event_type": "push",
+    "text": "APWH blueprint main is 520435e6 after PR #62 merged the full pool slice. The authoritative complete-surface ledger remains 95 PASS / 34 MISSING; A-168 is 311/312, seven A-187 alternates and the E3 form are present, and the suite reports 373 passing tests. New work remains inside open rows; Phase 0 is not entered.",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/commit/520435e6346d"
+  },
+  {
+    "ts": "2026-08-30T04:19Z",
+    "course": "apush",
+    "event_type": "push",
+    "text": "APUSH build-output PR #5 and course-build PR #14 are merged: 139 wave-3 image contracts landed and the first packets are bound to the canonical manifest. The ledger remains 49 accepted / 200 pending. PR #7 and issues #6 and #9 remain open; no platform write or learner execution is claimed.",
+    "evidence_url": "https://github.com/ilmych/apush-build-outputs/commit/8682f4dca668"
+  },
+  {
+    "ts": "2026-08-30T04:07Z",
+    "course": "humgeo",
+    "phase": "phase-3",
+    "kind": "landed",
+    "text": "HumGeo has five enriched lessons and 440/440 operator-receipt article checks landed at build-output main c0ec5ed8. Phase 3.1-3.2 assets are built and locally validated: 88 script-free XHTML files plus 440 two-attempt QTI packages, 528 assets total. Nothing was uploaded; the formal census contract and governed-surface checks remain open."
+  },
+  {
+    "ts": "2026-08-30T03:49Z",
+    "course": "psych",
+    "phase": "accepted-source",
+    "kind": "landed",
+    "text": "Psychology main c349f434 now contains the Unit 5 assessment set: 457 MCQs, two AAQs, and one EBQ. Unit 0 articles are merged, draft PR #64 contains 8 of 22 figures, and issue #51 plus FRQ PR #20 remain open. Accepted source is not closed and Phase 0 is not entered."
+  },
+  {
     "ts": "2026-08-29T01:56Z",
     "course": "cross",
     "text": "Course-page information hierarchy: the shared Current runbook state evidence map now appears immediately below the title summary on HumGeo, APWH, APUSH, and Psychology, before all supporting current detail and well above each collapsed Historical course record. The duplicate HumGeo current-state widget was removed from inside history. Course data and lifecycle claims are unchanged. $0 dashboard spend."
