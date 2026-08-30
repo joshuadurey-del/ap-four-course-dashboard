@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 30, 2026 · 13:37 KST',
+  snapshot: 'Aug 30, 2026 · 13:41 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -27,7 +27,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'P1 IN PROGRESS · P2 UNMEASURED · P3 IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 04:19Z',
+      status: 'P1 course map + P3 assets · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 04:19Z',
       landed: 'Accepted source — closed · Phase 0 — closed · Five enriched lessons — landed · Article checks — 440/440 operator receipts · Phase 3.1-3.2 — 528 assets locally validated',
       nextStep: 'Resolve the formal census contract, complete bank-wide and answer-shape validation, then verify QTI and the student preview on the governed surface. Nothing is uploaded yet.',
       footprint: [
@@ -46,7 +46,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 04:24Z',
-      landed: 'Course profile required before Phase 0 — DONE · Accepted source — IN PROGRESS · Phase 0 — NOT ENTERED · Phases 1-10 — NOT STARTED',
+      landed: 'Course profile — done · Accepted-source ledger — 95 PASS / 34 MISSING · A-168 PR #905 and contract issues #290 and #63 in flight',
       nextStep: 'Resolve A-187 issue #290 and E3 issue #63, disposition open A-168 PR #905, and settle the remaining accepted-source rows. Then run Phase 0.1-0.3.',
       footprint: [
         { value: '520435e6', label: 'current blueprint main' },
@@ -62,7 +62,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 04:24Z',
-      landed: 'Accepted source — in progress · 249-position ledger — 49 accepted / 200 pending · 53 migrated wrappers — landed · 139 wave-3 image contracts — landed · first packets bound to canonical manifest',
+      landed: 'Accepted source — in progress · 249-position ledger — 49 accepted / 200 pending · 53 migrated wrappers and 139 wave-3 image contracts landed · PRs #7/#8 and issues #6/#9 in flight',
       nextStep: 'Disposition manifest PR #7, rebase and verify ordered PR #8, resolve issues #6 and #9, then rerun the owning verifier.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
@@ -78,7 +78,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: 'oklch(48% 0.16 305)',
       status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 04:24Z',
-      landed: 'Accepted source — IN PROGRESS · Content generation — PROVEN · staged bank — 1,912 MCQs + 37 FRQs across five units · Unit 5 — 457 MCQs + 2 AAQs + 1 EBQ landed · no phase credit',
+      landed: 'Accepted source — IN PROGRESS · Content generation — PROVEN · staged bank — 1,912 MCQs + 37 FRQs across five units · Unit 5 — 457 MCQs + 2 AAQs + 1 EBQ landed · QC contract resolution in flight',
       nextStep: 'Resolve the undeclared store/layout contract, obtain factory-side EBQ readback and grader certification, then rerun QC. No local course step is currently executable.',
       footprint: [
         { value: '1,912', label: 'staged MCQs across five units' },
@@ -224,7 +224,6 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
             <span class="course-card-landed"><strong>Landed so far:</strong> ${course.landed}</span>
           </div>
           <h3>${course.label}</h3>
-          ${phaseMarkup(course)}
           <p><strong>Next:</strong> ${course.nextStep}</p>
         </a>`).join('')}
     </div>`;
