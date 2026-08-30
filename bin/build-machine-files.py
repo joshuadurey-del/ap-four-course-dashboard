@@ -78,7 +78,7 @@ STAGES = [
           "OFFLINE_PREVIEW_SEALED packet (Gate 5; separate Phase 1, Phase 2, and Phase 3 evidence).",
           [1, 4], "Earliest affected gate.", "Sealed offline artifacts and deterministic rerun receipts.",
           "COMPLETE",
-          {"level": "in_progress", "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is unmeasured. No course has sealed this stage."},
+          {"level": "in_progress", "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is DONE on its measured item-level scope, while resource-level base XP remains unmeasured platform metadata. No course has sealed this stage."},
           []),
     stage("G", "Sealed plan + dark publish",
           "OFFLINE_PREVIEW_SEALED; profile/source/tree/asset/QTI digests unchanged; conforming plan compiler exists.",

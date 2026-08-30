@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-30T04:34Z",
+ "generated_utc": "2026-08-30T04:45Z",
  "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
  "sources": [
   "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
@@ -252,7 +252,7 @@
    "contract_status": "COMPLETE",
    "proven": {
     "level": "in_progress",
-    "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is unmeasured. No course has sealed this stage."
+    "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is DONE on its measured item-level scope, while resource-level base XP remains unmeasured platform metadata. No course has sealed this stage."
    },
    "evidence": []
   },

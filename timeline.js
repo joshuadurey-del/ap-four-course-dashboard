@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 30, 2026 · 13:41 KST',
+  snapshot: 'Aug 30, 2026 · 13:47 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -15,7 +15,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     { id: 3, name: 'Accept source', canonCode: 'AS', railName: 'Accepted source', canonName: 'Accepted source · SOURCE_ACCEPTED', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
     { id: 4, name: 'Profile + authority', canonCode: 'P0', railName: 'Profile + source bound', canonName: 'Course profile + Phase 0 · PROFILE_AND_SOURCE_BOUND', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
     { id: 5, name: 'Map course tree', canonCode: 'P1', railName: 'Course tree', canonName: 'Phase 1 · Map the complete course tree', state: 'active', status: 'In progress', detail: 'Map the complete hierarchy, order, gates, invariants, assessments, and assigned-reading delivery.' },
-    { id: 6, name: 'Price activities', canonCode: 'P2', railName: 'Activity pricing', canonName: 'Phase 2 · Price activities', state: 'blocked', status: 'Unmeasured', detail: 'Derive activity XP from the actual workload and bind the native rounding rules.' },
+    { id: 6, name: 'Price activities', canonCode: 'P2', railName: 'Activity pricing', canonName: 'Phase 2 · Price activities', state: 'closed', status: 'Done · item-level pricing measured', detail: 'The current receipt measures 3,633 served-key items: 3,167 at 1 XP and 466 at 2 XP. Resource-level base XP is platform metadata and remains unmeasured locally.' },
     { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'active', status: 'In progress · 528 assets locally validated', detail: 'Generate static, article, video, native MCQ, and writing assets; validate QTI and the student surface.' },
     { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint.' },
     { id: 9, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
@@ -28,7 +28,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
       status: 'P1 course map + P3 assets · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 04:19Z',
-      landed: 'Accepted source — closed · Phase 0 — closed · Five enriched lessons — landed · Article checks — 440/440 operator receipts · Phase 3.1-3.2 — 528 assets locally validated',
+      landed: 'Accepted source — closed · Phase 0 — closed · Phase 2 pricing — done for 3,633 served-key items · Five enriched lessons — landed · Article checks — 440/440 operator receipts · Phase 3.1-3.2 — 528 assets locally validated',
       nextStep: 'Resolve the formal census contract, complete bank-wide and answer-shape validation, then verify QTI and the student preview on the governed surface. Nothing is uploaded yet.',
       footprint: [
         { value: '440/440', label: 'operator-receipt article-check position' },
@@ -39,7 +39,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
       etaNote: 'The operator position is 440/440 and the enriched bytes are landed. The formal census remains blocked by its current contract; local asset validation is not upload or learner proof.',
       phaseStates: [
         { code: 'P1', name: 'Map the complete course tree', state: 'active', status: 'IN PROGRESS', detail: 'Five enriched lessons and 440/440 operator-receipt checks are landed; the formal census and bank-wide tree validation remain.' },
-        { code: 'P2', name: 'Price activities', state: 'blocked', status: 'UNMEASURED', detail: 'No current activity-pricing receipt exists; XP totals are not inferred.' },
+        { code: 'P2', name: 'Price activities', state: 'closed', status: 'DONE', detail: 'The current receipt measures 3,167 served-key items at 1 XP and 466 at 2 XP. Resource-level base XP remains UNMEASURED because it lives in platform metadata.' },
         { code: 'P3', name: 'Generate hosted assets and QTI', state: 'active', status: 'IN PROGRESS', detail: '88 script-free XHTML files and 440 two-attempt QTI packages pass local validation; upload and governed-surface preview remain.' }
       ]
     },
@@ -95,7 +95,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Accepted source and Phase 0 retain closure credit. Phase 1 and Phase 3 are IN PROGRESS; Phase 2 is UNMEASURED. The formal census contract and governed-surface checks remain.',
+      note: 'Accepted source and Phase 0 retain closure credit. Phase 1 and Phase 3 are IN PROGRESS; Phase 2 is DONE on its current measured scope. The formal census contract and governed-surface checks remain.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
@@ -103,6 +103,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: 'PR #67 merged · 70/70 accepted · zero residue', copy: 'Canonical verification reproduced exact source coverage and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused, affected, and full repository gates passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/67' },
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
         { gate: 5, state: 'active', status: 'In progress', signal: 'Five enriched lessons · 440/440 operator receipts', copy: 'The formal census and bank-wide tree validation remain open, so Phase 1 is not closed.', href: 'humgeo.html' },
+        { gate: 6, state: 'closed', status: 'Done', signal: '3,633 served-key items priced', copy: 'The Phase 2 receipt measures 3,167 items at 1 XP and 466 at 2 XP. Resource-level base XP remains unmeasured because it exists only in platform metadata.', href: 'claims.html#claim-humgeo.blueprint.audit' },
         { gate: 7, state: 'active', status: 'In progress', signal: '528 assets locally validated', copy: 'Local validation covers 88 script-free XHTML files and 440 two-attempt QTI packages; upload and governed-surface validation remain.', href: 'humgeo.html' }
       ]
     },

@@ -1199,6 +1199,7 @@ footer {
 }
 
 .phase-state-active { border-left-color: var(--blue); }
+.phase-state-closed { border-left-color: var(--green); }
 .phase-state-blocked { border-left-color: var(--amber); }
 .phase-state-locked { border-left-color: #8792a5; }
 .phase-state > div { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }

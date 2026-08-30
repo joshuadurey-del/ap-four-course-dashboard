@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-30T04:45Z",
+    "course": "humgeo",
+    "phase": "2",
+    "kind": "receipt-sealed",
+    "text": "HumGeo Phase 2 pricing is DONE on its current measured scope. The 2026-08-29 receipt measures 3,633 served-key items: 3,167 at 1 XP and 466 at 2 XP, consistent with the runbook's item-level calibration anchors. Resource-level base XP remains UNMEASURED because it exists only in platform metadata; no value was guessed. No course or platform write occurred; $0 spend."
+  },
+  {
     "ts": "2026-08-30T04:41Z",
     "course": "cross",
     "text": "Overview presentation correction: each course card now shows only its current stage, landed work, in-flight work, and next move. The P1/P2/P3 matrix remains on the detailed course, Claims, Retro, and Agent data pages, but the overview no longer foregrounds phases that have not started. No course or platform state changed; $0 spend."
