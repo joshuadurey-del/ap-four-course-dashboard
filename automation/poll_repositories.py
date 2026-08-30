@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import base64
 from concurrent.futures import ThreadPoolExecutor
 import datetime as dt
 import hashlib
@@ -15,14 +14,11 @@ from pathlib import Path
 import sys
 import tempfile
 import urllib.error
-import urllib.parse
 import urllib.request
 
-from dashboard_event import poll_key, process_local_item, process_polled_item, verify_signature
+from dashboard_event import HEX64, REPOSITORY, poll_key, process_local_item, process_polled_item, verify_signature
 
-EVIDENCE_REPO = "joshuadurey-del/ap-ss-evidence"
-INVENTORY_PATH = "dashboard-automation/v1/inventory.json"
-STATE_PATH = "dashboard-automation/v1/state.json"
+STATE_PATH = Path("automation/poller-state.json")
 MAX_PER_ENDPOINT = 100
 MAX_PUBLIC_UPDATES = 40
 MAX_LOCAL_BATCH = 80
@@ -58,27 +54,6 @@ class GitHub:
                 return json.load(response)
         except urllib.error.HTTPError as error:
             raise RuntimeError(f"GitHub API {path}: HTTP {error.code}") from None
-
-    def content(self, repo, path):
-        endpoint = f"/repos/{repo}/contents/{urllib.parse.quote(path)}?ref=main"
-        try:
-            data = self.request(endpoint)
-        except RuntimeError as error:
-            if str(error).endswith("HTTP 404"):
-                return None, None
-            raise
-        return json.loads(base64.b64decode(data["content"])), data["sha"]
-
-    def put_content(self, repo, path, value, message, sha=None):
-        payload = {
-            "message": message, "branch": "main",
-            "content": base64.b64encode((json.dumps(value, indent=2, sort_keys=True) + "\n").encode()).decode(),
-        }
-        if sha:
-            payload["sha"] = sha
-        endpoint = f"/repos/{repo}/contents/{urllib.parse.quote(path)}"
-        return self.request(endpoint, "PUT", payload)["content"]["sha"]
-
 
 def _item(repo, event, event_id, occurred_at, evidence_url, source_sha=None, **extra):
     return {
@@ -118,14 +93,40 @@ def collect_repo(api, repo):
     return items
 
 
-def load_inventory(evidence):
-    document, _ = evidence.content(EVIDENCE_REPO, INVENTORY_PATH)
+def load_inventory():
+    try:
+        document = json.loads(os.environ.get("SOURCE_REPOSITORY_INVENTORY_JSON", ""))
+    except json.JSONDecodeError:
+        document = None
     repos = document.get("repos") if isinstance(document, dict) else None
-    if (not isinstance(repos, dict) or len(repos) < 10
-            or any(not isinstance(repo, str) or course not in {"humgeo", "apwh", "apush", "psych", "cross"}
+    if (not isinstance(document, dict)
+            or document.get("schema") != "dashboard-source-inventory/v1"
+            or not isinstance(repos, dict) or len(repos) < 10
+            or any(not isinstance(repo, str) or not REPOSITORY.fullmatch(repo)
+                   or course not in {"humgeo", "apwh", "apush", "psych", "cross"}
                    for repo, course in repos.items())):
-        raise RuntimeError("EVIDENCE_BACKEND_UNAVAILABLE_OR_INVENTORY_INVALID")
+        raise RuntimeError("SOURCE_REPOSITORY_INVENTORY_INVALID")
     return repos
+
+
+def cursor_hash(kind, value):
+    return hashlib.sha256(f"{kind}:{value}".encode()).hexdigest()
+
+
+def load_state():
+    try:
+        state = json.loads(STATE_PATH.read_text())
+    except (OSError, json.JSONDecodeError):
+        raise RuntimeError("DASHBOARD_CURSOR_INVALID") from None
+    if (not isinstance(state, dict)
+            or state.get("schema") != "dashboard-poller-state/v2"
+            or not isinstance(state.get("initialized"), bool)
+            or any(not isinstance(state.get(field), list)
+                   or len(state[field]) > 20000
+                   or any(not isinstance(value, str) or not HEX64.fullmatch(value) for value in state[field])
+                   for field in ("seen", "local_seen"))):
+        raise RuntimeError("DASHBOARD_CURSOR_INVALID")
+    return state
 
 
 def collect_all(api, inventory):
@@ -171,15 +172,16 @@ def load_local_dispatch():
 
 
 def select_updates(items, state, existing_urls, observed_at, inventory, local_items=()):
-    seen = set(state.get("seen", []))
+    seen = set(state["seen"])
+    repo_cursor = lambda item: cursor_hash("repo", poll_key(item))
     bootstrap = not state.get("initialized")
     if not bootstrap:
         for repo in inventory:
             for event in ("push", "pull_request", "issues", "release", "workflow_run"):
                 page = [item for item in items if item["repository"] == repo and item["event"] == event]
-                if len(page) == MAX_PER_ENDPOINT and all(poll_key(item) not in seen for item in page):
+                if len(page) == MAX_PER_ENDPOINT and all(repo_cursor(item) not in seen for item in page):
                     decision = {
-                        "key": f"{repo}:{event}:page-limit", "repository": repo,
+                        "key": cursor_hash("hold", f"{repo}:{event}:page-limit"), "repository": repo,
                         "event": event, "occurred_at": iso(observed_at),
                         "status": "HOLD", "reason": "PAGINATION_BOUNDARY_UNRESOLVED",
                         "latency_seconds": 0,
@@ -192,48 +194,56 @@ def select_updates(items, state, existing_urls, observed_at, inventory, local_it
             if candidates:
                 eligible.append(max(candidates, key=lambda item: item["occurred_at"]))
     else:
-        eligible = [item for item in items if poll_key(item) not in seen]
-    decisions, updates = [], []
-    for item in sorted(eligible, key=lambda row: row["occurred_at"], reverse=True):
-        decision = process_polled_item(item, inventory, seen, observed_at)
-        if decision["status"] == "UPDATE" and decision["update"]["evidence_url"] in existing_urls:
-            decision["status"], decision["reason"] = "REDELIVERY", "PUBLIC_EVIDENCE_ALREADY_PRESENT"
-        if decision["status"] == "UPDATE" and len(updates) < MAX_PUBLIC_UPDATES:
-            updates.append(decision["update"])
-        decisions.append({
-            "key": poll_key(item), "repository": item["repository"],
-            "event": item["event"], "occurred_at": item["occurred_at"],
-            "status": decision["status"], "reason": decision["reason"],
-            "latency_seconds": max(0, int((observed_at - dt.datetime.fromisoformat(item["occurred_at"].replace("Z", "+00:00"))).total_seconds())),
-        })
-    local_seen = set(state.get("local_seen", []))
+        eligible = [item for item in items if repo_cursor(item) not in seen]
+    decisions, updates, handled_repo = [], [], []
+    local_seen = set(state["local_seen"])
     github_refs = set().union(*(ref_hashes(item) for item in items)) if items else set()
     for item in local_items:
-        decision = process_local_item(item, local_seen, github_refs, observed_at)
         safe_item = item if isinstance(item, dict) else {}
+        delivery_id = safe_item.get("delivery_id")
+        prior = {delivery_id} if isinstance(delivery_id, str) and cursor_hash("local", delivery_id) in local_seen else set()
+        decision = process_local_item(item, prior, github_refs, observed_at)
+        if decision["status"] == "UPDATE" and len(updates) >= MAX_PUBLIC_UPDATES:
+            continue
         occurred_at = str(safe_item.get("ts", iso(observed_at)))
         try:
             latency = max(0, int((observed_at - dt.datetime.fromisoformat(occurred_at.replace("Z", "+00:00"))).total_seconds()))
         except ValueError:
             latency = 0
         decisions.append({
-            "key": str(safe_item.get("delivery_id", "invalid")), "repository": "LOCAL",
+            "key": cursor_hash("local", str(delivery_id or "invalid")), "repository": "LOCAL",
             "event": "local", "occurred_at": occurred_at,
             "status": decision["status"], "reason": decision["reason"],
             "latency_seconds": latency,
         })
-        if decision["status"] == "UPDATE" and len(updates) < MAX_PUBLIC_UPDATES:
+        if decision["status"] == "UPDATE":
             updates.append(decision["update"])
-        if decision["status"] != "HOLD" and isinstance(safe_item.get("delivery_id"), str):
-            local_seen.add(safe_item["delivery_id"])
-    current_keys = [poll_key(item) for item in items]
-    current_set = set(current_keys)
-    prior_keys = [key for key in state.get("seen", []) if key not in current_set]
+        if decision["status"] != "HOLD" and isinstance(delivery_id, str):
+            local_seen.add(cursor_hash("local", delivery_id))
+    for item in sorted(eligible, key=lambda row: row["occurred_at"], reverse=True):
+        decision = process_polled_item(item, inventory, set(), observed_at)
+        if decision["status"] == "UPDATE" and decision["update"]["evidence_url"] in existing_urls:
+            decision["status"], decision["reason"] = "REDELIVERY", "PUBLIC_EVIDENCE_ALREADY_PRESENT"
+        if decision["status"] == "UPDATE" and len(updates) >= MAX_PUBLIC_UPDATES:
+            continue
+        if decision["status"] == "UPDATE":
+            updates.append(decision["update"])
+        decisions.append({
+            "key": repo_cursor(item), "repository": item["repository"],
+            "event": item["event"], "occurred_at": item["occurred_at"],
+            "status": decision["status"], "reason": decision["reason"],
+            "latency_seconds": max(0, int((observed_at - dt.datetime.fromisoformat(item["occurred_at"].replace("Z", "+00:00"))).total_seconds())),
+        })
+        if decision["status"] != "HOLD":
+            handled_repo.append(repo_cursor(item))
+    if bootstrap:
+        handled_repo = [repo_cursor(item) for item in items]
+    next_seen = list(dict.fromkeys(handled_repo + state["seen"]))[:20000]
+    changed = not state["initialized"] or next_seen != state["seen"] or sorted(local_seen) != sorted(state["local_seen"])
     next_state = {
-        "schema": "dashboard-poller-state/v1", "initialized": True,
-        "updated_at": iso(observed_at),
-        "seen": (current_keys + prior_keys)[:20000],
-        "local_seen": sorted(local_seen)[-20000:],
+        "schema": "dashboard-poller-state/v2", "initialized": True,
+        "updated_at": iso(observed_at) if changed else state.get("updated_at", iso(observed_at)),
+        "seen": next_seen, "local_seen": sorted(local_seen)[-20000:],
     }
     return updates, decisions, next_state, bootstrap
 
@@ -247,24 +257,11 @@ def run_key(observed_at):
 def prepare(transaction_path):
     observed_at = now_utc()
     source = GitHub(os.environ.get("SOURCE_REPO_READ_TOKEN"))
-    evidence = GitHub(os.environ.get("EVIDENCE_REPO_WRITE_TOKEN"))
-    inventory = load_inventory(evidence)
-    state, state_sha = evidence.content(EVIDENCE_REPO, STATE_PATH)
-    state = state or {"schema": "dashboard-poller-state/v1", "initialized": False, "seen": []}
+    inventory = load_inventory()
+    state = load_state()
     key = run_key(observed_at)
-    receipt_path = f"runs/{observed_at:%Y-%m-%d}/dashboard-automation/{key}.json"
-    try:
-        local_items = load_local_dispatch()
-        items = collect_all(source, inventory)
-    except RuntimeError as error:
-        receipt = {
-            "schema": "dashboard-poller-receipt/v1", "run_key": key,
-            "status": "HOLD", "reason": str(error),
-            "trigger": os.environ.get("GITHUB_EVENT_NAME", "local"),
-            "observed_at": iso(observed_at), "repositories": list(inventory),
-        }
-        evidence.put_content(EVIDENCE_REPO, receipt_path, receipt, f"dashboard poll HOLD {key}")
-        raise
+    local_items = load_local_dispatch()
+    items = collect_all(source, inventory)
     public_path = Path("updates.json")
     public = json.loads(public_path.read_text())
     existing_urls = {row.get("evidence_url") for row in public if row.get("evidence_url")}
@@ -281,55 +278,29 @@ def prepare(transaction_path):
         "bootstrap": bootstrap, "repositories": list(inventory),
         "candidate_count": len(items), "updates_planned": len(updates), "decisions": decisions,
     }
-    receipt_sha = evidence.put_content(EVIDENCE_REPO, receipt_path, receipt, f"dashboard poll RUNNING {key}")
     if holds:
         raise RuntimeError("one or more polled items returned HOLD")
     transaction = {
         "schema": "dashboard-poller-transaction/v1", "prepared_at": iso(observed_at),
-        "receipt_path": receipt_path, "receipt_sha": receipt_sha, "receipt": receipt,
-        "state": next_state, "state_sha": state_sha, "updates": updates,
+        "receipt": receipt, "state": next_state, "updates": updates,
     }
     Path(transaction_path).write_text(json.dumps(transaction, indent=2, sort_keys=True) + "\n")
     if updates:
         combined = sorted(updates + public, key=lambda row: row["ts"], reverse=True)
         public_path.write_text(json.dumps(combined, indent=2) + "\n")
+    STATE_PATH.write_text(json.dumps(next_state, indent=2, sort_keys=True) + "\n")
     print(f"prepare: repositories={len(inventory)} candidates={len(items)} updates={len(updates)} bootstrap={bootstrap}")
 
 
 def finalize(transaction_path, dashboard_commit, pages_build_id):
-    evidence = GitHub(os.environ.get("EVIDENCE_REPO_WRITE_TOKEN"))
     transaction = json.loads(Path(transaction_path).read_text())
-    state_sha = evidence.put_content(
-        EVIDENCE_REPO, STATE_PATH, transaction["state"],
-        f"dashboard poll cursor {transaction['receipt']['run_key']}", transaction.get("state_sha"),
-    )
-    finished = now_utc()
-    receipt = transaction["receipt"]
-    landed = [row for row in receipt["decisions"] if row["status"] == "UPDATE"]
-    push_latencies = [
-        max(0, int((finished - dt.datetime.fromisoformat(row["occurred_at"].replace("Z", "+00:00"))).total_seconds()))
-        for row in landed
-    ]
-    receipt.update({
-        "status": "COMPLETE", "completed_at": iso(finished),
-        "dashboard_commit": dashboard_commit, "cursor_blob_sha": state_sha,
-        "pages_build_id": pages_build_id,
-        "pages_build_status": "REQUESTED" if pages_build_id != "NOT_REQUESTED" else "NOT_REQUESTED",
-        "event_to_served_seconds": "UNMEASURED",
-        "updates_landed": len(transaction["updates"]),
-        "event_to_push_seconds_min": min(push_latencies) if push_latencies else "UNMEASURED",
-        "event_to_push_seconds_max": max(push_latencies) if push_latencies else "UNMEASURED",
-    })
-    evidence.put_content(
-        EVIDENCE_REPO, transaction["receipt_path"], receipt,
-        f"dashboard poll COMPLETE {receipt['run_key']}", transaction["receipt_sha"],
-    )
-    print(f"finalize: updates={len(transaction['updates'])} dashboard_commit={dashboard_commit}")
+    if transaction.get("schema") != "dashboard-poller-transaction/v1":
+        raise RuntimeError("DASHBOARD_TRANSACTION_INVALID")
+    print(f"finalize: updates={len(transaction['updates'])} dashboard_commit={dashboard_commit} pages_build_id={pages_build_id}")
 
 
 def probe():
-    evidence = GitHub(os.environ.get("EVIDENCE_REPO_WRITE_TOKEN"))
-    inventory = load_inventory(evidence)
+    inventory = load_inventory()
     items = collect_all(GitHub(os.environ.get("SOURCE_REPO_READ_TOKEN")), inventory)
     counts = {repo: len([item for item in items if item["repository"] == repo]) for repo in inventory}
     print(json.dumps({"repositories": len(inventory), "candidates": len(items), "counts": counts}, sort_keys=True))
@@ -343,7 +314,8 @@ def selftest():
         _item(repo, "push", f"commit:{index}", f"2026-08-29T02:{index:02d}:00Z", f"https://github.com/{repo}/commit/{sha}", sha)
         for index, repo in enumerate(inventory)
     ]
-    updates, decisions, state, bootstrap = select_updates(items, {"initialized": False, "seen": []}, set(), observed, inventory)
+    empty = {"schema": "dashboard-poller-state/v2", "initialized": False, "seen": [], "local_seen": []}
+    updates, decisions, state, bootstrap = select_updates(items, empty, set(), observed, inventory)
     assert bootstrap and len(updates) == 2 and all(row["status"] == "UPDATE" for row in decisions)
     updates2, decisions2, _, bootstrap2 = select_updates(items, state, set(), observed, inventory)
     assert not bootstrap2 and not updates2 and not decisions2
@@ -351,7 +323,9 @@ def selftest():
         _item("example/humgeo", "push", f"commit:{index}", "2026-08-29T02:00:00Z", f"https://github.com/example/humgeo/commit/{index:040x}", f"{index:040x}")
         for index in range(MAX_PER_ENDPOINT)
     ]
-    _, page_decisions, _, _ = select_updates(full_page, {"initialized": True, "seen": []}, set(), observed, inventory)
+    _, page_decisions, _, _ = select_updates(
+        full_page, {**empty, "initialized": True}, set(), observed, inventory,
+    )
     assert page_decisions[0]["reason"] == "PAGINATION_BOUNDARY_UNRESOLVED"
     local = {
         "schema": "incept-course-event-v1", "delivery_id": "1" * 16,
@@ -360,10 +334,16 @@ def selftest():
         "ref_hashes": [],
     }
     local_updates, local_decisions, local_state, _ = select_updates(
-        [], {"initialized": True, "seen": []}, set(), observed, inventory, [local],
+        [], {**empty, "initialized": True}, set(), observed, inventory, [local],
     )
     assert len(local_updates) == 1 and local_decisions[0]["status"] == "UPDATE"
-    assert local["delivery_id"] in local_state["local_seen"]
+    assert cursor_hash("local", local["delivery_id"]) in local_state["local_seen"]
+    many_local = [{**local, "delivery_id": f"{index:016x}"} for index in range(MAX_PUBLIC_UPDATES + 1)]
+    capped, _, capped_state, _ = select_updates(
+        [], {**empty, "initialized": True}, set(), observed, inventory, many_local,
+    )
+    assert len(capped) == MAX_PUBLIC_UPDATES
+    assert cursor_hash("local", many_local[-1]["delivery_id"]) not in capped_state["local_seen"]
     document = {"schema": "dashboard-local-event-batch/v1", "events": [local]}
     body = json.dumps(document, sort_keys=True, separators=(",", ":")).encode()
     with tempfile.TemporaryDirectory() as directory:

@@ -29,11 +29,11 @@ jobs:
       - name: Require scoped credentials
         env:
           SOURCE_REPO_READ_TOKEN: ${{ secrets.SOURCE_REPO_READ_TOKEN }}
-          EVIDENCE_REPO_WRITE_TOKEN: ${{ secrets.EVIDENCE_REPO_WRITE_TOKEN }}
+          SOURCE_REPOSITORY_INVENTORY_JSON: ${{ secrets.SOURCE_REPOSITORY_INVENTORY_JSON }}
           LOCAL_EVENT_DISPATCH_SECRET: ${{ secrets.LOCAL_EVENT_DISPATCH_SECRET }}
         run: |
           test -n "$SOURCE_REPO_READ_TOKEN" || { echo "HOLD: SOURCE_REPO_READ_TOKEN is missing"; exit 1; }
-          test -n "$EVIDENCE_REPO_WRITE_TOKEN" || { echo "HOLD: EVIDENCE_REPO_WRITE_TOKEN is missing"; exit 1; }
+          test -n "$SOURCE_REPOSITORY_INVENTORY_JSON" || { echo "HOLD: SOURCE_REPOSITORY_INVENTORY_JSON is missing"; exit 1; }
           if test "$GITHUB_EVENT_NAME" = repository_dispatch; then
             test -n "$LOCAL_EVENT_DISPATCH_SECRET" || { echo "HOLD: LOCAL_EVENT_DISPATCH_SECRET is missing"; exit 1; }
           fi
@@ -45,10 +45,10 @@ jobs:
           git fetch origin main
           test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
 
-      - name: Prepare private receipt and dashboard update
+      - name: Prepare dashboard update
         env:
           SOURCE_REPO_READ_TOKEN: ${{ secrets.SOURCE_REPO_READ_TOKEN }}
-          EVIDENCE_REPO_WRITE_TOKEN: ${{ secrets.EVIDENCE_REPO_WRITE_TOKEN }}
+          SOURCE_REPOSITORY_INVENTORY_JSON: ${{ secrets.SOURCE_REPOSITORY_INVENTORY_JSON }}
           LOCAL_EVENT_DISPATCH_SECRET: ${{ secrets.LOCAL_EVENT_DISPATCH_SECRET }}
           DASHBOARD_BASE_SHA: ${{ github.sha }}
         run: python3 automation/poll_repositories.py prepare --transaction /tmp/dashboard-poll.json
@@ -56,12 +56,12 @@ jobs:
       - name: Commit and push semantic updates
         id: publish
         run: |
-          if git diff --quiet -- updates.json; then
+          git add updates.json automation/poller-state.json
+          bin/precommit.sh
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git add updates.json
-          bin/precommit.sh
           git diff --cached --check
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -80,10 +80,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: echo "build_id=$(gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --jq .id)" >> "$GITHUB_OUTPUT"
 
-      - name: Finalize private cursor and receipt
+      - name: Finalize run
         if: success()
         env:
-          EVIDENCE_REPO_WRITE_TOKEN: ${{ secrets.EVIDENCE_REPO_WRITE_TOKEN }}
           PAGES_BUILD_ID: ${{ steps.pages.outputs.build_id }}
         run: python3 automation/poll_repositories.py finalize --transaction /tmp/dashboard-poll.json --dashboard-commit "$(git rev-parse HEAD)" --pages-build-id "${PAGES_BUILD_ID:-NOT_REQUESTED}"
 

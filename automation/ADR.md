@@ -14,15 +14,13 @@ receipts, and paths never cross the boundary. Row IDs deduplicate deliveries;
 hashed refs suppress a local projection when the same fact has current GitHub
 evidence. The workflow always re-reads all ten repositories before deciding.
 
-The monitored inventory and stable cursor live in private `ap-ss-evidence`.
-Every run writes a private RUNNING receipt before public projection and changes
-the cursor only after an exact dashboard push readback. Concurrent runs serialize
-under one workflow concurrency key. Public rows are derived only from validated
+The monitored inventory is an Actions secret. The stable cursor is committed here
+as SHA-256 values only, so it discloses neither private repository names nor local
+row IDs. Concurrent runs serialize under one workflow concurrency key. Public rows are derived only from validated
 repository name, event type, number, SHA, timestamp, conclusion, and GitHub URL;
 titles, bodies, messages, webhook payloads, tokens, and receipt paths are dropped.
 After a verified push, the workflow explicitly requests the dashboard's legacy
-Pages build and records the returned build ID; it does not infer asynchronous
-serving completion.
+Pages build; it does not infer asynchronous serving completion.
 
 `tools/course_events.py append` sends the newly validated row. Its one-shot
 `reconcile` command sends existing valid rows in bounded batches, allowing missed
