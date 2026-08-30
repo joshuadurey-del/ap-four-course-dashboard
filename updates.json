@@ -1,5 +1,26 @@
 [
   {
+    "ts": "2026-08-30T14:06Z",
+    "course": "apwh",
+    "phase": "fix-round tier-1",
+    "kind": "merged",
+    "text": "APWH fix-round tier-1 landed: PR #65 merged to blueprint main at ea721a32c1ff. It banks 45 replacements plus exclusions and the enveloped bank; 14 residue items remain. The paired AP One serving change is next and accepted source remains in progress."
+  },
+  {
+    "ts": "2026-08-30T14:05Z",
+    "course": "cross",
+    "phase": "dashboard automation",
+    "kind": "note",
+    "text": "Correction to closure row 45f0a2f987b16e10: its final spend phrase was shell-interpolated. The intended and verified statement is USD 0 spend. All other closure facts are unchanged."
+  },
+  {
+    "ts": "2026-08-30T14:05Z",
+    "course": "cross",
+    "phase": "dashboard automation",
+    "kind": "closed",
+    "text": "Four-course dashboard manual reconcile completed from the ten private GitHub sources and the validated 114-row local log. The private cursor and COMPLETE receipt are stored; dashboard commit 73aad97 is live on Pages with exact served-byte verification. Overview, all course pages, Claims, Retro, and Agent data are current. The scheduled workflow remains fail-closed on its scoped evidence credential. No source-course or platform write occurred; /bin/zsh spend."
+  },
+  {
     "ts": "2026-08-30T13:53Z",
     "course": "psych",
     "event_type": "release",

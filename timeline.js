@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 30, 2026 · 23:03 KST',
+  snapshot: 'Aug 30, 2026 · 23:09 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -45,11 +45,11 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 13:48Z',
-      landed: 'Course profile — done · A-168 PR #905 — merged · E3 issue #63 — closed by PR #64 · Tier-1 fix PR #65 — open with 45/58 replacements · Current branch oracle — 96 PASS / 33 MISSING / 3 pre-existing FAIL',
-      nextStep: 'Review and land tier-1 PR #65 with its paired serving change, resolve the 14-item residue and A-187 issue #290, then settle accepted source and run Phase 0.1-0.3.',
+      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:06Z',
+      landed: 'Course profile — done · A-168 PR #905 — merged · E3 issue #63 — closed by PR #64 · Tier-1 fix PR #65 — merged with 45/58 replacements · Current oracle — 96 PASS / 33 MISSING / 3 pre-existing FAIL',
+      nextStep: 'Land the paired AP One serving change for PR #65, resolve the 14-item residue and A-187 issue #290, then settle accepted source and run Phase 0.1-0.3.',
       footprint: [
-        { value: '45/58', label: 'tier-1 replacements in open PR #65' },
+        { value: '45/58', label: 'tier-1 replacements merged in PR #65' },
         { value: '96', label: 'current branch oracle PASS rows' },
         { value: '33', label: 'current branch oracle MISSING rows' }
       ],
@@ -109,10 +109,10 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'APWH is before Phase 0. A-168 PR #905 and E3 fix PR #64 are merged. Tier-1 PR #65 is open with 45/58 replacements and a 96 PASS / 33 MISSING / 3 pre-existing FAIL branch oracle. A-187 issue #290 and 14 residue items remain.',
+      note: 'APWH is before Phase 0. A-168 PR #905, E3 fix PR #64, and tier-1 PR #65 are merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle. The paired serving change, A-187 issue #290, and 14 residue items remain.',
       rows: [
         { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile, consumer, authoring wave, and hash refresh landed', copy: 'PR #889 landed the reviewed, validator-consumed profile and consumer; PR #891 then landed the authoring wave and profile-hash refresh. This prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/891' },
-        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: 'PR #65 open · 45/58 replacements · 96 PASS / 33 MISSING / 3 FAIL', copy: 'Main 882d9f5 includes the E3 contract fix and AP One PR #905 carries the A-168 envelopes. Clean PR #65 adds the measured tier-1 fix round; its three FAIL rows are pre-existing exclusions. A-187 issue #290 and 14 residue items remain.', href: 'https://github.com/ilmych/apwh-blueprint-build/pull/65' },
+        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: 'PR #65 merged · 45/58 replacements · 96 PASS / 33 MISSING / 3 FAIL', copy: 'Main ea721a32 includes the E3 contract fix and merged tier-1 fix round; AP One PR #905 carries the A-168 envelopes. PR #65\'s three FAIL rows are pre-existing exclusions. Its paired serving change, A-187 issue #290, and 14 residue items remain.', href: 'https://github.com/ilmych/apwh-blueprint-build/pull/65' },
         { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.2 capture tool authored; accepted source still moving', copy: 'After AS-01 settles: bind the environment under 0.1, capture immutable source authority under 0.2, then freeze the versioned namespace under 0.3.', href: 'apwh.html' }
       ]
     },

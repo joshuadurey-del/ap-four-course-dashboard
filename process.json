@@ -406,8 +406,8 @@
    "label": "AP World History",
    "current_stage": "A-D (accepted-source preparation)",
    "state": "IN_PROGRESS",
-   "as_of": "2026-08-30T13:48Z",
-   "detail": "PR #905 and the E3 fix are merged. Tier-1 PR #65 is open with 45/58 replacements and a 96 PASS / 33 MISSING / 3 pre-existing FAIL branch oracle; Phase 0 is not started."
+   "as_of": "2026-08-30T14:06Z",
+   "detail": "PR #905, the E3 fix, and tier-1 PR #65 are merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle; the paired serving change and 14-item residue remain, and Phase 0 is not started."
   },
   "apush": {
    "label": "AP US History",

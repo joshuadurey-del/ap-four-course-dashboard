@@ -631,18 +631,19 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH remains before Phase 0 with accepted source IN PROGRESS. Blueprint main 882d9f5a includes PR #64's safe wired-advisory E3 contract, closing issue #63. AP One PR #905 is merged at e61ffc3b with the A-168 served-bank envelopes. Clean tier-1 PR #65 is open at d7eb13bc with 45 of 58 replacements; its branch oracle reports 96 PASS / 33 MISSING / 3 pre-existing FAIL rows, with A-168 PASS at 1,217 tagged items. Fourteen residue items and A-187 contract issue #290 remain. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
+      "value": "APWH remains before Phase 0 with accepted source IN PROGRESS. Blueprint main ea721a32 includes PR #64's safe wired-advisory E3 contract and merged tier-1 PR #65. AP One PR #905 is merged at e61ffc3b with the A-168 served-bank envelopes. PR #65 banks 45 of 58 replacements; its oracle reports 96 PASS / 33 MISSING / 3 pre-existing FAIL rows, with A-168 PASS at 1,217 tagged items. The paired AP One serving change, fourteen residue items, and A-187 contract issue #290 remain. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
       "scope": "APWH accepted-source conformance through the full current course-dir oracle; excludes oracle self-test, local inventory, grading campaigns, publication, and learner serving",
       "evidence": [
         {
           "type": "current-blueprint-main",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/882d9f5a6791"
+          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/ea721a32c1ff"
         },
         {
           "type": "tier-1-fix-round",
           "url": "https://github.com/ilmych/apwh-blueprint-build/pull/65",
-          "state": "open",
-          "head": "d7eb13bcc3e5991d8e1667d551281fd1fd42f5c4"
+          "state": "merged",
+          "head": "d7eb13bcc3e5991d8e1667d551281fd1fd42f5c4",
+          "merge_commit": "ea721a32c1ff614b6f9caf76bed1b0575e861334"
         },
         {
           "type": "a-168-serving-merge",
@@ -1028,13 +1029,13 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-29T01:16Z"
+      "status_at": "2026-08-30T14:06Z"
     },
     {
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Accepted source remains IN PROGRESS. Blueprint main 882d9f5a includes the merged E3 fix; AP One PR #905 is merged; tier-1 PR #65 is open with 45/58 replacements and a 96 PASS / 33 MISSING / 3 pre-existing FAIL branch oracle. A-187 issue #290 and 14 residue items remain. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Accepted source remains IN PROGRESS. Blueprint main ea721a32 includes the merged E3 fix and tier-1 PR #65; AP One PR #905 is merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle. Its paired AP One serving change, A-187 issue #290, and 14 residue items remain. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1044,14 +1045,14 @@
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T13:48Z"
+      "observed_at": "2026-08-30T14:06Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-30T13:48Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH remains before Phase 0 with accepted source IN PROGRESS. PR #905 and the E3 fix are merged; clean tier-1 PR #65 is open with 45/58 replacements, while A-187 issue #290 and 14 residue items remain. The next governed work is to land the paired fix round, settle accepted source, then run Phase 0.1-0.3 in order.",
+      "status_at": "2026-08-30T14:06Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH remains before Phase 0 with accepted source IN PROGRESS. PR #905, the E3 fix, and tier-1 PR #65 are merged. The paired AP One serving change, A-187 issue #290, and 14 residue items remain. The next governed work is to land that paired serving change, settle accepted source, then run Phase 0.1-0.3 in order.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {

@@ -121,7 +121,7 @@ def collect_repo(api, repo):
 def load_inventory(evidence):
     document, _ = evidence.content(EVIDENCE_REPO, INVENTORY_PATH)
     repos = document.get("repos") if isinstance(document, dict) else None
-    if (not isinstance(repos, dict) or len(repos) != 10
+    if (not isinstance(repos, dict) or len(repos) < 10
             or any(not isinstance(repo, str) or course not in {"humgeo", "apwh", "apush", "psych", "cross"}
                    for repo, course in repos.items())):
         raise RuntimeError("EVIDENCE_BACKEND_UNAVAILABLE_OR_INVENTORY_INVALID")
