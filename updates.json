@@ -2,6 +2,20 @@
   {
     "ts": "2026-08-30T14:16Z",
     "course": "humgeo",
+    "event_type": "pull_request",
+    "text": "AP One pull request #911 merged at d2cb182f, repository-landing 1,042 HumGeo Phase 3.3 video pages and checks. Seventy-one remain in content triage; no platform upload or learner verification is claimed.",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/911"
+  },
+  {
+    "ts": "2026-08-30T14:16Z",
+    "course": "humgeo",
+    "event_type": "push",
+    "text": "AP One main advanced to d2cb182f with the merged HumGeo Phase 3.3 video-assets change.",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/d2cb182fb3fe1b5585d21e6b7f4dc3b9a1f18d00"
+  },
+  {
+    "ts": "2026-08-30T14:16Z",
+    "course": "humgeo",
     "event_type": "workflow_run",
     "text": "AP One CI run #1816 completed successfully for the HumGeo Phase 3.3 video-assets change at f8fe9ed6.",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33315707482"

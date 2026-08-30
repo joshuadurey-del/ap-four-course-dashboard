@@ -281,7 +281,7 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The 2026-08-29 receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP, matching the runbook 2.2 anchors. It also measures the demo practice snapshot at 403 items (356 at 1 XP and 47 at 2 XP) and finds zero XP fields in the demo tree. Of the 3,167 served-key values normalized as 1 XP, 53 are stored as the equivalent float 1.0. Resource-level base XP remains UNMEASURED locally; per the runbook it lives in platform resource metadata and binds in the Phase 4 plan. The five enriched lessons and all 440 article-check slots are landed at humgeo-build-outputs main c0ec5ed8e4cf. The operator receipt position is 440/440; the formal census remains blocked by its current contract and has not minted a replacement denominator. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 88 script-free XHTML files plus 440 two-attempt QTI packages locally validated, 528 files total. Phase 3.3 has 1,042 video pages and checks built, with 71 videos held for content triage. Nothing was uploaded, published, enrolled, activated, or released; Phases 4-10 are NOT REACHED.",
+      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The 2026-08-29 receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP, matching the runbook 2.2 anchors. It also measures the demo practice snapshot at 403 items (356 at 1 XP and 47 at 2 XP) and finds zero XP fields in the demo tree. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The five enriched lessons and all 440 article-check slots are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 merged the Phase 3.1-3.2 generator at 824cfd1c, with 528 article/QTI files locally validated. PR #911 merged 1,042 Phase 3.3 video pages and checks at d2cb182f; 71 videos remain in content triage. The formal census, platform upload, governed-surface validation, and learner verification remain open; Phases 4-10 are NOT REACHED.",
       "scope": "current HumGeo runbook position at local enriched article bytes; 440/440 is the operator-receipt position, not the formal landed-byte census or a publication, activation, learner-acceptance, release, or course-completion claim",
       "evidence": [
         {
@@ -313,6 +313,11 @@
           "merge_commit": "824cfd1ccd0a134a1ab121163954bfe11370dedb"
         },
         {
+          "type": "phase-3-video-assets-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/911",
+          "merge_commit": "d2cb182fb3fe1b5585d21e6b7f4dc3b9a1f18d00"
+        },
+        {
           "type": "phase-3-local-build",
           "observed_at": "2026-08-30T07:49Z",
           "article_qti_files": 528,
@@ -336,7 +341,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-30T07:49Z"
+      "status_at": "2026-08-30T14:17Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -822,7 +827,7 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 88 script-free XHTML files and 440 two-attempt QTI packages locally validated, 528 files total; Phase 3.3 has 1,042 video pages and checks built, with 71 videos in content triage. The formal census remains blocked by its current contract; this evidence does not establish upload, learner deployment, or later lifecycle closure.",
+      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 528 article/QTI files locally validated; Phase 3.3 PR #911 is merged at d2cb182f with 1,042 video pages and checks, while 71 videos remain in content triage. The formal census remains blocked; this evidence does not establish platform upload, learner deployment, or later lifecycle closure.",
       "scope": "current P1-04 operator-receipt position at enriched local bytes; formal landed-byte census and downstream lifecycle excluded",
       "evidence": [
         {
@@ -837,13 +842,13 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "observed_at": "2026-08-30T07:49Z"
+      "observed_at": "2026-08-30T14:17Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: 528 Phase 3.1-3.2 article/QTI files pass local validation and 1,042 Phase 3.3 video pages and checks are built, with 71 videos still in content triage. Nothing has been uploaded and the governed student-surface preview has not run. Local validation does not establish a learner/reviewer path.",
+      "value": "BLOCKED: 528 Phase 3.1-3.2 article/QTI files pass local validation and PR #911 has repository-landed 1,042 Phase 3.3 video pages and checks at d2cb182f. Seventy-one videos remain in content triage; no platform upload is claimed and the governed student-surface preview has not run. Repository landing does not establish a learner/reviewer path.",
       "scope": "current native learner/reviewer visibility; excludes local preview artifacts and historical demo surfaces",
       "evidence": [
         {
@@ -852,14 +857,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_EVENT",
-      "status_at": "2026-08-30T07:49Z"
+      "status_at": "2026-08-30T14:17Z"
     },
     {
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-30T07:49Z",
-      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The receipt measures 3,633 served practice-key items at 3,167/466 for 1/2 XP, a 403-item demo snapshot at 356/47, and zero XP fields in the demo tree. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The five lessons and 440/440 operator-receipt article checks are landed. PR #906 is merged; 528 Phase 3.1-3.2 article/QTI files pass local validation, and Phase 3.3 has 1,042 video pages and checks built with 71 videos in content triage. Review-surface readiness remains blocked on the formal census contract, bank-wide validation, governed-surface QTI validation, and student preview. Phases 4-10 have not been reached.",
+      "status_at": "2026-08-30T14:17Z",
+      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The receipt measures 3,633 served practice-key items at 3,167/466 for 1/2 XP; resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The five lessons and 440/440 operator-receipt article checks are landed. PR #906 merged the generator; 528 article/QTI files pass local validation. PR #911 merged 1,042 Phase 3.3 video pages and checks at d2cb182f, with 71 videos in content triage. Review-surface readiness remains blocked on the formal census, bank-wide validation, platform upload, governed-surface QTI validation, and student preview. Phases 4-10 have not been reached.",
       "scope": "current HumGeo runbook sequence and unmet offline validation/preview work; excludes publication and learner readiness",
       "evidence": [
         {
@@ -951,7 +956,7 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: HumGeo Phase 1 and Phase 3 are IN PROGRESS, while Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. PR #906 is merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are built, with 71 videos in content triage. No asset has been uploaded; Phases 4-5 are not sealed and Phases 6-10 are not reached. No publication, enrollment, activation, learner, or release write is claimed.",
+      "value": "BLOCKED: HumGeo Phase 1 and Phase 3 are IN PROGRESS, while Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. PR #906 and Phase 3.3 video-assets PR #911 are merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are repository-landed, with 71 videos in content triage. No platform upload is claimed; Phases 4-5 are not sealed and Phases 6-10 are not reached.",
       "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
@@ -960,7 +965,7 @@
         }
       ],
       "evidence_access": "DASHBOARD_COMPONENT_CLAIM",
-      "status_at": "2026-08-30T04:55Z"
+      "status_at": "2026-08-30T14:17Z"
     },
     {
       "claim_id": "apwh.sweep.pack",

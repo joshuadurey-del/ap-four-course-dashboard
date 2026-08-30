@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 30, 2026 · 23:19 KST',
+  snapshot: 'Aug 30, 2026 · 23:23 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -16,7 +16,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     { id: 4, name: 'Profile + authority', canonCode: 'P0', railName: 'Profile + source bound', canonName: 'Course profile + Phase 0 · PROFILE_AND_SOURCE_BOUND', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
     { id: 5, name: 'Map course tree', canonCode: 'P1', railName: 'Course tree', canonName: 'Phase 1 · Map the complete course tree', state: 'active', status: 'In progress', detail: 'Map the complete hierarchy, order, gates, invariants, assessments, and assigned-reading delivery.' },
     { id: 6, name: 'Price activities', canonCode: 'P2', railName: 'Activity pricing', canonName: 'Phase 2 · Price activities', state: 'closed', status: 'Done · stored XP measured', detail: 'The receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP. It also measures 403 demo-snapshot items and zero XP fields in the demo tree. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.' },
-    { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'active', status: 'In progress · article/QTI + video assets built', detail: 'The article/QTI generator is merged and 528 files pass local validation. The Phase 3.3 build produced 1,042 video pages and checks; 71 videos remain in content triage. Nothing is uploaded.' },
+    { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'active', status: 'In progress · article/QTI + video assets landed', detail: 'The article/QTI generator is merged and 528 files pass local validation. PR #911 merged 1,042 Phase 3.3 video pages and checks; 71 videos remain in content triage. No platform upload is claimed.' },
     { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint.' },
     { id: 9, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 10, name: 'Canary enroll', canonCode: 'P7', railName: 'Canary enrollments', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
@@ -27,20 +27,20 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'P1 course map + P3 assets · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 07:49Z',
-      landed: 'Phase 2 — 3,633 served practice-key XP values measured · Five enriched lessons — landed · Article checks — 440/440 operator receipts · Phase 3.1-3.2 generator — merged in PR #906 · 528 article/QTI files locally validated · Phase 3.3 — 1,042 video pages + checks built',
-      nextStep: 'Finish the 71-video content-triage residue and land the video-asset change, then resolve the formal census contract and complete governed-surface QTI and student-preview verification. Nothing is uploaded yet.',
+      status: 'P1 course map + P3 assets · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:17Z',
+      landed: 'Phase 2 — 3,633 served practice-key XP values measured · Five enriched lessons — landed · Article checks — 440/440 operator receipts · Phase 3.1-3.2 generator — merged in PR #906 · 528 article/QTI files locally validated · Phase 3.3 video assets — merged in PR #911 at d2cb182f',
+      nextStep: 'Finish the 71-video content-triage residue, then resolve the formal census contract and complete governed-surface QTI and student-preview verification. No platform upload is claimed.',
       footprint: [
         { value: '440/440', label: 'operator-receipt article-check position' },
         { value: '528', label: 'locally validated XHTML + QTI assets' },
         { value: '1,042', label: 'Phase 3.3 video pages + checks built' }
       ],
       etaDays: 'VALIDATION NEXT',
-      etaNote: 'PR #906 is merged. The article/QTI and video builds are local evidence; 71 videos remain in content triage, and none of the assets has been uploaded or learner-verified.',
+      etaNote: 'PR #906 and video-assets PR #911 are merged. Seventy-one videos remain in content triage; no platform upload or learner verification is claimed.',
       phaseStates: [
         { code: 'P1', name: 'Map the complete course tree', state: 'active', status: 'IN PROGRESS', detail: 'Five enriched lessons and 440/440 operator-receipt checks are landed; the formal census and bank-wide tree validation remain.' },
         { code: 'P2', name: 'Price activities', state: 'closed', status: 'DONE', detail: '3,633 served practice-key items measured: 3,167 at 1 XP and 466 at 2 XP. The demo snapshot has 403 items; the demo tree has zero XP fields. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan.' },
-        { code: 'P3', name: 'Generate hosted assets and QTI', state: 'active', status: 'IN PROGRESS', detail: 'PR #906 merged the article/QTI generator. 528 article/QTI files pass local validation; Phase 3.3 built 1,042 video pages and checks, with 71 videos still in content triage. Upload and governed-surface preview remain.' }
+        { code: 'P3', name: 'Generate hosted assets and QTI', state: 'active', status: 'IN PROGRESS', detail: 'PR #906 merged the article/QTI generator and PR #911 merged 1,042 Phase 3.3 video pages and checks. The 528 article/QTI files pass local validation; 71 videos, platform upload, and governed-surface preview remain.' }
       ]
     },
     {
@@ -97,7 +97,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Current work is in Phase 1 and Phase 3; Phase 2 is DONE on its measured scope. PR #906 is merged, 1,042 Phase 3.3 video pages and checks are built, and 71 videos remain in content triage. The formal census and governed-surface checks remain.',
+      note: 'Current work is in Phase 1 and Phase 3; Phase 2 is DONE on its measured scope. PR #906 and video-assets PR #911 are merged; 71 videos remain in content triage. The formal census, platform upload, and governed-surface checks remain.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
@@ -106,7 +106,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
         { gate: 5, state: 'active', status: 'In progress', signal: 'Five enriched lessons · 440/440 operator receipts', copy: 'The formal census and bank-wide tree validation remain open, so Phase 1 is not closed.', href: 'humgeo.html' },
         { gate: 6, state: 'closed', status: 'Done', signal: '3,633 served practice-key items measured', copy: 'The receipt measures 3,167 at 1 XP and 466 at 2 XP, plus a 403-item demo snapshot at 356/47. The demo tree has zero XP fields. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.', href: 'claims.html#claim-humgeo.blueprint.audit' },
-        { gate: 7, state: 'active', status: 'In progress', signal: '528 article/QTI files validated · 1,042 video pages built', copy: 'PR #906 merged the generator. Local evidence covers 88 XHTML files, 440 QTI packages, and 1,042 Phase 3.3 video pages and checks; 71 videos remain in content triage. Upload and governed-surface validation remain.', href: 'https://github.com/InceptTrilogy/ap-one/pull/906' }
+        { gate: 7, state: 'active', status: 'In progress', signal: 'PR #911 merged · 528 article/QTI files validated · 1,042 video pages landed', copy: 'PR #906 merged the generator and PR #911 merged the video assets at d2cb182f. Evidence covers 88 XHTML files, 440 QTI packages, and 1,042 Phase 3.3 video pages and checks; 71 videos, platform upload, and governed-surface validation remain.', href: 'https://github.com/InceptTrilogy/ap-one/pull/911' }
       ]
     },
     apwh: {

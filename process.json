@@ -399,8 +399,8 @@
    "label": "AP Human Geography",
    "current_stage": "F",
    "state": "IN_PROGRESS \u2014 Phase 1 and Phase 3",
-   "as_of": "2026-08-30T07:49Z",
-   "detail": "Phase 2 measured scope is done. PR #906 is merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are built, with 71 videos in content triage. Nothing is uploaded."
+   "as_of": "2026-08-30T14:17Z",
+   "detail": "Phase 2 measured scope is done. PR #906 and video-assets PR #911 are merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are repository-landed, with 71 videos in content triage. No platform upload is claimed."
   },
   "apwh": {
    "label": "AP World History",
