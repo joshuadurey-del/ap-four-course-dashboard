@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-30T04:55Z",
+  "snapshot": "2026-08-30T13:55Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -281,7 +281,7 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The 2026-08-29 receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP, matching the runbook 2.2 anchors. It also measures the demo practice snapshot at 403 items (356 at 1 XP and 47 at 2 XP) and finds zero XP fields in the demo tree. Of the 3,167 served-key values normalized as 1 XP, 53 are stored as the equivalent float 1.0. Resource-level base XP remains UNMEASURED locally; per the runbook it lives in platform resource metadata and binds in the Phase 4 plan. The five enriched lessons and all 440 article-check slots are landed at humgeo-build-outputs main c0ec5ed8e4cf. The operator receipt position is 440/440; the formal census remains blocked by its current contract and has not minted a replacement denominator. Phase 3.1-3.2 assets are built and locally validated: 88 script-free XHTML files plus 440 two-attempt QTI packages, 528 assets total. Nothing was uploaded, published, enrolled, activated, or released; Phases 4-10 are NOT REACHED.",
+      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The 2026-08-29 receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP, matching the runbook 2.2 anchors. It also measures the demo practice snapshot at 403 items (356 at 1 XP and 47 at 2 XP) and finds zero XP fields in the demo tree. Of the 3,167 served-key values normalized as 1 XP, 53 are stored as the equivalent float 1.0. Resource-level base XP remains UNMEASURED locally; per the runbook it lives in platform resource metadata and binds in the Phase 4 plan. The five enriched lessons and all 440 article-check slots are landed at humgeo-build-outputs main c0ec5ed8e4cf. The operator receipt position is 440/440; the formal census remains blocked by its current contract and has not minted a replacement denominator. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 88 script-free XHTML files plus 440 two-attempt QTI packages locally validated, 528 files total. Phase 3.3 has 1,042 video pages and checks built, with 71 videos held for content triage. Nothing was uploaded, published, enrolled, activated, or released; Phases 4-10 are NOT REACHED.",
       "scope": "current HumGeo runbook position at local enriched article bytes; 440/440 is the operator-receipt position, not the formal landed-byte census or a publication, activation, learner-acceptance, release, or course-completion claim",
       "evidence": [
         {
@@ -308,6 +308,19 @@
           "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/9da35978d34f781fb2f0692235564aae2fccd078/tools/regenerate_contextual_failures.py"
         },
         {
+          "type": "phase-3-generator-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/906",
+          "merge_commit": "824cfd1ccd0a134a1ab121163954bfe11370dedb"
+        },
+        {
+          "type": "phase-3-local-build",
+          "observed_at": "2026-08-30T07:49Z",
+          "article_qti_files": 528,
+          "video_pages_and_checks": 1042,
+          "video_content_triage": 71,
+          "upload_status": "NOT_PERFORMED"
+        },
+        {
           "type": "phase-2-pricing-receipt",
           "observed_at": "2026-08-29",
           "sha256": "fce8a39426c1253623dfce5c12b8df57fb5db2fb0feb538eebe6ace4a3e7fdd6",
@@ -323,7 +336,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-30T04:55Z"
+      "status_at": "2026-08-30T07:49Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -618,12 +631,24 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH remains before Phase 0 with accepted source IN PROGRESS. Blueprint main is 520435e6346d after PR #62 merged the full pool slice: T050 is 2101/2101, A-168 is 311/312, seven A-187 alternates and the E3 form are present, and the suite reports 373 passing tests. The authoritative complete-surface ledger remains 95 PASS / 34 MISSING. AP One PR #905 is open for A-168 served-bank envelopes; issue #290 records the A-187 raw-versus-stripped FK contract mismatch at 7/176 qualifying yield, and issue #63 records mutually incompatible wired E3 predicates. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
+      "value": "APWH remains before Phase 0 with accepted source IN PROGRESS. Blueprint main 882d9f5a includes PR #64's safe wired-advisory E3 contract, closing issue #63. AP One PR #905 is merged at e61ffc3b with the A-168 served-bank envelopes. Clean tier-1 PR #65 is open at d7eb13bc with 45 of 58 replacements; its branch oracle reports 96 PASS / 33 MISSING / 3 pre-existing FAIL rows, with A-168 PASS at 1,217 tagged items. Fourteen residue items and A-187 contract issue #290 remain. Phase 0 is NOT ENTERED; Phases 1-10 are NOT STARTED.",
       "scope": "APWH accepted-source conformance through the full current course-dir oracle; excludes oracle self-test, local inventory, grading campaigns, publication, and learner serving",
       "evidence": [
         {
           "type": "current-blueprint-main",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/520435e6346d"
+          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/882d9f5a6791"
+        },
+        {
+          "type": "tier-1-fix-round",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/pull/65",
+          "state": "open",
+          "head": "d7eb13bcc3e5991d8e1667d551281fd1fd42f5c4"
+        },
+        {
+          "type": "a-168-serving-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/905",
+          "state": "merged",
+          "merge_commit": "e61ffc3b44449d0848c3c546b36a2f84c03a18a5"
         },
         {
           "type": "profile-and-consumer",
@@ -643,30 +668,30 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-30T04:19Z"
+      "status_at": "2026-08-30T13:48Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "Exact remote bytes at apush-build-outputs main 8682f4dca668 report BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS and generation_authorized=false. The article-input manifest passes with 249 records. This remains build-only accepted-source evidence and does not establish a complete native tree, learner implementation, publication, or release.",
+      "value": "Exact remote bytes at apush-build-outputs main 98842f41d901 report BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS and generation_authorized=false. The reconciliation blob is byte-identical to the prior main snapshot, and the article-input manifest passes with 249 records. This remains build-only accepted-source evidence and does not establish a complete native tree, learner implementation, publication, or release.",
       "scope": "APUSH build-only blueprint reconciliation at exact current output SHA; excludes native tree completion, generation authority, learner implementation, and release",
       "evidence": [
         {
           "type": "reconciliation-manifest",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/8682f4dca668/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json",
           "status": "BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T04:19Z"
+      "observed_at": "2026-08-30T13:55Z"
     },
     {
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
       "status": "OBSERVED",
       "observed_at": "2026-08-30T04:24Z",
-      "value": "Psychology remains at the publication-runbook entry boundary before Phase 0. Course main c349f4349742 contains the Unit 5 assessment set: 457 MCQs, two AAQs, and one EBQ. A read-only coverage run measured the live bank at 8,665 MCQs / 32,853 FRQs and the staged bank at 1,912 MCQs + 37 FRQs across all five units. Content generation is PROVEN, but 0/1,912 staged MCQs have /v1/qc receipts and the oracle exits 2 because the store and third layout are undeclared. QC green remains BLOCKED_CONTRACT; AS-01 is not closed and no lifecycle phase credit is claimed.",
+      "value": "Psychology remains at the publication-runbook entry boundary before Phase 0. The Unit 0 video release contains 12 SME-accepted clips covering 11 of 22 prerequisite records and 11 of 32 CED bullets; Unit 0 is not AP exam-unit coverage. Course main c349f4349742 contains the Unit 5 assessment set: 457 MCQs, two AAQs, and one EBQ. The staged bank remains 1,912 MCQs + 37 FRQs across five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter. The acceptance instrument remains the factory Faultless Bar course-QC job; its access-controlled evaluator and unpublished-course dependency remain unresolved. AS-01 is not closed and no lifecycle phase credit is claimed.",
       "scope": "current Psychology position against the pinned AP One Native TimeBack publication runbook; excludes accepted-source closure, phase entry, publication, enrollment, activation, learner acceptance, and release",
       "evidence": [
         {
@@ -683,7 +708,8 @@
           "runbook_sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
         }
       ],
-      "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER"
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER+LOCAL_INCEPT_EVENT",
+      "status_at": "2026-08-30T13:53Z"
     },
     {
       "claim_id": "cross.recovery.audit",
@@ -789,7 +815,7 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. Phase 3.1-3.2 now has 88 script-free XHTML files and 440 two-attempt QTI packages locally validated, 528 assets total. The formal census remains blocked by its current contract; this evidence does not establish upload, learner deployment, or later lifecycle closure.",
+      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 88 script-free XHTML files and 440 two-attempt QTI packages locally validated, 528 files total; Phase 3.3 has 1,042 video pages and checks built, with 71 videos in content triage. The formal census remains blocked by its current contract; this evidence does not establish upload, learner deployment, or later lifecycle closure.",
       "scope": "current P1-04 operator-receipt position at enriched local bytes; formal landed-byte census and downstream lifecycle excluded",
       "evidence": [
         {
@@ -804,13 +830,13 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "observed_at": "2026-08-30T04:19Z"
+      "observed_at": "2026-08-30T07:49Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: 528 Phase 3.1-3.2 assets pass local validation at landed build-output bytes, but nothing has been uploaded and the governed student-surface preview has not run. Local validation does not establish a learner/reviewer path.",
+      "value": "BLOCKED: 528 Phase 3.1-3.2 article/QTI files pass local validation and 1,042 Phase 3.3 video pages and checks are built, with 71 videos still in content triage. Nothing has been uploaded and the governed student-surface preview has not run. Local validation does not establish a learner/reviewer path.",
       "scope": "current native learner/reviewer visibility; excludes local preview artifacts and historical demo surfaces",
       "evidence": [
         {
@@ -819,14 +845,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_EVENT",
-      "status_at": "2026-08-30T04:19Z"
+      "status_at": "2026-08-30T07:49Z"
     },
     {
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "status_at": "2026-08-30T04:55Z",
-      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The receipt measures 3,633 served practice-key items at 3,167/466 for 1/2 XP, a 403-item demo snapshot at 356/47, and zero XP fields in the demo tree. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The five lessons and 440/440 operator-receipt article checks are landed, and 528 Phase 3.1-3.2 assets pass local validation. Review-surface readiness remains blocked on the formal census contract, bank-wide validation, answer-shape reporting, QTI validation on the governed surface, and student preview. Phases 4-10 have not been reached.",
+      "status_at": "2026-08-30T07:49Z",
+      "value": "HumGeo Phase 1 and Phase 3 remain IN PROGRESS; Phase 2 is DONE on its receipt-measured practice surfaces. The receipt measures 3,633 served practice-key items at 3,167/466 for 1/2 XP, a 403-item demo snapshot at 356/47, and zero XP fields in the demo tree. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The five lessons and 440/440 operator-receipt article checks are landed. PR #906 is merged; 528 Phase 3.1-3.2 article/QTI files pass local validation, and Phase 3.3 has 1,042 video pages and checks built with 71 videos in content triage. Review-surface readiness remains blocked on the formal census contract, bank-wide validation, governed-surface QTI validation, and student preview. Phases 4-10 have not been reached.",
       "scope": "current HumGeo runbook sequence and unmet offline validation/preview work; excludes publication and learner readiness",
       "evidence": [
         {
@@ -918,7 +944,7 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: HumGeo Phase 1 and Phase 3 are IN PROGRESS, while Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. The locally validated assets have not been uploaded; Phases 4-5 are not sealed and Phases 6-10 are not reached. No publication, enrollment, activation, learner, or release write is claimed.",
+      "value": "BLOCKED: HumGeo Phase 1 and Phase 3 are IN PROGRESS, while Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan. PR #906 is merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are built, with 71 videos in content triage. No asset has been uploaded; Phases 4-5 are not sealed and Phases 6-10 are not reached. No publication, enrollment, activation, learner, or release write is claimed.",
       "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
@@ -1008,7 +1034,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Accepted source remains IN PROGRESS at blueprint main 520435e6346d; the complete-surface ledger remains 95 PASS / 34 MISSING. AP One PR #905 and contract issues #290 and #63 are open. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Accepted source remains IN PROGRESS. Blueprint main 882d9f5a includes the merged E3 fix; AP One PR #905 is merged; tier-1 PR #65 is open with 45/58 replacements and a 96 PASS / 33 MISSING / 3 pre-existing FAIL branch oracle. A-187 issue #290 and 14 residue items remain. Phase 0 is not entered, and nothing here establishes publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1018,14 +1044,14 @@
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T04:19Z"
+      "observed_at": "2026-08-30T13:48Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-30T04:19Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH remains before Phase 0 with accepted source IN PROGRESS at main 520435e6346d. The complete-surface receipt is still 95 PASS / 34 MISSING; AP One PR #905 and contract issues #290 and #63 are open. The next governed work is to settle accepted source, then run Phase 0.1-0.3 in order.",
+      "status_at": "2026-08-30T13:48Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH remains before Phase 0 with accepted source IN PROGRESS. PR #905 and the E3 fix are merged; clean tier-1 PR #65 is open with 45/58 replacements, while A-187 issue #290 and 14 residue items remain. The next governed work is to land the paired fix round, settle accepted source, then run Phase 0.1-0.3 in order.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1047,16 +1073,16 @@
       "claim_id": "apush.ledger.mixed",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "Exact current ledger bytes at apush-build-outputs main 8682f4dca668 report 49 ACCEPTED and 200 PENDING over 249 positions; the 49 accepted positions split 36 legacy_dual_review and 13 server_strict. The ledger remains build-only evidence and does not establish native seating, learner implementation, publication, or release.",
+      "value": "Exact current ledger bytes at apush-build-outputs main 98842f41d901 report 49 ACCEPTED and 200 PENDING over 249 positions; the ledger blob is byte-identical to the prior main snapshot. The 49 accepted positions split 36 legacy_dual_review and 13 server_strict. The ledger remains build-only evidence and does not establish native seating, learner implementation, publication, or release.",
       "scope": "current committed APUSH article-acceptance ledger; excludes native seating, platform ingest, learner serving, and release",
       "evidence": [
         {
           "type": "canonical-ledger",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/8682f4dca668/phase2/article-acceptance-ledger-v2-succ11/ledger.json"
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase2/article-acceptance-ledger-v2-succ11/ledger.json"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T04:19Z"
+      "observed_at": "2026-08-30T13:55Z"
     },
     {
       "claim_id": "apush.generated_qc",
@@ -1087,7 +1113,7 @@
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "APUSH accepted source remains IN PROGRESS. Build-output PR #5 is merged at main 8682f4dca668 with 139 wave-3 image contracts, and course-build PR #14 is merged at main c12f677ed3e1 to bind the first packets to the canonical manifest. Build-output PR #7 remains open for manifest resealing; PR #8 is open to restore KC-8.2.II.C and must rebase after #7. Issues #6 and #9 remain open. The exact ledger is unchanged at 49 accepted / 200 pending.",
+      "value": "APUSH accepted source remains IN PROGRESS. Build-output main 98842f41 contains the 139 wave-3 image contracts, merged manifest PR #7, and merged KC-8.2.II.C repair PR #8; issue #6 is closed. Course-build main 0a9938ff includes merged runner-binding PR #15. The exact ledger is unchanged at 49 accepted / 200 pending. Issue #9 remains the fleet-owned fix-round edge; positions 45 and 46 ended in recorded terminal failure, with no owner-side competing writer.",
       "scope": "APUSH committed admission and build-only migrated-wrapper state; excludes factory posts, platform ingest, learner serving, and later lifecycle closure",
       "evidence": [
         {
@@ -1114,16 +1140,29 @@
           "type": "migrated-wrapper-merge",
           "url": "https://github.com/ilmych/apush-build-outputs/pull/4",
           "merge_commit": "c1be6fb19f5ce0bde5c592437749e1bb81628741"
+        },
+        {
+          "type": "manifest-and-kc-repairs",
+          "urls": [
+            "https://github.com/ilmych/apush-build-outputs/pull/7",
+            "https://github.com/ilmych/apush-build-outputs/pull/8"
+          ],
+          "state": "merged"
+        },
+        {
+          "type": "portable-runner-bindings",
+          "url": "https://github.com/ilmych/apush-course-build/pull/15",
+          "merge_commit": "0a9938ffee7435907a40fce7ad1b355d7704580a"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T04:19Z"
+      "observed_at": "2026-08-30T06:33Z"
     },
     {
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "value": "BLOCKED: build-output main 8682f4dca668 includes the 53 migrated wrappers and 139 wave-3 image contracts; course-build main c12f677ed3e1 binds the first packets to the canonical manifest. PR #7 must land before PR #8 can be rebased and reverified; issues #6 and #9 remain open. No factory post, ingest, wiring, deployment, or learner execution is claimed.",
+      "value": "BLOCKED: build-output main 98842f41 includes the 53 migrated wrappers, 139 wave-3 image contracts, merged manifest PR #7, and merged KC repair PR #8. Course-build main 0a9938ff includes portable runner bindings from PR #15. Issue #9 remains open; positions 45 and 46 are preserved terminal factory failures and the fleet owns the next fix cycle. No ingest, wiring, deployment, or learner execution is claimed.",
       "scope": "APUSH 74-binding migration state; excludes factory posts, platform ingest, learner wiring, and later lifecycle closure",
       "evidence": [
         {
@@ -1137,14 +1176,14 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-30T04:19Z"
+      "status_at": "2026-08-30T06:33Z"
     },
     {
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-30T04:19Z",
-      "value": "APUSH accepted source is IN PROGRESS, not parked. The current ledger is 49 accepted / 200 pending; build-output PR #5 and course-build PR #14 are merged. PR #7 is open, PR #8 is ordered behind it, and issues #6 and #9 remain open. No learner execution or later lifecycle closure is claimed.",
+      "status_at": "2026-08-30T06:33Z",
+      "value": "APUSH accepted source is IN PROGRESS, not parked. The current ledger is 49 accepted / 200 pending. Build-output PRs #7 and #8 and course-build PR #15 are merged; issue #6 is closed. Issue #9 remains open with positions 45 and 46 recorded as terminal factory failures under the fleet-owned fix cycle. No learner execution or later lifecycle closure is claimed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -1153,7 +1192,7 @@
         },
         {
           "type": "reconciliation-manifest",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/8682f4dca668/phase1/blueprint-reconciliation/reconciliation_manifest.json"
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json"
         },
         {
           "type": "morning-report",
@@ -1166,12 +1205,12 @@
       "claim_id": "apush.platform",
       "section": "APUSH",
       "status": "MISSING",
-      "value": "MISSING: the exact current APUSH manifest at build-output main 8682f4dca668 records live_platform_writes as NOT_PERFORMED and generation_authorized=false. No sanctioned learner-surface verifier receipt was produced. Native registration, publication, learner visibility, and release remain unproved; build counts do not fill that gap.",
+      "value": "MISSING: the exact current APUSH manifest at build-output main 98842f41d901 records live_platform_writes as NOT_PERFORMED and generation_authorized=false; its blob is byte-identical to the prior main snapshot. No sanctioned learner-surface verifier receipt was produced. Native registration, publication, learner visibility, and release remain unproved; build counts do not fill that gap.",
       "scope": "current APUSH native learner-serving and release state; excludes build-only blueprint, ledger, and reconciler mechanisms",
       "evidence": [
         {
           "type": "canonical-ledger",
-          "url": "https://github.com/ilmych/apush-build-outputs/blob/8682f4dca668/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json",
           "write_policy": "build-only"
         },
         {
@@ -1186,8 +1225,8 @@
       "claim_id": "psych.content",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T04:24Z",
-      "value": "At Psychology main c349f4349742, Unit 5 assessment content is landed: 457 MCQs, two AAQs, and one EBQ. A read-only coverage run measured 1,912 staged MCQs and 37 staged FRQs across all five units, while the live bank snapshot measured 8,665 MCQs and 32,853 FRQs. Content generation is PROVEN; accepted-source closure and QC green are not.",
+      "observed_at": "2026-08-30T13:53Z",
+      "value": "The Unit 0 video release contains 12 SME-accepted clips covering 11 of 22 prerequisite records and 11 of 32 CED bullets; Unit 0 is not AP exam-unit coverage. At Psychology main c349f4349742, Unit 5 assessment content is landed: 457 MCQs, two AAQs, and one EBQ. The staged bank contains 1,912 MCQs and 37 FRQs across all five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter. Content generation is PROVEN; accepted-source closure and course-QC green are not.",
       "scope": "exact-SHA Unit 1-4 tracked assessment inventory, committed publish-tree XML verification, and Unit 5 mechanism closures; excludes complete content QC, accepted-source closure, course wiring, deployment, and learner visibility",
       "evidence": [
         {
@@ -1201,6 +1240,22 @@
         {
           "type": "course-main",
           "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742"
+        },
+        {
+          "type": "unit-0-video-release",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-0-videos",
+          "published_at": "2026-08-30T13:53:10Z",
+          "clips": 12,
+          "records_covered": 11,
+          "records_total": 22
+        },
+        {
+          "type": "retrieved-item-check",
+          "observed_at": "2026-08-30T05:13Z",
+          "checked": 1709,
+          "live_by_id": 910,
+          "content_drift": 2,
+          "unmeasured_behind_unpublished_filter": 799
         }
       ],
       "evidence_access": "PRIVATE_GITHUB"
@@ -1209,8 +1264,8 @@
       "claim_id": "psych.bank",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T04:24Z",
-      "value": "Runbook rows P1-04, P3-05, and P3-06 remain bounded IN_PROGRESS evidence. The staged bank at c349f434 contains 1,912 MCQs and 37 FRQs across all five units, but 0/1,912 staged MCQs have /v1/qc receipts. The coverage oracle exits 2 because the store and third layout are undeclared; factory-side EBQ readback and grader certification remain absent. QC green is BLOCKED_CONTRACT, with no phase entry or learner outcome claimed.",
+      "observed_at": "2026-08-30T05:13Z",
+      "value": "Runbook rows P1-04, P3-05, and P3-06 remain bounded IN_PROGRESS evidence. The staged bank at c349f434 contains 1,912 MCQs and 37 FRQs. A read-only retrieved-item check confirmed 910 of 1,709 checked items live by ID and found 2 content-drift cases; 799 remain UNMEASURED behind the unpublished eligibility filter. The required acceptance instrument is the factory Faultless Bar course-QC job, whose access-controlled evaluator and unpublished-course dependency remain unresolved. Factory-side EBQ readback and grader certification are absent, with no phase entry or learner outcome claimed.",
       "scope": "P1-04, P3-05, P3-06, and RLS-14 evidence state; excludes complete exact-set/QTI/grader seals, phase credit, paid generation, learner behavior, and publication",
       "evidence": [
         {
@@ -1311,8 +1366,8 @@
       "claim_id": "psych.ls_qc_ready",
       "section": "Psych",
       "status": "OBSERVED",
-      "observed_at": "2026-08-30T04:24Z",
-      "value": "The retired LS REVIEW READY sprint marker supplies no publication-runbook lifecycle credit. Psychology remains before Phase 0: content generation is PROVEN, but QC green is BLOCKED_CONTRACT on 0/1,912 staged MCQ /v1/qc receipts plus missing factory-side EBQ readback and grader certification. AS-01 remains IN_PROGRESS; the reviewed course profile, Phase 0, later phases, release checklist, and handoff packet remain NOT_YET_MEASURED.",
+      "observed_at": "2026-08-30T05:13Z",
+      "value": "The retired LS REVIEW READY sprint marker supplies no publication-runbook lifecycle credit. Psychology remains before Phase 0: content generation is PROVEN, while a read-only retrieved-item check confirms 910/1,709 staged items live by ID, finds 2 content drift, and leaves 799 UNMEASURED behind the unpublished filter. Faultless Bar course QC, factory-side EBQ readback, and grader certification remain blocked. AS-01 remains IN_PROGRESS; the reviewed course profile, Phase 0, later phases, release checklist, and handoff packet remain NOT_YET_MEASURED.",
       "scope": "retired LS sprint marker mapped to current publication-runbook state; excludes accepted-source closure, phase entry, LS disposition, learner acceptance, and release",
       "evidence": [
         {

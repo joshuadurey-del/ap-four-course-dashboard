@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-30T04:55Z",
+ "generated_utc": "2026-08-30T13:55Z",
  "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
  "sources": [
   "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
@@ -398,30 +398,30 @@
   "humgeo": {
    "label": "AP Human Geography",
    "current_stage": "F",
-   "state": "IN_PROGRESS \u2014 Gate 5 packets, mid-recovery",
-   "as_of": "2026-08-26",
-   "detail": "Stages A-E closed with packets; F is the fleet's live edge. Live counts and holds: humgeo.html and the feed."
+   "state": "IN_PROGRESS \u2014 Phase 1 and Phase 3",
+   "as_of": "2026-08-30T07:49Z",
+   "detail": "Phase 2 measured scope is done. PR #906 is merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are built, with 71 videos in content triage. Nothing is uploaded."
   },
   "apwh": {
    "label": "AP World History",
    "current_stage": "A-D (accepted-source preparation)",
-   "state": "HOLD",
-   "as_of": "2026-08-25",
-   "detail": "Scope sub-receipt retained; accepted source held; Phase 0 not started."
+   "state": "IN_PROGRESS",
+   "as_of": "2026-08-30T13:48Z",
+   "detail": "PR #905 and the E3 fix are merged. Tier-1 PR #65 is open with 45/58 replacements and a 96 PASS / 33 MISSING / 3 pre-existing FAIL branch oracle; Phase 0 is not started."
   },
   "apush": {
    "label": "AP US History",
    "current_stage": "A-D (accepted-source preparation)",
    "state": "IN_PROGRESS",
-   "as_of": "2026-08-25",
-   "detail": "Blueprint, inventory, and QC evidence mapped; Phase 0 not started."
+   "as_of": "2026-08-30T06:33Z",
+   "detail": "The ledger remains 49 accepted / 200 pending. PRs #7/#8 and runner PR #15 are merged; issue #9 owns the next fix cycle after terminal failures at positions 45 and 46. Phase 0 is not started."
   },
   "psych": {
    "label": "AP Psychology",
    "current_stage": "A-D (accepted-source preparation)",
    "state": "IN_PROGRESS",
-   "as_of": "2026-08-25",
-   "detail": "221 paired article/QC sidecars on main; Phase 0 not started."
+   "as_of": "2026-08-30T13:53Z",
+   "detail": "The Unit 0 release contains 12 SME-accepted prerequisite clips; it is not AP exam coverage. A read-only check confirms 910/1,709 staged items live by ID, with 2 drift and 799 unmeasured behind the unpublished filter; factory course QC remains blocked. Phase 0 is not started."
   }
  }
 }

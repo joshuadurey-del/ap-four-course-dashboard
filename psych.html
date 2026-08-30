@@ -11,7 +11,7 @@
 <a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html" class="active" aria-current="page">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP Psychology</h1>
-  <p class="sub">Psychology remains at the runbook entry boundary, <strong>BEFORE PHASE 0</strong>. Content generation is <strong>PROVEN</strong>, but QC green is <strong>BLOCKED_CONTRACT</strong>; zero canon rows are PROVEN.</p>
+  <p class="sub">Psychology remains at the runbook entry boundary, <strong>BEFORE PHASE 0</strong>. Content generation is <strong>PROVEN</strong>. A read-only check confirms 910/1,709 staged items live by ID; factory course QC remains <strong>BLOCKED_CONTRACT</strong>.</p>
 
   <aside class="course-activity" aria-labelledby="activity-title-psych">
     <h2 id="activity-title-psych">Repository activity</h2>
@@ -26,8 +26,8 @@
   <section>
     <h2>Current runbook position</h2>
     <dl class="reading-guide">
-      <div><dt>AS-01 — accepted source</dt><dd><strong>IN_PROGRESS.</strong> A read-only run measured 1,912 staged MCQs and 37 staged FRQs across all five units. Content generation is proven; accepted source is not closed.</dd></div>
-      <div><dt>P1-04, P3-05, P3-06</dt><dd><strong>BLOCKED_CONTRACT.</strong> Zero of 1,912 staged MCQs have <code>/v1/qc</code> receipts; the store and third layout are undeclared, and factory-side EBQ readback plus grader certification remain absent.</dd></div>
+      <div><dt>AS-01 — accepted source</dt><dd><strong>IN_PROGRESS.</strong> The staged bank measures 1,912 MCQs and 37 FRQs across all five units. A read-only retrieved-item check confirms 910 of 1,709 staged items live by ID; accepted source is not closed.</dd></div>
+      <div><dt>P1-04, P3-05, P3-06</dt><dd><strong>BLOCKED_CONTRACT.</strong> The check found 2 content-drift cases and left 799 items UNMEASURED behind the unpublished eligibility filter. The Faultless Bar evaluator, factory-side EBQ readback, and grader certification remain unresolved.</dd></div>
       <div><dt>Course profile — PR-01 to PR-08</dt><dd><strong>NOT_YET_MEASURED.</strong> The reviewed, validator-consumed profile required before Phase 0 has not been authored.</dd></div>
       <div><dt>Phase 0 — Establish authority</dt><dd><strong>NOT ENTERED.</strong> Environment binding, immutable source capture, and the fresh namespace wait for complete accepted source.</dd></div>
       <div><dt>Later phases and handoff</dt><dd><strong>NOT_YET_MEASURED.</strong> Existing artifacts earn bounded row evidence but no lifecycle phase credit before Phase 0.</dd></div>
@@ -37,8 +37,9 @@
   <section>
     <h2>Current accepted-source residue</h2>
     <ul>
+      <li>The <a href="https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-0-videos" target="_blank" rel="noopener">Unit 0 video release</a> contains 12 SME-accepted clips covering 11 of 22 prerequisite records and 11 of 32 CED bullets. Unit 0 is scaffold content, not AP exam-unit coverage.</li>
       <li>Course main <a href="https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/c349f4349742" target="_blank" rel="noopener"><code>c349f434</code></a> lands 457 Unit 5 MCQs, two AAQs, and one EBQ.</li>
-      <li>The read-only coverage run measured a live snapshot of 8,665 MCQs / 32,853 FRQs and a staged bank of 1,912 MCQs + 37 FRQs across all five units. The coverage oracle exited 2; this is content evidence, not QC acceptance.</li>
+      <li>The staged bank measures 1,912 MCQs + 37 FRQs across all five units. A read-only retrieved-item check confirmed 910 of 1,709 staged items live by ID, found 2 content-drift cases, and left 799 UNMEASURED behind the unpublished eligibility filter.</li>
       <li>Unit 0 articles are merged through PR #63. Draft <a href="https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/64" target="_blank" rel="noopener">PR #64</a> contains the first 8 of 22 Unit 0 figures.</li>
       <li><a href="https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51" target="_blank" rel="noopener">Issue #51</a> remains open, so landed content does not close accepted source.</li>
       <li><a href="https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20" target="_blank" rel="noopener">FRQ PR #20</a> remains open; no later phase or learner outcome is claimed.</li>
@@ -48,7 +49,7 @@
   <section class="reading-guide">
     <h2>Next steps — runbook order</h2>
     <dl>
-      <div><dt>1. Close AS-01</dt><dd>Resolve the undeclared store/layout contract, obtain factory-side EBQ readback and grader certification, then rerun QC and cut the accepted-source closure receipt.</dd></div>
+      <div><dt>1. Close AS-01</dt><dd>Resolve the Faultless Bar evaluator and unpublished-course contract, obtain factory-side EBQ readback and grader certification, then rerun course QC and cut the accepted-source closure receipt.</dd></div>
       <div><dt>2. Build the reviewed course profile</dt><dd>Use APWH’s landed profile pattern for PR-01 through PR-08, RLS-01, and HO-01. Keep the source digest pending until Phase 0 capture mints it.</dd></div>
       <div><dt>3. Enter Phase 0</dt><dd>Bind the environment under 0.1, capture immutable source authority under 0.2, then freeze the new namespace under 0.3.</dd></div>
       <div><dt>4. Continue the ladder</dt><dd>Only then enter Phases 1-10 in runbook order and close END-01 with a real learner path plus persisted TimeBack readback.</dd></div>
