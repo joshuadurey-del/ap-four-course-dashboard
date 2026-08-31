@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T04:35Z",
+    "course": "cross",
+    "phase": "dashboard curation",
+    "kind": "state-change",
+    "text": "Current-state refresh from live repository sources: APWH is in Phase 1 with Phase 0.2 PR #917 merged and Phase 1 PR #923 open with all reported checks successful; no Phase 1 closure is claimed. Psychology now has a visible handoff section, and its repository activity shows open PR #66 as the newest verified event.",
+    "writer": "dashboard curation"
+  },
+  {
     "ts": "2026-08-31T04:19Z",
     "course": "cross",
     "phase": "dashboard display",

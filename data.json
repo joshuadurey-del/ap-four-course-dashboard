@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T02:23Z",
+  "snapshot": "2026-08-31T04:34Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -670,8 +670,8 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH Phase 0.2 source capture remains open in PR #917 with E3 wiring in PR #916; fleet owns both merges and deploy watch, and the seat re-pins if covered bytes move. Phase 1 Leg A has five read-only measurements receipted locally: article-check policy, lesson order, inline practice, gate boundaries, and pinned assessment forms. Leg B waits and no Phase 1 closure is claimed. Tier 2 and test-builder issue #290 remain separate waits.",
-      "scope": "current APWH Phase 0.2 entry plus locally receipted Phase 1 Leg A measurements; excludes PR merge authority, Phase 1 closure, tier-2 authorization, later phases, publication, and learner serving",
+      "value": "APWH is in Phase 1. Phase 0.2 source capture merged in PR #917 at 4fc7c055. The required native course tree and refusal validator are in open PR #923 at 7dd28738, with every currently reported check successful. E3 wiring PR #916 remains open with successful checks. Phase 1 is in progress, not closed. The authorized tier-2 campaign and open test-builder issue #290 remain separate from lifecycle credit.",
+      "scope": "current APWH Phase 0.2 landing and Phase 1 tree work; excludes Phase 1 closure, tier-2 execution credit, later phases, publication, and learner serving",
       "freshness_limit_hours": 24,
       "next_step": {
         "verb": "resume",
@@ -679,7 +679,7 @@
         "args": [
           "apwh"
         ],
-        "gate": "the fleet lands PRs 916 and 917 and the step picker selects Phase 1 Leg B"
+        "gate": "Phase 1 PR #923 lands and the step picker returns the next runnable APWH action"
       },
       "evidence": [
         {
@@ -697,19 +697,23 @@
           "type": "e3-wiring-change",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/916",
           "state": "open",
-          "head": "dcdb8175"
+          "head": "dcdb81754b04ea344231bf826e907eba656cb454",
+          "checks": "SUCCESS"
         },
         {
           "type": "phase-0.2-source-capture",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
-          "state": "open",
-          "head": "0a0e00a0"
+          "state": "merged",
+          "head": "1014fc185de392dceda23c42cc111cf18e00341e",
+          "merge_commit": "4fc7c055a0785d39d1698903d22a2d77613f330c"
         },
         {
-          "type": "phase-1-leg-a-measurements",
-          "observed_at": "2026-08-31T01:22:55Z",
-          "measurement_count": 5,
-          "status": "LOCAL_RECEIPTS_IN_HAND_LEG_B_WAITS"
+          "type": "phase-1-course-tree",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+          "state": "open",
+          "head": "7dd28738439c17f66ddd1b7135720ce58167750a",
+          "checks": "SUCCESS",
+          "observed_at": "2026-08-31T04:32:42Z"
         },
         {
           "type": "a-168-serving-merge",
@@ -735,7 +739,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-31T01:22:55Z"
+      "status_at": "2026-08-31T04:32:42Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -1133,7 +1137,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture remains open in PR #917 with companion E3 wiring in PR #916. Phase 1 Leg A has five read-only measurements receipted locally, but Leg B waits and no Phase 1 closure is claimed. Nothing here establishes publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture is merged in PR #917, and Phase 1 is in progress through open tree/refusal-validator PR #923. PR #916 remains the separate open E3 wiring change. Nothing here closes Phase 1 or establishes publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1142,38 +1146,50 @@
           "rule": "local ceremonies eliminated from proof on 2026-08-27"
         },
         {
-          "type": "phase-1-leg-a-measurements",
-          "observed_at": "2026-08-31T01:22:55Z",
-          "status": "LOCAL_RECEIPTS_IN_HAND_LEG_B_WAITS"
+          "type": "phase-0.2-source-capture",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
+          "state": "merged",
+          "merge_commit": "4fc7c055a0785d39d1698903d22a2d77613f330c"
+        },
+        {
+          "type": "phase-1-course-tree",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+          "state": "open",
+          "head": "7dd28738439c17f66ddd1b7135720ce58167750a"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T01:22:55Z"
+      "observed_at": "2026-08-31T04:32:42Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-31T01:22:55Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. PR #916 carries E3 wiring and PR #917 carries Phase 0.2 source capture. Five Phase 1 Leg A measurements are receipted locally, but Leg B waits and no Phase 1 closure is claimed. Tier 2 and issue #290 remain separate waits.",
+      "status_at": "2026-08-31T04:32:42Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Phase 0.2 source capture is merged in PR #917, and Phase 1 tree work is open in PR #923 with all currently reported checks successful. PR #916 remains the separate open E3 wiring change. No Phase 1 closure or LS disposition is claimed; tier 2 is authorized but remains a separate QC campaign, and issue #290 remains open.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
-          "type": "issue",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48"
+          "type": "phase-0.2-source-capture",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
+          "state": "merged"
         },
         {
-          "type": "disposition-summary",
-          "location": "INCEPT/out/apwh-overnight-20260827/DISPOSITION-SUMMARY-FOR-FOLD.md"
+          "type": "phase-1-course-tree",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+          "state": "open",
+          "checks": "SUCCESS"
         },
         {
-          "type": "ledger-repin-receipt",
-          "location": "INCEPT/out/apwh-overnight-20260827/ledger-repin-receipt.md"
+          "type": "e3-wiring-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/916",
+          "state": "open",
+          "checks": "SUCCESS"
         },
         {
-          "type": "phase-1-leg-a-measurements",
-          "observed_at": "2026-08-31T01:22:55Z",
-          "status": "LOCAL_RECEIPTS_IN_HAND_LEG_B_WAITS"
+          "type": "article-alternates-gap",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/290",
+          "state": "open"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN"
