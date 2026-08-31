@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-08-31T05:28Z",
+    "course": "psych",
+    "phase": "",
+    "kind": "note",
+    "text": "Route question SENT to Jayesh by Josh in chat (his one-line version: 'when you say publish to TimeBack, are you working from this runbook?', runbook attached). Awaiting his reply; Ilma escalation only if the reply forks. Note: the grader-wiring rationale and Bio/APES observation did NOT go out with it \u2014 his reply answers the bare question.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T05:28Z",
+    "course": "cross",
+    "text": "ap-one commit f6a6c279.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/f6a6c279e04c38f9bc4c9c0b2e1a029e46d8d924",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T05:16Z",
     "course": "humgeo",
     "text": "humgeo-rebuild issue #68 comment-created.",
@@ -94,6 +110,14 @@
     "kind": "state-change",
     "text": "Position 58 submitted once and terminal-failed after deterministic factory QC exhausted. It joins positions 45, 50, and 54 for the later regeneration route; the serial wave proceeds to position 59. The acceptance ledger remains unchanged until the wave-end rebuild.",
     "writer": "dashboard curation"
+  },
+  {
+    "ts": "2026-08-31T05:08Z",
+    "course": "cross",
+    "text": "ap-one pull request #924 opened at f6a6c279.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/924",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-08-31T05:08Z",
