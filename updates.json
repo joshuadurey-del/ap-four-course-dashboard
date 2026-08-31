@@ -7,6 +7,13 @@
     "text": "Phase 1 Leg A complete: five read-only measurements receipted (A1 no embedded checks, blueprint prescribes 1/article; A2 lesson order derived, 14 checks pass; A3 three inline TYE pairs, no Know-A/B carriers; A4 boundary ledger 7 classes, 42/69 gates non-contiguous; A5 18 pinned forms = 9x2 unit assessments). Capture fd0ce453 verified; PR #917 still OPEN, Leg B waits."
   },
   {
+    "ts": "2026-08-31T01:17Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472523475"
+  },
+  {
     "ts": "2026-08-31T01:11Z",
     "course": "humgeo",
     "phase": "4",
@@ -70,6 +77,13 @@
   {
     "ts": "2026-08-30T22:27Z",
     "course": "apwh",
+    "text": "ap-one commit 8bb8da10.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/8bb8da10b3df7a38271b67d7aaed4d660dcb26a4"
+  },
+  {
+    "ts": "2026-08-30T22:27Z",
+    "course": "apwh",
     "phase": "0.2",
     "kind": "filed",
     "text": "Phase 0.2 PR POSTED as ap-one#917 (live re-verified OPEN): source capture + admissibility oracle + registry + 4 profile pins, post-review rework included. Route: fresh pr-review receipt on Josh's one-window authorization, ship.py class 2 with the bff gate (9057 passed, 308 skipped, 18m54s); status.d receipt on the branch (8bb8da10). Merge fleet-side; merging party owns the deploy watch. All three claimed posts now landed: ap-one#916, ap-one#917, apwh-blueprint-build#66."
@@ -89,11 +103,25 @@
     "text": "E3 wiring PR POSTED as ap-one#916 (live re-verified OPEN): advisory carrier in gate_map.json per the fleet-PR-#64 contract. Route: fresh pr-review receipt on Josh's one-window authorization, ship.py class 2 with the bff gate (9040 passed, 308 skipped, 19m01s). Oracle flips quoted lexical-grade; status.d receipt committed on the branch (dcdb8175). Merge is fleet-side; the merging party owns the CONTRIBUTING 6 deploy watch. Companion oracle filing: apwh-blueprint-build#66."
   },
   {
+    "ts": "2026-08-30T17:14Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #914 opened at 6485317b.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/914"
+  },
+  {
     "ts": "2026-08-30T16:17Z",
     "course": "apwh",
     "phase": "0.2",
     "kind": "note",
     "text": "Phase 0.2 REWORKED after two-lane review (codex + grok, both REJECT; all findings adopted): commit amended 68431931 -> 5ae6adb4. Capture now freezes PP100 (4,078), real article-body digests (176), practice answers, writing prompts, mock FRQs, mcq_rationales, gate_map served surface, and all evidence/source docs; catalog org+term embedded. New delivery_package_sha256 fd0ce453..., 13 probes green, ingest suite 4,531 passed. Adjudicated APPROVE; PR still STAGED on a fresh typed owner word."
+  },
+  {
+    "ts": "2026-08-30T15:55Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 01987d01.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/01987d016cf3167e3b6e28a1f6268c1b6ff5743c"
   },
   {
     "ts": "2026-08-30T15:50Z",
