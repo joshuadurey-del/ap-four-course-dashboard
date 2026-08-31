@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-08-31T04:27:57Z",
+ "generated_ts": "2026-08-31T04:27:58Z",
  "open": [
   {
    "course": "cross",
@@ -8,6 +8,14 @@
    "kind": "scope",
    "title": "Assigned issue 2 needs a routing decision",
    "ts": "2026-08-31T04:27:57Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "1daec35ec995f56d",
+   "kind": "scope",
+   "title": "Assigned issue 3 needs a routing decision",
+   "ts": "2026-08-31T04:27:58Z"
   }
  ],
  "schema": "needs-human-public/v1"
