@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T02:07Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "note",
+    "text": "CORRECTION to prior note: successor execution roots are NOT T7-only \u2014 all 11 found local+untracked in the main build-outputs clone (t7-claim gate forced the deeper search). Second reconciler attempt: all 11 refused at strict-QC REPLAY mismatch even though pinned hashes equal local canonical bytes (pos-39 verified 9fa64d9c). Cause unresolved: our behind-HEAD dirty clone vs post-reseal manifest drift (PR #7). No verdict against the 11 articles; diagnostics named in the receipt."
+  },
+  {
     "ts": "2026-08-31T02:04Z",
     "course": "apush",
     "phase": "",
