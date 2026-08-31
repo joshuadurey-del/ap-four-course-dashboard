@@ -1,5 +1,54 @@
 [
   {
+    "ts": "2026-08-31T02:34Z",
+    "course": "apwh",
+    "text": "ap-one pull request #917 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/917"
+  },
+  {
+    "ts": "2026-08-31T02:34Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919"
+  },
+  {
+    "ts": "2026-08-31T02:34Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919"
+  },
+  {
+    "ts": "2026-08-31T02:34Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:34Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:34Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1829 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33350339345"
+  },
+  {
+    "ts": "2026-08-31T02:33Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #920 opened at 8e513758.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/920"
+  },
+  {
     "ts": "2026-08-31T02:23Z",
     "course": "cross",
     "text": "Retro and Agent data audit extended through the latest local rows: HumGeo PR #918 is deployed and staging-verified; APUSH successor reconciliation passes 11/11, fleet production is running serially, and its next-phase plan and baseline instruments are prepared. Needs-a-human exception machinery is now landed. No lifecycle credit was inferred from preparation alone."
