@@ -1,5 +1,47 @@
 [
   {
+    "ts": "2026-08-31T02:39Z",
+    "course": "psych",
+    "phase": "",
+    "kind": "note",
+    "text": "PR #64 batch-4 pre-read (read-only): all engineering claims verified independently \u2014 stats exact, r=+0.7096, axes fix present in rendered SVG, all 22 SVGs reproduce byte-identically, both self-flagged open items reproduce (leak gate blind to unit_0; quantitative sweep exit 1 on 0.2.A.1/A.4/A.5). Myers-source grounding UNMEASURED (no source access). Remaining review = SME judgment."
+  },
+  {
+    "ts": "2026-08-31T02:39Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:37Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919"
+  },
+  {
+    "ts": "2026-08-31T02:36Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473002797"
+  },
+  {
+    "ts": "2026-08-31T02:36Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:36Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
     "ts": "2026-08-31T02:34Z",
     "course": "apwh",
     "text": "ap-one pull request #917 merged at no-sha.",
