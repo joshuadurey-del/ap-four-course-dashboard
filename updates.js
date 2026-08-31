@@ -148,11 +148,13 @@
     return visible;
   };
 
-  fetch('updates.json', { cache: 'no-store' }).then(response => response.json()).then(updates => {
+  let updatesRefresh;
+  const refreshUpdates = () => updatesRefresh || (updatesRefresh = fetch('updates.json', { cache: 'no-store' }).then(response => response.json()).then(updates => {
     if (!Array.isArray(updates)) throw new Error('updates.json must be an array');
     const visibleUpdates = render(lists[0], updates);
     lists.slice(1).forEach(list => render(list, updates));
     lists.filter(list => list.hasAttribute('data-event-only')).forEach(list => {
+      if (list.previousElementSibling?.classList.contains('local-freshness')) list.previousElementSibling.remove();
       const course = list.dataset.course?.toLowerCase();
       const repository = newestRepository(updates, course);
       const localEntry = newestLocal(updates, course);
@@ -182,5 +184,12 @@
       empty.textContent = 'The update feed is temporarily unavailable.';
       list.replaceChildren(empty);
     });
-  });
+  }).finally(() => { updatesRefresh = null; }));
+  const refreshOnReturn = () => {
+    if (!document.hidden) void refreshUpdates();
+  };
+  void refreshUpdates();
+  window.addEventListener('focus', refreshOnReturn);
+  window.addEventListener('pageshow', refreshOnReturn);
+  document.addEventListener('visibilitychange', refreshOnReturn);
 })();

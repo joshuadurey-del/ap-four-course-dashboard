@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T04:39Z",
+  "snapshot": "2026-08-31T05:06Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -745,7 +745,7 @@
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "value": "APUSH remains in pre-runbook fleet-side content production. Positions 52 and 53 each reached articles_ready after one durable submission and terminal readback, and the fleet is running serially. The exact 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds. Successor reconciliation passes 11/11 at current course-build origin/main; the earlier refusals were local runtime configuration, not evidence against the articles. The next-phase plan, profile draft, Phase 2 pricing model, and Phase 1.3/3.4 baseline instruments are prepared; final values and owner-only fields remain pending. The reconciled manifests authorize a gated seating PR when the wave is quiet.",
+      "value": "APUSH remains in pre-runbook fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; position 54 terminal-failed and joins earlier terminal failures 45 and 50 for the later regeneration route. The next fleet attempt claimed at 04:54Z. The exact 249-position ledger remains 49 accepted and 200 pending until the wave-end rebuild. The profile draft now records the verified test-builder grader URL and treats canary identities and term dates as private operator-run inputs, not sealing inputs. Build-outputs issue #6 is closed through merged PR #8. Successor seating, terminal-fail reconciliation, and bank validation wait for wave-quiet.",
       "scope": "current APUSH fleet-side content-production wave and acceptance ledger; excludes runbook phase entry, learner implementation, publication, and release",
       "freshness_limit_hours": 24,
       "next_step": {
@@ -763,9 +763,20 @@
           "status": "BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS"
         },
         {
-          "type": "fleet-wave-position-53",
-          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
-          "status": "ARTICLES_READY_POSITION_54_NEXT"
+          "type": "fleet-wave-position-54",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473222370",
+          "status": "TERMINAL_FAILED"
+        },
+        {
+          "type": "fleet-wave-position-57",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088",
+          "status": "ARTICLES_READY_POSITION_58_NEXT"
+        },
+        {
+          "type": "packet-defect-closure",
+          "url": "https://github.com/ilmych/apush-build-outputs/pull/8",
+          "state": "merged",
+          "merge_commit": "98842f41d90138846ca8a584e2d60d8d54719e0f"
         },
         {
           "type": "successor-replay-diagnostic",
@@ -774,7 +785,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T02:22:56Z"
+      "observed_at": "2026-08-31T04:54:47Z"
     },
     {
       "claim_id": "psych.blueprint.audit",
@@ -1239,7 +1250,7 @@
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "APUSH remains pre-runbook in fleet-side content production. Positions 52 and 53 reached articles_ready and the fleet resumes serially at 54. The exact ledger remains 49 accepted and 200 pending and rebuilds after the wave lands. No owner action is due.",
+      "value": "APUSH remains pre-runbook in fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; positions 45, 50, and 54 terminal-failed and wait for the later regeneration route. The next attempt claimed after position 57. The exact ledger remains 49 accepted and 200 pending and rebuilds after the wave lands. No owner action is due.",
       "scope": "APUSH committed admission and build-only migrated-wrapper state; excludes factory posts, platform ingest, learner serving, and later lifecycle closure",
       "evidence": [
         {
@@ -1281,19 +1292,19 @@
           "merge_commit": "0a9938ffee7435907a40fce7ad1b355d7704580a"
         },
         {
-          "type": "fleet-wave-position-53",
-          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
-          "status": "ARTICLES_READY_POSITION_54_NEXT"
+          "type": "fleet-wave-position-57",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088",
+          "status": "ARTICLES_READY_POSITION_58_NEXT"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T02:03:33Z"
+      "observed_at": "2026-08-31T04:54:47Z"
     },
     {
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "value": "BLOCKED: build-output main 98842f41 includes the 53 migrated wrappers, 139 wave-3 image contracts, merged manifest PR #7, and merged KC repair PR #8. Course-build main 0a9938ff includes portable runner bindings from PR #15. Issue #9 remains open; positions 45 and 46 remain preserved terminal failures, while positions 52 and 53 reached articles_ready and the fleet resumes at 54. No ingest, wiring, deployment, or learner execution is claimed.",
+      "value": "BLOCKED: build-output main 98842f41 includes the 53 migrated wrappers, 139 wave-3 image contracts, merged manifest PR #7, and merged KC repair PR #8. Course-build main 0a9938ff includes portable runner bindings from PR #15. Issue #9 remains open; positions 52, 53, and 55-57 reached articles_ready, while positions 45, 50, and 54 are terminal failures reserved for the later regeneration route. Successor seating waits for wave-quiet. No ingest, wiring, deployment, or learner execution is claimed.",
       "scope": "APUSH 74-binding migration state; excludes factory posts, platform ingest, learner wiring, and later lifecycle closure",
       "evidence": [
         {
@@ -1306,20 +1317,20 @@
           "url": "https://github.com/ilmych/apush-build-outputs/pull/4"
         },
         {
-          "type": "fleet-wave-position-53",
-          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
-          "status": "ARTICLES_READY_POSITION_54_NEXT"
+          "type": "fleet-wave-position-57",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088",
+          "status": "ARTICLES_READY_POSITION_58_NEXT"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-31T02:03:33Z"
+      "status_at": "2026-08-31T04:54:47Z"
     },
     {
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-31T02:03:33Z",
-      "value": "APUSH is in pre-runbook content production, not an LS handoff. Fleet positions 52 and 53 reached articles_ready and position 54 is next; the runbook begins only after the wave lands and the acceptance ledger rebuilds. No learner execution or later lifecycle closure is claimed.",
+      "status_at": "2026-08-31T04:54:47Z",
+      "value": "APUSH is in pre-runbook content production, not an LS handoff. Fleet positions 52, 53, and 55-57 reached articles_ready; position 54 terminal-failed and the next attempt claimed after position 57. The runbook begins only after the wave lands and the acceptance ledger rebuilds. No learner execution or later lifecycle closure is claimed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -1335,9 +1346,9 @@
           "location": "INCEPT/out/apush-overnight-20260827/MORNING-REPORT.md"
         },
         {
-          "type": "fleet-wave-position-53",
-          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
-          "status": "ARTICLES_READY_POSITION_54_NEXT"
+          "type": "fleet-wave-position-57",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088",
+          "status": "ARTICLES_READY_POSITION_58_NEXT"
         }
       ],
       "evidence_access": "GITHUB+OWNER_DIRECTION+DASHBOARD_PLAN"
