@@ -57,12 +57,16 @@ Phase B replaces `SOURCE_REPO_READ_TOKEN` repo by repo with short-lived,
 read-only GitHub App installation tokens. External real-time webhook ingress is
 not required and remains separately gated.
 
-The needs-human strip deliberately uses the folded-update option, not a new ingress.
-On local dashboard update runs, validate and fold the public projection before staging:
+The needs-human strip uses the existing signed `course-event` dispatch corridor,
+not a new ingress. `needs_human.py add`, `resolve`, and `project` send the exact
+public projection after writing it. The serialized receiver accepts newer documents,
+ignores older redeliveries, and fails closed on equal-timestamp conflicts.
+
+For recovery, a local dashboard update can still validate and fold the projection:
 
 ```sh
 python3 automation/poll_repositories.py fold-needs-human --source "$INCEPT_ZONE/needs-human.public.json"
 ```
 
 The source ledger and private details never enter this repository. A missing or stale
-fold is visible as a typed UI hold; no background copier or new event host exists.
+projection is visible as a typed UI hold; no background copier or new event host exists.

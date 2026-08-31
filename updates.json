@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T04:19Z",
+    "course": "cross",
+    "phase": "dashboard display",
+    "kind": "landed",
+    "text": "Needs-human projection refreshed from its current public source: one APUSH review-at-leisure decision remains open; the resolved two HumGeo rows and Psych #51 row are removed. Future projections use the existing signed dispatch corridor.",
+    "writer": "dashboard curation"
+  },
+  {
     "ts": "2026-08-31T03:57Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 issue #51 closed.",

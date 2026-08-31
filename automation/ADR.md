@@ -2,13 +2,15 @@
 
 Status: accepted by owner addendum, 2026-08-29.
 
-Addendum, 2026-08-31: needs-human uses the plan-v3 folded-update option. The
-dashboard-owned `fold-needs-human` command accepts only the exact
-`needs-human-public/v1` document and writes `needs-human.json` during local update
-runs. The browser rejects missing, older-than-24-hour, oversized-title, or
-unexpected-field projections and constructs the strip with DOM text nodes. The
-existing event-source permission HOLD remains closed; no new webhook host, App
-installation, source-repository workflow, daemon, or polling loop is added.
+Addendum, 2026-08-31: needs-human uses the existing signed local-dispatch
+corridor. The same `course-event` repository dispatch accepts either the existing
+event batch or an exact `needs-human-public/v1` document; both are signed with the
+existing HMAC secret. The receiver rejects older or equal-timestamp conflicting
+projections and stages `needs-human.json` in its serialized workflow. The browser
+still rejects missing, older-than-24-hour, oversized-title, or unexpected-field
+projections and constructs the strip with DOM text nodes. The existing
+event-source permission HOLD remains closed; no new webhook host, App installation,
+source-repository workflow, daemon, or polling loop is added.
 
 Phase A uses one dashboard-owned GitHub Actions workflow. A ten-minute schedule
 is the fallback trigger; `repository_dispatch` type `course-event` runs the same

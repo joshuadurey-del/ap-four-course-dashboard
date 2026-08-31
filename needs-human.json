@@ -1,29 +1,13 @@
 {
- "generated_ts": "2026-08-31T03:30:04Z",
+ "generated_ts": "2026-08-31T03:57:41Z",
  "open": [
   {
-   "course": "humgeo",
+   "course": "apush",
    "deadline": "",
-   "id": "c83f96f094ee8c98",
+   "id": "22170cb993560425",
    "kind": "decision",
-   "title": "Mark the 71-video triage sheet (bulk option per group + exceptions): out/humgeo-phase3-assets-20260830/video-triage/",
-   "ts": "2026-08-31T02:23:58Z"
-  },
-  {
-   "course": "humgeo",
-   "deadline": "",
-   "id": "5105ed212c77b94d",
-   "kind": "decision",
-   "title": "Phase 4 seal: supply the execute invocation",
-   "ts": "2026-08-31T02:30:19Z"
-  },
-  {
-   "course": "psych",
-   "deadline": "",
-   "id": "f054cdd3e8591bb6",
-   "kind": "decision",
-   "title": "Jayesh call on #51: close as overtaken, or keep?",
-   "ts": "2026-08-31T02:30:19Z"
+   "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173), slot 166 kind change causal->chart, slot 212 packet-text truncation routing",
+   "ts": "2026-08-31T03:49:05Z"
   }
  ],
  "schema": "needs-human-public/v1"

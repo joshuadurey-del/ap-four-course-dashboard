@@ -72,6 +72,22 @@ def validate_needs_human_document(document):
     return document
 
 
+def select_needs_human_document(incoming, current):
+    validate_needs_human_document(current)
+    if incoming is None:
+        return current, "ABSENT", False
+    validate_needs_human_document(incoming)
+    incoming_ts = dt.datetime.fromisoformat(incoming["generated_ts"].replace("Z", "+00:00"))
+    current_ts = dt.datetime.fromisoformat(current["generated_ts"].replace("Z", "+00:00"))
+    if incoming_ts < current_ts:
+        return current, "OLDER_IGNORED", False
+    if incoming_ts == current_ts:
+        if incoming != current:
+            raise RuntimeError("NEEDS_HUMAN_PROJECTION_CONFLICT: equal timestamp, different document")
+        return current, "REDELIVERY", False
+    return incoming, "UPDATE", True
+
+
 def fold_needs_human(source, destination=NEEDS_HUMAN_PATH):
     source = Path(source)
     if not source.is_file():
@@ -247,7 +263,7 @@ def ref_hashes(item):
 
 def load_local_dispatch():
     if os.environ.get("GITHUB_EVENT_NAME") != "repository_dispatch":
-        return []
+        return [], None
     try:
         event = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())
         payload = event["client_payload"]
@@ -257,12 +273,16 @@ def load_local_dispatch():
         secret = os.environ.get("LOCAL_EVENT_DISPATCH_SECRET", "").encode()
         if not secret or not verify_signature(secret, body, signature):
             raise ValueError("signature")
-        if (set(document) != {"schema", "events"}
-                or document["schema"] != "dashboard-local-event-batch/v1"
-                or not isinstance(document["events"], list)
-                or not 1 <= len(document["events"]) <= MAX_LOCAL_BATCH):
-            raise ValueError("batch")
-        return document["events"]
+        if document.get("schema") == "dashboard-local-event-batch/v1":
+            if (set(document) != {"schema", "events"}
+                    or not isinstance(document["events"], list)
+                    or not 1 <= len(document["events"]) <= MAX_LOCAL_BATCH):
+                raise ValueError("batch")
+            return document["events"], None
+        if document.get("schema") == "needs-human-public/v1":
+            validate_needs_human_document(document)
+            return [], document
+        raise ValueError("document schema")
     except (KeyError, TypeError, ValueError, json.JSONDecodeError, OSError) as error:
         raise RuntimeError(f"DASHBOARD_AUTOMATION_EVENTS_LOG_INVALID: dispatch {error}") from None
 
@@ -368,7 +388,7 @@ def prepare(transaction_path):
     inventory = load_inventory()
     state = load_state()
     key = run_key(observed_at)
-    local_items = load_local_dispatch()
+    local_items, incoming_needs_human = load_local_dispatch()
     items = collect_all(source, inventory)
     public_path = Path("updates.json")
     public = json.loads(public_path.read_text())
@@ -379,6 +399,10 @@ def prepare(transaction_path):
     updates, decisions, next_state, bootstrap = select_updates(
         items, state, existing_updates, observed_at, inventory, local_items,
     )
+    current_needs_human = json.loads(NEEDS_HUMAN_PATH.read_text(encoding="utf-8"))
+    needs_human, needs_human_status, needs_human_changed = select_needs_human_document(
+        incoming_needs_human, current_needs_human,
+    )
     holds = [decision for decision in decisions if decision["status"] == "HOLD"]
     receipt = {
         "schema": "dashboard-poller-receipt/v1", "run_key": key,
@@ -388,6 +412,8 @@ def prepare(transaction_path):
         "observed_at": iso(observed_at), "dashboard_base_sha": os.environ.get("DASHBOARD_BASE_SHA", "UNMEASURED"),
         "bootstrap": bootstrap, "repositories": list(inventory),
         "candidate_count": len(items), "updates_planned": len(updates), "decisions": decisions,
+        "needs_human": {"status": needs_human_status, "generated_ts": needs_human["generated_ts"],
+                        "open_count": len(needs_human["open"])},
     }
     if holds:
         raise RuntimeError("one or more polled items returned HOLD")
@@ -399,8 +425,14 @@ def prepare(transaction_path):
     if updates:
         combined = sorted(updates + public, key=lambda row: row["ts"], reverse=True)
         public_path.write_text(json.dumps(combined, indent=2) + "\n")
+    if needs_human_changed:
+        NEEDS_HUMAN_PATH.write_text(
+            json.dumps(needs_human, sort_keys=True, ensure_ascii=True, indent=1) + "\n",
+            encoding="utf-8",
+        )
     STATE_PATH.write_text(json.dumps(next_state, indent=2, sort_keys=True) + "\n")
-    print(f"prepare: repositories={len(inventory)} candidates={len(items)} updates={len(updates)} bootstrap={bootstrap}")
+    print(f"prepare: repositories={len(inventory)} candidates={len(items)} updates={len(updates)} "
+          f"needs_human={needs_human_status} bootstrap={bootstrap}")
 
 
 def finalize(transaction_path, dashboard_commit, pages_build_id):
@@ -466,6 +498,11 @@ def selftest():
     )
     assert len(capped) == MAX_PUBLIC_UPDATES
     assert cursor_hash("local", many_local[-1]["delivery_id"]) not in capped_state["local_seen"]
+    projection = {
+        "schema": "needs-human-public/v1", "generated_ts": "2026-08-29T02:30:00Z",
+        "open": [{"id": "a" * 16, "ts": "2026-08-29T02:00:00Z", "course": "humgeo",
+                  "kind": "decision", "title": "Choose the bounded option.", "deadline": ""}],
+    }
     document = {"schema": "dashboard-local-event-batch/v1", "events": [local]}
     body = json.dumps(document, sort_keys=True, separators=(",", ":")).encode()
     with tempfile.TemporaryDirectory() as directory:
@@ -476,15 +513,19 @@ def selftest():
         }}))
         old = {key: os.environ.get(key) for key in ("GITHUB_EVENT_NAME", "GITHUB_EVENT_PATH", "LOCAL_EVENT_DISPATCH_SECRET")}
         os.environ.update({"GITHUB_EVENT_NAME": "repository_dispatch", "GITHUB_EVENT_PATH": str(event_path), "LOCAL_EVENT_DISPATCH_SECRET": "test"})
-        assert load_local_dispatch() == [local]
+        loaded_events, loaded_needs = load_local_dispatch()
+        assert loaded_events == [local] and loaded_needs is None
+        event_path.write_text(json.dumps({"client_payload": {
+            "document": projection,
+            "signature": "sha256=" + hmac.new(
+                b"test", json.dumps(projection, sort_keys=True, separators=(",", ":")).encode(), hashlib.sha256
+            ).hexdigest(),
+        }}))
+        loaded_events, loaded_needs = load_local_dispatch()
+        assert loaded_events == [] and loaded_needs == projection
         for key, value in old.items():
             if value is None: os.environ.pop(key, None)
             else: os.environ[key] = value
-        projection = {
-            "schema": "needs-human-public/v1", "generated_ts": "2026-08-29T02:30:00Z",
-            "open": [{"id": "a" * 16, "ts": "2026-08-29T02:00:00Z", "course": "humgeo",
-                      "kind": "decision", "title": "Choose the bounded option.", "deadline": ""}],
-        }
         source = Path(directory) / "needs-human.public.json"
         destination = Path(directory) / "needs-human.json"
         source.write_text(json.dumps(projection))
@@ -496,6 +537,19 @@ def selftest():
             pass
         else:
             raise AssertionError("unexpected needs-human field passed")
+        current = {**projection, "generated_ts": "2026-08-29T02:00:00Z"}
+        selected, status, changed = select_needs_human_document(projection, current)
+        assert selected == projection and status == "UPDATE" and changed
+        selected, status, changed = select_needs_human_document(current, projection)
+        assert selected == projection and status == "OLDER_IGNORED" and not changed
+        selected, status, changed = select_needs_human_document(projection, projection)
+        assert selected == projection and status == "REDELIVERY" and not changed
+        try:
+            select_needs_human_document({**projection, "open": []}, projection)
+        except RuntimeError as error:
+            assert "CONFLICT" in str(error)
+        else:
+            raise AssertionError("equal-timestamp needs-human conflict passed")
     print("selftest: all checks passed")
 
 
