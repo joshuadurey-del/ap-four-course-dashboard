@@ -1,5 +1,26 @@
 [
   {
+    "ts": "2026-08-31T02:04Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "note",
+    "text": "Owner word 08-31 ('use HumGeo/APWH as examples, yes to all'): profile draft resolved to production env, pp-org1, HumGeo canary pattern, fresh 202609 namespace \u2014 term dates + canary identities stay owner steps. Phase 2 pricing model drafted (rules fixed, numbers await final bytes). Successor reconciliation: replay REFUSED by absent T7 execution roots (false-reject class, NOT evidence against the 11) \u2014 unblock: T7 mount or local mirror + factory env overrides."
+  },
+  {
+    "ts": "2026-08-31T02:03Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:03Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907"
+  },
+  {
     "ts": "2026-08-31T02:01Z",
     "course": "humgeo",
     "text": "ap-one issue #919 opened.",
