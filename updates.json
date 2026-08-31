@@ -1,5 +1,69 @@
 [
   {
+    "ts": "2026-08-31T03:23Z",
+    "course": "psych",
+    "phase": "",
+    "kind": "note",
+    "text": "Phase 0 env+namespace resolved from factory bytes per owner order (no owner pick needed): environment = production origins copied verbatim from APWH profile at ap-one origin/main; namespace = ap-psychology-native-202608-v1 per the <course>-native-<YYYYMM>-v1 sibling pattern (runbook 0.1/0.3). Canonical profile stays factory-authored; draft is intake prep only. Canary accounts remain the sole deferred owner field.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T03:21Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473281468",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:21Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:20Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919#issuecomment-5473281070",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:20Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:19Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919#issuecomment-5473272538",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:19Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:19Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T03:17Z",
     "course": "humgeo",
     "text": "ap-one issue #919 labeled.",
