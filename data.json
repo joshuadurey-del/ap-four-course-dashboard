@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T04:34Z",
+  "snapshot": "2026-08-31T04:39Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -670,7 +670,7 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH is in Phase 1. Phase 0.2 source capture merged in PR #917 at 4fc7c055. The required native course tree and refusal validator are in open PR #923 at 7dd28738, with every currently reported check successful. E3 wiring PR #916 remains open with successful checks. Phase 1 is in progress, not closed. The authorized tier-2 campaign and open test-builder issue #290 remain separate from lifecycle credit.",
+      "value": "APWH remains in Phase 1. Phase 0.2 source capture merged in PR #917 at 4fc7c055. The required native course tree and refusal validator then merged in PR #923 as 10b1900c. That implementation landing does not by itself attest Phase 1 closure. E3 wiring PR #916 remains separate open work. The authorized tier-2 campaign and open test-builder issue #290 remain separate from lifecycle credit.",
       "scope": "current APWH Phase 0.2 landing and Phase 1 tree work; excludes Phase 1 closure, tier-2 execution credit, later phases, publication, and learner serving",
       "freshness_limit_hours": 24,
       "next_step": {
@@ -679,7 +679,7 @@
         "args": [
           "apwh"
         ],
-        "gate": "Phase 1 PR #923 lands and the step picker returns the next runnable APWH action"
+        "gate": "Phase 1 PR #923 is merged and the step picker returns the next runnable APWH action"
       },
       "evidence": [
         {
@@ -710,10 +710,10 @@
         {
           "type": "phase-1-course-tree",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
-          "state": "open",
+          "state": "merged",
           "head": "7dd28738439c17f66ddd1b7135720ce58167750a",
-          "checks": "SUCCESS",
-          "observed_at": "2026-08-31T04:32:42Z"
+          "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6",
+          "observed_at": "2026-08-31T04:37:22Z"
         },
         {
           "type": "a-168-serving-merge",
@@ -739,7 +739,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-31T04:32:42Z"
+      "status_at": "2026-08-31T04:37:22Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -1137,7 +1137,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture is merged in PR #917, and Phase 1 is in progress through open tree/refusal-validator PR #923. PR #916 remains the separate open E3 wiring change. Nothing here closes Phase 1 or establishes publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture is merged in PR #917, and the Phase 1 tree/refusal-validator implementation is merged in PR #923 as 10b1900c. PR #916 remains the separate open E3 wiring change. The implementation merge alone does not close Phase 1 or establish publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1154,19 +1154,20 @@
         {
           "type": "phase-1-course-tree",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
-          "state": "open",
-          "head": "7dd28738439c17f66ddd1b7135720ce58167750a"
+          "state": "merged",
+          "head": "7dd28738439c17f66ddd1b7135720ce58167750a",
+          "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T04:32:42Z"
+      "observed_at": "2026-08-31T04:37:22Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-31T04:32:42Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Phase 0.2 source capture is merged in PR #917, and Phase 1 tree work is open in PR #923 with all currently reported checks successful. PR #916 remains the separate open E3 wiring change. No Phase 1 closure or LS disposition is claimed; tier 2 is authorized but remains a separate QC campaign, and issue #290 remains open.",
+      "status_at": "2026-08-31T04:37:22Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Phase 0.2 source capture is merged in PR #917, and the Phase 1 tree work merged in PR #923 as 10b1900c. PR #916 remains the separate open E3 wiring change. The merge alone supplies neither Phase 1 closure nor an LS disposition; tier 2 is authorized but remains a separate QC campaign, and issue #290 remains open.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1177,8 +1178,8 @@
         {
           "type": "phase-1-course-tree",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
-          "state": "open",
-          "checks": "SUCCESS"
+          "state": "merged",
+          "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6"
         },
         {
           "type": "e3-wiring-change",

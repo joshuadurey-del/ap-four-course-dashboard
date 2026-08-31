@@ -8,6 +8,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-08-31T04:39Z",
+    "course": "apwh",
+    "phase": "Phase 1",
+    "kind": "state-change",
+    "text": "Phase 1 implementation refresh: PR #923 merged as 10b1900c. The dashboard keeps Phase 1 in progress until the governed runner supplies its next attested state; the merge alone earns no closure or later lifecycle credit.",
+    "writer": "dashboard curation"
+  },
+  {
     "ts": "2026-08-31T04:37Z",
     "course": "apwh",
     "text": "ap-one pull request #923 merged at no-sha.",

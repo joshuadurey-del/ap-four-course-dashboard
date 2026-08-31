@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 13:38 KST',
+  snapshot: 'Aug 31, 2026 · 13:42 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -43,9 +43,9 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
-      status: 'Phase 1 · PR #923 OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 04:32Z',
-      landed: 'Pre-runbook repair — 45/58 replaced · Phase 0.2 source capture — merged · Phase 1 tree and refusal validator — PR #923 open with checks green',
-      nextStep: 'Resume via factory-course-run after Phase 1 PR #923 lands and the step picker returns the next runnable APWH action. PR #916 and issue #290 remain separate open work.',
+      status: 'Phase 1 · PR #923 MERGED', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 04:37Z',
+      landed: 'Pre-runbook repair — 45/58 replaced · Phase 0.2 source capture — merged · Phase 1 tree and refusal validator — PR #923 merged',
+      nextStep: 'Resume via factory-course-run now that Phase 1 PR #923 has landed; the step picker determines the next runnable APWH action. PR #916 and issue #290 remain separate open work.',
       footprint: [
         { value: '45/58', label: 'tier-1 replacements merged in PR #65' },
         { value: '5', label: 'Phase 1 Leg A measurements receipted' },
@@ -53,7 +53,7 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
       ],
       phaseStates: [
         { code: 'P0.2', name: 'Capture source authority', state: 'evidence', status: 'MERGED', detail: 'PR #917 merged at 4fc7c055. PR #916 remains the separate open E3 wiring change.' },
-        { code: 'P1', name: 'Map the complete course tree', state: 'active', status: 'IN PROGRESS', detail: 'PR #923 carries the native course tree and refusal validator. All currently reported checks are successful; Phase 1 is not closed.' }
+        { code: 'P1', name: 'Map the complete course tree', state: 'active', status: 'IN PROGRESS', detail: 'PR #923 merged the native course tree and refusal validator as 10b1900c. The merge does not by itself attest Phase 1 closure; resume the governed runner.' }
       ]
     },
     {

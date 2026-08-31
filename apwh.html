@@ -11,7 +11,7 @@
 <a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP World History</h1>
-  <p class="sub"><strong>APWH is in Phase 1.</strong> Phase 0.2 source capture merged in <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">PR #917</a>. The native course tree and refusal validator are open in <a href="https://github.com/InceptTrilogy/ap-one/pull/923" target="_blank" rel="noopener">Phase 1 PR #923</a>, with all currently reported checks successful. Phase 1 is in progress, not closed.</p>
+  <p class="sub"><strong>APWH remains in Phase 1.</strong> Phase 0.2 source capture merged in <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">PR #917</a>. The native course tree and refusal validator then merged in <a href="https://github.com/InceptTrilogy/ap-one/pull/923" target="_blank" rel="noopener">Phase 1 PR #923</a> as <code>10b1900c</code>. That landing does not by itself attest Phase 1 closure.</p>
 
   <aside class="course-activity" aria-labelledby="activity-title-apwh">
     <h2 id="activity-title-apwh">Repository activity</h2>
@@ -28,7 +28,7 @@
     <dl>
       <div><dt>Pre-runbook repair</dt><dd><strong>LANDED.</strong> Forty-five of 58 broken gate items were replaced.</dd></div>
       <div><dt>Phase 0.2 — source capture</dt><dd><strong>MERGED.</strong> PR #917 landed at <code>4fc7c055</code>.</dd></div>
-      <div><dt>Phase 1 — complete course tree</dt><dd><strong>IN PROGRESS.</strong> PR #923 is open at <code>7dd28738</code>; no Phase 1 closure is claimed.</dd></div>
+      <div><dt>Phase 1 — complete course tree</dt><dd><strong>IN PROGRESS.</strong> PR #923 merged as <code>10b1900c</code>; no Phase 1 closure is claimed from the merge alone.</dd></div>
     </dl>
   </section>
 
@@ -39,7 +39,7 @@
       <li><a href="https://github.com/InceptTrilogy/ap-one/pull/905" target="_blank" rel="noopener">AP One PR #905</a> is merged at <code>e61ffc3b</code>, landing the A-168 mechanism envelopes in the served rationale bank.</li>
       <li><a href="https://github.com/ilmych/apwh-blueprint-build/pull/65" target="_blank" rel="noopener">Tier-1 PR #65</a> is merged at <code>ea721a32</code>, banking 45 of 58 replacements. Its oracle reports 96 PASS, 33 MISSING, and 3 pre-existing FAIL rows; A-168 is PASS at 1,217 tagged items.</li>
       <li><a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">PR #917</a> merged the Phase 0.2 source capture at <code>4fc7c055</code>. <a href="https://github.com/InceptTrilogy/ap-one/pull/916" target="_blank" rel="noopener">PR #916</a> remains the separate open E3 wiring change with successful checks.</li>
-      <li><a href="https://github.com/InceptTrilogy/ap-one/pull/923" target="_blank" rel="noopener">PR #923</a> carries the Phase 1 native course tree and refusal validator at <code>7dd28738</code>. Every currently reported check is successful.</li>
+      <li><a href="https://github.com/InceptTrilogy/ap-one/pull/923" target="_blank" rel="noopener">PR #923</a> merged the Phase 1 native course tree and refusal validator as <code>10b1900c</code>.</li>
       <li>The tier-2 campaign is authorized, but remains separate QC work and earns no Phase 1 credit. <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">Test-builder issue #290</a> remains open.</li>
     </ul>
   </section>
@@ -48,7 +48,7 @@
     <h2>Phase 0.2 — source capture merged</h2>
     <ul>
       <li>PR #917 froze the Phase 0.2 source surface and supporting evidence at its reviewed bytes.</li>
-      <li>The merge commit is <code>4fc7c055</code>; Phase 1 work is now visible in PR #923.</li>
+      <li>The merge commit is <code>4fc7c055</code>; Phase 1 implementation then landed in PR #923 as <code>10b1900c</code>.</li>
       <li>This landing does not close Phase 1 or establish any later lifecycle state.</li>
     </ul>
   </section>
@@ -61,13 +61,13 @@
   <section class="reading-guide">
     <h2>Next steps — runbook order</h2>
     <dl>
-      <div><dt>1. Phase 1 landing</dt><dd>Review and land PR #923 without granting Phase 1 closure from CI alone.</dd></div>
-      <div><dt>2. Resume the governed runner</dt><dd>Run <code>factory-course-run apwh</code> after PR #923 lands and the step picker returns the next runnable APWH action.</dd></div>
+      <div><dt>1. Phase 1 implementation</dt><dd>PR #923 is merged; retain the distinction between implementation landing and attested Phase 1 closure.</dd></div>
+      <div><dt>2. Resume the governed runner</dt><dd>Run <code>factory-course-run apwh</code> so the step picker returns the next runnable APWH action.</dd></div>
       <div><dt>3. Keep separate work separate</dt><dd>PR #916, the authorized tier-2 campaign, and issue #290 do not supply Phase 1 or later lifecycle credit.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">merged Phase 0.2 PR #917</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/923" target="_blank" rel="noopener">open Phase 1 PR #923</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/916" target="_blank" rel="noopener">open E3 PR #916</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">open A-187 issue #290</a>.</p></section>
+  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">merged Phase 0.2 PR #917</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/923" target="_blank" rel="noopener">merged Phase 1 PR #923</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/916" target="_blank" rel="noopener">open E3 PR #916</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">open A-187 issue #290</a>.</p></section>
 
   <details class="eta-details">
     <summary>Historical course record — superseded snapshots through Aug 28 · 18:14 KST</summary>
