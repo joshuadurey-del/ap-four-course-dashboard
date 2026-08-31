@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T08:14Z",
+  "snapshot": "2026-08-31T08:29Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,17 +421,17 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-08-31T08:02Z",
+        "ts": "2026-08-31T08:29Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Gauntlet wave 1: 3/88 plan articles + 6/440 checks blind-reviewed cross-model vs Bio bar. Checks AT BAR (bar item ranked last by both lanes); articles below bar on depth/repetition; redistricting article factual conflation CONFIRMED both lanes. Phase4 skip/keep menu staged. Receipts out/gauntlet-20260831/",
+        "kind": "filed",
+        "text": "Letter-prefix registry pin narrowed: ap-one PR #932 posted (builder pins HumGeo's own feedback_courses row, proposal regen, frozen review resealed +3/-3 flags unchanged; probes both directions, 262 suite green, Gemini APPROVE, pr-necessity + pr-review-gate PASS) + scope question posted on #642 (comment 5475804114). Unblocks Bio PRs #925/#926/#929 on rebase. Receipts: /tmp/pin-narrow-review/, status.d/2026-08-31-humgeo-letter-prefix-pin-narrowing-reseal.md on the branch.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:14Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #750 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33369876687",
+        "ts": "2026-08-31T08:29Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #932 opened at 7c5cab0a.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/932",
         "writer": "repository-event automation"
       }
     },
@@ -893,10 +893,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:13Z",
+        "ts": "2026-08-31T08:28Z",
         "event_type": "issues",
         "text": "apush-course-build issue #9 comment-created.",
-        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5475630244",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5475794496",
         "writer": "repository-event automation"
       }
     },
@@ -941,9 +941,9 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:07Z",
+        "ts": "2026-08-31T08:19Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #70 opened at c8eb37a8.",
+        "text": "ap-psychology-fall-2025-v1 pull request #70 merged at no-sha.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/70",
         "writer": "repository-event automation"
       }

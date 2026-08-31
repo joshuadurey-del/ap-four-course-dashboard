@@ -1,5 +1,85 @@
 [
   {
+    "ts": "2026-08-31T08:29Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "filed",
+    "text": "Letter-prefix registry pin narrowed: ap-one PR #932 posted (builder pins HumGeo's own feedback_courses row, proposal regen, frozen review resealed +3/-3 flags unchanged; probes both directions, 262 suite green, Gemini APPROVE, pr-necessity + pr-review-gate PASS) + scope question posted on #642 (comment 5475804114). Unblocks Bio PRs #925/#926/#929 on rebase. Receipts: /tmp/pin-narrow-review/, status.d/2026-08-31-humgeo-letter-prefix-pin-narrowing-reseal.md on the branch.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T08:29Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #932 opened at 7c5cab0a.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/932",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:28Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5475794496",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:28Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:24Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:24Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:24Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:24Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #624 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33372306930",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:19Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #70 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/70",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:16Z",
+    "course": "cross",
+    "text": "ap-one workflow run #373 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33371957801",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T08:14Z",
     "course": "apwh",
     "phase": "",
@@ -229,6 +309,14 @@
     "text": "apush-course-build issue #9 labeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T07:47Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919#issuecomment-5475362067",
     "writer": "repository-event automation"
   },
   {
