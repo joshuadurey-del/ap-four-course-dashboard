@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T08:02Z",
+  "snapshot": "2026-08-31T08:05Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,10 +740,10 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-08-31T07:22Z",
-        "phase": "Phase 2",
-        "kind": "note",
-        "text": "Deploy run 33367402207 at merge commit ec09709f completed SUCCESS (scope check success, deploy job success, quality skipped) \u2014 recorded per CONTRIBUTING section 6, same shape as the #917/#923 precedent rows.",
+        "ts": "2026-08-31T08:05Z",
+        "phase": "",
+        "kind": "milestone",
+        "text": "tier-2 CAMPAIGN DRAINED (rounds 1+2 final per stop-rule): 133 jobs total (131 completed, 2 factory-terminal 3.4/9.5), 1,132 items returned, 205 guard-refused (round-2 rate 30% vs round-1 16% \u2014 diminishing, stop-rule fired), 3 dups, 924 DISTINCT usable, 922 paired retirements of 999 retirable; residue named 28 factory-terminal + 49 guard-shortfall + 6 pinned; receipts out/apwh-tier2-20260831/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

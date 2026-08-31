@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T08:05Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "tier-2 CAMPAIGN DRAINED (rounds 1+2 final per stop-rule): 133 jobs total (131 completed, 2 factory-terminal 3.4/9.5), 1,132 items returned, 205 guard-refused (round-2 rate 30% vs round-1 16% \u2014 diminishing, stop-rule fired), 3 dups, 924 DISTINCT usable, 922 paired retirements of 999 retirable; residue named 28 factory-terminal + 49 guard-shortfall + 6 pinned; receipts out/apwh-tier2-20260831/",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-08-31T08:02Z",
     "course": "apush",
     "phase": "",
