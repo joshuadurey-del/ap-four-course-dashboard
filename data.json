@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T07:46Z",
+  "snapshot": "2026-08-31T08:02Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,17 +421,17 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-08-31T06:49Z",
-        "phase": "4",
-        "kind": "receipt-sealed",
-        "text": "Phase 4 SEALED: reseal digest a4318c28 and offline gate PASS; PR #928 deployed and staging serves fb04b7c2. Plan builder landed in PR #920; issue #919 is answered and awaits close. Video decisions consumed: 59 authored cues live, 12 no-audio videos remain in #922. Publisher digest pin #893 remains open fleet-side.",
+        "ts": "2026-08-31T08:02Z",
+        "phase": "",
+        "kind": "milestone",
+        "text": "Gauntlet wave 1: 3/88 plan articles + 6/440 checks blind-reviewed cross-model vs Bio bar. Checks AT BAR (bar item ranked last by both lanes); articles below bar on depth/repetition; redistricting article factual conflation CONFIRMED both lanes. Phase4 skip/keep menu staged. Receipts out/gauntlet-20260831/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T07:46Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #931 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/931",
+        "ts": "2026-08-31T08:02Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #750 completed: failure.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33369876687",
         "writer": "repository-event automation"
       }
     },
@@ -893,9 +893,9 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-08-31T07:45Z",
+        "ts": "2026-08-31T08:01Z",
         "event_type": "issues",
-        "text": "apush-course-build issue #9 unlabeled.",
+        "text": "apush-course-build issue #9 labeled.",
         "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
         "writer": "repository-event automation"
       }
@@ -941,9 +941,9 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T07:26Z",
+        "ts": "2026-08-31T07:58Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #69 opened at f81eeba3.",
+        "text": "ap-psychology-fall-2025-v1 pull request #69 merged at no-sha.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/69",
         "writer": "repository-event automation"
       }
