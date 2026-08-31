@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T01:36Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "Bank census (read-only, $0, 408 /v1/items calls): APWH bank holds 1,251 passed MCQs across 71/71 topics; 944 (75.5%) are our own corpus (repo-wide 8,928-uuid sweep), 307 fresh-to-us; 29 topics zero-fresh, 6 topics >=14 fresh. Tier-2 retrieval ceiling ~31% pre-gating \u2014 regeneration route stands."
+  },
+  {
     "ts": "2026-08-31T01:29Z",
     "course": "humgeo",
     "phase": "",
