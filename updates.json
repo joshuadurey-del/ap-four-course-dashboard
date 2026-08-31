@@ -1,5 +1,93 @@
 [
   {
+    "ts": "2026-08-31T03:17Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:17Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 issue #64 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/64#issuecomment-5473256053",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:15Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit c79f80d9.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/c79f80d9b6f1b0005beb38f1dd2296bcf7b6d590",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:12Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #920 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/920",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:12Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:12Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473222370",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:07Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:07Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:07Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:07Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T02:48Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1830 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33351067360",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T02:48Z",
     "course": "apwh",
     "phase": "Phase 1",
@@ -345,6 +433,22 @@
     "text": "apush-course-build issue #9 unlabeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T01:53Z",
+    "course": "cross",
+    "text": "ap-one commit c1086cfc.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/c1086cfcf22aa32f8f19cb1dd9855c474b795f73",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T01:53Z",
+    "course": "apwh",
+    "text": "ap-one commit 0a0e00a0.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/0a0e00a0c18551bcdfb1afde82125e0c9dc89019",
     "writer": "repository-event automation"
   },
   {
@@ -964,6 +1068,14 @@
     "kind": "landed",
     "text": "Psychology main c349f434 now contains the Unit 5 assessment set: 457 MCQs, two AAQs, and one EBQ. Unit 0 articles are merged, draft PR #64 contains 8 of 22 figures, and issue #51 plus FRQ PR #20 remain open. Accepted source is not closed and Phase 0 is not entered.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-29T15:48Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #64 opened at c79f80d9.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/64",
+    "writer": "repository-event automation"
   },
   {
     "course": "cross",
