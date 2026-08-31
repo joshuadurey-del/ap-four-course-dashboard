@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T08:05Z",
+  "snapshot": "2026-08-31T08:14Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -428,9 +428,9 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:02Z",
+        "ts": "2026-08-31T08:14Z",
         "event_type": "workflow_run",
-        "text": "ap-one workflow run #750 completed: failure.",
+        "text": "ap-one workflow run #750 completed: success.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33369876687",
         "writer": "repository-event automation"
       }
@@ -740,10 +740,10 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-08-31T08:05Z",
+        "ts": "2026-08-31T08:14Z",
         "phase": "",
         "kind": "milestone",
-        "text": "tier-2 CAMPAIGN DRAINED (rounds 1+2 final per stop-rule): 133 jobs total (131 completed, 2 factory-terminal 3.4/9.5), 1,132 items returned, 205 guard-refused (round-2 rate 30% vs round-1 16% \u2014 diminishing, stop-rule fired), 3 dups, 924 DISTINCT usable, 922 paired retirements of 999 retirable; residue named 28 factory-terminal + 49 guard-shortfall + 6 pinned; receipts out/apwh-tier2-20260831/",
+        "text": "tier-2 BANKED locally: 924 items appended to generated_items.jsonl, 910 retirements in panel_exclusions.json (12 topic-7.5 withdrawn after assembler measured candidate-depth limit), rebuild+verify ALL 12 CHECKS PASS (1,975 members, full rationale coverage); two twin-assembly defects fixed in build_rationale_bank.py (missing load_panel_exclusions; singular vs plural distractor_rationales field) \u2014 same-PR code changes, tier-1 PR-train precedent; branch apwh-seat/tier2-banking-20260831",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -893,10 +893,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:01Z",
+        "ts": "2026-08-31T08:13Z",
         "event_type": "issues",
-        "text": "apush-course-build issue #9 labeled.",
-        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+        "text": "apush-course-build issue #9 comment-created.",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5475630244",
         "writer": "repository-event automation"
       }
     },
@@ -941,10 +941,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T07:58Z",
+        "ts": "2026-08-31T08:07Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #69 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/69",
+        "text": "ap-psychology-fall-2025-v1 pull request #70 opened at c8eb37a8.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/70",
         "writer": "repository-event automation"
       }
     },
