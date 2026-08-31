@@ -1,6 +1,6 @@
 (() => {
   const relative = ms => {
-    const minutes = Math.round((Date.now() - ms) / 60000);
+    const minutes = Math.max(0, Math.round((Date.now() - ms) / 60000));
     if (minutes < 60) return `${minutes}m ago`;
     const hours = Math.round(minutes / 60);
     return hours < 48 ? `${hours}h ago` : `${Math.round(hours / 24)}d ago`;
@@ -28,12 +28,42 @@
     .filter(update => update?.course === course && typeof update?.event_type === 'string' && evidenceUrl(update.evidence_url) && !Number.isNaN(Date.parse(update.ts)))
     .sort((a, b) => Date.parse(b.ts) - Date.parse(a.ts))[0];
 
+  const summarizeCourse = (updates, course, now = Date.now()) => {
+    const rows = Array.isArray(updates) ? updates.filter(update =>
+      typeof update?.course === 'string' && update.course.toLowerCase() === course &&
+      typeof update?.ts === 'string' && !Number.isNaN(Date.parse(update.ts))) : [];
+    const since = now - 7 * 24 * 60 * 60 * 1000;
+    const landingKinds = new Set(['landed', 'merged', 'closed', 'receipt-sealed', 'state-change']);
+    const landings7d = rows.filter(update => Date.parse(update.ts) >= since &&
+      (landingKinds.has(update.kind) || update.event_type === 'push')).length;
+    const latestByPhase = new Map();
+    rows.filter(update => typeof update.phase === 'string' && update.phase.trim() && typeof update.kind === 'string')
+      .sort((a, b) => Date.parse(a.ts) - Date.parse(b.ts))
+      .forEach(update => latestByPhase.set(update.phase.trim().toLowerCase(), update));
+    const openHolds = [...latestByPhase.values()].filter(update => update.kind === 'hold').length;
+    const gateEntry = rows.filter(update => update.kind === 'state-change')
+      .sort((a, b) => Date.parse(b.ts) - Date.parse(a.ts))[0];
+    return {
+      landings7d,
+      openHolds,
+      gateDays: gateEntry ? Math.max(0, Math.floor((now - Date.parse(gateEntry.ts)) / 86400000)) : null,
+    };
+  };
+
+  globalThis.AP4_UPDATES = { summarizeCourse };
+
   if (typeof document === 'undefined') {
     if (displayText('Ilma') !== 'the repository owner') throw new Error('display text self-test failed');
     if (!evidenceUrl('https://github.com/example/course/commit/abc')) throw new Error('evidence URL self-test failed');
     if (evidenceUrl('https://example.com/not-allowed')) throw new Error('unsafe URL self-test failed');
     if (newestLocal([{ course: 'psych', kind: 'landed', ts: '2026-08-29T00:00Z' }], 'psych')?.kind !== 'landed') throw new Error('local freshness self-test failed');
     if (newestRepository([{ course: 'psych', event_type: 'push', evidence_url: 'https://github.com/example/course/commit/abc', ts: '2026-08-29T00:00Z' }], 'psych')?.event_type !== 'push') throw new Error('repository freshness self-test failed');
+    const summary = summarizeCourse([
+      { course: 'psych', kind: 'landed', phase: 'P0', ts: '2026-08-30T00:00Z' },
+      { course: 'psych', kind: 'hold', phase: 'P1', ts: '2026-08-30T01:00Z' },
+      { course: 'psych', kind: 'state-change', phase: 'P0', ts: '2026-08-29T00:00Z' },
+    ], 'psych', Date.parse('2026-08-31T00:00Z'));
+    if (summary.landings7d !== 2 || summary.openHolds !== 1 || summary.gateDays !== 2) throw new Error('rate summary self-test failed');
     return;
   }
 
@@ -61,7 +91,10 @@
       const time = document.createElement('time');
       time.dateTime = update.ts;
       time.textContent = `${local(ms)} · ${relative(ms)}`;
-      meta.append(courseName, time);
+      const writer = document.createElement('span');
+      writer.className = 'update-writer';
+      writer.textContent = `Writer: ${update.writer}`;
+      meta.append(courseName, time, writer);
       const copy = document.createElement('p');
       copy.textContent = displayText(update.text);
       const href = evidenceUrl(update.evidence_url);

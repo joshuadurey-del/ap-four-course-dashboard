@@ -22,6 +22,11 @@ STATE_PATH = Path("automation/poller-state.json")
 MAX_PER_ENDPOINT = 100
 MAX_PUBLIC_UPDATES = 40
 MAX_LOCAL_BATCH = 80
+NEEDS_HUMAN_PATH = Path("needs-human.json")
+NEEDS_HUMAN_KEYS = {"schema", "generated_ts", "open"}
+NEEDS_HUMAN_ITEM_KEYS = {"id", "ts", "course", "kind", "title", "deadline"}
+NEEDS_HUMAN_KINDS = {"decision", "approval", "credential", "scope", "timing", "other"}
+PRIVATE_TOKENS = ("/Users/", "file://", "-----BEGIN", "ghp_", "github_pat_")
 COURSE_TOKENS = {
     "humgeo": ("humgeo", "human geography", "aphg"),
     "apwh": ("apwh", "world history"),
@@ -36,6 +41,48 @@ def now_utc():
 
 def iso(value):
     return value.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def validate_needs_human_document(document):
+    if not isinstance(document, dict) or set(document) != NEEDS_HUMAN_KEYS:
+        raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: top-level fields")
+    if document.get("schema") != "needs-human-public/v1" or not isinstance(document.get("open"), list):
+        raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: schema")
+    try:
+        dt.datetime.fromisoformat(str(document["generated_ts"]).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: generated_ts") from None
+    for item in document["open"]:
+        if not isinstance(item, dict) or set(item) != NEEDS_HUMAN_ITEM_KEYS:
+            raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: item fields")
+        title, deadline = item["title"], item["deadline"]
+        try:
+            dt.datetime.fromisoformat(str(item["ts"]).replace("Z", "+00:00"))
+        except (TypeError, ValueError):
+            raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: item timestamp") from None
+        if (not isinstance(item["id"], str) or len(item["id"]) != 16
+                or any(char not in "0123456789abcdef" for char in item["id"])
+                or item["course"] not in COURSES | {"cross"}
+                or item["kind"] not in NEEDS_HUMAN_KINDS
+                or not isinstance(title, str) or not title.strip() or len(title) > 140
+                or any(ord(char) < 32 for char in title) or any(token in title for token in PRIVATE_TOKENS)
+                or not isinstance(deadline, str)
+                or (deadline and (len(deadline) != 10 or deadline[4] != "-" or deadline[7] != "-"))):
+            raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: public field")
+    return document
+
+
+def fold_needs_human(source, destination=NEEDS_HUMAN_PATH):
+    source = Path(source)
+    if not source.is_file():
+        raise RuntimeError("NEEDS_HUMAN_PROJECTION_MISSING")
+    try:
+        document = json.loads(source.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        raise RuntimeError("NEEDS_HUMAN_PROJECTION_INVALID: JSON") from None
+    validate_needs_human_document(document)
+    Path(destination).write_text(json.dumps(document, sort_keys=True, ensure_ascii=True, indent=1) + "\n", encoding="utf-8")
+    print(f"needs-human: folded {len(document['open'])} open item(s)")
 
 
 class GitHub:
@@ -433,6 +480,22 @@ def selftest():
         for key, value in old.items():
             if value is None: os.environ.pop(key, None)
             else: os.environ[key] = value
+        projection = {
+            "schema": "needs-human-public/v1", "generated_ts": "2026-08-29T02:30:00Z",
+            "open": [{"id": "a" * 16, "ts": "2026-08-29T02:00:00Z", "course": "humgeo",
+                      "kind": "decision", "title": "Choose the bounded option.", "deadline": ""}],
+        }
+        source = Path(directory) / "needs-human.public.json"
+        destination = Path(directory) / "needs-human.json"
+        source.write_text(json.dumps(projection))
+        fold_needs_human(source, destination)
+        assert json.loads(destination.read_text()) == projection
+        try:
+            validate_needs_human_document({**projection, "unexpected": True})
+        except RuntimeError:
+            pass
+        else:
+            raise AssertionError("unexpected needs-human field passed")
     print("selftest: all checks passed")
 
 
@@ -445,12 +508,19 @@ def main():
     finalize_parser.add_argument("--transaction", required=True)
     finalize_parser.add_argument("--dashboard-commit", required=True)
     finalize_parser.add_argument("--pages-build-id", required=True)
+    fold_parser = sub.add_parser("fold-needs-human")
+    fold_parser.add_argument("--source", required=True)
+    fold_parser.add_argument("--destination", default=str(NEEDS_HUMAN_PATH))
+    validate_parser = sub.add_parser("validate-needs-human")
+    validate_parser.add_argument("--source", default=str(NEEDS_HUMAN_PATH))
     sub.add_parser("probe")
     sub.add_parser("selftest")
     args = parser.parse_args()
     try:
         if args.command == "prepare": prepare(args.transaction)
         elif args.command == "finalize": finalize(args.transaction, args.dashboard_commit, args.pages_build_id)
+        elif args.command == "fold-needs-human": fold_needs_human(args.source, args.destination)
+        elif args.command == "validate-needs-human": validate_needs_human_document(json.loads(Path(args.source).read_text(encoding="utf-8")))
         elif args.command == "probe": probe()
         else: selftest()
     except RuntimeError as error:

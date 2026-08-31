@@ -1,0 +1,54 @@
+{
+ "generated_ts": "2026-08-31T02:35:29Z",
+ "open": [
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "c83f96f094ee8c98",
+   "kind": "decision",
+   "title": "Mark the 71-video triage sheet (bulk option per group + exceptions): out/humgeo-phase3-assets-20260830/video-triage/",
+   "ts": "2026-08-31T02:23:58Z"
+  },
+  {
+   "course": "apush",
+   "deadline": "",
+   "id": "3793e6e242910d07",
+   "kind": "decision",
+   "title": "Profile sealing inputs: APUSH term dates + canary account identities (+ grader URL verify)",
+   "ts": "2026-08-31T02:29:53Z"
+  },
+  {
+   "course": "apwh",
+   "deadline": "",
+   "id": "b7272bcd1faa1f46",
+   "kind": "approval",
+   "title": "Tier-2: authorize or decline the 1,003-item fix campaign",
+   "ts": "2026-08-31T02:30:19Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "5105ed212c77b94d",
+   "kind": "decision",
+   "title": "Phase 4 seal: supply the execute invocation",
+   "ts": "2026-08-31T02:30:19Z"
+  },
+  {
+   "course": "psych",
+   "deadline": "",
+   "id": "f054cdd3e8591bb6",
+   "kind": "decision",
+   "title": "Jayesh call on #51: close as overtaken, or keep?",
+   "ts": "2026-08-31T02:30:19Z"
+  },
+  {
+   "course": "psych",
+   "deadline": "2026-08-31",
+   "id": "5ccfdd03d17f40ae",
+   "kind": "decision",
+   "title": "Run technical pre-read of PR #64 batch-4 figures before the Jayesh call? (one word: go)",
+   "ts": "2026-08-31T02:35:29Z"
+  }
+ ],
+ "schema": "needs-human-public/v1"
+}

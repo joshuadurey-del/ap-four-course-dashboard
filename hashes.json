@@ -1,6 +1,6 @@
 {
- "generated_utc": "2026-08-31T02:48:41Z",
- "note": "sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.",
+ "generated_utc": "2026-08-31T02:52:39Z",
+ "note": "sha256 over Git blobs committed at HEAD. Precommit reads the staged tree that becomes HEAD; bin/update-hashes.sh verify checks committed HEAD. Working-tree bytes are never hashed.",
  "files": [
   {
    "path": "agents/AP-FOUR-COURSE-AGENT-ACCOUNTING-2026-08-17.md",
@@ -29,13 +29,23 @@
   },
   {
    "path": "data.json",
-   "sha256": "6c877a38840f2b6415c5af8c713296479b173c85262d7496b117cc69e6980654",
-   "bytes": 78717
+   "sha256": "d1b869459f45b3ac47ac4e2f70356b05e8f059f5abde9a552d6ad9c38645b266",
+   "bytes": 79801
+  },
+  {
+   "path": "needs-human.json",
+   "sha256": "97ac71eb94dc356377b2383aea5bfc4e5c516f3e82f033663da0e6d98b18c9a6",
+   "bytes": 1445
+  },
+  {
+   "path": "process.json",
+   "sha256": "a6afacb576108c6a941ebb61abf78e342520e9ef3ff03e069c6ebdf8e20cd42b",
+   "bytes": 17045
   },
   {
    "path": "updates.json",
-   "sha256": "bb961bb399c55ca458640f694d9c506bcac3e8f47cd1a64f6c046e8231b5d856",
-   "bytes": 197213
+   "sha256": "393da4e281c90c63e92b05ba34547fb8d4c84eba97df43814c9d270ddb9cbc7b",
+   "bytes": 212028
   }
  ]
 }

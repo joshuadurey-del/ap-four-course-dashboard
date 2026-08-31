@@ -1,39 +1,73 @@
 #!/bin/sh
-# Regenerate hashes.json over the served machine-readable files, then stage it.
-# Runs from the pre-commit hook so the digests can never go stale.
-cd "$(git rev-parse --show-toplevel)" || exit 1
-python3 - <<'EOF'
-import hashlib, json, os, subprocess
-files = sorted(
-    ['data.json', 'updates.json'] +
-    ['agents/' + f for f in os.listdir('agents') if f.endswith('.md')]
-)
+# Write hashes from staged Git blobs (the exact tree that becomes HEAD), or verify
+# every published entry against committed HEAD. Working-tree bytes are never read.
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+mode=${1:-write}
+ref=${HASH_REF:-HEAD}
+
+python3 - "$mode" "$ref" <<'PY'
+import datetime
+import hashlib
+import json
+import subprocess
+import sys
+
+mode, ref = sys.argv[1:]
+
+def git(*args):
+    return subprocess.check_output(["git", *args])
+
+def blob(path, source=ref):
+    spec = f":{path}" if source == ":" else f"{source}:{path}"
+    return git("show", spec)
+
+if ref == ":":
+    agents = git("ls-files", "agents/*.md").decode().splitlines()
+else:
+    agents = [path for path in git("ls-tree", "-r", "--name-only", ref, "--", "agents").decode().splitlines() if path.endswith(".md")]
+files = sorted(["data.json", "needs-human.json", "process.json", "updates.json", *agents])
+
+if mode == "verify":
+    manifest = json.loads(blob("hashes.json", "HEAD"))
+    entries = manifest.get("files", [])
+    if [entry.get("path") for entry in entries] != files:
+        raise SystemExit("HASHES HOLD: committed inventory differs from hashes.json")
+    for entry in entries:
+        content = blob(entry["path"], "HEAD")
+        if entry.get("sha256") != hashlib.sha256(content).hexdigest() or entry.get("bytes") != len(content):
+            raise SystemExit(f"HASHES HOLD: {entry['path']} differs from committed HEAD")
+    print(f"HASHES OK: {len(entries)} committed HEAD entries")
+    raise SystemExit(0)
+
+if mode != "write":
+    raise SystemExit("usage: update-hashes.sh [write|verify]")
 out = {
-    'generated_utc': subprocess.check_output(['date', '-u', '+%Y-%m-%dT%H:%M:%SZ']).decode().strip(),
-    'note': 'sha256 over the raw bytes as served. Verify: curl -s <file url> | shasum -a 256. hashes.json cannot hash itself.',
-    'files': [
-        {'path': p,
-         'sha256': hashlib.sha256(open(p, 'rb').read()).hexdigest(),
-         'bytes': os.path.getsize(p)}
-        for p in files
-    ],
+    "generated_utc": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    "note": "sha256 over Git blobs committed at HEAD. Precommit reads the staged tree that becomes HEAD; bin/update-hashes.sh verify checks committed HEAD. Working-tree bytes are never hashed.",
+    "files": [],
 }
-with open('hashes.json', 'w') as f:
-    json.dump(out, f, indent=1)
-    f.write('\n')
-EOF
+for path in files:
+    content = blob(path)
+    out["files"].append({"path": path, "sha256": hashlib.sha256(content).hexdigest(), "bytes": len(content)})
+with open("hashes.json", "w", encoding="utf-8") as handle:
+    json.dump(out, handle, indent=1)
+    handle.write("\n")
+PY
 git add hashes.json
 
-# Auto-refresh the homepage snapshot stamp at every commit (owner order
-# 2026-08-28: the date must move at each update; the hand-set stamp went
-# stale twice). Runs after hashes so both are staged together.
-python3 - <<'PYEOF'
-import datetime, re
+# The snapshot stamp is display metadata and is not part of hashes.json.
+python3 - <<'PY'
+import datetime
+import re
+
 now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
 kst = f"{now:%b} {now.day}, {now.year} \u00b7 {now:%H:%M} KST"
-src = open('timeline.js').read()
-new = re.sub(r"snapshot: '[^']*'", f"snapshot: '{kst}'", src, count=1)
-if new != src:
-    open('timeline.js', 'w').write(new)
-PYEOF
+with open("timeline.js", encoding="utf-8") as handle:
+    source = handle.read()
+updated = re.sub(r"snapshot: '[^']*'", f"snapshot: '{kst}'", source, count=1)
+if updated != source:
+    with open("timeline.js", "w", encoding="utf-8") as handle:
+        handle.write(updated)
+PY
 git add timeline.js

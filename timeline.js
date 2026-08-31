@@ -5,8 +5,8 @@ Dashboard display contract:
 - Historical receipts retain their original scope and move only to a new credit home.
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
-const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 11:48 KST',
+const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
+  snapshot: 'Aug 31, 2026 · 11:52 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -137,10 +137,174 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   }
 };
 
+const NEEDS_KEYS = ['generated_ts', 'open', 'schema'];
+const NEEDS_ITEM_KEYS = ['course', 'deadline', 'id', 'kind', 'title', 'ts'];
+const NEEDS_COURSES = new Set(['humgeo', 'apwh', 'apush', 'psych', 'cross']);
+const NEEDS_KINDS = new Set(['decision', 'approval', 'credential', 'scope', 'timing', 'other']);
+const PRIVATE_TOKENS = ['/Users/', 'file://', '-----BEGIN', 'ghp_', 'github_pat_'];
+const FRESHNESS_LIMIT_MS = 24 * 60 * 60 * 1000;
+
+const sameKeys = (value, keys) => value && typeof value === 'object' && !Array.isArray(value) &&
+  JSON.stringify(Object.keys(value).sort()) === JSON.stringify(keys);
+const parsedTime = value => typeof value === 'string' ? Date.parse(value) : NaN;
+const ageLabel = (ms, now = Date.now()) => {
+  if (!Number.isFinite(ms)) return 'age unavailable';
+  const minutes = Math.max(0, Math.floor((now - ms) / 60000));
+  if (minutes < 1) return 'just now';
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  return hours < 48 ? `${hours}h ago` : `${Math.floor(hours / 24)}d ago`;
+};
+
+const validateNeedsHuman = (documentValue, now = Date.now()) => {
+  const hold = reason => ({ status: 'hold', reason, items: [] });
+  if (!sameKeys(documentValue, NEEDS_KEYS)) return hold('Projection missing or fields do not match needs-human-public/v1.');
+  if (documentValue.schema !== 'needs-human-public/v1' || !Array.isArray(documentValue.open)) return hold('Projection schema is invalid.');
+  const generated = parsedTime(documentValue.generated_ts);
+  if (!Number.isFinite(generated)) return hold('Projection generated time is invalid.');
+  if (generated > now + 5 * 60 * 1000) return hold('Projection generated time is in the future.');
+  if (now - generated > FRESHNESS_LIMIT_MS) return hold(`Projection is stale; generated ${ageLabel(generated, now)}.`);
+  for (const item of documentValue.open) {
+    const title = item?.title;
+    if (!sameKeys(item, NEEDS_ITEM_KEYS) || !/^[0-9a-f]{16}$/.test(String(item.id)) ||
+        !NEEDS_COURSES.has(item.course) || !NEEDS_KINDS.has(item.kind) ||
+        !Number.isFinite(parsedTime(item.ts)) || typeof title !== 'string' || !title.trim() ||
+        title.length > 140 || /[\u0000-\u001f]/.test(title) || PRIVATE_TOKENS.some(token => title.includes(token)) ||
+        typeof item.deadline !== 'string' || (item.deadline && !/^\d{4}-\d{2}-\d{2}$/.test(item.deadline))) {
+      return hold('Projection contains an invalid or unexpected item.');
+    }
+  }
+  return { status: 'ok', generated, items: documentValue.open };
+};
+
+const formatNextStep = (value, fallback) => {
+  if (!sameKeys(value, ['args', 'gate', 'tool', 'verb']) || typeof value.verb !== 'string' ||
+      typeof value.tool !== 'string' || !Array.isArray(value.args) || value.args.some(arg => typeof arg !== 'string') ||
+      typeof value.gate !== 'string' || !value.verb.trim() || !value.tool.trim() || !value.gate.trim()) return fallback;
+  const args = value.args.length ? ` (${value.args.join(', ')})` : '';
+  return `${value.verb.trim().replace(/^./, char => char.toUpperCase())} via ${value.tool.trim()}${args} once ${value.gate.trim().replace(/[.]$/, '')}.`;
+};
+
+const processFrontier = value => {
+  if (!value || !Array.isArray(value.stages) || !value.stages.length ||
+      value.stages.some(stage => typeof stage?.automated !== 'boolean')) return null;
+  return {
+    automated: value.stages.filter(stage => stage.automated).length,
+    total: value.stages.length,
+    measured: parsedTime(value.generated_utc),
+  };
+};
+
+const make = (tag, className, text) => {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+};
+
+const renderNeedsHuman = (root, result, now) => {
+  root.className = `needs-human-strip ${result.status === 'hold' ? 'is-hold' : result.items.length ? 'has-items' : 'is-clear'}`;
+  const head = make('div', 'needs-human-head');
+  if (result.status === 'hold') {
+    head.append(make('h2', '', 'Needs-human status unavailable'), make('p', '', result.reason));
+    root.replaceChildren(head);
+    return;
+  }
+  const title = make('h2', '', result.items.length ? `Needs a human: ${result.items.length}` : 'Nothing needs you');
+  head.append(title, make('p', '', `Projection measured ${ageLabel(result.generated, now)}`));
+  if (!result.items.length) {
+    root.replaceChildren(head);
+    return;
+  }
+  const list = make('div', 'needs-human-items');
+  result.items.forEach(item => {
+    const row = make('article', 'needs-human-item');
+    row.append(make('span', 'needs-human-course', item.course));
+    const copy = make('div', 'needs-human-copy');
+    copy.append(make('strong', '', item.title));
+    const meta = make('span', '', `${ageLabel(parsedTime(item.ts), now)} · ${item.deadline ? `Deadline ${item.deadline}` : 'No deadline'}`);
+    copy.append(meta);
+    row.append(copy);
+    list.append(row);
+  });
+  root.replaceChildren(head, list);
+};
+
+const renderFrontier = (root, processValue, now) => {
+  const frontier = processFrontier(processValue);
+  root.className = `automation-frontier ${frontier ? '' : 'is-hold'}`.trim();
+  const title = make('strong', '', frontier ? `${frontier.automated} of ${frontier.total} process steps automated` : 'Automation frontier unavailable');
+  const note = make('span', '', frontier ? `Requirements-only · measured ${ageLabel(frontier.measured, now)}` : 'process.json is missing or untyped');
+  root.replaceChildren(title, note);
+};
+
+const renderCourseCards = (root, data, updates, now) => {
+  const claims = Array.isArray(data?.claims) ? data.claims : [];
+  const summary = globalThis.AP4_UPDATES?.summarizeCourse;
+  const head = make('div', 'timeline-head');
+  const intro = make('div');
+  intro.append(make('span', 'badge b-blue', 'Current runbook state'), make('h2', '', 'All four courses'),
+    make('p', 'timeline-sub', 'Current state, freshness, machine-readable next step, and measured rates. Open a course for receipts and full detail.'));
+  head.append(intro, make('span', 'timeline-snapshot', `Dashboard snapshot · ${AP4_DASHBOARD.snapshot}`));
+  const grid = make('div', 'course-card-grid');
+  grid.setAttribute('aria-label', 'Current TimeBack state and next step by course');
+  AP4_DASHBOARD.courses.forEach(course => {
+    const claim = claims.find(row => row?.claim_id === `${course.id}.blueprint.audit`);
+    const measured = parsedTime(claim?.observed_at || claim?.status_at);
+    const limit = Number(claim?.freshness_limit_hours);
+    const stale = !Number.isFinite(measured) || !Number.isFinite(limit) || measured > now + 5 * 60 * 1000 || now - measured > limit * 60 * 60 * 1000;
+    const rates = typeof summary === 'function' ? summary(updates, course.id, now) : null;
+    const card = make('a', `course-summary-card${stale ? ' is-stale' : ''}`);
+    card.href = `${course.id}.html`;
+    card.style.setProperty('--course-color', course.color);
+    const headline = make('div', 'course-card-headline');
+    const status = make('span', 'course-card-status', `${stale ? 'STALE · ' : ''}${course.status} · measured ${ageLabel(measured, now)}`);
+    if (Number.isFinite(measured)) status.title = new Date(measured).toISOString();
+    headline.append(status);
+    card.append(headline, make('h3', '', course.label));
+    const landed = make('p', 'course-card-landed');
+    landed.append(make('strong', '', 'Landed: '), course.landed);
+    const next = make('p', 'course-card-next');
+    next.append(make('strong', '', 'Next: '), formatNextStep(claim?.next_step, course.nextStep));
+    const tiles = make('div', 'rate-tiles');
+    [
+      [rates?.landings7d, 'landings · 7d'],
+      [rates?.openHolds, 'open typed holds'],
+      [rates?.gateDays, 'days in current gate'],
+    ].forEach(([value, label]) => {
+      const tile = make('span');
+      tile.append(make('strong', '', Number.isFinite(value) ? String(value) : 'UNMEASURED'), make('small', '', label));
+      tiles.append(tile);
+    });
+    card.append(landed, next, tiles);
+    grid.append(card);
+  });
+  root.replaceChildren(head, grid);
+};
+
+const boardSelftest = () => {
+  const now = Date.parse('2026-08-31T03:00:00Z');
+  const item = { id: 'a'.repeat(16), ts: '2026-08-31T02:00:00Z', course: 'humgeo', kind: 'decision', title: 'Choose the bounded option.', deadline: '' };
+  const good = { schema: 'needs-human-public/v1', generated_ts: '2026-08-31T02:30:00Z', open: [item] };
+  if (validateNeedsHuman(good, now).status !== 'ok') throw new Error('needs-human valid fixture failed');
+  if (validateNeedsHuman(null, now).status !== 'hold') throw new Error('missing projection did not hold');
+  if (validateNeedsHuman({ ...good, generated_ts: '2026-08-29T00:00:00Z' }, now).status !== 'hold') throw new Error('stale projection did not hold');
+  if (validateNeedsHuman({ ...good, open: [{ ...item, title: 'x'.repeat(141) }] }, now).status !== 'hold') throw new Error('oversized title did not hold');
+  if (validateNeedsHuman({ ...good, extra: true }, now).status !== 'hold') throw new Error('unexpected field did not hold');
+  if (formatNextStep({ verb: 'resume', tool: 'factory-course-run', args: ['humgeo'], gate: 'the picker is runnable' }, 'fallback') === 'fallback') throw new Error('typed next step failed');
+};
+
+globalThis.AP4_BOARD = { ageLabel, formatNextStep, processFrontier, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
+
 (() => {
   const courses = AP4_DASHBOARD.courses;
   if (courses.length !== 4 || AP4_DASHBOARD.gates.length !== 14 || new Set(AP4_DASHBOARD.gates.map(gate => gate.id)).size !== 14 || courses.some(course => !course.phaseStates.length || course.phaseStates.some(phase => !phase.code || !phase.name || !phase.status))) {
     throw new Error('Dashboard lifecycle data is incomplete.');
+  }
+
+  if (typeof document === 'undefined') {
+    boardSelftest();
+    return;
   }
 
   const phaseMarkup = course => `
@@ -201,25 +365,18 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
 
   const root = document.getElementById('course-release-timeline');
   if (!root) return;
-
-  root.innerHTML = `
-    <div class="timeline-head">
-      <div>
-        <span class="badge b-blue">Current runbook state</span>
-        <h2>All four courses</h2>
-        <p class="timeline-sub">Each card shows the current TimeBack lifecycle state, landed work, and next governed step. Open a course page for receipts and the detailed evidence map.</p>
-      </div>
-      <span class="timeline-snapshot">Dashboard snapshot · ${AP4_DASHBOARD.snapshot}</span>
-    </div>
-    <div class="course-card-grid" aria-label="Current TimeBack state, landed work, and next step by course">
-      ${courses.map(course => `
-        <a class="course-summary-card" href="${course.id}.html" style="--course-color:${course.color}">
-          <div class="course-card-headline">
-            <span class="course-card-status b-${course.statusTone}">${course.status}</span>
-            <span class="course-card-landed"><strong>Landed so far:</strong> ${course.landed}</span>
-          </div>
-          <h3>${course.label}</h3>
-          <p><strong>Next:</strong> ${course.nextStep}</p>
-        </a>`).join('')}
-    </div>`;
+  const needsRoot = document.getElementById('needs-human-strip');
+  const frontierRoot = document.getElementById('automation-frontier');
+  const load = async path => {
+    const response = await fetch(path, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`${path} unavailable`);
+    return response.json();
+  };
+  Promise.allSettled([load('needs-human.json'), load('data.json'), load('process.json'), load('updates.json')]).then(results => {
+    const now = Date.now();
+    if (needsRoot) renderNeedsHuman(needsRoot, validateNeedsHuman(results[0].status === 'fulfilled' ? results[0].value : null, now), now);
+    if (frontierRoot) renderFrontier(frontierRoot, results[2].status === 'fulfilled' ? results[2].value : null, now);
+    renderCourseCards(root, results[1].status === 'fulfilled' ? results[1].value : null,
+      results[3].status === 'fulfilled' && Array.isArray(results[3].value) ? results[3].value : [], now);
+  });
 })();

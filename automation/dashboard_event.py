@@ -111,6 +111,7 @@ def process_delivery(secret, body, signature, inventory, seen, current_head, now
         update={
             "ts": event["occurred_at"][:16] + "Z", "course": course, "text": text,
             "event_type": event["event"], "evidence_url": evidence_url,
+            "writer": "repository-event automation",
         },
     )
 
@@ -184,6 +185,7 @@ def process_polled_item(item, inventory, seen, now=None):
         update={
             "ts": str(item["occurred_at"])[:16] + "Z", "course": course,
             "text": text, "event_type": event, "evidence_url": str(item["evidence_url"]),
+            "writer": "repository-event automation",
         },
     )
 
@@ -228,6 +230,7 @@ def process_local_item(item, seen, github_ref_hashes, now=None):
         update={
             "ts": item["ts"][:16] + "Z", "course": item["course"],
             "phase": item["phase"], "kind": item["kind"], "text": text,
+            "writer": "INCEPT event projection",
         },
     )
 

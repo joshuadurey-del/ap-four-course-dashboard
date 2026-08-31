@@ -1,15 +1,16 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Overview — all four courses</title><link rel="stylesheet" href="style.css?v=20260830-2"></head><body>
+<title>Overview — all four courses</title><link rel="stylesheet" href="style.css?v=20260831-board"></head><body>
 <nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" class="active" aria-current="page">Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="retro.html" >Retro</a><a href="agents.html" >Agent data</a></nav><main><h1>Overview — all four courses</h1><p class="sub">Current in-flight work: HumGeo is sealing Phase 4; APWH is stepping into Phase 0; APUSH remains in fleet-side content production; Psychology has content built and is waiting on factory QC admission.</p>
+<a href="index.html" class="active" aria-current="page">Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" >Claims</a><a href="lessons.html" >Lessons</a><a href="retro.html" >Retro</a><a href="agents.html" >Agent data</a></nav><main><h1>Overview — all four courses</h1><p class="sub">Human exceptions first. Current state, freshness, next governed action, and operating rates stay visible without changing lifecycle credit.</p>
+<section id="needs-human-strip" class="needs-human-strip is-loading" aria-live="polite"><h2>Checking what needs you…</h2></section>
+<section id="automation-frontier" class="automation-frontier is-loading" aria-live="polite"><strong>Measuring the automation frontier…</strong></section>
 <section id="course-release-timeline" class="timeline-sec" aria-label="Current TimeBack states and next steps">
 <noscript>Enable JavaScript to view each course's current TimeBack state and next step.</noscript>
 </section>
-<script type="module">import(`./timeline.js?v=${Date.now()}`)</script>
+<script type="module">import(`./updates.js?v=${Date.now()}`).then(() => import(`./timeline.js?v=${Date.now()}`))</script>
 <section class="updates-sec"><div class="section-head"><h2>Latest activity</h2><a href="updates.html">View full history</a></div>
 <p id="lastupd" class="last-updated"></p>
 <ol class="update-list" data-update-list data-limit="5" aria-live="polite"></ol>
 </section>
-<script type="module">import(`./updates.js?v=${Date.now()}`)</script>
 </main>
 <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer></body></html>

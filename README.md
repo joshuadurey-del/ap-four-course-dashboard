@@ -9,6 +9,8 @@ Hosted on GitHub Pages: every commit to main redeploys the site.
 
 Display model: the Overview's current-runbook section shows all four courses. Each card names the current TimeBack state, one runbook-bound milestone-level `Landed so far` line, and the next governed step. Detailed phase maps, counts, receipts, and the preserved historical record stay on course pages, where existing work maps to its exact credit home. Mapped evidence earns no gate credit without a course-approved closure receipt.
 
+Automation-grade overview: the needs-human projection is shown first, followed by a requirements-only automation frontier and compact course cards. Each course card reads its typed `next_step` from the course's `*.blueprint.audit` claim, keeps the in-script prose fallback, and visibly ages the status chip from that claim's timestamp. The claim-local `freshness_limit_hours` is 24; missing or older measurements render gray and `STALE`, never silently green. Rate tiles are derived only from `updates.json`; days in gate is `UNMEASURED` until an explicit `state-change` row exists.
+
 Runbook alignment: owner direction on 2026-08-23 establishes Ilma's AP One native TimeBack runbook as the publication source of truth for all four courses. Local Gates 0-3 stabilize work, lock source scope, inventory existing assets, and accept the source. Gates 4-11 then bind the course profile, seal the offline graph and all-absent plan, publish dark, enroll canaries, activate privately, run fresh-learner acceptance, and approve broader enrollment. Publication, enrollment, activation, learner acceptance, and release remain separate operators.
 
 Preservation rule: accepted historical receipts are never renumbered or rewritten. Their exact byte/count claims move to a new credit home, stale evidence remains historical, and only changed inputs or contracts are re-verified. HumGeo Gates 0-3 and APWH Gate 1 keep closure credit; APWH Gate 2 keeps all read-only evidence but remains open on six grader-boundary clauses. APUSH and Psychology keep their blueprint, inventory, QC, media, and assembly evidence while their current baselines are established.
@@ -24,3 +26,5 @@ source repositories every ten minutes and on `repository_dispatch: course-event`
 It persists cursors and receipts in private `joshuadurey-del/ap-ss-evidence`, then
 commits only verified, public-safe activity rows. Lifecycle claims remain manual
 and verifier-bound. Setup and credential boundaries: `automation/README.md`.
+
+Needs-human transport: local dashboard update runs fold the exact public projection with `python3 automation/poll_repositories.py fold-needs-human --source "$INCEPT_ZONE/needs-human.public.json"`. The committed copy contains only `needs-human-public/v1`; the renderer holds on missing, stale, oversized, or unexpected input. This does not reopen event-source ingress or add a host, App, source workflow, daemon, or polling loop.

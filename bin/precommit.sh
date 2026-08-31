@@ -25,11 +25,13 @@ with open('updates.json') as f:
     updates = json.load(f)
 
 assert isinstance(updates, list), 'updates.json must contain a JSON array'
+writers = {'dashboard curation', 'INCEPT event projection', 'repository-event automation'}
 for index, update in enumerate(updates):
     assert isinstance(update, dict), f'update {index} must be an object'
-    for field in ('ts', 'course', 'text'):
+    for field in ('ts', 'course', 'text', 'writer'):
         assert isinstance(update.get(field), str) and update[field].strip(), \
             f'update {index} needs a non-empty {field}'
+    assert update['writer'] in writers, f"update {index} has invalid writer: {update['writer']}"
     assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z', update['ts']), \
         f"update {index} has invalid ts: {update['ts']}"
     datetime.datetime.fromisoformat(update['ts'].replace('Z', '+00:00'))
@@ -51,10 +53,30 @@ for index, update in enumerate(updates):
             f'update {index} has invalid local kind'
         assert isinstance(update['phase'], str), f'update {index} has invalid phase'
 
+with open('data.json') as f:
+    data = json.load(f)
+claims = {row.get('claim_id'): row for row in data.get('claims', [])}
+for claim_id in ('humgeo.blueprint.audit', 'apwh.blueprint.audit', 'apush.blueprint.audit', 'psych.blueprint.audit'):
+    claim = claims.get(claim_id, {})
+    step = claim.get('next_step')
+    assert isinstance(step, dict) and set(step) == {'verb', 'tool', 'args', 'gate'}, f'{claim_id} needs typed next_step'
+    assert all(isinstance(step[field], str) and step[field].strip() for field in ('verb', 'tool', 'gate')), f'{claim_id} has invalid next_step'
+    assert isinstance(step['args'], list) and all(isinstance(arg, str) for arg in step['args']), f'{claim_id} has invalid args'
+    assert isinstance(claim.get('freshness_limit_hours'), int) and claim['freshness_limit_hours'] > 0, f'{claim_id} needs freshness limit'
+
+with open('process.json') as f:
+    process = json.load(f)
+assert process.get('stages') and all(isinstance(row.get('automated'), bool) for row in process['stages']), 'process steps need automated booleans'
+
 print(f'UPDATES OK: {len(updates)} schema-valid entries')
 PY
 then
   echo "pre-commit: BLOCKED — updates.json violates its published schema."
+  exit 1
+fi
+
+if ! python3 automation/poll_repositories.py validate-needs-human; then
+  echo "pre-commit: BLOCKED — needs-human.json violates needs-human-public/v1."
   exit 1
 fi
 
@@ -81,4 +103,4 @@ elif ! python3 "$LINT" data.json --hygiene; then
   exit 1
 fi
 
-exec bin/update-hashes.sh
+exec env HASH_REF=: bin/update-hashes.sh write

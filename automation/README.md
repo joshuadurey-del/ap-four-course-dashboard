@@ -3,7 +3,9 @@
 Phase A polls the private source repositories every ten minutes and on
 `repository_dispatch: course-event`. It reads with a classic owner PAT, keeps an
 opaque hashed cursor in this repository, and appends only derived, public-safe
-activity rows to `updates.json`. Titles, bodies, commit
+activity rows to `updates.json`. Every row carries a bounded public writer attestation:
+`repository-event automation`, `INCEPT event projection`, or `dashboard curation`.
+Titles, bodies, commit
 messages, webhook bodies, tokens, and receipt paths never enter this repository.
 The monitored private-repository inventory is an Actions secret.
 
@@ -54,3 +56,13 @@ course pages compute “Last local landing” from the newest projected row time
 Phase B replaces `SOURCE_REPO_READ_TOKEN` repo by repo with short-lived,
 read-only GitHub App installation tokens. External real-time webhook ingress is
 not required and remains separately gated.
+
+The needs-human strip deliberately uses the folded-update option, not a new ingress.
+On local dashboard update runs, validate and fold the public projection before staging:
+
+```sh
+python3 automation/poll_repositories.py fold-needs-human --source "$INCEPT_ZONE/needs-human.public.json"
+```
+
+The source ledger and private details never enter this repository. A missing or stale
+fold is visible as a typed UI hold; no background copier or new event host exists.

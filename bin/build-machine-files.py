@@ -29,6 +29,7 @@ def stage(id_, name, entry, artifacts, receipt, holds, reopen, resume, contract,
     return {"id": id_, "name": name, "entry_predicate": entry, "required_artifacts": artifacts,
             "pass_receipt": receipt, "hold_classes": holds, "reopen_target": reopen,
             "resume_evidence": resume, "contract_status": contract,
+            "automated": contract == "COMPLETE" and proven.get("level") == "complete",
             "proven": proven, "evidence": evidence}
 
 STAGES = [
@@ -126,6 +127,7 @@ process = {
     "schema_version": 1,
     "generated_utc": STAMP,
     "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
+    "automation_rule": "A process step counts as automated only when its contract_status is COMPLETE and its proven.level is complete. Requirements-only; this grants no permission and no lifecycle credit.",
     "sources": [
         "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
         "Codex re-review, out/handbook-replay-review-20260826 (8 findings; folded into v0.3)",
