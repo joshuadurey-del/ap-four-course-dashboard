@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T01:07Z",
+    "course": "humgeo",
+    "phase": "residue",
+    "kind": "closed",
+    "text": "Preserve-branch disposition (routed by orchestrator from the APWH close-out audit): humgeo-rebuild branch incept/humgeo/20260819__claude__aug12-preserve is DELIBERATE ARCHIVAL \u2014 keep, no PR, no delete. Byte-read: its one commit ec2bb05c preserves the Aug-12 i7-completion working state (2,042 files) + the apply464 incident ledger, whose own text says the pre-write bytes are unrecoverable elsewhere. A PR would be repo noise (259 behind); deletion would destroy sole incident evidence."
+  },
+  {
     "ts": "2026-08-31T00:58Z",
     "course": "humgeo",
     "phase": "4",
