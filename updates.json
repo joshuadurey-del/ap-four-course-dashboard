@@ -1,5 +1,54 @@
 [
   {
+    "ts": "2026-08-31T02:01Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 opened.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919"
+  },
+  {
+    "ts": "2026-08-31T01:58Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1827 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33348484077"
+  },
+  {
+    "ts": "2026-08-31T01:57Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T01:57Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T01:53Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #918 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/918"
+  },
+  {
+    "ts": "2026-08-31T01:48Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472703488"
+  },
+  {
+    "ts": "2026-08-31T01:48Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
     "ts": "2026-08-31T01:48Z",
     "course": "apush",
     "phase": "",
@@ -150,6 +199,13 @@
     "phase": "0.2",
     "kind": "filed",
     "text": "Phase 0.2 PR POSTED as ap-one#917 (live re-verified OPEN): source capture + admissibility oracle + registry + 4 profile pins, post-review rework included. Route: fresh pr-review receipt on Josh's one-window authorization, ship.py class 2 with the bff gate (9057 passed, 308 skipped, 18m54s); status.d receipt on the branch (8bb8da10). Merge fleet-side; merging party owns the deploy watch. All three claimed posts now landed: ap-one#916, ap-one#917, apwh-blueprint-build#66."
+  },
+  {
+    "ts": "2026-08-30T22:26Z",
+    "course": "apwh",
+    "text": "ap-one pull request #917 opened at 0a0e00a0.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/917"
   },
   {
     "ts": "2026-08-30T22:14Z",
