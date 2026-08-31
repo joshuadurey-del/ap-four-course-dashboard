@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T02:48Z",
+    "course": "apwh",
+    "phase": "Phase 1",
+    "kind": "milestone",
+    "text": "Leg B authored+committed: apwh_native_timeback_course.py (deterministic tree, digest a4ad8766, 894 linked activities: 176 lessons, 69 topic gates after last mapped lesson, 2 CCOT capstones, 9 unit assessments, mock) + refusal validator (coverage set-equality, 1.8 split ledger, 4 named pending rows) + native_tree.md + 23 tests incl. mutation probe per refusal. All 47 apwh ingest tests green. Next: Leg C review lanes + landing."
+  },
+  {
     "ts": "2026-08-31T02:45Z",
     "course": "humgeo",
     "phase": "4",
