@@ -1,5 +1,19 @@
 [
   {
+    "ts": "2026-08-30T22:41Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1826 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33339186712"
+  },
+  {
+    "ts": "2026-08-30T22:14Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build issue #66 closed.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/issues/66"
+  },
+  {
     "ts": "2026-08-30T14:16Z",
     "course": "humgeo",
     "event_type": "pull_request",
@@ -61,6 +75,13 @@
     "phase": "dashboard automation",
     "kind": "closed",
     "text": "Four-course dashboard manual reconcile completed from the ten private GitHub sources and the validated 114-row local log. The private cursor and COMPLETE receipt are stored; dashboard commit 73aad97 is live on Pages with exact served-byte verification. Overview, all course pages, Claims, Retro, and Agent data are current. The scheduled workflow remains fail-closed on its scoped evidence credential. No source-course or platform write occurred; /bin/zsh spend."
+  },
+  {
+    "ts": "2026-08-30T14:03Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #65 merged at 037cc168.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/65"
   },
   {
     "ts": "2026-08-30T13:53Z",
