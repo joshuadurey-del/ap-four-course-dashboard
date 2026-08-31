@@ -1,6 +1,13 @@
 [
   {
     "ts": "2026-08-31T01:36Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "note",
+    "text": "Bank census (same run): APUSH bank 1,792 passed MCQs across 105/105 topics; 1,787 (99.7%) already in apush-build-outputs (11,988-uuid sweep); 5 fresh items. Bank is not a source for APUSH item needs."
+  },
+  {
+    "ts": "2026-08-31T01:36Z",
     "course": "apwh",
     "phase": "",
     "kind": "note",
