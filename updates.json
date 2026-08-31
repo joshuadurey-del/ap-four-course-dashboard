@@ -1,5 +1,40 @@
 [
   {
+    "ts": "2026-08-31T02:45Z",
+    "course": "humgeo",
+    "phase": "4",
+    "kind": "note",
+    "text": "Triage correction (measured): the 12 'content-fix' videos have NO AUDIO STREAM (ffprobe, complete census \u2014 exactly 12 of 1,113; all others have a measured track). Earlier 'wall-to-wall audio' wording was wrong; sheet + verdicts corrected. Josh accepted Group 1 (59 earlier-cue placements). Two defect filings staged: chip-occlusion (pipeline PASS) and silent-renders (draft + review dispatched); both wait on Josh's plain typed word \u2014 the posting hook would not count his mid-turn report."
+  },
+  {
+    "ts": "2026-08-31T02:44Z",
+    "course": "cross",
+    "text": "ap-one workflow run #364 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33351531490"
+  },
+  {
+    "ts": "2026-08-31T02:43Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473046856"
+  },
+  {
+    "ts": "2026-08-31T02:43Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:43Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919#issuecomment-5473046540"
+  },
+  {
     "ts": "2026-08-31T02:43Z",
     "course": "humgeo",
     "text": "ap-one issue #919 labeled.",
