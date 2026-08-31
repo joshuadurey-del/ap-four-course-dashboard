@@ -1,11 +1,35 @@
 [
   {
+    "ts": "2026-08-31T04:37Z",
+    "course": "cross",
+    "text": "ap-one commit 10b1900c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/10b1900c0453eda45917923c78c6a632eb84c8a6",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:37Z",
+    "course": "apwh",
+    "text": "ap-one pull request #923 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T04:35Z",
     "course": "cross",
     "phase": "dashboard curation",
     "kind": "state-change",
     "text": "Current-state refresh from live repository sources: APWH is in Phase 1 with Phase 0.2 PR #917 merged and Phase 1 PR #923 open with all reported checks successful; no Phase 1 closure is claimed. Psychology now has a visible handoff section, and its repository activity shows open PR #66 as the newest verified event.",
     "writer": "dashboard curation"
+  },
+  {
+    "ts": "2026-08-31T04:32Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1832 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33356582248",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-08-31T04:19Z",
