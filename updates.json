@@ -1,6 +1,22 @@
 [
   {
     "ts": "2026-08-31T03:57Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 issue #51 closed.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:57Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 issue #51 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51#issuecomment-5473501805",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:57Z",
     "course": "apwh",
     "phase": "4",
     "kind": "executor-step",
@@ -1324,6 +1340,14 @@
     "kind": "landed",
     "text": "Psychology main c349f434 now contains the Unit 5 assessment set: 457 MCQs, two AAQs, and one EBQ. Unit 0 articles are merged, draft PR #64 contains 8 of 22 figures, and issue #51 plus FRQ PR #20 remain open. Accepted source is not closed and Phase 0 is not entered.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-29T15:48Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #64 opened at 7a8c2578.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/64",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-08-29T15:48Z",
