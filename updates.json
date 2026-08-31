@@ -1,11 +1,163 @@
 [
   {
+    "ts": "2026-08-31T05:16Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68#issuecomment-5474054504",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:16Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:16Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474054026",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:16Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:14Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:12Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:11Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68#issuecomment-5474018827",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:11Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:11Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:11Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:11Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474017817",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T05:11Z",
     "course": "apush",
     "phase": "pre-runbook content production",
     "kind": "state-change",
     "text": "Position 58 submitted once and terminal-failed after deterministic factory QC exhausted. It joins positions 45, 50, and 54 for the later regeneration route; the serial wave proceeds to position 59. The acceptance ledger remains unchanged until the wave-end rebuild.",
     "writer": "dashboard curation"
+  },
+  {
+    "ts": "2026-08-31T05:08Z",
+    "course": "cross",
+    "text": "ap-one pull request #924 opened at 4d7ead4a.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/924",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:07Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:06Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:06Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:06Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:06Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:06Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:06Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-08-31T05:06Z",
@@ -1535,6 +1687,14 @@
     "text": "apwh-blueprint-build issue #66 closed.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/issues/66",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-30T22:09Z",
+    "course": "cross",
+    "text": "ap-one commit 758bc5dd.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/758bc5ddb9e4d23ea8a96f2d5a4dd06987a8c4f5",
     "writer": "repository-event automation"
   },
   {
