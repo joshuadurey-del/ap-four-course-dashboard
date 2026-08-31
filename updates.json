@@ -1168,6 +1168,14 @@
   {
     "ts": "2026-08-29T15:48Z",
     "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #64 opened at 1ed092a4.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/64",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-29T15:48Z",
+    "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #64 opened at c79f80d9.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/64",
