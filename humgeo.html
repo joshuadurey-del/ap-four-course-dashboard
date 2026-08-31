@@ -11,7 +11,7 @@
 <a href="index.html">Overview</a><a href="humgeo.html" class="active" aria-current="page">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP Human Geography</h1>
-  <p class="sub"><strong>Phase 3 is closed and Phase 4 is open.</strong> Phases 0-3 have receipts in hand, including assets, QTI, Phase 3.6 validation, and the Phase 3.7 preview gate. Phase 4 is the current in-flight work; Phase 6 remains the first platform write and waits for a separate owner go.</p>
+  <p class="sub"><strong>Phase 4 is sealed and resealed from merged-main bytes.</strong> Digest <code>a4318c28</code> passes the offline gate; PR #928 is deployed and staging serves <code>fb04b7c2</code>. The publisher digest pin remains open fleet-side in issue #893. Phase 6 remains the first platform write and waits for a separate owner go.</p>
 
   <aside class="course-activity" aria-labelledby="activity-title-humgeo">
     <h2 id="activity-title-humgeo">Repository activity</h2>
@@ -29,8 +29,9 @@
       <li>Phases 0, 1, 2, and 3 are closed on their current receipts; no phase was skipped.</li>
       <li>Phase 2 measured 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP. Resource-level base XP remains a platform-metadata input for the Phase 4 plan.</li>
       <li>Phase 3 assets and QTI are closed. Phase 3.6 validation and the Phase 3.7 student-preview gate are also closed.</li>
-      <li>The Phase 4 plan is drafted with seven ordered work items. Its two private fields are the content-base URL or bucket and execute authority; their values are not exposed here.</li>
-      <li>The remaining owner rulings are the 71 video-cue calls and answer-position skew.</li>
+      <li>The Phase 4 plan is sealed and resealed from merged-main bytes at digest <code>a4318c28</code>; the offline gate passes with 2,730 byte-matched assets.</li>
+      <li>The plan builder landed in <a href="https://github.com/InceptTrilogy/ap-one/pull/920" target="_blank" rel="noopener">PR #920</a>. Issue #919 is answered by that merge and awaits close.</li>
+      <li>The video decisions are consumed: 59 authored cues are live through <a href="https://github.com/InceptTrilogy/ap-one/pull/928" target="_blank" rel="noopener">PR #928</a>; 12 no-audio videos remain in triage under issue #922.</li>
     </ul>
   </section>
 
@@ -40,15 +41,16 @@
       <li><a href="https://github.com/ilmych/humgeo-rebuild/pull/67" target="_blank" rel="noopener">SOURCE_ACCEPTED PR #67</a> and <a href="https://github.com/InceptTrilogy/ap-one/pull/851" target="_blank" rel="noopener">PROFILE_AND_SOURCE_BOUND PR #851</a> retain their exact-scope closure credit.</li>
       <li>The Phase 1 course map and Phase 2 pricing receipt are closed.</li>
       <li>Phase 3 assets, QTI, validation, and preview are closed; <a href="https://github.com/InceptTrilogy/ap-one/pull/913" target="_blank" rel="noopener">PR #913</a> carries the Phase 3 receipt merge.</li>
+      <li>Phase 4 is resealed at digest <code>a4318c28</code>. PR #920 supplies the plan builder; PR #928 deploys the 59-cue build at <code>fb04b7c2</code>.</li>
     </ul>
   </section>
 
   <section class="reading-guide">
     <h2>Current constraint and next governed move</h2>
     <dl>
-      <div><dt>Status</dt><dd>Phase 4 OPEN. Phase 5 is next and read-only. Phase 6 is the first platform write; Phases 7-9 have not started.</dd></div>
-      <div><dt>Current constraint</dt><dd>The plan cannot seal until the private content-base URL or bucket and execute authority are filled and the owner rules on the 71 video cues and answer-position skew.</dd></div>
-      <div><dt>Next</dt><dd>Complete those four owner inputs, rebuild and seal the Phase 4 plan, then capture live state read-only in Phase 5.</dd></div>
+      <div><dt>Status</dt><dd>Phase 4 SEALED. Phase 5 has not started. Phase 6 is the first platform write; Phases 7-9 have not started.</dd></div>
+      <div><dt>Current constraint</dt><dd>The publisher digest pin remains open fleet-side in <a href="https://github.com/InceptTrilogy/ap-one/issues/893" target="_blank" rel="noopener">issue #893</a>.</dd></div>
+      <div><dt>Next</dt><dd>After the publisher digest pin lands, resume through <code>factory-course-run humgeo</code>; the step picker determines the next governed Phase 5 read-only action.</dd></div>
     </dl>
   </section>
 

@@ -1,5 +1,11 @@
 [
   {
+    "ts": "2026-08-31T06:51Z",
+    "course": "humgeo",
+    "text": "Phase 4 SEALED: reseal digest a4318c28 and offline gate PASS; PR #928 deployed and staging serves fb04b7c2. Plan builder landed in PR #920; issue #919 is answered and awaits close. Video decisions consumed: 59 authored cues live, 12 no-audio videos remain in #922. Publisher digest pin #893 remains open fleet-side.",
+    "writer": "dashboard curation"
+  },
+  {
     "ts": "2026-08-31T06:47Z",
     "course": "humgeo",
     "text": "ap-one pull request #914 merged at no-sha.",

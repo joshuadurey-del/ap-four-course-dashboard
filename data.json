@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T05:11Z",
+  "snapshot": "2026-08-31T07:00Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -281,8 +281,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo Phases 0-3 are closed on current receipts. In Phase 4, P4-1 authority is resolved and P4-2 completed a deterministic real-base build twice. The AP One PR #918 correction is deployed and independently staging-verified at c1086cfc. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain before the plan can seal. Phase 5 is next and read-only. Phase 6 is the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
-      "scope": "current HumGeo runbook position through P4-3; excludes private authority values, the missing plan-builder implementation, unresolved video content decisions, Phase 5 live-state capture, platform writes, activation, learner acceptance, and release",
+      "value": "Phase 4 SEALED (reseal digest a4318c28, offline gate PASS; PR #928 deployed, staging serves fb04b7c2). Plan builder landed fleet-side in PR #920; issue #919 is answered and awaits close. Video decisions consumed: 59 authored cues live, 12 no-audio videos in triage pending #922. Remaining: publisher digest pin, fleet issue #893 OPEN. Phase 5 has not started. Phase 6 remains the first platform write and waits for a separate owner go.",
+      "scope": "current HumGeo runbook position through the Phase 4 reseal; excludes private authority values, the open publisher digest pin, Phase 5 live-state capture, platform writes, activation, learner acceptance, and release",
       "freshness_limit_hours": 24,
       "next_step": {
         "verb": "resume",
@@ -290,7 +290,7 @@
         "args": [
           "humgeo"
         ],
-        "gate": "the open needs-human decisions are resolved and the step picker returns runnable"
+        "gate": "fleet issue #893 lands the publisher digest pin and the step picker returns runnable"
       },
       "evidence": [
         {
@@ -371,11 +371,44 @@
         {
           "type": "native-asset-plan-builder-gap",
           "url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+          "state": "open",
+          "disposition": "ANSWERED_BY_MERGED_PR_920_AWAITING_ISSUE_CLOSE"
+        },
+        {
+          "type": "native-publication-plan-builder",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/920",
+          "merge_commit": "464b093f32bf9cf48a051837e2099200e42d758e"
+        },
+        {
+          "type": "phase-4-reseal",
+          "observed_at": "2026-08-31T06:49:25Z",
+          "plan_digest": "a4318c2894e2cd3f77846089a7bb7eb1e0cced14095ac122f1b0c90686972410",
+          "offline_gate": "PASS",
+          "byte_matched_assets": 2730
+        },
+        {
+          "type": "cue-build-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/928",
+          "merge_commit": "fb04b7c265895dd76cec9dd9d74791acd3e76046",
+          "deploy_run": 33364232468,
+          "staging_readback_at": "2026-08-31T06:51:23Z",
+          "staging_commit": "fb04b7c2",
+          "authored_cues": 59
+        },
+        {
+          "type": "no-audio-triage",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+          "state": "open",
+          "videos": 12
+        },
+        {
+          "type": "publisher-digest-pin",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/893",
           "state": "open"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-31T02:18:36Z"
+      "status_at": "2026-08-31T06:51:23Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -408,7 +441,7 @@
       "observed_at": "2026-08-26T14:47Z",
       "settled": true,
       "superseded_by": "humgeo.blueprint.audit",
-      "value": "SUPERSEDED historical gate snapshot. The current HumGeo state is carried by humgeo.blueprint.audit: Phases 0-3 are closed, Phase 4 is open, and Phase 5 is next and read-only.",
+      "value": "SUPERSEDED historical gate snapshot. See humgeo.blueprint.audit for the current HumGeo state; this row does not restate current phase status.",
       "scope": "owner-approved four-course sequence and current HumGeo migration state",
       "evidence": [
         {
@@ -930,7 +963,7 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 528 article/QTI files locally validated; Phase 3.3 PR #911 is merged at d2cb182f with 1,042 video pages and checks, while 71 videos remain in content triage. The formal census remains blocked; this evidence does not establish platform upload, learner deployment, or later lifecycle closure.",
+      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 528 article/QTI files locally validated. The current PR #928 build carries 1,101 video components: 59 authored cue placements are live and 12 no-audio videos remain in triage under #922. The formal census remains blocked; this evidence does not establish platform publication, learner deployment, or later lifecycle closure.",
       "scope": "current P1-04 operator-receipt position at enriched local bytes; formal landed-byte census and downstream lifecycle excluded",
       "evidence": [
         {
@@ -945,7 +978,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
-      "observed_at": "2026-08-30T14:17Z"
+      "observed_at": "2026-08-31T06:49:16Z"
     },
     {
       "claim_id": "humgeo.review_surface.local",
@@ -966,9 +999,9 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "status_at": "2026-08-31T02:02:25Z",
-      "value": "HumGeo's offline review surface is closed through Phase 3.7. Phase 4 authority is resolved and the real-base build is deterministic; the missing native-asset plan builder is filed in issue #919 and 71 video-cue content decisions remain. This is not publication or learner-acceptance readiness.",
-      "scope": "current HumGeo offline-review closure and Phase 4 plan inputs; excludes private values, unresolved plan-builder and video decisions, publication, and learner acceptance",
+      "status_at": "2026-08-31T06:51:23Z",
+      "value": "HumGeo's offline review surface remains closed through Phase 3.7. Phase 4 is sealed and resealed at digest a4318c28 with an offline-gate PASS. PR #920 supplies the plan builder; PR #928 puts 59 authored cues live at fb04b7c2; 12 no-audio videos remain in #922. Publisher digest pin #893 remains open. This is not platform publication or learner-acceptance readiness.",
+      "scope": "current HumGeo offline-review closure and Phase 4 reseal; excludes private values, the publisher digest pin, platform publication, and learner acceptance",
       "evidence": [
         {
           "type": "controller-execution-state",
@@ -1063,7 +1096,7 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: HumGeo Phases 0-3 are closed and Phase 4 authority plus the real-base rebuild are complete, but the plan cannot seal until the native-asset plan-builder gap and 71 video-cue content decisions are resolved. Phase 5 has not run. Phase 6 remains the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
+      "value": "BLOCKED: HumGeo Phases 0-3 are closed and Phase 4 is sealed at reseal digest a4318c28, but publisher digest pin #893 remains open. Phase 5 has not run. Phase 6 remains the first platform write and waits for a separate owner go; activation, learner acceptance, and release are not started.",
       "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
@@ -1072,7 +1105,7 @@
         }
       ],
       "evidence_access": "DASHBOARD_COMPONENT_CLAIM",
-      "status_at": "2026-08-31T02:02:25Z"
+      "status_at": "2026-08-31T06:51:23Z"
     },
     {
       "claim_id": "apwh.sweep.pack",

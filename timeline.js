@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 15:49 KST',
+  snapshot: 'Aug 31, 2026 · 16:03 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -17,7 +17,7 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
     { id: 5, name: 'Map course tree', canonCode: 'P1', railName: 'Course tree', canonName: 'Phase 1 · Map the complete course tree', state: 'closed', status: 'Closed', detail: 'The complete hierarchy, order, gates, invariants, assessments, and assigned-reading delivery are receipted.' },
     { id: 6, name: 'Price activities', canonCode: 'P2', railName: 'Activity pricing', canonName: 'Phase 2 · Price activities', state: 'closed', status: 'Done · stored XP measured', detail: 'The receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP. It also measures 403 demo-snapshot items and zero XP fields in the demo tree. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.' },
     { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'closed', status: 'Closed · validation + preview passed', detail: 'Assets, QTI, Phase 3.6 validation, and the Phase 3.7 student-preview gate are closed on receipts.' },
-    { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'active', status: 'Phase 4 open · Phase 5 next', detail: 'Phase 4 authority is resolved and the real-base build is deterministic. The native-asset plan-builder gap is open in issue #919; 71 video-cue content decisions remain. Phase 5 is the next read-only capture.' },
+    { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'active', status: 'Phase 4 sealed · publisher pin open', detail: 'The merged-main plan is resealed at digest a4318c28 with an offline-gate PASS. PR #920 supplies the plan builder; PR #928 supplies the 59 authored cues and is staging-verified at fb04b7c2. Fleet issue #893 still holds the publisher digest pin before the next governed move.' },
     { id: 9, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 10, name: 'Canary enroll', canonCode: 'P7', railName: 'Canary enrollments', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
     { id: 11, name: 'Activate', canonCode: 'P8', railName: 'Private activation', canonName: 'Phase 8 · Separate private activation', state: 'locked', status: 'Locked', detail: 'Activate privately under its own authority, restore-proof checkpoint, exact readback, and zero-write replay.' },
@@ -27,18 +27,18 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'Phase 4 · OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:18Z',
-      landed: 'Phases 0-3 — receipts in hand · Phase 4 authority — resolved · Real-base build — deterministic twice · Position correction — deployed and staging-verified',
-      nextStep: 'Fleet closes the native-asset plan-builder gap in issue #919; resolve the 71 video-cue content decisions, then seal Phase 4. Phase 5 read-only capture is next.',
+      status: 'Phase 4 · SEALED', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 06:51Z',
+      landed: 'Phases 0-3 — receipts in hand · Phase 4 — sealed and resealed · Plan builder — merged in PR #920 · 59-cue build — deployed at fb04b7c2',
+      nextStep: 'Resume via factory-course-run (humgeo) once fleet issue #893 lands the publisher digest pin; Phase 5 is the next read-only capture.',
       footprint: [
-        { value: '440/440', label: 'operator-receipt article-check position' },
-        { value: '528', label: 'locally validated XHTML + QTI assets' },
-        { value: '1,042', label: 'Phase 3.3 video pages + checks built' }
+        { value: '2,730', label: 'byte-matched assets in resealed plan' },
+        { value: '59', label: 'owner-authored video cues live' },
+        { value: '12', label: 'no-audio videos tracked in #922' }
       ],
-      etaDays: 'PHASE 4 OPEN',
-      etaNote: 'Phases 0-3 are closed. Phase 4 authority and the real-base rebuild are complete; plan-builder machinery and 71 video-cue content decisions remain. Phase 6 remains the first platform write and requires a separate go.',
+      etaDays: 'PHASE 4 SEALED',
+      etaNote: 'The plan is resealed from merged-main bytes and the 59-cue build is deployed. Twelve no-audio videos remain in triage under #922. Fleet issue #893 still holds the publisher digest pin; Phase 6 remains the first platform write and requires a separate go.',
       phaseStates: [
-        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'OPEN', detail: 'P4-1 authority is resolved and P4-2 is done. PR #918 is deployed and independently staging-verified. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder. Seventy-one video-cue content decisions remain.' }
+        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'SEALED', detail: 'Reseal digest a4318c28 passes the offline gate. PR #920 supplies the plan builder; issue #919 is answered but awaits close. PR #928 puts 59 authored cues live at fb04b7c2; 12 no-audio videos remain in triage under #922. Publisher pin #893 remains open fleet-side.' }
       ]
     },
     {
@@ -88,7 +88,7 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Phases 0-3 are closed on receipts. Phase 4 authority is resolved and the real-base build is deterministic; issue #919 holds the missing native-asset plan builder. Phase 5 is the next read-only capture. Phase 6 remains the first platform write and waits for a separate owner go.',
+      note: 'Phases 0-3 are closed on receipts. Phase 4 is sealed and resealed from merged-main bytes at digest a4318c28. PR #920 supplies the plan builder, PR #928 puts 59 authored cues live, and 12 no-audio videos remain in triage under #922. Fleet issue #893 still holds the publisher digest pin.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
@@ -97,8 +97,8 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
         { gate: 5, state: 'closed', status: 'Closed', signal: 'Phase 1 course tree receipted', copy: 'The Phase 1 mapping receipt is in hand; this row no longer reports the older open-census snapshot.', href: 'humgeo.html' },
         { gate: 6, state: 'closed', status: 'Done', signal: '3,633 served practice-key items measured', copy: 'The receipt measures 3,167 at 1 XP and 466 at 2 XP, plus a 403-item demo snapshot at 356/47. The demo tree has zero XP fields. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.', href: 'claims.html#claim-humgeo.blueprint.audit' },
-        { gate: 7, state: 'closed', status: 'Closed', signal: 'Assets + QTI + 3.6 validation + 3.7 preview closed', copy: 'Phase 3 is closed on its receipts. The 71 video-cue calls now belong to the Phase 4 owner decision, not unfinished Phase 3 credit.', href: 'https://github.com/InceptTrilogy/ap-one/pull/913' },
-        { gate: 8, state: 'active', status: 'Phase 4 open', signal: 'Authority resolved · real-base build done · plan builder missing', copy: 'P4-1 and P4-2 are complete. The PR #918 correction is deployed and independently staging-verified at c1086cfc; issue #919 records the missing native-asset plan builder. Seventy-one video-cue content decisions remain before sealing.', href: 'https://github.com/InceptTrilogy/ap-one/issues/919' }
+        { gate: 7, state: 'closed', status: 'Closed', signal: 'Assets + QTI + 3.6 validation + 3.7 preview closed', copy: 'Phase 3 remains closed on its receipts. The later cue and no-audio dispositions are carried by the current Phase 4 plan without changing Phase 3 credit.', href: 'https://github.com/InceptTrilogy/ap-one/pull/913' },
+        { gate: 8, state: 'active', status: 'Phase 4 sealed', signal: 'Reseal a4318c28 PASS · PR #928 live · publisher pin open', copy: 'The builder landed in PR #920 and the merged-main plan was resealed. PR #928 is staging-verified at fb04b7c2 with 59 authored cues; 12 no-audio videos remain in #922. Fleet issue #893 holds the remaining publisher digest pin.', href: 'https://github.com/InceptTrilogy/ap-one/issues/893' }
       ]
     },
     apwh: {
