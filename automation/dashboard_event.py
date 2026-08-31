@@ -223,7 +223,7 @@ def process_local_item(item, seen, github_ref_hashes, now=None):
         return _decision("REDELIVERY", "DUPLICATE_LOCAL_ROW_ID", **base)
     if item["backfill"]:
         return _decision("NOOP", "LOCAL_BACKFILL_BASELINED", **base)
-    if set(hashes) & github_ref_hashes:
+    if item["kind"] in {"landed", "merged", "filed", "closed"} and set(hashes) & github_ref_hashes:
         return _decision("NOOP", "GITHUB_EVIDENCE_PREFERRED", **base)
     return _decision(
         "UPDATE", "VERIFIED_LOCAL_LANDING", **base,
@@ -290,6 +290,9 @@ def _self_test():
     }
     assert process_local_item(local, set(), set(), now)["status"] == "UPDATE"
     assert process_local_item(local, {local["delivery_id"]}, set(), now)["status"] == "REDELIVERY"
+    ref_hash = "b" * 64
+    assert process_local_item({**local, "kind": "landed", "ref_hashes": [ref_hash]}, set(), {ref_hash}, now)["status"] == "NOOP"
+    assert process_local_item({**local, "kind": "receipt-sealed", "ref_hashes": [ref_hash]}, set(), {ref_hash}, now)["status"] == "UPDATE"
     assert process_local_item({**local, "text": "/Users/private"}, set(), set(), now)["status"] == "HOLD"
 
 
