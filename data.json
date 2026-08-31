@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T08:30Z",
+  "snapshot": "2026-08-31T09:19Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,17 +421,17 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-08-31T08:30Z",
+        "ts": "2026-08-31T09:19Z",
         "phase": "",
         "kind": "milestone",
-        "text": "Gauntlet wave 2 (corrected bars: golden=Lit/Lang, peers=APES/Psych): 3 HumGeo articles rank below all peers as 'thin article shells' (codex blind deck); redistricting conflation confirmed 3rd lane. Depth/repetition = the HumGeo article gap. Receipts out/gauntlet-20260831/ (w2-humgeo-*)",
+        "text": "Article-quality plan Phases 0-2 COMPLETE (out/article-quality-plan-20260831/): census (HumGeo 88 serving articles, 72/83 concept members under 400 visible words median 296; APWH 171+2 @ bc903c19 footer 172/173; APUSH unit9 pipeline stamps data-retrieval-role 162/162 vs 0/664 canary), population scanners with positive controls, and MECHANISM-DIFF.md (codex+gemini+grok lanes, GLM-5.3 draft, 5 quotes byte-verified). All $0 except GLM via hermes pooled key (owner-named). Phase 3+ waits on owner.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:29Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #932 opened at 7c5cab0a.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/932",
+        "ts": "2026-08-31T09:06Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #751 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33375357130",
         "writer": "repository-event automation"
       }
     },
@@ -893,10 +893,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T08:28Z",
+        "ts": "2026-08-31T09:18Z",
         "event_type": "issues",
         "text": "apush-course-build issue #9 comment-created.",
-        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5475794496",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476303916",
         "writer": "repository-event automation"
       }
     },
