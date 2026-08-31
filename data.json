@@ -421,10 +421,10 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-08-31T08:29Z",
+        "ts": "2026-08-31T08:30Z",
         "phase": "",
-        "kind": "filed",
-        "text": "Letter-prefix registry pin narrowed: ap-one PR #932 posted (builder pins HumGeo's own feedback_courses row, proposal regen, frozen review resealed +3/-3 flags unchanged; probes both directions, 262 suite green, Gemini APPROVE, pr-necessity + pr-review-gate PASS) + scope question posted on #642 (comment 5475804114). Unblocks Bio PRs #925/#926/#929 on rebase. Receipts: /tmp/pin-narrow-review/, status.d/2026-08-31-humgeo-letter-prefix-pin-narrowing-reseal.md on the branch.",
+        "kind": "milestone",
+        "text": "Gauntlet wave 2 (corrected bars: golden=Lit/Lang, peers=APES/Psych): 3 HumGeo articles rank below all peers as 'thin article shells' (codex blind deck); redistricting conflation confirmed 3rd lane. Depth/repetition = the HumGeo article gap. Receipts out/gauntlet-20260831/ (w2-humgeo-*)",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

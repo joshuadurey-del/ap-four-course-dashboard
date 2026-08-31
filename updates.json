@@ -1,6 +1,14 @@
 [
   {
     "ts": "2026-08-31T08:30Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Gauntlet wave 2 (corrected bars: golden=Lit/Lang, peers=APES/Psych): 3 HumGeo articles rank below all peers as 'thin article shells' (codex blind deck); redistricting conflation confirmed 3rd lane. Depth/repetition = the HumGeo article gap. Receipts out/gauntlet-20260831/ (w2-humgeo-*)",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T08:30Z",
     "course": "apwh",
     "phase": "",
     "kind": "milestone",
