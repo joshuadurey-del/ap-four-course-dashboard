@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T00:58Z",
+    "course": "humgeo",
+    "phase": "4",
+    "kind": "note",
+    "text": "Phase 4 plan drafted: humgeo-timeback-live/PHASE4-PLAN-2026-08-31.md. Seven work items in dependency order: P4-1 Josh private authority (content base), P4-2 seat rebuild at real base, P4-3 filing for the fleet-side Layer-B plan-builder (checked: PR #893 hardens the frozen 68/204 publisher only; #873/#874 are Phases 7/9), P4-4 Josh seal decisions (skew + 71 videos as source work), P4-5 build+seal with pinned digest, P4-6 offline gate, P4-7 scope fence."
+  },
+  {
     "ts": "2026-08-31T00:54Z",
     "course": "psych",
     "phase": "status",
