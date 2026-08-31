@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-30T13:55Z",
+  "snapshot": "2026-08-31T02:09Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -281,8 +281,8 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo Phases 0-3 are closed on current receipts. Phase 3 includes assets, QTI, Phase 3.6 validation, and the Phase 3.7 preview gate. Phase 4 is OPEN with its plan skeleton drafted. It waits for two private fields—the content-base URL or bucket and execute authority—and owner rulings on 71 video cues and answer-position skew. Phase 5 is next and read-only. Phase 6 is the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
-      "scope": "current HumGeo runbook position through the Phase 4 plan skeleton; excludes private field values, Phase 5 live-state capture, platform writes, activation, learner acceptance, and release",
+      "value": "HumGeo Phases 0-3 are closed on current receipts. In Phase 4, P4-1 authority is resolved and P4-2 completed a deterministic real-base build twice. The answer-position correction merged in AP One PR #918. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain before the plan can seal. Phase 5 is next and read-only. Phase 6 is the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
+      "scope": "current HumGeo runbook position through P4-3; excludes private authority values, the missing plan-builder implementation, unresolved video content decisions, Phase 5 live-state capture, platform writes, activation, learner acceptance, and release",
       "evidence": [
         {
           "type": "controller-execution-state",
@@ -338,10 +338,27 @@
           "demo_snapshot_xp_worth_2": 47,
           "demo_tree_xp_fields": 0,
           "resource_level_base_xp": "UNMEASURED_LOCALLY_BINDS_IN_PHASE_4_PLAN"
+        },
+        {
+          "type": "phase-4-authority-and-real-base-build",
+          "observed_at": "2026-08-31T01:11:34Z",
+          "authority_fields": "RESOLVED_PRIVATE_NOT_PUBLISHED",
+          "deterministic_builds": 2
+        },
+        {
+          "type": "answer-position-correction",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/918",
+          "state": "merged",
+          "merge_commit": "c1086cfcf22aa32f8f19cb1dd9855c474b795f73"
+        },
+        {
+          "type": "native-asset-plan-builder-gap",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+          "state": "open"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-31T00:58:45Z"
+      "status_at": "2026-08-31T02:02:25Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -636,8 +653,8 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH is stepping into Phase 0. Pre-runbook repair replaced 45 of 58 broken gate items. E3 wiring is open in AP One PR #916 and Phase 0.2 source capture is open in PR #917; fleet owns both merges and deploy watch, and the seat re-pins if covered bytes move. The owner decision is tier 2: 1,003 more items, roughly 20 times the prior round. Test-builder issue #290 holds 169 article alternates. Phases 1-10 are not started.",
-      "scope": "current APWH Phase 0 entry and its open fleet changes; excludes merge authority, tier-2 authorization, later phases, publication, and learner serving",
+      "value": "APWH Phase 0.2 source capture remains open in PR #917 with E3 wiring in PR #916; fleet owns both merges and deploy watch, and the seat re-pins if covered bytes move. Phase 1 Leg A has five read-only measurements receipted locally: article-check policy, lesson order, inline practice, gate boundaries, and pinned assessment forms. Leg B waits and no Phase 1 closure is claimed. Tier 2 and test-builder issue #290 remain separate waits.",
+      "scope": "current APWH Phase 0.2 entry plus locally receipted Phase 1 Leg A measurements; excludes PR merge authority, Phase 1 closure, tier-2 authorization, later phases, publication, and learner serving",
       "evidence": [
         {
           "type": "current-blueprint-main",
@@ -660,7 +677,13 @@
           "type": "phase-0.2-source-capture",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
           "state": "open",
-          "head": "8bb8da10"
+          "head": "0a0e00a0"
+        },
+        {
+          "type": "phase-1-leg-a-measurements",
+          "observed_at": "2026-08-31T01:22:55Z",
+          "measurement_count": 5,
+          "status": "LOCAL_RECEIPTS_IN_HAND_LEG_B_WAITS"
         },
         {
           "type": "a-168-serving-merge",
@@ -686,23 +709,33 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-31T00:48:04Z"
+      "status_at": "2026-08-31T01:22:55Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "value": "APUSH is entirely pre-runbook and remains in fleet-side content production. Wave-3 articles run behind their own QC; failures regenerate. The measured checkpoint is chunk 1 of 20 at a 50% pass rate. The exact 249-position ledger remains 49 accepted and 200 pending. The publication runbook begins after the wave lands and the acceptance ledger rebuilds; no owner action is due.",
+      "value": "APUSH remains in pre-runbook fleet-side content production. Positions 52 and 53 each reached articles_ready after one durable submission and terminal readback; the fleet resumes serially at position 54. The exact 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds. A Phase 1.3/3.4 baseline record exists, but its population is not assembled. Successor replay remains inconclusive due a strict-QC mismatch and supplies no verdict against the 11 articles.",
       "scope": "current APUSH fleet-side content-production wave and acceptance ledger; excludes runbook phase entry, learner implementation, publication, and release",
       "evidence": [
         {
           "type": "reconciliation-manifest",
           "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json",
           "status": "BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS"
+        },
+        {
+          "type": "fleet-wave-position-53",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
+          "status": "ARTICLES_READY_POSITION_54_NEXT"
+        },
+        {
+          "type": "successor-replay-diagnostic",
+          "observed_at": "2026-08-31T02:07:35Z",
+          "status": "INCONCLUSIVE_NO_ARTICLE_VERDICT"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T00:51:39Z"
+      "observed_at": "2026-08-31T02:03:33Z"
     },
     {
       "claim_id": "psych.blueprint.audit",
@@ -869,9 +902,9 @@
       "claim_id": "humgeo.ls_qc_ready",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "status_at": "2026-08-31T00:58:45Z",
-      "value": "HumGeo's offline review surface is closed through Phase 3.7. Phase 4 is open for the sealed plan and waits on the private content-base and execute-authority fields plus owner rulings on 71 video cues and answer-position skew. This is not publication or learner-acceptance readiness.",
-      "scope": "current HumGeo offline-review closure and Phase 4 inputs; excludes private values, publication, and learner acceptance",
+      "status_at": "2026-08-31T02:02:25Z",
+      "value": "HumGeo's offline review surface is closed through Phase 3.7. Phase 4 authority is resolved and the real-base build is deterministic; the missing native-asset plan builder is filed in issue #919 and 71 video-cue content decisions remain. This is not publication or learner-acceptance readiness.",
+      "scope": "current HumGeo offline-review closure and Phase 4 plan inputs; excludes private values, unresolved plan-builder and video decisions, publication, and learner acceptance",
       "evidence": [
         {
           "type": "controller-execution-state",
@@ -932,6 +965,10 @@
         {
           "type": "residue-queue",
           "location": "INCEPT/out/humgeo-gate5-offline-preview-seal-20260825/RESIDUE-REGENERATION-QUEUE-20260827.json"
+        },
+        {
+          "type": "current-lifecycle-claim",
+          "claim_id": "humgeo.blueprint.audit"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN+OWNER_DIRECTION"
@@ -962,7 +999,7 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: HumGeo Phases 0-3 are closed, but Phase 4 is still open and Phase 5 has not run. Phase 6 is the first platform write and waits for a separate owner go. Phases 7-9 are not started, so broader enrollment and release remain blocked.",
+      "value": "BLOCKED: HumGeo Phases 0-3 are closed and Phase 4 authority plus the real-base rebuild are complete, but the plan cannot seal until the native-asset plan-builder gap and 71 video-cue content decisions are resolved. Phase 5 has not run. Phase 6 remains the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
       "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
@@ -971,7 +1008,7 @@
         }
       ],
       "evidence_access": "DASHBOARD_COMPONENT_CLAIM",
-      "status_at": "2026-08-31T00:58:45Z"
+      "status_at": "2026-08-31T02:02:25Z"
     },
     {
       "claim_id": "apwh.sweep.pack",
@@ -1052,24 +1089,29 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Current work is Phase 0.2 source capture in PR #917 with companion E3 wiring in PR #916; fleet owns both merges and deploy watch. Issue #290 holds 169 article alternates. Nothing here establishes later-phase, publication, or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture remains open in PR #917 with companion E3 wiring in PR #916. Phase 1 Leg A has five read-only measurements receipted locally, but Leg B waits and no Phase 1 closure is claimed. Nothing here establishes publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
           "type": "current-canon-limit",
           "location": "INCEPT/APWH-CANON-REQUIREMENTS.md",
           "rule": "local ceremonies eliminated from proof on 2026-08-27"
+        },
+        {
+          "type": "phase-1-leg-a-measurements",
+          "observed_at": "2026-08-31T01:22:55Z",
+          "status": "LOCAL_RECEIPTS_IN_HAND_LEG_B_WAITS"
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T00:48:04Z"
+      "observed_at": "2026-08-31T01:22:55Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-31T00:48:04Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. APWH is stepping into Phase 0: PR #916 carries E3 wiring and PR #917 carries Phase 0.2 source capture. Fleet owns both merges and deploy watch. The owner decision is tier 2 for 1,003 additional items; issue #290 holds 169 article alternates. Phases 1-10 remain not started.",
+      "status_at": "2026-08-31T01:22:55Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. PR #916 carries E3 wiring and PR #917 carries Phase 0.2 source capture. Five Phase 1 Leg A measurements are receipted locally, but Leg B waits and no Phase 1 closure is claimed. Tier 2 and issue #290 remain separate waits.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1083,6 +1125,11 @@
         {
           "type": "ledger-repin-receipt",
           "location": "INCEPT/out/apwh-overnight-20260827/ledger-repin-receipt.md"
+        },
+        {
+          "type": "phase-1-leg-a-measurements",
+          "observed_at": "2026-08-31T01:22:55Z",
+          "status": "LOCAL_RECEIPTS_IN_HAND_LEG_B_WAITS"
         }
       ],
       "evidence_access": "GITHUB+DASHBOARD_PLAN"
@@ -1131,7 +1178,7 @@
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "APUSH remains pre-runbook in fleet-side content production. Wave-3 articles run behind their own QC and failures regenerate; chunk 1 of 20 measured a 50% pass rate. The exact ledger remains 49 accepted and 200 pending and rebuilds after the wave lands. No owner action is due.",
+      "value": "APUSH remains pre-runbook in fleet-side content production. Positions 52 and 53 reached articles_ready and the fleet resumes serially at 54. The exact ledger remains 49 accepted and 200 pending and rebuilds after the wave lands. No owner action is due.",
       "scope": "APUSH committed admission and build-only migrated-wrapper state; excludes factory posts, platform ingest, learner serving, and later lifecycle closure",
       "evidence": [
         {
@@ -1171,16 +1218,21 @@
           "type": "portable-runner-bindings",
           "url": "https://github.com/ilmych/apush-course-build/pull/15",
           "merge_commit": "0a9938ffee7435907a40fce7ad1b355d7704580a"
+        },
+        {
+          "type": "fleet-wave-position-53",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
+          "status": "ARTICLES_READY_POSITION_54_NEXT"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-30T06:33Z"
+      "observed_at": "2026-08-31T02:03:33Z"
     },
     {
       "claim_id": "apush.seating",
       "section": "APUSH",
       "status": "BLOCKED",
-      "value": "BLOCKED: build-output main 98842f41 includes the 53 migrated wrappers, 139 wave-3 image contracts, merged manifest PR #7, and merged KC repair PR #8. Course-build main 0a9938ff includes portable runner bindings from PR #15. Issue #9 remains open; positions 45 and 46 are preserved terminal factory failures and the fleet owns the next fix cycle. No ingest, wiring, deployment, or learner execution is claimed.",
+      "value": "BLOCKED: build-output main 98842f41 includes the 53 migrated wrappers, 139 wave-3 image contracts, merged manifest PR #7, and merged KC repair PR #8. Course-build main 0a9938ff includes portable runner bindings from PR #15. Issue #9 remains open; positions 45 and 46 remain preserved terminal failures, while positions 52 and 53 reached articles_ready and the fleet resumes at 54. No ingest, wiring, deployment, or learner execution is claimed.",
       "scope": "APUSH 74-binding migration state; excludes factory posts, platform ingest, learner wiring, and later lifecycle closure",
       "evidence": [
         {
@@ -1191,17 +1243,22 @@
         {
           "type": "canonical-ledger",
           "url": "https://github.com/ilmych/apush-build-outputs/pull/4"
+        },
+        {
+          "type": "fleet-wave-position-53",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
+          "status": "ARTICLES_READY_POSITION_54_NEXT"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "status_at": "2026-08-30T06:33Z"
+      "status_at": "2026-08-31T02:03:33Z"
     },
     {
       "claim_id": "apush.ls_qc_ready",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "status_at": "2026-08-31T00:51:39Z",
-      "value": "APUSH is in pre-runbook content production, not an LS handoff. The fleet is running the wave through its own QC and regenerating failures; the runbook begins after the wave lands and the acceptance ledger rebuilds. No learner execution or later lifecycle closure is claimed.",
+      "status_at": "2026-08-31T02:03:33Z",
+      "value": "APUSH is in pre-runbook content production, not an LS handoff. Fleet positions 52 and 53 reached articles_ready and position 54 is next; the runbook begins only after the wave lands and the acceptance ledger rebuilds. No learner execution or later lifecycle closure is claimed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -1215,6 +1272,11 @@
         {
           "type": "morning-report",
           "location": "INCEPT/out/apush-overnight-20260827/MORNING-REPORT.md"
+        },
+        {
+          "type": "fleet-wave-position-53",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907",
+          "status": "ARTICLES_READY_POSITION_54_NEXT"
         }
       ],
       "evidence_access": "GITHUB+OWNER_DIRECTION+DASHBOARD_PLAN"

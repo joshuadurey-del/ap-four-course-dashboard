@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 11:07 KST',
+  snapshot: 'Aug 31, 2026 · 11:16 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -17,7 +17,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     { id: 5, name: 'Map course tree', canonCode: 'P1', railName: 'Course tree', canonName: 'Phase 1 · Map the complete course tree', state: 'closed', status: 'Closed', detail: 'The complete hierarchy, order, gates, invariants, assessments, and assigned-reading delivery are receipted.' },
     { id: 6, name: 'Price activities', canonCode: 'P2', railName: 'Activity pricing', canonName: 'Phase 2 · Price activities', state: 'closed', status: 'Done · stored XP measured', detail: 'The receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP. It also measures 403 demo-snapshot items and zero XP fields in the demo tree. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.' },
     { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'closed', status: 'Closed · validation + preview passed', detail: 'Assets, QTI, Phase 3.6 validation, and the Phase 3.7 student-preview gate are closed on receipts.' },
-    { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'active', status: 'Phase 4 open · Phase 5 next', detail: 'Phase 4 waits for the private content-base URL or bucket, execute authority, and owner rulings on 71 video cues and answer-position skew. Phase 5 is the next read-only capture.' },
+    { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'active', status: 'Phase 4 open · Phase 5 next', detail: 'Phase 4 authority is resolved and the real-base build is deterministic. The native-asset plan-builder gap is open in issue #919; 71 video-cue content decisions remain. Phase 5 is the next read-only capture.' },
     { id: 9, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 10, name: 'Canary enroll', canonCode: 'P7', railName: 'Canary enrollments', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
     { id: 11, name: 'Activate', canonCode: 'P8', railName: 'Private activation', canonName: 'Phase 8 · Separate private activation', state: 'locked', status: 'Locked', detail: 'Activate privately under its own authority, restore-proof checkpoint, exact readback, and zero-write replay.' },
@@ -27,46 +27,47 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'Phase 4 · OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:58Z',
-      landed: 'Phases 0-3 — receipts in hand · Assets and QTI — closed · Phase 3.6 validation — closed · Phase 3.7 preview gate — closed',
-      nextStep: 'Owner: fill the private content-base URL or bucket and execute authority, then rule on 71 video cues and answer-position skew. Seal the Phase 4 plan; Phase 5 read-only capture is next.',
+      status: 'Phase 4 · OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:02Z',
+      landed: 'Phases 0-3 — receipts in hand · Phase 4 authority — resolved · Real-base build — deterministic twice · Position correction — PR #918 merged',
+      nextStep: 'Fleet closes the native-asset plan-builder gap in issue #919; resolve the 71 video-cue content decisions, then seal Phase 4. Phase 5 read-only capture is next.',
       footprint: [
         { value: '440/440', label: 'operator-receipt article-check position' },
         { value: '528', label: 'locally validated XHTML + QTI assets' },
         { value: '1,042', label: 'Phase 3.3 video pages + checks built' }
       ],
       etaDays: 'PHASE 4 OPEN',
-      etaNote: 'Phases 0-3 are closed. Phase 4 is waiting on the two private fields and two owner rulings; Phase 6 remains the first platform write and requires a separate go.',
+      etaNote: 'Phases 0-3 are closed. Phase 4 authority and the real-base rebuild are complete; plan-builder machinery and 71 video-cue content decisions remain. Phase 6 remains the first platform write and requires a separate go.',
       phaseStates: [
-        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'OPEN', detail: 'The plan skeleton is drafted. It waits for the private content base, execute authority, and owner rulings on 71 video cues and answer-position skew.' }
+        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'OPEN', detail: 'P4-1 authority is resolved and P4-2 is done. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder. Seventy-one video-cue content decisions remain.' }
       ]
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
-      status: 'Phase 0.2 · PR OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:48Z',
-      landed: 'Pre-runbook repair — 45/58 broken gate items replaced · E3 wiring — PR #916 open · Phase 0.2 source capture — PR #917 open',
-      nextStep: 'Fleet merges and deploys PRs #916 and #917; owner decides whether to authorize tier 2 for 1,003 more items. Test-builder issue #290 holds 169 article alternates.',
+      status: 'Phase 0.2 OPEN · P1 LEG A MEASURED', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 01:22Z',
+      landed: 'Pre-runbook repair — 45/58 replaced · Phase 0.2 — PR #917 open · Phase 1 Leg A — five read-only measurements receipted',
+      nextStep: 'Fleet merges and deploys PRs #916 and #917; re-pin if covered bytes move, then complete Phase 1 Leg B. Tier 2 and issue #290 remain separate waits.',
       footprint: [
         { value: '45/58', label: 'tier-1 replacements merged in PR #65' },
-        { value: '1,003', label: 'tier-2 items awaiting owner decision' },
+        { value: '5', label: 'Phase 1 Leg A measurements receipted' },
         { value: '169', label: 'article alternates held by issue #290' }
       ],
       phaseStates: [
-        { code: 'P0.2', name: 'Capture source authority', state: 'active', status: 'PR OPEN', detail: 'PR #917 carries the source capture; PR #916 carries E3 wiring. Fleet owns merge and deploy watch.' }
+        { code: 'P0.2', name: 'Capture source authority', state: 'active', status: 'PR OPEN', detail: 'PR #917 carries the source capture; PR #916 carries E3 wiring. Fleet owns merge and deploy watch.' },
+        { code: 'P1', name: 'Map the complete course tree', state: 'evidence', status: 'LEG A MEASURED', detail: 'Five read-only measurements are receipted locally. This is in-flight work, not Phase 1 closure while Phase 0.2 remains open.' }
       ]
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)',
-      status: 'Pre-runbook · CONTENT PRODUCTION', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:51Z',
-      landed: 'Wave-3 article production — fleet-side · Chunk 1 of 20 passed at 50% · 249-position ledger — 49 accepted / 200 pending',
-      nextStep: 'Fleet completes the wave, regenerates failures, and rebuilds the acceptance ledger. The publication runbook starts only after that; no owner action is due.',
+      status: 'Pre-runbook · CONTENT PRODUCTION', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:03Z',
+      landed: 'Wave-3 article production — fleet-side · Positions 52 and 53 — articles_ready · Successor replay — inconclusive, no verdict against 11 · Ledger — 49 accepted / 200 pending',
+      nextStep: 'Fleet resumes serially at position 54 and resolves the successor replay mismatch, then rebuilds the acceptance ledger after the wave. The publication runbook has not started.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
-        { value: '1/20', label: 'wave-3 chunks through the first measured checkpoint' },
-        { value: '50%', label: 'chunk-1 pass rate' }
+        { value: '53', label: 'latest serial wave position terminal' },
+        { value: '54', label: 'next fleet-side position' }
       ],
       phaseStates: [
-        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Wave-3 articles run through fleet QC; failed items regenerate. The runbook begins after the wave lands and the ledger rebuilds.' }
+        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Positions 52 and 53 reached articles_ready. Fleet resumes serially at 54; successor replay remains inconclusive with no verdict against the 11 articles. The runbook begins only after the wave lands and the ledger rebuilds.' }
       ]
     },
     {
@@ -87,7 +88,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Phases 0-3 are closed on receipts. Phase 4 is open for the sealed publication plan; Phase 5 is the next read-only capture. Phase 6 remains the first platform write and waits for a separate owner go.',
+      note: 'Phases 0-3 are closed on receipts. Phase 4 authority is resolved and the real-base build is deterministic; issue #919 holds the missing native-asset plan builder. Phase 5 is the next read-only capture. Phase 6 remains the first platform write and waits for a separate owner go.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
@@ -97,26 +98,27 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
         { gate: 5, state: 'closed', status: 'Closed', signal: 'Phase 1 course tree receipted', copy: 'The Phase 1 mapping receipt is in hand; this row no longer reports the older open-census snapshot.', href: 'humgeo.html' },
         { gate: 6, state: 'closed', status: 'Done', signal: '3,633 served practice-key items measured', copy: 'The receipt measures 3,167 at 1 XP and 466 at 2 XP, plus a 403-item demo snapshot at 356/47. The demo tree has zero XP fields. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.', href: 'claims.html#claim-humgeo.blueprint.audit' },
         { gate: 7, state: 'closed', status: 'Closed', signal: 'Assets + QTI + 3.6 validation + 3.7 preview closed', copy: 'Phase 3 is closed on its receipts. The 71 video-cue calls now belong to the Phase 4 owner decision, not unfinished Phase 3 credit.', href: 'https://github.com/InceptTrilogy/ap-one/pull/913' },
-        { gate: 8, state: 'active', status: 'Phase 4 open', signal: 'Plan skeleton drafted · four owner inputs remain', copy: 'Fill the private content-base URL or bucket and execute authority, then rule on the 71 video cues and answer-position skew before sealing the plan.', href: 'humgeo.html' }
+        { gate: 8, state: 'active', status: 'Phase 4 open', signal: 'Authority resolved · real-base build done · plan builder missing', copy: 'P4-1 and P4-2 are complete. The answer-position correction merged in PR #918; issue #919 records the missing native-asset plan builder. Seventy-one video-cue content decisions remain before sealing.', href: 'https://github.com/InceptTrilogy/ap-one/issues/919' }
       ]
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'APWH is stepping into Phase 0. Pre-runbook repair replaced 45 of 58 broken gate items. E3 wiring is open in PR #916 and Phase 0.2 source capture is open in PR #917; fleet owns both merges and deploy watch.',
+      note: 'APWH Phase 0.2 remains open in PR #917 with E3 wiring in PR #916. Phase 1 Leg A has five read-only measurements receipted locally; that is in-flight evidence, not Phase 1 closure while the Phase 0.2 PR remains open.',
       rows: [
         { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile, consumer, authoring wave, and hash refresh landed', copy: 'PR #889 landed the reviewed, validator-consumed profile and consumer; PR #891 then landed the authoring wave and profile-hash refresh. This prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/891' },
         { gate: 3, code: 'PRE-0', name: 'Pre-runbook repair', label: 'Repair', state: 'evidence', status: 'Landed', signal: '45/58 broken gate items replaced', copy: 'The tier-1 round is landed. This is repair evidence, not later-phase credit.', href: 'https://github.com/ilmych/apwh-blueprint-build/pull/65' },
-        { gate: 4, code: 'P0.2', name: 'Phase 0.2 — Capture source authority', label: 'Source capture', state: 'active', status: 'PR open', signal: 'PR #917 source capture · PR #916 E3 wiring', copy: 'Fleet owns both merges and deploy watch. Owner tier-2 authority for 1,003 items remains undecided; issue #290 holds 169 article alternates.', href: 'https://github.com/InceptTrilogy/ap-one/pull/917' }
+        { gate: 4, code: 'P0.2', name: 'Phase 0.2 — Capture source authority', label: 'Source capture', state: 'active', status: 'PR open', signal: 'PR #917 source capture · PR #916 E3 wiring', copy: 'Fleet owns both merges and deploy watch. Owner tier-2 authority for 1,003 items remains undecided; issue #290 holds 169 article alternates.', href: 'https://github.com/InceptTrilogy/ap-one/pull/917' },
+        { gate: 5, code: 'P1', name: 'Phase 1 — Map the complete course tree', label: 'Course mapping', state: 'evidence', status: 'Leg A measured', signal: 'Five read-only measurements receipted', copy: 'Article-check policy, lesson order, inline practice, gate boundaries, and pinned assessment forms are measured. Leg B waits; no Phase 1 closure is claimed.', href: 'apwh.html' }
       ]
     },
     apush: {
       title: 'Existing work mapped to the runbook lifecycle',
-      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Wave-3 articles pass their own QC or regenerate; the runbook begins after the wave lands and the acceptance ledger rebuilds.',
+      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Positions 52 and 53 reached articles_ready; fleet resumes serially at 54. Successor replay is inconclusive and supplies no verdict against the 11 articles. The runbook begins after the wave lands and the acceptance ledger rebuilds.',
       rows: [
         { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '249-position blueprint · 4 recorded deviations', copy: 'The design reconciliation belongs with scope lock, but it is preparation rather than a current implementation crosswalk.', href: 'claims.html' },
         { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,480 candidates · 249 ledger positions', copy: 'The candidate queue is complete, but candidate-budget completeness is not factory-QC or learner-readiness proof.', href: 'claims.html' },
         { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '49 accepted · 200 pending', copy: 'The exact current ledger separates accepted from pending positions without inflating the usable corpus.', href: 'claims.html' },
-        { gate: 3, code: 'PRE', name: 'Fleet content production', label: 'Wave 3', state: 'active', status: 'In progress', signal: 'Chunk 1 of 20 measured at 50%', copy: 'Wave-3 articles run fleet-side behind their own QC; failures regenerate. The 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds.', href: 'https://github.com/ilmych/apush-course-build/issues/9' }
+        { gate: 3, code: 'PRE', name: 'Fleet content production', label: 'Wave 3', state: 'active', status: 'In progress', signal: 'Positions 52 and 53 articles_ready · position 54 next', copy: 'The serial factory wave is moving again. The 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds.', href: 'https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472793907' }
       ]
     },
     psych: {
