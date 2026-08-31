@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T08:29Z",
+  "snapshot": "2026-08-31T08:30Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,10 +740,10 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-08-31T08:14Z",
+        "ts": "2026-08-31T08:30Z",
         "phase": "",
         "kind": "milestone",
-        "text": "tier-2 BANKED locally: 924 items appended to generated_items.jsonl, 910 retirements in panel_exclusions.json (12 topic-7.5 withdrawn after assembler measured candidate-depth limit), rebuild+verify ALL 12 CHECKS PASS (1,975 members, full rationale coverage); two twin-assembly defects fixed in build_rationale_bank.py (missing load_panel_exclusions; singular vs plural distractor_rationales field) \u2014 same-PR code changes, tier-1 PR-train precedent; branch apwh-seat/tier2-banking-20260831",
+        "text": "Gauntlet wave 2: 3 APWH articles all serve-ready YES, middle tier above APES sample, below Lit/Psych (grok blind deck); gap = no on-page practice (partly format split, F16) + Phase-3 footer strip. Receipts out/gauntlet-20260831/ (w2-apwh-*)",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
