@@ -1,5 +1,10 @@
 [
   {
+    "ts": "2026-08-31T01:08Z",
+    "course": "cross",
+    "text": "Current-state reconciliation: HumGeo Phases 0-3 closed and Phase 4 open; APWH entering Phase 0.2 through PRs #916/#917; APUSH in pre-runbook fleet content production; Psychology content built with factory QC admission blocked. Overview, course pages, claims, retro, and agent data now share these positions."
+  },
+  {
     "ts": "2026-08-31T01:07Z",
     "course": "humgeo",
     "phase": "residue",

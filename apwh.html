@@ -11,7 +11,7 @@
 <a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP World History</h1>
-  <p class="sub">APWH sits <strong>BEFORE PHASE 0</strong>. Its current runbook lifecycle state is <strong>accepted source — IN PROGRESS</strong>. The required pre-Phase-0 course profile is done; Phase 0 is not entered, and Phases 1-10 are not started.</p>
+  <p class="sub"><strong>APWH is stepping into Phase 0.</strong> Phase 0.2 source capture is open in <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">PR #917</a>; E3 wiring is open in <a href="https://github.com/InceptTrilogy/ap-one/pull/916" target="_blank" rel="noopener">PR #916</a>. Fleet owns both merges and deploy watch.</p>
 
   <aside class="course-activity" aria-labelledby="activity-title-apwh">
     <h2 id="activity-title-apwh">Repository activity</h2>
@@ -26,29 +26,29 @@
   <section class="reading-guide">
     <h2>Current runbook position</h2>
     <dl>
-      <div><dt>Pre-Phase-0 requirement — course profile</dt><dd><strong>DONE.</strong> The profile and validator consumer landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/889" target="_blank" rel="noopener">AP One PR #889</a> at <code>8d4ab63a</code>. The authoring and profile-hash refresh also landed through <a href="https://github.com/InceptTrilogy/ap-one/pull/891" target="_blank" rel="noopener">PR #891</a>.</dd></div>
-      <div><dt>Lifecycle state 1 — accepted source</dt><dd><strong>IN PROGRESS.</strong> The 235-row blueprint-conformance ledger is not yet settled.</dd></div>
-      <div><dt>Phase 0 — Establish authority</dt><dd><strong>NOT ENTERED.</strong> The capture tool is authored, but Phase 0 waits for accepted source to settle.</dd></div>
+      <div><dt>Pre-runbook repair</dt><dd><strong>LANDED.</strong> Forty-five of 58 broken gate items were replaced.</dd></div>
+      <div><dt>Phase 0.2 — source capture</dt><dd><strong>PR OPEN.</strong> PR #917 carries the reviewed source capture; PR #916 carries the companion E3 wiring.</dd></div>
       <div><dt>Phases 1-10</dt><dd><strong>NOT STARTED.</strong> Nothing after Phase 0 begins until the Phase 0 authority capture exists.</dd></div>
     </dl>
   </section>
 
   <section>
-    <h2>Accepted source — in progress</h2>
+    <h2>Phase 0 entry — in progress</h2>
     <ul>
       <li>Blueprint main is <a href="https://github.com/ilmych/apwh-blueprint-build/commit/ea721a32c1ff614b6f9caf76bed1b0575e861334" target="_blank" rel="noopener"><code>ea721a32</code></a>. PR #64 supplies the safe wired-advisory E3 contract and closes issue #63.</li>
       <li><a href="https://github.com/InceptTrilogy/ap-one/pull/905" target="_blank" rel="noopener">AP One PR #905</a> is merged at <code>e61ffc3b</code>, landing the A-168 mechanism envelopes in the served rationale bank.</li>
       <li><a href="https://github.com/ilmych/apwh-blueprint-build/pull/65" target="_blank" rel="noopener">Tier-1 PR #65</a> is merged at <code>ea721a32</code>, banking 45 of 58 replacements. Its oracle reports 96 PASS, 33 MISSING, and 3 pre-existing FAIL rows; A-168 is PASS at 1,217 tagged items.</li>
-      <li>Paired <a href="https://github.com/InceptTrilogy/ap-one/pull/912" target="_blank" rel="noopener">AP One PR #912</a> is open at <code>7b7cd2b3</code> with the 45 replacements and rationale delta. Fourteen residue items and <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">A-187 issue #290</a> remain; accepted source stays open until the serving change lands and the owning verifier seals it.</li>
+      <li><a href="https://github.com/InceptTrilogy/ap-one/pull/916" target="_blank" rel="noopener">PR #916</a> carries the E3 wiring and <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">PR #917</a> carries Phase 0.2 source capture. Fleet owns both merges and deploy watch; the seat re-pins if covered bytes move.</li>
+      <li>The owner decision is tier 2: authorize 1,003 more items, roughly 20 times the prior round. <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">Test-builder issue #290</a> separately holds 169 article alternates.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Phase 0 — not entered; tool ready</h2>
+    <h2>Phase 0.2 — source capture in PR</h2>
     <ul>
-      <li>Runbook item 0.2 requires a read-only capture of source authority at an immutable version. The capture module is authored and remains unstaged on the corridor branch.</li>
-      <li>It deliberately waits for accepted source to settle: capturing a moving source would pin moving bytes.</li>
-      <li>When AS-01 settles, bind the environment under 0.1, run the source-authority capture under 0.2, and freeze the versioned namespace under 0.3.</li>
+      <li>PR #917 freezes the Phase 0.2 source surface and supporting evidence at its reviewed bytes.</li>
+      <li>If fleet merge changes any covered byte, the seat re-pins before advancing.</li>
+      <li>Phase 0 must close before Phase 1 begins.</li>
     </ul>
   </section>
 
@@ -60,13 +60,13 @@
   <section class="reading-guide">
     <h2>Next steps — runbook order</h2>
     <dl>
-      <div><dt>1. Settle accepted source</dt><dd>Land paired AP One PR #912, resolve the 14-item residue and A-187 issue #290, then close the remaining accepted-source rows.</dd></div>
-      <div><dt>2. Enter Phase 0</dt><dd>The moment AS-01 settles, re-pin and run the Phase 0 capture, then freeze the namespace.</dd></div>
-      <div><dt>3. Enter Phase 1</dt><dd>Start complete course-tree mapping only after Phase 0 exists.</dd></div>
+      <div><dt>1. Fleet landing</dt><dd>Merge and deploy PRs #916 and #917; re-pin if any covered byte changes.</dd></div>
+      <div><dt>2. Owner decision</dt><dd>Rule on tier 2: 1,003 additional items. Issue #290 remains the fleet-side wait for 169 article alternates.</dd></div>
+      <div><dt>3. Continue in order</dt><dd>Close Phase 0, then begin Phase 1. Phases 1-10 remain not started.</dd></div>
     </dl>
   </section>
 
-  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/ilmych/apwh-blueprint-build/commit/ea721a32c1ff614b6f9caf76bed1b0575e861334" target="_blank" rel="noopener">blueprint main <code>ea721a32</code></a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/905" target="_blank" rel="noopener">merged A-168 served-bank PR #905</a> · <a href="https://github.com/ilmych/apwh-blueprint-build/pull/65" target="_blank" rel="noopener">merged tier-1 PR #65</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/912" target="_blank" rel="noopener">open paired serving PR #912</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">open A-187 issue #290</a>.</p></section>
+  <section><h2>Primary evidence</h2><p>Pinned AP One Native TimeBack Publication Runbook <code>32d079c2…</code> · <a href="https://github.com/ilmych/apwh-blueprint-build/pull/65" target="_blank" rel="noopener">merged tier-1 repair PR #65</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/916" target="_blank" rel="noopener">open E3 PR #916</a> · <a href="https://github.com/InceptTrilogy/ap-one/pull/917" target="_blank" rel="noopener">open Phase 0.2 PR #917</a> · <a href="https://github.com/InceptTrilogy/incept-test-builder/issues/290" target="_blank" rel="noopener">open A-187 issue #290</a>.</p></section>
 
   <details class="eta-details">
     <summary>Historical course record — superseded snapshots through Aug 28 · 18:14 KST</summary>

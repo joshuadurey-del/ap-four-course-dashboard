@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 10:07 KST',
+  snapshot: 'Aug 31, 2026 · 10:10 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -14,10 +14,10 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     { id: 2, name: 'Inventory', canonCode: 'AS', railName: 'Source prep · inventory', canonName: 'Accepted-source preparation · INVENTORY_LOCKED', state: 'closed', status: 'Closed · amendment locked', detail: 'Owner-merged PR #66 seals the omitted rehearsal lane: 655 checked, 70 stale-unusable, zero unknown or unmeasured, and byte-stable canonical verification.' },
     { id: 3, name: 'Accept source', canonCode: 'AS', railName: 'Accepted source', canonName: 'Accepted source · SOURCE_ACCEPTED', state: 'closed', status: 'Closed · SOURCE_ACCEPTED', detail: 'Merged PR #67 and canonical post-merge verification bind all 70 replacement placements with exact coverage, the pinned delivery digest, and zero residue.' },
     { id: 4, name: 'Profile + authority', canonCode: 'P0', railName: 'Profile + source bound', canonName: 'Course profile + Phase 0 · PROFILE_AND_SOURCE_BOUND', state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', detail: 'Owner-merged AP One main, canonical artifact reconstruction, exact oracle coverage, zero-write dry run, exact Deploy, and staging readback are bound.' },
-    { id: 5, name: 'Map course tree', canonCode: 'P1', railName: 'Course tree', canonName: 'Phase 1 · Map the complete course tree', state: 'active', status: 'In progress', detail: 'Map the complete hierarchy, order, gates, invariants, assessments, and assigned-reading delivery.' },
+    { id: 5, name: 'Map course tree', canonCode: 'P1', railName: 'Course tree', canonName: 'Phase 1 · Map the complete course tree', state: 'closed', status: 'Closed', detail: 'The complete hierarchy, order, gates, invariants, assessments, and assigned-reading delivery are receipted.' },
     { id: 6, name: 'Price activities', canonCode: 'P2', railName: 'Activity pricing', canonName: 'Phase 2 · Price activities', state: 'closed', status: 'Done · stored XP measured', detail: 'The receipt measures 3,633 served practice-key items: 3,167 at 1 XP and 466 at 2 XP. It also measures 403 demo-snapshot items and zero XP fields in the demo tree. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.' },
-    { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'active', status: 'In progress · article/QTI + video assets landed', detail: 'The article/QTI generator is merged and 528 files pass local validation. PR #911 merged 1,042 Phase 3.3 video pages and checks; 71 videos remain in content triage. No platform upload is claimed.' },
-    { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'locked', status: 'Locked', detail: 'Build the deterministic publication plan and bind an exact all-absent live checkpoint.' },
+    { id: 7, name: 'Generate assets', canonCode: 'P3', railName: 'Assets + QTI', canonName: 'Phase 3 · Generate hosted assets and QTI', state: 'closed', status: 'Closed · validation + preview passed', detail: 'Assets, QTI, Phase 3.6 validation, and the Phase 3.7 student-preview gate are closed on receipts.' },
+    { id: 8, name: 'Seal plan', canonCode: 'P4-5', railName: 'Sealed plan', canonName: 'Phases 4-5 · Sealed all-absent plan', state: 'active', status: 'Phase 4 open · Phase 5 next', detail: 'Phase 4 waits for the private content-base URL or bucket, execute authority, and owner rulings on 71 video cues and answer-position skew. Phase 5 is the next read-only capture.' },
     { id: 9, name: 'Dark publish', canonCode: 'P6', railName: 'Publish + replay', canonName: 'Phase 6 · Dark publication and exact zero-write replay', state: 'locked', status: 'Locked', detail: 'Publish in testing under the global writer lock, exact-read each write, and replay the completed plan with zero writes.' },
     { id: 10, name: 'Canary enroll', canonCode: 'P7', railName: 'Canary enrollments', canonName: 'Phase 7 · Owner-controlled canary enrollments', state: 'locked', status: 'Locked', detail: 'Enroll only owner-controlled canaries under a separate plan and authority, then exact-read and replay with zero writes.' },
     { id: 11, name: 'Activate', canonCode: 'P8', railName: 'Private activation', canonName: 'Phase 8 · Separate private activation', state: 'locked', status: 'Locked', detail: 'Activate privately under its own authority, restore-proof checkpoint, exact readback, and zero-write replay.' },
@@ -27,112 +27,103 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'P1 course map + P3 assets · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:17Z',
-      landed: 'Phase 2 — 3,633 served practice-key XP values measured · Five enriched lessons — landed · Article checks — 440/440 operator receipts · Phase 3.1-3.2 generator — merged in PR #906 · 528 article/QTI files locally validated · Phase 3.3 video assets — merged in PR #911 at d2cb182f',
-      nextStep: 'Finish the 71-video content-triage residue, then resolve the formal census contract and complete governed-surface QTI and student-preview verification. No platform upload is claimed.',
+      status: 'Phase 4 · OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:58Z',
+      landed: 'Phases 0-3 — receipts in hand · Assets and QTI — closed · Phase 3.6 validation — closed · Phase 3.7 preview gate — closed',
+      nextStep: 'Owner: fill the private content-base URL or bucket and execute authority, then rule on 71 video cues and answer-position skew. Seal the Phase 4 plan; Phase 5 read-only capture is next.',
       footprint: [
         { value: '440/440', label: 'operator-receipt article-check position' },
         { value: '528', label: 'locally validated XHTML + QTI assets' },
         { value: '1,042', label: 'Phase 3.3 video pages + checks built' }
       ],
-      etaDays: 'VALIDATION NEXT',
-      etaNote: 'PR #906 and video-assets PR #911 are merged. Seventy-one videos remain in content triage; no platform upload or learner verification is claimed.',
+      etaDays: 'PHASE 4 OPEN',
+      etaNote: 'Phases 0-3 are closed. Phase 4 is waiting on the two private fields and two owner rulings; Phase 6 remains the first platform write and requires a separate go.',
       phaseStates: [
-        { code: 'P1', name: 'Map the complete course tree', state: 'active', status: 'IN PROGRESS', detail: 'Five enriched lessons and 440/440 operator-receipt checks are landed; the formal census and bank-wide tree validation remain.' },
-        { code: 'P2', name: 'Price activities', state: 'closed', status: 'DONE', detail: '3,633 served practice-key items measured: 3,167 at 1 XP and 466 at 2 XP. The demo snapshot has 403 items; the demo tree has zero XP fields. Resource-level base XP remains UNMEASURED locally and binds in the Phase 4 plan.' },
-        { code: 'P3', name: 'Generate hosted assets and QTI', state: 'active', status: 'IN PROGRESS', detail: 'PR #906 merged the article/QTI generator and PR #911 merged 1,042 Phase 3.3 video pages and checks. The 528 article/QTI files pass local validation; 71 videos, platform upload, and governed-surface preview remain.' }
+        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'OPEN', detail: 'The plan skeleton is drafted. It waits for the private content base, execute authority, and owner rulings on 71 video cues and answer-position skew.' }
       ]
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:08Z',
-      landed: 'Course profile — done · A-168 PR #905 — merged · E3 issue #63 — closed by PR #64 · Tier-1 fix PR #65 — merged with 45/58 replacements · Current oracle — 96 PASS / 33 MISSING / 3 pre-existing FAIL',
-      nextStep: 'Land paired AP One PR #912, resolve the 14-item residue and A-187 issue #290, then settle accepted source and run Phase 0.1-0.3.',
+      status: 'Phase 0.2 · PR OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:48Z',
+      landed: 'Pre-runbook repair — 45/58 broken gate items replaced · E3 wiring — PR #916 open · Phase 0.2 source capture — PR #917 open',
+      nextStep: 'Fleet merges and deploys PRs #916 and #917; owner decides whether to authorize tier 2 for 1,003 more items. Test-builder issue #290 holds 169 article alternates.',
       footprint: [
         { value: '45/58', label: 'tier-1 replacements merged in PR #65' },
-        { value: '96', label: 'current branch oracle PASS rows' },
-        { value: '33', label: 'current branch oracle MISSING rows' }
+        { value: '1,003', label: 'tier-2 items awaiting owner decision' },
+        { value: '169', label: 'article alternates held by issue #290' }
       ],
       phaseStates: [
-        { code: 'P1', name: 'Map the complete course tree', state: 'locked', status: 'NOT STARTED', detail: 'Accepted source remains open and Phase 0 has not been entered.' },
-        { code: 'P2', name: 'Price activities', state: 'locked', status: 'NOT STARTED', detail: 'Accepted source remains open and Phase 0 has not been entered.' },
-        { code: 'P3', name: 'Generate hosted assets and QTI', state: 'locked', status: 'NOT STARTED', detail: 'Existing accepted-source evidence earns no Phase 3 credit.' }
+        { code: 'P0.2', name: 'Capture source authority', state: 'active', status: 'PR OPEN', detail: 'PR #917 carries the source capture; PR #916 carries E3 wiring. Fleet owns merge and deploy watch.' }
       ]
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 06:33Z',
-      landed: '249-position ledger — 49 accepted / 200 pending · 53 migrated wrappers + 139 image contracts landed · Manifest PR #7 and KC repair PR #8 — merged · Runner-binding PR #15 — merged · Issue #6 — closed',
-      nextStep: 'Continue the fleet-owned issue #9 fix cycle after the recorded terminal failures at positions 45 and 46, then rerun the owning acceptance verifier. No competing writer remains.',
+      status: 'Pre-runbook · CONTENT PRODUCTION', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:51Z',
+      landed: 'Wave-3 article production — fleet-side · Chunk 1 of 20 passed at 50% · 249-position ledger — 49 accepted / 200 pending',
+      nextStep: 'Fleet completes the wave, regenerates failures, and rebuilds the acceptance ledger. The publication runbook starts only after that; no owner action is due.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
-        { value: '139', label: 'wave-3 image contracts landed' },
-        { value: '2', label: 'recorded terminal failures: positions 45 and 46' }
+        { value: '1/20', label: 'wave-3 chunks through the first measured checkpoint' },
+        { value: '50%', label: 'chunk-1 pass rate' }
       ],
       phaseStates: [
-        { code: 'P1', name: 'Map the complete course tree', state: 'locked', status: 'NOT STARTED', detail: 'Accepted source remains open and Phase 0 has not been entered.' },
-        { code: 'P2', name: 'Price activities', state: 'locked', status: 'NOT STARTED', detail: 'Accepted source remains open and Phase 0 has not been entered.' },
-        { code: 'P3', name: 'Generate hosted assets and QTI', state: 'locked', status: 'NOT STARTED', detail: 'Wrapper and image-contract evidence earns no Phase 3 credit.' }
+        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Wave-3 articles run through fleet QC; failed items regenerate. The runbook begins after the wave lands and the ledger rebuilds.' }
       ]
     },
     {
       id: 'psych', label: 'AP Psychology', short: 'Psych', color: 'oklch(48% 0.16 305)',
-      status: 'Accepted source · IN PROGRESS', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 30 · 14:10Z',
-      landed: 'Content generation — PROVEN · Current main — 037cc168 · Runbook-prep tree draft — 253 canonical articles, 236 illustrated · Unit 0 video release — 12 SME-accepted clips for 11/22 prerequisite records · staged bank — 1,912 MCQs + 37 FRQs',
-      nextStep: 'Resolve the Faultless Bar evaluator and unpublished-course contract, obtain factory-side EBQ readback and grader certification, then rerun course QC. No local course step is currently executable.',
+      status: 'Pre-Phase 0 · QC BLOCKED', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 00:54Z',
+      landed: 'Articles — built · Questions — 1,912 · Essays — 37 · Phase 0 profile and tree-map drafts — ready',
+      nextStep: 'Factory clears judge receipts, grader certification in PR #20, and essay-type deploy readback in issue #248. Phase 0 can then start quickly; no owner action is due.',
       footprint: [
-        { value: '253', label: 'canonical articles measured in tree draft' },
-        { value: '236', label: 'illustrated articles measured in tree draft' },
-        { value: '12', label: 'SME-accepted Unit 0 video clips released' },
-        { value: '910/1,709', label: 'retrieved staged items confirmed live by ID' },
-        { value: '799', label: 'items UNMEASURED behind unpublished filter' }
+        { value: '1,912', label: 'questions built' },
+        { value: '37', label: 'essays built' },
+        { value: '0', label: 'items with factory-judge admission receipts' }
       ],
       phaseStates: [
-        { code: 'P1', name: 'Map the complete course tree', state: 'locked', status: 'NOT STARTED', detail: 'Accepted source remains open and Phase 0 has not been entered.' },
-        { code: 'P2', name: 'Price activities', state: 'locked', status: 'NOT STARTED', detail: 'Accepted source remains open and Phase 0 has not been entered.' },
-        { code: 'P3', name: 'Generate hosted assets and QTI', state: 'locked', status: 'NOT STARTED', detail: 'Staged content evidence earns no Phase 3 credit.' }
+        { code: 'PRE-0', name: 'Factory QC admission', state: 'active', status: 'BLOCKED', detail: 'Built content cannot enter a bank until factory judge receipts, grader certification, and essay-type deploy readback exist.' }
       ]
     }
   ],
   evidenceMaps: {
     humgeo: {
       title: 'Work footprint mapped to the runbook lifecycle',
-      note: 'Current work is in Phase 1 and Phase 3; Phase 2 is DONE on its measured scope. PR #906 and video-assets PR #911 are merged; 71 videos remain in content triage. The formal census, platform upload, and governed-surface checks remain.',
+      note: 'Phases 0-3 are closed on receipts. Phase 4 is open for the sealed publication plan; Phase 5 is the next read-only capture. Phase 6 remains the first platform write and waits for a separate owner go.',
       rows: [
         { gate: 0, state: 'closed', status: 'Closed', signal: '6 pilot slots · 1 pass landed · 5 measured failures preserved', copy: 'The issue-44 writer was stopped and the residual retry was rescoped, closing the stabilization gate without hiding the five failures.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989' },
         { gate: 1, state: 'closed', status: 'Closed', signal: '150 EKs · 70 LOs · 68 mappings · zero differences', copy: 'PR #62 merged the official-source authority and shared gate rule on canonical main. Issue #50 now carries the merged-SHA verifier receipt and no rework label.', href: 'https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183' },
         { gate: 2, state: 'closed', status: 'Closed · amendment locked', signal: 'PR #66 merged · 655 checked · 70 stale · zero unknown', copy: 'Canonical main e16aebeb seals the omitted rehearsal lane. The manifest rebuilt byte-for-byte; 43 focused and 837 full-suite tests passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/66' },
         { gate: 3, state: 'closed', status: 'Closed · SOURCE_ACCEPTED', signal: 'PR #67 merged · 70/70 accepted · zero residue', copy: 'Canonical verification reproduced exact source coverage and delivery SHA-256 37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b; focused, affected, and full repository gates passed.', href: 'https://github.com/ilmych/humgeo-rebuild/pull/67' },
         { gate: 4, state: 'closed', status: 'Closed · PROFILE_AND_SOURCE_BOUND', signal: 'PR #851 merged · exact Deploy · exact staging SHA', copy: 'Canonical reconstruction reproduced the profile, exhaustive Phase 0 capture, native bind, unchanged 5,870-coordinate oracle, and zero-write receipt byte-for-byte. Deploy 32799920454 and staging matched owner-merged AP One main.', href: 'https://github.com/InceptTrilogy/ap-one/pull/851' },
-        { gate: 5, state: 'active', status: 'In progress', signal: 'Five enriched lessons · 440/440 operator receipts', copy: 'The formal census and bank-wide tree validation remain open, so Phase 1 is not closed.', href: 'humgeo.html' },
+        { gate: 5, state: 'closed', status: 'Closed', signal: 'Phase 1 course tree receipted', copy: 'The Phase 1 mapping receipt is in hand; this row no longer reports the older open-census snapshot.', href: 'humgeo.html' },
         { gate: 6, state: 'closed', status: 'Done', signal: '3,633 served practice-key items measured', copy: 'The receipt measures 3,167 at 1 XP and 466 at 2 XP, plus a 403-item demo snapshot at 356/47. The demo tree has zero XP fields. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.', href: 'claims.html#claim-humgeo.blueprint.audit' },
-        { gate: 7, state: 'active', status: 'In progress', signal: 'PR #911 merged · 528 article/QTI files validated · 1,042 video pages landed', copy: 'PR #906 merged the generator and PR #911 merged the video assets at d2cb182f. Evidence covers 88 XHTML files, 440 QTI packages, and 1,042 Phase 3.3 video pages and checks; 71 videos, platform upload, and governed-surface validation remain.', href: 'https://github.com/InceptTrilogy/ap-one/pull/911' }
+        { gate: 7, state: 'closed', status: 'Closed', signal: 'Assets + QTI + 3.6 validation + 3.7 preview closed', copy: 'Phase 3 is closed on its receipts. The 71 video-cue calls now belong to the Phase 4 owner decision, not unfinished Phase 3 credit.', href: 'https://github.com/InceptTrilogy/ap-one/pull/913' },
+        { gate: 8, state: 'active', status: 'Phase 4 open', signal: 'Plan skeleton drafted · four owner inputs remain', copy: 'Fill the private content-base URL or bucket and execute authority, then rule on the 71 video cues and answer-position skew before sealing the plan.', href: 'humgeo.html' }
       ]
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'APWH is before Phase 0. A-168 PR #905, E3 fix PR #64, and tier-1 PR #65 are merged. PR #65 banks 45/58 replacements with a 96 PASS / 33 MISSING / 3 pre-existing FAIL oracle. Paired serving PR #912 is open; A-187 issue #290 and 14 residue items remain.',
+      note: 'APWH is stepping into Phase 0. Pre-runbook repair replaced 45 of 58 broken gate items. E3 wiring is open in PR #916 and Phase 0.2 source capture is open in PR #917; fleet owns both merges and deploy watch.',
       rows: [
         { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile, consumer, authoring wave, and hash refresh landed', copy: 'PR #889 landed the reviewed, validator-consumed profile and consumer; PR #891 then landed the authoring wave and profile-hash refresh. This prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/891' },
-        { gate: 3, code: 'AS', name: 'Accepted source', label: 'Accepted source', state: 'active', status: 'In progress', signal: 'PR #65 merged · paired PR #912 open · 45/58 replacements', copy: 'Main ea721a32 includes the E3 contract fix and merged tier-1 fix round; AP One PR #905 carries the A-168 envelopes. Paired serving PR #912 is open at 7b7cd2b3. A-187 issue #290 and 14 residue items remain.', href: 'https://github.com/InceptTrilogy/ap-one/pull/912' },
-        { gate: 4, code: 'P0', name: 'Phase 0 — Establish authority', label: 'Establish authority', state: 'locked', status: 'Not entered', signal: '0.2 capture tool authored; accepted source still moving', copy: 'After AS-01 settles: bind the environment under 0.1, capture immutable source authority under 0.2, then freeze the versioned namespace under 0.3.', href: 'apwh.html' }
+        { gate: 3, code: 'PRE-0', name: 'Pre-runbook repair', label: 'Repair', state: 'evidence', status: 'Landed', signal: '45/58 broken gate items replaced', copy: 'The tier-1 round is landed. This is repair evidence, not later-phase credit.', href: 'https://github.com/ilmych/apwh-blueprint-build/pull/65' },
+        { gate: 4, code: 'P0.2', name: 'Phase 0.2 — Capture source authority', label: 'Source capture', state: 'active', status: 'PR open', signal: 'PR #917 source capture · PR #916 E3 wiring', copy: 'Fleet owns both merges and deploy watch. Owner tier-2 authority for 1,003 items remains undecided; issue #290 holds 169 article alternates.', href: 'https://github.com/InceptTrilogy/ap-one/pull/917' }
       ]
     },
     apush: {
       title: 'Existing work mapped to the runbook lifecycle',
-      note: 'APUSH accepted source is IN PROGRESS. The ledger remains 49 accepted / 200 pending. PRs #7 and #8 are merged, issue #6 is closed, and runner-binding PR #15 is merged. Issue #9 remains the fleet-owned fix-round edge; positions 45 and 46 ended in recorded terminal failure.',
+      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Wave-3 articles pass their own QC or regenerate; the runbook begins after the wave lands and the acceptance ledger rebuilds.',
       rows: [
         { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '249-position blueprint · 4 recorded deviations', copy: 'The design reconciliation belongs with scope lock, but it is preparation rather than a current implementation crosswalk.', href: 'claims.html' },
         { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,480 candidates · 249 ledger positions', copy: 'The candidate queue is complete, but candidate-budget completeness is not factory-QC or learner-readiness proof.', href: 'claims.html' },
         { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '49 accepted · 200 pending', copy: 'The exact current ledger separates accepted from pending positions without inflating the usable corpus.', href: 'claims.html' },
-        { gate: 4, state: 'evidence', status: 'Mapped evidence', signal: 'PRs #7/#8 + runner PR #15 merged · issue #9 open', copy: 'Build-output main 98842f41 contains the resealed manifest and complete KC-8.2.II.C sentence; course-build main 0a9938ff contains portable runner bindings. Positions 45 and 46 are preserved terminal failures under the fleet-owned issue #9 cycle.', href: 'https://github.com/ilmych/apush-course-build/issues/9' }
+        { gate: 3, code: 'PRE', name: 'Fleet content production', label: 'Wave 3', state: 'active', status: 'In progress', signal: 'Chunk 1 of 20 measured at 50%', copy: 'Wave-3 articles run fleet-side behind their own QC; failures regenerate. The 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds.', href: 'https://github.com/ilmych/apush-course-build/issues/9' }
       ]
     },
     psych: {
       title: 'Psychology runbook-aligned sequence',
-      note: 'Psychology remains before Phase 0 at the accepted-source entry boundary. A prep-only tree draft measures 253 canonical articles and 236 illustrated at current main 037cc168; owner/factory fields are deferred. A read-only check confirms 910/1,709 staged items live by ID and leaves 799 UNMEASURED. Course QC remains factory-blocked.',
+      note: 'Psychology is pre-Phase 0. Articles, 1,912 questions, and 37 essays exist, but zero items carry the factory judge receipt required for bank admission. Phase 0 profile and tree-map drafts are ready for the factory waits to clear.',
       rows: [
-        { gate: 3, code: 'AS-01', name: 'Accepted source', label: 'Entry boundary', state: 'active', status: 'In progress', signal: '910/1,709 live by ID · 799 UNMEASURED', copy: 'The staged bank has 1,912 MCQs and 37 FRQs. Read-only retrieval confirms 910 of 1,709 checked staged items live by ID, with two content-drift findings; 799 remain unmeasured behind the unpublished filter. Faultless Bar evaluation, EBQ readback, and grader certification remain.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b' },
+        { gate: 3, code: 'PRE-0', name: 'Factory QC admission', label: 'QC layer', state: 'active', status: 'Blocked', signal: '1,912 questions + 37 essays built · zero judge receipts', copy: 'Content exists but cannot enter a bank without the factory judge receipt. The waits are judge receipts, grader certification in PR #20, and essay-type deploy readback in issue #248.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20' },
         { gate: 5, code: 'P1-04', name: 'Phase 1.3 article check sets', label: 'Article checks', state: 'evidence', status: 'Evidence only', signal: '253 canonical articles · 236 illustrated in prep draft', copy: 'The prep-only tree draft measures the current source, but owner/factory fields and course-wide exact-set and answer-shape seals remain open, so this does not enter Phase 1.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b/3.%20Assessment' },
         { gate: 7, code: 'P3-05', name: 'Phase 3.4 native MCQs', label: 'Native MCQs', state: 'evidence', status: 'Evidence only', signal: 'Bounded item-pipeline evidence; QTI seal absent', copy: 'Units 1-4 are staged, but no complete native-MCQ QTI, reference, or final answer-shape report exists. The row has evidence, not phase credit.', href: 'psych.html' },
         { gate: 7, code: 'P3-06', name: 'Phase 3.5 writing tasks', label: 'Writing tasks', state: 'evidence', status: 'Evidence only', signal: 'FRQ PR #20 open · grader readiness false', copy: 'Writing content work exists, but the AP Psychology AI_ONLY_READY flag is false. QTI, rubric, grader-parity, and writing-display seals remain open, capping P3-06 and RLS-14.', href: 'https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20' },
@@ -146,13 +137,12 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
 
 (() => {
   const courses = AP4_DASHBOARD.courses;
-  const phaseCodes = ['P1', 'P2', 'P3'];
-  if (courses.length !== 4 || AP4_DASHBOARD.gates.length !== 14 || new Set(AP4_DASHBOARD.gates.map(gate => gate.id)).size !== 14 || courses.some(course => course.phaseStates.length !== 3 || course.phaseStates.some((phase, index) => phase.code !== phaseCodes[index]))) {
+  if (courses.length !== 4 || AP4_DASHBOARD.gates.length !== 14 || new Set(AP4_DASHBOARD.gates.map(gate => gate.id)).size !== 14 || courses.some(course => !course.phaseStates.length || course.phaseStates.some(phase => !phase.code || !phase.name || !phase.status))) {
     throw new Error('Dashboard lifecycle data is incomplete.');
   }
 
   const phaseMarkup = course => `
-    <div class="phase-state-grid" aria-label="${course.label} Phase 1, Phase 2, and Phase 3 states">
+    <div class="phase-state-grid" aria-label="${course.label} current runbook position">
       ${course.phaseStates.map(phase => `
         <div class="phase-state phase-state-${phase.state}">
           <div><strong>${phase.code}</strong><span>${phase.status}</span></div>
@@ -163,8 +153,8 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
 
   document.querySelectorAll('[data-phase-summary]').forEach(root => {
     root.innerHTML = `
-      <div class="section-head"><div><span class="badge b-blue">Runbook phases</span><h2>Phase 1, Phase 2, and Phase 3</h2></div></div>
-      <p>Each phase is reported separately; evidence on a locked phase does not grant phase credit.</p>
+      <div class="section-head"><div><span class="badge b-blue">Runbook position</span><h2>Current phase or pre-runbook work</h2></div></div>
+      <p>Each course shows only its current in-flight position; earlier receipts remain in the evidence map.</p>
       <div class="phase-course-list">
         ${courses.map(course => `<article><h3><a href="${course.id}.html">${course.label}</a></h3>${phaseMarkup(course)}</article>`).join('')}
       </div>`;

@@ -78,7 +78,7 @@ STAGES = [
           "OFFLINE_PREVIEW_SEALED packet (Gate 5; separate Phase 1, Phase 2, and Phase 3 evidence).",
           [1, 4], "Earliest affected gate.", "Sealed offline artifacts and deterministic rerun receipts.",
           "COMPLETE",
-          {"level": "in_progress", "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan. No course has sealed this stage."},
+          {"level": "complete", "note": "HumGeo has closed Phases 1-3 on receipts, including Phase 3.6 validation and the Phase 3.7 preview gate. Resource-level base XP remains a Phase 4 plan input."},
           []),
     stage("G", "Sealed plan + dark publish",
           "OFFLINE_PREVIEW_SEALED; profile/source/tree/asset/QTI digests unchanged; conforming plan compiler exists.",
@@ -86,7 +86,7 @@ STAGES = [
           "PUBLICATION_PLAN_SEALED (Gate 6) then DARK_PUBLISHED_REPLAYED (Gate 7) — closure requires the three files.",
           [3, 6, 7, 8], "Defect returns to its earliest affected phase.", "Corrected file-backed receipts.",
           "PARTIAL (codex finding 5): checkpoint and replay never confirmed as files",
-          {"level": "partial", "note": "Lang chain and Lit #811 are worked examples; the all-absent checkpoint and zero-write replay were asserted in prose, not confirmed as files."},
+          {"level": "in_progress", "note": "HumGeo Phase 4 is open with its plan skeleton drafted; Phase 5 read-only capture is next. Lang chain and Lit #811 remain historical worked examples."},
           [GH+"InceptTrilogy/ap-one/pull/697", GH+"InceptTrilogy/ap-one/pull/714", GH+"InceptTrilogy/ap-one/pull/716", GH+"InceptTrilogy/ap-one/pull/718", GH+"InceptTrilogy/ap-one/pull/722", GH+"InceptTrilogy/ap-one/pull/811"]),
     stage("H1", "Canary enrollment",
           "DARK_PUBLISHED_REPLAYED; exact owner-approved slots; distinct identity/auth states proved.",
@@ -142,10 +142,10 @@ process = {
     "out_of_corridor_rule": OUT_OF_CORRIDOR,
     "stages": STAGES,
     "courses": {
-        "humgeo": {"label": "AP Human Geography", "current_stage": "F", "state": "IN_PROGRESS — Gate 5 packets, mid-recovery", "as_of": "2026-08-26", "detail": "Stages A-E closed with packets; F is the fleet's live edge. Live counts and holds: humgeo.html and the feed."},
-        "apwh": {"label": "AP World History", "current_stage": "A-D (accepted-source preparation)", "state": "HOLD", "as_of": "2026-08-25", "detail": "Scope sub-receipt retained; accepted source held; Phase 0 not started."},
-        "apush": {"label": "AP US History", "current_stage": "A-D (accepted-source preparation)", "state": "IN_PROGRESS", "as_of": "2026-08-25", "detail": "Blueprint, inventory, and QC evidence mapped; Phase 0 not started."},
-        "psych": {"label": "AP Psychology", "current_stage": "A-D (accepted-source preparation)", "state": "IN_PROGRESS", "as_of": "2026-08-25", "detail": "221 paired article/QC sidecars on main; Phase 0 not started."}
+        "humgeo": {"label": "AP Human Geography", "current_stage": "G (Phase 4)", "state": "OPEN — seal publication plan", "as_of": "2026-08-31T00:58:45Z", "detail": "Phases 0-3 are closed. Phase 4 waits for the private content-base and execute-authority fields plus owner rulings on 71 video cues and answer-position skew; Phase 5 is next and read-only."},
+        "apwh": {"label": "AP World History", "current_stage": "E (Phase 0.2)", "state": "IN_PROGRESS — PRs #916 and #917 open", "as_of": "2026-08-31T00:48:04Z", "detail": "Pre-runbook repair replaced 45 of 58 broken gate items. Fleet owns both merges and deploy watch; owner tier-2 authority for 1,003 items is undecided, and issue #290 holds 169 alternates."},
+        "apush": {"label": "AP US History", "current_stage": "C (pre-runbook content production)", "state": "IN_PROGRESS — fleet wave", "as_of": "2026-08-31T00:51:39Z", "detail": "Wave-3 articles run fleet-side behind their own QC; failures regenerate. The runbook starts after the wave lands and the 249-position acceptance ledger rebuilds."},
+        "psych": {"label": "AP Psychology", "current_stage": "D (pre-Phase-0 QC admission)", "state": "BLOCKED — factory QC layer", "as_of": "2026-08-31T00:54:24Z", "detail": "Articles, 1,912 questions, and 37 essays exist, but zero items carry the factory judge receipt required for bank admission. Phase 0 drafts are ready; factory waits remain."}
     }
 }
 

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-30T13:55Z",
+ "generated_utc": "2026-08-31T01:08Z",
  "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
  "sources": [
   "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
@@ -251,8 +251,8 @@
    "resume_evidence": "Sealed offline artifacts and deterministic rerun receipts.",
    "contract_status": "COMPLETE",
    "proven": {
-    "level": "in_progress",
-    "note": "HumGeo has current evidence in Phase 1 and Phase 3; Phase 2 is DONE on its receipt-measured practice surfaces. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan. No course has sealed this stage."
+    "level": "complete",
+    "note": "HumGeo has closed Phases 1-3 on receipts, including Phase 3.6 validation and the Phase 3.7 preview gate. Resource-level base XP remains a Phase 4 plan input."
    },
    "evidence": []
   },
@@ -277,8 +277,8 @@
    "resume_evidence": "Corrected file-backed receipts.",
    "contract_status": "PARTIAL (codex finding 5): checkpoint and replay never confirmed as files",
    "proven": {
-    "level": "partial",
-    "note": "Lang chain and Lit #811 are worked examples; the all-absent checkpoint and zero-write replay were asserted in prose, not confirmed as files."
+    "level": "in_progress",
+    "note": "HumGeo Phase 4 is open with its plan skeleton drafted; Phase 5 read-only capture is next. Lang chain and Lit #811 remain historical worked examples."
    },
    "evidence": [
     "https://github.com/InceptTrilogy/ap-one/pull/697",
@@ -397,31 +397,31 @@
  "courses": {
   "humgeo": {
    "label": "AP Human Geography",
-   "current_stage": "F",
-   "state": "IN_PROGRESS \u2014 Phase 1 and Phase 3",
-   "as_of": "2026-08-30T14:17Z",
-   "detail": "Phase 2 measured scope is done. PR #906 and video-assets PR #911 are merged; 528 article/QTI files pass local validation and 1,042 video pages and checks are repository-landed, with 71 videos in content triage. No platform upload is claimed."
+   "current_stage": "G (Phase 4)",
+   "state": "OPEN \u2014 seal publication plan",
+   "as_of": "2026-08-31T00:58:45Z",
+   "detail": "Phases 0-3 are closed. Phase 4 waits for the private content-base and execute-authority fields plus owner rulings on 71 video cues and answer-position skew; Phase 5 is next and read-only."
   },
   "apwh": {
    "label": "AP World History",
-   "current_stage": "A-D (accepted-source preparation)",
-   "state": "IN_PROGRESS",
-   "as_of": "2026-08-30T14:08Z",
-   "detail": "PR #905, the E3 fix, and tier-1 PR #65 are merged. Paired serving PR #912 is open at 7b7cd2b3; the 14-item residue remains and Phase 0 is not started."
+   "current_stage": "E (Phase 0.2)",
+   "state": "IN_PROGRESS \u2014 PRs #916 and #917 open",
+   "as_of": "2026-08-31T00:48:04Z",
+   "detail": "Pre-runbook repair replaced 45 of 58 broken gate items. Fleet owns both merges and deploy watch; owner tier-2 authority for 1,003 items is undecided, and issue #290 holds 169 alternates."
   },
   "apush": {
    "label": "AP US History",
-   "current_stage": "A-D (accepted-source preparation)",
-   "state": "IN_PROGRESS",
-   "as_of": "2026-08-30T06:33Z",
-   "detail": "The ledger remains 49 accepted / 200 pending. PRs #7/#8 and runner PR #15 are merged; issue #9 owns the next fix cycle after terminal failures at positions 45 and 46. Phase 0 is not started."
+   "current_stage": "C (pre-runbook content production)",
+   "state": "IN_PROGRESS \u2014 fleet wave",
+   "as_of": "2026-08-31T00:51:39Z",
+   "detail": "Wave-3 articles run fleet-side behind their own QC; failures regenerate. The runbook starts after the wave lands and the 249-position acceptance ledger rebuilds."
   },
   "psych": {
    "label": "AP Psychology",
-   "current_stage": "A-D (accepted-source preparation)",
-   "state": "IN_PROGRESS",
-   "as_of": "2026-08-30T14:10Z",
-   "detail": "A prep-only tree draft at current main 037cc168 measures 253 canonical articles and 236 illustrated; owner/factory fields remain deferred. The Unit 0 release contains 12 SME-accepted prerequisite clips, while factory course QC remains blocked. Phase 0 is not started."
+   "current_stage": "D (pre-Phase-0 QC admission)",
+   "state": "BLOCKED \u2014 factory QC layer",
+   "as_of": "2026-08-31T00:54:24Z",
+   "detail": "Articles, 1,912 questions, and 37 essays exist, but zero items carry the factory judge receipt required for bank admission. Phase 0 drafts are ready; factory waits remain."
   }
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-28T02:48Z",
+ "generated_utc": "2026-08-31T01:08Z",
  "what_this_is": "Register of training and eval corpora for the course-build model program: the catalog, never the data. Corpora hold course content and answer text, so the files stay in the private Alpha workspace and evidence homes; this register carries counts, digests, and status so 'what can we train on today' is a lookup.",
  "boundary": "No corpus file is ever published to this site. A SHA-256 here lets a holder of the private bytes verify identity.",
  "assets": [
@@ -46,8 +46,8 @@
    "rows": null,
    "sha256": null,
    "snapshot": null,
-   "status": "PLANNED, not started. Named sources: the intake repository and ap-psychology-build phase 7-8 receipts.",
-   "home": "Private intake repository, linkable per owner 2026-08-27"
+   "status": "PLANNED, not started. Named leads: ilmych/incept-agent-intake and ap-psychology-build phase 7-8 receipts.",
+   "home": "https://github.com/ilmych/incept-agent-intake (private, linkable per owner 2026-08-27)"
   }
  ],
  "observability": {
