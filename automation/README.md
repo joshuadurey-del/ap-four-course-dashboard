@@ -1,6 +1,6 @@
 # Private-repository activity automation
 
-Phase A polls the ten private source repositories every ten minutes and on
+Phase A polls the private source repositories every ten minutes and on
 `repository_dispatch: course-event`. It reads with a classic owner PAT, keeps an
 opaque hashed cursor in this repository, and appends only derived, public-safe
 activity rows to `updates.json`. Titles, bodies, commit
@@ -33,12 +33,18 @@ Set that variable to `false` for the kill switch. The workflow explicitly
 requests a legacy Pages build after each verified dashboard push. Serving
 completes asynchronously and is verified separately.
 
-The first successful run publishes only the newest verified event per repository
-and baselines all observed cursor keys. Later runs publish unseen events, capped at
+The first event-stream run publishes the newest verified event per course and
+baselines older observed event IDs. Later runs publish unseen events, capped at
 40 rows per run; overflow remains unprocessed for the next run. Single-writer
-workflow concurrency and evidence-URL dedup prevent duplicate commits. Actual
+workflow concurrency, event-ID cursors, and exact-row dedup prevent duplicates. Actual
 event-to-decision latency is recorded by each run; the ten-minute schedule is a
 target, not a promise.
+
+Course pages keep repository activity and local-log freshness separate. Repository
+events include pushes, pull-request actions/reviews, issue actions/comments,
+releases, other GitHub repository events, and completed workflow runs. Shared-repo
+classification uses private metadata but publishes only the derived course label
+and safe event fields.
 
 Local landings use authenticated `repository_dispatch: course-event`. The
 receipt-free signed payload contract is fixed in `automation/ADR.md`; hashed row

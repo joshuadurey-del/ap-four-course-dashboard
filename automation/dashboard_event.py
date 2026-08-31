@@ -18,7 +18,7 @@ ALLOWED_KEYS = {
 }
 COURSES = {"humgeo", "apwh", "apush", "psych"}
 EVENTS = {"push", "pull_request", "issues"}
-POLL_EVENTS = EVENTS | {"release", "workflow_run"}
+POLL_EVENTS = EVENTS | {"release", "workflow_run", "repository"}
 SHA = re.compile(r"[0-9a-f]{40}")
 REPOSITORY = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+")
 TOKEN = re.compile(r"[A-Za-z0-9._:-]{1,128}")
@@ -122,7 +122,7 @@ def poll_key(item):
 def process_polled_item(item, inventory, seen, now=None):
     allowed = {
         "repository", "event", "event_id", "source_sha", "occurred_at",
-        "number", "action", "conclusion", "evidence_url",
+        "number", "action", "conclusion", "evidence_url", "course",
     }
     if not isinstance(item, dict) or set(item) - allowed:
         return _decision("HOLD", "POLL_ITEM_INVALID: unexpected field", now=now)
@@ -149,25 +149,36 @@ def process_polled_item(item, inventory, seen, now=None):
     base = {"delivery_id": key, "source_sha": source_sha, "now": now}
     if key in seen:
         return _decision("REDELIVERY", "DUPLICATE_REPO_EVENT_SHA", **base)
-    course = inventory.get(repo)
+    course = item.get("course", inventory.get(repo))
     if course not in COURSES | {"cross"}:
-        return _decision("NOOP", "REPOSITORY_NOT_MONITORED", **base)
+        return _decision("HOLD", "POLL_ITEM_INVALID: course", **base)
 
     name = repo.split("/", 1)[1]
     short = source_sha[:8] if source_sha != "none" else "no-sha"
     if event == "push":
         text = f"{name} commit {short}."
     elif event == "pull_request":
-        text = f"{name} pull request #{int(item['number'])} merged at {short}."
+        action = str(item.get("action") or "updated").replace("_", "-")
+        if not TOKEN.fullmatch(action):
+            return _decision("HOLD", "POLL_ITEM_INVALID: action", **base)
+        text = f"{name} pull request #{int(item['number'])} {action} at {short}."
     elif event == "issues":
-        text = f"{name} issue #{int(item['number'])} closed."
+        action = str(item.get("action") or "updated").replace("_", "-")
+        if not TOKEN.fullmatch(action):
+            return _decision("HOLD", "POLL_ITEM_INVALID: action", **base)
+        text = f"{name} issue #{int(item['number'])} {action}."
     elif event == "release":
         text = f"{name} release published at {short}."
-    else:
+    elif event == "workflow_run":
         conclusion = str(item.get("conclusion") or "unknown")
         if not TOKEN.fullmatch(conclusion):
             return _decision("HOLD", "POLL_ITEM_INVALID: workflow conclusion", **base)
         text = f"{name} workflow run #{int(item['number'])} completed: {conclusion}."
+    else:
+        action = str(item.get("action") or "updated").replace("_", "-")
+        if not TOKEN.fullmatch(action):
+            return _decision("HOLD", "POLL_ITEM_INVALID: action", **base)
+        text = f"{name} repository activity: {action}."
     return _decision(
         "UPDATE", "VERIFIED_REPOSITORY_ACTIVITY", **base,
         update={

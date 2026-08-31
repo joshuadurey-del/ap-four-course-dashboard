@@ -37,7 +37,7 @@ for index, update in enumerate(updates):
     assert not event_fields or event_fields == {'event_type', 'evidence_url'}, \
         f'update {index} must carry event_type and evidence_url together'
     if event_fields:
-        assert update['event_type'] in {'push', 'pull_request', 'issues', 'release', 'workflow_run'}, \
+        assert update['event_type'] in {'push', 'pull_request', 'issues', 'release', 'workflow_run', 'repository'}, \
             f'update {index} has invalid event_type'
         url = urllib.parse.urlparse(update['evidence_url'])
         assert url.scheme == 'https' and url.hostname == 'github.com' and url.path.strip('/'), \

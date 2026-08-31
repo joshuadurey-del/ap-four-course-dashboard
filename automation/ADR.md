@@ -12,9 +12,13 @@ workflow ahead of schedule. For the local log leg, `client_payload` contains
 compact JSON using `LOCAL_EVENT_DISPATCH_SECRET`. Raw rows, actors, refs,
 receipts, and paths never cross the boundary. Row IDs deduplicate deliveries;
 hashed refs suppress a local projection when the same fact has current GitHub
-evidence. The workflow always re-reads all ten repositories before deciding.
+evidence. The workflow always re-reads every inventory repository before deciding.
 
-The monitored inventory is an Actions secret. The stable cursor is committed here
+The monitored inventory is an Actions secret. Polling consumes GitHub's repository
+event stream (pushes, pull-request actions and reviews, issue actions and comments,
+releases, and other repository events) plus completed workflow runs. Shared-repo
+events are classified privately from their metadata; titles, bodies, and messages
+never enter the public projection. The stable cursor is committed here
 as SHA-256 values only, so it discloses neither private repository names nor local
 row IDs. Concurrent runs serialize under one workflow concurrency key. Public rows are derived only from validated
 repository name, event type, number, SHA, timestamp, conclusion, and GitHub URL;
