@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T04:56Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "note",
+    "text": "08-31: wave-3 serial round ACTIVE (issue #9): positions 52-57 articles_ready today (~30min each, ~192 pending); 45+50 terminal-failed; ledger rebuild at wave end \u2014 still 249 = 49 accepted (36 legacy_dual_review + 13 server_strict)/200 pending. Grader URL byte-verified: test-builder.inceptstore.com/ap-us-history/grade (profile DRAFT updated). Sealing item resolved: canaries+term are operator-run inputs per runbook. Packet kc_8_2_ii_c fix closed fleet-side (#6/PR #8).",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-08-31T04:55Z",
     "course": "humgeo",
     "phase": "4",
