@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-08-31T03:30Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 opened.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:27Z",
+    "course": "cross",
+    "text": "ap-one issue #921 opened.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/921",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T03:26Z",
     "course": "apwh",
     "phase": "QC campaigns",
