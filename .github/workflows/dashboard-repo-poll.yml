@@ -57,11 +57,11 @@ jobs:
         id: publish
         run: |
           git add updates.json automation/poller-state.json
-          bin/precommit.sh
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          bin/precommit.sh
           git diff --cached --check
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
