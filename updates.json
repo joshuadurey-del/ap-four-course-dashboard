@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T01:22Z",
+    "course": "apwh",
+    "phase": "Phase 1",
+    "kind": "landed",
+    "text": "Phase 1 Leg A complete: five read-only measurements receipted (A1 no embedded checks, blueprint prescribes 1/article; A2 lesson order derived, 14 checks pass; A3 three inline TYE pairs, no Know-A/B carriers; A4 boundary ledger 7 classes, 42/69 gates non-contiguous; A5 18 pinned forms = 9x2 unit assessments). Capture fd0ce453 verified; PR #917 still OPEN, Leg B waits."
+  },
+  {
     "ts": "2026-08-31T01:11Z",
     "course": "humgeo",
     "phase": "4",
