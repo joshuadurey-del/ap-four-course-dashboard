@@ -2,6 +2,14 @@
 
 Status: accepted by owner addendum, 2026-08-29.
 
+Addendum, 2026-08-31: every semantic course update also projects the newest
+typed event and newest verified repository event into that course's primary
+`data.json` claim. `timeline.js` and the course-page renderer consume those exact
+fields, so one transaction advances the feed, overview, and course page together.
+The projection is display evidence only: it does not alter formal lifecycle
+status or closure credit. The dashboard snapshot is derived from the newest
+projected evidence timestamp; automation commit time never rejuvenates it.
+
 Addendum, 2026-08-31: needs-human uses the existing signed local-dispatch
 corridor. The same `course-event` repository dispatch accepts either the existing
 event batch or an exact `needs-human-public/v1` document; both are signed with the

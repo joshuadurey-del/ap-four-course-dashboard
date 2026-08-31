@@ -24,7 +24,12 @@ Public-repo boundary: never paste machine-local paths, private handoffs, credent
 Update flow: `.github/workflows/dashboard-repo-poll.yml` polls the ten private
 source repositories every ten minutes and on `repository_dispatch: course-event`.
 It persists cursors and receipts in private `joshuadurey-del/ap-ss-evidence`, then
-commits only verified, public-safe activity rows. Lifecycle claims remain manual
-and verifier-bound. Setup and credential boundaries: `automation/README.md`.
+commits verified, public-safe activity rows and projects each course's newest
+typed event and repository event into its primary `data.json` claim. `timeline.js`
+and every course page render that projection, so the feed, overview card, and
+course-page current section advance together. Formal lifecycle status and closure
+credit remain manual and verifier-bound. The snapshot clock is the newest evidence
+timestamp, never the later automation commit time. Setup and credential boundaries:
+`automation/README.md`.
 
 Needs-human transport: the existing signed `course-event` dispatch carries the exact `needs-human-public/v1` document after every add, resolve, or explicit project. The serialized dashboard receiver accepts only newer projections; older redeliveries no-op and equal-timestamp conflicts hold. Manual `fold-needs-human` remains the recovery path. The committed copy contains only the public schema, and the renderer holds on missing, stale, oversized, or unexpected input. This does not reopen event-source ingress or add a host, App, source workflow, daemon, or polling loop.

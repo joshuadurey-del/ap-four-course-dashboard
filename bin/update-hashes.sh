@@ -55,19 +55,3 @@ with open("hashes.json", "w", encoding="utf-8") as handle:
     handle.write("\n")
 PY
 git add hashes.json
-
-# The snapshot stamp is display metadata and is not part of hashes.json.
-python3 - <<'PY'
-import datetime
-import re
-
-now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
-kst = f"{now:%b} {now.day}, {now.year} \u00b7 {now:%H:%M} KST"
-with open("timeline.js", encoding="utf-8") as handle:
-    source = handle.read()
-updated = re.sub(r"snapshot: '[^']*'", f"snapshot: '{kst}'", source, count=1)
-if updated != source:
-    with open("timeline.js", "w", encoding="utf-8") as handle:
-        handle.write(updated)
-PY
-git add timeline.js

@@ -6,7 +6,6 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 16:22 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -43,17 +42,18 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
     },
     {
       id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)',
-      status: 'Phase 1 · PR #923 MERGED', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 04:37Z',
-      landed: 'Pre-runbook repair — 45/58 replaced · Phase 0.2 source capture — merged · Phase 1 tree and refusal validator — PR #923 merged',
-      nextStep: 'Resume via factory-course-run now that Phase 1 PR #923 has landed; the step picker determines the next runnable APWH action. PR #916 and issue #290 remain separate open work.',
+      status: 'Phase 2 · PR #930 MERGED', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 07:13Z',
+      landed: 'Phase 1 tree — PR #923 merged · E3 wiring — PR #916 merged · Phase 2 pricing — 894 activities / 6,576 XP in PR #930 · Deploy — success · Tier-2 round 1 — drained',
+      nextStep: 'Resume via factory-course-run after the Phase 2 pricing landing; the step picker determines the next runnable APWH action. The tier-2 terminal topics and issue #290 remain separate from lifecycle credit.',
       footprint: [
-        { value: '45/58', label: 'tier-1 replacements merged in PR #65' },
-        { value: '5', label: 'Phase 1 Leg A measurements receipted' },
-        { value: '169', label: 'article alternates held by issue #290' }
+        { value: '894', label: 'required activities priced' },
+        { value: '6,576', label: 'total XP in the Phase 2 manifest' },
+        { value: '975/1,003', label: 'distinct tier-2 items accepted' }
       ],
       phaseStates: [
-        { code: 'P0.2', name: 'Capture source authority', state: 'evidence', status: 'MERGED', detail: 'PR #917 merged at 4fc7c055. PR #916 remains the separate open E3 wiring change.' },
-        { code: 'P1', name: 'Map the complete course tree', state: 'active', status: 'IN PROGRESS', detail: 'PR #923 merged the native course tree and refusal validator as 10b1900c. The merge does not by itself attest Phase 1 closure; resume the governed runner.' }
+        { code: 'P0.2', name: 'Capture source authority', state: 'evidence', status: 'MERGED', detail: 'PR #917 merged source capture at 4fc7c055; PR #916 merged the separate advisory E3 wiring at e2d92042.' },
+        { code: 'P1', name: 'Map the complete course tree', state: 'evidence', status: 'IMPLEMENTATION LANDED', detail: 'PR #923 merged the 894-activity native course tree and refusal validator as 10b1900c.' },
+        { code: 'P2', name: 'Price required activities', state: 'active', status: 'PR #930 MERGED', detail: 'The deterministic manifest prices all 894 required activities at 6,576 total XP. This display records the merge without asserting Phase 2 closure or learner serving.' }
       ]
     },
     {
@@ -103,12 +103,14 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
     },
     apwh: {
       title: 'APWH runbook-aligned sequence',
-      note: 'APWH Phase 0.2 remains open in PR #917 with E3 wiring in PR #916. Phase 1 Leg A has five read-only measurements receipted locally; that is in-flight evidence, not Phase 1 closure while the Phase 0.2 PR remains open.',
+      note: 'APWH has entered Phase 2 work. PR #917 landed source capture, PR #923 landed the 894-activity Phase 1 tree, PR #916 landed advisory E3 wiring, and PR #930 landed deterministic XP pricing. Tier-2 round 1 drained separately; none of those merges is promoted into later lifecycle or learner-serving credit.',
       rows: [
         { gate: 4, code: 'PRE-0', name: 'Course profile required before Phase 0', label: 'Course profile', state: 'closed', status: 'Done', signal: 'Profile, consumer, authoring wave, and hash refresh landed', copy: 'PR #889 landed the reviewed, validator-consumed profile and consumer; PR #891 then landed the authoring wave and profile-hash refresh. This prerequisite does not enter Phase 0.', href: 'https://github.com/InceptTrilogy/ap-one/pull/891' },
         { gate: 3, code: 'PRE-0', name: 'Pre-runbook repair', label: 'Repair', state: 'evidence', status: 'Landed', signal: '45/58 broken gate items replaced', copy: 'The tier-1 round is landed. This is repair evidence, not later-phase credit.', href: 'https://github.com/ilmych/apwh-blueprint-build/pull/65' },
-        { gate: 4, code: 'P0.2', name: 'Phase 0.2 — Capture source authority', label: 'Source capture', state: 'active', status: 'PR open', signal: 'PR #917 source capture · PR #916 E3 wiring', copy: 'Fleet owns both merges and deploy watch. Owner tier-2 authority for 1,003 items remains undecided; issue #290 holds 169 article alternates.', href: 'https://github.com/InceptTrilogy/ap-one/pull/917' },
-        { gate: 5, code: 'P1', name: 'Phase 1 — Map the complete course tree', label: 'Course mapping', state: 'evidence', status: 'Leg A measured', signal: 'Five read-only measurements receipted', copy: 'Article-check policy, lesson order, inline practice, gate boundaries, and pinned assessment forms are measured. Leg B waits; no Phase 1 closure is claimed.', href: 'apwh.html' }
+        { gate: 4, code: 'P0.2', name: 'Phase 0.2 — Capture source authority', label: 'Source capture', state: 'evidence', status: 'Merged', signal: 'PR #917 source capture · PR #916 E3 wiring', copy: 'Both changes are merged. The advisory E3 carrier does not create a high-stakes gate or later lifecycle credit.', href: 'https://github.com/InceptTrilogy/ap-one/pull/917' },
+        { gate: 5, code: 'P1', name: 'Phase 1 — Map the complete course tree', label: 'Course mapping', state: 'evidence', status: 'Implementation landed', signal: 'PR #923 · 894 linked activities', copy: 'The native tree and refusal validator are merged. The dashboard preserves implementation evidence without inventing a closure receipt.', href: 'https://github.com/InceptTrilogy/ap-one/pull/923' },
+        { gate: 6, code: 'P2', name: 'Phase 2 — Price activities', label: 'Activity pricing', state: 'active', status: 'PR #930 merged', signal: '894 activities · 6,576 XP · digest 019094aa', copy: 'The deterministic pricing manifest is merged at ec09709f. No serving path was touched; Phase 2 closure and learner outcomes remain unclaimed.', href: 'https://github.com/InceptTrilogy/ap-one/pull/930' },
+        { gate: 3, code: 'QC', name: 'Separate tier-2 repair campaign', label: 'QC campaign', state: 'evidence', status: 'Round 1 drained', signal: '975/1,003 accepted · 2 terminal topics', copy: 'The campaign accepted 975 distinct items with zero duplicates. Topics 3.4 and 9.5 ended factory-terminal; the campaign remains separate from lifecycle credit.', href: 'apwh.html' }
       ]
     },
     apush: {
@@ -147,6 +149,13 @@ const FRESHNESS_LIMIT_MS = 24 * 60 * 60 * 1000;
 const sameKeys = (value, keys) => value && typeof value === 'object' && !Array.isArray(value) &&
   JSON.stringify(Object.keys(value).sort()) === JSON.stringify(keys);
 const parsedTime = value => typeof value === 'string' ? Date.parse(value) : NaN;
+const snapshotLabel = value => {
+  const ms = parsedTime(value);
+  if (!Number.isFinite(ms)) return 'measurement unavailable';
+  const date = new Date(ms + 9 * 60 * 60 * 1000);
+  const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][date.getUTCMonth()];
+  return `${month} ${date.getUTCDate()}, ${date.getUTCFullYear()} · ${String(date.getUTCHours()).padStart(2, '0')}:${String(date.getUTCMinutes()).padStart(2, '0')} KST`;
+};
 const ageLabel = (ms, now = Date.now()) => {
   if (!Number.isFinite(ms)) return 'age unavailable';
   const minutes = Math.max(0, Math.floor((now - ms) / 60000));
@@ -277,12 +286,18 @@ const renderCourseCards = (root, data, updates, now) => {
   const intro = make('div');
   intro.append(make('span', 'badge b-blue', 'Current runbook state'), make('h2', '', 'All four courses'),
     make('p', 'timeline-sub', 'Current state, freshness, machine-readable next step, and measured rates. Open a course for receipts and full detail.'));
-  head.append(intro, make('span', 'timeline-snapshot', `Dashboard snapshot · ${AP4_DASHBOARD.snapshot}`));
+  head.append(intro, make('span', 'timeline-snapshot', `Dashboard snapshot · ${snapshotLabel(data?.snapshot)}`));
   const grid = make('div', 'course-card-grid');
   grid.setAttribute('aria-label', 'Current TimeBack state and next step by course');
   AP4_DASHBOARD.courses.forEach(course => {
     const claim = claims.find(row => row?.claim_id === `${course.id}.blueprint.audit`);
-    const measured = parsedTime(claim?.observed_at || claim?.status_at);
+    const claimMeasured = parsedTime(claim?.observed_at || claim?.status_at);
+    const event = claim?.current_event;
+    const eventMeasured = parsedTime(event?.ts);
+    const validEvent = event && typeof event.phase === 'string' && typeof event.kind === 'string' && typeof event.text === 'string';
+    const currentEvent = validEvent && Number.isFinite(eventMeasured) && (!Number.isFinite(claimMeasured) || eventMeasured >= claimMeasured) ? event : null;
+    const measuredValues = [claimMeasured, eventMeasured].filter(Number.isFinite);
+    const measured = measuredValues.length ? Math.max(...measuredValues) : NaN;
     const limit = Number(claim?.freshness_limit_hours);
     const stale = !Number.isFinite(measured) || !Number.isFinite(limit) || measured > now + 5 * 60 * 1000 || now - measured > limit * 60 * 60 * 1000;
     const rates = typeof summary === 'function' ? summary(updates, course.id, now) : null;
@@ -290,12 +305,14 @@ const renderCourseCards = (root, data, updates, now) => {
     card.href = `${course.id}.html`;
     card.style.setProperty('--course-color', course.color);
     const headline = make('div', 'course-card-headline');
-    const status = make('span', 'course-card-status', `${stale ? 'STALE · ' : ''}${course.status} · measured ${ageLabel(measured, now)}`);
+    const eventPhase = currentEvent?.phase?.trim();
+    const eventStatus = eventPhase && currentEvent.kind !== 'note' ? `${eventPhase.replace(/^phase\s*/i, 'Phase ')} · ${currentEvent.kind.replaceAll('-', ' ').toUpperCase()}` : course.status;
+    const status = make('span', 'course-card-status', `${stale ? 'STALE · ' : ''}${eventStatus} · measured ${ageLabel(measured, now)}`);
     if (Number.isFinite(measured)) status.title = new Date(measured).toISOString();
     headline.append(status);
     card.append(headline, make('h3', '', course.label));
     const landed = make('p', 'course-card-landed');
-    landed.append(make('strong', '', 'Landed: '), course.landed);
+    landed.append(make('strong', '', currentEvent ? 'Latest attested: ' : 'Landed: '), currentEvent?.text || course.landed);
     const next = make('p', 'course-card-next');
     next.append(make('strong', '', 'Next: '), formatNextStep(claim?.next_step, course.nextStep));
     const tiles = make('div', 'rate-tiles');
@@ -316,6 +333,7 @@ const renderCourseCards = (root, data, updates, now) => {
 
 const boardSelftest = () => {
   const now = Date.parse('2026-08-31T03:00:00Z');
+  if (snapshotLabel('2026-08-31T07:22Z') !== 'Aug 31, 2026 · 16:22 KST') throw new Error('evidence snapshot clock failed');
   const item = { id: 'a'.repeat(16), ts: '2026-08-31T02:00:00Z', course: 'humgeo', kind: 'decision', title: 'Choose the bounded option.', deadline: '' };
   const good = { schema: 'needs-human-public/v1', generated_ts: '2026-08-31T02:30:00Z', open: [item] };
   if (validateNeedsHuman(good, now).status !== 'ok') throw new Error('needs-human valid fixture failed');

@@ -41,6 +41,14 @@
   },
   {
     "ts": "2026-08-31T07:13Z",
+    "course": "apwh",
+    "phase": "Phase 2",
+    "kind": "merged",
+    "text": "Phase 2 activity pricing merged in PR #930 at ec09709f: the deterministic manifest prices all 894 required activities at 6,576 total XP. Tier-2 round 1 had already drained with 975 distinct accepted of 1,003 requested and two factory-terminal topics. These are implementation and QC evidence, not phase-closure or learner-serving claims.",
+    "writer": "dashboard curation"
+  },
+  {
+    "ts": "2026-08-31T07:13Z",
     "course": "cross",
     "text": "ap-one commit ec09709f.",
     "event_type": "push",

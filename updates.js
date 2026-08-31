@@ -8,6 +8,10 @@
   const local = ms => new Date(ms).toLocaleString(undefined, {
     year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
   });
+  const nextStep = value => value && typeof value.verb === 'string' && typeof value.tool === 'string' &&
+    Array.isArray(value.args) && typeof value.gate === 'string'
+    ? `${value.verb} via ${value.tool}${value.args.length ? ` (${value.args.join(', ')})` : ''} once ${value.gate}`
+    : 'The governed next step is unavailable.';
   const displayText = text => String(text)
     .replace(/\bilmych\/apush-build-outputs\b/gi, 'the APUSH build-outputs repository')
     .replace(/\bIlma['’]s\b/gi, "the repository owner's")
@@ -148,11 +152,35 @@
     return visible;
   };
 
+  const renderCourseCurrent = (data, updates) => lists.filter(list => list.hasAttribute('data-event-only')).forEach(list => {
+    const course = list.dataset.course?.toLowerCase();
+    const claim = data?.claims?.find(row => row?.claim_id === `${course}.blueprint.audit`);
+    if (!claim) return;
+    const event = claim.current_event;
+    const current = event && typeof event.phase === 'string' && typeof event.kind === 'string' &&
+      typeof event.text === 'string' ? event : null;
+    const intro = list.closest('main')?.querySelector('h1 + .sub');
+    if (intro) intro.textContent = displayText(current?.text || claim.value);
+    const prior = list.parentElement?.querySelector('[data-automated-current]');
+    if (prior) prior.remove();
+    if (!current || Number.isNaN(Date.parse(current.ts))) return;
+    const state = document.createElement('p');
+    state.dataset.automatedCurrent = '';
+    state.className = 'course-current';
+    const phase = current.phase?.trim() ? `${current.phase} · ` : '';
+    state.textContent = `Current attested state: ${phase}${current.kind.replaceAll('-', ' ')} · ${current.text} Next: ${nextStep(claim.next_step)}.`;
+    list.before(state);
+  });
+
   let updatesRefresh;
-  const refreshUpdates = () => updatesRefresh || (updatesRefresh = fetch('updates.json', { cache: 'no-store' }).then(response => response.json()).then(updates => {
+  const refreshUpdates = () => updatesRefresh || (updatesRefresh = Promise.all([
+    fetch('updates.json', { cache: 'no-store' }).then(response => response.json()),
+    fetch('data.json', { cache: 'no-store' }).then(response => response.json()).catch(() => null),
+  ]).then(([updates, data]) => {
     if (!Array.isArray(updates)) throw new Error('updates.json must be an array');
     const visibleUpdates = render(lists[0], updates);
     lists.slice(1).forEach(list => render(list, updates));
+    renderCourseCurrent(data, updates);
     lists.filter(list => list.hasAttribute('data-event-only')).forEach(list => {
       if (list.previousElementSibling?.classList.contains('local-freshness')) list.previousElementSibling.remove();
       const course = list.dataset.course?.toLowerCase();

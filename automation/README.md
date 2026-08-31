@@ -2,8 +2,10 @@
 
 Phase A polls the private source repositories every ten minutes and on
 `repository_dispatch: course-event`. It reads with a classic owner PAT, keeps an
-opaque hashed cursor in this repository, and appends only derived, public-safe
-activity rows to `updates.json`. Every row carries a bounded public writer attestation:
+opaque hashed cursor in this repository, appends derived public-safe activity rows
+to `updates.json`, and projects the newest typed and repository events into the
+matching primary claim in `data.json`. The overview and course pages render that
+shared projection. Every row carries a bounded public writer attestation:
 `repository-event automation`, `INCEPT event projection`, or `dashboard curation`.
 Titles, bodies, commit
 messages, webhook bodies, tokens, and receipt paths never enter this repository.
@@ -50,8 +52,11 @@ and safe event fields.
 
 Local landings use authenticated `repository_dispatch: course-event`. The
 receipt-free signed payload contract is fixed in `automation/ADR.md`; hashed row
-IDs are persisted with the dashboard cursor. Local `backfill` rows baseline as NOOP, and the
-course pages compute “Last local landing” from the newest projected row timestamp.
+IDs are persisted with the dashboard cursor. Local `backfill` rows baseline as
+NOOP. A semantic update commits `updates.json` and `data.json` in the same
+transaction; the overview and course pages then render the same attested event.
+The formal lifecycle fields remain manual. The dashboard snapshot uses evidence
+time, not workflow or commit time.
 
 Phase B replaces `SOURCE_REPO_READ_TOKEN` repo by repo with short-lived,
 read-only GitHub App installation tokens. External real-time webhook ingress is

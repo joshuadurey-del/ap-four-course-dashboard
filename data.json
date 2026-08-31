@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T07:00Z",
+  "snapshot": "2026-08-31T07:22Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -703,8 +703,8 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "IN_PROGRESS",
-      "value": "APWH remains in Phase 1. Phase 0.2 source capture merged in PR #917 at 4fc7c055. The required native course tree and refusal validator then merged in PR #923 as 10b1900c. That implementation landing does not by itself attest Phase 1 closure. E3 wiring PR #916 remains separate open work. The authorized tier-2 campaign and open test-builder issue #290 remain separate from lifecycle credit.",
-      "scope": "current APWH Phase 0.2 landing and Phase 1 tree work; excludes Phase 1 closure, tier-2 execution credit, later phases, publication, and learner serving",
+      "value": "APWH has entered Phase 2 work. Phase 0.2 source capture merged in PR #917 at 4fc7c055, the 894-activity Phase 1 tree and refusal validator merged in PR #923 at 10b1900c, and advisory E3 wiring merged in PR #916 at e2d92042. Phase 2 pricing then merged in PR #930 at ec09709f: 894 required activities, 6,576 total XP, deterministic manifest digest 019094aa. Its exact-merge deploy run completed successfully at 07:22Z. Tier-2 round 1 drained separately with 975 distinct accepted of 1,003 requested, zero duplicates, and two factory-terminal topics. Pre-QTI validation records key-position skew in all three measured banks; the receipt says it is nonblocking until plan seal. Test-builder issue #290 remains open. These landings do not attest Phase 2 closure, publication, or learner serving.",
+      "scope": "current APWH source capture, Phase 1 tree, Phase 2 pricing, and separate tier-2 QC evidence; excludes phase-closure inference, publication, and learner serving",
       "freshness_limit_hours": 24,
       "next_step": {
         "verb": "resume",
@@ -712,12 +712,26 @@
         "args": [
           "apwh"
         ],
-        "gate": "Phase 1 PR #923 is merged and the step picker returns the next runnable APWH action"
+        "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
+      },
+      "current_event": {
+        "ts": "2026-08-31T07:22Z",
+        "phase": "Phase 2",
+        "kind": "note",
+        "text": "Deploy run 33367402207 at Phase 2 pricing merge ec09709f completed successfully. The merged manifest prices all 894 required activities at 6,576 total XP; this remains implementation evidence, not Phase 2 closure or learner serving.",
+        "writer": "INCEPT event projection"
+      },
+      "repository_event": {
+        "ts": "2026-08-31T07:21Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #749 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33367402207",
+        "writer": "repository-event automation"
       },
       "evidence": [
         {
           "type": "current-blueprint-main",
-          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/ea721a32c1ff"
+          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/550496a0947d36c45df39e20358ce977ab8a51d9"
         },
         {
           "type": "tier-1-fix-round",
@@ -729,9 +743,8 @@
         {
           "type": "e3-wiring-change",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/916",
-          "state": "open",
-          "head": "dcdb81754b04ea344231bf826e907eba656cb454",
-          "checks": "SUCCESS"
+          "state": "merged",
+          "merge_commit": "e2d920423f4b5878d9aa6212386ba533aac62d51"
         },
         {
           "type": "phase-0.2-source-capture",
@@ -747,6 +760,29 @@
           "head": "7dd28738439c17f66ddd1b7135720ce58167750a",
           "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6",
           "observed_at": "2026-08-31T04:37:22Z"
+        },
+        {
+          "type": "phase-2-activity-pricing",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/930",
+          "state": "merged",
+          "merge_commit": "ec09709f021ef0937c8b7d2d19cc6315c900e305",
+          "required_activities": 894,
+          "total_xp": 6576,
+          "manifest_digest_prefix": "019094aa"
+        },
+        {
+          "type": "tier-2-round-1-attestation",
+          "accepted_distinct": 975,
+          "requested": 1003,
+          "duplicates": 0,
+          "factory_terminal_topics": 2,
+          "observed_at": "2026-08-31T06:43:58Z"
+        },
+        {
+          "type": "pre-qti-bank-validation",
+          "position_leg": "FAIL_ALL_THREE_BANKS_NONBLOCKING_UNTIL_PLAN_SEAL",
+          "length_legs": "PASS",
+          "observed_at": "2026-08-31T04:43:43Z"
         },
         {
           "type": "a-168-serving-merge",
@@ -772,7 +808,7 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-31T04:37:22Z"
+      "status_at": "2026-08-31T07:13:05Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
@@ -1186,7 +1222,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture is merged in PR #917, and the Phase 1 tree/refusal-validator implementation is merged in PR #923 as 10b1900c. PR #916 remains the separate open E3 wiring change. The implementation merge alone does not close Phase 1 or establish publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture is merged in PR #917, Phase 1 tree/refusal-validator implementation is merged in PR #923, advisory E3 wiring is merged in PR #916, and Phase 2 pricing implementation is merged in PR #930. Those implementation landings do not by themselves close a phase or establish publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1209,14 +1245,14 @@
         }
       ],
       "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T04:37:22Z"
+      "observed_at": "2026-08-31T07:13:05Z"
     },
     {
       "claim_id": "apwh.ls_qc_ready",
       "section": "APWH",
       "status": "BLOCKED",
-      "status_at": "2026-08-31T04:37:22Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Phase 0.2 source capture is merged in PR #917, and the Phase 1 tree work merged in PR #923 as 10b1900c. PR #916 remains the separate open E3 wiring change. The merge alone supplies neither Phase 1 closure nor an LS disposition; tier 2 is authorized but remains a separate QC campaign, and issue #290 remains open.",
+      "status_at": "2026-08-31T07:13:05Z",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Source capture is merged in PR #917, Phase 1 tree work is merged in PR #923, advisory E3 wiring is merged in PR #916, and Phase 2 pricing is merged in PR #930. The merges supply neither phase closure nor an LS disposition. Tier-2 round 1 drained as separate QC evidence, and issue #290 remains open.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1233,8 +1269,14 @@
         {
           "type": "e3-wiring-change",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/916",
-          "state": "open",
-          "checks": "SUCCESS"
+          "state": "merged",
+          "merge_commit": "e2d920423f4b5878d9aa6212386ba533aac62d51"
+        },
+        {
+          "type": "phase-2-activity-pricing",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/930",
+          "state": "merged",
+          "merge_commit": "ec09709f021ef0937c8b7d2d19cc6315c900e305"
         },
         {
           "type": "article-alternates-gap",

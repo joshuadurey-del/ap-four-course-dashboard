@@ -376,6 +376,42 @@ def select_updates(items, state, existing_updates, observed_at, inventory, local
     return updates, decisions, next_state, bootstrap
 
 
+def sync_course_state(data, public_updates):
+    """Project attested activity into display state without minting lifecycle credit."""
+    claims = {row.get("claim_id"): row for row in data.get("claims", []) if isinstance(row, dict)}
+    stamps = []
+    for course in COURSES:
+        claim = claims.get(f"{course}.blueprint.audit")
+        if not isinstance(claim, dict):
+            raise RuntimeError(f"DASHBOARD_PRIMARY_CLAIM_MISSING: {course}")
+        rows = [row for row in public_updates if isinstance(row, dict)
+                and str(row.get("course", "")).lower() == course]
+        typed = [row for row in rows if isinstance(row.get("phase"), str)
+                 and isinstance(row.get("kind"), str)]
+        repository = [row for row in rows if isinstance(row.get("event_type"), str)
+                      and isinstance(row.get("evidence_url"), str)]
+        if typed:
+            latest = max(typed, key=lambda row: row["ts"])
+            claim["current_event"] = {
+                field: latest[field] for field in ("ts", "phase", "kind", "text", "writer")
+            }
+        if repository:
+            latest = max(repository, key=lambda row: row["ts"])
+            claim["repository_event"] = {
+                field: latest[field]
+                for field in ("ts", "event_type", "text", "evidence_url", "writer")
+            }
+        for field in ("current_event", "repository_event"):
+            if isinstance(claim.get(field), dict):
+                stamps.append(claim[field].get("ts"))
+        stamps.append(claim.get("observed_at") or claim.get("status_at"))
+    parsed = [dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+              for value in stamps if isinstance(value, str)]
+    if not parsed:
+        raise RuntimeError("DASHBOARD_SNAPSHOT_UNMEASURED")
+    data["snapshot"] = max(parsed).strftime("%Y-%m-%dT%H:%MZ")
+
+
 def run_key(observed_at):
     run = os.environ.get("GITHUB_RUN_ID") or observed_at.strftime("%Y%m%dT%H%M%SZ")
     attempt = os.environ.get("GITHUB_RUN_ATTEMPT") or "local"
@@ -399,6 +435,8 @@ def prepare(transaction_path):
     updates, decisions, next_state, bootstrap = select_updates(
         items, state, existing_updates, observed_at, inventory, local_items,
     )
+    data_path = Path("data.json")
+    data = json.loads(data_path.read_text(encoding="utf-8"))
     current_needs_human = json.loads(NEEDS_HUMAN_PATH.read_text(encoding="utf-8"))
     needs_human, needs_human_status, needs_human_changed = select_needs_human_document(
         incoming_needs_human, current_needs_human,
@@ -425,6 +463,8 @@ def prepare(transaction_path):
     if updates:
         combined = sorted(updates + public, key=lambda row: row["ts"], reverse=True)
         public_path.write_text(json.dumps(combined, indent=2) + "\n")
+        sync_course_state(data, combined)
+        data_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
     if needs_human_changed:
         NEEDS_HUMAN_PATH.write_text(
             json.dumps(needs_human, sort_keys=True, ensure_ascii=True, indent=1) + "\n",
@@ -498,6 +538,22 @@ def selftest():
     )
     assert len(capped) == MAX_PUBLIC_UPDATES
     assert cursor_hash("local", many_local[-1]["delivery_id"]) not in capped_state["local_seen"]
+    data = {"snapshot": "2026-08-29T00:00Z", "claims": [
+        {"claim_id": f"{course}.blueprint.audit", "status_at": "2026-08-29T00:00Z"}
+        for course in COURSES
+    ]}
+    public_rows = [
+        {"ts": "2026-08-29T02:00Z", "course": "apwh", "phase": "Phase 2",
+         "kind": "merged", "text": "Pricing landed.", "writer": "INCEPT event projection"},
+        {"ts": "2026-08-29T02:01Z", "course": "apwh", "event_type": "pull_request",
+         "text": "Pull request merged.", "evidence_url": "https://github.com/example/apwh/pull/1",
+         "writer": "repository-event automation"},
+    ]
+    sync_course_state(data, public_rows)
+    apwh = next(row for row in data["claims"] if row["claim_id"] == "apwh.blueprint.audit")
+    assert apwh["current_event"]["phase"] == "Phase 2"
+    assert apwh["repository_event"]["event_type"] == "pull_request"
+    assert data["snapshot"] == "2026-08-29T02:01Z"
     projection = {
         "schema": "needs-human-public/v1", "generated_ts": "2026-08-29T02:30:00Z",
         "open": [{"id": "a" * 16, "ts": "2026-08-29T02:00:00Z", "course": "humgeo",

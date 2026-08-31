@@ -63,6 +63,19 @@ for claim_id in ('humgeo.blueprint.audit', 'apwh.blueprint.audit', 'apush.bluepr
     assert all(isinstance(step[field], str) and step[field].strip() for field in ('verb', 'tool', 'gate')), f'{claim_id} has invalid next_step'
     assert isinstance(step['args'], list) and all(isinstance(arg, str) for arg in step['args']), f'{claim_id} has invalid args'
     assert isinstance(claim.get('freshness_limit_hours'), int) and claim['freshness_limit_hours'] > 0, f'{claim_id} needs freshness limit'
+    current = claim.get('current_event')
+    if current is not None:
+        assert isinstance(current, dict) and set(current) == {'ts', 'phase', 'kind', 'text', 'writer'}, f'{claim_id} has invalid current_event fields'
+        assert current['writer'] in writers and current['kind'] in {'landed', 'merged', 'filed', 'closed', 'receipt-sealed', 'state-change', 'milestone', 'hold', 'executor-step', 'note'}, f'{claim_id} has invalid current_event authority'
+        assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z', current['ts']) and isinstance(current['phase'], str) and isinstance(current['text'], str) and current['text'].strip(), f'{claim_id} has invalid current_event value'
+        assert not any(token in current['text'] for token in ('/Users/', 'file://', '-----BEGIN', 'ghp_', 'github_pat_')), f'{claim_id} current_event crosses the public boundary'
+    repository = claim.get('repository_event')
+    if repository is not None:
+        assert isinstance(repository, dict) and set(repository) == {'ts', 'event_type', 'text', 'evidence_url', 'writer'}, f'{claim_id} has invalid repository_event fields'
+        assert repository['writer'] == 'repository-event automation' and repository['event_type'] in {'push', 'pull_request', 'issues', 'release', 'workflow_run', 'repository'}, f'{claim_id} has invalid repository_event authority'
+        assert re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z', repository['ts']) and isinstance(repository['text'], str) and repository['text'].strip(), f'{claim_id} has invalid repository_event value'
+        url = urllib.parse.urlparse(repository['evidence_url'])
+        assert url.scheme == 'https' and url.hostname == 'github.com' and url.path.strip('/'), f'{claim_id} has invalid repository_event URL'
 
 with open('process.json') as f:
     process = json.load(f)
