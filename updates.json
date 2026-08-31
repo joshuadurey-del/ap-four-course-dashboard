@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T05:43Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1833 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33360681566",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T05:42Z",
     "course": "psych",
     "phase": "",
