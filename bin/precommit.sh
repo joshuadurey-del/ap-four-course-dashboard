@@ -106,6 +106,29 @@ if [ -n "$SKIP_CLAIMS_LINT" ]; then
   echo "pre-commit: claims lint SKIPPED by SKIP_CLAIMS_LINT"
 elif ! echo "$STAGED" | grep -qx 'data.json'; then
   echo "pre-commit: claims lint not needed (data.json unchanged)"
+elif [ "$DASHBOARD_AUTOMATION_PROJECTION" = "1" ]; then
+  python3 - <<'PY' || exit 1
+import json
+import subprocess
+
+def load(spec):
+    return json.loads(subprocess.check_output(['git', 'show', spec]))
+
+def formal(document):
+    document.pop('snapshot', None)
+    for claim in document.get('claims', []):
+        if claim.get('claim_id') in {
+            'humgeo.blueprint.audit', 'apwh.blueprint.audit',
+            'apush.blueprint.audit', 'psych.blueprint.audit',
+        }:
+            claim.pop('current_event', None)
+            claim.pop('repository_event', None)
+    return document
+
+assert formal(load('HEAD:data.json')) == formal(load(':data.json')), \
+    'automation may update only snapshot/current_event/repository_event'
+print('CLAIMS OK: automation changed display projection only; formal claims are byte-identical')
+PY
 elif [ ! -f "$LINT" ]; then
   echo "pre-commit: BLOCKED — claims linter not found at $LINT."
   echo "  Set INCEPT_ZONE, or commit with SKIP_CLAIMS_LINT=1 and say so in the message."

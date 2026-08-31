@@ -56,7 +56,9 @@ IDs are persisted with the dashboard cursor. Local `backfill` rows baseline as
 NOOP. A semantic update commits `updates.json` and `data.json` in the same
 transaction; the overview and course pages then render the same attested event.
 The formal lifecycle fields remain manual. The dashboard snapshot uses evidence
-time, not workflow or commit time.
+time, not workflow or commit time. On Actions, precommit proves the formal claim
+bytes are unchanged and permits only `snapshot`, `current_event`, and
+`repository_event`; local claim curation still runs the full claims linter.
 
 Phase B replaces `SOURCE_REPO_READ_TOKEN` repo by repo with short-lived,
 read-only GitHub App installation tokens. External real-time webhook ingress is

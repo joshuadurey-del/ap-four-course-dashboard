@@ -55,6 +55,8 @@ jobs:
 
       - name: Commit and push semantic updates
         id: publish
+        env:
+          DASHBOARD_AUTOMATION_PROJECTION: "1"
         run: |
           git add data.json updates.json needs-human.json automation/poller-state.json
           if git diff --cached --quiet; then
