@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 12:35 KST',
+  snapshot: 'Aug 31, 2026 · 12:42 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -187,18 +187,27 @@ const formatNextStep = (value, fallback) => {
 
 const processFrontier = value => {
   if (!value || !Array.isArray(value.stages) || !value.stages.length ||
-      value.stages.some(stage => typeof stage?.automated !== 'boolean')) return null;
+      value.stages.some(stage => typeof stage?.automated !== 'boolean' || typeof stage.id !== 'string' ||
+        typeof stage.name !== 'string' || typeof stage.contract_status !== 'string' ||
+        !Array.isArray(stage.required_artifacts) || stage.required_artifacts.some(item => typeof item !== 'string'))) return null;
   return {
     automated: value.stages.filter(stage => stage.automated).length,
     total: value.stages.length,
     measured: parsedTime(value.generated_utc),
+    stages: value.stages,
   };
+};
+
+const automationGap = stage => {
+  if (stage.automated) return { tone: 'is-automated', label: 'Automated', next: 'Contract and complete replay evidence are present.' };
+  if (stage.contract_status === 'COMPLETE') return { tone: 'needs-proof', label: 'Proof needed', next: 'Seal a complete end-to-end replay receipt.' };
+  return { tone: 'needs-contract', label: 'Contract + proof needed', next: 'Close the process contract, then seal a complete end-to-end replay receipt.' };
 };
 
 const make = (tag, className, text) => {
   const node = document.createElement(tag);
   if (className) node.className = className;
-  if (text !== undefined) node.textContent = text;
+  if (text !== undefined) node.textContent = globalThis.AP4_PUBLIC_TEXT ? globalThis.AP4_PUBLIC_TEXT(text) : text;
   return node;
 };
 
@@ -219,7 +228,10 @@ const renderNeedsHuman = (root, result, now) => {
   const list = make('div', 'needs-human-items');
   result.items.forEach(item => {
     const row = make('article', 'needs-human-item');
-    row.append(make('span', 'needs-human-course', item.course));
+    const course = AP4_DASHBOARD.courses.find(candidate => candidate.id === item.course);
+    const chip = make('span', 'needs-human-course', item.course);
+    chip.style.setProperty('--course-color', course?.color || '#56647a');
+    row.append(chip);
     const copy = make('div', 'needs-human-copy');
     copy.append(make('strong', '', item.title));
     const meta = make('span', '', `${ageLabel(parsedTime(item.ts), now)} · ${item.deadline ? `Deadline ${item.deadline}` : 'No deadline'}`);
@@ -233,9 +245,29 @@ const renderNeedsHuman = (root, result, now) => {
 const renderFrontier = (root, processValue, now) => {
   const frontier = processFrontier(processValue);
   root.className = `automation-frontier ${frontier ? '' : 'is-hold'}`.trim();
-  const title = make('strong', '', frontier ? `${frontier.automated} of ${frontier.total} process steps automated` : 'Automation frontier unavailable');
-  const note = make('span', '', frontier ? `Requirements-only · measured ${ageLabel(frontier.measured, now)}` : 'process.json is missing or untyped');
-  root.replaceChildren(title, note);
+  if (!frontier) {
+    root.replaceChildren(make('strong', '', 'Automation frontier unavailable'), make('span', '', 'process.json is missing or untyped'));
+    return;
+  }
+  const details = make('details', 'automation-frontier-details');
+  const summary = make('summary', 'automation-frontier-summary');
+  const automated = frontier.stages.filter(stage => stage.automated);
+  summary.append(
+    make('strong', '', `${frontier.automated} of ${frontier.total} process steps automated`),
+    make('span', '', `Automated: ${automated.map(stage => `${stage.id} · ${stage.name}`).join(', ')} · measured ${ageLabel(frontier.measured, now)}`),
+  );
+  const rule = make('p', 'automation-frontier-rule', `To reach ${frontier.total} of ${frontier.total}, every stage needs a COMPLETE contract and complete end-to-end replay evidence.`);
+  const list = make('div', 'automation-step-list');
+  frontier.stages.forEach(stage => {
+    const gap = automationGap(stage);
+    const row = make('article', `automation-step ${gap.tone}`);
+    const head = make('div', 'automation-step-head');
+    head.append(make('strong', '', `${stage.id} · ${stage.name}`), make('span', 'automation-step-status', gap.label));
+    row.append(head, make('p', '', gap.next), make('small', '', `Requires: ${stage.required_artifacts.join(' · ')}`));
+    list.append(row);
+  });
+  details.append(summary, rule, list);
+  root.replaceChildren(details);
 };
 
 const renderCourseCards = (root, data, updates, now) => {
@@ -292,9 +324,10 @@ const boardSelftest = () => {
   if (validateNeedsHuman({ ...good, open: [{ ...item, title: 'x'.repeat(141) }] }, now).status !== 'hold') throw new Error('oversized title did not hold');
   if (validateNeedsHuman({ ...good, extra: true }, now).status !== 'hold') throw new Error('unexpected field did not hold');
   if (formatNextStep({ verb: 'resume', tool: 'factory-course-run', args: ['humgeo'], gate: 'the picker is runnable' }, 'fallback') === 'fallback') throw new Error('typed next step failed');
+  if (automationGap({ automated: false, contract_status: 'COMPLETE' }).label !== 'Proof needed') throw new Error('automation gap self-test failed');
 };
 
-globalThis.AP4_BOARD = { ageLabel, formatNextStep, processFrontier, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
+globalThis.AP4_BOARD = { ageLabel, automationGap, formatNextStep, processFrontier, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
 
 (() => {
   const courses = AP4_DASHBOARD.courses;

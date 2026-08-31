@@ -8,10 +8,33 @@
   const local = ms => new Date(ms).toLocaleString(undefined, {
     year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
   });
-  const displayText = text => text
+  const displayText = text => String(text)
     .replace(/\bilmych\/apush-build-outputs\b/gi, 'the APUSH build-outputs repository')
-    .replace(/\bIlma's\b/gi, "the repository owner's")
-    .replace(/\bIlma\b|\bilmych\b/gi, 'the repository owner');
+    .replace(/\bIlma['’]s\b/gi, "the repository owner's")
+    .replace(/\bIlma\b|\bilmych\b/gi, 'the repository owner')
+    .replace(/\bJayesh call\b/gi, 'review call')
+    .replace(/\bJayesh['’]s\b/gi, "the reviewer's")
+    .replace(/\bJayesh\b/gi, 'the reviewer');
+
+  const scrubPeople = root => {
+    const scrubText = node => {
+      if (!node.parentElement?.closest('script, style, noscript')) node.data = displayText(node.data);
+    };
+    if (root.nodeType === Node.TEXT_NODE) {
+      scrubText(root);
+      return;
+    }
+    if (root.nodeType !== Node.ELEMENT_NODE || root.matches('script, style, noscript')) return;
+    [root, ...root.querySelectorAll('[aria-label], [title], [alt]')].forEach(element => {
+      ['aria-label', 'title', 'alt'].forEach(attribute => {
+        if (element.hasAttribute(attribute)) element.setAttribute(attribute, displayText(element.getAttribute(attribute)));
+      });
+    });
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) scrubText(node);
+  };
+
+  globalThis.AP4_PUBLIC_TEXT = displayText;
 
   const evidenceUrl = value => {
     try {
@@ -54,6 +77,7 @@
 
   if (typeof document === 'undefined') {
     if (displayText('Ilma') !== 'the repository owner') throw new Error('display text self-test failed');
+    if (displayText('Jayesh and Ilma asked Josh') !== 'the reviewer and the repository owner asked Josh') throw new Error('personal-name policy self-test failed');
     if (!evidenceUrl('https://github.com/example/course/commit/abc')) throw new Error('evidence URL self-test failed');
     if (evidenceUrl('https://example.com/not-allowed')) throw new Error('unsafe URL self-test failed');
     if (newestLocal([{ course: 'psych', kind: 'landed', ts: '2026-08-29T00:00Z' }], 'psych')?.kind !== 'landed') throw new Error('local freshness self-test failed');
@@ -66,6 +90,10 @@
     if (summary.landings7d !== 2 || summary.openHolds !== 1 || summary.gateDays !== 2) throw new Error('rate summary self-test failed');
     return;
   }
+
+  scrubPeople(document.body);
+  new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(scrubPeople)))
+    .observe(document.documentElement, { childList: true, subtree: true });
 
   const lists = [...document.querySelectorAll('[data-update-list]')];
   if (!lists.length) return;

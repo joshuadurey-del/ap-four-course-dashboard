@@ -217,6 +217,7 @@
   <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 
   <script type="module">
+    await import(`./updates.js?v=${Date.now()}`);
     await import(`./timeline.js?v=${Date.now()}`);
     const AP4_DASHBOARD = window.AP4_DASHBOARD;
     const formatTimestamp = value => {
