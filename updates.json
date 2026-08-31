@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T03:26Z",
+    "course": "apwh",
+    "phase": "QC campaigns",
+    "kind": "state-change",
+    "text": "Tier-2 1,003-item shape-defect fix campaign AUTHORIZED by Josh in incept-63 (verbatim: 'this seems like a high leverage move, no? if so, yes, let's do it' \u2014 conditional on high-leverage, affirmed). Spend decision cleared; timing/slots stay with coordinator incept-79 (relayed msg f592eeeb); execution lane per board = APWH defect-fix seat. Tier-1 PR-open still parked on Josh's typed line in that seat's own window.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-08-31T03:23Z",
     "course": "psych",
     "phase": "",
