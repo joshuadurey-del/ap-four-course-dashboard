@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T11:39Z",
+  "snapshot": "2026-08-31T15:01Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -428,10 +428,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T09:06Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #751 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33375357130",
+        "ts": "2026-08-31T12:48Z",
+        "event_type": "issues",
+        "text": "ap-one issue #924 comment-created.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/924#issuecomment-5478594637",
         "writer": "repository-event automation"
       }
     },
@@ -740,10 +740,10 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-08-31T08:30Z",
+        "ts": "2026-08-31T15:01Z",
         "phase": "",
         "kind": "milestone",
-        "text": "Gauntlet wave 2: 3 APWH articles all serve-ready YES, middle tier above APES sample, below Lit/Psych (grok blind deck); gap = no on-page practice (partly format split, F16) + Phase-3 footer strip. Receipts out/gauntlet-20260831/ (w2-apwh-*)",
+        "text": "tier-2 QC chain COMPLETE at wt fb04b7c2: verify 12/12; A-168 0 malformed (~60 receipts); persona 2,099/2,101 (2 = dual-form instrument gap); oracle 94 PASS / 5 FAIL (3 pre-existing + A-071/A-081 disclosed-overlap pair t03-04/t07-05); A-087 FAIL->MISSING per T049b precedent; suite 379 passed. Books: 910 retirements (42 withdrawn on measured supply), 485 seated. Blueprint commit b1eb088",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

@@ -1,5 +1,293 @@
 [
   {
+    "ts": "2026-08-31T15:01Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "tier-2 QC chain COMPLETE at wt fb04b7c2: verify 12/12; A-168 0 malformed (~60 receipts); persona 2,099/2,101 (2 = dual-form instrument gap); oracle 94 PASS / 5 FAIL (3 pre-existing + A-071/A-081 disclosed-overlap pair t03-04/t07-05); A-087 FAIL->MISSING per T049b precedent; suite 379 passed. Books: 910 retirements (42 withdrawn on measured supply), 485 seated. Blueprint commit b1eb088",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T14:57Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1857 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33405474029",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T14:55Z",
+    "course": "cross",
+    "text": "ap-one pull request #936 opened at 3960d199.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/936",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:59Z",
+    "course": "cross",
+    "text": "ap-one workflow run #380 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33399853094",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:57Z",
+    "course": "cross",
+    "text": "ap-one workflow run #757 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33397546112",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:43Z",
+    "course": "cross",
+    "text": "ap-one workflow run #379 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33398464577",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:42Z",
+    "course": "cross",
+    "text": "ap-one workflow run #756 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33395972341",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:39Z",
+    "course": "cross",
+    "text": "ap-one workflow run #378 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33398042183",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:38Z",
+    "course": "cross",
+    "text": "ap-one workflow run #754 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33394889906",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:32Z",
+    "course": "cross",
+    "text": "ap-one repository activity: delete.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:32Z",
+    "course": "cross",
+    "text": "ap-one pull request #933 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/933",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:32Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #294 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33396349256",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:30Z",
+    "course": "cross",
+    "text": "ap-one workflow run #377 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33397181621",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:28Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1856 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33395698665",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:28Z",
+    "course": "cross",
+    "text": "ap-one workflow run #755 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33394938346",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:24Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #625 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33396349236",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:19Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1854 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33394871473",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:19Z",
+    "course": "cross",
+    "text": "incept-test-builder commit 14081ad1.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/commit/14081ad1359ccdce43bf9df013e0c6b06f965a76",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:19Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1855 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33394925004",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:15Z",
+    "course": "cross",
+    "text": "ap-one pull request #929 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/929",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:12Z",
+    "course": "cross",
+    "text": "ap-one commit d356effc.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/d356effc1cd8d983beee6fffa3323cb3fbf9a9a7",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:04Z",
+    "course": "cross",
+    "text": "ap-one workflow run #376 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33394910959",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:04Z",
+    "course": "cross",
+    "text": "ap-one pull request #935 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/935",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:03Z",
+    "course": "cross",
+    "text": "ap-one pull request #935 opened at 07259361.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/935",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:03Z",
+    "course": "cross",
+    "text": "ap-one workflow run #753 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33393623909",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:03Z",
+    "course": "cross",
+    "text": "ap-one pull request #934 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/934",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:03Z",
+    "course": "cross",
+    "text": "ap-one pull request #934 opened at 8dfd8dd9.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/934",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:03Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T13:02Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1853 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33393590098",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:58Z",
+    "course": "cross",
+    "text": "ap-one workflow run #375 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33394342002",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:57Z",
+    "course": "cross",
+    "text": "ap-one workflow run #752 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33393586667",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:48Z",
+    "course": "cross",
+    "text": "ap-one pull request #926 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/926",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:48Z",
+    "course": "humgeo",
+    "text": "ap-one issue #924 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/924#issuecomment-5478594637",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:48Z",
+    "course": "cross",
+    "text": "ap-one pull request #933 opened at 8dc16167.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/933",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:48Z",
+    "course": "cross",
+    "text": "ap-one pull request #925 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/925",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T12:47Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T12:21Z",
     "course": "cross",
     "phase": "",
@@ -29,6 +317,14 @@
     "text": "apush-course-build issue #9 unlabeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:58Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5477358317",
     "writer": "repository-event automation"
   },
   {
@@ -154,6 +450,14 @@
   {
     "ts": "2026-08-31T10:09Z",
     "course": "cross",
+    "text": "ap-one commit 2146b53b.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/2146b53be6ee1aa1fe79bd2ef39d4b7a8998dc6c",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:09Z",
+    "course": "cross",
     "text": "ap-one workflow run #1851 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33379978742",
@@ -205,6 +509,14 @@
     "text": "apush-course-build issue #9 unlabeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:53Z",
+    "course": "cross",
+    "text": "ap-one commit e5ca3590.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/e5ca35909dd31b933415c81467017d1c365425e2",
     "writer": "repository-event automation"
   },
   {
@@ -853,6 +1165,14 @@
     "text": "ap-one issue #919 comment-created.",
     "event_type": "issues",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919#issuecomment-5475362067",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T07:46Z",
+    "course": "cross",
+    "text": "ap-one commit a888879c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/a888879c5774e636fee670f3c347ec9b42bbc061",
     "writer": "repository-event automation"
   },
   {
