@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = window.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 11:23 KST',
+  snapshot: 'Aug 31, 2026 · 11:28 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -27,8 +27,8 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'Phase 4 · OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:02Z',
-      landed: 'Phases 0-3 — receipts in hand · Phase 4 authority — resolved · Real-base build — deterministic twice · Position correction — PR #918 merged',
+      status: 'Phase 4 · OPEN', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:18Z',
+      landed: 'Phases 0-3 — receipts in hand · Phase 4 authority — resolved · Real-base build — deterministic twice · Position correction — deployed and staging-verified',
       nextStep: 'Fleet closes the native-asset plan-builder gap in issue #919; resolve the 71 video-cue content decisions, then seal Phase 4. Phase 5 read-only capture is next.',
       footprint: [
         { value: '440/440', label: 'operator-receipt article-check position' },
@@ -38,7 +38,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
       etaDays: 'PHASE 4 OPEN',
       etaNote: 'Phases 0-3 are closed. Phase 4 authority and the real-base rebuild are complete; plan-builder machinery and 71 video-cue content decisions remain. Phase 6 remains the first platform write and requires a separate go.',
       phaseStates: [
-        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'OPEN', detail: 'P4-1 authority is resolved and P4-2 is done. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder. Seventy-one video-cue content decisions remain.' }
+        { code: 'P4', name: 'Seal the publication plan', state: 'active', status: 'OPEN', detail: 'P4-1 authority is resolved and P4-2 is done. PR #918 is deployed and independently staging-verified. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder. Seventy-one video-cue content decisions remain.' }
       ]
     },
     {
@@ -58,16 +58,16 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)',
-      status: 'Pre-runbook · CONTENT PRODUCTION', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:03Z',
-      landed: 'Wave-3 article production — fleet-side · Positions 52 and 53 — articles_ready · Successor replay — inconclusive, no verdict against 11 · Ledger — 49 accepted / 200 pending',
-      nextStep: 'Fleet resumes serially at position 54 and resolves the successor replay mismatch, then rebuilds the acceptance ledger after the wave. The publication runbook has not started.',
+      status: 'Pre-runbook · CONTENT PRODUCTION', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 02:22Z',
+      landed: 'Wave-3 article production — resumed serially · Positions 52 and 53 — articles_ready · Successor reconciliation — 11/11 PASS · Next-phase plan and baseline instruments — prepared',
+      nextStep: 'Fleet proceeds serially from position 54. When the wave is quiet, the reconciled manifests authorize a gated seating PR; the acceptance ledger rebuild follows the wave. The publication runbook has not started.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
         { value: '53', label: 'latest serial wave position terminal' },
         { value: '54', label: 'next fleet-side position' }
       ],
       phaseStates: [
-        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Positions 52 and 53 reached articles_ready. Fleet resumes serially at 54; successor replay remains inconclusive with no verdict against the 11 articles. The runbook begins only after the wave lands and the ledger rebuilds.' }
+        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Positions 52 and 53 reached articles_ready and the fleet is running serially. Successor reconciliation passes 11/11 at current course-build origin/main. The next-phase plan, profile draft, Phase 2 pricing model, and Phase 1.3/3.4 baseline instruments are prepared; final values and owner-only fields remain pending.' }
       ]
     },
     {
@@ -98,7 +98,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
         { gate: 5, state: 'closed', status: 'Closed', signal: 'Phase 1 course tree receipted', copy: 'The Phase 1 mapping receipt is in hand; this row no longer reports the older open-census snapshot.', href: 'humgeo.html' },
         { gate: 6, state: 'closed', status: 'Done', signal: '3,633 served practice-key items measured', copy: 'The receipt measures 3,167 at 1 XP and 466 at 2 XP, plus a 403-item demo snapshot at 356/47. The demo tree has zero XP fields. Resource-level base XP remains unmeasured locally and binds in the Phase 4 plan.', href: 'claims.html#claim-humgeo.blueprint.audit' },
         { gate: 7, state: 'closed', status: 'Closed', signal: 'Assets + QTI + 3.6 validation + 3.7 preview closed', copy: 'Phase 3 is closed on its receipts. The 71 video-cue calls now belong to the Phase 4 owner decision, not unfinished Phase 3 credit.', href: 'https://github.com/InceptTrilogy/ap-one/pull/913' },
-        { gate: 8, state: 'active', status: 'Phase 4 open', signal: 'Authority resolved · real-base build done · plan builder missing', copy: 'P4-1 and P4-2 are complete. The answer-position correction merged in PR #918; issue #919 records the missing native-asset plan builder. Seventy-one video-cue content decisions remain before sealing.', href: 'https://github.com/InceptTrilogy/ap-one/issues/919' }
+        { gate: 8, state: 'active', status: 'Phase 4 open', signal: 'Authority resolved · real-base build done · plan builder missing', copy: 'P4-1 and P4-2 are complete. The PR #918 correction is deployed and independently staging-verified at c1086cfc; issue #919 records the missing native-asset plan builder. Seventy-one video-cue content decisions remain before sealing.', href: 'https://github.com/InceptTrilogy/ap-one/issues/919' }
       ]
     },
     apwh: {
@@ -113,7 +113,7 @@ const AP4_DASHBOARD = window.AP4_DASHBOARD = {
     },
     apush: {
       title: 'Existing work mapped to the runbook lifecycle',
-      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Positions 52 and 53 reached articles_ready; fleet resumes serially at 54. Successor replay is inconclusive and supplies no verdict against the 11 articles. The runbook begins after the wave lands and the acceptance ledger rebuilds.',
+      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Positions 52 and 53 reached articles_ready and the fleet is running serially. Successor reconciliation passes 11/11 and authorizes a gated seating PR when the wave is quiet. The runbook begins after the wave lands and the acceptance ledger rebuilds.',
       rows: [
         { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '249-position blueprint · 4 recorded deviations', copy: 'The design reconciliation belongs with scope lock, but it is preparation rather than a current implementation crosswalk.', href: 'claims.html' },
         { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,480 candidates · 249 ledger positions', copy: 'The candidate queue is complete, but candidate-budget completeness is not factory-QC or learner-readiness proof.', href: 'claims.html' },

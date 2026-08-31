@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T02:09Z",
+  "snapshot": "2026-08-31T02:23Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -281,7 +281,7 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "IN_PROGRESS",
-      "value": "HumGeo Phases 0-3 are closed on current receipts. In Phase 4, P4-1 authority is resolved and P4-2 completed a deterministic real-base build twice. The answer-position correction merged in AP One PR #918. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain before the plan can seal. Phase 5 is next and read-only. Phase 6 is the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
+      "value": "HumGeo Phases 0-3 are closed on current receipts. In Phase 4, P4-1 authority is resolved and P4-2 completed a deterministic real-base build twice. The AP One PR #918 correction is deployed and independently staging-verified at c1086cfc. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain before the plan can seal. Phase 5 is next and read-only. Phase 6 is the first platform write and waits for a separate owner go; Phases 7-9 are not started.",
       "scope": "current HumGeo runbook position through P4-3; excludes private authority values, the missing plan-builder implementation, unresolved video content decisions, Phase 5 live-state capture, platform writes, activation, learner acceptance, and release",
       "evidence": [
         {
@@ -352,13 +352,21 @@
           "merge_commit": "c1086cfcf22aa32f8f19cb1dd9855c474b795f73"
         },
         {
+          "type": "answer-position-correction-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33348972020",
+          "commit": "c1086cfcf22aa32f8f19cb1dd9855c474b795f73",
+          "staging_image": "94cc7ce7",
+          "observed_at": "2026-08-31T02:18:36Z",
+          "status": "DEPLOY_GREEN_STAGING_READBACK_MATCHED"
+        },
+        {
           "type": "native-asset-plan-builder-gap",
           "url": "https://github.com/InceptTrilogy/ap-one/issues/919",
           "state": "open"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-31T02:02:25Z"
+      "status_at": "2026-08-31T02:18:36Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -715,7 +723,7 @@
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
       "status": "IN_PROGRESS",
-      "value": "APUSH remains in pre-runbook fleet-side content production. Positions 52 and 53 each reached articles_ready after one durable submission and terminal readback; the fleet resumes serially at position 54. The exact 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds. A Phase 1.3/3.4 baseline record exists, but its population is not assembled. Successor replay remains inconclusive due a strict-QC mismatch and supplies no verdict against the 11 articles.",
+      "value": "APUSH remains in pre-runbook fleet-side content production. Positions 52 and 53 each reached articles_ready after one durable submission and terminal readback, and the fleet is running serially. The exact 249-position ledger remains 49 accepted and 200 pending until the wave finishes and the ledger rebuilds. Successor reconciliation passes 11/11 at current course-build origin/main; the earlier refusals were local runtime configuration, not evidence against the articles. The next-phase plan, profile draft, Phase 2 pricing model, and Phase 1.3/3.4 baseline instruments are prepared; final values and owner-only fields remain pending. The reconciled manifests authorize a gated seating PR when the wave is quiet.",
       "scope": "current APUSH fleet-side content-production wave and acceptance ledger; excludes runbook phase entry, learner implementation, publication, and release",
       "evidence": [
         {
@@ -730,12 +738,12 @@
         },
         {
           "type": "successor-replay-diagnostic",
-          "observed_at": "2026-08-31T02:07:35Z",
-          "status": "INCONCLUSIVE_NO_ARTICLE_VERDICT"
+          "observed_at": "2026-08-31T02:17:41Z",
+          "status": "COMPLETE_11_OF_11_PASS"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T02:03:33Z"
+      "observed_at": "2026-08-31T02:22:56Z"
     },
     {
       "claim_id": "psych.blueprint.audit",

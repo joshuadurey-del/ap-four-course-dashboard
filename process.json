@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-08-31T02:09Z",
+ "generated_utc": "2026-08-31T02:23Z",
  "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
  "sources": [
   "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
@@ -399,8 +399,8 @@
    "label": "AP Human Geography",
    "current_stage": "G (Phase 4)",
    "state": "OPEN \u2014 seal publication plan",
-   "as_of": "2026-08-31T02:02:25Z",
-   "detail": "Phases 0-3 are closed. P4-1 authority is resolved and P4-2 is done. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain. Phase 5 is next and read-only."
+   "as_of": "2026-08-31T02:18:36Z",
+   "detail": "Phases 0-3 are closed. P4-1 authority is resolved and P4-2 is done. PR #918 is deployed and independently staging-verified at c1086cfc. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain. Phase 5 is next and read-only."
   },
   "apwh": {
    "label": "AP World History",
@@ -413,8 +413,8 @@
    "label": "AP US History",
    "current_stage": "C (pre-runbook content production)",
    "state": "IN_PROGRESS \u2014 fleet wave",
-   "as_of": "2026-08-31T02:03:33Z",
-   "detail": "Wave-3 articles run fleet-side behind their own QC. Positions 52 and 53 reached articles_ready and the fleet resumes serially at 54. Successor replay remains inconclusive with no verdict against the 11 articles. The runbook starts after the wave lands and the 249-position acceptance ledger rebuilds."
+   "as_of": "2026-08-31T02:22:56Z",
+   "detail": "Wave-3 articles run fleet-side behind their own QC. Positions 52 and 53 reached articles_ready and the fleet is running serially. Successor reconciliation passes 11/11 at current course-build origin/main. The next-phase plan, profile draft, Phase 2 pricing model, and Phase 1.3/3.4 baseline instruments are prepared; final values and owner-only fields remain pending. A gated seating PR waits for a quiet wave, and the 249-position ledger rebuild follows the wave."
   },
   "psych": {
    "label": "AP Psychology",
