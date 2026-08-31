@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-08-31T11:39Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T11:33Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T11:03Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T10:58Z",
     "course": "apush",
     "phase": "",
@@ -157,6 +181,14 @@
     "text": "apush-course-build issue #9 unlabeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:48Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476635449",
     "writer": "repository-event automation"
   },
   {
