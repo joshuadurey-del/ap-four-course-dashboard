@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T04:45Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #744 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33357737908",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T04:43Z",
     "course": "apwh",
     "phase": "Phase 1.3/3.4",
@@ -988,6 +996,14 @@
     "kind": "landed",
     "text": "Needs-a-human machinery landed on the Fable seat: tools/needs_human.py (ledger + public projection + selftest), SessionStart banner and Stop nudge hooks registered in live and canonical settings. Board redesign plan written; Codex worker prompt staged for the dashboard rebuild (exception strip, freshness decay, typed next steps, attested rows, rate tiles, frontier strip).",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T02:19Z",
+    "course": "apwh",
+    "text": "ap-one commit 1014fc18.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/1014fc185de392dceda23c42cc111cf18e00341e",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-08-31T02:18Z",
