@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T05:00Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68#issuecomment-5473942413",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T04:56Z",
     "course": "apush",
     "phase": "",
