@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T03:31Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "CORRECTION to row cc4e536d: Tier-1 PRs were already FILED AND MERGED 2026-08-30 (ap-one #912 15:20Z, blueprint #65 14:05Z \u2014 measured live via gh this session). The 'parked on Josh PR-open line' clause was a stale board row (out/afk-board-20260830). No Josh input pending upstream of Tier-2; the authorized campaign has no blocker.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-08-31T03:30Z",
     "course": "humgeo",
     "text": "ap-one issue #922 opened.",
