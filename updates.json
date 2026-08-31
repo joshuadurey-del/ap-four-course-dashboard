@@ -1,9 +1,11 @@
 [
   {
-    "ts": "2026-08-31T06:51Z",
+    "ts": "2026-08-31T06:49Z",
     "course": "humgeo",
     "text": "Phase 4 SEALED: reseal digest a4318c28 and offline gate PASS; PR #928 deployed and staging serves fb04b7c2. Plan builder landed in PR #920; issue #919 is answered and awaits close. Video decisions consumed: 59 authored cues live, 12 no-audio videos remain in #922. Publisher digest pin #893 remains open fleet-side.",
-    "writer": "dashboard curation"
+    "phase": "4",
+    "kind": "receipt-sealed",
+    "writer": "INCEPT event projection"
   },
   {
     "ts": "2026-08-31T06:47Z",
