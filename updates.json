@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T00:54Z",
+    "course": "psych",
+    "phase": "status",
+    "kind": "note",
+    "text": "Psych status + next steps saved to out/psych-runbook-prep-20260830/PSYCH-STATUS-20260831.md (contract states, coverage numbers, acceptance-instrument route, 4 ordered next steps). Orchestrator handoff written: HANDOFF-20260831-ORCHESTRATOR-NEXT.md (registry rules, landed list, live triggers, Josh's open decisions)."
+  },
+  {
     "ts": "2026-08-31T00:51Z",
     "course": "apush",
     "phase": "",
