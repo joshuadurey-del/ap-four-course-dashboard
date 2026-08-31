@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T15:01Z",
+  "snapshot": "2026-08-31T17:28Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,10 +740,10 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-08-31T15:01Z",
+        "ts": "2026-08-31T17:28Z",
         "phase": "",
         "kind": "milestone",
-        "text": "tier-2 QC chain COMPLETE at wt fb04b7c2: verify 12/12; A-168 0 malformed (~60 receipts); persona 2,099/2,101 (2 = dual-form instrument gap); oracle 94 PASS / 5 FAIL (3 pre-existing + A-071/A-081 disclosed-overlap pair t03-04/t07-05); A-087 FAIL->MISSING per T049b precedent; suite 379 passed. Books: 910 retirements (42 withdrawn on measured supply), 485 seated. Blueprint commit b1eb088",
+        "text": "tier-2 landing STAGED: blueprint branch apwh-seat/tier2-banking-20260831 @ 76fe02b review-approved (codex 4-round REJECT->APPROVE findings-adopted, grok APPROVE, gemini APPROVE); final books 380 verified retirements / 924 banked / 429 seated; verify 12/12, suite 379, oracle 94 PASS + single t07-05 disclosed-overlap residue; POST blocked by intake gate owner-freshness (2h window) \u2014 awaiting Josh's typed word; commands in landing/STAGED-PR.md",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -942,9 +942,9 @@
       },
       "repository_event": {
         "ts": "2026-08-31T08:19Z",
-        "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #70 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/70",
+        "event_type": "push",
+        "text": "ap-psychology-fall-2025-v1 commit bbb237cc.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/bbb237cc3f57ccf90b020cb7682835fdf129f01a",
         "writer": "repository-event automation"
       }
     },
