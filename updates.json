@@ -1,6 +1,13 @@
 [
   {
     "ts": "2026-08-31T02:22Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "note",
+    "text": "Session close 08-31: fleet wave RESUMED and runs serially (pos 53 articles_ready 02:03Z; issue #9 at 82 comments). Landed this session: next-phase plan, Phase 1.3/3.4 baseline (instruments ready, bank not built), profile draft (production/pp-org1/canary pattern on owner word; term dates + canary identities pending), Phase 2 pricing model, 11/11 successor manifests (blocker was our env). Next: seating PR when wave quiet. Ledger 49 (36+13)/200."
+  },
+  {
+    "ts": "2026-08-31T02:22Z",
     "course": "cross",
     "phase": "",
     "kind": "landed",
