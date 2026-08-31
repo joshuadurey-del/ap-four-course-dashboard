@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-08-31T12:21Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "milestone",
+    "text": "A2 form scan COMPLETE: four deterministic checks population-wide (HumGeo 88 art/440 checks/120 writes @ e18e4587; APWH 172 art/113 writes @ bc903c19; APUSH 826 art @ 98842f41), six positive controls fired. Headlines: APUSH 0/826 checks carry model answers; APWH 0/172 + HumGeo 12/88 articles carry stimulus; HumGeo checks 440/440 four-option (blueprint 3, real exam 5); rubric parity PASS both platform courses. FORM-FIDELITY-*.md in plan dir. $0.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-08-31T11:39Z",
     "course": "apush",
     "text": "apush-course-build issue #9 labeled.",
