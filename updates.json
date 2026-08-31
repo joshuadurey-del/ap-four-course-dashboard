@@ -1,5 +1,19 @@
 [
   {
+    "ts": "2026-08-31T00:48Z",
+    "course": "humgeo",
+    "phase": "4",
+    "kind": "note",
+    "text": "Morning status 08-31: Phase 3 complete and served-verified (PR #911 merged d2cb182f, deploy verified; receipt PR #913 merged 86ba01e5; receipt-merge run: deploy job SKIPPED not-shippable, quality CI green). Stand-down under the one-window rule: no HumGeo outward items staged (orchestrator registry + own sweep agree). Waits on: Josh private authority (content base) for Phase 4 build+seal; 59 cue + 12 content-fix triage calls; fleet plan-builder seam; #213 skew at seal."
+  },
+  {
+    "ts": "2026-08-31T00:48Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "note",
+    "text": "Status 08-31: wave posting is fleet-side; last fleet verdict 08-30 08:08Z (chunk 02: position 50 terminal ContentFactoryQCFailed, 51 in-flight, none later), then a claim at 08:13Z and ~24h quiet. Ledger unchanged: 249 = 49 accepted (36 legacy_dual_review + 13 server_strict) / 200 pending; rebuild comes after all terminals. Terminal fails so far: 45, 50. Owner-side owes nothing; seat parked."
+  },
+  {
     "ts": "2026-08-30T22:41Z",
     "course": "cross",
     "text": "ap-one workflow run #1826 completed: success.",
