@@ -6,7 +6,7 @@ Dashboard display contract:
 - Evidence on a locked state stays evidence; it does not unlock that state.
 */
 const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
-  snapshot: 'Aug 31, 2026 · 14:09 KST',
+  snapshot: 'Aug 31, 2026 · 14:13 KST',
   activeCourse: 'humgeo',
   gates: [
     { id: 0, name: 'Stabilize', canonCode: 'AS', railName: 'Source prep · stabilize', canonName: 'Accepted-source preparation · STABILIZED', state: 'closed', status: 'Closed', detail: 'The six-slot pilot is fully measured: one passing replacement landed, five failures remain preserved, and residual execution is stopped.' },
@@ -59,15 +59,15 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
     {
       id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)',
       status: 'Pre-runbook · CONTENT PRODUCTION', statusTone: 'blue', mapping: 'Runbook-canon lifecycle', observed: 'Aug 31 · 04:54Z',
-      landed: 'Wave-3 article production — serially active · Positions 52, 53, 55-57 — articles_ready · Position 54 — terminal-failed · Profile inputs — clarified',
-      nextStep: 'Fleet continues serially from position 58. When the wave is quiet, seat the 11 reconciled successors, record the terminal-fail count, and rerun bank validation. The publication runbook has not started.',
+      landed: 'Wave-3 article production — serially active · Positions 52, 53, 55-57 — articles_ready · Positions 54 and 58 — terminal-failed · Profile inputs — clarified',
+      nextStep: 'Fleet continues serially from position 59. When the wave is quiet, seat the 11 reconciled successors, record the terminal-fail count, and rerun bank validation. The publication runbook has not started.',
       footprint: [
         { value: '49/249', label: 'accepted ledger positions' },
-        { value: '57', label: 'latest terminal wave position' },
-        { value: '58', label: 'next fleet-side position' }
+        { value: '58', label: 'latest terminal wave position' },
+        { value: '59', label: 'next fleet-side position' }
       ],
       phaseStates: [
-        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Positions 52, 53, and 55-57 reached articles_ready; position 54 terminal-failed and joins earlier terminal failures 45 and 50 for the later regeneration route. The 249-position ledger remains 49 accepted and 200 pending until the wave-end rebuild.' }
+        { code: 'PRE', name: 'Fleet content production', state: 'active', status: 'IN PROGRESS', detail: 'Positions 52, 53, and 55-57 reached articles_ready; positions 54 and 58 terminal-failed and join earlier terminal failures 45 and 50 for the later regeneration route. The 249-position ledger remains 49 accepted and 200 pending until the wave-end rebuild.' }
       ]
     },
     {
@@ -113,12 +113,12 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
     },
     apush: {
       title: 'Existing work mapped to the runbook lifecycle',
-      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; position 54 terminal-failed. The next fleet attempt claimed after position 57. Successor seating, terminal-fail reconciliation, and bank validation wait for wave-quiet.',
+      note: 'APUSH is entirely pre-runbook and still in fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; positions 54 and 58 terminal-failed. Position 59 is next. Successor seating, terminal-fail reconciliation, and bank validation wait for wave-quiet.',
       rows: [
         { gate: 1, state: 'evidence', status: 'Mapped evidence', signal: '249-position blueprint · 4 recorded deviations', copy: 'The design reconciliation belongs with scope lock, but it is preparation rather than a current implementation crosswalk.', href: 'claims.html' },
         { gate: 2, state: 'evidence', status: 'Mapped evidence', signal: '2,480 candidates · 249 ledger positions', copy: 'The candidate queue is complete, but candidate-budget completeness is not factory-QC or learner-readiness proof.', href: 'claims.html' },
         { gate: 3, state: 'evidence', status: 'Mapped evidence', signal: '49 accepted · 200 pending', copy: 'The exact current ledger separates accepted from pending positions without inflating the usable corpus.', href: 'claims.html' },
-        { gate: 3, code: 'PRE', name: 'Fleet content production', label: 'Wave 3', state: 'active', status: 'In progress', signal: 'Positions 52, 53, 55-57 articles_ready · position 54 terminal-failed', copy: 'The serial factory wave is moving. Positions 45, 50, and 54 wait for the later regeneration route; the ledger remains 49 accepted and 200 pending until the wave-end rebuild.', href: 'https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088' }
+        { gate: 3, code: 'PRE', name: 'Fleet content production', label: 'Wave 3', state: 'active', status: 'In progress', signal: 'Positions 52, 53, 55-57 articles_ready · positions 54 and 58 terminal-failed', copy: 'The serial factory wave moves next to position 59. Positions 45, 50, 54, and 58 wait for the later regeneration route; the ledger remains 49 accepted and 200 pending until the wave-end rebuild.', href: 'https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474017817' }
       ]
     },
     psych: {
