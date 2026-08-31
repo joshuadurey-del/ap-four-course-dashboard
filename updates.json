@@ -1082,6 +1082,14 @@
   {
     "ts": "2026-08-31T02:33Z",
     "course": "humgeo",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T02:33Z",
+    "course": "humgeo",
     "text": "ap-one pull request #920 opened at 8e513758.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/920",
