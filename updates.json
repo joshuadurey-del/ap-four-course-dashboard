@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-08-31T06:47Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #914 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/914",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T06:45Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T06:44Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1842 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33364382882",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T06:43Z",
     "course": "apwh",
     "phase": "",
@@ -37,6 +61,22 @@
     "text": "apush-course-build issue #9 labeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T06:39Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68#issuecomment-5474706114",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T06:39Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474705292",
     "writer": "repository-event automation"
   },
   {
@@ -1669,6 +1709,14 @@
     "text": "ap-one workflow run #743 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33353099036",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:33Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 1ed092a4.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/1ed092a4797d2d5888adf3dccc69c28b32251a53",
     "writer": "repository-event automation"
   },
   {
