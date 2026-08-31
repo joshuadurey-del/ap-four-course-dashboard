@@ -7,11 +7,60 @@
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33339186712"
   },
   {
+    "ts": "2026-08-30T22:27Z",
+    "course": "apwh",
+    "phase": "0.2",
+    "kind": "filed",
+    "text": "Phase 0.2 PR POSTED as ap-one#917 (live re-verified OPEN): source capture + admissibility oracle + registry + 4 profile pins, post-review rework included. Route: fresh pr-review receipt on Josh's one-window authorization, ship.py class 2 with the bff gate (9057 passed, 308 skipped, 18m54s); status.d receipt on the branch (8bb8da10). Merge fleet-side; merging party owns the deploy watch. All three claimed posts now landed: ap-one#916, ap-one#917, apwh-blueprint-build#66."
+  },
+  {
     "ts": "2026-08-30T22:14Z",
     "course": "apwh",
     "text": "apwh-blueprint-build issue #66 closed.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/issues/66"
+  },
+  {
+    "ts": "2026-08-30T22:07Z",
+    "course": "apwh",
+    "phase": "pre-0",
+    "kind": "filed",
+    "text": "E3 wiring PR POSTED as ap-one#916 (live re-verified OPEN): advisory carrier in gate_map.json per the fleet-PR-#64 contract. Route: fresh pr-review receipt on Josh's one-window authorization, ship.py class 2 with the bff gate (9040 passed, 308 skipped, 19m01s). Oracle flips quoted lexical-grade; status.d receipt committed on the branch (dcdb8175). Merge is fleet-side; the merging party owns the CONTRIBUTING 6 deploy watch. Companion oracle filing: apwh-blueprint-build#66."
+  },
+  {
+    "ts": "2026-08-30T16:17Z",
+    "course": "apwh",
+    "phase": "0.2",
+    "kind": "note",
+    "text": "Phase 0.2 REWORKED after two-lane review (codex + grok, both REJECT; all findings adopted): commit amended 68431931 -> 5ae6adb4. Capture now freezes PP100 (4,078), real article-body digests (176), practice answers, writing prompts, mock FRQs, mcq_rationales, gate_map served surface, and all evidence/source docs; catalog org+term embedded. New delivery_package_sha256 fd0ce453..., 13 probes green, ingest suite 4,531 passed. Adjudicated APPROVE; PR still STAGED on a fresh typed owner word."
+  },
+  {
+    "ts": "2026-08-30T15:50Z",
+    "course": "apwh",
+    "phase": "0.2",
+    "kind": "milestone",
+    "text": "Phase 0.2 landed locally on fixed bytes at ap-one main 34e507f6: deterministic source capture (delivery_package_sha256 18da8ccd...), fail-closed admissibility oracle + registry, audit admissible over 5 banks (1988 members, 933 items, 55 mock MCQs, 645 keys, 113 writing tasks), 4 profile fields filled, consumer pins recompute from live bytes, 5 mutation probes green, ingest suite 4523 passed. Commit 68431931. PR + push STAGED, deferred on a fresh typed owner word."
+  },
+  {
+    "ts": "2026-08-30T14:36Z",
+    "course": "humgeo",
+    "phase": "3.3",
+    "kind": "milestone",
+    "text": "71-video content triage measured (input: this session's tail census; full-file silencedetect, positive-controlled): 59 videos have an earlier in-video silence window admitting the 0.521s floor with the build's own placement rule (median 1.7s narration would follow the unlock \u2014 content decision); 12 videos (~20s each) have ZERO detected silence anywhere and need trim/re-render or an authored cue. Verdicts: out/humgeo-phase3-assets-20260830/video-triage/triage-verdicts.json."
+  },
+  {
+    "ts": "2026-08-30T14:36Z",
+    "course": "humgeo",
+    "phase": "4",
+    "kind": "note",
+    "text": "Phase 4 offline prep written: committed course profile located (native_timeback_course_profile.json, sha bf3695db, factory-owned \u2014 not re-authored); committed publication route (corridor->materialize) verified at bytes to carry ONLY the frozen 68-gate slice; plan skeleton with digests + dependency-order rows drafted, DEFERRED fields named (content base = Josh private authority; plan-builder for the native asset layer = fleet-side seam)."
+  },
+  {
+    "ts": "2026-08-30T14:22Z",
+    "course": "apwh",
+    "phase": "pre-0",
+    "kind": "landed",
+    "text": "E3 facet-split bar wired as an advisory-practice-routing carrier in gate_map.json (runtime-inert: loaders read course_id/count/lessons only). Oracle flips A-055/A-056/A-060 MISSING->PASS and A-057 vacuous->WIRED ADVISORY PASS (4 safe carriers, 0 unsafe, 0 gates at the 0.70 placeholder); A-113 stays MISSING (fleet oracle-shape conflict with A-001/A-051/A-052 + the manifest validator). Full sweep 99 PASS / 30 MISSING / 3 pre-existing FAIL vs 96/33/3 baseline. wh registry suite 11 passed. PR deferr"
   },
   {
     "ts": "2026-08-30T14:16Z",
