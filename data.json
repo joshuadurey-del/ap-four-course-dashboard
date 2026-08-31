@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T09:19Z",
+  "snapshot": "2026-08-31T10:58Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -886,17 +886,17 @@
       "evidence_access": "PRIVATE_GITHUB",
       "observed_at": "2026-08-31T05:11:17Z",
       "current_event": {
-        "ts": "2026-08-31T08:02Z",
+        "ts": "2026-08-31T10:58Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Gauntlet wave 1: 4 accepted articles blind-reviewed vs APES bar. Both server_strict samples carry authoring apparatus in student text (data-retrieval-role, Year:2026, writer vocab \u2014 byte-verified); legacy samples clean of it, content quibbles only. Golden-bar pack built; no prior-year course repo reachable (74 org repos checked). Receipts out/gauntlet-20260831/",
+        "kind": "filed",
+        "text": "Pipeline-stamp finding relayed to the fleet: comment 5477358317 on apush-course-build#9 (data-retrieval-role in 162/162 unit9 review/acceptance family files vs 0/664 canary @ build-outputs 98842f41; gated draft shown to Josh, posted on his typed word). Fix is fleet-side; scan receipts in out/article-quality-plan-20260831/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T09:18Z",
+        "ts": "2026-08-31T10:58Z",
         "event_type": "issues",
-        "text": "apush-course-build issue #9 comment-created.",
-        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476303916",
+        "text": "apush-course-build issue #9 labeled.",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
         "writer": "repository-event automation"
       }
     },

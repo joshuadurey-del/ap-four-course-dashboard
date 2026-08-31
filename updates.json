@@ -1,5 +1,221 @@
 [
   {
+    "ts": "2026-08-31T10:58Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "filed",
+    "text": "Pipeline-stamp finding relayed to the fleet: comment 5477358317 on apush-course-build#9 (data-retrieval-role in 162/162 unit9 review/acceptance family files vs 0/664 canary @ build-outputs 98842f41; gated draft shown to Josh, posted on his typed word). Fix is fleet-side; scan receipts in out/article-quality-plan-20260831/.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T10:58Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:58Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:45Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:37Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:35Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:32Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:31Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:27Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:25Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:25Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:24Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1852 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33381119890",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:24Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:09Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1851 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33379978742",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:08Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476833711",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:08Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:08Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1850 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33379918120",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:06Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:06Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476811048",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T10:03Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:45Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:45Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476605102",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:43Z",
+    "course": "cross",
+    "text": "ap-one workflow run #21 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33378397885",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:39Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:38Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:37Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T09:37Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T09:19Z",
     "course": "humgeo",
     "phase": "",
@@ -109,6 +325,14 @@
     "text": "apush-course-build issue #9 labeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T08:51Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5476029070",
     "writer": "repository-event automation"
   },
   {
@@ -661,6 +885,14 @@
     "text": "apush-course-build issue #9 labeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T07:26Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1",
     "writer": "repository-event automation"
   },
   {
@@ -1529,6 +1761,14 @@
   },
   {
     "ts": "2026-08-31T05:56Z",
+    "course": "cross",
+    "text": "ap-one pull request #929 opened at 2146b53b.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/929",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:56Z",
     "course": "humgeo",
     "text": "humgeo-rebuild issue #68 unlabeled.",
     "event_type": "issues",
@@ -1749,6 +1989,22 @@
     "text": "apush-course-build issue #9 comment-created.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474196400",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:33Z",
+    "course": "cross",
+    "text": "ap-one pull request #926 opened at 2e210e24.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/926",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T05:33Z",
+    "course": "cross",
+    "text": "ap-one pull request #925 opened at e5ca3590.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/925",
     "writer": "repository-event automation"
   },
   {
@@ -2616,6 +2872,14 @@
     "writer": "INCEPT event projection"
   },
   {
+    "ts": "2026-08-31T03:55Z",
+    "course": "apwh",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T03:52Z",
     "course": "cross",
     "text": "ap-one issue #921 comment-created.",
@@ -2893,6 +3157,14 @@
     "text": "ap-psychology-fall-2025-v1 commit c79f80d9.",
     "event_type": "push",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/c79f80d9b6f1b0005beb38f1dd2296bcf7b6d590",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T03:12Z",
+    "course": "cross",
+    "text": "ap-one commit 464b093f.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/464b093f32bf9cf48a051837e2099200e42d758e",
     "writer": "repository-event automation"
   },
   {
@@ -4011,6 +4283,22 @@
     "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/64",
     "text": "incept-agent-intake issue #64 closed.",
     "ts": "2026-08-29T10:04Z",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-29T04:48Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build commit dc1c3f75.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/commit/dc1c3f7569aee75513afb4f8d769620262ea2db4",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-29T04:41Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build",
     "writer": "repository-event automation"
   },
   {
