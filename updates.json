@@ -1,10 +1,66 @@
 [
   {
-    "ts": "2026-08-31T04:37Z",
-    "course": "cross",
-    "text": "ap-one commit 10b1900c.",
-    "event_type": "push",
-    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/10b1900c0453eda45917923c78c6a632eb84c8a6",
+    "ts": "2026-08-31T04:43Z",
+    "course": "apwh",
+    "phase": "Phase 1.3/3.4",
+    "kind": "milestone",
+    "text": "Pre-QTI bank validation run at main 10b1900c, factory instruments only. Length legs PASS all banks (correct-is-longest 16.75%/19.63%/27.27% vs 25% baseline). Key-position leg FAIL all three: gate_members 1988 chi2 237.6 (A 38%), lesson_items 698-slice chi2 333.7 (A 52.3%), mock 55 chi2 27.1 (B 54.5%). Same class as HumGeo skew; fix precedents #918 rotation + serve-shuffle; adjudication at plan seal. 235/933 keys UNMEASURED (not on preview surface).",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-08-31T04:42Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68#issuecomment-5473824961",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:42Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:42Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:42Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:42Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:39Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:39Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
     "writer": "repository-event automation"
   },
   {
@@ -14,6 +70,86 @@
     "kind": "state-change",
     "text": "Phase 1 implementation refresh: PR #923 merged as 10b1900c. The dashboard keeps Phase 1 in progress until the governed runner supplies its next attested state; the merge alone earns no closure or later lifecycle credit.",
     "writer": "dashboard curation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "humgeo",
+    "text": "ap-one issue #922 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "cross",
+    "text": "ap-one issue #921 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/921",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "cross",
+    "text": "ap-one issue #921 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/921",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #68 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:38Z",
+    "course": "cross",
+    "text": "ap-one commit c054c7ce.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/c054c7ce6939d630d7de33bf09e2151b3d83eb5f",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T04:37Z",
+    "course": "cross",
+    "text": "ap-one commit 10b1900c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/10b1900c0453eda45917923c78c6a632eb84c8a6",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-08-31T04:37Z",
