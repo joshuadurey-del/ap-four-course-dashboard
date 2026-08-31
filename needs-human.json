@@ -1,21 +1,13 @@
 {
- "generated_ts": "2026-08-31T04:27:58Z",
+ "generated_ts": "2026-08-31T04:28:49Z",
  "open": [
   {
    "course": "cross",
    "deadline": "",
-   "id": "cee725bee159dbe7",
+   "id": "73d1cff7ba8c7d26",
    "kind": "scope",
    "title": "Assigned issue 2 needs a routing decision",
-   "ts": "2026-08-31T04:27:57Z"
-  },
-  {
-   "course": "humgeo",
-   "deadline": "",
-   "id": "1daec35ec995f56d",
-   "kind": "scope",
-   "title": "Assigned issue 3 needs a routing decision",
-   "ts": "2026-08-31T04:27:58Z"
+   "ts": "2026-08-31T04:28:49Z"
   }
  ],
  "schema": "needs-human-public/v1"
