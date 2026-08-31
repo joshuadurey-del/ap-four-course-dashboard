@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T07:22Z",
+  "snapshot": "2026-08-31T07:28Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -151,7 +151,12 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical four-course review-readiness snapshot superseded by current per-course lifecycle claims; original blocked verdict retained.",
-      "superseded_by": ["humgeo.ls_qc_ready", "apwh.ls_qc_ready", "apush.ls_qc_ready", "psych.ls_qc_ready"],
+      "superseded_by": [
+        "humgeo.ls_qc_ready",
+        "apwh.ls_qc_ready",
+        "apush.ls_qc_ready",
+        "psych.ls_qc_ready"
+      ],
       "value": "BLOCKED across all four courses in this same-window reconciliation. HumGeo lacks the complete publisher/learner path on open issue #659; APWH lacks a current full course-dir accepted-source verdict; APUSH exact ledger bytes are build-only with no live wiring or rendering; Psychology's exact-SHA audit finds no assembled student-safe MCQ HTML and blocks narrow-width review. LS REVIEW READY remains a handoff definition, not a current course or release outcome.",
       "scope": "same-window representative reviewer-path readiness across HumGeo, APWH, APUSH, and Psychology; excludes course completion and release",
       "evidence": [
@@ -210,7 +215,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical gate receipt superseded by the current native-runbook HumGeo state.",
-      "superseded_by": ["humgeo.blueprint.audit"],
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ],
       "value": "Live GitHub readback confirms PR #66 remains merged as e16aebeb96957f1d498d21e0eda6a7c033e51399 and current HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 is two commits ahead with zero commits behind. This preserves the historical Gate 2 amendment in canonical ancestry. The prior verifier counts remain dated receipt evidence; this refresh did not rerun that production verifier and makes no later-phase claim.",
       "scope": "historical Gate 2 amendment retention in current canonical ancestry; excludes a fresh Gate 2 verifier run, current article-check state, publication, learner visibility, and release",
       "evidence": [
@@ -234,7 +241,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Accepted-source closure is retained as history and superseded by the current lifecycle claim.",
-      "superseded_by": ["humgeo.blueprint.audit"],
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ],
       "value": "Current HumGeo main is still the exact PR #67 merge 8495d75929f2e25d6f7fa50fc24ce3d47481a887. The opened Gate 3 closure receipt hashes to b7845917c690f39f4568c1efa7006be3d08f0df6fbc0c14d97780d16d9ce713e and records SOURCE_ACCEPTED with 70 of 70 accepted placements and zero remaining, failed, nonterminal, or unmeasured records. This is accepted-source closure only; it does not prove current article-check completion or any native publication outcome.",
       "scope": "Gate 3 accepted-source closure on exact HumGeo main; excludes current P1-04 residue, TimeBack writes, publication, learner acceptance, and release",
       "evidence": [
@@ -259,7 +268,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Profile-and-source closure is retained as history and superseded by the current lifecycle claim.",
-      "superseded_by": ["humgeo.blueprint.audit"],
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ],
       "value": "Live AP One ancestry confirms PR #851 merge e46586c39c0ad0075c0cf45952f1f91503118d51 is retained in current main 79f3b5b75c4fd85c461cb8c144a9b3f8569bb7fe, 27 commits ahead and zero behind. The opened Gate 4 closure receipt hashes to 941a3bcb92fe9c9940a6eb809f27370a8477b8c07996d92bf5c8e6d6290327ce and records PROFILE_AND_SOURCE_BOUND. This refresh preserves that bounded closure without asserting that the receipt's former next-gate text is still current.",
       "scope": "Gate 4 profile and Phase 0 source closure retained in current AP One ancestry; excludes current P1-04 state and every publication, enrollment, activation, learner, and release outcome",
       "evidence": [
@@ -408,7 +419,21 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-31T06:51:23Z"
+      "status_at": "2026-08-31T06:51:23Z",
+      "current_event": {
+        "ts": "2026-08-31T06:49Z",
+        "phase": "4",
+        "kind": "receipt-sealed",
+        "text": "Phase 4 SEALED: reseal digest a4318c28 and offline gate PASS; PR #928 deployed and staging serves fb04b7c2. Plan builder landed in PR #920; issue #919 is answered and awaits close. Video decisions consumed: 59 authored cues live, 12 no-audio videos remain in #922. Publisher digest pin #893 remains open fleet-side.",
+        "writer": "INCEPT event projection"
+      },
+      "repository_event": {
+        "ts": "2026-08-31T07:06Z",
+        "event_type": "issues",
+        "text": "humgeo-rebuild issue #68 unlabeled.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/68",
+        "writer": "repository-event automation"
+      }
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -718,7 +743,7 @@
         "ts": "2026-08-31T07:22Z",
         "phase": "Phase 2",
         "kind": "note",
-        "text": "Deploy run 33367402207 at Phase 2 pricing merge ec09709f completed successfully. The merged manifest prices all 894 required activities at 6,576 total XP; this remains implementation evidence, not Phase 2 closure or learner serving.",
+        "text": "Deploy run 33367402207 at merge commit ec09709f completed SUCCESS (scope check success, deploy job success, quality skipped) \u2014 recorded per CONTRIBUTING section 6, same shape as the #917/#923 precedent rows.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -859,7 +884,21 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T05:11:17Z"
+      "observed_at": "2026-08-31T05:11:17Z",
+      "current_event": {
+        "ts": "2026-08-31T05:11Z",
+        "phase": "pre-runbook content production",
+        "kind": "state-change",
+        "text": "Position 58 submitted once and terminal-failed after deterministic factory QC exhausted. It joins positions 45, 50, and 54 for the later regeneration route; the serial wave proceeds to position 59. The acceptance ledger remains unchanged until the wave-end rebuild.",
+        "writer": "dashboard curation"
+      },
+      "repository_event": {
+        "ts": "2026-08-31T07:28Z",
+        "event_type": "issues",
+        "text": "apush-course-build issue #9 labeled.",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+        "writer": "repository-event automation"
+      }
     },
     {
       "claim_id": "psych.blueprint.audit",
@@ -893,7 +932,21 @@
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER+LOCAL_INCEPT_EVENT",
-      "status_at": "2026-08-30T14:10Z"
+      "status_at": "2026-08-30T14:10Z",
+      "current_event": {
+        "ts": "2026-08-31T05:51Z",
+        "phase": "",
+        "kind": "note",
+        "text": "CORRECTION to row 980b14e9: Jayesh's route DOES wire the external grader. Bio publish trees carry ExternalApiScore -> coreapi.inceptstore.com/cs-autograder/score on FRQs (24 hits, verified in sparse clone). Psych residue = which grader endpoint + cert (PR #20). Still runbook-only: sealed plan + zero-write replay, dark-first/canary/activation discipline, profile authority record. XP wiring: zero hits, UNMEASURED.",
+        "writer": "INCEPT event projection"
+      },
+      "repository_event": {
+        "ts": "2026-08-31T07:26Z",
+        "event_type": "pull_request",
+        "text": "ap-psychology-fall-2025-v1 pull request #69 opened at f81eeba3.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/69",
+        "writer": "repository-event automation"
+      }
     },
     {
       "claim_id": "cross.recovery.audit",
@@ -902,7 +955,12 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Point-in-time recovery audit superseded by current per-course claims.",
-      "superseded_by": ["humgeo.blueprint.audit", "apwh.blueprint.audit", "apush.blueprint.audit", "psych.blueprint.audit"],
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.blueprint.audit",
+        "psych.blueprint.audit"
+      ],
       "value": "The exact recovery register at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb still contains 25 rows: 2 VALID_FACTORY_PROOF, 8 SALVAGEABLE_INPUT_ONLY, 5 FACTORY_REEARN_REQUIRED, 6 VOID, and 4 UNKNOWN_BLOCKED. This is an immutable historical classification, not a current course-state or completion verdict.",
       "scope": "historical 25-row recovery classification at exact evidence-repo SHA; excludes current course state and release readiness",
       "evidence": [
@@ -921,7 +979,12 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Point-in-time machinery audit superseded by current per-course claims.",
-      "superseded_by": ["humgeo.blueprint.audit", "apwh.blueprint.audit", "apush.blueprint.audit", "psych.blueprint.audit"],
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.blueprint.audit",
+        "psych.blueprint.audit"
+      ],
       "value": "The exact historical purge manifest at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb enumerates P1 through P16 hand-rolled machinery classes and states that deletion requires owner approval. Current INCEPT rules give those local tools no factory-proof authority and require committed factory routes. This claim does not assert that the inventoried files were deleted or that their present filesystem state was checked.",
       "scope": "historical P1-P16 machinery inventory plus current factory-first authority rule; excludes current filesystem removal status",
       "evidence": [
@@ -945,7 +1008,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical generation-wave proof superseded by the current landed asset state.",
-      "superseded_by": ["humgeo.bank374"],
+      "superseded_by": [
+        "humgeo.bank374"
+      ],
       "value": "Live GitHub readback preserves the historical Gate 0 record: PRs #55 and #56 are merged, PR #57 is closed unmerged, and issue #44 remains open with label autopilot:attention and no assignee. Current HumGeo main is later accepted-source commit 8495d75929f2e25d6f7fa50fc24ce3d47481a887. This row reports PR/issue history only and gives no current P1-04, writer, bank, or release verdict.",
       "scope": "historical Gate 0 PR disposition and present issue #44 metadata; excludes current writer absence, P1-04 state, bank state, and release",
       "evidence": [
@@ -977,7 +1042,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical rescreen receipt superseded by the current native-runbook validation state.",
-      "superseded_by": ["humgeo.ls_qc_ready"],
+      "superseded_by": [
+        "humgeo.ls_qc_ready"
+      ],
       "value": "Live PR #43 remains merged as be18d12db835b3fab55043536910a134a1102504. Current issue #44 separately records 429 fingerprint-bound passing rows and a 332-row residual disposition. This preserves the bounded historical admission and residual split; it does not re-run per-item QC, establish current factory verdicts, or authorize the residual campaign.",
       "scope": "historical PR #43 admission plus the separately tracked 332-row residual queue; excludes fresh per-item QC and execution authority",
       "evidence": [
@@ -1150,7 +1217,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical missing sweep snapshot superseded by the current accepted-source ledger.",
-      "superseded_by": ["apwh.blueprint.audit"],
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ],
       "value": "MISSING: issue #48 remains closed and preserves a historical 933-item acceptance narrative, but the cited PR #9 and commit 1d59042235117bddbd0a2065baf2b2d68359c0a1 do not resolve in the current APWH remotes. Current canon also excludes that local ceremony from accepted-source proof. No current canonical serialized-bank receipt was identified, so the historical population is not re-dated as current.",
       "scope": "historical 933-item serialized population and its current canonical resolvability; excludes accepted-source closure and learner serving",
       "evidence": [
@@ -1175,7 +1244,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical missing-QC snapshot superseded by the current accepted-source ledger.",
-      "superseded_by": ["apwh.blueprint.audit"],
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ],
       "value": "MISSING: the closed issue #48 comment reports two passing legs over 933 identities, but its cited merged ref no longer resolves in the current remote and the 2026-08-27 APWH canon assigns the local Faultless Bar campaign no publication-proof weight. Without a current canonical factory receipt, exact item agreement and acceptance remain historical assertions only.",
       "scope": "historical 933-item acceptance receipt and current factory provenance; excludes accepted-source closure, QTI parity, and learner acceptance",
       "evidence": [
@@ -1199,7 +1270,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "The owner retired the Platform3 route for this greenfield course; the historical blocked verdict is retained without carrying it into the native-runbook state.",
-      "superseded_by": ["apwh.blueprint.audit"],
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ],
       "value": "BLOCKED: four validated APWH study-skills lessons wait for a Platform3 write window under open issue #591. The evidence-gated write is one of two owner-side levers on accepted source and may move A-210 plus A-203's length leg. It does not enter Phase 0 or supply later lifecycle credit.",
       "scope": "APWH study-skills placement authority and current issue disposition; excludes accepted-source closure and learner/reviewer visibility",
       "evidence": [
@@ -1308,7 +1381,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical missing generated-QC snapshot superseded by the current build-output state.",
-      "superseded_by": ["apush.ls_qc_ready"],
+      "superseded_by": [
+        "apush.ls_qc_ready"
+      ],
       "value": "MISSING: the stale dashboard row cites only an owner-direction sentence for 2,479 generation-QC candidates and provides no resolvable current factory receipt. Current canon preserves that number as bounded historical source evidence but explicitly does not treat it as native QTI, display, persisted-result, or accepted-source proof. This task did not locate a same-scope live verifier, so the count is not re-dated.",
       "scope": "current factory provenance for the historical 2,479 generation-QC candidate assertion; excludes hosted-grader existence and native publication readiness",
       "evidence": [
@@ -1545,7 +1620,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical zero-yield snapshot superseded by the landed Unit 5 assessment set.",
-      "superseded_by": ["psych.u5"],
+      "superseded_by": [
+        "psych.u5"
+      ],
       "status_at": "2026-08-27T08:45Z",
       "value": "The exact historical EBQ canary receipt was opened and hash-bound this session: it records two admitted items, zero closed buckets, and no job IDs. Live GitHub readback confirms factory issue #248 closed through merged PR #249, while current factory main is 9da35978d34f781fb2f0692235564aae2fccd078. The engine-fix evidence does not prove current served-bank admission or QC, and the missing stable job identity prevents the required direct factory service readback. The old EBQ milestone therefore remains BLOCKED, with no retry or generation action authorized.",
       "scope": "historical EBQ canary receipt and factory engine-fix provenance; excludes current served-bank contents, current item QC, accepted-source closure, and publication readiness",
@@ -1576,7 +1653,9 @@
       "settled": true,
       "settled_at": "2026-08-30T04:19Z",
       "settlement_reason": "Historical provenance snapshot superseded by the current course-main claim.",
-      "superseded_by": ["psych.blueprint.audit"],
+      "superseded_by": [
+        "psych.blueprint.audit"
+      ],
       "observed_at": "2026-08-27T08:45Z",
       "value": "Live GitHub API readback at Psychology main 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb confirms issue #14 remains closed. The factory-owner comment states that the served bank was produced through the same generation API exposed by Content Factory and that generation includes that API's QC. This establishes the origin asserted for the historical 2026-08-16 1,105-bucket scan only; current bank counts, current per-item QC, accepted-source admission, and publication readiness remain unmeasured.",
       "scope": "factory-generation origin of the historical 2026-08-16 served-bank scan; excludes current bank contents/counts, current per-item QC, accepted-source closure, and publication readiness",
