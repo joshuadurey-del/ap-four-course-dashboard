@@ -1,8 +1,57 @@
 [
   {
+    "ts": "2026-08-31T02:17Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Successor reconciliation COMPLETE: 11/11 positions PASS the sanctioned position-slice reconciler at course-build origin/main (full succ-chain replay each run). Earlier refusals were OUR runtime: two unset factory env overrides (APUSH_OUTPUTS_ROOT, APUSH_WORKTREES_ROOT \u2014 second one needs the two pinned hole-filler deploy checkouts, materialized locally commit-exact) plus output filename pattern. Articles and fleet reseal fully exonerated. Manifests authorize the later gated seating PR."
+  },
+  {
+    "ts": "2026-08-31T02:17Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #741 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33348972020"
+  },
+  {
     "ts": "2026-08-31T02:09Z",
     "course": "cross",
     "text": "Retro and Agent data reconciled to current evidence: HumGeo Phase 4 authority and rebuild advanced with the plan-builder gap filed; APWH Phase 1 Leg A measurements landed without claiming closure; APUSH wave positions 52 and 53 reached articles_ready while successor replay remains inconclusive; Psychology remains at the same factory-QC boundary. Historical corpus counts were retained at their dated snapshots rather than re-dated."
+  },
+  {
+    "ts": "2026-08-31T02:08Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1828 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33348925039"
+  },
+  {
+    "ts": "2026-08-31T02:08Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472824162"
+  },
+  {
+    "ts": "2026-08-31T02:08Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T02:08Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919#issuecomment-5472823808"
+  },
+  {
+    "ts": "2026-08-31T02:08Z",
+    "course": "humgeo",
+    "text": "ap-one issue #919 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/919"
   },
   {
     "ts": "2026-08-31T02:07Z",
