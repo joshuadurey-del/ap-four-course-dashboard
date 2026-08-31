@@ -1,5 +1,47 @@
 [
   {
+    "ts": "2026-08-31T01:48Z",
+    "course": "apush",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Phase 1.3/3.4 baseline validation record written (runbook 32d079c2): instruments verified ready (engine chi-square + ap-one audits at live bytes; course-native module ABSENT for APUSH); population NOT yet assembled \u2014 211/249 articles pending on the fleet wave, MCQ freeze canary-scale, no sealed bank at build-outputs main 98842f41. Bank-wide pre-QTI report re-arms after wave terminal + MCQ freeze."
+  },
+  {
+    "ts": "2026-08-31T01:44Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #918 opened at 4e3c9367.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/918"
+  },
+  {
+    "ts": "2026-08-31T01:43Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T01:43Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5472674667"
+  },
+  {
+    "ts": "2026-08-31T01:41Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
+    "ts": "2026-08-31T01:41Z",
+    "course": "apush",
+    "text": "apush-course-build issue #9 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9"
+  },
+  {
     "ts": "2026-08-31T01:36Z",
     "course": "apush",
     "phase": "",
