@@ -1,5 +1,12 @@
 [
   {
+    "ts": "2026-08-31T01:11Z",
+    "course": "humgeo",
+    "phase": "4",
+    "kind": "milestone",
+    "text": "P4-1 RESOLVED + P4-2 DONE same hour. Authority values measured from the factory's deployed stack ApOne-TimebackContent (committed infra timeback-content-stack.ts): content base + bucket; bucket confirmed serving aplang/+aplit/ native assets, humgeo/ empty. Authority file seat-side 0600. Real-base build x2 deterministic (self-sha cc49f8ff), censuses unchanged, 3.6 pass, 3.7 preview pass. Correction: earlier P4-1 answer pointed at the T7 Shield \u2014 Ilma's drive, wrong route, memory hardened."
+  },
+  {
     "ts": "2026-08-31T01:08Z",
     "course": "cross",
     "text": "Current-state reconciliation: HumGeo Phases 0-3 closed and Phase 4 open; APWH entering Phase 0.2 through PRs #916/#917; APUSH in pre-runbook fleet content production; Psychology content built with factory QC admission blocked. Overview, course pages, claims, retro, and agent data now share these positions."
