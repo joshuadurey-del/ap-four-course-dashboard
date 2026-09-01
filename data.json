@@ -421,10 +421,10 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-09-01T00:58Z",
+        "ts": "2026-09-01T02:26Z",
         "phase": "",
         "kind": "state-change",
-        "text": "Owner ruled ENRICH-FIRST for HumGeo (2026-09-01) + prototype APPROVED + option counts (mocks 5, everything else 4). 72-page enrichment campaign unlocked: manifest + plan on disk, worker briefs via codex-prompt next, paid phase waits on envelope. Publication chain runs once over final bytes, then Phase 6 dark.",
+        "text": "Fleet answered #940 COMPLETE within the hour: official 60-item MCQ section IS usable on the authenticated mock surface \u2014 no 60-item generation needed. Their route: eoc_official_mcq.py --emit in humgeo-rebuild, assemble to mock_exam_bank v2, wire banks.mock_exam in ap-one; fail-closed acceptance incl. five options, no key bytes, zero overlap + semantic near-dup check, authenticated round-trip proof. Mock-section spec updated; generation branch dead; wiring is the remaining work.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
