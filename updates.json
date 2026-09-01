@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T01:46Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 opened.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T01:44Z",
     "course": "apwh",
     "phase": "4",

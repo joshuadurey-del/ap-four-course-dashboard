@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T01:44Z",
+  "snapshot": "2026-09-01T01:46Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -428,10 +428,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T12:48Z",
+        "ts": "2026-09-01T01:46Z",
         "event_type": "issues",
-        "text": "ap-one issue #924 comment-created.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/924#issuecomment-5478594637",
+        "text": "ap-one issue #940 opened.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
         "writer": "repository-event automation"
       }
     },
