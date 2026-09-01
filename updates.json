@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-01T05:53Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "filed",
+    "text": "apwh-blueprint-build PR #69 FILED (head 4e305dae): tier-2 serve-fix inputs matching merged ap-one #939 \u2014 17 M-35 keymap-twin exclusions (+contract broadened), 22 EK-shorthand rewrites, rebuilt receipt + bank. Ceremony: pr-necessity + Gemini review (2 rounds, APPROVE) + pr-review receipt; repo CI green. Merge stopped at merge-gate: 4 suite tests refuse identically on their main (pre-existing E3-expectation drift) \u2014 their lane owns the flip.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T05:45Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build workflow run #56 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33474779873",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:44Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #69 opened at 4e305dae.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/69",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T05:44Z",
     "course": "cross",
     "phase": "",
@@ -85,6 +109,14 @@
     "text": "ap-one workflow run #1871 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33472624253",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:24Z",
+    "course": "apwh",
+    "text": "ap-one commit 539a9e09.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/539a9e09d0a4344040c9f8ff28973eee19d72d36",
     "writer": "repository-event automation"
   },
   {
