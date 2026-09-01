@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T04:39Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "note",
+    "text": "Reconciled ASAP course plans with article-quality THREE-COURSE-PLAN rulings (enrich-first HumGeo, narrowed test-likeness bar, APWH two-wave cut, APUSH fleet-held). RUNBOOK-ASAP v2 final draft: 104 lines with machine-checkable asap_runbook YAML contract (parse-verified) + evidence links. Codex dashboard brief updated; HumGeo orchestrator brief staged (both qa-gate PASS). All DRAFT/staged.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T04:25Z",
     "course": "cross",
     "phase": "",
