@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T04:25Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "note",
+    "text": "RUNBOOK-ASAP.md simplified to 92 lines (Phase 0 CUT per Josh 2026-09-01); per-course live plans added (RUNBOOK-ASAP-{HUMGEO,APWH,APUSH}.md); Codex dashboard brief staged (CODEX-BRIEF-2026-09-01-dashboard-asap-phases.md, qa-gate PASS). All DRAFT/staged \u2014 nothing landed on course repos or dashboard.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T04:16Z",
     "course": "cross",
     "phase": "",
