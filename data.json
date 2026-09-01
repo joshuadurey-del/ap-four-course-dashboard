@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T06:17Z",
+  "snapshot": "2026-09-01T06:44Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T06:17Z",
+        "ts": "2026-09-01T06:44Z",
         "phase": "",
         "kind": "milestone",
-        "text": "humgeo-enrich-20260901 drafting phase complete: 72/72 pages drafted+form-gate PASS; 144 records judged via /v1/qc (126 pass, 18 in orchestrator repair queue); receipts INCEPT/out/humgeo-enrich-20260901/CAMPAIGN-RECEIPT-20260901.md",
+        "text": "humgeo-enrich-20260901 COMPLETE per owner release bar: 144/144 checks judge-pass, 72/72 pages staged on enrich/humgeo-72-20260901 (37b75472), nothing pushed; PR body staged for the landing ceremony",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
