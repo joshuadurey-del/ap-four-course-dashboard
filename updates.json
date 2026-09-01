@@ -1,5 +1,69 @@
 [
   {
+    "ts": "2026-09-01T02:00Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Post-tier-2 re-measure landed: #68 merged build-side (9c53d4c0, +924 banked/+380 retired by manifest); serve-side #939 OPEN \u2014 students still on the pre-tier-2 bank. Spec premise corrected: 794 served / 946 staged members already carry document+attribution; the kind gap is image/graph. Slate staged (SLATE-DESIGN.md). Stub leg PARKED: KC-4.1.VI.iii is a dedup marker over a CED-extraction defect; gap draft staged; $0 spent.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T01:56Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:56Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:56Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 closed.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:56Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940#issuecomment-5487597348",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:52Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:50Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:48Z",
+    "course": "humgeo",
+    "text": "ap-one issue #940 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T01:46Z",
     "course": "humgeo",
     "text": "ap-one issue #940 opened.",
