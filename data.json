@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T06:01Z",
+  "snapshot": "2026-09-01T06:17Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,11 +377,11 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T04:47Z",
-        "phase": "content",
-        "kind": "state-change",
-        "text": "Re-earn: content, ENRICH-FIRST. The 72-page enrichment campaign is live; one publication-chain pass waits for final bytes.",
-        "writer": "dashboard curation"
+        "ts": "2026-09-01T06:17Z",
+        "phase": "",
+        "kind": "milestone",
+        "text": "humgeo-enrich-20260901 drafting phase complete: 72/72 pages drafted+form-gate PASS; 144 records judged via /v1/qc (126 pass, 18 in orchestrator repair queue); receipts INCEPT/out/humgeo-enrich-20260901/CAMPAIGN-RECEIPT-20260901.md",
+        "writer": "INCEPT event projection"
       },
       "repository_event": {
         "ts": "2026-09-01T03:52Z",
@@ -857,9 +857,9 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T05:54Z",
+        "ts": "2026-09-01T06:11Z",
         "event_type": "pull_request",
-        "text": "apush-course-build pull request #16 opened at 64252c70.",
+        "text": "apush-course-build pull request #16 merged at no-sha.",
         "evidence_url": "https://github.com/ilmych/apush-course-build/pull/16",
         "writer": "repository-event automation"
       },
