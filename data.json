@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T13:17Z",
+  "snapshot": "2026-09-01T16:26Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -702,10 +702,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T06:01Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #764 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33474257522",
+        "ts": "2026-09-01T16:26Z",
+        "event_type": "pull_request",
+        "text": "apwh-blueprint-build pull request #69 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/69",
         "writer": "repository-event automation"
       },
       "evidence": [
@@ -858,9 +858,9 @@
       },
       "repository_event": {
         "ts": "2026-09-01T06:11Z",
-        "event_type": "pull_request",
-        "text": "apush-course-build pull request #16 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apush-course-build/pull/16",
+        "event_type": "push",
+        "text": "apush-course-build commit deeaf0c1.",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/commit/deeaf0c190d8905c7a5efe3cb612b899ca190f3c",
         "writer": "repository-event automation"
       },
       "status_at": "2026-09-01T04:47Z"
@@ -908,10 +908,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-08-31T19:00Z",
-        "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #71 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/71",
+        "ts": "2026-09-01T15:37Z",
+        "event_type": "push",
+        "text": "ap-psychology-fall-2025-v1 commit 0bf4205c.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/0bf4205ce5b5f91204144a63a12298125621824a",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

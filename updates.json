@@ -1,5 +1,53 @@
 [
   {
+    "ts": "2026-09-01T16:33Z",
+    "course": "cross",
+    "text": "ap-one workflow run #400 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33532371769",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T16:32Z",
+    "course": "cross",
+    "text": "ap-one workflow run #777 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33529759193",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T16:26Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #69 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/69",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T16:05Z",
+    "course": "cross",
+    "text": "ap-one commit 69741834.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/69741834a75ebfe59adde8e52178a16d8d1ad661",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T16:05Z",
+    "course": "cross",
+    "text": "ap-one pull request #948 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/948",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T15:37Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 0bf4205c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/0bf4205ce5b5f91204144a63a12298125621824a",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T14:47Z",
     "course": "cross",
     "text": "ap-one workflow run #399 completed: failure.",
@@ -21,6 +69,14 @@
     "text": "ap-one workflow run #1886 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33518862790",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T14:25Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 183b2b95.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/183b2b9531cca3907edcfade0f900df2b78bd4d8",
     "writer": "repository-event automation"
   },
   {
@@ -634,6 +690,14 @@
   {
     "ts": "2026-09-01T07:02Z",
     "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:02Z",
+    "course": "cross",
     "text": "ap-one pull request #949 opened at 5b9c40be.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/949",
@@ -706,6 +770,14 @@
   {
     "ts": "2026-09-01T06:37Z",
     "course": "cross",
+    "text": "ap-one commit e7239dc1.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/e7239dc165b306b84cf96c0e5c1c7a9d57f84090",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:37Z",
+    "course": "cross",
     "text": "ap-one pull request #947 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/947",
@@ -754,6 +826,14 @@
   {
     "ts": "2026-09-01T06:24Z",
     "course": "cross",
+    "text": "incept-test-builder commit 6db23450.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/commit/6db234508c3ef4adbc21b89e00c76042b15b8965",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:24Z",
+    "course": "cross",
     "text": "incept-test-builder workflow run #117 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33477345399",
@@ -770,6 +850,14 @@
   {
     "ts": "2026-09-01T06:13Z",
     "course": "cross",
+    "text": "ap-one commit aaa1d9ff.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/aaa1d9ff986cc4f1b549c1a3bbd8d3772977be4d",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:13Z",
+    "course": "cross",
     "text": "ap-one repository activity: delete.",
     "event_type": "repository",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one",
@@ -781,6 +869,14 @@
     "text": "ap-one pull request #943 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/943",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:11Z",
+    "course": "apush",
+    "text": "apush-course-build commit deeaf0c1.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/apush-course-build/commit/deeaf0c190d8905c7a5efe3cb612b899ca190f3c",
     "writer": "repository-event automation"
   },
   {
@@ -853,6 +949,14 @@
     "text": "apwh-blueprint-build workflow run #56 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33474779873",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:44Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build",
     "writer": "repository-event automation"
   },
   {
@@ -1406,6 +1510,14 @@
     "kind": "note",
     "text": "A-087 adjudicated NO-FIX: declared 394 = measured per_item_screen against the rebuilt set (post-#939 preview via blueprint_diff); live-bank 744 was a serve/build skew denominator. Bonus: preview turns the two duplicate seatings into oracle FAILs A-071 + A-081 (t07-05 f1-f2 share; 1 cross-form stem) \u2014 pre-merge note staged for #939. No PR, no merge, $0.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T02:09Z",
+    "course": "apwh",
+    "text": "ap-one issue #939 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939#issuecomment-5487706069",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-01T02:00Z",
