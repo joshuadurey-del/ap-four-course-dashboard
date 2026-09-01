@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T06:44Z",
+  "snapshot": "2026-09-01T07:17Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T06:44Z",
+        "ts": "2026-09-01T07:17Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "humgeo-enrich-20260901 COMPLETE per owner release bar: 144/144 checks judge-pass, 72/72 pages staged on enrich/humgeo-72-20260901 (37b75472), nothing pushed; PR body staged for the landing ceremony",
+        "kind": "hold",
+        "text": "check-stimulus top-up HELD: emit path PROVEN to accept table stems on ap-one main 3e7e3ba5 (builder sha256 158fdd88, normalizer+validator accept, emitted escaped); render on the LearnWith article-check widget UNMEASURED and unreachable offline (check placeholder divs empty, no script in page, builder uploads nothing - Phase 6 owns writes). Receipt: out/humgeo-topup-20260901/RENDER-PATH-FINDING.md. Spend $0. Actor collision with session 97876870 unresolved.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T03:52Z",
-        "event_type": "issues",
-        "text": "ap-one issue #940 unlabeled.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+        "ts": "2026-09-01T06:58Z",
+        "event_type": "pull_request",
+        "text": "humgeo-rebuild pull request #69 opened at 37b75472.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
