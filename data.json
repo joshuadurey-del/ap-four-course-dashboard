@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T08:47Z",
+  "snapshot": "2026-09-01T11:01Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T08:47Z",
+        "ts": "2026-09-01T11:01Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Enrichment branch fix wave: repo's own article gate (w5b authored) cleared 209 findings -> 0 across all 72 articles (band restated 600-1500 with owner word; claim traces re-derived over new bodies; canonical injections; absolutes reworded; fk/word_count recomputed with the validator's own functions; new pytest binds the gate into the suite). Commit b698abd0 pushed to draft PR #69 (stays draft). Receipts: out/humgeo-orchestrate-20260901/ + traces/.",
+        "kind": "hold",
+        "text": "APES settles the render question: tables DO render for students in a live AP course, production-verified on named items 2026-07-30 (qc_wrap_wide_tables.py). Machinery = a SEPARATE QTI stimulus object referenced by the item, real table/img markup in stimulus.content, byte-for-byte the AP Bio pattern, live in 2 courses. Not our escaped-stem shape. HumGeo's corridor plan already reserves a stimuli operation with zero entries. Free lessons: wrap wide tables (pane 485 of 976px), inline CSS only.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T08:22Z",
-        "event_type": "issues",
-        "text": "humgeo-rebuild issue #69 comment-created.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69#issuecomment-5491084142",
+        "ts": "2026-09-01T08:46Z",
+        "event_type": "push",
+        "text": "humgeo-rebuild commit b698abd0.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/b698abd0270f8dafb4da3b46e7c21eb8562eaabe",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
