@@ -5,7 +5,7 @@
       "claim_id": "cross.process.authority",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T14:47Z",
+      "observed_at": "2026-09-01T04:47Z",
       "settled": true,
       "settled_at": "2026-08-29T01:01Z",
       "settlement_reason": "Point-in-time cross-course snapshot superseded by current per-course claims; historical observation retained without re-dating.",
@@ -15,61 +15,14 @@
         "apush.ls_qc_ready",
         "psych.blueprint.audit"
       ],
-      "value": "All four courses use the AP One native TimeBack lifecycle: accepted source, then Phases 0 through 10. HumGeo has closed accepted source and Phase 0; Phases 1-3 are IN PROGRESS. Factory issue #284 is closed and PR #285 is merged and deployed at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078, correcting the canonical recovery operator's nullable-array handling. The accepted bank remains 353 of 440, with 87 factory-terminal nonaccepted. A corrected three-cycle pilot and at least eleven later factory-reaching operator invocations were observed after the prior dashboard snapshot. Across the scale invocations, 76 contextual submissions returned 21 distinct job IDs and 27 independent-QC calls occurred; 55 submissions replayed prior scale job identities. Five local receipts landed for 9 rows, recording 6 observed acceptances and 3 replacement failures, but remain unbound. Twenty job IDs have factory-terminal evidence; the final row-10 job is UNMEASURED because no job-stage event or row receipt landed. The scale action lacked a current-SHA /100 and RUNNING bind. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST at 14:31:48.257Z through 14:45:43Z. No result is controller-adopted, and no retry or resume is permitted. Packet 2 is HOLD: UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS; the next governed event is an owner-scoped landing receipt or disposition, not another pilot. The five SHA-bound dependency asks remain the filed authority, but AP One main advanced to 113f80c8479079a87f29226eb1a4b7e5f53349d0 through merged compiler PR #869. The post-merge fleet review marked #865 status:needs_rework and claimed attempt 2, so the compiler is NONCONFORMING_FACTORY_MODULE rather than Packet 3 closure. Activation #864 is on attempt 2 after queued rework; enrollment #866 and learner acceptance #867 remain open and unclaimed; the materializer bind request remains on #659. The APWH, APUSH, and Psychology statements retain their 2026-08-25T13:44Z observation. No course claims publication, enrollment, activation, learner acceptance, or release.",
-      "scope": "owner-supplied native TimeBack runbook, current four-course local plans, and live course authority readbacks",
+      "value": "The dashboard phase authority is ASAP edition (2026-09-01), version 2026-09-01.2: p0 and p4 are cut; p1-2 is done for all four; the route is content \u2192 p3 \u2192 p5 \u2192 p6 \u2192 p7 \u2192 p8.",
+      "scope": "parsed ASAP phase objects, old-to-new crosswalk, and four re-earned course positions; grants no course or platform authority",
       "evidence": [
         {
-          "type": "audit-report",
-          "url": "https://github.com/joshuadurey-del/ap-four-course-dashboard/blob/main/agents/FOUR-COURSE-BLUEPRINT-AUDIT-20260820.md"
-        },
-        {
-          "type": "owner-direction",
-          "observed_at": "2026-08-22T10:20Z",
-          "scope": "open APWH Gate 2; successor gates still require explicit opening"
-        },
-        {
-          "type": "factory-operator-fix",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/284",
-          "observed_at": "2026-08-26T13:00Z",
-          "state": "closed"
-        },
-        {
-          "type": "factory-recovery-contract",
-          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/285",
-          "merge_commit": "9da35978d34f781fb2f0692235564aae2fccd078"
-        },
-        {
-          "type": "factory-recovery-reconciliation",
-          "observed_at": "2026-08-26T14:45Z",
-          "receipt_sha256": "9755d9540fa6b85c8a4f84268213e22c26be9edc087be2e88eb7722b2f0affdc",
-          "pilot_submission_posts": 3,
-          "pilot_new_jobs": 2,
-          "pilot_independent_qc_calls": 2,
-          "scale_submission_posts": 76,
-          "scale_distinct_job_ids": 21,
-          "scale_terminal_jobs": 20,
-          "scale_unmeasured_job_ids": 1,
-          "scale_independent_qc_calls": 27,
-          "scale_replayed_submissions": 55,
-          "factory_reaching_invocations_minimum": 11,
-          "receipt_rows_landed": 9,
-          "acceptances_observed": 6,
-          "replacement_failures_observed": 3,
-          "conflicting_controller_stop_acknowledged": true,
-          "controller_adopted": false,
-          "runner_active": false
-        },
-        {
-          "type": "module-owner-clock-readback",
-          "observed_at": "2026-08-26T14:47Z",
-          "receipt_sha256": "8690c2127a785b6445e339b920f40b15c163058b4f48fb3f28be8d4452380178",
-          "ap_one_main_sha": "113f80c8479079a87f29226eb1a4b7e5f53349d0",
-          "compiler_pr": 869,
-          "compiler_issue": 865,
-          "compiler_disposition": "NONCONFORMING_FACTORY_MODULE",
-          "activation_issue": 864,
-          "enrollment_issue": 866,
-          "learner_acceptance_issue": 867
+          "type": "asap-runbook-source",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "version": "2026-09-01.2"
         }
       ],
       "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
@@ -78,7 +31,7 @@
       "claim_id": "cross.work_evidence_map",
       "section": "Cross-course",
       "status": "OBSERVED",
-      "observed_at": "2026-08-26T14:47Z",
+      "observed_at": "2026-09-01T04:47Z",
       "settled": true,
       "settled_at": "2026-08-29T01:01Z",
       "settlement_reason": "Point-in-time cross-course snapshot superseded by current per-course claims; historical observation retained without re-dating.",
@@ -88,8 +41,8 @@
         "apush.ls_qc_ready",
         "psych.blueprint.audit"
       ],
-      "value": "Each course page reports current work in its native units and maps it to accepted source or the exact runbook phase it serves, without summing unlike evidence. HumGeo reports 353 of 440 article checks accepted in Phases 1-3 and 87 factory-terminal nonaccepted rows. The corrected recovery operator is live at factory SHA 9da35978d34f781fb2f0692235564aae2fccd078. A corrected pilot and at least eleven factory-reaching scale operator invocations returned 21 distinct scale job IDs, but no result is controller-adopted because the current action bind and complete owner-scoped QC landing set are missing. Five local receipts cover 9 rows and remain unbound; 20 job IDs are terminal and one is UNMEASURED. The conflicting local controller became idle after the second stop notice; the final process census was empty, and no later matching contextual-generation or independent-QC POST was observed after the known row-10 POST through 14:45:43Z. Packet 2 now waits for disposition of the exact outputs, not a retry or resumed scale. Packet 3 has partial PREP_ONLY evidence but remains blocked on a conforming canonical compiler and output contract: compiler PR #869 merged to AP One main 113f80c8479079a87f29226eb1a4b7e5f53349d0, then the post-merge fleet review marked #865 status:needs_rework and claimed attempt 2. Packet 4 remains blocked on the materializer, enrollment, activation, and learner-acceptance modules. Activation #864 is on attempt 2 after queued rework; #866 and #867 remain open and unclaimed; the materializer bind request remains on #659. The other course measurements retain their 2026-08-25T13:44Z observation: APWH reports 44 of 123 grading calls settled while accepted source remains open; APUSH retains 2,479 generation-QC candidates, 38 canonical acceptances, and 11 separate successor receipts; Psychology retains 221 paired article/QC sidecars while PR #32 separately reports 407 of 407 Unit 1 MCQs retrieved, zero generated, and nine unverified citations. Historical receipts remain immutable and none of these measurements alone closes a later lifecycle state.",
-      "scope": "public dashboard presentation and already-published course evidence only",
+      "value": "Current course cards and pages use ASAP edition (2026-09-01). Retired names appear only in crosswalk.json rows; historical claims retain evidence scope without creating current phase credit.",
+      "scope": "dashboard presentation and machine-readable phase mapping only",
       "evidence": [
         {
           "type": "dashboard-overview",
@@ -245,7 +198,7 @@
         "humgeo.blueprint.audit"
       ],
       "value": "Current HumGeo main is still the exact PR #67 merge 8495d75929f2e25d6f7fa50fc24ce3d47481a887. The opened Gate 3 closure receipt hashes to b7845917c690f39f4568c1efa7006be3d08f0df6fbc0c14d97780d16d9ce713e and records SOURCE_ACCEPTED with 70 of 70 accepted placements and zero remaining, failed, nonterminal, or unmeasured records. This is accepted-source closure only; it does not prove current article-check completion or any native publication outcome.",
-      "scope": "Gate 3 accepted-source closure on exact HumGeo main; excludes current P1-04 residue, TimeBack writes, publication, learner acceptance, and release",
+      "scope": "Gate 3 accepted-source closure on exact HumGeo main; excludes current prior-step residue, TimeBack writes, publication, learner acceptance, and release",
       "evidence": [
         {
           "type": "gate-3-merge",
@@ -272,7 +225,7 @@
         "humgeo.blueprint.audit"
       ],
       "value": "Live AP One ancestry confirms PR #851 merge e46586c39c0ad0075c0cf45952f1f91503118d51 is retained in current main 79f3b5b75c4fd85c461cb8c144a9b3f8569bb7fe, 27 commits ahead and zero behind. The opened Gate 4 closure receipt hashes to 941a3bcb92fe9c9940a6eb809f27370a8477b8c07996d92bf5c8e6d6290327ce and records PROFILE_AND_SOURCE_BOUND. This refresh preserves that bounded closure without asserting that the receipt's former next-gate text is still current.",
-      "scope": "Gate 4 profile and Phase 0 source closure retained in current AP One ancestry; excludes current P1-04 state and every publication, enrollment, activation, learner, and release outcome",
+      "scope": "Gate 4 profile and prior publication work source closure retained in current AP One ancestry; excludes current prior-step state and every publication, enrollment, activation, learner, and release outcome",
       "evidence": [
         {
           "type": "gate-4-merge",
@@ -291,17 +244,15 @@
     {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
-      "status": "IN_PROGRESS",
-      "value": "Phase 4 SEALED (reseal digest a4318c28, offline gate PASS; PR #928 deployed, staging serves fb04b7c2). Plan builder landed fleet-side in PR #920; issue #919 is answered and awaits close. Video decisions consumed: 59 authored cues live, 12 no-audio videos in triage pending #922. Remaining: publisher digest pin, fleet issue #893 OPEN. Phase 5 has not started. Phase 6 remains the first platform write and waits for a separate owner go.",
-      "scope": "current HumGeo runbook position through the Phase 4 reseal; excludes private authority values, the open publisher digest pin, Phase 5 live-state capture, platform writes, activation, learner acceptance, and release",
+      "status": "OBSERVED",
+      "value": "Re-earn \u2014 content, ENRICH-FIRST. A 72-page enrichment campaign is live. The publication chain is queued to run once over final bytes; queued work is not p5 credit.",
+      "scope": "current HumGeo ASAP position and the live 72-page enrichment worklist; excludes queued publication and p5-p8 credit",
       "freshness_limit_hours": 24,
       "next_step": {
-        "verb": "resume",
-        "tool": "factory-course-run",
-        "args": [
-          "humgeo"
-        ],
-        "gate": "fleet issue #893 lands the publisher digest pin and the step picker returns runnable"
+        "verb": "run once",
+        "tool": "existing HumGeo publication corridor",
+        "args": [],
+        "gate": "final enriched bytes are landed and re-earned"
       },
       "evidence": [
         {
@@ -416,16 +367,21 @@
           "type": "publisher-digest-pin",
           "url": "https://github.com/InceptTrilogy/ap-one/issues/893",
           "state": "open"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "content"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
-      "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-09-01T02:33Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "Model bake-off drafting COMPLETE: 16/16 raw drafts (4 pages x glm/sol/grok/gemini, identical prompt bytes), $0 layers scored \u2014 sol 2 defects FKGL 11.9, grok 3 @ 8.1, gemini 3 @ 16.4, glm 8 @ 9.5. Judge batch (~48 /v1/qc, envelope word) + blind rank remain; enrichment campaign stays HELD on the winner. Handoff: HANDOFF-20260901-BAKEOFF-NEXT.md",
-        "writer": "INCEPT event projection"
+        "ts": "2026-09-01T04:47Z",
+        "phase": "content",
+        "kind": "state-change",
+        "text": "Re-earn: content, ENRICH-FIRST. The 72-page enrichment campaign is live; one publication-chain pass waits for final bytes.",
+        "writer": "dashboard curation"
       },
       "repository_event": {
         "ts": "2026-09-01T03:52Z",
@@ -433,7 +389,8 @@
         "text": "ap-one issue #940 unlabeled.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
         "writer": "repository-event automation"
-      }
+      },
+      "observed_at": "2026-09-01T04:47Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -727,24 +684,22 @@
     {
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
-      "status": "IN_PROGRESS",
-      "value": "APWH has entered Phase 2 work. Phase 0.2 source capture merged in PR #917 at 4fc7c055, the 894-activity Phase 1 tree and refusal validator merged in PR #923 at 10b1900c, and advisory E3 wiring merged in PR #916 at e2d92042. Phase 2 pricing then merged in PR #930 at ec09709f: 894 required activities, 6,576 total XP, deterministic manifest digest 019094aa. Its exact-merge deploy run completed successfully at 07:22Z. Tier-2 round 1 drained separately with 975 distinct accepted of 1,003 requested, zero duplicates, and two factory-terminal topics. Pre-QTI validation records key-position skew in all three measured banks; the receipt says it is nonblocking until plan seal. Test-builder issue #290 remains open. These landings do not attest Phase 2 closure, publication, or learner serving.",
-      "scope": "current APWH source capture, Phase 1 tree, Phase 2 pricing, and separate tier-2 QC evidence; excludes phase-closure inference, publication, and learner serving",
+      "status": "OBSERVED",
+      "value": "Re-earn \u2014 content, priority 2. The tier-2 landing comes first, followed by a fresh A2 measurement and then the stimulus-kind campaign. p3 is not yet credited.",
+      "scope": "current APWH ASAP content position and ordered next actions; excludes projected campaign completion and p3-p8 credit",
       "freshness_limit_hours": 24,
       "next_step": {
-        "verb": "resume",
-        "tool": "factory-course-run",
-        "args": [
-          "apwh"
-        ],
-        "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
+        "verb": "re-measure",
+        "tool": "A2 scanner",
+        "args": [],
+        "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-01T02:26Z",
-        "phase": "",
+        "ts": "2026-09-01T04:47Z",
+        "phase": "content",
         "kind": "state-change",
-        "text": "Canon ledger P3 note corrected: KC-4.1.VI.iii stub is NOT a regeneration target \u2014 dedup marker over the CED-extraction defect (KG duplicates Sikhism under .i+.iii; Reformation sub-point absent). Byte receipts in the gap draft.",
-        "writer": "INCEPT event projection"
+        "text": "Re-earn: content, priority 2. Tier-2 landing comes first, then A2 re-measurement, then the stimulus-kind campaign.",
+        "writer": "dashboard curation"
       },
       "repository_event": {
         "ts": "2026-09-01T05:03Z",
@@ -830,25 +785,29 @@
         {
           "type": "runbook-pin",
           "sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "content"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
-      "status_at": "2026-08-31T07:13:05Z"
+      "observed_at": "2026-09-01T04:47Z"
     },
     {
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
-      "status": "IN_PROGRESS",
-      "value": "APUSH remains in pre-runbook fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; positions 54 and 58 terminal-failed and join earlier terminal failures 45 and 50 for the later regeneration route. Position 59 is next. The exact 249-position ledger remains 49 accepted and 200 pending until the wave-end rebuild. The profile draft records the verified test-builder grader URL and treats canary identities and term dates as private operator-run inputs, not sealing inputs. Build-outputs issue #6 is closed through merged PR #8. Successor seating, terminal-fail reconciliation, and bank validation wait for wave-quiet.",
-      "scope": "current APUSH fleet-side content-production wave and acceptance ledger; excludes runbook phase entry, learner implementation, publication, and release",
+      "status": "BLOCKED",
+      "value": "Re-earn \u2014 fleet-held, priority 3. Dashboard-side specification work is closed. The next course move waits for the fleet sequence-adapter release.",
+      "scope": "current APUSH fleet hold and dashboard-side specification closure; excludes unlanded adapter work and p3-p8 credit",
       "freshness_limit_hours": 24,
       "next_step": {
-        "verb": "resume",
-        "tool": "factory-course-run",
-        "args": [
-          "apush"
-        ],
-        "gate": "the fleet wave is quiet and its latest course receipt is terminal"
+        "verb": "re-measure",
+        "tool": "current-main content verifier",
+        "args": [],
+        "gate": "the fleet sequence adapter is released"
       },
       "evidence": [
         {
@@ -881,16 +840,21 @@
           "type": "successor-replay-diagnostic",
           "observed_at": "2026-08-31T02:17:41Z",
           "status": "COMPLETE_11_OF_11_PASS"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "fleet-held"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB",
-      "observed_at": "2026-08-31T05:11:17Z",
       "current_event": {
-        "ts": "2026-08-31T10:58Z",
-        "phase": "",
-        "kind": "filed",
-        "text": "Pipeline-stamp finding relayed to the fleet: comment 5477358317 on apush-course-build#9 (data-retrieval-role in 162/162 unit9 review/acceptance family files vs 0/664 canary @ build-outputs 98842f41; gated draft shown to Josh, posted on his typed word). Fix is fleet-side; scan receipts in out/article-quality-plan-20260831/.",
-        "writer": "INCEPT event projection"
+        "ts": "2026-09-01T04:47Z",
+        "phase": "fleet-held",
+        "kind": "state-change",
+        "text": "Re-earn: fleet-held, priority 3. Dashboard-side specification work is closed; the sequence-adapter release remains fleet-owned.",
+        "writer": "dashboard curation"
       },
       "repository_event": {
         "ts": "2026-08-31T11:39Z",
@@ -898,23 +862,21 @@
         "text": "apush-course-build issue #9 labeled.",
         "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
         "writer": "repository-event automation"
-      }
+      },
+      "status_at": "2026-09-01T04:47Z"
     },
     {
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
-      "status": "BLOCKED",
-      "observed_at": "2026-08-31T00:54:24Z",
-      "value": "Psychology is pre-Phase 0. Articles, 1,912 questions, and 37 essays are built, but zero items carry the factory judge receipt required for bank admission. The three factory-side waits are judge receipts, grader certification in PR #20, and essay-type deploy readback in issue #248. Course-profile and tree-map drafts exist, so Phase 0 can start quickly after those waits clear. No owner action is due.",
-      "scope": "current Psychology pre-Phase-0 content and factory-QC admission state; excludes bank admission, phase entry, publication, enrollment, activation, learner acceptance, and release",
+      "status": "OBSERVED",
+      "value": "Re-earn \u2014 p5, fleet-driven. Dark publication stays in the existing fleet pipeline. This position does not establish p6 or later credit.",
+      "scope": "current Psychology p5 position from the ASAP parent plan; excludes p5 completion, p6 gauntlet, p7 acceptance, and p8 demo-and-flip",
       "freshness_limit_hours": 24,
       "next_step": {
-        "verb": "resume",
-        "tool": "factory-course-run",
-        "args": [
-          "psych"
-        ],
-        "gate": "factory judge receipts, grader certification, and essay-type deploy readback are green"
+        "verb": "verify live",
+        "tool": "existing fleet publication pipeline",
+        "args": [],
+        "gate": "the p5 dark-publication pass completes"
       },
       "evidence": [
         {
@@ -929,16 +891,21 @@
           "type": "canon-ledger",
           "location": "INCEPT/PSYCH-CANON-REQUIREMENTS.md",
           "runbook_sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "p5"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER+LOCAL_INCEPT_EVENT",
-      "status_at": "2026-08-30T14:10Z",
       "current_event": {
-        "ts": "2026-08-31T05:51Z",
-        "phase": "",
-        "kind": "note",
-        "text": "CORRECTION to row 980b14e9: Jayesh's route DOES wire the external grader. Bio publish trees carry ExternalApiScore -> coreapi.inceptstore.com/cs-autograder/score on FRQs (24 hits, verified in sparse clone). Psych residue = which grader endpoint + cert (PR #20). Still runbook-only: sealed plan + zero-write replay, dark-first/canary/activation discipline, profile authority record. XP wiring: zero hits, UNMEASURED.",
-        "writer": "INCEPT event projection"
+        "ts": "2026-09-01T04:47Z",
+        "phase": "p5",
+        "kind": "state-change",
+        "text": "Re-earn: p5, fleet-driven. Dark publication stays in the existing fleet pipeline; p6 waits for exact live readback.",
+        "writer": "dashboard curation"
       },
       "repository_event": {
         "ts": "2026-08-31T19:00Z",
@@ -946,7 +913,8 @@
         "text": "ap-psychology-fall-2025-v1 pull request #71 merged at no-sha.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/71",
         "writer": "repository-event automation"
-      }
+      },
+      "observed_at": "2026-09-01T04:47Z"
     },
     {
       "claim_id": "cross.recovery.audit",
@@ -985,8 +953,8 @@
         "apush.blueprint.audit",
         "psych.blueprint.audit"
       ],
-      "value": "The exact historical purge manifest at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb enumerates P1 through P16 hand-rolled machinery classes and states that deletion requires owner approval. Current INCEPT rules give those local tools no factory-proof authority and require committed factory routes. This claim does not assert that the inventoried files were deleted or that their present filesystem state was checked.",
-      "scope": "historical P1-P16 machinery inventory plus current factory-first authority rule; excludes current filesystem removal status",
+      "value": "The exact historical purge manifest at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb enumerates prior-step through prior-step hand-rolled machinery classes and states that deletion requires owner approval. Current INCEPT rules give those local tools no factory-proof authority and require committed factory routes. This claim does not assert that the inventoried files were deleted or that their present filesystem state was checked.",
+      "scope": "historical prior-step-prior-step machinery inventory plus current factory-first authority rule; excludes current filesystem removal status",
       "evidence": [
         {
           "type": "purge-manifest",
@@ -1011,8 +979,8 @@
       "superseded_by": [
         "humgeo.bank374"
       ],
-      "value": "Live GitHub readback preserves the historical Gate 0 record: PRs #55 and #56 are merged, PR #57 is closed unmerged, and issue #44 remains open with label autopilot:attention and no assignee. Current HumGeo main is later accepted-source commit 8495d75929f2e25d6f7fa50fc24ce3d47481a887. This row reports PR/issue history only and gives no current P1-04, writer, bank, or release verdict.",
-      "scope": "historical Gate 0 PR disposition and present issue #44 metadata; excludes current writer absence, P1-04 state, bank state, and release",
+      "value": "Live GitHub readback preserves the historical Gate 0 record: PRs #55 and #56 are merged, PR #57 is closed unmerged, and issue #44 remains open with label autopilot:attention and no assignee. Current HumGeo main is later accepted-source commit 8495d75929f2e25d6f7fa50fc24ce3d47481a887. This row reports PR/issue history only and gives no current prior-step, writer, bank, or release verdict.",
+      "scope": "historical Gate 0 PR disposition and present issue #44 metadata; excludes current writer absence, prior-step state, bank state, and release",
       "evidence": [
         {
           "type": "merged-pilot",
@@ -1066,8 +1034,8 @@
       "claim_id": "humgeo.bank374",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "The P1-04 operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. Phase 3.1-3.2 has 528 article/QTI files locally validated. The current PR #928 build carries 1,101 video components: 59 authored cue placements are live and 12 no-audio videos remain in triage under #922. The formal census remains blocked; this evidence does not establish platform publication, learner deployment, or later lifecycle closure.",
-      "scope": "current P1-04 operator-receipt position at enriched local bytes; formal landed-byte census and downstream lifecycle excluded",
+      "value": "The prior-step operator-receipt position is 440 of 440 and the five enriched lessons are landed at humgeo-build-outputs main c0ec5ed8e4cf. AP One PR #906 is merged at 824cfd1c. prior publication work has 528 article/QTI files locally validated. The current PR #928 build carries 1,101 video components: 59 authored cue placements are live and 12 no-audio videos remain in triage under #922. The formal census remains blocked; this evidence does not establish platform publication, learner deployment, or later lifecycle closure.",
+      "scope": "current prior-step operator-receipt position at enriched local bytes; formal landed-byte census and downstream lifecycle excluded",
       "evidence": [
         {
           "type": "controller-execution-state",
@@ -1087,7 +1055,7 @@
       "claim_id": "humgeo.review_surface.local",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "HumGeo Phase 3.6 validation and the Phase 3.7 preview gate are closed on current receipts. This establishes the governed offline preview only; it does not establish platform publication, enrollment, activation, or learner acceptance.",
+      "value": "HumGeo prior publication work validation and the prior publication work preview gate are closed on current receipts. This establishes the governed offline preview only; it does not establish platform publication, enrollment, activation, or learner acceptance.",
       "scope": "current HumGeo offline validation and preview closure; excludes platform publication and live learner outcomes",
       "evidence": [
         {
@@ -1103,8 +1071,8 @@
       "section": "HumGeo",
       "status": "OBSERVED",
       "status_at": "2026-08-31T06:51:23Z",
-      "value": "HumGeo's offline review surface remains closed through Phase 3.7. Phase 4 is sealed and resealed at digest a4318c28 with an offline-gate PASS. PR #920 supplies the plan builder; PR #928 puts 59 authored cues live at fb04b7c2; 12 no-audio videos remain in #922. Publisher digest pin #893 remains open. This is not platform publication or learner-acceptance readiness.",
-      "scope": "current HumGeo offline-review closure and Phase 4 reseal; excludes private values, the publisher digest pin, platform publication, and learner acceptance",
+      "value": "HumGeo's offline review surface remains closed through prior publication work. prior publication work is sealed and resealed at digest a4318c28 with an offline-gate PASS. PR #920 supplies the plan builder; PR #928 puts 59 authored cues live at fb04b7c2; 12 no-audio videos remain in #922. Publisher digest pin #893 remains open. This is not platform publication or learner-acceptance readiness.",
+      "scope": "current HumGeo offline-review closure and prior publication work reseal; excludes private values, the publisher digest pin, platform publication, and learner acceptance",
       "evidence": [
         {
           "type": "controller-execution-state",
@@ -1199,7 +1167,7 @@
       "claim_id": "humgeo.release",
       "section": "HumGeo",
       "status": "BLOCKED",
-      "value": "BLOCKED: HumGeo Phases 0-3 are closed and Phase 4 is sealed at reseal digest a4318c28, but publisher digest pin #893 remains open. Phase 5 has not run. Phase 6 remains the first platform write and waits for a separate owner go; activation, learner acceptance, and release are not started.",
+      "value": "BLOCKED: HumGeo prior publication work are closed and prior publication work is sealed at reseal digest a4318c28, but publisher digest pin #893 remains open. prior publication work has not run. prior publication work remains the first platform write and waits for a separate owner go; activation, learner acceptance, and release are not started.",
       "scope": "HumGeo broader enrollment and release; excludes accepted source, profile/source closure, merges, and local readiness artifacts",
       "evidence": [
         {
@@ -1273,7 +1241,7 @@
       "superseded_by": [
         "apwh.blueprint.audit"
       ],
-      "value": "BLOCKED: four validated APWH study-skills lessons wait for a Platform3 write window under open issue #591. The evidence-gated write is one of two owner-side levers on accepted source and may move A-210 plus A-203's length leg. It does not enter Phase 0 or supply later lifecycle credit.",
+      "value": "BLOCKED: four validated APWH study-skills lessons wait for a Platform3 write window under open issue #591. The evidence-gated write is one of two owner-side levers on accepted source and may move A-210 plus A-203's length leg. It does not enter prior publication work or supply later lifecycle credit.",
       "scope": "APWH study-skills placement authority and current issue disposition; excludes accepted-source closure and learner/reviewer visibility",
       "evidence": [
         {
@@ -1295,7 +1263,7 @@
       "claim_id": "apwh.local_done",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. Phase 0.2 source capture is merged in PR #917, Phase 1 tree/refusal-validator implementation is merged in PR #923, advisory E3 wiring is merged in PR #916, and Phase 2 pricing implementation is merged in PR #930. Those implementation landings do not by themselves close a phase or establish publication or learner outcomes.",
+      "value": "The local apwh.local_done marker remains retired and supplies no completion credit. prior publication work source capture is merged in PR #917, prior publication work tree/refusal-validator implementation is merged in PR #923, advisory E3 wiring is merged in PR #916, and prior publication work pricing implementation is merged in PR #930. Those implementation landings do not by themselves close a phase or establish publication or learner outcomes.",
       "scope": "retired local completion marker only; excludes accepted-source, publication, and learner completion",
       "evidence": [
         {
@@ -1325,7 +1293,7 @@
       "section": "APWH",
       "status": "BLOCKED",
       "status_at": "2026-08-31T07:13:05Z",
-      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Source capture is merged in PR #917, Phase 1 tree work is merged in PR #923, advisory E3 wiring is merged in PR #916, and Phase 2 pricing is merged in PR #930. The merges supply neither phase closure nor an LS disposition. Tier-2 round 1 drained as separate QC evidence, and issue #290 remains open.",
+      "value": "The former LS-QC-ready sprint marker supplies no runbook lifecycle credit. Source capture is merged in PR #917, prior publication work tree work is merged in PR #923, advisory E3 wiring is merged in PR #916, and prior publication work pricing is merged in PR #930. The merges supply neither phase closure nor an LS disposition. Tier-2 round 1 drained as separate QC evidence, and issue #290 remains open.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS disposition and production release",
       "evidence": [
         {
@@ -1405,7 +1373,7 @@
       "claim_id": "apush.admissions",
       "section": "APUSH",
       "status": "OBSERVED",
-      "value": "APUSH remains pre-runbook in fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; positions 45, 50, 54, and 58 terminal-failed and wait for the later regeneration route. Position 59 is next. The exact ledger remains 49 accepted and 200 pending and rebuilds after the wave lands. No owner action is due.",
+      "value": "APUSH remains content stage in fleet-side content production. Positions 52, 53, and 55-57 reached articles_ready; positions 45, 50, 54, and 58 terminal-failed and wait for the later regeneration route. Position 59 is next. The exact ledger remains 49 accepted and 200 pending and rebuilds after the wave lands. No owner action is due.",
       "scope": "APUSH committed admission and build-only migrated-wrapper state; excludes factory posts, platform ingest, learner serving, and later lifecycle closure",
       "evidence": [
         {
@@ -1485,7 +1453,7 @@
       "section": "APUSH",
       "status": "IN_PROGRESS",
       "status_at": "2026-08-31T05:11:17Z",
-      "value": "APUSH is in pre-runbook content production, not an LS handoff. Fleet positions 52, 53, and 55-57 reached articles_ready; positions 54 and 58 terminal-failed and position 59 is next. The runbook begins only after the wave lands and the acceptance ledger rebuilds. No learner execution or later lifecycle closure is claimed.",
+      "value": "APUSH is in content stage content production, not an LS handoff. Fleet positions 52, 53, and 55-57 reached articles_ready; positions 54 and 58 terminal-failed and position 59 is next. The runbook begins only after the wave lands and the acceptance ledger rebuilds. No learner execution or later lifecycle closure is claimed.",
       "scope": "Learning Scientist reviewer-candidate handoff; excludes LS review and production release",
       "evidence": [
         {
@@ -1533,7 +1501,7 @@
       "section": "Psych",
       "status": "OBSERVED",
       "observed_at": "2026-08-31T00:54:24Z",
-      "value": "Psychology content exists: articles, 1,912 questions, and 37 essays are built. Zero items carry the factory judge receipt required for bank admission. Content generation is proven; factory QC admission, Phase 0 entry, and learner outcomes are not.",
+      "value": "Psychology content exists: articles, 1,912 questions, and 37 essays are built. Zero items carry the factory judge receipt required for bank admission. Content generation is proven; factory QC admission, prior publication work entry, and learner outcomes are not.",
       "scope": "exact-SHA Unit 1-4 tracked assessment inventory, committed publish-tree XML verification, and Unit 5 mechanism closures; excludes complete content QC, accepted-source closure, course wiring, deployment, and learner visibility",
       "evidence": [
         {
@@ -1573,7 +1541,7 @@
       "status": "BLOCKED",
       "observed_at": "2026-08-31T00:54:24Z",
       "value": "BLOCKED: Psychology has 1,912 questions and 37 essays built, but zero items have the factory judge receipt required to enter a bank. Factory waits remain for judge receipts, grader certification in PR #20, and essay-type deploy readback in issue #248. No phase entry or learner outcome is claimed.",
-      "scope": "P1-04, P3-05, P3-06, and RLS-14 evidence state; excludes complete exact-set/QTI/grader seals, phase credit, paid generation, learner behavior, and publication",
+      "scope": "prior-step, prior-step, prior-step, and RLS-14 evidence state; excludes complete exact-set/QTI/grader seals, phase credit, paid generation, learner behavior, and publication",
       "evidence": [
         {
           "type": "open-frq-half",
@@ -1678,7 +1646,7 @@
       "section": "Psych",
       "status": "BLOCKED",
       "observed_at": "2026-08-31T00:54:24Z",
-      "value": "The retired LS REVIEW READY sprint marker supplies no lifecycle credit. Psychology is pre-Phase 0 with content built but factory QC admission blocked: zero judge receipts, grader certification still in PR #20, and essay-type deploy readback still required for issue #248. No owner action is due.",
+      "value": "The retired LS REVIEW READY sprint marker supplies no lifecycle credit. Psychology is content stage with content built but factory QC admission blocked: zero judge receipts, grader certification still in PR #20, and essay-type deploy readback still required for issue #248. No owner action is due.",
       "scope": "retired LS sprint marker mapped to current publication-runbook state; excludes accepted-source closure, phase entry, LS disposition, learner acceptance, and release",
       "evidence": [
         {
@@ -1693,7 +1661,7 @@
       "section": "Psych",
       "status": "OBSERVED",
       "observed_at": "2026-08-31T00:54:24Z",
-      "value": "Psychology remains before Phase 0. Course-profile and tree-map drafts already exist, so Phase 0 can start quickly after factory QC admission clears. The current waits are judge receipts, grader certification in PR #20, and essay-type deploy readback in issue #248. No publication, registration, enrollment, activation, or learner-acceptance transition is selected.",
+      "value": "Psychology remains before prior publication work. Course-profile and tree-map drafts already exist, so prior publication work can start quickly after factory QC admission clears. The current waits are judge receipts, grader certification in PR #20, and essay-type deploy readback in issue #248. No publication, registration, enrollment, activation, or learner-acceptance transition is selected.",
       "scope": "current Psychology runbook ordering and absent phase/profile/handoff receipts; no publication, registration, enrollment, activation, learner acceptance, or release action",
       "evidence": [
         {

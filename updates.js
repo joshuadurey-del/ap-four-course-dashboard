@@ -87,9 +87,9 @@
     if (newestLocal([{ course: 'psych', kind: 'landed', ts: '2026-08-29T00:00Z' }], 'psych')?.kind !== 'landed') throw new Error('local freshness self-test failed');
     if (newestRepository([{ course: 'psych', event_type: 'push', evidence_url: 'https://github.com/example/course/commit/abc', ts: '2026-08-29T00:00Z' }], 'psych')?.event_type !== 'push') throw new Error('repository freshness self-test failed');
     const summary = summarizeCourse([
-      { course: 'psych', kind: 'landed', phase: 'P0', ts: '2026-08-30T00:00Z' },
-      { course: 'psych', kind: 'hold', phase: 'P1', ts: '2026-08-30T01:00Z' },
-      { course: 'psych', kind: 'state-change', phase: 'P0', ts: '2026-08-29T00:00Z' },
+      { course: 'psych', kind: 'landed', phase: 'p5', ts: '2026-08-30T00:00Z' },
+      { course: 'psych', kind: 'hold', phase: 'p6', ts: '2026-08-30T01:00Z' },
+      { course: 'psych', kind: 'state-change', phase: 'p5', ts: '2026-08-29T00:00Z' },
     ], 'psych', Date.parse('2026-08-31T00:00Z'));
     if (summary.landings7d !== 2 || summary.openHolds !== 1 || summary.gateDays !== 2) throw new Error('rate summary self-test failed');
     return;

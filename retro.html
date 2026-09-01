@@ -1,128 +1,16 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Course-creation retro</title>
-  <link rel="stylesheet" href="style.css?v=20260830-2">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Publication runbook retro</title><link rel="stylesheet" href="style.css?v=20260830-2"></head>
 <body>
-<nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html" class="active" aria-current="page">Retro</a><a href="agents.html">Agent data</a></nav>
+<nav><span class="brand">AP Four-Course Dashboard</span><a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html" class="active" aria-current="page">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
-  <h1>Course-creation retro</h1>
-  <p class="sub">How AP courses have actually been built, mined 2026-08-26 from the fleet's full history: three process generations, an eleven-stage map with proof status for every stage, the detours and what they cost, and the measured distance to the end state — a course build an AI system can run end to end, quickly, with a receipt at every step. The historical mining stays anchored to its dated corpus; the current lifecycle edge below is reconciled through 2026-08-31 02:23Z.</p>
-
-  <section data-phase-summary><noscript>Enable JavaScript to view each course's current runbook position.</noscript></section>
-
-  <section>
-    <div class="section-head"><div><span class="badge b-blue">End state</span><h2>The build this page aims at</h2></div></div>
-    <p>The target is a course build that goes from scaffold to release on the first pass, fast, and provably: deterministic operators walk the stages, trained models speed up the content substeps, and every step closes with a receipt that binds exact bytes. The mined history says three things about that target.</p>
-    <ul>
-      <li><b>The process is becoming code, not judgment.</b> Publication runs through one runbook corridor with named operators, typed hold-and-recover branches, and closure packets. Whatever is proven once becomes replayable. On 2026-08-31, the proven HumGeo Phase 1-3 walk was folded into three registered wrappers: bank validation, native-assets build, and the landing ceremony. The same day's needs-a-human machinery added a ledger, public projection, self-test, and operator nudges rather than hiding exceptions in prose.</li>
-      <li><b>Speed compounds through worked examples.</b> AP Lang's content build ran 2026-06-04 to 07-16 in its own repo (101 commits). Its native TimeBack publication operators were then built and proven across four days, 2026-08-14 to 08-17: dry-run publisher (<a href="https://github.com/InceptTrilogy/ap-one/pull/697" target="_blank" rel="noopener">#697</a>), sealed 2,070-operation plan (<a href="https://github.com/InceptTrilogy/ap-one/pull/714" target="_blank" rel="noopener">#714</a>), offline-proven executor (<a href="https://github.com/InceptTrilogy/ap-one/pull/716" target="_blank" rel="noopener">#716</a>), live undo canary (<a href="https://github.com/InceptTrilogy/ap-one/pull/718" target="_blank" rel="noopener">#718</a>), full 108-lesson catalog (<a href="https://github.com/InceptTrilogy/ap-one/pull/722" target="_blank" rel="noopener">#722</a>). AP Lit then replayed that corridor — authority census, plan, live catalog, dark settlement, first learner start — in a single day, 2026-08-20 (<a href="https://github.com/InceptTrilogy/ap-one/pull/811" target="_blank" rel="noopener">#811</a>). A proven, named operator makes the next course's step nearly free; an unproven step costs weeks the first time, whoever runs it.</li>
-      <li><b>The unproven tail is named, not vague.</b> No course anywhere has a receipted content import, a complete canary-enrollment run, a full learner acceptance, or a release. Those are the exact steps standing between today's process and end-to-end automation.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Three generations of the process</h2>
-    <table>
-      <thead><tr><th>Gen</th><th>Courses</th><th>How publication worked</th><th>What it left behind</th></tr></thead>
-      <tbody>
-        <tr><td><span class="badge b-gray">Gen 1</span></td><td>Bio, Chem, CS-A, Cybersecurity, EnvSci, plus AP Lang's first publish (2026-06-17)</td><td>Scripts inside each course's build repo pushed straight to TimeBack production, June through August 2026. The platform's own ingest modules and status ledger have no record that it happened.</td><td>Real live content, zero platform-side receipts. This gap is the reason the runbook exists. Gen-1 outcomes are history, never precedent.</td></tr>
-        <tr><td><span class="badge b-blue">Gen 2</span></td><td>AP Lang (proved it), AP Lit (hardened it)</td><td>The AP One native TimeBack publication runbook: sealed plan, dark publish under a writer lock, exact readbacks, zero-write replays, a live-proven undo path.</td><td>Named per-phase operators and the first replayable publication corridor.</td></tr>
-        <tr><td><span class="badge b-green">Gen 3</span></td><td>HumGeo, APWH, APUSH, Psych</td><td>The 12-gate canon: a stage closes only with a packet that binds exact digests, and an upstream byte change reopens the earliest affected gate.</td><td>Closure packets. HumGeo is the first course walking it end to end.</td></tr>
-      </tbody>
-    </table>
-    <p><small>Fleet recon, 2026-08-26, read-only: all five gen-1 courses show build-repo evidence of full TimeBack production pushes (5,267 entities for CS-A; 6,131 for Cybersecurity; 8 to 9 units each for Bio and EnvSci), and none shows enrollment, learner-acceptance, or release evidence anywhere.</small></p>
-  </section>
-
-  <section>
-    <h2>Where the time went — measured spans</h2>
-    <p>Calendar spans from the trace dates. They include waiting and repair time, so they measure the process, not effort. The number to drive down is the first-time cost of a step; the mechanism that drives it down is a named operator plus a closure packet the next course replays.</p>
-    <table>
-      <thead><tr><th>Step</th><th>First time</th><th>With the worked example</th><th>Receipts</th></tr></thead>
-      <tbody>
-        <tr><td>Content build in the dedicated repo (stages A-D)</td><td>AP Lang: 42 days, 2026-06-04 to 07-16 (101 commits)</td><td>AP Lit: 34 days, 2026-07-10 to 08-13 (100 commits, 17 PRs)</td><td>The two build repos linked below</td></tr>
-        <tr><td>Publication operators built and proven (stage G)</td><td>AP Lang: 4 days, 2026-08-14 to 08-17</td><td>AP Lit: 1 day, 2026-08-20 — authority census through dark settlement and a first learner start</td><td><a href="https://github.com/InceptTrilogy/ap-one/pull/697" target="_blank" rel="noopener">#697</a>…<a href="https://github.com/InceptTrilogy/ap-one/pull/722" target="_blank" rel="noopener">#722</a>; <a href="https://github.com/InceptTrilogy/ap-one/pull/811" target="_blank" rel="noopener">#811</a></td></tr>
-        <tr><td>Gen-3 gate closures, scope lock through profile bind (stages A-E)</td><td>HumGeo: 4 days, 2026-08-21 to 08-25 — including two byte-driven reopens inside</td><td>No second gen-3 course has replayed it yet</td><td><a href="https://github.com/ilmych/humgeo-rebuild/pull/62" target="_blank" rel="noopener">#62</a>…<a href="https://github.com/ilmych/humgeo-rebuild/pull/67" target="_blank" rel="noopener">#67</a>; <a href="https://github.com/InceptTrilogy/ap-one/pull/851" target="_blank" rel="noopener">#851</a></td></tr>
-      </tbody>
-    </table>
-    <p><small>Per-stage spans for all 167 trace rows live in <a href="crosswalk.json">crosswalk.json</a>; this table keeps only the spans with clean start and end receipts.</small></p>
-  </section>
-
-  <section>
-    <h2>The map — eleven stages, and who has proven what</h2>
-    <p>Mined from three full course traces: AP Lang 40 cited rows, AP Lit 49, HumGeo 78 — 167 rows total, every row citing a commit, PR, or receipt. "Worked example" means a gen-2 run did it once; "packet" means a gen-3 closure receipt binds it to exact bytes; "unproven" means the stage is written from the runbook alone.</p>
-    <table>
-      <thead><tr><th>Stage</th><th>What it is</th><th>Fleet proof</th><th>Status</th></tr></thead>
-      <tbody>
-        <tr><td><b>A</b> Scaffold + source corpus</td><td>Build repo, source pack, governance; official scope locks.</td><td>Worked examples: the <a href="https://github.com/InceptTrilogy/ap-english-language-fall-2019-v1" target="_blank" rel="noopener">Lang</a> and <a href="https://github.com/InceptTrilogy/ap-english-literature-fall-2019-v1" target="_blank" rel="noopener">Lit</a> build repos. Packet: HumGeo scope lock (<a href="https://github.com/ilmych/humgeo-rebuild/pull/62" target="_blank" rel="noopener">PR #62</a>).</td><td><span class="badge b-green">PROVEN</span></td></tr>
-        <tr><td><b>B</b> Compile machinery + inventory</td><td>Compilers, generators, calibration; then a full census of existing vs missing content, closing with zero unknown rows.</td><td>Packet: HumGeo, closed after two reopens (<a href="https://github.com/ilmych/humgeo-rebuild/pull/63" target="_blank" rel="noopener">#63</a>, <a href="https://github.com/ilmych/humgeo-rebuild/pull/64" target="_blank" rel="noopener">#64</a>, <a href="https://github.com/ilmych/humgeo-rebuild/pull/66" target="_blank" rel="noopener">#66</a>).</td><td><span class="badge b-green">PROVEN</span></td></tr>
-        <tr><td><b>C</b> Content build</td><td>Articles, items, video, through the factory. Every known bank-wide check runs here, at generation time.</td><td>Worked examples: Lang and Lit. Packet: HumGeo source acceptance with delivery digest (<a href="https://github.com/ilmych/humgeo-rebuild/pull/67" target="_blank" rel="noopener">PR #67</a>).</td><td><span class="badge b-green">PROVEN</span></td></tr>
-        <tr><td><b>D</b> QC waves + review lanes</td><td>Factory verdicts, later sweeps, cross-model review. The agent that changes content never waives the gate that failed.</td><td>Lit's independent review caught placeholder rubrics before sign-off; HumGeo re-earned 429 fingerprint-bound QC passes (<a href="https://github.com/ilmych/humgeo-rebuild/pull/43" target="_blank" rel="noopener">PR #43</a>).</td><td><span class="badge b-green">PROVEN</span></td></tr>
-        <tr><td><b>E</b> Import + profile bind</td><td>Content lands in the platform's course tree and binds to exact accepted-source digests with a reviewed course profile.</td><td>The bind half has a packet: HumGeo (<a href="https://github.com/InceptTrilogy/ap-one/pull/846" target="_blank" rel="noopener">#846</a>, <a href="https://github.com/InceptTrilogy/ap-one/pull/847" target="_blank" rel="noopener">#847</a>, <a href="https://github.com/InceptTrilogy/ap-one/pull/851" target="_blank" rel="noopener">#851</a>; 5,870-coordinate oracle, exact). The import half has no receipted example anywhere: in both successful courses the course files simply appear in the tree.</td><td><span class="badge b-amber">SPLIT</span></td></tr>
-        <tr><td><b>F</b> Offline preview seal</td><td>Phase 1 maps the complete course tree; Phase 2 prices activities; Phase 3 generates hosted assets and QTI and verifies the student surface.</td><td>HumGeo has closed Phases 1-3 on receipts, including Phase 3.6 validation and the Phase 3.7 preview gate. APWH has now receipted five read-only Phase 1 Leg A measurements, but Phase 0.2 remains open and no Phase 1 closure is claimed.</td><td><span class="badge b-green">CLOSED ON HUMGEO</span></td></tr>
-        <tr><td><b>G</b> Sealed plan + dark publish</td><td>One immutable plan digest, an all-absent checkpoint, execution under the writer lock, exact readback, zero-write replay.</td><td>HumGeo P4-1 authority is resolved and P4-2 completed a deterministic real-base build twice. The <a href="https://github.com/InceptTrilogy/ap-one/pull/918" target="_blank" rel="noopener">PR #918</a> correction is deployed and independently staging-verified at c1086cfc. P4-3 is filed as <a href="https://github.com/InceptTrilogy/ap-one/issues/919" target="_blank" rel="noopener">issue #919</a> because the native asset layer has no publication plan builder; 71 video-cue content decisions remain. Phase 5 is next and read-only; Phase 6 remains separately gated.</td><td><span class="badge b-amber">LIVE EDGE</span></td></tr>
-        <tr><td><b>H1</b> Canary enrollment</td><td>Owner-controlled accounts only, additive, exact readback, zero-write replay. Never combined with activation.</td><td>No complete forward worked example. The closest artifact is an enrollment repair (<a href="https://github.com/InceptTrilogy/ap-one/pull/784" target="_blank" rel="noopener">#784</a>).</td><td><span class="badge b-gray">UNPROVEN</span></td></tr>
-        <tr><td><b>H2</b> Private activation</td><td>Distinct authority, production flags, exact course projection, zero-write replay.</td><td>Worked example behind flags (<a href="https://github.com/InceptTrilogy/ap-one/pull/816" target="_blank" rel="noopener">#816</a>). No gen-3 packet yet.</td><td><span class="badge b-amber">EXAMPLE</span></td></tr>
-        <tr><td><b>I</b> Learner acceptance</td><td>A fresh learner: start, middle, and end; retries, grading, XP, persistence, identity isolation.</td><td>Lang failed once on learner identity, then passed a settlement sub-receipt (<a href="https://github.com/InceptTrilogy/ap-one/pull/801" target="_blank" rel="noopener">#801</a> no-go, then <a href="https://github.com/InceptTrilogy/ap-one/pull/810" target="_blank" rel="noopener">#810</a>). Lit settled a start only. Neither closes the stage.</td><td><span class="badge b-amber">OPEN</span></td></tr>
-        <tr><td><b>J</b> Release</td><td>Broader enrollment after acceptance, the release checklist, and the owner decision.</td><td>Nobody, anywhere. The first completed release becomes the fleet's worked example the day it happens.</td><td><span class="badge b-gray">UNPROVEN</span></td></tr>
-      </tbody>
-    </table>
-    <p><small>No course has finished the whole pipeline. AP Lang is furthest — full native catalog live, one passed settlement acceptance — and its own status log states that live cutover has not started. The tail of the map is written from the runbook, not from receipts.</small></p>
-  </section>
-
-  <section>
-    <h2>The retro — five lessons the fleet actually paid for</h2>
-    <ol class="work-list">
-      <li><b>Make the import a receipted step.</b><p>In both successful courses, nobody can name the commit that moved finished course content into the platform tree; AP Lang's 26 course files simply appear in the live listing. The most-asked question in course work — how does content actually get in — had no receipted answer even in the wins. The rule now: the stage-E closure packet must contain the import receipt itself, meaning a named commit or PR plus a tree listing.</p></li>
-      <li><b>Run every known check at generation, never later.</b><p>AP Lang enforced answer balance during generation, in its first build week. HumGeo ran the same class of check after three gates had already closed, and paid a triple reopen: 203 records, then 70 more the first repair missed, then the profile bind redone twice. Same check, different position, weeks of difference. This is the single strongest cost lesson in the data.</p></li>
-      <li><b>A closure is only as stable as the bytes it binds.</b><p>HumGeo's profile-and-source bind closed twice because upstream repairs kept changing the accepted source underneath it. A closure receipt binds exact digests, and an upstream change reopens the earliest affected gate automatically. That reopening is a normal branch of the process, not an emergency.</p></li>
-      <li><b>Name one operator per phase.</b><p>AP Lit built one named module per runbook phase — authority census, publisher, executor, acceptance — and its run replays cleanly. AP Lang folded its early phases into generic modules, and parts of its history can no longer be attributed. HumGeo then proved the rule again at Phase 4: the native asset layer has no plan builder, so sealing stops at the explicit issue #919 seam instead of improvising a local route. One hazard rode along: internal phase numbering collided with the master runbook's, so phase names now come from the master runbook only.</p></li>
-      <li><b>One corridor, said on page one.</b><p>A parallel Platform3 ingest track stayed alive the whole period and received a commit the very morning of the mining pass (<a href="https://github.com/InceptTrilogy/ap-one/pull/860" target="_blank" rel="noopener">#860</a>, 2026-08-26). Platform3 is not a publication corridor. Without that warning stated up front, anyone reading raw history conflates the two tracks; both traces had to be explicitly split to stay coherent.</p></li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>Detours are typed, not emergencies</h2>
-    <p>HumGeo's walk logged nine distinct wrong-turn-and-recovery pairs; Lang and Lit had their own. Every one fits a small typed set of recovery classes, which is what turns a detour into a bounded cost instead of a crisis. The five classes the mining produced:</p>
-    <ul>
-      <li><b>A late verifier invalidates closed gates.</b> Reopen the earliest affected gate for exactly the failing records.</li>
-      <li><b>Upstream bytes moved under a closure.</b> Rebind on fresh digests.</li>
-      <li><b>An approval gap.</b> The work is ready but the remote write is not authorized: hold, name the owner, resume only on the named word.</li>
-      <li><b>A missing factory contract.</b> The needed route is not wired for this course: classify it, file the gap, hold for the go. Never adapt a runner locally.</li>
-      <li><b>An identity or learner-state fault at acceptance.</b> Record the no-go, repair isolation, retry the acceptance.</li>
-    </ul>
-    <p>The handbook draft has since grown this into eleven typed hold classes. The standing operating rules distilled from recovery work live on the <a href="lessons.html">Lessons page</a>; this page maps where in the history each class was paid for.</p>
-  </section>
-
-  <section>
-    <h2>The training question, measured</h2>
-    <p>The end state needs both halves: a deterministic process and fast content. A read-only census on 2026-08-26 measured what is actually trainable today.</p>
-    <ul>
-      <li><b>The process is code, not a training corpus.</b> Three full course histories yield 167 process rows. That is a step table for a controller, and thousands of examples short of training data for a process model. A process model is also not needed: stages, entry conditions, receipts, and hold classes are already deterministic.</li>
-      <li><b>Content repair is trainable now.</b> The census found 431 explicit fail-then-fix pairs with full content inline: the failing item, the structural repair, and the retry. That clears the pilot-scale bar for a repair model.</li>
-      <li><b>Verdict prediction is not trainable yet.</b> The current item bank holds 437 passes against 7 fails, because failures get repaired out of the bank. The fail class has to be mined from history; one earlier sweep alone recorded 1,239 fails. That mining round is the named next step.</li>
-      <li><b>Only HumGeo produced item-level factory verdicts in this pass.</b> APWH, APUSH, and Psychology yielded zero; their verdict evidence has named mining leads, not counts.</li>
-    </ul>
-    <h3>What end-to-end automation still needs</h3>
-    <ol class="work-list">
-      <li><b>Machine-decidable contracts for every stage.</b><p>Entry condition, required artifacts, the receipt that closes it, its hold classes, the reopening target, and resume evidence. The same six fields for all eleven stages.</p></li>
-      <li><b>A first receipted import.</b><p>The next course to close stage E must produce it; that run writes the worked example the whole fleet then reuses.</p></li>
-      <li><b>Worked examples for the tail.</b><p>A complete canary enrollment, a full learner acceptance, and the first release. Each gets mined into this map the day it happens.</p></li>
-      <li><b>The two mining rounds that fix the training data.</b><p>Historical fails for verdict prediction, and verdict evidence for the other three courses.</p></li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>How this page fits the dashboard</h2>
-    <p>Course pages hold live lifecycle state. <a href="claims.html">Claims</a> holds the evidence behind every standing. <a href="lessons.html">Lessons</a> holds the standing operating rules. This page holds the history those rules came from, the fleet-wide proof map, and the measured distance to a build an AI can run end to end. Sources: the three course traces (2026-08-26), the five-course fleet recon, the training-data census, and the TimeBack course handbook draft v0.3, all in the Alpha workspace; the GitHub receipts they cite are linked above. Historical gate labels translate through <a href="GATE-CANON-MAP.md">GATE-CANON-MAP.md</a>.</p>
-    <p><b>Machine-readable companions</b> (same content, for agents and pipelines): <a href="process.json">process.json</a> — the eleven stage contracts, hold classes, and each course's current stage; <a href="crosswalk.json">crosswalk.json</a> — all 167 trace rows mapped to stages under the v0.3 precedence rule; <a href="training.json">training.json</a> — the training-assets register with counts, digests, and status. The <a href="agents.html">Agent data page</a> explains how to consume them.</p>
-  </section>
+  <h1>Publication runbook, ASAP edition, 2026-09-01</h1>
+  <p class="sub">The current model cuts ceremony while preserving quality bars. Current course positions are re-earned from the dated plans; historical execution language is retained only as an explicit mapping in <a href="crosswalk.json">crosswalk.json</a>.</p>
+  <section data-phase-summary><noscript>Enable JavaScript to view each course's re-earned position.</noscript></section>
+  <section><h2>Current phase system</h2><ol class="work-list"><li><b>p0 · CUT.</b></li><li><b>p1-2 · tree and pricing.</b> Done for all four courses.</li><li><b>p3 · bank gates.</b> Answer-shape, key-balance, and QTI assertions.</li><li><b>p4 · CUT.</b></li><li><b>p5 · publish dark.</b> Export, upload, push, and exact live readback.</li><li><b>p6 · live QC gauntlet.</b> Judge, remediate, re-push, and re-judge to the bar.</li><li><b>p7 · walk and accept.</b> Automated, human, and XP checks on one owner test account.</li><li><b>p8 · demo and flip.</b> Demo approval before broader access.</li></ol></section>
+  <section><h2>Current route</h2><p><code>content → p3 → p5 → p6 → p7 → p8</code></p><p>The route is a requirement sequence, not permission and not course credit. Each course page shows only its re-earned position.</p></section>
+  <section><h2>Machine-readable companions</h2><p><a href="process.json">process.json</a> contains the parsed ASAP phase objects and course positions. <a href="crosswalk.json">crosswalk.json</a> is the sole public location for retired phase names and their ASAP destinations. <a href="training.json">training.json</a> remains the content-free corpus register.</p></section>
 </main>
-<footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
+<footer>Publication runbook, ASAP edition, 2026-09-01 · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 <script type="module">import(`./updates.js?v=${Date.now()}`).then(() => import(`./timeline.js?v=${Date.now()}`))</script>
-</body>
-</html>
+</body></html>

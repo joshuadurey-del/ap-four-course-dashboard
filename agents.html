@@ -22,7 +22,7 @@
 
   <main>
     <h1>Agent data</h1>
-    <p class="sub">The current machine contract comes first: data.json for standing claims, updates.json for chronology, process.json for the stage contracts and hold classes, training.json for the corpora register. Course states render below from the same shared data the overview uses; nothing on this page hardcodes a course state.</p>
+    <p class="sub">The current machine contract comes first: data.json for standing claims, updates.json for chronology, process.json for the parsed ASAP phases, and training.json for the corpora register. Course states render below from the same shared data the overview uses; nothing on this page hardcodes a course state.</p>
 
     <section class="agent-brief" aria-labelledby="agent-brief-title">
       <div class="section-head">
@@ -52,7 +52,7 @@
 
     <section aria-labelledby="course-states-title">
       <div class="section-head"><div><span class="badge b-blue">Rendered from shared data</span><h2 id="course-states-title">Current course states</h2></div></div>
-      <p>These cards render from the same timeline data the overview uses, at page load, so this section cannot silently disagree with the rest of the site. The machine form — stage contracts, hold classes, and each course's current stage — is <a href="process.json">process.json</a>.</p>
+      <p>These cards render from the same timeline data the overview uses, at page load, so this section cannot silently disagree with the rest of the site. The machine form — parsed phases and each course's re-earned position — is <a href="process.json">process.json</a>.</p>
       <div id="agent-course-states" class="agent-source-list"></div>
       <ul>
         <li><b>Standing routing exclusions:</b> do not use completion percentages, treat 150 standards as 150 questions, blanket re-QC unchanged accepted items, or build local substitutes for current factory or course-owned routes.</li>
@@ -96,7 +96,7 @@
         <div class="agent-source">
           <div>
             <h3>Process contracts</h3>
-            <p>The eleven A-J stage contracts (entry predicate, artifacts, closing receipt, hold classes, reopen target, resume evidence), the eleven hold classes, and each course's current stage.</p>
+            <p>The ASAP phase objects, route, verification strings, and each course's re-earned position.</p>
           </div>
           <a class="agent-source-link" href="process.json">Open process.json</a>
         </div>
@@ -196,7 +196,7 @@
         <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
         <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
         <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS review readiness or release by itself.</dd></div>
-        <div><dt>Keep the milestones separate</dt><dd>Course lifecycle follows the runbook canon: accepted source, then Phases 0-10 — stages A-J in <a href="process.json">process.json</a> — with exactly one active state per course. <code>LS REVIEW READY</code> means Learning Science can access and walk the named candidate; it is not an LS disposition, post-review revision, or production release.</dd></div>
+        <div><dt>Keep the milestones separate</dt><dd>Course lifecycle follows the publication runbook, ASAP edition, 2026-09-01. Each course has one re-earned position; queued work is not phase credit. <code>LS REVIEW READY</code> remains a planning milestone, not an LS disposition or production outcome.</dd></div>
         <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
       </dl>
     </section>
@@ -268,12 +268,12 @@
       .map(course => `- ${course.label}: ${course.status} (observed ${course.observed}).\n${course.phaseStates.map(phase => `  - ${phase.code} ${phase.status}: ${phase.name}`).join('\n')}\n  Next: ${course.nextStep}`)
       .join('\n');
 
-    const sharedRules = `- data.json governs standing claims; updates.json governs event chronology; process.json holds the stage contracts and hold classes.
+    const sharedRules = `- data.json governs standing claims; updates.json governs event chronology; process.json holds the parsed ASAP phase contract.
 - This site is a read-only status view, not execution authority.
 - Age each claim from observed_at or status_at. The file snapshot does not make an older row new.
 - Follow each claim's evidence[] entries for receipt pointers and respect evidence_access.
 - Treat dated Markdown reports as historical context, not current standing.
-- Course lifecycle is the runbook canon: accepted source, then Phases 0-10 (stages A-J in process.json), exactly one active lifecycle stage per course; within stage F, P1, P2, and P3 are reported separately.
+- Course lifecycle follows the publication runbook, ASAP edition, 2026-09-01: content → p3 → p5 → p6 → p7 → p8; p0 and p4 are cut, and p1-2 is done for all four.
 - Do not use completion percentages, treat 150 EKs as 150 questions, or duplicate QC for unchanged creation-QC-complete items.
 - LS REVIEW READY is a planning milestone, not LS approval, post-review revision, or production release.
 - Prepared, accepted, merged, deployed, and released are separate states.
@@ -304,14 +304,11 @@ Return a concise executive summary of current standing, holds by owner, stale or
       const course = proc.courses[courseId];
       const stage = proc.stages.find(item => item.id === course.current_stage);
       const stageBlock = stage
-        ? `Current stage ${stage.id} — ${stage.name} (contract status: ${stage.contract_status})
-Entry predicate: ${stage.entry_predicate}
-Required artifacts: ${stage.required_artifacts.join('; ')}
-Closing receipt: ${stage.pass_receipt}
-Hold classes that can fire here: ${stage.hold_classes.join(', ')} (definitions in process.json)`
-        : `Current stage: ${course.current_stage}. Read the stage contracts in process.json for the active range.`;
+        ? `Current ASAP phase ${stage.id} — ${stage.name} (${stage.contract_status})
+Required checks: ${stage.required_artifacts.join('; ') || 'none — cut'}`
+        : `Current position: ${course.current_stage}. Read process.json for the next ASAP phase.`;
 
-      return `You are advancing ${course.label} on the AP One native TimeBack lifecycle. State as of ${course.as_of}: ${course.state}. ${course.detail}
+      return `You are reviewing ${course.label} under the publication runbook, ASAP edition, 2026-09-01. State as of ${course.as_of}: ${course.state}. ${course.detail}
 
 ${stageBlock}
 
@@ -319,17 +316,17 @@ Sources, in order:
 Process contracts: ${sourceUrls.process_contracts}
 Standing claims: ${sourceUrls.claims_manifest}
 Event chronology: ${sourceUrls.updates_feed}
-Trace crosswalk (worked examples per stage): ${sourceUrls.trace_crosswalk}
+Original-to-ASAP phase crosswalk: ${sourceUrls.trace_crosswalk}
 Active course plan: ${sourceUrls.humgeo_completion_plan}
 
 Builder rules:
-- Check the entry predicate against live receipts before any work; never assume it.
-- Produce exactly the named closing receipt; a green intermediate state closes nothing.
-- On any hold condition, stop, name the hold class and its owner, and report — never adapt a runner locally or waive a failed gate.
-- A closure binds exact digests; if upstream bytes moved, reopen per the hold class instead of proceeding.
+- Re-earn the current position against live receipts before any work; never assume it.
+- Satisfy the parsed phase checks; a green intermediate state closes nothing.
+- On any hold condition, stop, name the missing artifact and its owner, and report — never adapt a runner locally or waive a failed gate.
+- A closure binds exact digests; if upstream bytes moved, re-earn the affected state instead of proceeding.
 ${sharedRules}
 
-Report back: the stage you verified, the receipts you produced or found missing, and any hold class you hit with its owner.`;
+Report back: the position you verified, the receipts you produced or found missing, and any hold you hit with its owner.`;
     };
 
     const buildAgentBundle = ({manifest, updates, integrity, processContracts, trainingRegister}) => ({
@@ -351,7 +348,7 @@ Report back: the stage you verified, the receipts you produced or found missing,
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
         'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
         'This dashboard is a read-only status surface and grants no execution authority.',
-        'Course lifecycle is the runbook canon: accepted source, then Phases 0-10 (stages A-J in processContracts), exactly one active state per course. Read current course states from manifest rows and processContracts.courses, never from this bundle prose.',
+        'Course lifecycle follows the publication runbook, ASAP edition, 2026-09-01. Read each re-earned position from manifest rows and processContracts.courses; queued work is not phase credit.',
         'Do not use completion percentages, treat 150 EKs as 150 questions, or duplicate QC for unchanged creation-QC-complete items.',
         'For other courses, LS REVIEW READY remains a planning milestone, not LS approval, post-review revision, or production release.',
         'Do not require duplicate generation QC, new grader calibration, or unnamed human signoff before LS handoff when current owner direction says those already exist or belong at review.',

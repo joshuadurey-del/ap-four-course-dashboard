@@ -1,439 +1,213 @@
 {
- "schema_version": 1,
- "generated_utc": "2026-08-31T02:43:07Z",
- "authority_note": "Requirements only, never permissions. The governing runbook, the gates document, and the per-course canon ledgers outrank this file. Live receipts win every current-state conflict.",
- "sources": [
-  "TimeBack course handbook DRAFT v0.3 (2026-08-26, Alpha workspace)",
-  "Codex re-review, out/handbook-replay-review-20260826 (8 findings; folded into v0.3)",
-  "FOUR-COURSE-TIMEBACK-GATES.md; GATE-CANON-MAP.md",
-  "Process traces, recon/process-traces-2026-08-26 (167 cited rows)"
+ "schema_version": 2,
+ "generated_utc": "2026-09-01T04:59:43Z",
+ "label": "ASAP edition (2026-09-01)",
+ "runbook_version": "2026-09-01.2",
+ "source_sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+ "authority_note": "Publication runbook, ASAP edition, 2026-09-01. Requirements only; current course positions are re-earned from the per-course plans.",
+ "route": [
+  "content",
+  "p3",
+  "p5",
+  "p6",
+  "p7",
+  "p8"
  ],
- "generations": [
+ "phases": [
   {
-   "gen": 1,
-   "name": "direct push",
-   "courses": [
-    "AP Biology",
-    "AP Chemistry",
-    "AP Computer Science A",
-    "AP Cybersecurity",
-    "AP Environmental Science",
-    "AP Lang (first publish)"
-   ],
-   "status": "history, never precedent (HOLD class 6)"
+   "id": "p0"
   },
   {
-   "gen": 2,
-   "name": "native runbook corridor",
-   "courses": [
-    "AP Lang (proved)",
-    "AP Lit (hardened)"
-   ],
-   "status": "worked examples and named operators"
+   "id": "p12",
+   "name": "tree-and-pricing",
+   "state": "done-all-four",
+   "verify": "blueprint predicates PROVEN in skills/factory-course-run/contracts/courses.json"
   },
   {
-   "gen": 3,
-   "name": "12-gate canon with closure packets",
-   "courses": [
-    "HumGeo",
-    "APWH",
-    "APUSH",
-    "Psych"
+   "id": "p3",
+   "name": "bank-gates",
+   "verify": [
+    "phase-bank-validation skill (answer-shape + key balance)",
+    "QTI parse + assertions (original \u00a73.6) \u2014 NOT skippable: LearnWith marks a failed embedded item COMPLETE"
+   ]
+  },
+  {
+   "id": "p4"
+  },
+  {
+   "id": "p5",
+   "name": "publish-dark",
+   "steps": [
+    "export-qti",
+    "upload-cms",
+    "push-timeback",
+    "verify-live"
    ],
-   "status": "current; HumGeo first walking it end to end"
+   "verify": [
+    "verify-live readback reconciles push bundle exactly (APES pub_stage7_verify_live.py pattern)",
+    "publishStatus == testing",
+    "enrollments == 0",
+    "evidence bundle README in course repo (Bio/APES format)"
+   ],
+   "shape": "one course holds all units (APES: unit 1 mints, later units pin --course-id)"
+  },
+  {
+   "id": "p6",
+   "name": "live-qc-gauntlet",
+   "instrument": "fleet course-QC harness (APES reports/step5_courseqc/ job pattern) \u2014 reuse, don't build",
+   "loop": "judge -> remediate (1-repair/2-regenerate) -> re-push -> re-judge until bar",
+   "repush_rules": [
+    "denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs",
+    "drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)"
+   ]
+  },
+  {
+   "id": "p7",
+   "name": "walk-and-accept",
+   "verify": [
+    "demo-walker PASS on serving paths (answers save; feedback choice-specific, non-leaking; keys unskewed)",
+    "one human pass: start/middle/end + longest reading + each writing geometry",
+    "XP spot-check: <80%=0, >=80%=base once, 100%=1.25x once, reload adds nothing"
+   ],
+   "account": "ONE owner test account, enrolled additively"
+  },
+  {
+   "id": "p8",
+   "name": "demo-and-flip",
+   "verify": [
+    "Ilma demo done from test account",
+    "her word recorded",
+    "then broader enrollment"
+   ]
   }
  ],
- "row_mapping_precedence_rule": "A trace row maps to the stage whose closing receipt it produces or repairs. A control, status, or approval row inherits the stage it affects. A row spanning stages splits by artifact. Stage 0 is A's entry predicate, so every row lands inside A-J.",
- "hold_classes": [
-  {
-   "id": 1,
-   "name": "known-check-skipped",
-   "rule": "A KNOWN check was skipped, then failed after a later gate closed. Reopen the earliest affected gate for exactly the failing records."
-  },
-  {
-   "id": 2,
-   "name": "upstream-bytes-moved",
-   "rule": "Upstream bytes moved under a closure. Rebind on fresh digests."
-  },
-  {
-   "id": 3,
-   "name": "approval-gap",
-   "rule": "Approval gap. HOLD naming the owner and the exact authority artifact the course profile and phase plan require. Owner prose satisfies only an explicitly named approval predicate."
-  },
-  {
-   "id": 4,
-   "name": "missing-factory-contract",
-   "rule": "Missing factory contract. Classify, file through the filing gate, HOLD for the named approval predicate. Never adapt a runner locally."
-  },
-  {
-   "id": 5,
-   "name": "identity-fault-at-acceptance",
-   "rule": "Identity or learner-state fault at acceptance. Record the no-go, repair, retry."
-  },
-  {
-   "id": 6,
-   "name": "uncorridored-timeback-write",
-   "rule": "Any TimeBack write outside the named ap-one publisher (no plan digest, no zero-write replay) fails and earns no G-closure credit. Same-byte, same-contract creation-time artifacts stay reusable under the non-waste rule; the write itself never earns a gate."
-  },
-  {
-   "id": 7,
-   "name": "leaked-answer-content",
-   "rule": "Leaked answer text or keys on any committed or served artifact. Stop the line, purge, re-verify."
-  },
-  {
-   "id": 8,
-   "name": "silent-pass-must-fail-closed",
-   "rule": "Markup or format that must fail closed is passing silently. Make it fail closed, then repair what got through."
-  },
-  {
-   "id": 9,
-   "name": "pilot-failed",
-   "rule": "A pilot fails. Suspend and replan. Never retry blind."
-  },
-  {
-   "id": 10,
-   "name": "landed-change-fails-own-suite",
-   "rule": "A landed change fails its own suite. Same-day repair PR and reopen the affected receipt."
-  },
-  {
-   "id": 11,
-   "name": "evidence-integrity",
-   "rule": "A claim or receipt overstates its bytes. Reopen the stage whose receipt was overstated; it closes again only on a corrected, byte-bound receipt."
-  }
- ],
- "out_of_corridor_rule": "A REMOTE Platform3 mutation during a native-corridor run maps to no stage and takes a HOLD. Local preparation, committed producer envelopes, and zero-write verification carry no HOLD and route by their actual stage function.",
  "stages": [
   {
-   "id": "A",
-   "name": "Scaffold + source corpus",
-   "entry_predicate": "One writer proven (Gate 0 STABILIZED or an explicit NOT_REQUIRED) plus course assignment.",
+   "id": "p0",
+   "name": "CUT",
+   "state": "cut",
+   "contract_status": "CUT",
+   "required_artifacts": [],
+   "automated": false
+  },
+  {
+   "id": "p12",
+   "name": "tree-and-pricing",
+   "state": "done-all-four",
+   "contract_status": "DONE_ALL_FOUR",
    "required_artifacts": [
-    "Build repo",
-    "Source pack",
-    "Governance docs",
-    "Locked official scope"
-   ],
-   "pass_receipt": "Gate 1 closure packet (SCOPE_LOCKED) for gen-3; repo evidence for gen-2 history.",
-   "hold_classes": [
-    9,
-    10,
-    11
-   ],
-   "reopen_target": "Per triggered HOLD class.",
-   "resume_evidence": "Corrected byte-bound receipt.",
-   "contract_status": "PARTIAL (codex finding 5)",
-   "proven": {
-    "level": "packet",
-    "note": "Packet plus gen-2 worked examples; entry predicate worked example is HumGeo's issue-44 stabilization cycle (trace rows 36-46)."
-   },
-   "evidence": [
-    "https://github.com/ilmych/humgeo-rebuild/pull/62",
-    "https://github.com/InceptTrilogy/ap-english-language-fall-2019-v1",
-    "https://github.com/InceptTrilogy/ap-english-literature-fall-2019-v1"
+    "blueprint predicates PROVEN in skills/factory-course-run/contracts/courses.json"
    ],
    "automated": false
   },
   {
-   "id": "B",
-   "name": "Compile machinery + inventory",
-   "entry_predicate": "Stage A closed (SCOPE_LOCKED).",
+   "id": "p3",
+   "name": "bank-gates",
+   "state": "required",
+   "contract_status": "REQUIRED",
    "required_artifacts": [
-    "Compilers, generators, calibration harness",
-    "Full census of existing vs missing content with zero unknown rows"
-   ],
-   "pass_receipt": "Gate 2 packet (INVENTORY_LOCKED, zero unknown).",
-   "hold_classes": [
-    1
-   ],
-   "reopen_target": "Reopen Gate 2 for exactly the missed records.",
-   "resume_evidence": "Amended inventory receipt, byte-stable.",
-   "contract_status": "PARTIAL (codex finding 5)",
-   "proven": {
-    "level": "packet",
-    "note": "HumGeo closed after two reopens."
-   },
-   "evidence": [
-    "https://github.com/ilmych/humgeo-rebuild/pull/63",
-    "https://github.com/ilmych/humgeo-rebuild/pull/64",
-    "https://github.com/ilmych/humgeo-rebuild/pull/66"
+    "phase-bank-validation skill (answer-shape + key balance)",
+    "QTI parse + assertions (original \u00a73.6) \u2014 NOT skippable: LearnWith marks a failed embedded item COMPLETE"
    ],
    "automated": false
   },
   {
-   "id": "C",
-   "name": "Content build",
-   "entry_predicate": "Stage B closed (INVENTORY_LOCKED).",
+   "id": "p4",
+   "name": "CUT",
+   "state": "cut",
+   "contract_status": "CUT",
+   "required_artifacts": [],
+   "automated": false
+  },
+  {
+   "id": "p5",
+   "name": "publish-dark",
+   "state": "required",
+   "contract_status": "REQUIRED",
    "required_artifacts": [
-    "Articles, items, video built through the factory",
-    "Every KNOWN bank-wide check run at generation (answer shape, balance, structure)"
-   ],
-   "pass_receipt": "Gate 3 packet (SOURCE_ACCEPTED) with delivery digest.",
-   "hold_classes": [
-    1,
-    7,
-    8
-   ],
-   "reopen_target": "Earliest affected gate for exactly the failing records.",
-   "resume_evidence": "Repaired records re-accepted through both factory QC layers.",
-   "contract_status": "PARTIAL (codex finding 5)",
-   "proven": {
-    "level": "packet",
-    "note": "New checks invented later belong to D and do not retroactively convict C."
-   },
-   "evidence": [
-    "https://github.com/ilmych/humgeo-rebuild/pull/67"
+    "export-qti",
+    "upload-cms",
+    "push-timeback",
+    "verify-live",
+    "verify-live readback reconciles push bundle exactly (APES pub_stage7_verify_live.py pattern)",
+    "publishStatus == testing",
+    "enrollments == 0",
+    "evidence bundle README in course repo (Bio/APES format)",
+    "one course holds all units (APES: unit 1 mints, later units pin --course-id)"
    ],
    "automated": false
   },
   {
-   "id": "D",
-   "name": "QC waves + review lanes",
-   "entry_predicate": "Content exists (runs with and after C).",
+   "id": "p6",
+   "name": "live-qc-gauntlet",
+   "state": "required",
+   "contract_status": "REQUIRED",
    "required_artifacts": [
-    "Factory creation QC plus independent /v1/qc verdicts",
-    "New sweeps",
-    "Cross-model review; the agent that changes content never waives the gate that failed"
-   ],
-   "pass_receipt": "Verdict receipts bound to exact bytes (Gate 3 + factory contracts).",
-   "hold_classes": [
-    4,
-    11
-   ],
-   "reopen_target": "The stage whose receipt the failed verdict covers.",
-   "resume_evidence": "Fresh factory verdicts on the exact bytes.",
-   "contract_status": "PARTIAL (codex finding 5)",
-   "proven": {
-    "level": "proven",
-    "note": "Lit's review lane caught placeholder rubrics; HumGeo re-earned 429 fingerprint-bound passes."
-   },
-   "evidence": [
-    "https://github.com/ilmych/humgeo-rebuild/pull/43"
+    "denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs",
+    "drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)",
+    "fleet course-QC harness (APES reports/step5_courseqc/ job pattern) \u2014 reuse, don't build",
+    "judge -> remediate (1-repair/2-regenerate) -> re-push -> re-judge until bar"
    ],
    "automated": false
   },
   {
-   "id": "E",
-   "name": "Import + source/profile bind",
-   "entry_predicate": "Stage D-accepted source; reviewed course profile.",
+   "id": "p7",
+   "name": "walk-and-accept",
+   "state": "required",
+   "contract_status": "REQUIRED",
    "required_artifacts": [
-    "Import receipt: named commit or PR + tree listing + layout under courses/<slug>/ (binds from the next course onward)",
-    "Bind to exact accepted-source digests with reviewed profile"
-   ],
-   "pass_receipt": "Gate 4 packet (PROFILE_AND_SOURCE_BOUND) containing the import receipt.",
-   "hold_classes": [
-    2,
-    3
-   ],
-   "reopen_target": "Rebind on fresh digests.",
-   "resume_evidence": "New bind packet on current digests.",
-   "contract_status": "PARTIAL (codex finding 5): bind half proven, import half has no worked example anywhere",
-   "proven": {
-    "level": "split",
-    "note": "Bind half has a packet (HumGeo). Import half is unreceipted in every course; the first receipted import defines it."
-   },
-   "evidence": [
-    "https://github.com/InceptTrilogy/ap-one/pull/846",
-    "https://github.com/InceptTrilogy/ap-one/pull/847",
-    "https://github.com/InceptTrilogy/ap-one/pull/851"
+    "demo-walker PASS on serving paths (answers save; feedback choice-specific, non-leaking; keys unskewed)",
+    "one human pass: start/middle/end + longest reading + each writing geometry",
+    "XP spot-check: <80%=0, >=80%=base once, 100%=1.25x once, reload adds nothing",
+    "ONE owner test account, enrolled additively"
    ],
    "automated": false
   },
   {
-   "id": "F",
-   "name": "Offline preview seal",
-   "entry_predicate": "Gate 4 bound.",
+   "id": "p8",
+   "name": "demo-and-flip",
+   "state": "required",
+   "contract_status": "REQUIRED",
    "required_artifacts": [
-    "Phase 1 \u2014 map the complete course tree",
-    "Phase 2 \u2014 price activities",
-    "Phase 3 \u2014 generate hosted assets and QTI; validate the student surface"
+    "Ilma demo done from test account",
+    "her word recorded",
+    "then broader enrollment"
    ],
-   "pass_receipt": "OFFLINE_PREVIEW_SEALED packet (Gate 5; separate Phase 1, Phase 2, and Phase 3 evidence).",
-   "hold_classes": [
-    1,
-    4
-   ],
-   "reopen_target": "Earliest affected gate.",
-   "resume_evidence": "Sealed offline artifacts and deterministic rerun receipts.",
-   "contract_status": "COMPLETE",
-   "proven": {
-    "level": "complete",
-    "note": "HumGeo has closed Phases 1-3 on receipts, including Phase 3.6 validation and the Phase 3.7 preview gate. Resource-level base XP remains a Phase 4 plan input."
-   },
-   "evidence": [],
-   "automated": true
-  },
-  {
-   "id": "G",
-   "name": "Sealed plan + dark publish",
-   "entry_predicate": "OFFLINE_PREVIEW_SEALED; profile/source/tree/asset/QTI digests unchanged; conforming plan compiler exists.",
-   "required_artifacts": [
-    "One immutable publication manifest and plan digest",
-    "Live all-absent checkpoint AS A FILE",
-    "Execute receipt under the global writer lock",
-    "Terminal zero-write replay AS A FILE"
-   ],
-   "pass_receipt": "PUBLICATION_PLAN_SEALED (Gate 6) then DARK_PUBLISHED_REPLAYED (Gate 7) \u2014 closure requires the three files.",
-   "hold_classes": [
-    3,
-    6,
-    7,
-    8
-   ],
-   "reopen_target": "Defect returns to its earliest affected phase.",
-   "resume_evidence": "Corrected file-backed receipts.",
-   "contract_status": "PARTIAL (codex finding 5): checkpoint and replay never confirmed as files",
-   "proven": {
-    "level": "in_progress",
-    "note": "HumGeo Phase 4 authority is resolved and its real-base build is deterministic. The native-asset plan-builder gap is open in issue #919; Phase 5 read-only capture is next. Lang chain and Lit #811 remain historical worked examples."
-   },
-   "evidence": [
-    "https://github.com/InceptTrilogy/ap-one/pull/697",
-    "https://github.com/InceptTrilogy/ap-one/pull/714",
-    "https://github.com/InceptTrilogy/ap-one/pull/716",
-    "https://github.com/InceptTrilogy/ap-one/pull/718",
-    "https://github.com/InceptTrilogy/ap-one/pull/722",
-    "https://github.com/InceptTrilogy/ap-one/pull/811"
-   ],
-   "automated": false
-  },
-  {
-   "id": "H1",
-   "name": "Canary enrollment",
-   "entry_predicate": "DARK_PUBLISHED_REPLAYED; exact owner-approved slots; distinct identity/auth states proved.",
-   "required_artifacts": [
-    "Separate enrollment plan, authority, and operator",
-    "Additive writes only",
-    "Exact readback",
-    "Terminal zero-write replay"
-   ],
-   "pass_receipt": "CANARIES_ENROLLED_REPLAYED (Gate 8, runbook Phase 7). Never combined with activation.",
-   "hold_classes": [
-    3,
-    5
-   ],
-   "reopen_target": "Repair identity, re-run enrollment.",
-   "resume_evidence": "Per-account packets with collision census.",
-   "contract_status": "PARTIAL (codex finding 5)",
-   "proven": {
-    "level": "unproven",
-    "note": "No complete forward worked example; the closest artifact is an enrollment repair."
-   },
-   "evidence": [
-    "https://github.com/InceptTrilogy/ap-one/pull/784"
-   ],
-   "automated": false
-  },
-  {
-   "id": "H2",
-   "name": "Private activation",
-   "entry_predicate": "CANARIES_ENROLLED_REPLAYED at 2/2; enrollment digest set unchanged.",
-   "required_artifacts": [
-    "Distinct activation authority",
-    "Production flags (publishStatus: published lives here, not stage J)",
-    "Exact course projection",
-    "Terminal zero-write replay"
-   ],
-   "pass_receipt": "PRIVATELY_ACTIVATED_REPLAYED (Gate 9, runbook Phase 8).",
-   "hold_classes": [
-    3,
-    5
-   ],
-   "reopen_target": "Rollback via separate Phase 10 authority.",
-   "resume_evidence": "Activation packet with exact projection readback.",
-   "contract_status": "PARTIAL (codex finding 5)",
-   "proven": {
-    "level": "worked_example",
-    "note": "Behind production flags; no gen-3 packet yet."
-   },
-   "evidence": [
-    "https://github.com/InceptTrilogy/ap-one/pull/816"
-   ],
-   "automated": false
-  },
-  {
-   "id": "I",
-   "name": "Learner acceptance",
-   "entry_predicate": "PRIVATELY_ACTIVATED_REPLAYED; fresh untouched learners; served bytes equal the activated digest set.",
-   "required_artifacts": [
-    "Start AND middle AND end paths",
-    "Retries, grading, XP, persistence",
-    "Identity isolation across accounts",
-    "Exact logs/progress readbacks"
-   ],
-   "pass_receipt": "Full Gate 10 packet (LEARNER_ACCEPTED). A settlement sub-receipt or start-only run does not close it.",
-   "hold_classes": [
-    5,
-    9,
-    11
-   ],
-   "reopen_target": "Each defect returns to its earliest affected phase with a bounded Phase 10 plan.",
-   "resume_evidence": "Re-run acceptance on repaired build.",
-   "contract_status": "COMPLETE",
-   "proven": {
-    "level": "open",
-    "note": "Lang: one no-go then a settlement sub-receipt. Lit: start-only. Neither closes the stage."
-   },
-   "evidence": [
-    "https://github.com/InceptTrilogy/ap-one/pull/801",
-    "https://github.com/InceptTrilogy/ap-one/pull/810"
-   ],
-   "automated": false
-  },
-  {
-   "id": "J",
-   "name": "Release",
-   "entry_predicate": "LEARNER_ACCEPTED; complete release checklist; zero open known issues; separate reviewed broader-enrollment all-absent plan; owner release decision.",
-   "required_artifacts": [
-    "Sealed broader-enrollment plan and digest",
-    "Fresh all-absent checkpoint",
-    "Execute/exact-read chain",
-    "Terminal zero-write replay",
-    "merge_authority recorded independently"
-   ],
-   "pass_receipt": "RELEASED packet (Gate 11, runbook Phase 9.6 + release checklist).",
-   "hold_classes": [
-    3
-   ],
-   "reopen_target": "Any Gate 10 gap reopens I.",
-   "resume_evidence": "First completed release becomes the fleet worked example.",
-   "contract_status": "COMPLETE",
-   "proven": {
-    "level": "unproven",
-    "note": "Nobody, anywhere. Canon rows P9-13, RLS-28, HO-16 are NOT_YET_MEASURED."
-   },
-   "evidence": [],
    "automated": false
   }
  ],
  "courses": {
   "humgeo": {
    "label": "AP Human Geography",
-   "current_stage": "G (Phase 4)",
-   "state": "OPEN \u2014 seal publication plan",
-   "as_of": "2026-08-31T02:18:36Z",
-   "detail": "Phases 0-3 are closed. P4-1 authority is resolved and P4-2 is done. PR #918 is deployed and independently staging-verified at c1086cfc. P4-3 is filed as issue #919 because the native asset layer has no publication plan builder; 71 video-cue content decisions remain. Phase 5 is next and read-only."
+   "current_stage": "content",
+   "state": "RE-EARN \u2014 ENRICH-FIRST",
+   "as_of": "2026-09-01T04:47:40Z",
+   "detail": "A 72-page enrichment campaign is live. The existing publication chain is queued to run once over final bytes.",
+   "priority": 1
   },
   "apwh": {
    "label": "AP World History",
-   "current_stage": "E/F boundary (Phase 0.2 open; Phase 1 Leg A measured)",
-   "state": "IN_PROGRESS \u2014 PR #917 open; Phase 1 Leg A receipted",
-   "as_of": "2026-08-31T01:22:55Z",
-   "detail": "Pre-runbook repair replaced 45 of 58 broken gate items. PRs #916 and #917 remain open. Five read-only Phase 1 Leg A measurements are receipted locally; Leg B waits and no Phase 1 closure is claimed."
+   "current_stage": "content",
+   "state": "RE-EARN \u2014 PRIORITY 2",
+   "as_of": "2026-09-01T04:47:40Z",
+   "detail": "The tier-2 landing comes first, followed by a fresh A2 measurement and then the stimulus-kind campaign.",
+   "priority": 2
   },
   "apush": {
    "label": "AP US History",
-   "current_stage": "C (pre-runbook content production)",
-   "state": "IN_PROGRESS \u2014 fleet wave",
-   "as_of": "2026-08-31T02:22:56Z",
-   "detail": "Wave-3 articles run fleet-side behind their own QC. Positions 52 and 53 reached articles_ready and the fleet is running serially. Successor reconciliation passes 11/11 at current course-build origin/main. The next-phase plan, profile draft, Phase 2 pricing model, and Phase 1.3/3.4 baseline instruments are prepared; final values and owner-only fields remain pending. A gated seating PR waits for a quiet wave, and the 249-position ledger rebuild follows the wave."
+   "current_stage": "fleet-held",
+   "state": "RE-EARN \u2014 PRIORITY 3",
+   "as_of": "2026-09-01T04:47:40Z",
+   "detail": "Dashboard-side specification work is closed. The next course move waits for the fleet sequence-adapter release.",
+   "priority": 3
   },
   "psych": {
    "label": "AP Psychology",
-   "current_stage": "D (pre-Phase-0 QC admission)",
-   "state": "BLOCKED \u2014 factory QC layer",
-   "as_of": "2026-08-31T00:54:24Z",
-   "detail": "Articles, 1,912 questions, and 37 essays exist, but zero items carry the factory judge receipt required for bank admission. Phase 0 drafts are ready; factory waits remain."
+   "current_stage": "p5",
+   "state": "RE-EARN \u2014 FLEET-DRIVEN",
+   "as_of": "2026-09-01T04:47:40Z",
+   "detail": "The fleet owns dark publication through its existing pipeline; this dashboard records p5 without projecting p6 credit.",
+   "priority": "parallel"
   }
- },
- "automation_rule": "A process step counts as automated only when its contract_status is COMPLETE and its proven.level is complete. Requirements-only; this grants no permission and no lifecycle credit."
+ }
 }
