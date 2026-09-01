@@ -66,6 +66,14 @@
   {
     "ts": "2026-09-01T19:44Z",
     "course": "cross",
+    "text": "ap-one commit c1d11379.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/c1d113798143696b6214960bf40aed7eec6a36c4",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T19:44Z",
+    "course": "cross",
     "text": "ap-one pull request #959 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/959",
@@ -485,6 +493,14 @@
     "text": "humgeo-rebuild commit b698abd0.",
     "event_type": "push",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/b698abd0270f8dafb4da3b46e7c21eb8562eaabe",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T08:43Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 318b991e.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/318b991eac8ea3ae4d60b7ce6302b8fbfb3041c8",
     "writer": "repository-event automation"
   },
   {
