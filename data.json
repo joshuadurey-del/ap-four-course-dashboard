@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T02:13Z",
+  "snapshot": "2026-09-01T02:26Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,17 +740,17 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-09-01T02:13Z",
+        "ts": "2026-09-01T02:26Z",
         "phase": "",
-        "kind": "note",
-        "text": "A-087 adjudicated NO-FIX: declared 394 = measured per_item_screen against the rebuilt set (post-#939 preview via blueprint_diff); live-bank 744 was a serve/build skew denominator. Bonus: preview turns the two duplicate seatings into oracle FAILs A-071 + A-081 (t07-05 f1-f2 share; 1 cross-form stem) \u2014 pre-merge note staged for #939. No PR, no merge, $0.",
+        "kind": "state-change",
+        "text": "Canon ledger P3 note corrected: KC-4.1.VI.iii stub is NOT a regeneration target \u2014 dedup marker over the CED-extraction defect (KG duplicates Sikhism under .i+.iii; Reformation sub-point absent). Byte receipts in the gap draft.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T01:22Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1863 completed: failure.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33457531832",
+        "ts": "2026-09-01T02:20Z",
+        "event_type": "issues",
+        "text": "ap-one issue #939 comment-created.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939#issuecomment-5487816749",
         "writer": "repository-event automation"
       },
       "evidence": [

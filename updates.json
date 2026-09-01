@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-01T02:26Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "state-change",
+    "text": "Canon ledger P3 note corrected: KC-4.1.VI.iii stub is NOT a regeneration target \u2014 dedup marker over the CED-extraction defect (KG duplicates Sikhism under .i+.iii; Reformation sub-point absent). Byte receipts in the gap draft.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T02:20Z",
+    "course": "apwh",
+    "text": "ap-one issue #939 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939#issuecomment-5487816749",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T02:15Z",
+    "course": "cross",
+    "text": "ap-one pull request #941 opened at f400c9b1.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/941",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T02:13Z",
     "course": "apwh",
     "phase": "",
