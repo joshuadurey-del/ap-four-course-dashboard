@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T01:02Z",
+  "snapshot": "2026-09-01T01:08Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,17 +740,17 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-08-31T17:28Z",
+        "ts": "2026-09-01T01:08Z",
         "phase": "",
         "kind": "milestone",
-        "text": "tier-2 landing STAGED: blueprint branch apwh-seat/tier2-banking-20260831 @ 76fe02b review-approved (codex 4-round REJECT->APPROVE findings-adopted, grok APPROVE, gemini APPROVE); final books 380 verified retirements / 924 banked / 429 seated; verify 12/12, suite 379, oracle 94 PASS + single t07-05 disclosed-overlap residue; POST blocked by intake gate owner-freshness (2h window) \u2014 awaiting Josh's typed word; commands in landing/STAGED-PR.md",
+        "text": "tier-2 serve-side PR posted: InceptTrilogy/ap-one#939 (head 8bf64fe1, base current main). Snapshot/manifest/gate_map/mcq_rationales rebuilt from the merged #68 bank; verify 12/12; suite 381 exercised these files via APWH_COURSE_DIR. Merge stays fleet-only per board. Board row claimed by incept-a8.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T01:02Z",
+        "ts": "2026-09-01T01:08Z",
         "event_type": "pull_request",
-        "text": "apwh-blueprint-build pull request #68 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/68",
+        "text": "ap-one pull request #939 opened at 8bf64fe1.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939",
         "writer": "repository-event automation"
       },
       "evidence": [
