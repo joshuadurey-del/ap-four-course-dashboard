@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T11:10Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Built + installed skill item-class-precedent (canonical Claude-Config/skills/, parity OK, registered wiki/SKILLS.md): prove a new item shape via live-precedent hunt + emit/judge/render as three separate gates on a 3-5 pilot. Bundles phantom_stimulus_sweep.py - APES pub_missing_table_sweep core ported verbatim (sha 49b41730) plus the engine S10 trigger, 11-case selftest all firing, validated against live pilot ground truth both directions.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T11:01Z",
     "course": "humgeo",
     "phase": "",
