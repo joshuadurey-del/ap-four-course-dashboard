@@ -1,5 +1,69 @@
 [
   {
+    "ts": "2026-09-01T05:37Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "merged",
+    "text": "ap-one PR #939 MERGED (squash e95ce2a6, 2026-09-01T05:36:34Z): tier-2 serve payload + fix 539a9e09 \u2014 capture re-pinned, gate_map preserved, 17 keymap answer leaks retired (0/0), dup resolved (1,987 distinct/1,988; 7.5 overlap declared), rationale bank rebuilt (2,010). /100 cert + 3-lane review APPROVE + merge-gate receipt r6ed866cb; suite 9,238 pass. Readback: landed tree byte-equal certified (0-line diff).",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T05:37Z",
+    "course": "cross",
+    "text": "ap-one workflow run #762 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33472646630",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:36Z",
+    "course": "apwh",
+    "text": "ap-one pull request #939 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:31Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1873 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33472864851",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:28Z",
+    "course": "cross",
+    "text": "ap-one workflow run #385 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33473723926",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:28Z",
+    "course": "cross",
+    "text": "ap-one workflow run #763 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33472682650",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:26Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1872 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33472655347",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:25Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1871 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33472624253",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T05:19Z",
     "course": "cross",
     "phase": "",
@@ -29,6 +93,14 @@
     "text": "ap-one pull request #946 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/946",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T05:11Z",
+    "course": "cross",
+    "text": "ap-one commit 3a784f43.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/3a784f4357bf25404012d7162dc06493238807b8",
     "writer": "repository-event automation"
   },
   {
@@ -469,6 +541,14 @@
     "text": "ap-one workflow run #1863 completed: failure.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33457531832",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T01:08Z",
+    "course": "apwh",
+    "text": "ap-one pull request #939 opened at 539a9e09.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939",
     "writer": "repository-event automation"
   },
   {

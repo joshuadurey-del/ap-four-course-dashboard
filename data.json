@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T05:03Z",
+  "snapshot": "2026-09-01T05:37Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,17 +695,17 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-01T04:47Z",
-        "phase": "content",
-        "kind": "state-change",
-        "text": "Re-earn: content, priority 2. Tier-2 landing comes first, then A2 re-measurement, then the stimulus-kind campaign.",
-        "writer": "dashboard curation"
+        "ts": "2026-09-01T05:37Z",
+        "phase": "",
+        "kind": "merged",
+        "text": "ap-one PR #939 MERGED (squash e95ce2a6, 2026-09-01T05:36:34Z): tier-2 serve payload + fix 539a9e09 \u2014 capture re-pinned, gate_map preserved, 17 keymap answer leaks retired (0/0), dup resolved (1,987 distinct/1,988; 7.5 overlap declared), rationale bank rebuilt (2,010). /100 cert + 3-lane review APPROVE + merge-gate receipt r6ed866cb; suite 9,238 pass. Readback: landed tree byte-equal certified (0-line diff).",
+        "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T05:03Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1870 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33471206818",
+        "ts": "2026-09-01T05:36Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #939 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939",
         "writer": "repository-event automation"
       },
       "evidence": [
