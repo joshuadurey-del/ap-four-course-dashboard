@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T07:17Z",
+  "snapshot": "2026-09-01T07:39Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T07:17Z",
+        "ts": "2026-09-01T07:39Z",
         "phase": "",
         "kind": "hold",
-        "text": "check-stimulus top-up HELD: emit path PROVEN to accept table stems on ap-one main 3e7e3ba5 (builder sha256 158fdd88, normalizer+validator accept, emitted escaped); render on the LearnWith article-check widget UNMEASURED and unreachable offline (check placeholder divs empty, no script in page, builder uploads nothing - Phase 6 owns writes). Receipt: out/humgeo-topup-20260901/RENDER-PATH-FINDING.md. Spend $0. Actor collision with session 97876870 unresolved.",
+        "text": "topup pilot: 4 records authored+gate-PASS; judge run found BLOCKED_CONTRACT - humgeo-rebuild scripts/service_qc.py _PASSTHROUGH omits stimulus/stimuli/stimulus_id(s) that POST /v1/qc accepts, so 3 of 4 stimulus items fail STRUCT_S10 phantom-stimulus. Proven offline at engine main 6db23450 with 4 controls: all 4 clean once forwarded. P4 (no artifact word in stem) judged PASS 0.979. Spend 2 paid calls. Receipts out/humgeo-topup-20260901/BLOCKER-poster-drops-stimulus.md",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

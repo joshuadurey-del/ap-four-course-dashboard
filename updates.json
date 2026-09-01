@@ -1,11 +1,139 @@
 [
   {
+    "ts": "2026-09-01T07:39Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "hold",
+    "text": "topup pilot: 4 records authored+gate-PASS; judge run found BLOCKED_CONTRACT - humgeo-rebuild scripts/service_qc.py _PASSTHROUGH omits stimulus/stimuli/stimulus_id(s) that POST /v1/qc accepts, so 3 of 4 stimulus items fail STRUCT_S10 phantom-stimulus. Proven offline at engine main 6db23450 with 4 controls: all 4 clean once forwarded. P4 (no artifact word in stem) judged PASS 0.979. Spend 2 paid calls. Receipts out/humgeo-topup-20260901/BLOCKER-poster-drops-stimulus.md",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T07:38Z",
+    "course": "cross",
+    "text": "ap-one workflow run #768 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480422001",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:36Z",
+    "course": "cross",
+    "text": "ap-one pull request #953 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/953",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:36Z",
+    "course": "cross",
+    "text": "ap-one pull request #953 opened at 1fdbd63d.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/953",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:35Z",
+    "course": "cross",
+    "text": "ap-one pull request #952 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/952",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:34Z",
+    "course": "cross",
+    "text": "ap-one pull request #952 opened at 63ef11f3.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/952",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:31Z",
+    "course": "cross",
+    "text": "ap-one workflow run #390 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33482389373",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:29Z",
+    "course": "cross",
+    "text": "ap-one workflow run #767 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480409167",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:20Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1878 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480412998",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:20Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1877 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480384952",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:19Z",
+    "course": "cross",
+    "text": "ap-one pull request #949 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/949",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:19Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1879 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480418289",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:17Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1876 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480286462",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T07:17Z",
     "course": "humgeo",
     "phase": "",
     "kind": "hold",
     "text": "check-stimulus top-up HELD: emit path PROVEN to accept table stems on ap-one main 3e7e3ba5 (builder sha256 158fdd88, normalizer+validator accept, emitted escaped); render on the LearnWith article-check widget UNMEASURED and unreachable offline (check placeholder divs empty, no script in page, builder uploads nothing - Phase 6 owns writes). Receipt: out/humgeo-topup-20260901/RENDER-PATH-FINDING.md. Spend $0. Actor collision with session 97876870 unresolved.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T07:04Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:04Z",
+    "course": "cross",
+    "text": "ap-one commit 0cd48c11.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/0cd48c11c2837078bc05d724c9925258e111630c",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:04Z",
+    "course": "cross",
+    "text": "ap-one commit b119731e.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/b119731e37d1c62e00325e5fefe5725317260a59",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-01T07:04Z",
