@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T08:47Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Enrichment branch fix wave: repo's own article gate (w5b authored) cleared 209 findings -> 0 across all 72 articles (band restated 600-1500 with owner word; claim traces re-derived over new bodies; canonical injections; absolutes reworded; fk/word_count recomputed with the validator's own functions; new pytest binds the gate into the suite). Commit b698abd0 pushed to draft PR #69 (stays draft). Receipts: out/humgeo-orchestrate-20260901/ + traces/.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T08:39Z",
     "course": "humgeo",
     "phase": "",
@@ -309,6 +317,14 @@
     "text": "ap-one workflow run #766 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33478396532",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:58Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #69 opened at b698abd0.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
     "writer": "repository-event automation"
   },
   {

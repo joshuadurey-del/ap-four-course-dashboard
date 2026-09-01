@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T08:39Z",
+  "snapshot": "2026-09-01T08:47Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T08:39Z",
+        "ts": "2026-09-01T08:47Z",
         "phase": "",
-        "kind": "hold",
-        "text": "service_qc stimulus fix review round 3 on the shipping diff: gemini APPROVE (ran the 3 mutations itself, confirmed 0 of 444 paid records re-enqueued, endorsed the single-route scope); codex INCOMPLETE - no output file, 108KB stderr ends in its own preamble, watchdog reaped at 420s, not scored as a pass; grok skipped as a dead lane after 2 no-verdict rounds. All codex findings from rounds 1-2 fixed or declined with measurements. STOPPED pre-push per owner. Spend this round: 0 paid calls.",
+        "kind": "milestone",
+        "text": "Enrichment branch fix wave: repo's own article gate (w5b authored) cleared 209 findings -> 0 across all 72 articles (band restated 600-1500 with owner word; claim traces re-derived over new bodies; canonical injections; absolutes reworded; fk/word_count recomputed with the validator's own functions; new pytest binds the gate into the suite). Commit b698abd0 pushed to draft PR #69 (stays draft). Receipts: out/humgeo-orchestrate-20260901/ + traces/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
