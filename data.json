@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T01:08Z",
+  "snapshot": "2026-09-01T01:22Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -747,10 +747,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T01:08Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #939 opened at 8bf64fe1.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/939",
+        "ts": "2026-09-01T01:22Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1863 completed: failure.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33457531832",
         "writer": "repository-event automation"
       },
       "evidence": [
