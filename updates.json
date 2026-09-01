@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T02:13Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "A-087 adjudicated NO-FIX: declared 394 = measured per_item_screen against the rebuilt set (post-#939 preview via blueprint_diff); live-bank 744 was a serve/build skew denominator. Bonus: preview turns the two duplicate seatings into oracle FAILs A-071 + A-081 (t07-05 f1-f2 share; 1 cross-form stem) \u2014 pre-merge note staged for #939. No PR, no merge, $0.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T02:00Z",
     "course": "apwh",
     "phase": "",
