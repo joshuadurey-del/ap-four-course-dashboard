@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T04:46Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "note",
+    "text": "Drafted PIPELINE.md crosswalks for apush/apwh/humgeo (out/pipeline-crosswalks-20260901/): fleet 8-stage layout mapped to existing repo paths, zero moves, layouts measured from live GitHub. Fixed org error in the humgeo orchestrator brief (ilmych/humgeo-rebuild, not InceptTrilogy). DRAFTS \u2014 land via land-a-change on Josh's go.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T04:39Z",
     "course": "cross",
     "phase": "",
