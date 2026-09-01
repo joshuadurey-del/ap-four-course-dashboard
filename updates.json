@@ -1,10 +1,26 @@
 [
   {
+    "ts": "2026-09-01T06:01Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #764 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33474257522",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T06:00Z",
     "course": "apush",
     "phase": "",
     "kind": "note",
     "text": "PIPELINE.md crosswalk PR #16 posted to ilmych/apush-course-build at head 64252c70 (five-round independent review APPROVE; pr-review-gate + pr-necessity PASS; consumer rows adjudicated from bytes). Merge rides the fleet lane: measured merged_by on PRs 13-15 is ilmych, and the suite cannot collect green off their build host (one test binds their filesystem; deps fixed locally). Receipts: out/pipeline-crosswalks-20260901/ + ~/.incept/merge-gate/.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T05:57Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "landed",
+    "text": "Dashboard lessons catalog landed at cc56d600: seven post-Psych-sync lessons, each rewritten as trigger \u2192 observable failure \u2192 missing control \u2192 implemented control \u2192 verifier. Pages run 33475532065 succeeded; served lessons.html matches committed bytes. No lifecycle claims changed.",
     "writer": "INCEPT event projection"
   },
   {

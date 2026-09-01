@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T06:00Z",
+  "snapshot": "2026-09-01T06:01Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -702,10 +702,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T05:45Z",
+        "ts": "2026-09-01T06:01Z",
         "event_type": "workflow_run",
-        "text": "apwh-blueprint-build workflow run #56 completed: success.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33474779873",
+        "text": "ap-one workflow run #764 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33474257522",
         "writer": "repository-event automation"
       },
       "evidence": [
