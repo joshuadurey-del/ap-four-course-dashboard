@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T07:39Z",
+  "snapshot": "2026-09-01T08:25Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T07:39Z",
+        "ts": "2026-09-01T08:25Z",
         "phase": "",
         "kind": "hold",
-        "text": "topup pilot: 4 records authored+gate-PASS; judge run found BLOCKED_CONTRACT - humgeo-rebuild scripts/service_qc.py _PASSTHROUGH omits stimulus/stimuli/stimulus_id(s) that POST /v1/qc accepts, so 3 of 4 stimulus items fail STRUCT_S10 phantom-stimulus. Proven offline at engine main 6db23450 with 4 controls: all 4 clean once forwarded. P4 (no artifact word in stem) judged PASS 0.979. Spend 2 paid calls. Receipts out/humgeo-topup-20260901/BLOCKER-poster-drops-stimulus.md",
+        "text": "service_qc stimulus fix on branch ...--service-qc-stimulus-passthrough off main 8495d759: stimulus forwarded + collect() honours the stored request hash. 83+/2-, one file. 3 guards mutation-proven; suite identical to pristine control 21/675/121; 0 of 2758 request bodies change; 0 of 444 paid verdicts re-enqueued. Pilot 4/4 judge-pass. Round-1 all-four-routes fix REVERSED: round 2 proved stimulus_id/stimuli/stimulus_ids clear S10 unresolved. PAUSED pre-push per owner. Spend 5 calls.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T06:58Z",
-        "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #69 opened at 37b75472.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
+        "ts": "2026-09-01T08:22Z",
+        "event_type": "issues",
+        "text": "humgeo-rebuild issue #69 comment-created.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69#issuecomment-5491084142",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

@@ -1,5 +1,93 @@
 [
   {
+    "ts": "2026-09-01T08:25Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "hold",
+    "text": "service_qc stimulus fix on branch ...--service-qc-stimulus-passthrough off main 8495d759: stimulus forwarded + collect() honours the stored request hash. 83+/2-, one file. 3 guards mutation-proven; suite identical to pristine control 21/675/121; 0 of 2758 request bodies change; 0 of 444 paid verdicts re-enqueued. Pilot 4/4 judge-pass. Round-1 all-four-routes fix REVERSED: round 2 proved stimulus_id/stimuli/stimulus_ids clear S10 unresolved. PAUSED pre-push per owner. Spend 5 calls.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T08:22Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #69 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69#issuecomment-5491084142",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T08:10Z",
+    "course": "cross",
+    "text": "ap-one workflow run #394 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33485573448",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T08:09Z",
+    "course": "cross",
+    "text": "ap-one workflow run #771 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33482965484",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T08:01Z",
+    "course": "cross",
+    "text": "ap-one workflow run #393 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33484844634",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T08:00Z",
+    "course": "cross",
+    "text": "ap-one workflow run #770 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33482836826",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:51Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1881 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33482962633",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:49Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1880 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33482752786",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:49Z",
+    "course": "cross",
+    "text": "ap-one workflow run #392 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33483868120",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:47Z",
+    "course": "cross",
+    "text": "ap-one workflow run #769 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33481619108",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:40Z",
+    "course": "cross",
+    "text": "ap-one workflow run #391 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33483107034",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T07:39Z",
     "course": "humgeo",
     "phase": "",
@@ -13,6 +101,22 @@
     "text": "ap-one workflow run #768 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33480422001",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:36Z",
+    "course": "cross",
+    "text": "ap-one repository activity: delete.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:36Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {
@@ -37,6 +141,14 @@
     "text": "ap-one pull request #952 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/952",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:34Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {
@@ -194,6 +306,14 @@
   {
     "ts": "2026-09-01T06:58Z",
     "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:58Z",
+    "course": "humgeo",
     "text": "humgeo-rebuild pull request #69 opened at 37b75472.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
@@ -326,6 +446,14 @@
     "kind": "landed",
     "text": "Dashboard lessons catalog landed at cc56d600: seven post-Psych-sync lessons, each rewritten as trigger \u2192 observable failure \u2192 missing control \u2192 implemented control \u2192 verifier. Pages run 33475532065 succeeded; served lessons.html matches committed bytes. No lifecycle claims changed.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T05:54Z",
+    "course": "apush",
+    "text": "apush-course-build repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/apush-course-build",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-01T05:54Z",
