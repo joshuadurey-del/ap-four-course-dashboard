@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T01:22Z",
+  "snapshot": "2026-09-01T01:43Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,10 +740,10 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-09-01T01:08Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "tier-2 serve-side PR posted: InceptTrilogy/ap-one#939 (head 8bf64fe1, base current main). Snapshot/manifest/gate_map/mcq_rationales rebuilt from the merged #68 bank; verify 12/12; suite 381 exercised these files via APWH_COURSE_DIR. Merge stays fleet-only per board. Board row claimed by incept-a8.",
+        "ts": "2026-09-01T01:43Z",
+        "phase": "4",
+        "kind": "executor-step",
+        "text": "qc_green: rc=1 verifier_rc=1",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

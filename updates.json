@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T01:43Z",
+    "course": "apwh",
+    "phase": "4",
+    "kind": "executor-step",
+    "text": "qc_green: rc=1 verifier_rc=1",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T01:22Z",
     "course": "apwh",
     "text": "ap-one workflow run #1863 completed: failure.",
