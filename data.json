@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T05:53Z",
+  "snapshot": "2026-09-01T06:00Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -850,17 +850,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB",
       "current_event": {
-        "ts": "2026-09-01T04:47Z",
-        "phase": "fleet-held",
-        "kind": "state-change",
-        "text": "Re-earn: fleet-held, priority 3. Dashboard-side specification work is closed; the sequence-adapter release remains fleet-owned.",
-        "writer": "dashboard curation"
+        "ts": "2026-09-01T06:00Z",
+        "phase": "",
+        "kind": "note",
+        "text": "PIPELINE.md crosswalk PR #16 posted to ilmych/apush-course-build at head 64252c70 (five-round independent review APPROVE; pr-review-gate + pr-necessity PASS; consumer rows adjudicated from bytes). Merge rides the fleet lane: measured merged_by on PRs 13-15 is ilmych, and the suite cannot collect green off their build host (one test binds their filesystem; deps fixed locally). Receipts: out/pipeline-crosswalks-20260901/ + ~/.incept/merge-gate/.",
+        "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T11:39Z",
-        "event_type": "issues",
-        "text": "apush-course-build issue #9 labeled.",
-        "evidence_url": "https://github.com/ilmych/apush-course-build/issues/9",
+        "ts": "2026-09-01T05:54Z",
+        "event_type": "pull_request",
+        "text": "apush-course-build pull request #16 opened at 64252c70.",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/pull/16",
         "writer": "repository-event automation"
       },
       "status_at": "2026-09-01T04:47Z"
