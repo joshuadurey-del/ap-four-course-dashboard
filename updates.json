@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T11:48Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "PR #69 branch fix pushed, NOT merged. w5b article-gate --selftest restored from FAIL(2) to PASS, 24 known-bad fixtures firing; fixtures now derive from the word band and band_fixture_invariants() pins each one's side. Harden complete across 3 model families: codex 1 med, gemini 1 CRITICAL + 1 HIGH + 2 MED + 2 LOW, grok SAFE. 5 integrated with 4 regression tests, each fail-before/pass-after. Suite 21 failed / 679 passed vs 21-failed baseline: zero newly broken. Disclosed: ek check inert on 72/72.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T11:28Z",
     "course": "humgeo",
     "phase": "",
@@ -373,6 +381,14 @@
     "text": "ap-one workflow run #766 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33478396532",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:58Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #69 opened at 457fc34a.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
     "writer": "repository-event automation"
   },
   {

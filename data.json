@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T11:28Z",
+  "snapshot": "2026-09-01T11:48Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T11:28Z",
+        "ts": "2026-09-01T11:48Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Built + installed skill reverse-engineer (pairs with item-class-precedent): factory_hunt.py ranks org-wide capability hits by shipped-course liveness and flags defect-named files; equivalence_harness.py fetches their source at a recorded ref, execs only named symbols, diffs both sides via an adapter, halts on a renamed symbol. Adapter vs APES: 6/6 byte-identical. Found a real bug first run (skipped entity normalisation) the hand-written 5/5 proof missed. Selftests pass from installed copies.",
+        "kind": "receipt-sealed",
+        "text": "PR #69 branch fix pushed, NOT merged. w5b article-gate --selftest restored from FAIL(2) to PASS, 24 known-bad fixtures firing; fixtures now derive from the word band and band_fixture_invariants() pins each one's side. Harden complete across 3 model families: codex 1 med, gemini 1 CRITICAL + 1 HIGH + 2 MED + 2 LOW, grok SAFE. 5 integrated with 4 regression tests, each fail-before/pass-after. Suite 21 failed / 679 passed vs 21-failed baseline: zero newly broken. Disclosed: ek check inert on 72/72.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
