@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-08-31T05:25:15Z",
+ "generated_ts": "2026-09-01T12:10:54Z",
  "open": [
   {
    "course": "apush",
@@ -8,6 +8,14 @@
    "kind": "decision",
    "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "8ab6f9c1ecf35646",
+   "kind": "decision",
+   "title": "HumGeo 5-option mocks collide with the publish SDK's AP rule posture",
+   "ts": "2026-09-01T12:10:54Z"
   }
  ],
  "schema": "needs-human-public/v1"
