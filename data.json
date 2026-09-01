@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T00:58Z",
+  "snapshot": "2026-09-01T01:02Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -747,10 +747,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T00:33Z",
-        "event_type": "workflow_run",
-        "text": "apwh-blueprint-build workflow run #55 completed: success.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33455207161",
+        "ts": "2026-09-01T01:02Z",
+        "event_type": "pull_request",
+        "text": "apwh-blueprint-build pull request #68 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/68",
         "writer": "repository-event automation"
       },
       "evidence": [

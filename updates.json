@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T01:02Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #68 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/68",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T00:58Z",
     "course": "humgeo",
     "phase": "",
