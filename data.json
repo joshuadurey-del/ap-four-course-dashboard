@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T01:43Z",
+  "snapshot": "2026-09-01T01:44Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -740,7 +740,7 @@
         "gate": "Phase 2 pricing PR #930 is merged and the step picker returns the next runnable APWH action"
       },
       "current_event": {
-        "ts": "2026-09-01T01:43Z",
+        "ts": "2026-09-01T01:44Z",
         "phase": "4",
         "kind": "executor-step",
         "text": "qc_green: rc=1 verifier_rc=1",
