@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T12:11Z",
+  "snapshot": "2026-09-01T13:17Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T12:11Z",
+        "ts": "2026-09-01T13:17Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Two skills built + installed from the APES reverse-engineer pass: publish-course-dark (18-guard preflight; refuses the 5-option/ap() collision with its source citation) and course-qc-gauntlet (20-guard remediation engine porting all 5 guards from their U3 edit engine; per-item work becomes data, not a script). Both selftests pass from the INSTALLED copies; source==deployed clean. RUNBOOK-ASAP-HUMGEO now v3 with a machine-checkable contract: 7 step ids, states, bindings, verifiers.",
+        "kind": "filed",
+        "text": "PR #71 DRAFT to ilmych/humgeo-rebuild: gate integrity only, split out of the tangled #69. +516/-19 across 3 files vs #69's 75. Two dead checks fixed (ek authority resolved 0 of 72; selftest band probes could not fire) plus 4 wrong-verdict defects across 3 review rounds. Fixtures 24 to 32. Suite 702 pass / 0 fail vs 696 baseline once HUMGEO_FACTORY_ROOT is set: the 21 failures quoted all session were ours. Band stays 250-450. Merge held: round 3 REJECT, 4 of 7 fixed, 3 deferred.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T08:46Z",
-        "event_type": "push",
-        "text": "humgeo-rebuild commit b698abd0.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/b698abd0270f8dafb4da3b46e7c21eb8562eaabe",
+        "ts": "2026-09-01T13:16Z",
+        "event_type": "pull_request",
+        "text": "humgeo-rebuild pull request #71 opened at ed345a1a.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/71",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

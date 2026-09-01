@@ -1,5 +1,69 @@
 [
   {
+    "ts": "2026-09-01T13:17Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "filed",
+    "text": "PR #71 DRAFT to ilmych/humgeo-rebuild: gate integrity only, split out of the tangled #69. +516/-19 across 3 files vs #69's 75. Two dead checks fixed (ek authority resolved 0 of 72; selftest band probes could not fire) plus 4 wrong-verdict defects across 3 review rounds. Fixtures 24 to 32. Suite 702 pass / 0 fail vs 696 baseline once HUMGEO_FACTORY_ROOT is set: the 21 failures quoted all session were ours. Band stays 250-450. Merge held: round 3 REJECT, 4 of 7 fixed, 3 deferred.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T13:16Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #71 opened at ed345a1a.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/71",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T13:04Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1884 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33509806632",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T12:58Z",
+    "course": "cross",
+    "text": "ap-one pull request #956 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/956",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T12:49Z",
+    "course": "cross",
+    "text": "ap-one pull request #956 opened at 947441a8.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/956",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T12:24Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #70 opened at 55a2d05a.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/70",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T12:21Z",
+    "course": "cross",
+    "text": "ap-one workflow run #396 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33507123600",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T12:20Z",
+    "course": "cross",
+    "text": "ap-one workflow run #773 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33504919559",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-01T12:11Z",
     "course": "humgeo",
     "phase": "",
@@ -45,6 +109,22 @@
     "text": "ap-one pull request #955 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/955",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T11:54Z",
+    "course": "cross",
+    "text": "ap-one commit bdc99e14.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/bdc99e14d2d756c248a0f7a82bdcc601aa6afa0c",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T11:54Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {
@@ -965,6 +1045,22 @@
     "text": "ap-one issue #940 unlabeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/940",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T03:50Z",
+    "course": "cross",
+    "text": "ap-one commit 02432c48.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/02432c48ae14576d215ab789662a5db7a1a793f7",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T03:50Z",
+    "course": "cross",
+    "text": "ap-one commit 080a572f.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/080a572ff90336d8387f5bff3086d892dee1c276",
     "writer": "repository-event automation"
   },
   {
