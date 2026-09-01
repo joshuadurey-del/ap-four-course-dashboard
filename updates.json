@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-01T11:28Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Built + installed skill reverse-engineer (pairs with item-class-precedent): factory_hunt.py ranks org-wide capability hits by shipped-course liveness and flags defect-named files; equivalence_harness.py fetches their source at a recorded ref, execs only named symbols, diffs both sides via an adapter, halts on a renamed symbol. Adapter vs APES: 6/6 byte-identical. Found a real bug first run (skipped entity normalisation) the hand-written 5/5 proof missed. Selftests pass from installed copies.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T11:19Z",
     "course": "humgeo",
     "phase": "",
