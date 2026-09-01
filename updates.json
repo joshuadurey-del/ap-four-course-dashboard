@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-01T00:58Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "state-change",
+    "text": "Owner ruled ENRICH-FIRST for HumGeo (2026-09-01) + prototype APPROVED + option counts (mocks 5, everything else 4). 72-page enrichment campaign unlocked: manifest + plan on disk, worker briefs via codex-prompt next, paid phase waits on envelope. Publication chain runs once over final bytes, then Phase 6 dark.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T00:33Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build workflow run #55 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33455207161",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T00:33Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #68 opened at 76fe02b2.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/68",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-08-31T19:00Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #71 merged at no-sha.",
@@ -77,6 +101,14 @@
     "text": "ap-one workflow run #1862 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33413085110",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-08-31T16:15Z",
+    "course": "cross",
+    "text": "ap-one commit 54ec4527.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/54ec452715a611eecd388ace88c4134949415ae6",
     "writer": "repository-event automation"
   },
   {

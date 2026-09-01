@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-08-31T19:00Z",
+  "snapshot": "2026-09-01T00:58Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "status_at": "2026-08-31T06:51:23Z",
       "current_event": {
-        "ts": "2026-08-31T09:19Z",
+        "ts": "2026-09-01T00:58Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Article-quality plan Phases 0-2 COMPLETE (out/article-quality-plan-20260831/): census (HumGeo 88 serving articles, 72/83 concept members under 400 visible words median 296; APWH 171+2 @ bc903c19 footer 172/173; APUSH unit9 pipeline stamps data-retrieval-role 162/162 vs 0/664 canary), population scanners with positive controls, and MECHANISM-DIFF.md (codex+gemini+grok lanes, GLM-5.3 draft, 5 quotes byte-verified). All $0 except GLM via hermes pooled key (owner-named). Phase 3+ waits on owner.",
+        "kind": "state-change",
+        "text": "Owner ruled ENRICH-FIRST for HumGeo (2026-09-01) + prototype APPROVED + option counts (mocks 5, everything else 4). 72-page enrichment campaign unlocked: manifest + plan on disk, worker briefs via codex-prompt next, paid phase waits on envelope. Publication chain runs once over final bytes, then Phase 6 dark.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -747,10 +747,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-08-31T07:21Z",
+        "ts": "2026-09-01T00:33Z",
         "event_type": "workflow_run",
-        "text": "ap-one workflow run #749 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33367402207",
+        "text": "apwh-blueprint-build workflow run #55 completed: success.",
+        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33455207161",
         "writer": "repository-event automation"
       },
       "evidence": [
