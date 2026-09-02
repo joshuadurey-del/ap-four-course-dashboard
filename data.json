@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T04:18Z",
+  "snapshot": "2026-09-02T04:34Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T04:12Z",
+        "ts": "2026-09-02T04:34Z",
         "phase": "",
-        "kind": "merged",
-        "text": "bpb PR #70 MERGED 2026-09-02T04:12:16Z as 2ec3d7a3 on Josh's typed word (merge PR #70) + merge-gate PASS at head c83b7d1c. Twin fix (URL-to-citation table, 9 verified docs) + A-072 delta 1988/1988 + A-087 19 honest rows + rationale bank + the four stale E3 suite pins re-measured to the built state (suite 379 passed / 0 failed). Serve copy = ap-one #962, CI running on rebased head 2575b287.",
+        "kind": "note",
+        "text": "Owner question caught a false-pass class: 468 APWH gate members were labelled pass by 'pipeline invariant'. Measured at bytes - generate_fill.py posts /v1/generate/contextual and never sets run_full_content_qc; the factory's contextual entry docstring says full QC runs only on that opt-in. They cleared inline G0-G8 gates only, never the 18 structural + 23 content checks. Quarantined to v2/unverified_pool.v2.jsonl; DEFINITIONS.md corrected. Prescreen labels 3019 to 2551 rows, 1201 fails intact.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

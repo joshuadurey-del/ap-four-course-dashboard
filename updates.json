@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T04:34Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "Owner question caught a false-pass class: 468 APWH gate members were labelled pass by 'pipeline invariant'. Measured at bytes - generate_fill.py posts /v1/generate/contextual and never sets run_full_content_qc; the factory's contextual entry docstring says full QC runs only on that opt-in. They cleared inline G0-G8 gates only, never the 18 structural + 23 content checks. Quarantined to v2/unverified_pool.v2.jsonl; DEFINITIONS.md corrected. Prescreen labels 3019 to 2551 rows, 1201 fails intact.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T04:18Z",
     "course": "humgeo",
     "phase": "",
