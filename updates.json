@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T05:13Z",
+    "course": "apwh",
+    "phase": "4",
+    "kind": "executor-step",
+    "text": "qc_green: rc=1 verifier_rc=1",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T04:54Z",
     "course": "apwh",
     "phase": "",

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T04:54Z",
+  "snapshot": "2026-09-02T05:13Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T04:54Z",
-        "phase": "",
-        "kind": "filed",
-        "text": "APWH gate-repair handoff drafted for a fresh window: 468 served gate members never judged by content QC, 168 fail the factory's own code checks (123 D4 / 60 D8), 153 single-check repairable, 15 double D4+D8 listed by id, 300 code-clean but unjudged. D4 tested as firing fairly (105 of 108 flags sit in a distractor). Open item: topic-to-LO/EK/skill mapping not found; blueprint json is a spec not a code table. Plan is free-first; repair via factory item_repair, verdict via POST /v1/qc.",
+        "ts": "2026-09-02T05:13Z",
+        "phase": "4",
+        "kind": "executor-step",
+        "text": "qc_green: rc=1 verifier_rc=1",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
