@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-02T11:37:07Z",
+ "generated_ts": "2026-09-02T11:39:00Z",
  "open": [
   {
    "course": "apush",
@@ -8,14 +8,6 @@
    "kind": "decision",
    "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
-  },
-  {
-   "course": "humgeo",
-   "deadline": "",
-   "id": "953dde4c8f0fbcb6",
-   "kind": "decision",
-   "title": "s3 phase 2: 1 of 126 slots parked after 3 judge fails (b2-042); 125+30 landing now \u2014 rework it or keep the original check?",
-   "ts": "2026-09-02T11:37:07Z"
   }
  ],
  "schema": "needs-human-public/v1"
