@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T05:56Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "s5 mock wiring fix round (owner 2026-09-02): Section I stimulus images render, APWH mock options normalized + Phase 0.2 capture remounted, q24 key corrected via reviewed manifest, frozen review resealed; staged commit now 14197ba7 @ ap-one a769c971 (rebased over #962); still local, no push/PR/merge. Receipts: INCEPT/out/humgeo-mock-wiring-20260902/",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T05:55Z",
     "course": "humgeo",
     "phase": "",

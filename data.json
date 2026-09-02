@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T05:55Z",
+  "snapshot": "2026-09-02T05:56Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T05:55Z",
+        "ts": "2026-09-02T05:56Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "Phase-1 top-up judged: 32/32 records pass POST /v1/qc with content checks (28 new stimulus-bound checks + 4 pilot re-judges on split-shape bytes), quality 0.979-1.000. Four rounds, 65 calls; round 1 lost 28 to a seat-caused metadata gap (exemplar dropped ek/lo/skill codes) \u2014 fixed by adding G-S1/G-S2 to the free battery, tagging from blueprint/ek_map.json, and the committed hydrator. Records staged in out/humgeo-topup-phase1-20260902/draft-batch/records; next is landing via land-a-change.",
+        "kind": "note",
+        "text": "s5 mock wiring fix round (owner 2026-09-02): Section I stimulus images render, APWH mock options normalized + Phase 0.2 capture remounted, q24 key corrected via reviewed manifest, frozen review resealed; staged commit now 14197ba7 @ ap-one a769c971 (rebased over #962); still local, no push/PR/merge. Receipts: INCEPT/out/humgeo-mock-wiring-20260902/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
