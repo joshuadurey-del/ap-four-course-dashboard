@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T04:18Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Render gate CLOSED for stimulus-bearing article checks: dark pilot page + 5 items conditional-put to the content bucket (owner IAM, canary shape, /100 GREEN-OUTCOME), CDN readback 6/6 sha-equal, headless walk of the served LearnWith player completed all 5 checks \u2014 2 data tables and 2 quoted sources rendered as real markup above the choices, zero escaped markup, control unchanged. First table ever seen on this widget. s3c now waits on the envelope only.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T04:17Z",
     "course": "humgeo",
     "phase": "",
