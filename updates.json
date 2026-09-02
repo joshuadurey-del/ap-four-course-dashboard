@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-02T04:54Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "filed",
+    "text": "APWH gate-repair handoff drafted for a fresh window: 468 served gate members never judged by content QC, 168 fail the factory's own code checks (123 D4 / 60 D8), 153 single-check repairable, 15 double D4+D8 listed by id, 300 code-clean but unjudged. D4 tested as firing fairly (105 of 108 flags sit in a distractor). Open item: topic-to-LO/EK/skill mapping not found; blueprint json is a spec not a code table. Plan is free-first; repair via factory item_repair, verdict via POST /v1/qc.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T04:45Z",
+    "course": "cross",
+    "text": "ap-one workflow run #404 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33591946803",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T04:44Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #781 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33591379515",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T04:35Z",
     "course": "apwh",
     "phase": "",
@@ -981,6 +1005,14 @@
     "text": "ap-one pull request #953 opened at 1fdbd63d.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/953",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T07:35Z",
+    "course": "cross",
+    "text": "ap-one commit 16f9598d.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/16f9598ddaaa67cae16df3479c65a21f4d959ce4",
     "writer": "repository-event automation"
   },
   {
