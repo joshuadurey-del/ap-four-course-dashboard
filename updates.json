@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T02:13Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #71 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/71",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T01:52Z",
     "course": "apwh",
     "phase": "4",
@@ -302,6 +310,14 @@
     "kind": "filed",
     "text": "PR #71 DRAFT to ilmych/humgeo-rebuild: gate integrity only, split out of the tangled #69. +516/-19 across 3 files vs #69's 75. Two dead checks fixed (ek authority resolved 0 of 72; selftest band probes could not fire) plus 4 wrong-verdict defects across 3 review rounds. Fixtures 24 to 32. Suite 702 pass / 0 fail vs 696 baseline once HUMGEO_FACTORY_ROOT is set: the 21 failures quoted all session were ours. Band stays 250-450. Merge held: round 3 REJECT, 4 of 7 fixed, 3 deferred.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-01T13:16Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #71 opened at 80840c3f.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/71",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-01T13:16Z",
