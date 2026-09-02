@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T03:41Z",
+  "snapshot": "2026-09-02T04:12Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,17 +695,17 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T03:41Z",
+        "ts": "2026-09-02T04:12Z",
         "phase": "",
         "kind": "merged",
-        "text": "KC-4.1.VI reconciliation merged: apwh-build-workspace#1 (32c020a76887) re-keys ek::KC-4.1.VI.i to the CED Reformation text with new atoms via committed build_fix_kc41vi.py + validate_kg.py; full ceremony receipts in out/apwh-kc41vi-fix-20260902/",
+        "text": "bpb PR #70 MERGED 2026-09-02T04:12:16Z as 2ec3d7a3 on Josh's typed word (merge PR #70) + merge-gate PASS at head c83b7d1c. Twin fix (URL-to-citation table, 9 verified docs) + A-072 delta 1988/1988 + A-087 19 honest rows + rationale bank + the four stale E3 suite pins re-measured to the built state (suite 379 passed / 0 failed). Serve copy = ap-one #962, CI running on rebased head 2575b287.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T03:41Z",
+        "ts": "2026-09-02T04:12Z",
         "event_type": "pull_request",
-        "text": "apwh-build-outputs pull request #1 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-build-outputs/pull/1",
+        "text": "apwh-blueprint-build pull request #70 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/70",
         "writer": "repository-event automation"
       },
       "evidence": [
