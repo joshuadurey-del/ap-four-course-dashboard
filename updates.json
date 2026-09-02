@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T10:39Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "merged",
+    "text": "ap-one PR #969 merged b2f2a67f (2026-09-02T10:01:54Z): authored-accepted store in humgeo_native_timeback_assets.load_check_bank + --authored-accepted flag (s3d). Flash APPROVE, 1 P3 fixed; module 85 passed; tests/ingest 5,091 passed; merge-gate PASS r6ed866cb; Deploy 33617318233 success (staging, IMAGE_TAG=b2f2a67f). Receipts INCEPT/out/humgeo-s3d-20260902/.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T10:23Z",
     "course": "cross",
     "text": "ap-one pull request #970 merged at no-sha.",

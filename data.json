@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T10:12Z",
+  "snapshot": "2026-09-02T10:39Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T09:04Z",
+        "ts": "2026-09-02T10:39Z",
         "phase": "",
-        "kind": "state-change",
-        "text": "RUNBOOK-ASAP-HUMGEO.md v5: s5 mock-section-wiring READY -> DONE (ap-one PR #964 landed as 84af5869); live_state ap_one_main cebbfb17, #961 + #964 added to merged, open_prs empty; frq_pairing CARRIED (default 2025s1 landed, one-flag swap); tick item 8 done. Deploy run 33611627163 readback pending.",
+        "kind": "merged",
+        "text": "ap-one PR #969 merged b2f2a67f (2026-09-02T10:01:54Z): authored-accepted store in humgeo_native_timeback_assets.load_check_bank + --authored-accepted flag (s3d). Flash APPROVE, 1 P3 fixed; module 85 passed; tests/ingest 5,091 passed; merge-gate PASS r6ed866cb; Deploy 33617318233 success (staging, IMAGE_TAG=b2f2a67f). Receipts INCEPT/out/humgeo-s3d-20260902/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
