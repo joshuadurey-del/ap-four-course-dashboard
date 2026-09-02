@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T05:13Z",
+  "snapshot": "2026-09-02T05:21Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T05:13Z",
-        "phase": "4",
-        "kind": "executor-step",
-        "text": "qc_green: rc=1 verifier_rc=1",
+        "ts": "2026-09-02T05:21Z",
+        "phase": "pre-publication source work",
+        "kind": "milestone",
+        "text": "APWH gate-member repair Stage A complete (free): live population 422 at ap-one a769c971 (handoff's 468 was the stale local clone); factory battery flags 143 (131 single-check repairable, 12 D4+D8 doubles); identity fields solved from factory bytes except skill_codes (ap-tagger route); committed rebuild reproduces served snapshot byte-for-byte; Stage B paid repair waits on HumGeo queue + owner go",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

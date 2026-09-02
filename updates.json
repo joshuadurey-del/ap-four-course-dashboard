@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T05:21Z",
+    "course": "apwh",
+    "phase": "pre-publication source work",
+    "kind": "milestone",
+    "text": "APWH gate-member repair Stage A complete (free): live population 422 at ap-one a769c971 (handoff's 468 was the stale local clone); factory battery flags 143 (131 single-check repairable, 12 D4+D8 doubles); identity fields solved from factory bytes except skill_codes (ap-tagger route); committed rebuild reproduces served snapshot byte-for-byte; Stage B paid repair waits on HumGeo queue + owner go",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T05:13Z",
     "course": "apwh",
     "phase": "4",
@@ -533,6 +541,14 @@
     "text": "ap-one pull request #958 opened at f9ac0751.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/958",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T14:15Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 6f1c342a.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/6f1c342ae904a738ded913505098ce7b20193309",
     "writer": "repository-event automation"
   },
   {
