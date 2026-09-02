@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T07:25Z",
+  "snapshot": "2026-09-02T09:03Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T07:25Z",
+        "ts": "2026-09-02T09:03Z",
         "phase": "",
-        "kind": "note",
-        "text": "PR #964 merge-gate PASS on head b79c8ba5 @ a4b3aa5e (signed receipt r6ed866cb, TTL 30m): suite 9,575/0, 4 CI checks green, 3 repo-checks entries + offline learner-path probe exit 0, all issue/PR/consumer hits adjudicated from bytes. Not merged: runtime-touching ap-one PR rides the fleet's process; draft left open with receipts. https://github.com/InceptTrilogy/ap-one/pull/964",
+        "kind": "merged",
+        "text": "PR #964 landed on InceptTrilogy/ap-one main as 84af5869 (owner action 2026-09-02T08:59:02Z; head b79c8ba5 @ a4b3aa5e verified ancestor of main): HumGeo mock exam wired \u2014 official 60-item five-option MCQ section + 2025s1 FRQs, banks.mock_exam + capability, Section I images, APWH options fix + capture remount, q24 key correction, pin re-earns. Gate PASS receipt r6ed866cb preceded it. Exact-head Deploy run 33611627163 in progress.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T07:14Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1898 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33601322430",
+        "ts": "2026-09-02T08:59Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #964 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/964",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -908,10 +908,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-02T06:31Z",
+        "ts": "2026-09-02T08:35Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #72 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/72",
+        "text": "ap-psychology-fall-2025-v1 pull request #73 opened at bfe24ce9.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
