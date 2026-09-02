@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T05:36Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "filed",
+    "text": "Handoff drafted for a fresh window: known-bad/known-good MCQ fixtures per judge check (D2 S6 S8 S7 C1-C3 S3; 436 real good, 529 real bad from the residual) in the hole-filler precision-harness shape with Psych provenance labels, plus a faithful unmodified local copy of content_qc.py proved on a 2,800-call noise floor before wider spend. Measured: judge chain never reaches Bedrock on a missing key; no judge_context for HumGeo/APWH; Sonnet 4.6 price UNMEASURED; judge key expires 09-07.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T05:21Z",
     "course": "apwh",
     "phase": "pre-publication source work",
