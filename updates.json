@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T09:23Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Skills consolidation executed on owner approval: route entry = RUNBOOK-ASAP step block + owning skill; factory-course-run demoted to HumGeo corridor tooling; retired gate-1-audit, gate-3-fill-gaps, item-author, timeback-platform3, humgeo-overnight pair (pointers in skills-retired/README.md); p5/p6/p7 + campaign skills updated; wiki/ORIENTATION/ROUTER/RUNBOOK-ASAP v3 repointed; install parity PASS 108/108.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T09:22Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #969 opened at b3c88d08.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/969",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T09:17Z",
     "course": "cross",
     "text": "ap-one workflow run #409 completed: success.",
