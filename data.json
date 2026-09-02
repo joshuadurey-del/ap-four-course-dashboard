@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T04:34Z",
+  "snapshot": "2026-09-02T04:35Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,17 +695,17 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T04:34Z",
+        "ts": "2026-09-02T04:35Z",
         "phase": "",
-        "kind": "note",
-        "text": "Owner question caught a false-pass class: 468 APWH gate members were labelled pass by 'pipeline invariant'. Measured at bytes - generate_fill.py posts /v1/generate/contextual and never sets run_full_content_qc; the factory's contextual entry docstring says full QC runs only on that opt-in. They cleared inline G0-G8 gates only, never the 18 structural + 23 content checks. Quarantined to v2/unverified_pool.v2.jsonl; DEFINITIONS.md corrected. Prescreen labels 3019 to 2551 rows, 1201 fails intact.",
+        "kind": "merged",
+        "text": "ap-one PR #962 MERGED 2026-09-02T04:35:17Z as a769c971 (owner word 'i am the DRI for any merges in my course repos... lets do it' + merge-gate PASS at 2575b287, zero FAILs, suite 9558 green inside the gate). Served bank now 1988/1988 distinct, t07-05 disjoint, all members flagged, rationale bank 2011 (1988 gate + 23 practice). Delivery pin c825ba35, total_xp unchanged 6576. Deploy run 33591379515 watched; /version readback next.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T04:13Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1893 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33588972944",
+        "ts": "2026-09-02T04:35Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #962 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/962",
         "writer": "repository-event automation"
       },
       "evidence": [

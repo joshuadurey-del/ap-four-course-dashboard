@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T04:35Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "merged",
+    "text": "ap-one PR #962 MERGED 2026-09-02T04:35:17Z as a769c971 (owner word 'i am the DRI for any merges in my course repos... lets do it' + merge-gate PASS at 2575b287, zero FAILs, suite 9558 green inside the gate). Served bank now 1988/1988 distinct, t07-05 disjoint, all members flagged, rationale bank 2011 (1988 gate + 23 practice). Delivery pin c825ba35, total_xp unchanged 6576. Deploy run 33591379515 watched; /version readback next.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T04:35Z",
+    "course": "apwh",
+    "text": "ap-one pull request #962 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/962",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T04:34Z",
     "course": "apwh",
     "phase": "",
