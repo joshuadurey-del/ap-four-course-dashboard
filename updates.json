@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T04:17Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "Factory's deterministic battery (incept-test-builder 6db23450, run_structural_qc, 18 checks) run over our labelled corpus + live HumGeo bank. 470 of 541 APWH fails are classes their code detects EXACTLY (keyword_shortcut 457/457); judgment-only fails recall 15%. D8 alone catches 47% of all fails at 1.4% false-reject. Bank sweep (2,683 scored of 2,776): 135 content flags, 24 null stems, 69 no-options, 2,246 never judged, 0 bank-passed items flagged.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T04:15Z",
     "course": "humgeo",
     "phase": "",

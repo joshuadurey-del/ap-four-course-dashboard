@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T04:15Z",
+  "snapshot": "2026-09-02T04:17Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T04:15Z",
+        "ts": "2026-09-02T04:17Z",
         "phase": "",
-        "kind": "receipt-sealed",
-        "text": "s5 mock-section wiring STAGED: official 60-item five-option MCQ section + 2025s1 FRQs assembled into mock_exam_bank v2 and wired (banks.mock_exam + capability) on local branch mock/humgeo-mock-wiring-20260902 commit cba2f55d @ ap-one a5ab18ed; full offline suite 9,569 passed; held-out acceptance PASS; PR text staged for Josh (no push/PR/merge). Receipts: INCEPT/out/humgeo-mock-wiring-20260902/",
+        "kind": "note",
+        "text": "Factory's deterministic battery (incept-test-builder 6db23450, run_structural_qc, 18 checks) run over our labelled corpus + live HumGeo bank. 470 of 541 APWH fails are classes their code detects EXACTLY (keyword_shortcut 457/457); judgment-only fails recall 15%. D8 alone catches 47% of all fails at 1.4% false-reject. Bank sweep (2,683 scored of 2,776): 135 content flags, 24 null stems, 69 no-options, 2,246 never judged, 0 bank-passed items flagged.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
