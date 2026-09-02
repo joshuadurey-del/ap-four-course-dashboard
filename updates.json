@@ -50,6 +50,22 @@
   {
     "ts": "2026-09-01T19:45Z",
     "course": "cross",
+    "text": "ap-one commit 36a13301.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/36a133012b5cd2d9f249b1ac1fd7bbec55328fd1",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T19:45Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T19:45Z",
+    "course": "cross",
     "text": "ap-one pull request #960 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/960",
