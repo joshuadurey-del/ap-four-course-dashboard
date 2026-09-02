@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T11:35Z",
+  "snapshot": "2026-09-02T11:41Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -908,10 +908,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-02T11:35Z",
-        "event_type": "issues",
-        "text": "ap-psychology-fall-2025-v1 issue #73 comment-created.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73#issuecomment-5508897564",
+        "ts": "2026-09-02T11:41Z",
+        "event_type": "pull_request",
+        "text": "ap-psychology-fall-2025-v1 pull request #73 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

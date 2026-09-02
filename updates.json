@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T11:41Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #73 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T11:40Z",
+    "course": "cross",
+    "text": "ap-one workflow run #413 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33625698741",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T11:38Z",
     "course": "cross",
     "text": "ap-one workflow run #790 completed: success.",
@@ -1117,6 +1133,14 @@
     "text": "ap-one workflow run #777 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33529759193",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T16:26Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build commit af69ce8d.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/commit/af69ce8d9fdd35d0f5f0d17a4efdb932d0eed1fa",
     "writer": "repository-event automation"
   },
   {
