@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T09:58Z",
+  "snapshot": "2026-09-02T10:12Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -384,10 +384,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T09:37Z",
+        "ts": "2026-09-02T10:10Z",
         "event_type": "workflow_run",
-        "text": "ap-one workflow run #1904 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33613803655",
+        "text": "ap-one workflow run #788 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33617318233",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T09:58Z",
+        "ts": "2026-09-02T10:12Z",
         "phase": "",
         "kind": "note",
-        "text": "s3b window-1 brief generated via codex-prompt (free chain, zero paid calls; the 12 doubles untouched unless the paste carries 'D2: repair-in-place'); canonical codex-prompt skill's stale chunks-of-10 line replaced with the slot-filler ruling and reinstalled",
+        "text": "s3b: reverse-engineer pass over fleet in-place repair precedents (HumGeo repair_shortcut, APUSH/HumGeo hosted remediation, APES live remediation guards, AP Lit/Lang waves, T046/T047); HumGeo verify() ported verbatim, harness EQUIVALENT 11/11 @ humgeo-rebuild b7ba2d7d; /100 cert GREEN-TO-ACT for repairing the 12 doubles in place as window-1 batch 4 (local write only); edit worktree wt-bpb-gaterepair created at 2ec3d7a3, freshness PASS, step gate VALID",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
