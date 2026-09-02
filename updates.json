@@ -1,5 +1,45 @@
 [
   {
+    "ts": "2026-09-02T03:41Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "merged",
+    "text": "KC-4.1.VI reconciliation merged: apwh-build-workspace#1 (32c020a76887) re-keys ek::KC-4.1.VI.i to the CED Reformation text with new atoms via committed build_fix_kc41vi.py + validate_kg.py; full ceremony receipts in out/apwh-kc41vi-fix-20260902/",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T03:41Z",
+    "course": "apwh",
+    "text": "apwh-build-outputs pull request #1 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-build-outputs/pull/1",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T03:32Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1891 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33586438582",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T03:11Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1890 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33585081753",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T03:10Z",
+    "course": "cross",
+    "text": "ap-one workflow run #403 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33585898400",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T03:08Z",
     "course": "humgeo",
     "text": "ap-one workflow run #780 completed: success.",
@@ -37,6 +77,14 @@
     "text": "ap-one pull request #961 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/961",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:56Z",
+    "course": "apwh",
+    "text": "ap-one pull request #962 opened at f98b4b0d.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/962",
     "writer": "repository-event automation"
   },
   {

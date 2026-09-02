@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T03:08Z",
+  "snapshot": "2026-09-02T03:41Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,16 +695,16 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T03:06Z",
+        "ts": "2026-09-02T03:41Z",
         "phase": "",
-        "kind": "filed",
-        "text": "bpb PR #70 filed READY (t07-05 twin fix: URL-to-citation table, 1988/1988 distinct, A-071/A-072/A-081 clear, A-087 unrecorded clause clear; 19 provenance rows). Full ceremony: necessity receipt, 2-round review (codex+gemini+grok APPROVE), pr-review receipt, CI green. Seat merge-gate stops at the same 4 stale E3 suite rows that stopped #69 (byte-identical on main); handed to Ilma per the #69 precedent. Serve copy = ap-one #962, CI running.",
+        "kind": "merged",
+        "text": "KC-4.1.VI reconciliation merged: apwh-build-workspace#1 (32c020a76887) re-keys ek::KC-4.1.VI.i to the CED Reformation text with new atoms via committed build_fix_kc41vi.py + validate_kg.py; full ceremony receipts in out/apwh-kc41vi-fix-20260902/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T03:06Z",
+        "ts": "2026-09-02T03:41Z",
         "event_type": "pull_request",
-        "text": "apwh-build-outputs pull request #1 opened at f3202f51.",
+        "text": "apwh-build-outputs pull request #1 merged at no-sha.",
         "evidence_url": "https://github.com/ilmych/apwh-build-outputs/pull/1",
         "writer": "repository-event automation"
       },
