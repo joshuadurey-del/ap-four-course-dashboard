@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T01:25Z",
+  "snapshot": "2026-09-02T01:52Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T01:16Z",
-        "phase": "",
-        "kind": "state-change",
-        "text": "Canon correction: RUNBOOK-ASAP.md's APWH row said the tier-2 landing was still pending in another window. It merged 2026-09-01T16:26:19Z as apwh-blueprint-build #69; main is af69ce8d with zero open PRs. Row corrected 2026-09-02. Consequence: APWH's next steps (A2 re-measure, stimulus-kind campaign) now compete with HumGeo s2/s3 for the same envelope.",
+        "ts": "2026-09-02T01:52Z",
+        "phase": "4",
+        "kind": "executor-step",
+        "text": "qc_green: rc=1 verifier_rc=1",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
