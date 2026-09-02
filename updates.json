@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T03:08Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #780 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33585292197",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T03:06Z",
     "course": "apwh",
     "phase": "",
