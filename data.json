@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T01:16Z",
+  "snapshot": "2026-09-02T01:25Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -384,10 +384,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T13:16Z",
+        "ts": "2026-09-02T01:25Z",
         "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #71 opened at ed345a1a.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/71",
+        "text": "humgeo-rebuild pull request #70 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/70",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
