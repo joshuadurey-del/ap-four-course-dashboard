@@ -1,5 +1,45 @@
 [
   {
+    "ts": "2026-09-02T06:16Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Judge-check fixtures Stage A complete (free): 905 real HumGeo fixtures (436 good / 469 bad, set-equal to the residual list) + 12 synthesized C1; all 905 clear the 18 code checks at engine pin 6db23450 (= deployed 44599f7b). Fail-row judged bytes recovered from preserve branch ec2bb05c, not the corpus pin. local_prescreen.py pin bump staged (22 tests pass), not landed. D8 possessive audit: 7/511 partial, 0 whole. Stage B held for owner word + key liveness.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T06:09Z",
+    "course": "cross",
+    "text": "ap-one workflow run #405 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33597556401",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:08Z",
+    "course": "cross",
+    "text": "ap-one workflow run #782 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33596916120",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T05:59Z",
+    "course": "cross",
+    "text": "ap-one pull request #963 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/963",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T05:56Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1894 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33595669432",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T05:56Z",
     "course": "humgeo",
     "phase": "",
@@ -621,6 +661,14 @@
     "text": "ap-one workflow run #397 completed: failure.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33513177565",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T13:25Z",
+    "course": "cross",
+    "text": "ap-one commit d57caa38.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/d57caa38297e8a97cbdf487e80f455c6869ac4da",
     "writer": "repository-event automation"
   },
   {
