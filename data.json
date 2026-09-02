@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T12:36Z",
+  "snapshot": "2026-09-02T17:38Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T12:36Z",
+        "ts": "2026-09-02T17:38Z",
         "phase": "",
         "kind": "milestone",
-        "text": "s3b Stage B window 1 COMPLETE (free chain): 143/143 flagged strict-route gate members repaired locally (131 singles + 12 doubles in place), 5 commits on apwh-seat/gate-repair-20260902 (head ee05be9), battery fires only S2, rebuild 1988/1988 zero seat movement, manifest+bank byte-identical, verify_rebuild PASS, bff 186 passed, build suite 379 passed, oracle unchanged; spend 0, pushes 0. Report: out/apwh-gate-repair-20260902/window1/WINDOW-1-REPORT.md",
+        "text": "s3b Stages C-D COMPLETE: 143/143 repaired strict-route gate members hold /v1/qc passed:true (113 first call, 30 via 1-4 repair rounds). Seating 1988/1988 unchanged, manifest byte-identical; bank 20 entries changed; verify_rebuild PASS, bff 186, suite 379, oracle unchanged. Pushed: bpb apwh-seat/gate-repair-20260902 @8da39fb, ap-one apwh-seat/gate-repair-serve-20260902 @3f2a1c5f. PRs unopened: PR gate needs owner text typed within 2h. Report: out/apwh-gate-repair-20260902/window2/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

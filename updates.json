@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T17:38Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s3b Stages C-D COMPLETE: 143/143 repaired strict-route gate members hold /v1/qc passed:true (113 first call, 30 via 1-4 repair rounds). Seating 1988/1988 unchanged, manifest byte-identical; bank 20 entries changed; verify_rebuild PASS, bff 186, suite 379, oracle unchanged. Pushed: bpb apwh-seat/gate-repair-20260902 @8da39fb, ap-one apwh-seat/gate-repair-serve-20260902 @3f2a1c5f. PRs unopened: PR gate needs owner text typed within 2h. Report: out/apwh-gate-repair-20260902/window2/",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T12:36Z",
     "course": "apwh",
     "phase": "",
