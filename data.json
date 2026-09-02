@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-01T16:26Z",
+  "snapshot": "2026-09-02T01:16Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-01T05:53Z",
+        "ts": "2026-09-02T01:16Z",
         "phase": "",
-        "kind": "filed",
-        "text": "apwh-blueprint-build PR #69 FILED (head 4e305dae): tier-2 serve-fix inputs matching merged ap-one #939 \u2014 17 M-35 keymap-twin exclusions (+contract broadened), 22 EK-shorthand rewrites, rebuilt receipt + bank. Ceremony: pr-necessity + Gemini review (2 rounds, APPROVE) + pr-review receipt; repo CI green. Merge stopped at merge-gate: 4 suite tests refuse identically on their main (pre-existing E3-expectation drift) \u2014 their lane owns the flip.",
+        "kind": "state-change",
+        "text": "Canon correction: RUNBOOK-ASAP.md's APWH row said the tier-2 landing was still pending in another window. It merged 2026-09-01T16:26:19Z as apwh-blueprint-build #69; main is af69ce8d with zero open PRs. Row corrected 2026-09-02. Consequence: APWH's next steps (A2 re-measure, stimulus-kind campaign) now compete with HumGeo s2/s3 for the same envelope.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

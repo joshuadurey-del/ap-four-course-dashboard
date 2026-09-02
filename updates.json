@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T01:16Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "state-change",
+    "text": "Canon correction: RUNBOOK-ASAP.md's APWH row said the tier-2 landing was still pending in another window. It merged 2026-09-01T16:26:19Z as apwh-blueprint-build #69; main is af69ce8d with zero open PRs. Row corrected 2026-09-02. Consequence: APWH's next steps (A2 re-measure, stimulus-kind campaign) now compete with HumGeo s2/s3 for the same envelope.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-01T20:19Z",
     "course": "cross",
     "text": "ap-one workflow run #402 completed: failure.",
