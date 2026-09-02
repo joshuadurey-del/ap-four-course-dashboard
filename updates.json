@@ -1,5 +1,53 @@
 [
   {
+    "ts": "2026-09-02T07:25Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "PR #964 merge-gate PASS on head b79c8ba5 @ a4b3aa5e (signed receipt r6ed866cb, TTL 30m): suite 9,575/0, 4 CI checks green, 3 repo-checks entries + offline learner-path probe exit 0, all issue/PR/consumer hits adjudicated from bytes. Not merged: runtime-touching ap-one PR rides the fleet's process; draft left open with receipts. https://github.com/InceptTrilogy/ap-one/pull/964",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T07:14Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1898 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33601322430",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:59Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1897 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33600418844",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:47Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1896 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33599421233",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:34Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1895 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33598585758",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:31Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #72 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T06:29Z",
     "course": "humgeo",
     "text": "humgeo-rebuild pull request #72 merged at no-sha.",
@@ -26,6 +74,14 @@
   {
     "ts": "2026-09-02T06:22Z",
     "course": "humgeo",
+    "text": "ap-one pull request #964 opened at b79c8ba5.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/964",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:22Z",
+    "course": "humgeo",
     "text": "ap-one pull request #964 opened at 5524af93.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/964",
@@ -37,6 +93,14 @@
     "text": "humgeo-rebuild pull request #72 opened at 3e560be0.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:18Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #72 opened at 89a5cb3b.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/72",
     "writer": "repository-event automation"
   },
   {
@@ -597,6 +661,14 @@
     "text": "ap-one pull request #948 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/948",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T15:52Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit e53559f7.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/e53559f7ece2cdb8829f1c7a23b70c26514df2b6",
     "writer": "repository-event automation"
   },
   {
