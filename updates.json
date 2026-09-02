@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T05:45Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "note",
+    "text": "DRAFTED, NOT POSTED: two PRs to InceptTrilogy/incept-test-builder adding a top-level judge_context to subjects/ap_human_geography and subjects/ap_world_history qc_checks.json (calibration playbook surface 1; precedent 0fffe12). Local branches fix/qc-humgeo-judge-context and fix/qc-apwh-judge-context in a detached worktree at 6db23450; diff is one added line per file; byte-fidelity round-trip and loader positive/negative controls pass. Awaiting Josh's review before any push.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T05:41Z",
+    "course": "cross",
+    "text": "ap-one pull request #963 opened at 69d0b525.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/963",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T05:36Z",
     "course": "cross",
     "phase": "",
