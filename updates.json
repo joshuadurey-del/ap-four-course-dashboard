@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T06:29Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #72 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:28Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #118 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33598862215",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T06:25Z",
     "course": "humgeo",
     "phase": "",
