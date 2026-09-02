@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T09:33Z",
+  "snapshot": "2026-09-02T09:54Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -384,10 +384,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T09:22Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #969 opened at b3c88d08.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/969",
+        "ts": "2026-09-02T09:37Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1904 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33613803655",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T09:33Z",
+        "ts": "2026-09-02T09:54Z",
         "phase": "",
         "kind": "note",
-        "text": "s3b: owner chose LOCAL authoring for the 143 gate-member repairs (reverses handoff decision one); PLAN.md + iteration notes drafted via heavy-task-planner; free rehearsals: rebuild reproduces served snapshot byte-for-byte, retiring the 12 doubles would move 28 seats and regress distinct 1988->1986; the 12-double id list in STAGE-A-REPORT corrected from the receipt",
+        "text": "s3b PLAN.md v4: independent review findings A-F folded \u2014 slot-filler dispatch replaces the banned chunks-of-10 barrier everywhere it appeared (ROUTER pool row, worker prompt, handoff, plan, runbook); judge cost corrected to one model call per applicable check (114 DOK-1 x 11 + 29 DOK 2-3 x 13 = 1,631 first pass for the 143); tagger-only skill-code route proven from factory bytes; apply_batch.py disclosed as glue with the writer gap recorded; phase-bank-validation + codex-prompt named",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-02T09:54Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "s3b PLAN.md v4: independent review findings A-F folded \u2014 slot-filler dispatch replaces the banned chunks-of-10 barrier everywhere it appeared (ROUTER pool row, worker prompt, handoff, plan, runbook); judge cost corrected to one model call per applicable check (114 DOK-1 x 11 + 29 DOK 2-3 x 13 = 1,631 first pass for the 143); tagger-only skill-code route proven from factory bytes; apply_batch.py disclosed as glue with the writer gap recorded; phase-bank-validation + codex-prompt named",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T09:39Z",
+    "course": "cross",
+    "text": "ap-one workflow run #23 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33614480573",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:37Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1904 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33613803655",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T09:33Z",
     "course": "apwh",
     "phase": "",
