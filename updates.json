@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T09:24Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 issue #73 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73#issuecomment-5507385039",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T09:23Z",
     "course": "cross",
     "phase": "",
@@ -165,6 +173,14 @@
     "text": "ap-one pull request #964 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/964",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T08:35Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #73 opened at 3f9eca18.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73",
     "writer": "repository-event automation"
   },
   {
