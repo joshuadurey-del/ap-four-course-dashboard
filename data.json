@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T09:03Z",
+  "snapshot": "2026-09-02T09:04Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T09:03Z",
+        "ts": "2026-09-02T09:04Z",
         "phase": "",
-        "kind": "merged",
-        "text": "PR #964 landed on InceptTrilogy/ap-one main as 84af5869 (owner action 2026-09-02T08:59:02Z; head b79c8ba5 @ a4b3aa5e verified ancestor of main): HumGeo mock exam wired \u2014 official 60-item five-option MCQ section + 2025s1 FRQs, banks.mock_exam + capability, Section I images, APWH options fix + capture remount, q24 key correction, pin re-earns. Gate PASS receipt r6ed866cb preceded it. Exact-head Deploy run 33611627163 in progress.",
+        "kind": "state-change",
+        "text": "RUNBOOK-ASAP-HUMGEO.md v5: s5 mock-section-wiring READY -> DONE (ap-one PR #964 landed as 84af5869); live_state ap_one_main cebbfb17, #961 + #964 added to merged, open_prs empty; frq_pairing CARRIED (default 2025s1 landed, one-flag swap); tick item 8 done. Deploy run 33611627163 readback pending.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T09:04Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "state-change",
+    "text": "RUNBOOK-ASAP-HUMGEO.md v5: s5 mock-section-wiring READY -> DONE (ap-one PR #964 landed as 84af5869); live_state ap_one_main cebbfb17, #961 + #964 added to merged, open_prs empty; frq_pairing CARRIED (default 2025s1 landed, one-flag swap); tick item 8 done. Deploy run 33611627163 readback pending.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T09:03Z",
     "course": "humgeo",
     "phase": "",
