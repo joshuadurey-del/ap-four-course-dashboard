@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T09:24Z",
+  "snapshot": "2026-09-02T09:33Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T09:07Z",
+        "ts": "2026-09-02T09:33Z",
         "phase": "",
-        "kind": "state-change",
-        "text": "RUNBOOK-ASAP-APWH v5: step s3b strict-route-gate-member-qc-and-repair added (Stage A DONE; B held on owner word + queue check; C-E staged); s5 now also blocked_by s3b; ETA cautious 2026-09-09 EOD KST with the queue, 2026-09-15 sharing it; queue measured clear 18:04 KST",
+        "kind": "note",
+        "text": "s3b: owner chose LOCAL authoring for the 143 gate-member repairs (reverses handoff decision one); PLAN.md + iteration notes drafted via heavy-task-planner; free rehearsals: rebuild reproduces served snapshot byte-for-byte, retiring the 12 doubles would move 28 seats and regress distinct 1988->1986; the 12-double id list in STAGE-A-REPORT corrected from the receipt",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-02T09:33Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "s3b: owner chose LOCAL authoring for the 143 gate-member repairs (reverses handoff decision one); PLAN.md + iteration notes drafted via heavy-task-planner; free rehearsals: rebuild reproduces served snapshot byte-for-byte, retiring the 12 doubles would move 28 seats and regress distinct 1988->1986; the 12-double id list in STAGE-A-REPORT corrected from the receipt",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T09:32Z",
+    "course": "cross",
+    "text": "ap-one workflow run #410 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33614508554",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:30Z",
+    "course": "cross",
+    "text": "ap-one workflow run #787 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33612250861",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T09:24Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 issue #73 comment-created.",
