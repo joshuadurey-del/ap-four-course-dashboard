@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T04:15Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "s5 mock-section wiring STAGED: official 60-item five-option MCQ section + 2025s1 FRQs assembled into mock_exam_bank v2 and wired (banks.mock_exam + capability) on local branch mock/humgeo-mock-wiring-20260902 commit cba2f55d @ ap-one a5ab18ed; full offline suite 9,569 passed; held-out acceptance PASS; PR text staged for Josh (no push/PR/merge). Receipts: INCEPT/out/humgeo-mock-wiring-20260902/",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T04:13Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1893 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33588972944",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T04:12Z",
     "course": "apwh",
     "phase": "",

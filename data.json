@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T04:12Z",
+  "snapshot": "2026-09-02T04:15Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-01T13:17Z",
+        "ts": "2026-09-02T04:15Z",
         "phase": "",
-        "kind": "filed",
-        "text": "PR #71 DRAFT to ilmych/humgeo-rebuild: gate integrity only, split out of the tangled #69. +516/-19 across 3 files vs #69's 75. Two dead checks fixed (ek authority resolved 0 of 72; selftest band probes could not fire) plus 4 wrong-verdict defects across 3 review rounds. Fixtures 24 to 32. Suite 702 pass / 0 fail vs 696 baseline once HUMGEO_FACTORY_ROOT is set: the 21 failures quoted all session were ours. Band stays 250-450. Merge held: round 3 REJECT, 4 of 7 fixed, 3 deferred.",
+        "kind": "receipt-sealed",
+        "text": "s5 mock-section wiring STAGED: official 60-item five-option MCQ section + 2025s1 FRQs assembled into mock_exam_bank v2 and wired (banks.mock_exam + capability) on local branch mock/humgeo-mock-wiring-20260902 commit cba2f55d @ ap-one a5ab18ed; full offline suite 9,569 passed; held-out acceptance PASS; PR text staged for Josh (no push/PR/merge). Receipts: INCEPT/out/humgeo-mock-wiring-20260902/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -702,10 +702,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T04:12Z",
-        "event_type": "pull_request",
-        "text": "apwh-blueprint-build pull request #70 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/70",
+        "ts": "2026-09-02T04:13Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1893 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33588972944",
         "writer": "repository-event automation"
       },
       "evidence": [
