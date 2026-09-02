@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T11:41Z",
+  "snapshot": "2026-09-02T12:36Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T10:12Z",
+        "ts": "2026-09-02T12:36Z",
         "phase": "",
-        "kind": "note",
-        "text": "s3b: reverse-engineer pass over fleet in-place repair precedents (HumGeo repair_shortcut, APUSH/HumGeo hosted remediation, APES live remediation guards, AP Lit/Lang waves, T046/T047); HumGeo verify() ported verbatim, harness EQUIVALENT 11/11 @ humgeo-rebuild b7ba2d7d; /100 cert GREEN-TO-ACT for repairing the 12 doubles in place as window-1 batch 4 (local write only); edit worktree wt-bpb-gaterepair created at 2ec3d7a3, freshness PASS, step gate VALID",
+        "kind": "milestone",
+        "text": "s3b Stage B window 1 COMPLETE (free chain): 143/143 flagged strict-route gate members repaired locally (131 singles + 12 doubles in place), 5 commits on apwh-seat/gate-repair-20260902 (head ee05be9), battery fires only S2, rebuild 1988/1988 zero seat movement, manifest+bank byte-identical, verify_rebuild PASS, bff 186 passed, build suite 379 passed, oracle unchanged; spend 0, pushes 0. Report: out/apwh-gate-repair-20260902/window1/WINDOW-1-REPORT.md",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -908,10 +908,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-02T11:41Z",
+        "ts": "2026-09-02T12:00Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #73 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73",
+        "text": "ap-psychology-fall-2025-v1 pull request #74 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/74",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

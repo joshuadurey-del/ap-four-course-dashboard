@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-02T12:36Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s3b Stage B window 1 COMPLETE (free chain): 143/143 flagged strict-route gate members repaired locally (131 singles + 12 doubles in place), 5 commits on apwh-seat/gate-repair-20260902 (head ee05be9), battery fires only S2, rebuild 1988/1988 zero seat movement, manifest+bank byte-identical, verify_rebuild PASS, bff 186 passed, build suite 379 passed, oracle unchanged; spend 0, pushes 0. Report: out/apwh-gate-repair-20260902/window1/WINDOW-1-REPORT.md",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T12:00Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #74 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/74",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T11:55Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #74 opened at 93143ad5.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/74",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T11:41Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #73 merged at no-sha.",
@@ -1090,6 +1114,14 @@
   {
     "ts": "2026-09-01T19:44Z",
     "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T19:44Z",
+    "course": "cross",
     "text": "ap-one commit c1d11379.",
     "event_type": "push",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/c1d113798143696b6214960bf40aed7eec6a36c4",
@@ -1357,6 +1389,14 @@
     "text": "humgeo-rebuild pull request #71 opened at ed345a1a.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/71",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T13:15Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
     "writer": "repository-event automation"
   },
   {
