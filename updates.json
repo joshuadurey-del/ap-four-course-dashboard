@@ -1,5 +1,37 @@
 [
   {
+    "ts": "2026-09-02T06:25Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "filed",
+    "text": "PR #964 opened (draft) on InceptTrilogy/ap-one: HumGeo mock exam wiring \u2014 official 60-item five-option MCQ section + 2025s1 FRQs, banks.mock_exam + capability; head 5524af93 on a4b3aa5e; review APPROVE (Gemini lane), pr-review + pr-necessity receipts; merge waits for owner word. https://github.com/InceptTrilogy/ap-one/pull/964",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T06:22Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #964 opened at 5524af93.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/964",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:20Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #72 opened at 3e560be0.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:18Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #72 opened at e0cf0166.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T06:16Z",
     "course": "cross",
     "phase": "",

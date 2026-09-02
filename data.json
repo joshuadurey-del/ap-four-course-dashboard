@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T05:56Z",
+  "snapshot": "2026-09-02T06:25Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T05:56Z",
+        "ts": "2026-09-02T06:25Z",
         "phase": "",
-        "kind": "note",
-        "text": "s5 mock wiring fix round (owner 2026-09-02): Section I stimulus images render, APWH mock options normalized + Phase 0.2 capture remounted, q24 key corrected via reviewed manifest, frozen review resealed; staged commit now 14197ba7 @ ap-one a769c971 (rebased over #962); still local, no push/PR/merge. Receipts: INCEPT/out/humgeo-mock-wiring-20260902/",
+        "kind": "filed",
+        "text": "PR #964 opened (draft) on InceptTrilogy/ap-one: HumGeo mock exam wiring \u2014 official 60-item five-option MCQ section + 2025s1 FRQs, banks.mock_exam + capability; head 5524af93 on a4b3aa5e; review APPROVE (Gemini lane), pr-review + pr-necessity receipts; merge waits for owner word. https://github.com/InceptTrilogy/ap-one/pull/964",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T03:08Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #780 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33585292197",
+        "ts": "2026-09-02T06:22Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #964 opened at 5524af93.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/964",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -908,10 +908,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-01T15:37Z",
-        "event_type": "push",
-        "text": "ap-psychology-fall-2025-v1 commit 0bf4205c.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/0bf4205ce5b5f91204144a63a12298125621824a",
+        "ts": "2026-09-02T06:18Z",
+        "event_type": "pull_request",
+        "text": "ap-psychology-fall-2025-v1 pull request #72 opened at e0cf0166.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/72",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
