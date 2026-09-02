@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-02T02:24Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #69 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:24Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #961 opened at 30e3c5a2.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/961",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T02:13Z",
     "course": "humgeo",
     "text": "humgeo-rebuild pull request #71 merged at no-sha.",
@@ -373,6 +389,14 @@
     "text": "humgeo-rebuild pull request #70 opened at 55a2d05a.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/70",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T12:22Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
     "writer": "repository-event automation"
   },
   {
@@ -925,6 +949,14 @@
     "text": "ap-one workflow run #766 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33478396532",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-01T06:58Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #69 opened at 7761f6e5.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
     "writer": "repository-event automation"
   },
   {
