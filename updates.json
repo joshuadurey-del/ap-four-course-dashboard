@@ -1,5 +1,77 @@
 [
   {
+    "ts": "2026-09-02T09:17Z",
+    "course": "cross",
+    "text": "ap-one workflow run #409 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33613248990",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:17Z",
+    "course": "cross",
+    "text": "ap-one workflow run #408 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33613235056",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:17Z",
+    "course": "cross",
+    "text": "ap-one workflow run #407 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33613220731",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:16Z",
+    "course": "cross",
+    "text": "ap-one workflow run #786 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33611761209",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:16Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #784 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33611627163",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:16Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1903 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33611845810",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:16Z",
+    "course": "cross",
+    "text": "ap-one workflow run #785 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33611670839",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:15Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1902 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33611755620",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:14Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1901 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33611661442",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T09:07Z",
     "course": "apwh",
     "phase": "",

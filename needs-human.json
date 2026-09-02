@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-02T01:26:47Z",
+ "generated_ts": "2026-09-02T09:20:24Z",
  "open": [
   {
    "course": "apush",
@@ -8,6 +8,14 @@
    "kind": "decision",
    "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "5e57fd3158353b39",
+   "kind": "approval",
+   "title": "s3d: 17 of 30 landed stimulus checks break the zero uniquely-longest-correct rule; repair + re-judge is paid",
+   "ts": "2026-09-02T09:20:24Z"
   }
  ],
  "schema": "needs-human-public/v1"
