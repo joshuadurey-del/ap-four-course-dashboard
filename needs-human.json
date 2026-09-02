@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-02T01:14:16Z",
+ "generated_ts": "2026-09-02T01:26:29Z",
  "open": [
   {
    "course": "apush",
@@ -16,14 +16,6 @@
    "kind": "decision",
    "title": "HumGeo 5-option mocks collide with the publish SDK's AP rule posture",
    "ts": "2026-09-01T12:10:54Z"
-  },
-  {
-   "course": "humgeo",
-   "deadline": "",
-   "id": "f9b4b73614c4ec87",
-   "kind": "approval",
-   "title": "One typed line to merge PR #70 (HumGeo QC poster stimulus routes)",
-   "ts": "2026-09-02T01:14:16Z"
   }
  ],
  "schema": "needs-human-public/v1"
