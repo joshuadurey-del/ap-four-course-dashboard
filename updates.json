@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T03:49Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Org-wide QC-verdict harvest (11 scouts, 9 courses) compiled to v2: prescreen 3019 rows/1201 fail, write 834/114, article 640/174, repair_pairs 361 same-item fixes, regen_pairs 1945 replacements. Rebuild byte-identical. A v1 label leak (verdict inside item_bytes, 1292 rows) was re-stripped to zero, merging 437 dupes: any B0/B1 on v1 bytes is void. Phase 2 data precondition MET; APWH whole-course holdout now viable. Deferrals and Psych zero-bytes finding in compile_summary.json.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T03:41Z",
     "course": "apwh",
     "phase": "",
