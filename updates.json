@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-02T05:55Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "Phase-1 top-up judged: 32/32 records pass POST /v1/qc with content checks (28 new stimulus-bound checks + 4 pilot re-judges on split-shape bytes), quality 0.979-1.000. Four rounds, 65 calls; round 1 lost 28 to a seat-caused metadata gap (exemplar dropped ek/lo/skill codes) \u2014 fixed by adding G-S1/G-S2 to the free battery, tagging from blueprint/ek_map.json, and the committed hydrator. Records staged in out/humgeo-topup-phase1-20260902/draft-batch/records; next is landing via land-a-change.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-02T05:45Z",
     "course": "cross",
     "phase": "",

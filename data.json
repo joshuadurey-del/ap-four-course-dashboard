@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T05:21Z",
+  "snapshot": "2026-09-02T05:55Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,10 +377,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T04:18Z",
+        "ts": "2026-09-02T05:55Z",
         "phase": "",
         "kind": "milestone",
-        "text": "Render gate CLOSED for stimulus-bearing article checks: dark pilot page + 5 items conditional-put to the content bucket (owner IAM, canary shape, /100 GREEN-OUTCOME), CDN readback 6/6 sha-equal, headless walk of the served LearnWith player completed all 5 checks \u2014 2 data tables and 2 quoted sources rendered as real markup above the choices, zero escaped markup, control unchanged. First table ever seen on this widget. s3c now waits on the envelope only.",
+        "text": "Phase-1 top-up judged: 32/32 records pass POST /v1/qc with content checks (28 new stimulus-bound checks + 4 pilot re-judges on split-shape bytes), quality 0.979-1.000. Four rounds, 65 calls; round 1 lost 28 to a seat-caused metadata gap (exemplar dropped ek/lo/skill codes) \u2014 fixed by adding G-S1/G-S2 to the free battery, tagging from blueprint/ek_map.json, and the committed hydrator. Records staged in out/humgeo-topup-phase1-20260902/draft-batch/records; next is landing via land-a-change.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
