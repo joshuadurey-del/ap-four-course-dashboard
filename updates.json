@@ -1,5 +1,77 @@
 [
   {
+    "ts": "2026-09-02T03:06Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "filed",
+    "text": "bpb PR #70 filed READY (t07-05 twin fix: URL-to-citation table, 1988/1988 distinct, A-071/A-072/A-081 clear, A-087 unrecorded clause clear; 19 provenance rows). Full ceremony: necessity receipt, 2-round review (codex+gemini+grok APPROVE), pr-review receipt, CI green. Seat merge-gate stops at the same 4 stale E3 suite rows that stopped #69 (byte-identical on main); handed to Ilma per the #69 precedent. Serve copy = ap-one #962, CI running.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T03:06Z",
+    "course": "apwh",
+    "text": "apwh-build-outputs pull request #1 opened at f3202f51.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-build-outputs/pull/1",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T03:06Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build issue #70 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/70#issuecomment-5503711983",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:59Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #961 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/961",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:56Z",
+    "course": "apwh",
+    "text": "ap-one issue #962 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/962#issuecomment-5503636105",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:56Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build workflow run #57 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33585067902",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:56Z",
+    "course": "apwh",
+    "text": "ap-one pull request #962 opened at e736b9b8.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/962",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:55Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #70 opened at b42ed643.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/70",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:38Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1889 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33583094625",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T02:24Z",
     "course": "humgeo",
     "text": "humgeo-rebuild pull request #69 merged at no-sha.",

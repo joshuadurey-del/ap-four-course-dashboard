@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-02T02:24Z",
+  "snapshot": "2026-09-02T03:06Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -384,10 +384,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-02T02:24Z",
+        "ts": "2026-09-02T02:59Z",
         "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #69 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/69",
+        "text": "ap-one pull request #961 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/961",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -695,17 +695,17 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-02T01:52Z",
-        "phase": "4",
-        "kind": "executor-step",
-        "text": "qc_green: rc=1 verifier_rc=1",
+        "ts": "2026-09-02T03:06Z",
+        "phase": "",
+        "kind": "filed",
+        "text": "bpb PR #70 filed READY (t07-05 twin fix: URL-to-citation table, 1988/1988 distinct, A-071/A-072/A-081 clear, A-087 unrecorded clause clear; 19 provenance rows). Full ceremony: necessity receipt, 2-round review (codex+gemini+grok APPROVE), pr-review receipt, CI green. Seat merge-gate stops at the same 4 stale E3 suite rows that stopped #69 (byte-identical on main); handed to Ilma per the #69 precedent. Serve copy = ap-one #962, CI running.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-01T16:26Z",
+        "ts": "2026-09-02T03:06Z",
         "event_type": "pull_request",
-        "text": "apwh-blueprint-build pull request #69 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/69",
+        "text": "apwh-build-outputs pull request #1 opened at f3202f51.",
+        "evidence_url": "https://github.com/ilmych/apwh-build-outputs/pull/1",
         "writer": "repository-event automation"
       },
       "evidence": [
