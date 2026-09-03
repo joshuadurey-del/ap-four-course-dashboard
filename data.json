@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T13:12Z",
+  "snapshot": "2026-09-03T14:05Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T13:12Z",
+        "ts": "2026-09-03T14:05Z",
         "phase": "",
         "kind": "milestone",
-        "text": "s4 Phase 1 pilot receipted: 4 generate jobs (1 document/topic finding), 4 authored documents rendered (chart, Ortelius 1570 map, Potosi 1553 woodcut, secondary paraphrase), 14/16 authored items judged pass after 1 repair + 2 regenerate rounds (2 parked), seating rehearsal exit 0 (8/18 seated under Becky's rules), parser + mock-set render PASS. generate_jobs 4/120, judge_calls 36/1700, sol_drafts 12/1000 ($0.67 est), image_renders 7/200. Receipt out/apwh-s4-20260903/phase1/PILOT-RECEIPT.md",
+        "text": "s4 Phase 2 dispatch complete: 70 generate jobs (count 4, one per topic), 68 completed / 2 factory-terminal (3.4, 9.5: 'no items passed QC after 5 attempts', same two topics as both tier runs); 272 items banked, all qc passed at birth, 0 duplicate stems, 0 B3 overlap, 53 topics one document / 15 topics two; 26 items carry a uniquely-longest key (answer-shape repair + re-judge next). Pilot: zero parked after 2 fresh-identity replacements. Receipts out/apwh-s4-20260903/phase2/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

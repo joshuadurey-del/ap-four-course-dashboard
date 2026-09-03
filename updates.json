@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T14:05Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s4 Phase 2 dispatch complete: 70 generate jobs (count 4, one per topic), 68 completed / 2 factory-terminal (3.4, 9.5: 'no items passed QC after 5 attempts', same two topics as both tier runs); 272 items banked, all qc passed at birth, 0 duplicate stems, 0 B3 overlap, 53 topics one document / 15 topics two; 26 items carry a uniquely-longest key (answer-shape repair + re-judge next). Pilot: zero parked after 2 fresh-identity replacements. Receipts out/apwh-s4-20260903/phase2/",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T13:53Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #298 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33762418478",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T13:51Z",
     "course": "cross",
     "text": "incept-test-builder workflow run #633 completed: success.",
@@ -877,6 +893,14 @@
     "text": "ap-one pull request #974 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/974",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:22Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild commit f34c605c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/f34c605cb5a0ce120c54b4bc33b4d2252056b2aa",
     "writer": "repository-event automation"
   },
   {
@@ -1901,6 +1925,14 @@
     "text": "ap-one workflow run #1896 completed: cancelled.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33599421233",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:44Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1",
     "writer": "repository-event automation"
   },
   {
