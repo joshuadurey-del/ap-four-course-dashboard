@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-03T04:34:52Z",
+ "generated_ts": "2026-09-03T05:20:21Z",
  "open": [
   {
    "course": "apush",
@@ -8,14 +8,6 @@
    "kind": "decision",
    "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
-  },
-  {
-   "course": "humgeo",
-   "deadline": "",
-   "id": "1e12e29739b7e1de",
-   "kind": "credential",
-   "title": "GEMINI_API_KEY (or OPENAI_API_KEY) for the engine's nano_banana map/diagram renderer \u2014 ~/.secrets, never chat",
-   "ts": "2026-09-02T11:50:34Z"
   }
  ],
  "schema": "needs-human-public/v1"
