@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T07:38Z",
+  "snapshot": "2026-09-03T07:52Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T07:38Z",
-        "phase": "",
-        "kind": "filed",
-        "text": "ap-one PR #976 opened (draft) by window B on Josh's typed word 2026-09-03: HumGeo owner-enrollment operator services/ingest/humgeo_timeback_enrollment.py + test, head 967f60f4 on 098f5689; pr-necessity PASS, Gemini review APPROVE, pr-review-gate PASS. Landing waits on merge-gate + /100 + owner word; receipts out/humgeo-s7-prep-20260903/enrollment-operator/.",
+        "ts": "2026-09-03T07:52Z",
+        "phase": "p6",
+        "kind": "milestone",
+        "text": "Jayesh course-QC harness answer landed 2026-09-03 (Josh pasted it; email 16:46 KST). Web service course-loadb-...elb.amazonaws.com: GET /api/health, POST /api/jobs, GET /api/jobs/{id} every 60 s; 4 report files in S3 course-qc-app-reportsbucket-ccd05ock6zwr jobs/{id}/. Script = APES repo scripts/publish/qc_run5_submit_poll_fetch.py (blob 84708684). Seat-measured: health ok; S3 list+head OK as joshua_durey. p6 entry_point UNMEASURED -> quoted invocation.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
