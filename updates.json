@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T16:04Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 opened.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:02Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #981 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/981",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T15:56Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #981 pullrequestreview-created at a242fab6.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/981#pullrequestreview-5104047890",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T15:52Z",
     "course": "apwh",
     "phase": "",
@@ -218,9 +242,25 @@
   {
     "ts": "2026-09-03T13:08Z",
     "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreviewcomment-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#discussion_r3924853651",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:08Z",
+    "course": "cross",
     "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5102284476",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:07Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreviewcomment-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#discussion_r3924847996",
     "writer": "repository-event automation"
   },
   {
@@ -1445,6 +1485,14 @@
     "text": "ap-psychology-fall-2025-v1 pull request #74 opened at 93143ad5.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/74",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T11:41Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 64750718.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/64750718928830b2bcb98c71a46f1bc30fafedf5",
     "writer": "repository-event automation"
   },
   {
