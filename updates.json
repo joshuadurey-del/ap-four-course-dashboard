@@ -2,6 +2,30 @@
   {
     "ts": "2026-09-03T07:52Z",
     "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s6 step 6-7: owner word typed in-window; 26 dark render-pilot objects deleted from the content bucket (DELETE-RECEIPT.md, 26/26, prefix now empty); all-absent capture PASSED on pinned operator plan fbf2d525 (9833 rows captured_absent); --execute launched 07:51:57Z detached, checkpoint at ~/.incept/course-build/humgeo/phase6-capture-20260903/; branch humgeo/native-publisher-wrapper-20260903 @ 0eb2313d unpushed",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T07:52Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1916 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33729052098",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:52Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1915 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33729006221",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:52Z",
+    "course": "humgeo",
     "phase": "p6",
     "kind": "milestone",
     "text": "Jayesh course-QC harness answer landed 2026-09-03 (Josh pasted it; email 16:46 KST). Web service course-loadb-...elb.amazonaws.com: GET /api/health, POST /api/jobs, GET /api/jobs/{id} every 60 s; 4 report files in S3 course-qc-app-reportsbucket-ccd05ock6zwr jobs/{id}/. Script = APES repo scripts/publish/qc_run5_submit_poll_fetch.py (blob 84708684). Seat-measured: health ok; S3 list+head OK as joshua_durey. p6 entry_point UNMEASURED -> quoted invocation.",
