@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T10:32Z",
+    "course": "humgeo",
+    "phase": "p5",
+    "kind": "hold",
+    "text": "s6 --execute (A2, pid 57798) EXITED ~10:30Z: execute-run.log 'HumGeo native publication failed safely: TimebackError'; writer.lock released. Checkpoint at 10:31Z: static-asset 2730/2730 readback_pass, course 1 readback_pass, class 1 write_pending, 7,101 TimeBack rows never attempted. A2 ordered to read the exact error, GET the class/course rows live, and rule HOLD vs checkpoint-resume under its /100 file. Orchestrator received the monitor exit event 10:32Z.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T10:31Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1919 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33743346488",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:23Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #72 pullrequestreview-created at 5cd07998.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/72#pullrequestreview-5100708601",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T10:23Z",
     "course": "apwh",
     "phase": "",

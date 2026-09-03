@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T10:23Z",
+  "snapshot": "2026-09-03T10:32Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T08:58Z",
+        "ts": "2026-09-03T10:32Z",
         "phase": "p5",
-        "kind": "executor-step",
-        "text": "s6 --execute (A2, incept-87, pid 57798, launched 07:51:57Z under the typed word): preflight of sequential GETs finished ~08:57Z (65 min, per A2's checkpoint doorbell); first TimeBack/S3 writes started. Checkpoint at 08:57:30Z: 92 rows readback_pass, 1 write_pending, 9740 to write, zero refusals. Remaining wall UNMEASURED until the rate settles. Orchestrator received the report 08:58Z.",
+        "kind": "hold",
+        "text": "s6 --execute (A2, pid 57798) EXITED ~10:30Z: execute-run.log 'HumGeo native publication failed safely: TimebackError'; writer.lock released. Checkpoint at 10:31Z: static-asset 2730/2730 readback_pass, course 1 readback_pass, class 1 write_pending, 7,101 TimeBack rows never attempted. A2 ordered to read the exact error, GET the class/course rows live, and rule HOLD vs checkpoint-resume under its /100 file. Orchestrator received the monitor exit event 10:32Z.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -739,10 +739,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T10:22Z",
-        "event_type": "pull_request",
-        "text": "apwh-blueprint-build pull request #72 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/72",
+        "ts": "2026-09-03T10:31Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1919 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33743346488",
         "writer": "repository-event automation"
       },
       "evidence": [
