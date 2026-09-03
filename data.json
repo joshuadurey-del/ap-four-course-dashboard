@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T07:52Z",
+  "snapshot": "2026-09-03T08:11Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T07:52Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "s6 step 6-7: owner word typed in-window; 26 dark render-pilot objects deleted from the content bucket (DELETE-RECEIPT.md, 26/26, prefix now empty); all-absent capture PASSED on pinned operator plan fbf2d525 (9833 rows captured_absent); --execute launched 07:51:57Z detached, checkpoint at ~/.incept/course-build/humgeo/phase6-capture-20260903/; branch humgeo/native-publisher-wrapper-20260903 @ 0eb2313d unpushed",
+        "ts": "2026-09-03T08:11Z",
+        "phase": "p7",
+        "kind": "state-change",
+        "text": "Owner decision 2026-09-03 (Josh, orchestrator window, verbatim): \"i'll go with your recommentation on the B3 port. you can execute that here.\" Keep ap-one #976 + the B3 learner-acceptance port over fleet PRs #873/#874 (diff receipts in fleet-precedent-873-874/). Execution: push gap-fix commit 7021232c to the #976 branch, body Closes #866, post the two gated supersession comments. Merge of #976 and any B3 PR post stay HOLD for typed words.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T07:29Z",
+        "ts": "2026-09-03T08:03Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #81 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/81",
+        "text": "ap-psychology-fall-2025-v1 pull request #82 opened at 9511bd2f.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
