@@ -1,5 +1,45 @@
 [
   {
+    "ts": "2026-09-03T20:18Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #73 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/73",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T20:18Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1930 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33799877997",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T20:10Z",
+    "course": "apwh",
+    "text": "ap-one pull request #986 opened at 1bf64c5f.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/986",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T20:09Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build workflow run #61 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33800561803",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T20:09Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #73 opened at d84e5bbe.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/73",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T20:02Z",
     "course": "humgeo",
     "text": "ap-one pull request #985 pullrequestreview-created at 8027e4d1.",
