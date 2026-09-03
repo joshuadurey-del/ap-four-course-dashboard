@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T16:05Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1922 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33775031649",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:04Z",
     "course": "humgeo",
     "text": "incept-agent-intake issue #107 opened.",
