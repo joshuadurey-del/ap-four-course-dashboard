@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T15:31Z",
+    "course": "humgeo",
+    "phase": "p5",
+    "kind": "state-change",
+    "text": "Owner decision 2026-09-03T15:31:16Z: Route 1 (same client re-scoped; classes write permission added to this client id, then identical --execute from the checkpoint). Route 2 (undo + new namespace) closed. Re-run waits on the permission.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T15:27Z",
     "course": "humgeo",
     "text": "ap-one issue #874 comment-created.",

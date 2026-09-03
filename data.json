@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T15:27Z",
+  "snapshot": "2026-09-03T15:31Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T12:32Z",
+        "ts": "2026-09-03T15:31Z",
         "phase": "p5",
-        "kind": "hold",
-        "text": "s6 --execute resume (A2, pid 13983, launched 10:44Z) exited 12:27Z: POST /classes -> 403 'explicit deny in an identity-based policy' (TargetEndSystem forbidden), captured in the private receipt dir. Course row + 2730 assets live; class + 7101 rows unwritten. HOLD(credential: classes write for this client). needs-human 03a6223fff0dc0ec. Two morning routes from operator bytes in the receipt; no re-run tonight.",
+        "kind": "state-change",
+        "text": "Owner decision 2026-09-03T15:31:16Z: Route 1 (same client re-scoped; classes write permission added to this client id, then identical --execute from the checkpoint). Route 2 (undo + new namespace) closed. Re-run waits on the permission.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
