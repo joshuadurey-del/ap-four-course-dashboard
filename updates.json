@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T18:59Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "merged",
+    "text": "ap-one PR #983 landed as 3989265c (2026-09-03T18:57:16Z): option-text overlay collapses one level of double escape in gate choice text (audit P3-07; the a59f34dc item); route B, fleet modules and sealed manifests untouched; gate PASS r6ed866cb; landed by window C under the owner's standing authority; Deploy run 33793564848 queued.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T18:58Z",
     "course": "humgeo",
     "phase": "",

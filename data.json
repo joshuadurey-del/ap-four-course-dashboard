@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:58Z",
+  "snapshot": "2026-09-03T18:59Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:58Z",
+        "ts": "2026-09-03T18:59Z",
         "phase": "",
         "kind": "merged",
-        "text": "InceptTrilogy/ap-one PR #983 merged 3989265c (2026-09-03T18:57:16Z) by window C on the orchestrator's assignment under Josh's standing merge authority: HumGeo option-text overlay collapses one level of double escape in choice text (audit P3-07); 4 files (module + 3 tests), author incept-28 (Gemini APPROVE, pr-review PASS). merge-gate PASS r6ed866cb (suite 9962 passed reused byte-identical, CI 4 green). Deploy run 33793564848 watched; /version readback follows.",
+        "text": "ap-one PR #983 landed as 3989265c (2026-09-03T18:57:16Z): option-text overlay collapses one level of double escape in gate choice text (audit P3-07; the a59f34dc item); route B, fleet modules and sealed manifests untouched; gate PASS r6ed866cb; landed by window C under the owner's standing authority; Deploy run 33793564848 queued.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
