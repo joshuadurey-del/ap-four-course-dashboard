@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T07:26Z",
+  "snapshot": "2026-09-03T07:38Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T07:26Z",
-        "phase": "p7",
-        "kind": "receipt-sealed",
-        "text": "B2 enrollment operator STAGED, not pushed: ap-one branch humgeo/timeback-enrollment-operator-20260903 @ 967f60f4 (base 098f5689) adds humgeo_timeback_enrollment.py + tests (61; 79 with the precedent's), ported from the aplit one-owner operator, constants from the profile, 7.1 CLI, UNSEALED pin. Harness 6/6. Review 4 rounds, 20 findings fixed w/ regression tests, round 4 SAFE. HOLD(owner word) on pr gates, push, PR. Spend 0.",
+        "ts": "2026-09-03T07:38Z",
+        "phase": "",
+        "kind": "filed",
+        "text": "ap-one PR #976 opened (draft) by window B on Josh's typed word 2026-09-03: HumGeo owner-enrollment operator services/ingest/humgeo_timeback_enrollment.py + test, head 967f60f4 on 098f5689; pr-necessity PASS, Gemini review APPROVE, pr-review-gate PASS. Landing waits on merge-gate + /100 + owner word; receipts out/humgeo-s7-prep-20260903/enrollment-operator/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T04:37Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #794 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33715170635",
+        "ts": "2026-09-03T07:36Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #976 opened at 967f60f4.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/976",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T07:16Z",
+        "ts": "2026-09-03T07:29Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #80 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/80",
+        "text": "ap-psychology-fall-2025-v1 pull request #81 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/81",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
