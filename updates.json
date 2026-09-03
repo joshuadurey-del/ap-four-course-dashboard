@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T16:38Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #982 opened at 1d32e71c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/982",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:35Z",
     "course": "humgeo",
     "text": "ap-one issue #866 closed.",
