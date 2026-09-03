@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T12:11Z",
+  "snapshot": "2026-09-03T12:29Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T12:11Z",
-        "phase": "9",
-        "kind": "milestone",
-        "text": "B3 p7 walk + XP instrument staged at its end state: branch humgeo/learner-acceptance-20260903 head c21d3d62 (12 commits above the #976 head e5bbfa9d), 43 tests in the file / 122 with operator + AP Lit, harness 11/11, eleven review rounds folded (40 accepted findings, 1 rejected on precedent bytes), closed under the orchestrator's round-11 cap. PR post HOLD(owner word typed in window B: Post the learner-acceptance PR.); COMMENT-874 after the PR number exists. Zero paid calls.",
+        "ts": "2026-09-03T12:29Z",
+        "phase": "p5",
+        "kind": "hold",
+        "text": "s6 --execute resume (A2, pid 13983) EXITED 21:27 KST: class POST /ims/oneroster/rostering/v1p2/classes -> HTTP 403 'User is not authorized to access this resource with an explicit deny in an identity-based policy' (execute-timeback-error.json in the private capture dir). Course row and 2730 static assets remain live; class write_pending; 7,101 rows never attempted. Credential-scope block on Josh's M2M pair; nothing overnight can clear it. Orchestrator received the monitor exit 12:29Z.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
