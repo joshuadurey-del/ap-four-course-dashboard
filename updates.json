@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T18:06Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "Writing-item emitter amended dbf6488d (ap-one branch humgeo/native-writing-items-20260904, lane E): 603/603 extended-text gate items in the factory grader rubric dialect, validator parses; live grader: 4 items exemplar 1.0 (2/2) and 3 wrong 0.0, STATUS graded (receipts out/humgeo-writing-fix-20260904/). Landing via window C after the skeptic's mutation re-run.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T18:03Z",
     "course": "humgeo",
     "phase": "",
