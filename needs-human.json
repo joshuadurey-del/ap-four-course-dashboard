@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-03T07:19:53Z",
+ "generated_ts": "2026-09-03T12:31:31Z",
  "open": [
   {
    "course": "apush",
@@ -8,6 +8,14 @@
    "kind": "decision",
    "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "03a6223fff0dc0ec",
+   "kind": "credential",
+   "title": "HumGeo Phase 6: TimeBack client lacks OneRoster classes write (POST /classes 403 explicit deny); course row already live",
+   "ts": "2026-09-03T12:31:31Z"
   }
  ],
  "schema": "needs-human-public/v1"

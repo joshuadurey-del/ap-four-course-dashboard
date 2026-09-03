@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-03T12:29:30Z",
+ "generated_utc": "2026-09-03T12:31:51Z",
  "note": "sha256 over Git blobs committed at HEAD. Precommit reads the staged tree that becomes HEAD; bin/update-hashes.sh verify checks committed HEAD. Working-tree bytes are never hashed.",
  "files": [
   {
@@ -34,8 +34,8 @@
   },
   {
    "path": "needs-human.json",
-   "sha256": "5977fa9807f4925e3c432d5d8f983b6829c149487e583dd2f33973fcc3ab7ead",
-   "bytes": 370
+   "sha256": "e0731c3c13dfe201c07afbe967c261570b8ac552d8bc3bf93b921af924639132",
+   "bytes": 643
   },
   {
    "path": "process.json",
