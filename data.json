@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T08:41Z",
+  "snapshot": "2026-09-03T08:58Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T08:11Z",
-        "phase": "p7",
-        "kind": "state-change",
-        "text": "Owner decision 2026-09-03 (Josh, orchestrator window, verbatim): \"i'll go with your recommentation on the B3 port. you can execute that here.\" Keep ap-one #976 + the B3 learner-acceptance port over fleet PRs #873/#874 (diff receipts in fleet-precedent-873-874/). Execution: push gap-fix commit 7021232c to the #976 branch, body Closes #866, post the two gated supersession comments. Merge of #976 and any B3 PR post stay HOLD for typed words.",
+        "ts": "2026-09-03T08:58Z",
+        "phase": "p5",
+        "kind": "executor-step",
+        "text": "s6 --execute (A2, incept-87, pid 57798, launched 07:51:57Z under the typed word): preflight of sequential GETs finished ~08:57Z (65 min, per A2's checkpoint doorbell); first TimeBack/S3 writes started. Checkpoint at 08:57:30Z: 92 rows readback_pass, 1 write_pending, 9740 to write, zero refusals. Remaining wall UNMEASURED until the rate settles. Orchestrator received the report 08:58Z.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T08:35Z",
+        "ts": "2026-09-03T08:58Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #82 pullrequestreview-created at 3b5a4b5c.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82#pullrequestreview-5099647477",
+        "text": "ap-psychology-fall-2025-v1 pull request #83 opened at a193501a.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/83",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

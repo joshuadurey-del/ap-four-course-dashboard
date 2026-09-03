@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T08:58Z",
+    "course": "humgeo",
+    "phase": "p5",
+    "kind": "executor-step",
+    "text": "s6 --execute (A2, incept-87, pid 57798, launched 07:51:57Z under the typed word): preflight of sequential GETs finished ~08:57Z (65 min, per A2's checkpoint doorbell); first TimeBack/S3 writes started. Checkpoint at 08:57:30Z: 92 rows readback_pass, 1 write_pending, 9740 to write, zero refusals. Remaining wall UNMEASURED until the rate settles. Orchestrator received the report 08:58Z.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T08:58Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #83 opened at a193501a.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/83",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T08:41Z",
     "course": "apwh",
     "phase": "s3b",
@@ -909,6 +925,14 @@
     "text": "ap-one workflow run #788 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33617318233",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T10:01Z",
+    "course": "humgeo",
+    "text": "ap-one repository activity: delete.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {
@@ -1857,6 +1881,14 @@
   },
   {
     "ts": "2026-09-02T02:59Z",
+    "course": "cross",
+    "text": "ap-one commit a5ab18ed.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/a5ab18ed980d09ae0f65c2c936534bb79965025c",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:59Z",
     "course": "humgeo",
     "text": "ap-one repository activity: delete.",
     "event_type": "repository",
@@ -1869,6 +1901,14 @@
     "text": "ap-one pull request #961 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/961",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T02:56Z",
+    "course": "apwh",
+    "text": "ap-one commit e736b9b8.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/e736b9b817ffbfef3ed7d327caf1aefefeeead16",
     "writer": "repository-event automation"
   },
   {
