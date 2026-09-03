@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T17:44Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "landed",
+    "text": "tools/merge-gate.py suite_fingerprint now strips pytest's (h:mm:ss) duration suffix (appears past 60 s): the humgeo-rebuild #75 gate false-refused suite parity with identical 21 failures because base ran 1:46 and head 1:03. One regex line; positive-control self-check PASS (suffix-only diff equal, different failing test unequal); pre-fix bytes + diff in out/merge-gate-fingerprint-fix-20260904/.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T17:38Z",
     "course": "humgeo",
     "phase": "",
