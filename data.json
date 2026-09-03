@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T17:49Z",
+  "snapshot": "2026-09-03T17:50Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T17:49Z",
+        "ts": "2026-09-03T17:50Z",
         "phase": "",
         "kind": "merged",
-        "text": "ilmych/humgeo-rebuild PR #75 merged 53084657 (2026-09-03T17:48:43Z) by window C under Josh's standing merge authority (orchestrator assignment): three check-stimulus top-up manifest dirs re-pinned to the v2 native namespace (193 files; replaces_identifier -v1 -> -v2, sha fields re-hashed; no item created or removed; checker + selftest PASS). merge-gate PASS rfc38e3e5 (21 prescreen refusals pre-existing, identical head/base). Review: A2's Gemini APPROVE.",
+        "text": "humgeo-rebuild PR #75 MERGED 53084657 (2026-09-03T17:48:43Z): the three check-stimulus top-up manifest dirs re-pinned to namespace ap-human-geography-native-202608-v2 with every /v1/qc verdict kept (judge request excludes replaces_identifier). merge-gate PASS rfc38e3e5 after the tools/merge-gate.py suite_fingerprint h:mm:ss fix. Landed by window C under the owner's standing authority.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
