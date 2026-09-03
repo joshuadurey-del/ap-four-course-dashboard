@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T19:01Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "Lane W2 stop (out/humgeo-writing-tasks-20260904/BANK-RESTAGE-RECEIPT.md): the factory's re-staged HumGeo writing bank (humgeo-rebuild 53084657 w6-staging, 7a3c7df9) fails two fleet ap-one tests on content (stale FRQ map alt texts; 39 rubric repairs without checklist re-derivation leak answers pre-submit). Decision: publish the 115 accepted writing tasks tonight; the 5 unaccepted return with the fleet's next clean W6 stage; defect routed to the fleet as a comment.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T18:59Z",
     "course": "humgeo",
     "phase": "",

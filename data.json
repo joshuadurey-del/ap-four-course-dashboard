@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:59Z",
+  "snapshot": "2026-09-03T19:01Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:59Z",
+        "ts": "2026-09-03T19:01Z",
         "phase": "",
-        "kind": "merged",
-        "text": "ap-one PR #983 landed as 3989265c (2026-09-03T18:57:16Z): option-text overlay collapses one level of double escape in gate choice text (audit P3-07; the a59f34dc item); route B, fleet modules and sealed manifests untouched; gate PASS r6ed866cb; landed by window C under the owner's standing authority; Deploy run 33793564848 queued.",
+        "kind": "note",
+        "text": "Lane W2 stop (out/humgeo-writing-tasks-20260904/BANK-RESTAGE-RECEIPT.md): the factory's re-staged HumGeo writing bank (humgeo-rebuild 53084657 w6-staging, 7a3c7df9) fails two fleet ap-one tests on content (stale FRQ map alt texts; 39 rubric repairs without checklist re-derivation leak answers pre-submit). Decision: publish the 115 accepted writing tasks tonight; the 5 unaccepted return with the fleet's next clean W6 stage; defect routed to the fleet as a comment.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
