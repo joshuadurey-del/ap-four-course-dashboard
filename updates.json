@@ -1,5 +1,85 @@
 [
   {
+    "ts": "2026-09-03T12:10Z",
+    "course": "humgeo",
+    "phase": "p7",
+    "kind": "hold",
+    "text": "B3 harden loop CLOSED at fold 11 (cap; 12:10Z): branch humgeo/learner-acceptance-20260903 head c21d3d62 (12 commits above #976 head e5bbfa9d); 43 tests / 122 with stacked suites; harness 11/11. Round 11: gemini SAFE, grok 1 CRITICAL (xp 0.0 on a zero-XP target passed as unpaid) folded with a mutation-probed guard, codex declined. No admitted gap. Next: PR body final + re-gate, then HOLD(owner word typed in window B: Post the learner-acceptance PR.).",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T12:05Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #629 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33752757725",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T12:02Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #86 pullrequestreview-created at 4e621e6b.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/86#pullrequestreview-5101609253",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T12:01Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #86 opened at 4e621e6b.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/86",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T12:00Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:59Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5101574425",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:58Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5101569685",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:58Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreviewcomment-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#discussion_r3924261931",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:55Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #628 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33751869152",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:54Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #85 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T11:51Z",
     "course": "apwh",
     "phase": "",
@@ -2342,6 +2422,14 @@
     "kind": "executor-step",
     "text": "qc_green: rc=1 verifier_rc=1",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T01:25Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild commit e9a049d9.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/e9a049d941900dcba514e821d97f02c19ddfc64f",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-02T01:25Z",
