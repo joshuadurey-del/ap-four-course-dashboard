@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "generated_utc": "2026-09-01T04:59:43Z",
+ "generated_utc": "2026-09-03T04:18:33Z",
  "label": "ASAP edition (2026-09-01)",
  "runbook_version": "2026-09-01.2",
  "source_sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
@@ -189,8 +189,8 @@
    "label": "AP World History",
    "current_stage": "content",
    "state": "RE-EARN \u2014 PRIORITY 2",
-   "as_of": "2026-09-01T04:47:40Z",
-   "detail": "The tier-2 landing comes first, followed by a fresh A2 measurement and then the stimulus-kind campaign.",
+   "as_of": "2026-09-03T04:09:00Z",
+   "detail": "The tier-2 gate repair is landed and read back: build 1f0fac27, serve 2b17b98e, staging at 2b17b98e; 143/143 repaired gate members are served, seating remains 1,988/1,988, and the gate manifest is unchanged. A fresh A2 measurement comes next, then the stimulus-kind campaign.",
    "priority": 2
   },
   "apush": {

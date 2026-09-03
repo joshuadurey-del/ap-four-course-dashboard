@@ -114,8 +114,8 @@ courses = {
         "label": "AP World History",
         "current_stage": "content",
         "state": "RE-EARN — PRIORITY 2",
-        "as_of": "2026-09-01T04:47:40Z",
-        "detail": "The tier-2 landing comes first, followed by a fresh A2 measurement and then the stimulus-kind campaign.",
+        "as_of": "2026-09-03T04:09:00Z",
+        "detail": "The tier-2 gate repair is landed and read back: build 1f0fac27, serve 2b17b98e, staging at 2b17b98e; 143/143 repaired gate members are served, seating remains 1,988/1,988, and the gate manifest is unchanged. A fresh A2 measurement comes next, then the stimulus-kind campaign.",
         "priority": 2,
     },
     "apush": {
