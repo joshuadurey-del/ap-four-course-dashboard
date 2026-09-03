@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T11:01Z",
+    "course": "humgeo",
+    "phase": "p7",
+    "kind": "hold",
+    "text": "B3 (window B, incept-39) staged end state (LEARNER-ACCEPTANCE-REPORT.md, 10:59Z): HumGeo p7 walk + XP instrument on branch humgeo/learner-acceptance-20260903 stacked on #976 head e5bbfa9d; equivalence 11/11 byte-identical vs the AP Lit precedent; review rounds 1-7 folded, round 8 recorded; 41 tests (120 with stacked suites); PR body + title + ceremony inputs gated; zero paid calls. HOLD(owner word typed in window B: Post the learner-acceptance PR.); COMMENT-874 HOLD until that PR exists.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T10:46Z",
+    "course": "cross",
+    "text": "ap-one workflow run #420 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33745997099",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T10:46Z",
     "course": "apwh",
     "phase": "",
@@ -1325,6 +1341,14 @@
     "text": "ap-one pull request #968 opened at 5370ee64.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/968",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T09:00Z",
+    "course": "cross",
+    "text": "ap-one commit cebbfb17.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/cebbfb173980f94ad2007c68057abc15b1d5d714",
     "writer": "repository-event automation"
   },
   {

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T10:46Z",
+  "snapshot": "2026-09-03T11:01Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T10:35Z",
-        "phase": "p5",
+        "ts": "2026-09-03T11:01Z",
+        "phase": "p7",
         "kind": "hold",
-        "text": "A2 ruling on the s6 --execute stop (10:35Z): 2730/2730 static assets readback_pass; course row live 200 (publishStatus testing); class row POST raised TimebackError, 404 live (checkpoint write_pending); 7,101 rows never attempted. Wrapper prints only the exception type, so status/body not on disk. HOLD(class POST: TimebackError, body not surfaced; class absent live). Resume re-POSTs that row then continues; A2 asks Josh for the resume line in its window and captures the error body on resume.",
+        "text": "B3 (window B, incept-39) staged end state (LEARNER-ACCEPTANCE-REPORT.md, 10:59Z): HumGeo p7 walk + XP instrument on branch humgeo/learner-acceptance-20260903 stacked on #976 head e5bbfa9d; equivalence 11/11 byte-identical vs the AP Lit precedent; review rounds 1-7 folded, round 8 recorded; 41 tests (120 with stacked suites); PR body + title + ceremony inputs gated; zero paid calls. HOLD(owner word typed in window B: Post the learner-acceptance PR.); COMMENT-874 HOLD until that PR exists.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
