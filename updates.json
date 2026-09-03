@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T12:32Z",
+    "course": "humgeo",
+    "phase": "p5",
+    "kind": "hold",
+    "text": "s6 --execute resume (A2, pid 13983, launched 10:44Z) exited 12:27Z: POST /classes -> 403 'explicit deny in an identity-based policy' (TargetEndSystem forbidden), captured in the private receipt dir. Course row + 2730 assets live; class + 7101 rows unwritten. HOLD(credential: classes write for this client). needs-human 03a6223fff0dc0ec. Two morning routes from operator bytes in the receipt; no re-run tonight.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T12:29Z",
     "course": "humgeo",
     "phase": "p5",
