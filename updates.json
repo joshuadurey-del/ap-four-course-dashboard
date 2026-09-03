@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T08:41Z",
+    "course": "apwh",
+    "phase": "s3b",
+    "kind": "hold",
+    "text": "Window C DONE (received 08:41Z; C stamp 10:45Z): 279/279 strict-route members passed:true at judge 44599f7b (422/422 with #71/#975); 50 repaired locally, 0 parked; rebuild 1988/1988 manifest identical; build suite 379/3, ap-one tests 214/3, oracle 0 moved, Phase 3.4 unchanged. Staged, not pushed: apwh-blueprint-build apwh-seat/gate-repair-w3-20260903 + ap-one apwh-seat/gate-repair-w3-serve-20260903 (delivery package 1991bf9f -> 34c6da2d). HOLD(owner word typed in window C) for push, PR, landing.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T08:39Z",
     "course": "apwh",
     "phase": "",

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T08:39Z",
+  "snapshot": "2026-09-03T08:41Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T08:39Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "s3b Stage C extension judging DONE: 279/279 code-clean strict-route members passed hosted /v1/qc at 44599f7b (422/422 with #71/#975). 50 repaired locally (Sol-5.6 drafts, seat-applied; 16 fresh stems), zero parked. Rebuild 1988/1988 seats, manifest byte-identical; bank rebuilt; suites green both sides; oracle 0 rows moved. Staged: bpb apwh-seat/gate-repair-w3-20260903, ap-one apwh-seat/gate-repair-w3-serve-20260903. Push/PR wait Josh's word.",
+        "ts": "2026-09-03T08:41Z",
+        "phase": "s3b",
+        "kind": "hold",
+        "text": "Window C DONE (received 08:41Z; C stamp 10:45Z): 279/279 strict-route members passed:true at judge 44599f7b (422/422 with #71/#975); 50 repaired locally, 0 parked; rebuild 1988/1988 manifest identical; build suite 379/3, ap-one tests 214/3, oracle 0 moved, Phase 3.4 unchanged. Staged, not pushed: apwh-blueprint-build apwh-seat/gate-repair-w3-20260903 + ap-one apwh-seat/gate-repair-w3-serve-20260903 (delivery package 1991bf9f -> 34c6da2d). HOLD(owner word typed in window C) for push, PR, landing.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
