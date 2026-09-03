@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-03T05:41:49Z",
+ "generated_ts": "2026-09-03T07:19:53Z",
  "open": [
   {
    "course": "apush",
@@ -8,14 +8,6 @@
    "kind": "decision",
    "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
-  },
-  {
-   "course": "humgeo",
-   "deadline": "",
-   "id": "962af0e7b0fbc819",
-   "kind": "credential",
-   "title": "TimeBack M2M client id + secret + org sourcedId for the HumGeo Phase 6 execute leg (execute time only, not staging)",
-   "ts": "2026-09-03T05:41:49Z"
   }
  ],
  "schema": "needs-human-public/v1"
