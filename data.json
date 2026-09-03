@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T04:36Z",
+  "snapshot": "2026-09-03T04:37Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T04:29Z",
-        "phase": "",
-        "kind": "merged",
-        "text": "ap-one PR #974 merged 098f5689 (2026-09-03T04:28:33Z): humgeo_native_timeback_assets balances authored-accepted rows' answer positions at placement (census 110 per label, chi-square 0.0; letter-reference and four-option guards). Flash round-2 APPROVE; module 95 tests; tests/ingest 5,095 at 72e1ae55; CI green at 2bf850c7; merge-gate PASS r6ed866cb (25 rows). Deploy run 33715170635 watched to terminal state. Receipts INCEPT/out/humgeo-topup-phase2-20260902/apone-balance/.",
-        "writer": "INCEPT event projection"
+        "ts": "2026-09-03T04:36Z",
+        "phase": "content",
+        "kind": "state-change",
+        "text": "HumGeo s3 is DONE on landed final bytes: humgeo-rebuild PRs #73/#74 and ap-one PR #974 are merged; the final build measures 187/440 stimulus-bound checks, 110 answer keys per letter, zero uniquely longest correct options, and Phase 3.6 PASS. s6 is next and remains unexecuted; the corridor pauses for the owner execute word before push dark.",
+        "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T04:28Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #974 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/974",
+        "ts": "2026-09-03T04:37Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #794 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33715170635",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
