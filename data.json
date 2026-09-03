@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T07:16Z",
+  "snapshot": "2026-09-03T07:26Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T07:11Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "s6 OWNER WORD given 2026-09-03 (Josh, verbatim): 'Delete our 26 test files, then run the publisher.' A2 (incept-87) ordered: delete 26 dark render-pilot S3 objects under humgeo/, re-capture all-absent, dark --execute of pinned plan via the HumGeo wrapper on the fleet operator (publishStatus testing, enrollments 0), zero-write replay, verify-live, evidence bundle. Receipts out/humgeo-s6-20260903/phase6-operator/.",
+        "ts": "2026-09-03T07:26Z",
+        "phase": "p7",
+        "kind": "receipt-sealed",
+        "text": "B2 enrollment operator STAGED, not pushed: ap-one branch humgeo/timeback-enrollment-operator-20260903 @ 967f60f4 (base 098f5689) adds humgeo_timeback_enrollment.py + tests (61; 79 with the precedent's), ported from the aplit one-owner operator, constants from the profile, 7.1 CLI, UNSEALED pin. Harness 6/6. Review 4 rounds, 20 findings fixed w/ regression tests, round 4 SAFE. HOLD(owner word) on pr gates, push, PR. Spend 0.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
