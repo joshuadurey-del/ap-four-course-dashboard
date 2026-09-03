@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T06:35Z",
+  "snapshot": "2026-09-03T07:11Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T06:35Z",
+        "ts": "2026-09-03T07:11Z",
         "phase": "",
-        "kind": "note",
-        "text": "Josh sent Jayesh the one-line course-QC harness question (2026-09-03, per Josh in the orchestrator window; exact wording as sent not captured here). Answer lands in out/humgeo-s7-prep-20260903/HARNESS-ANSWER.md; then RUNBOOK-ASAP.md p6 entry_point moves from UNMEASURED to the quoted invocation.",
+        "kind": "milestone",
+        "text": "s6 OWNER WORD given 2026-09-03 (Josh, verbatim): 'Delete our 26 test files, then run the publisher.' A2 (incept-87) ordered: delete 26 dark render-pilot S3 objects under humgeo/, re-capture all-absent, dark --execute of pinned plan via the HumGeo wrapper on the fleet operator (publishStatus testing, enrollments 0), zero-write replay, verify-live, evidence bundle. Receipts out/humgeo-s6-20260903/phase6-operator/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T04:09Z",
+        "ts": "2026-09-03T07:10Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #78 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/78",
+        "text": "ap-psychology-fall-2025-v1 pull request #79 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/79",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

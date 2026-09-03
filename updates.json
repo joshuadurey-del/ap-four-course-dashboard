@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T07:11Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s6 OWNER WORD given 2026-09-03 (Josh, verbatim): 'Delete our 26 test files, then run the publisher.' A2 (incept-87) ordered: delete 26 dark render-pilot S3 objects under humgeo/, re-capture all-absent, dark --execute of pinned plan via the HumGeo wrapper on the fleet operator (publishStatus testing, enrollments 0), zero-write replay, verify-live, evidence bundle. Receipts out/humgeo-s6-20260903/phase6-operator/.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T07:10Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #79 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/79",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:09Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #79 opened at 986bffed.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/79",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T06:35Z",
     "course": "humgeo",
     "phase": "",
@@ -1718,6 +1742,14 @@
     "kind": "executor-step",
     "text": "qc_green: rc=1 verifier_rc=1",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T01:25Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: delete.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-02T01:25Z",
