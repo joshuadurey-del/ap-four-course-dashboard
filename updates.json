@@ -1,5 +1,45 @@
 [
   {
+    "ts": "2026-09-03T16:26Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s6 hold, grant route measured: client token scope claim = or/v1p2 admin.own + qti admin.own + read-only roster-core/resource; classes+enrollments need roster-core write, resources need resource write. Posted on intake #107 (issuecomment-5528772602) 01:25 KST 09-04. Fleet triage blocked-upstream -> Ilma. Zero-write scope detector + #107 comment monitor armed; A2 resumes identical --execute on grant (Route 1). Owner standing authority for live-by-morning recorded in OWNER-WORDS-20260903.md.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T16:25Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107#issuecomment-5528772602",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:22Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1924 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33776890539",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:15Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #86 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/86",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:14Z",
+    "course": "cross",
+    "text": "ap-one workflow run #421 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33777233156",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:12Z",
     "course": "humgeo",
     "text": "ap-one workflow run #798 completed: success.",
@@ -253,6 +293,14 @@
     "text": "incept-test-builder workflow run #631 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33762418614",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:44Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 pullrequestreviewcomment-created at 57522258.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293#discussion_r3925179348",
     "writer": "repository-event automation"
   },
   {
@@ -1534,6 +1582,14 @@
     "kind": "milestone",
     "text": "s3b Stages C-D COMPLETE: 143/143 repaired strict-route gate members hold /v1/qc passed:true (113 first call, 30 via 1-4 repair rounds). Seating 1988/1988 unchanged, manifest byte-identical; bank 20 entries changed; verify_rebuild PASS, bff 186, suite 379, oracle unchanged. Pushed: bpb apwh-seat/gate-repair-20260902 @8da39fb, ap-one apwh-seat/gate-repair-serve-20260902 @3f2a1c5f. PRs unopened: PR gate needs owner text typed within 2h. Report: out/apwh-gate-repair-20260902/window2/",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T17:33Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-02T17:33Z",

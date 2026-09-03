@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T16:12Z",
+  "snapshot": "2026-09-03T16:26Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T15:31Z",
-        "phase": "p5",
-        "kind": "state-change",
-        "text": "Owner decision 2026-09-03T15:31:16Z: Route 1 (same client re-scoped; classes write permission added to this client id, then identical --execute from the checkpoint). Route 2 (undo + new namespace) closed. Re-run waits on the permission.",
+        "ts": "2026-09-03T16:26Z",
+        "phase": "",
+        "kind": "milestone",
+        "text": "s6 hold, grant route measured: client token scope claim = or/v1p2 admin.own + qti admin.own + read-only roster-core/resource; classes+enrollments need roster-core write, resources need resource write. Posted on intake #107 (issuecomment-5528772602) 01:25 KST 09-04. Fleet triage blocked-upstream -> Ilma. Zero-write scope detector + #107 comment monitor armed; A2 resumes identical --execute on grant (Route 1). Owner standing authority for live-by-morning recorded in OWNER-WORDS-20260903.md.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T16:12Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #798 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33776256171",
+        "ts": "2026-09-03T16:25Z",
+        "event_type": "issues",
+        "text": "incept-agent-intake issue #107 comment-created.",
+        "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107#issuecomment-5528772602",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T12:02Z",
+        "ts": "2026-09-03T16:15Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #86 pullrequestreview-created at 4e621e6b.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/86#pullrequestreview-5101609253",
+        "text": "ap-psychology-fall-2025-v1 pull request #86 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/86",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
