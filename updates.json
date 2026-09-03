@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T15:27Z",
+    "course": "humgeo",
+    "text": "ap-one issue #874 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/874#issuecomment-5528032396",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T15:27Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #980 opened at c21d3d62.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/980",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T14:33Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #15 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33766352502",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T14:15Z",
     "course": "apwh",
     "phase": "",
@@ -245,6 +269,14 @@
     "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5101574425",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:58Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreviewcomment-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#discussion_r3924261913",
     "writer": "repository-event automation"
   },
   {
@@ -1928,11 +1960,27 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-02T07:10Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T06:59Z",
     "course": "humgeo",
     "text": "ap-one workflow run #1897 completed: cancelled.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33600418844",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:58Z",
+    "course": "humgeo",
+    "text": "ap-one commit b79c8ba5.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/b79c8ba5251b946de58eefe64d30f0b8060280f9",
     "writer": "repository-event automation"
   },
   {
