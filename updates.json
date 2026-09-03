@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T17:49Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "merged",
+    "text": "ilmych/humgeo-rebuild PR #75 merged 53084657 (2026-09-03T17:48:43Z) by window C under Josh's standing merge authority (orchestrator assignment): three check-stimulus top-up manifest dirs re-pinned to the v2 native namespace (193 files; replaces_identifier -v1 -> -v2, sha fields re-hashed; no item created or removed; checker + selftest PASS). merge-gate PASS rfc38e3e5 (21 prescreen refusals pre-existing, identical head/base). Review: A2's Gemini APPROVE.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T17:48Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #75 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T17:44Z",
     "course": "cross",
     "phase": "",

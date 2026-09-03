@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T17:38Z",
+  "snapshot": "2026-09-03T17:49Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T17:38Z",
+        "ts": "2026-09-03T17:49Z",
         "phase": "",
-        "kind": "receipt-sealed",
-        "text": "Canon proofs on the PROVISIONAL v2 plan 13e00aa3 (window C, factory instruments): P1-10, P2-02, P4-01, P4-02, P4-03 PASS; P2-01 FAIL (video/article links lack lessonType/xp vs canon 2.1) -> ruled: parity on every link before the final cut; P5-01 refused at load (publisher digest still v1), re-runs after re-pin. Receipts out/humgeo-s7-prep-20260903/canon-proofs-v2/v2-provisional/.",
+        "kind": "merged",
+        "text": "ilmych/humgeo-rebuild PR #75 merged 53084657 (2026-09-03T17:48:43Z) by window C under Josh's standing merge authority (orchestrator assignment): three check-stimulus top-up manifest dirs re-pinned to the v2 native namespace (193 files; replaces_identifier -v1 -> -v2, sha fields re-hashed; no item created or removed; checker + selftest PASS). merge-gate PASS rfc38e3e5 (21 prescreen refusals pre-existing, identical head/base). Review: A2's Gemini APPROVE.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T17:33Z",
+        "ts": "2026-09-03T17:48Z",
         "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #75 pullrequestreview-created at fb7cb24d.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75#pullrequestreview-5104939102",
+        "text": "humgeo-rebuild pull request #75 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
