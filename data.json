@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T17:30Z",
+        "ts": "2026-09-03T17:33Z",
         "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #75 opened at fb7cb24d.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75",
+        "text": "humgeo-rebuild pull request #75 pullrequestreview-created at fb7cb24d.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75#pullrequestreview-5104939102",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
