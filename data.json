@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T17:50Z",
+  "snapshot": "2026-09-03T18:03Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T17:50Z",
+        "ts": "2026-09-03T18:03Z",
         "phase": "",
-        "kind": "merged",
-        "text": "humgeo-rebuild PR #75 MERGED 53084657 (2026-09-03T17:48:43Z): the three check-stimulus top-up manifest dirs re-pinned to namespace ap-human-geography-native-202608-v2 with every /v1/qc verdict kept (judge request excludes replaces_identifier). merge-gate PASS rfc38e3e5 after the tools/merge-gate.py suite_fingerprint h:mm:ss fix. Landed by window C under the owner's standing authority.",
+        "kind": "state-change",
+        "text": "s6 v2 scope widened 03:3x-03:5x KST 09-04 (orchestrator, standing authority; lane S census): the fleet plan builder omits canon-bound kinds; lanes build operation sets for 120 writing tasks (W), 7 PP100 banks + 7 unit assessments (P), TYE census (T), and per-choice feedback for 2251 gate MCQs (intern); A2 adds --extra-operations + re-pins totals; C re-proves. Mock/EOC/practice MCQs profile-excluded, not built. Receipts under out/humgeo-*-20260904/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

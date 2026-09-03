@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T18:03Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "state-change",
+    "text": "s6 v2 scope widened 03:3x-03:5x KST 09-04 (orchestrator, standing authority; lane S census): the fleet plan builder omits canon-bound kinds; lanes build operation sets for 120 writing tasks (W), 7 PP100 banks + 7 unit assessments (P), TYE census (T), and per-choice feedback for 2251 gate MCQs (intern); A2 adds --extra-operations + re-pins totals; C re-proves. Mock/EOC/practice MCQs profile-excluded, not built. Receipts under out/humgeo-*-20260904/.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T17:50Z",
     "course": "humgeo",
     "phase": "",
