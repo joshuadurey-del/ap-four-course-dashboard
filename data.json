@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T05:35Z",
+  "snapshot": "2026-09-03T05:44Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T05:35Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "s6 free chain steps 1-5 run once over final bytes (humgeo-rebuild f34c605c, ap-one 098f5689): build byte-identical x2 manifest fc957b07, 3.6+3.7 pass, 1137/1137 src https, corridor sha unchanged 277b520a, plan_digest 66fbfca8 offline gate pass; step 1 served gate key-skew row stays flagged; no committed executor for the plan schema at main; OWNER_WORD ask staged in out/humgeo-s6-20260903/06-OWNER-WORD-ASK.md; spend 0",
+        "ts": "2026-09-03T05:44Z",
+        "phase": "p7",
+        "kind": "receipt-sealed",
+        "text": "s7 prep receipts sealed (window B, spend 0, no platform verbs): w7 chain dry run at humgeo-rebuild f34c605c over ap-one 098f5689 on a local serve; preflight FAILS while release_ready=false (course absent from readiness-filtered chooser), stages without preflight 4 PASS/3 FAIL/3 CONTENT_PENDING; default w6-staging is 08-13 bytes (7 files differ from ap-one main). JAYESH-ASK.md staged (gate PASS, no prior harness ask). RELEASE-LEVER.md, XP-SPOT-CHECK-PLAN.md, S7-READINESS.md written. HONEST_STOP.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

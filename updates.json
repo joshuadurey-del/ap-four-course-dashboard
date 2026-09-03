@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T05:44Z",
+    "course": "humgeo",
+    "phase": "p7",
+    "kind": "receipt-sealed",
+    "text": "s7 prep receipts sealed (window B, spend 0, no platform verbs): w7 chain dry run at humgeo-rebuild f34c605c over ap-one 098f5689 on a local serve; preflight FAILS while release_ready=false (course absent from readiness-filtered chooser), stages without preflight 4 PASS/3 FAIL/3 CONTENT_PENDING; default w6-staging is 08-13 bytes (7 files differ from ap-one main). JAYESH-ASK.md staged (gate PASS, no prior harness ask). RELEASE-LEVER.md, XP-SPOT-CHECK-PLAN.md, S7-READINESS.md written. HONEST_STOP.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T05:35Z",
     "course": "humgeo",
     "phase": "",
