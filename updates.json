@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T17:36Z",
+    "course": "humgeo",
+    "phase": "p5",
+    "kind": "state-change",
+    "text": "Owner words 2026-09-04 (relayed): v1 zero-XP plan never executes; route = v2 namespace with base XP (4216 via fleet calibration) + graded writing items (603 extended-text items need ExternalApiScore). xp_plan_guard.py refuses v1 and any ungraded/unpriced plan; provisional v2 operator plan 13e00aa3 cut for window C's XP proofs; final cut waits on the writing emitter.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T17:33Z",
     "course": "humgeo",
     "text": "humgeo-rebuild pull request #75 pullrequestreview-created at fb7cb24d.",
