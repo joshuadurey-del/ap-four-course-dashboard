@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:50Z",
+  "snapshot": "2026-09-03T18:58Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:50Z",
+        "ts": "2026-09-03T18:58Z",
         "phase": "",
-        "kind": "receipt-sealed",
-        "text": "Lane T2 receipt (out/humgeo-tye-20260904/TYE-PRACTICE-RECEIPT.md, ap-one commit 12c89827 on humgeo/native-tye-practice-20260904): all 34 Train Your Eye items as required host-lesson practice (12 quizzes, per-choice modal feedback, lessonType quiz, XP 34, uniquely-longest 0); DEVIATION-NOTE.md records that the canon 1.5 Know A/Know B pair shape has no source content (P1-07 / RLS-06 / P9-09 documented deviation; AS-02 met).",
+        "kind": "merged",
+        "text": "InceptTrilogy/ap-one PR #983 merged 3989265c (2026-09-03T18:57:16Z) by window C on the orchestrator's assignment under Josh's standing merge authority: HumGeo option-text overlay collapses one level of double escape in choice text (audit P3-07); 4 files (module + 3 tests), author incept-28 (Gemini APPROVE, pr-review PASS). merge-gate PASS r6ed866cb (suite 9962 passed reused byte-identical, CI 4 green). Deploy run 33793564848 watched; /version readback follows.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T18:46Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1926 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33790863932",
+        "ts": "2026-09-03T18:58Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #983 pullrequestreview-created at 476bd037.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/983#pullrequestreview-5105692696",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
