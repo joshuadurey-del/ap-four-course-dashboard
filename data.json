@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T14:05Z",
+  "snapshot": "2026-09-03T14:15Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T14:05Z",
+        "ts": "2026-09-03T14:15Z",
         "phase": "",
         "kind": "milestone",
-        "text": "s4 Phase 2 dispatch complete: 70 generate jobs (count 4, one per topic), 68 completed / 2 factory-terminal (3.4, 9.5: 'no items passed QC after 5 attempts', same two topics as both tier runs); 272 items banked, all qc passed at birth, 0 duplicate stems, 0 B3 overlap, 53 topics one document / 15 topics two; 26 items carry a uniquely-longest key (answer-shape repair + re-judge next). Pilot: zero parked after 2 fresh-identity replacements. Receipts out/apwh-s4-20260903/phase2/",
+        "text": "s4 Phase 2 DONE: 272/272 primary-text items hold /v1/qc passed:true on current bytes (26 answer-shape repairs re-judged; 1 regenerate); 68/70 topics, 3.4 + 9.5 factory-terminal (authored lane in Phase 3). generate_jobs 74/120, judge_calls 70/1700, sol_drafts 16/1000 ($0.96 est), image_renders 7/200. Receipt out/apwh-s4-20260903/phase2/PHASE-2-RECEIPT.md",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

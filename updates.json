@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T14:15Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s4 Phase 2 DONE: 272/272 primary-text items hold /v1/qc passed:true on current bytes (26 answer-shape repairs re-judged; 1 regenerate); 68/70 topics, 3.4 + 9.5 factory-terminal (authored lane in Phase 3). generate_jobs 74/120, judge_calls 70/1700, sol_drafts 16/1000 ($0.96 est), image_renders 7/200. Receipt out/apwh-s4-20260903/phase2/PHASE-2-RECEIPT.md",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T14:06Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #299 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33763065677",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T14:05Z",
     "course": "apwh",
     "phase": "",
@@ -917,6 +933,14 @@
     "text": "humgeo-rebuild pull request #74 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/74",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:18Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
     "writer": "repository-event automation"
   },
   {
