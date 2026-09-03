@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:09Z",
+  "snapshot": "2026-09-03T18:14Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:09Z",
+        "ts": "2026-09-03T18:14Z",
         "phase": "",
         "kind": "note",
-        "text": "03:1x KST 09-04: writing-emitter landing released to window C at dbf6488d after the skeptic's independent mutation re-run (39/40; the one pass-through is a review item) and four live grader checks (exemplar 1.0 / wrong 0.0 over rawXml). C: push, signed PR, three-lane review, pr-review gate, merge-gate, /100, merge, readback.",
+        "text": "03:2x KST 09-04 gap #4 (per-choice feedback, canon 3.4): intern module humgeo_native_mcq_feedback.py covers 1190/2251 gate MCQs from committed rationale text (commit 69d0741b); the engine has no HumGeo rationale generator, so the 1,059 missing get generated via the fleet writer humgeo-rebuild scripts/genfill_rationales.py tonight (owner spend authority), then coverage 2251/2251 before the final v2 cut.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

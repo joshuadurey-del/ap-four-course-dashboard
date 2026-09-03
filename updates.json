@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T18:14Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "03:2x KST 09-04 gap #4 (per-choice feedback, canon 3.4): intern module humgeo_native_mcq_feedback.py covers 1190/2251 gate MCQs from committed rationale text (commit 69d0741b); the engine has no HumGeo rationale generator, so the 1,059 missing get generated via the fleet writer humgeo-rebuild scripts/genfill_rationales.py tonight (owner spend authority), then coverage 2251/2251 before the final v2 cut.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T18:09Z",
     "course": "humgeo",
     "phase": "",
