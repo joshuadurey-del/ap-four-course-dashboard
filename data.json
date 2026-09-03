@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T04:29Z",
+  "snapshot": "2026-09-03T04:36Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -245,14 +245,14 @@
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
       "status": "OBSERVED",
-      "value": "Re-earn \u2014 content, ENRICH-FIRST. A 72-page enrichment campaign is live. The publication chain is queued to run once over final bytes; queued work is not p5 credit.",
-      "scope": "current HumGeo ASAP position and the live 72-page enrichment worklist; excludes queued publication and p5-p8 credit",
+      "value": "Re-earn \u2014 content complete; p3-p8 unearned. s3 is DONE after the landed check-stimulus top-up, served image pilot and amendment, final build, and answer-position balance. s6 is next: run the publication chain once over final bytes and pause for the owner execute word before push dark.",
+      "scope": "HumGeo s3 completion and final landed build measurements; excludes s6 execution, push dark, verify-live, and p3-p8 credit",
       "freshness_limit_hours": 24,
       "next_step": {
         "verb": "run once",
-        "tool": "existing HumGeo publication corridor",
+        "tool": "s6 HumGeo publication corridor",
         "args": [],
-        "gate": "final enriched bytes are landed and re-earned"
+        "gate": "the final-byte drift preflight passes; pause for the owner execute word before push dark"
       },
       "evidence": [
         {
@@ -373,6 +373,43 @@
           "observed_at": "2026-09-01T04:47Z",
           "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
           "position": "content"
+        },
+        {
+          "type": "phase-2-topup-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/73",
+          "state": "merged",
+          "merge_commit": "55b720cccdd858215e658e0b30885a6ab3b74bfd",
+          "phase_2_landed": "121/126",
+          "phase_2b_images": "36/36"
+        },
+        {
+          "type": "served-pilot-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/74",
+          "state": "merged",
+          "merge_commit": "f34c605cb5a0ce120c54b4bc33b4d2252056b2aa"
+        },
+        {
+          "type": "answer-position-balance-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/974",
+          "state": "merged",
+          "merge_commit": "098f56896caf06f9e788d34a5eaba46dd32deb20"
+        },
+        {
+          "type": "final-build-receipt",
+          "observed_at": "2026-09-03T04:23Z",
+          "location": "INCEPT/out/humgeo-topup-phase2-20260902/CAMPAIGN-RECEIPT.md",
+          "sha256": "a92f28af2a058ebca61b72125464ca5589763325d027a90c8ce05c513d9c378c",
+          "stimulus_checks": "187/440",
+          "answer_keys": "110/110/110/110",
+          "uniquely_longest_correct": 0,
+          "phase_3_6": "PASS"
+        },
+        {
+          "type": "served-image-pilot-receipt",
+          "observed_at": "2026-09-03T04:18Z",
+          "location": "INCEPT/out/humgeo-topup-phase2-20260902/render-pilot-images/RENDER-RECEIPT.md",
+          "sha256": "b7f1f501ba2e123f99ba92de059f0d1482b9015fc0433053d06b1e022e8d4364",
+          "served_widget_renders": "5/5"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
@@ -390,7 +427,7 @@
         "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/974",
         "writer": "repository-event automation"
       },
-      "observed_at": "2026-09-01T04:47Z"
+      "observed_at": "2026-09-03T04:29Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",

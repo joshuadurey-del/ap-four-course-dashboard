@@ -105,9 +105,9 @@ courses = {
     "humgeo": {
         "label": "AP Human Geography",
         "current_stage": "content",
-        "state": "RE-EARN — ENRICH-FIRST",
-        "as_of": "2026-09-01T04:47:40Z",
-        "detail": "A 72-page enrichment campaign is live. The existing publication chain is queued to run once over final bytes.",
+        "state": "RE-EARN — CONTENT DONE",
+        "as_of": "2026-09-03T04:29:00Z",
+        "detail": "s3 is DONE on landed final bytes: 187/440 checks carry stimuli, answer keys are 110 per letter, zero correct options are uniquely longest, and Phase 3.6 passes. s6 is next; p3-p8 remain unearned.",
         "priority": 1,
     },
     "apwh": {

@@ -5,18 +5,18 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
   courses: [
     {
       id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)',
-      status: 'CONTENT · ENRICH-FIRST', statusTone: 'blue', mapping: 'ASAP edition · re-earn', observed: 'Sep 1 · 04:47Z',
-      landed: 'p1-2 is done for all four courses; the 72-page enrichment campaign is live.',
-      nextStep: 'Let the enrichment session land final bytes, then run the existing publication chain once over those bytes.',
+      status: 'CONTENT DONE · p3 NEXT', statusTone: 'blue', mapping: 'ASAP edition · re-earn', observed: 'Sep 3 · 04:29Z',
+      landed: 's3 is DONE on landed final bytes after rebuild PRs #73/#74 and ap-one PR #974.',
+      nextStep: 'Run s6 once over final bytes; pause for the owner execute word before push dark.',
       footprint: [
-        { value: '72', label: 'pages in the live enrichment worklist' },
-        { value: '1', label: 'publication-chain pass after final bytes' },
-        { value: '1', label: 'cross-course priority' }
+        { value: '187 / 440', label: 'checks carrying a stimulus' },
+        { value: '5 / 5', label: 'pilot images rendered in the served widget' },
+        { value: '110 × 4', label: 'final answer-key census' }
       ],
-      etaDays: 'CONTENT · RE-EARN',
-      etaNote: 'The dashboard records the live enrichment position. The queued publication chain is not landed state.',
+      etaDays: 'CONTENT · DONE',
+      etaNote: 'p3-p8 remain unearned. s6 is the next governed move, not landed state.',
       phaseStates: [
-        { code: 'CONTENT', name: 'Enrich first', state: 'active', status: 'RE-EARN', detail: 'The 72-page enrichment campaign is live; later ASAP phases are not credited here.' }
+        { code: 'CONTENT', name: 'Final bytes landed', state: 'done', status: 'DONE', detail: 'Phase 3.6 passes on the landed 187/440 final build; later ASAP phases are not credited here.' }
       ]
     },
     {
@@ -65,9 +65,9 @@ const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
   evidenceMaps: {
     humgeo: {
       title: 'ASAP position',
-      note: 'Re-earned from the 2026-09-01 course plan: content, ENRICH-FIRST.',
+      note: 's3 is DONE on landed final bytes; p3-p8 remain unearned.',
       rows: [
-        { code: 'CONTENT', name: 'Content · enrich first', label: 'Re-earn', state: 'active', status: 'LIVE', signal: '72-page enrichment campaign', copy: 'The publication chain is queued for one pass over final bytes; queued work is not phase credit.', href: 'process.json' }
+        { code: 'CONTENT', name: 'Content · s3', label: 'Re-earn', state: 'done', status: 'DONE', signal: '187/440 stimuli · 110 keys per letter', copy: 'The final build passes Phase 3.6. s6 is next; it pauses for the owner execute word before push dark.', href: 'process.json' }
       ]
     },
     apwh: {
