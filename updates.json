@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T05:27Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "hold",
+    "text": "s3b Stage C extension (judge the 279 code-clean strict-route members) window 3: free prep done at main (bpb 1f0fac27, ap-one 098f5689): 422 strict members, 0 content-flagged, 143 judged, 279 unjudged; tagger-jobs.json 837 rows staged; queue measured clear 14:20 KST. HOLD at the spend word: no typed owner word for this envelope; zero paid calls. ENVELOPE.md in window3/.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T04:57Z",
     "course": "cross",
     "phase": "",

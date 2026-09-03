@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T04:37Z",
+  "snapshot": "2026-09-03T05:27Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T04:09Z",
+        "ts": "2026-09-03T05:27Z",
         "phase": "",
-        "kind": "landed",
-        "text": "s3b LANDED + READ BACK: ap-one Deploy run 33713304614 success on 2b17b98e; whats_deployed.py shows staging serving 2b17b98e (0 behind/0 ahead of main); served demo_gate_snapshot + mcq_rationales blobs at main equal the certified candidate; manifest unchanged (46542230). 143/143 repaired strict-route gate members now served with /v1/qc passed verdicts. Receipt: out/apwh-gate-repair-20260902/window2/LANDING-READBACK.md",
+        "kind": "hold",
+        "text": "s3b Stage C extension (judge the 279 code-clean strict-route members) window 3: free prep done at main (bpb 1f0fac27, ap-one 098f5689): 422 strict members, 0 content-flagged, 143 judged, 279 unjudged; tagger-jobs.json 837 rows staged; queue measured clear 14:20 KST. HOLD at the spend word: no typed owner word for this envelope; zero paid calls. ENVELOPE.md in window3/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
