@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T04:57Z",
+    "course": "cross",
+    "phase": "",
+    "kind": "landed",
+    "text": "tools/merge-gate.py re-landed 2026-09-03 sha256 abaebf7a1762: the tree-identical suite receipt now tolerates pytest's own .pytest_cache/__pycache__ byproducts (four of five course repos do not gitignore them; the landing smoke showed no receipt was ever written without this). 107 tests pass in place; end-to-end demo shows the second run's test-suite row 'reused'. Rollback copy unchanged (f470e8cd).",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T04:51Z",
     "course": "cross",
     "phase": "",
@@ -414,6 +422,14 @@
     "kind": "milestone",
     "text": "s3b Stages C-D COMPLETE: 143/143 repaired strict-route gate members hold /v1/qc passed:true (113 first call, 30 via 1-4 repair rounds). Seating 1988/1988 unchanged, manifest byte-identical; bank 20 entries changed; verify_rebuild PASS, bff 186, suite 379, oracle unchanged. Pushed: bpb apwh-seat/gate-repair-20260902 @8da39fb, ap-one apwh-seat/gate-repair-serve-20260902 @3f2a1c5f. PRs unopened: PR gate needs owner text typed within 2h. Report: out/apwh-gate-repair-20260902/window2/",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T17:33Z",
+    "course": "apwh",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-02T12:36Z",
