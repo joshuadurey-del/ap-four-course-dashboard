@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T12:11Z",
+    "course": "humgeo",
+    "phase": "9",
+    "kind": "milestone",
+    "text": "B3 p7 walk + XP instrument staged at its end state: branch humgeo/learner-acceptance-20260903 head c21d3d62 (12 commits above the #976 head e5bbfa9d), 43 tests in the file / 122 with operator + AP Lit, harness 11/11, eleven review rounds folded (40 accepted findings, 1 rejected on precedent bytes), closed under the orchestrator's round-11 cap. PR post HOLD(owner word typed in window B: Post the learner-acceptance PR.); COMMENT-874 after the PR number exists. Zero paid calls.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T12:10Z",
     "course": "humgeo",
     "phase": "p7",
