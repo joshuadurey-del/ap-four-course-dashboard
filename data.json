@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T08:33Z",
+  "snapshot": "2026-09-03T08:39Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T08:33Z",
-        "phase": "s3b",
+        "ts": "2026-09-03T08:39Z",
+        "phase": "",
         "kind": "milestone",
-        "text": "Stage C (window C, incept-3b) 2026-09-03: 279 of 279 code-clean strict-route gate members hold /v1/qc passed:true (window3/qc-jobs/*-result.json; superseded fails under qc-jobs/round1..2/), zero parked; 3 repair batches committed on wt-bpb-gaterepair-w3, rebuild byte-check PASS each (final-rebuild-check.txt 1988/1988, manifest identical). Serve-side staging + Phase 3.4 report + PR texts in progress; push/PR HOLD(owner word typed in window C). Report received 08:33Z.",
+        "text": "s3b Stage C extension judging DONE: 279/279 code-clean strict-route members passed hosted /v1/qc at 44599f7b (422/422 with #71/#975). 50 repaired locally (Sol-5.6 drafts, seat-applied; 16 fresh stems), zero parked. Rebuild 1988/1988 seats, manifest byte-identical; bank rebuilt; suites green both sides; oracle 0 rows moved. Staged: bpb apwh-seat/gate-repair-w3-20260903, ap-one apwh-seat/gate-repair-w3-serve-20260903. Push/PR wait Josh's word.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-03T08:03Z",
+        "ts": "2026-09-03T08:35Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #82 opened at 9511bd2f.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82",
+        "text": "ap-psychology-fall-2025-v1 pull request #82 pullrequestreview-created at 3b5a4b5c.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82#pullrequestreview-5099647477",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"

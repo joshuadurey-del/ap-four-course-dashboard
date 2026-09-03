@@ -1,5 +1,37 @@
 [
   {
+    "ts": "2026-09-03T08:39Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s3b Stage C extension judging DONE: 279/279 code-clean strict-route members passed hosted /v1/qc at 44599f7b (422/422 with #71/#975). 50 repaired locally (Sol-5.6 drafts, seat-applied; 16 fresh stems), zero parked. Rebuild 1988/1988 seats, manifest byte-identical; bank rebuilt; suites green both sides; oracle 0 rows moved. Staged: bpb apwh-seat/gate-repair-w3-20260903, ap-one apwh-seat/gate-repair-w3-serve-20260903. Push/PR wait Josh's word.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T08:35Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #82 pullrequestreview-created at 3b5a4b5c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82#pullrequestreview-5099647477",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T08:34Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #82 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T08:34Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 issue #82 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82#issuecomment-5522947502",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T08:33Z",
     "course": "apwh",
     "phase": "s3b",
@@ -45,6 +77,14 @@
     "text": "ap-one workflow run #796 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33731228720",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T08:03Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #82 opened at 3b5a4b5c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/82",
     "writer": "repository-event automation"
   },
   {
