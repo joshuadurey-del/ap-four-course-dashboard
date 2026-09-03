@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T18:50Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "Lane T2 receipt (out/humgeo-tye-20260904/TYE-PRACTICE-RECEIPT.md, ap-one commit 12c89827 on humgeo/native-tye-practice-20260904): all 34 Train Your Eye items as required host-lesson practice (12 quizzes, per-choice modal feedback, lessonType quiz, XP 34, uniquely-longest 0); DEVIATION-NOTE.md records that the canon 1.5 Know A/Know B pair shape has no source content (P1-07 / RLS-06 / P9-09 documented deviation; AS-02 met).",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T18:46Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1926 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33790863932",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T18:41Z",
     "course": "humgeo",
     "phase": "",
