@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T03:58Z",
+    "course": "apwh",
+    "text": "ap-one pull request #975 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/975",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T03:25Z",
     "course": "humgeo",
     "phase": "",
@@ -733,6 +741,14 @@
     "text": "ap-psychology-fall-2025-v1 pull request #73 opened at bfe24ce9.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/73",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T08:34Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit bfe24ce9.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/bfe24ce9654802c16f8aa877ce806cef29906779",
     "writer": "repository-event automation"
   },
   {

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T03:25Z",
+  "snapshot": "2026-09-03T03:58Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -702,10 +702,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T03:20Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1913 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33710143273",
+        "ts": "2026-09-03T03:58Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #975 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/975",
         "writer": "repository-event automation"
       },
       "evidence": [

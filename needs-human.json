@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-02T17:36:02Z",
+ "generated_ts": "2026-09-03T03:58:36Z",
  "open": [
   {
    "course": "apush",
@@ -24,6 +24,14 @@
    "kind": "approval",
    "title": "Type one fresh line approving the two APWH gate-repair PRs (build-side + serve-side) so the PR gate can open them",
    "ts": "2026-09-02T17:36:02Z"
+  },
+  {
+   "course": "cross",
+   "deadline": "",
+   "id": "d1ce41c9f009e432",
+   "kind": "approval",
+   "title": "Approve repo-sync discovery work order (fetch every clone under ~/repos; discovered = fetch-only) so the daemon change can be built",
+   "ts": "2026-09-03T03:58:36Z"
   }
  ],
  "schema": "needs-human-public/v1"
