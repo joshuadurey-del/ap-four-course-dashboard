@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:20Z",
+  "snapshot": "2026-09-03T18:24Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:20Z",
+        "ts": "2026-09-03T18:24Z",
         "phase": "",
         "kind": "receipt-sealed",
-        "text": "Lane P receipt (out/humgeo-pp100-unit-20260904/PP100-UNIT-RECEIPT.md, ap-one commit 46eea359 on humgeo/native-pp100-unit-20260904): 7 PP100 banks (1,715 items, powerpath-100, 10 XP each) + 7 unit tests (unit-test, 9 XP each) as native plan operations; no fleet-owned refusal on the execute path. Gaps to lanes: 1,785 PP100 rationales (generation), 113 uniquely-longest keys (lane Q repair via /v1/qc).",
+        "text": "Lane W receipt (out/humgeo-writing-tasks-20260904/WRITING-TASKS-RECEIPT.md, ap-one commit 878061bd on humgeo/native-writing-tasks-20260904): 120 writing tasks as graded native QTI items + tests + components/resources/links (factory rubric dialect, HumGeo grader, lessonType quiz, XP 2,891 from duration_minutes); live grader 3 items 7/7 strong / 0/7 wrong. 5 tasks with source qc.passed false routed for repair or exclusion.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

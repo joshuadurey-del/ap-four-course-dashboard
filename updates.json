@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T18:24Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "Lane W receipt (out/humgeo-writing-tasks-20260904/WRITING-TASKS-RECEIPT.md, ap-one commit 878061bd on humgeo/native-writing-tasks-20260904): 120 writing tasks as graded native QTI items + tests + components/resources/links (factory rubric dialect, HumGeo grader, lessonType quiz, XP 2,891 from duration_minutes); live grader 3 items 7/7 strong / 0/7 wrong. 5 tasks with source qc.passed false routed for repair or exclusion.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T18:20Z",
     "course": "humgeo",
     "phase": "",
