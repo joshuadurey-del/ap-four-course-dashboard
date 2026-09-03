@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T11:42Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s4 Phase 0 measured: bank 1,988 / 952 stimulus (all text) / 1,036 none; CED rule = sets of 3-4 with primary+secondary texts, images, charts, maps, >=1 paired-text set; SAQ 1 secondary text / 2 primary text / 3 non-text; HumGeo pool-free (s6 capture only). HOLD(envelope): share + envelope word not yet typed. Receipts: out/apwh-s4-20260903/phase0/EXAM-KIND-CENSUS.md, bank-census.json, SAQ-PATTERN.md, QUEUE-CHECK.md",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T11:32Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #85 pullrequestreview-created at 5e3b1d16.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85#pullrequestreview-5101333107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:31Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #85 opened at 5e3b1d16.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T11:01Z",
     "course": "humgeo",
     "phase": "p7",
