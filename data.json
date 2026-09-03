@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T22:42Z",
+  "snapshot": "2026-09-03T23:10Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T19:06Z",
+        "ts": "2026-09-03T23:10Z",
         "phase": "",
-        "kind": "receipt-sealed",
-        "text": "Lane Q receipt (out/humgeo-pp100-unit-20260904/ANSWER-SHAPE-REPAIR-RECEIPT.md, ap-one commit c7a08e20 on humgeo/native-pp100-unit-20260904): 109 PP100 distractor repairs -> uniquely-longest correct 0/1,715 by visible characters; unit tests reference bank items by id (70 duplicate objects removed; fleet citation aplit_native_timeback_course.py l.1168-1176); validator ownership rules; battery clean; /v1/qc judge runs after the PP100 rationales land (D1 requires distractor_rationales).",
+        "kind": "merged",
+        "text": "ap-one PR #989 merged 2026-09-03T23:08:35Z as 9db93b7db703304a723f06fa5848c0297a8a7bdf (head 267702cd on b620c5a1): course-owned graded writing-item emitter humgeo_native_writing_items.py + tests (runbook 3.5). Codex APPROVE, skeptic PROBES-7 CLEAR, certifier 27/27 (suite 10,285 passed, receipt r6ed866cb, HUMGEO_SEALED_INPUTS=1). Receipts: out/humgeo-s7-prep-20260903/canon-proofs-v2/landing-writing-emitter/. Deploy run 33816286665 queued at merge.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T22:40Z",
-        "event_type": "issues",
-        "text": "ap-one issue #988 comment-created.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5533055815",
+        "ts": "2026-09-03T23:09Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #989 pullrequestreview-created at 267702cd.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/989#pullrequestreview-5107647149",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
@@ -739,10 +739,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T22:42Z",
-        "event_type": "pull_request",
-        "text": "apwh-blueprint-build pull request #74 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/74",
+        "ts": "2026-09-03T22:52Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1943 completed: failure.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33813954191",
         "writer": "repository-event automation"
       },
       "evidence": [

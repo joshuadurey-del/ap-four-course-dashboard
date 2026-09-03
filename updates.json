@@ -1,5 +1,165 @@
 [
   {
+    "ts": "2026-09-03T23:10Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "merged",
+    "text": "ap-one PR #989 merged 2026-09-03T23:08:35Z as 9db93b7db703304a723f06fa5848c0297a8a7bdf (head 267702cd on b620c5a1): course-owned graded writing-item emitter humgeo_native_writing_items.py + tests (runbook 3.5). Codex APPROVE, skeptic PROBES-7 CLEAR, certifier 27/27 (suite 10,285 passed, receipt r6ed866cb, HUMGEO_SEALED_INPUTS=1). Receipts: out/humgeo-s7-prep-20260903/canon-proofs-v2/landing-writing-emitter/. Deploy run 33816286665 queued at merge.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T23:09Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #989 pullrequestreview-created at 267702cd.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/989#pullrequestreview-5107647149",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:09Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:08Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #989 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/989",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:07Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:03Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:03Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:01Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5533229883",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:01Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:00Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:00Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5533219756",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:57Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:55Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1945 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33814258401",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:55Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:55Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:53Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1944 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33813984208",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:52Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #1943 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33813954191",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:44Z",
+    "course": "cross",
+    "text": "ap-one pull request #991 pullrequestreview-updated at 1becbd98.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#pullrequestreview-5107442915",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:44Z",
+    "course": "cross",
+    "text": "ap-one pull request #991 pullrequestreview-created at 1becbd98.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#pullrequestreview-5107511611",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:43Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #74 pullrequestreview-created at 75c90839.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/74#pullrequestreview-5107502885",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T22:42Z",
     "course": "apwh",
     "text": "apwh-blueprint-build pull request #74 merged at no-sha.",
@@ -98,6 +258,14 @@
   {
     "ts": "2026-09-03T22:32Z",
     "course": "cross",
+    "text": "ap-one pull request #991 pullrequestreview-created at 1becbd98.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#pullrequestreview-5107442915",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:32Z",
+    "course": "cross",
     "text": "ap-one pull request #991 pullrequestreview-created at 6a34fef8.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#pullrequestreview-5107442915",
@@ -117,6 +285,22 @@
     "text": "ap-one pull request #991 pullrequestreview-created at 137f2d19.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#pullrequestreview-5107442915",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:31Z",
+    "course": "cross",
+    "text": "ap-one pull request #991 pullrequestreview-created at 1becbd98.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#pullrequestreview-5107440877",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:31Z",
+    "course": "cross",
+    "text": "ap-one pull request #991 pullrequestreviewcomment-created at 1becbd98.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991#discussion_r3929269549",
     "writer": "repository-event automation"
   },
   {
@@ -181,6 +365,14 @@
     "text": "ap-one issue #988 labeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:26Z",
+    "course": "cross",
+    "text": "ap-one pull request #991 opened at 1becbd98.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991",
     "writer": "repository-event automation"
   },
   {
@@ -2046,6 +2238,14 @@
     "kind": "state-change",
     "text": "s4 envelope typed by owner (window D, verbatim in out/apwh-s4-20260903/OWNER-WORD-20260903.md line 6): 120 generate jobs, 1,700 judge calls, 1,000 Sol drafts under $120, 200 image renders. Run it. Share decided by seat: 100% stimulus, practice cap 2/stimulus. Next: /100 on ENVELOPE.md then Phase 1 pilot.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T11:50Z",
+    "course": "cross",
+    "text": "incept-test-builder repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-03T11:50Z",
