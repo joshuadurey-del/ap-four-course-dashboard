@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T05:44Z",
+  "snapshot": "2026-09-03T06:35Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T05:44Z",
-        "phase": "p7",
-        "kind": "receipt-sealed",
-        "text": "s7 prep receipts sealed (window B, spend 0, no platform verbs): w7 chain dry run at humgeo-rebuild f34c605c over ap-one 098f5689 on a local serve; preflight FAILS while release_ready=false (course absent from readiness-filtered chooser), stages without preflight 4 PASS/3 FAIL/3 CONTENT_PENDING; default w6-staging is 08-13 bytes (7 files differ from ap-one main). JAYESH-ASK.md staged (gate PASS, no prior harness ask). RELEASE-LEVER.md, XP-SPOT-CHECK-PLAN.md, S7-READINESS.md written. HONEST_STOP.",
+        "ts": "2026-09-03T06:35Z",
+        "phase": "",
+        "kind": "note",
+        "text": "Josh sent Jayesh the one-line course-QC harness question (2026-09-03, per Josh in the orchestrator window; exact wording as sent not captured here). Answer lands in out/humgeo-s7-prep-20260903/HARNESS-ANSWER.md; then RUNBOOK-ASAP.md p6 entry_point moves from UNMEASURED to the quoted invocation.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

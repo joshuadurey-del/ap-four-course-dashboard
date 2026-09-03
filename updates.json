@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T06:35Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "Josh sent Jayesh the one-line course-QC harness question (2026-09-03, per Josh in the orchestrator window; exact wording as sent not captured here). Answer lands in out/humgeo-s7-prep-20260903/HARNESS-ANSWER.md; then RUNBOOK-ASAP.md p6 entry_point moves from UNMEASURED to the quoted invocation.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T06:23Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #119 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33722870629",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T05:44Z",
     "course": "humgeo",
     "phase": "p7",
