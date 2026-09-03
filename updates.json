@@ -1,5 +1,109 @@
 [
   {
+    "ts": "2026-09-03T13:51Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #633 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33763065715",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:46Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:45Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 pullrequestreview-updated at 57522258.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293#pullrequestreview-5102567507",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:45Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 pullrequestreview-created at 57522258.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293#pullrequestreview-5102705989",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:45Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #632 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33762449870",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:45Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #631 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33762418614",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:44Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 pullrequestreview-created at 57522258.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293#pullrequestreview-5102684865",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:40Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #292 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/292",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:34Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 pullrequestreview-created at 57522258.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293#pullrequestreview-5102567507",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:30Z",
+    "course": "cross",
+    "text": "incept-test-builder workflow run #630 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/actions/runs/33761064309",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:29Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #292 pullrequestreview-created at cf5def39.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/292#pullrequestreview-5102519667",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:27Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #293 opened at 57522258.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/293",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:25Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #292 opened at cf5def39.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/292",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T13:12Z",
     "course": "apwh",
     "phase": "",
@@ -805,6 +909,14 @@
     "text": "ap-one workflow run #1914 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33713470295",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:09Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 0a2a2d2d.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/0a2a2d2d6eb641ea2b7b2a5e14d09e59cffc4212",
     "writer": "repository-event automation"
   },
   {
@@ -1901,6 +2013,14 @@
     "text": "ap-one repository activity: create.",
     "event_type": "repository",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:20Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
     "writer": "repository-event automation"
   },
   {
