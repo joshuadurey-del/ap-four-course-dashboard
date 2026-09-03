@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T17:38Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "Canon proofs on the PROVISIONAL v2 plan 13e00aa3 (window C, factory instruments): P1-10, P2-02, P4-01, P4-02, P4-03 PASS; P2-01 FAIL (video/article links lack lessonType/xp vs canon 2.1) -> ruled: parity on every link before the final cut; P5-01 refused at load (publisher digest still v1), re-runs after re-pin. Receipts out/humgeo-s7-prep-20260903/canon-proofs-v2/v2-provisional/.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T17:36Z",
     "course": "humgeo",
     "phase": "p5",

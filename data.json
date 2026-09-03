@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T17:36Z",
+  "snapshot": "2026-09-03T17:38Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T17:36Z",
-        "phase": "p5",
-        "kind": "state-change",
-        "text": "Owner words 2026-09-04 (relayed): v1 zero-XP plan never executes; route = v2 namespace with base XP (4216 via fleet calibration) + graded writing items (603 extended-text items need ExternalApiScore). xp_plan_guard.py refuses v1 and any ungraded/unpriced plan; provisional v2 operator plan 13e00aa3 cut for window C's XP proofs; final cut waits on the writing emitter.",
+        "ts": "2026-09-03T17:38Z",
+        "phase": "",
+        "kind": "receipt-sealed",
+        "text": "Canon proofs on the PROVISIONAL v2 plan 13e00aa3 (window C, factory instruments): P1-10, P2-02, P4-01, P4-02, P4-03 PASS; P2-01 FAIL (video/article links lack lessonType/xp vs canon 2.1) -> ruled: parity on every link before the final cut; P5-01 refused at load (publisher digest still v1), re-runs after re-pin. Receipts out/humgeo-s7-prep-20260903/canon-proofs-v2/v2-provisional/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
