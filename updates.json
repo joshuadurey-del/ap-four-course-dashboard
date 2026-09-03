@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T17:33Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "s6 v2 progress 02:3x KST 09-04: humgeo-rebuild PR #75 (fb7cb24d) pushed by A2 = the three top-up manifests re-pinned to namespace v2 with every judge verdict kept; C landing it via merge-gate. Provisional v2 operator plan 13e00aa3 (1393 resources int xp, links {lessonType,xp}, summary 4216/1393/0) handed to C for canon proofs; not executable until the 603 extended-text items carry the graded shape (lane E emitter, lane G grader contract). Owner hard bars: XP fixed; writing scored.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T17:30Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #75 opened at fb7cb24d.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T17:16Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #88 merged at no-sha.",

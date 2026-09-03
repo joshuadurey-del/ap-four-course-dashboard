@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T17:16Z",
+  "snapshot": "2026-09-03T17:33Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T17:08Z",
+        "ts": "2026-09-03T17:33Z",
         "phase": "",
-        "kind": "merged",
-        "text": "ap-one #982 MERGED f87ddc2a (B3 learner-acceptance instrument; replaces #980 auto-closed at branch delete); #976 MERGED 030cc066 (enrollment operator), deploy run 33779583926 success, staging /version 030cc066.",
+        "kind": "note",
+        "text": "s6 v2 progress 02:3x KST 09-04: humgeo-rebuild PR #75 (fb7cb24d) pushed by A2 = the three top-up manifests re-pinned to namespace v2 with every judge verdict kept; C landing it via merge-gate. Provisional v2 operator plan 13e00aa3 (1393 resources int xp, links {lessonType,xp}, summary 4216/1393/0) handed to C for canon proofs; not executable until the 603 extended-text items carry the graded shape (lane E emitter, lane G grader contract). Owner hard bars: XP fixed; writing scored.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T17:13Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #800 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33782246731",
+        "ts": "2026-09-03T17:30Z",
+        "event_type": "pull_request",
+        "text": "humgeo-rebuild pull request #75 opened at fb7cb24d.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
