@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T22:13Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #987 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/987",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T22:08Z",
     "course": "cross",
     "text": "ap-one issue #990 comment-created.",
