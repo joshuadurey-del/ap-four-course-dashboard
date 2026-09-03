@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T21:06Z",
+    "course": "apwh",
+    "text": "ap-one pull request #986 pullrequestreview-created at 477ff833.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/986#pullrequestreview-5106832515",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T21:05Z",
+    "course": "apwh",
+    "text": "ap-one pull request #986 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/986",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T21:04Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #987 pullrequestreview-created at 4ffaae56.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/987#pullrequestreview-5106811406",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T21:03Z",
     "course": "humgeo",
     "text": "ap-one pull request #987 opened at 4ffaae56.",
