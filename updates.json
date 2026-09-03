@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T11:51Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "state-change",
+    "text": "s4 envelope typed by owner (window D, verbatim in out/apwh-s4-20260903/OWNER-WORD-20260903.md line 6): 120 generate jobs, 1,700 judge calls, 1,000 Sol drafts under $120, 200 image renders. Run it. Share decided by seat: 100% stimulus, practice cap 2/stimulus. Next: /100 on ENVELOPE.md then Phase 1 pilot.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T11:50Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 issue #85 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85#issuecomment-5525283048",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:50Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 opened at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T11:42Z",
     "course": "apwh",
     "phase": "",
@@ -10,9 +34,25 @@
   {
     "ts": "2026-09-03T11:32Z",
     "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #85 pullrequestreview-created at db58b3fa.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85#pullrequestreview-5101333107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:32Z",
+    "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #85 pullrequestreview-created at 5e3b1d16.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85#pullrequestreview-5101333107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:31Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #85 opened at db58b3fa.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/85",
     "writer": "repository-event automation"
   },
   {
