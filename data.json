@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T03:07Z",
+  "snapshot": "2026-09-03T03:22Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-02T10:39Z",
+        "ts": "2026-09-03T03:22Z",
         "phase": "",
         "kind": "merged",
-        "text": "ap-one PR #969 merged b2f2a67f (2026-09-02T10:01:54Z): authored-accepted store in humgeo_native_timeback_assets.load_check_bank + --authored-accepted flag (s3d). Flash APPROVE, 1 P3 fixed; module 85 passed; tests/ingest 5,091 passed; merge-gate PASS r6ed866cb; Deploy 33617318233 success (staging, IMAGE_TAG=b2f2a67f). Receipts INCEPT/out/humgeo-s3d-20260902/.",
+        "text": "ilmych/humgeo-rebuild PR #73 merged 55b720cc (2026-09-03T03:08:59Z): check-stimulus top-up phase 2 (121 rows landed of 126 accepted) + phase 2b images (36 rows, factory renderers + factory vision QC) + phase 1 v2 (18 rows rewritten); checker generalized to any phase. Flash review no findings; validator PASS x3; merge-gate PASS rfc38e3e5 (21 prescreen-suite refusals pre-exist on main). Receipts INCEPT/out/humgeo-topup-phase2-20260902/landing/.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T02:58Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1911 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33708718867",
+        "ts": "2026-09-03T03:08Z",
+        "event_type": "pull_request",
+        "text": "humgeo-rebuild pull request #73 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/73",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -702,10 +702,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T03:02Z",
-        "event_type": "pull_request",
-        "text": "apwh-blueprint-build pull request #71 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/71",
+        "ts": "2026-09-03T03:20Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1913 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33710143273",
         "writer": "repository-event automation"
       },
       "evidence": [
