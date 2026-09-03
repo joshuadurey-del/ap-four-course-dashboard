@@ -1,5 +1,37 @@
 [
   {
+    "ts": "2026-09-03T04:09Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "landed",
+    "text": "s3b LANDED + READ BACK: ap-one Deploy run 33713304614 success on 2b17b98e; whats_deployed.py shows staging serving 2b17b98e (0 behind/0 ahead of main); served demo_gate_snapshot + mcq_rationales blobs at main equal the certified candidate; manifest unchanged (46542230). 143/143 repaired strict-route gate members now served with /v1/qc passed verdicts. Receipt: out/apwh-gate-repair-20260902/window2/LANDING-READBACK.md",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T04:09Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #78 opened at 0a2a2d2d.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/78",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:09Z",
+    "course": "cross",
+    "text": "ap-one workflow run #416 completed: failure.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33713882179",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:07Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #793 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33713304614",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T03:58Z",
     "course": "apwh",
     "phase": "",
@@ -109,6 +141,14 @@
     "text": "apwh-blueprint-build pull request #71 opened at 8da39fb9.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/71",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T02:43Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #974 opened at 2bf850c7.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/974",
     "writer": "repository-event automation"
   },
   {

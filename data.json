@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T03:58Z",
+  "snapshot": "2026-09-03T04:09Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -695,17 +695,17 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T03:58Z",
+        "ts": "2026-09-03T04:09Z",
         "phase": "",
-        "kind": "merged",
-        "text": "s3b Stage E LANDED both sides: ap-one PR #975 merged 2026-09-03T03:58:18Z as 2b17b98e (owner line 'I Approve the two APWH gate-repair PRs.' + merge-gate PASS receipt r6ed866cb, suite 9749 passed in-gate, CI 4 green; delivery package re-pinned 4ed8dc87->1991bf9f, total_xp 6576 unchanged). bpb #71 merged earlier as 1f0fac27. Deploy run 33713304614 queued; /version readback pending. Receipts: out/apwh-gate-repair-20260902/window2/",
+        "kind": "landed",
+        "text": "s3b LANDED + READ BACK: ap-one Deploy run 33713304614 success on 2b17b98e; whats_deployed.py shows staging serving 2b17b98e (0 behind/0 ahead of main); served demo_gate_snapshot + mcq_rationales blobs at main equal the certified candidate; manifest unchanged (46542230). 143/143 repaired strict-route gate members now served with /v1/qc passed verdicts. Receipt: out/apwh-gate-repair-20260902/window2/LANDING-READBACK.md",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T03:58Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #975 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/975",
+        "ts": "2026-09-03T04:07Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #793 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33713304614",
         "writer": "repository-event automation"
       },
       "evidence": [
@@ -908,10 +908,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-02T19:01Z",
+        "ts": "2026-09-03T04:09Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #77 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/77",
+        "text": "ap-psychology-fall-2025-v1 pull request #78 opened at 0a2a2d2d.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/78",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
