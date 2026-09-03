@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T03:22Z",
+  "snapshot": "2026-09-03T03:25Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,7 +377,7 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T03:22Z",
+        "ts": "2026-09-03T03:25Z",
         "phase": "",
         "kind": "merged",
         "text": "ilmych/humgeo-rebuild PR #73 merged 55b720cc (2026-09-03T03:08:59Z): check-stimulus top-up phase 2 (121 rows landed of 126 accepted) + phase 2b images (36 rows, factory renderers + factory vision QC) + phase 1 v2 (18 rows rewritten); checker generalized to any phase. Flash review no findings; validator PASS x3; merge-gate PASS rfc38e3e5 (21 prescreen-suite refusals pre-exist on main). Receipts INCEPT/out/humgeo-topup-phase2-20260902/landing/.",
