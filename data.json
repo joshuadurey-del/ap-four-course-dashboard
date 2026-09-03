@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:06Z",
+  "snapshot": "2026-09-03T18:09Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:06Z",
+        "ts": "2026-09-03T18:09Z",
         "phase": "",
-        "kind": "receipt-sealed",
-        "text": "Writing-item emitter amended dbf6488d (ap-one branch humgeo/native-writing-items-20260904, lane E): 603/603 extended-text gate items in the factory grader rubric dialect, validator parses; live grader: 4 items exemplar 1.0 (2/2) and 3 wrong 0.0, STATUS graded (receipts out/humgeo-writing-fix-20260904/). Landing via window C after the skeptic's mutation re-run.",
+        "kind": "note",
+        "text": "03:1x KST 09-04: writing-emitter landing released to window C at dbf6488d after the skeptic's independent mutation re-run (39/40; the one pass-through is a review item) and four live grader checks (exemplar 1.0 / wrong 0.0 over rawXml). C: push, signed PR, three-lane review, pr-review gate, merge-gate, /100, merge, readback.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
