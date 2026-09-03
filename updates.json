@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T18:20Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "Lane P receipt (out/humgeo-pp100-unit-20260904/PP100-UNIT-RECEIPT.md, ap-one commit 46eea359 on humgeo/native-pp100-unit-20260904): 7 PP100 banks (1,715 items, powerpath-100, 10 XP each) + 7 unit tests (unit-test, 9 XP each) as native plan operations; no fleet-owned refusal on the execute path. Gaps to lanes: 1,785 PP100 rationales (generation), 113 uniquely-longest keys (lane Q repair via /v1/qc).",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T18:14Z",
     "course": "humgeo",
     "phase": "",
