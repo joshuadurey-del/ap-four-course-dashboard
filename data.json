@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:30Z",
+  "snapshot": "2026-09-03T18:41Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T18:24Z",
+        "ts": "2026-09-03T18:41Z",
         "phase": "",
-        "kind": "receipt-sealed",
-        "text": "Lane W receipt (out/humgeo-writing-tasks-20260904/WRITING-TASKS-RECEIPT.md, ap-one commit 878061bd on humgeo/native-writing-tasks-20260904): 120 writing tasks as graded native QTI items + tests + components/resources/links (factory rubric dialect, HumGeo grader, lessonType quiz, XP 2,891 from duration_minutes); live grader 3 items 7/7 strong / 0/7 wrong. 5 tasks with source qc.passed false routed for repair or exclusion.",
+        "kind": "note",
+        "text": "03:4x KST 09-04: writing-emitter landing released to window C at 2c3a5f32 (third amendment; codex's 8 findings folded; skeptic 53/54; live grader 7 calls incl. borderline 0.5; 74 tests). PRs in flight on ap-one: #983 option-text unescape overlay (incept-28), #984 activation operator (B). A2's dual-set provisional dry run f2c213e3 passes the extended offline gate except the &amp; item #983 fixes.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T18:30Z",
+        "ts": "2026-09-03T18:41Z",
         "event_type": "pull_request",
-        "text": "ap-one pull request #984 opened at aeb3b1b8.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/984",
+        "text": "ap-one pull request #984 pullrequestreview-created at 77cbc72f.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/984#pullrequestreview-5105538572",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
