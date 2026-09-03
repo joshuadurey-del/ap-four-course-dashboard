@@ -695,10 +695,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T03:07Z",
+        "ts": "2026-09-03T03:58Z",
         "phase": "",
         "kind": "merged",
-        "text": "s3b Stage E part 1 LANDED: ilmych/apwh-blueprint-build PR #71 merged 2026-09-03T03:02:05Z as 1f0fac27 (owner line 'I Approve the two APWH gate-repair PRs.' + merge-gate PASS receipt rd93858f4; 143 repaired strict-route members + proposed bank). Serve side ap-one PR #975 open as draft at d9c6a165; CI re-running after the delivery-package re-pin. Receipts: out/apwh-gate-repair-20260902/window2/",
+        "text": "s3b Stage E LANDED both sides: ap-one PR #975 merged 2026-09-03T03:58:18Z as 2b17b98e (owner line 'I Approve the two APWH gate-repair PRs.' + merge-gate PASS receipt r6ed866cb, suite 9749 passed in-gate, CI 4 green; delivery package re-pinned 4ed8dc87->1991bf9f, total_xp 6576 unchanged). bpb #71 merged earlier as 1f0fac27. Deploy run 33713304614 queued; /version readback pending. Receipts: out/apwh-gate-repair-20260902/window2/",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
