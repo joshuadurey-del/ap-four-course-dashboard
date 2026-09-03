@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T23:10Z",
+  "snapshot": "2026-09-03T23:20Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -739,10 +739,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T22:52Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #1943 completed: failure.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33813954191",
+        "ts": "2026-09-03T23:20Z",
+        "event_type": "pull_request",
+        "text": "apwh-blueprint-build pull request #75 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/75",
         "writer": "repository-event automation"
       },
       "evidence": [

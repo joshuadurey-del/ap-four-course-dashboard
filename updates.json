@@ -1,5 +1,45 @@
 [
   {
+    "ts": "2026-09-03T23:20Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #75 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/75",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:15Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build workflow run #63 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33816802519",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:15Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #75 opened at 1e06b0f2.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/75",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:13Z",
+    "course": "cross",
+    "text": "ap-one pull request #991 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/991",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T23:10Z",
+    "course": "cross",
+    "text": "ap-one workflow run #1946 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33815270370",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T23:10Z",
     "course": "humgeo",
     "phase": "",
@@ -202,6 +242,14 @@
   {
     "ts": "2026-09-03T22:38Z",
     "course": "humgeo",
+    "text": "ap-one pull request #993 pullrequestreview-created at c499901c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/993#pullrequestreview-5107479730",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:38Z",
+    "course": "humgeo",
     "text": "ap-one pull request #993 pullrequestreview-created at bbbb4c2f.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/993#pullrequestreview-5107479730",
@@ -221,6 +269,22 @@
     "text": "ap-one issue #988 comment-created.",
     "event_type": "issues",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5533045897",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:37Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #993 opened at c499901c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/993",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T22:37Z",
+    "course": "apwh",
+    "text": "ap-one pull request #992 opened at 67ce660d.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/992",
     "writer": "repository-event automation"
   },
   {
@@ -3790,6 +3854,14 @@
     "kind": "merged",
     "text": "PR #964 landed on InceptTrilogy/ap-one main as 84af5869 (owner action 2026-09-02T08:59:02Z; head b79c8ba5 @ a4b3aa5e verified ancestor of main): HumGeo mock exam wired \u2014 official 60-item five-option MCQ section + 2025s1 FRQs, banks.mock_exam + capability, Section I images, APWH options fix + capture remount, q24 key correction, pin re-earns. Gate PASS receipt r6ed866cb preceded it. Exact-head Deploy run 33611627163 in progress.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T09:01Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-02T09:01Z",
