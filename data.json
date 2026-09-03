@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T17:02Z",
+  "snapshot": "2026-09-03T17:08Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T16:46Z",
+        "ts": "2026-09-03T17:08Z",
         "phase": "",
-        "kind": "state-change",
-        "text": "s6 re-cut decided 01:5x KST 09-04 (orchestrator, owner standing authority): v1 plan fbf2d525 carries zero XP on 1393 resources (fleet corridor shape vs fleet contract runbook l.319; acceptance instrument reads base XP from the plan). A2 re-cuts on namespace ap-human-geography-native-202608-v2 with base XP from committed calibration (offline: gates 2652 + videos 1102 + articles 462 = 4216 >= 4102 floor); zero-write capture; gates; v1 undo later on orchestrator line only.",
+        "kind": "note",
+        "text": "Grant: Ilma authorized the six OneRoster/QTI create permissions for the client in pp-org1 (intake #107 comment 16:55:59Z); token scope claim unchanged at 16:59Z (12 scopes); receipt reply posted (issuecomment-5529208575); detector re-mints every 5 min. Execute of the v2 plan runs only when both the grant and the v2 capture are true.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {

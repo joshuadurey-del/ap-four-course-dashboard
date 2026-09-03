@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T17:08Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "note",
+    "text": "Grant: Ilma authorized the six OneRoster/QTI create permissions for the client in pp-org1 (intake #107 comment 16:55:59Z); token scope claim unchanged at 16:59Z (12 scopes); receipt reply posted (issuecomment-5529208575); detector re-mints every 5 min. Execute of the v2 plan runs only when both the grant and the v2 capture are true.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T17:02Z",
     "course": "humgeo",
     "text": "ap-one issue #867 closed.",
