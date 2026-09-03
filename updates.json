@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T10:37Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "merged",
+    "text": "InceptTrilogy/ap-one PR #979 merged f0f061e2 (2026-09-03T10:36:23Z) on Josh's typed line 'Push, PR, and merge through the gates': serve copy of the 50 repaired strict-route gate members (all 422 judged 422/422 by /v1/qc), bank 2,011 (45 entries changed), delivery package re-pinned 1991bf9f->34c6da2d. merge-gate PASS r6ed866cb (suite 9805/325 in-gate, CI 4 green, repo-check apwh-phase02-capture-pins exit 0); Deploy run 33745212283 queued; /version readback follows.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T10:36Z",
+    "course": "apwh",
+    "text": "ap-one pull request #979 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/979",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T10:35Z",
     "course": "humgeo",
     "phase": "p5",
