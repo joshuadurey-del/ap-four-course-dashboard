@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-03T03:58:36Z",
+ "generated_ts": "2026-09-03T03:58:54Z",
  "open": [
   {
    "course": "apush",
@@ -16,14 +16,6 @@
    "kind": "credential",
    "title": "GEMINI_API_KEY (or OPENAI_API_KEY) for the engine's nano_banana map/diagram renderer \u2014 ~/.secrets, never chat",
    "ts": "2026-09-02T11:50:34Z"
-  },
-  {
-   "course": "apwh",
-   "deadline": "",
-   "id": "98efde7a571a89fa",
-   "kind": "approval",
-   "title": "Type one fresh line approving the two APWH gate-repair PRs (build-side + serve-side) so the PR gate can open them",
-   "ts": "2026-09-02T17:36:02Z"
   },
   {
    "course": "cross",
