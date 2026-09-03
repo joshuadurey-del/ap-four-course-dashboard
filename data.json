@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T08:20Z",
+  "snapshot": "2026-09-03T08:33Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T08:20Z",
-        "event_type": "issues",
-        "text": "ap-one issue #873 comment-created.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/873#issuecomment-5522769942",
+        "ts": "2026-09-03T08:32Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1918 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33732518166",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T05:27Z",
-        "phase": "",
-        "kind": "hold",
-        "text": "s3b Stage C extension (judge the 279 code-clean strict-route members) window 3: free prep done at main (bpb 1f0fac27, ap-one 098f5689): 422 strict members, 0 content-flagged, 143 judged, 279 unjudged; tagger-jobs.json 837 rows staged; queue measured clear 14:20 KST. HOLD at the spend word: no typed owner word for this envelope; zero paid calls. ENVELOPE.md in window3/.",
+        "ts": "2026-09-03T08:33Z",
+        "phase": "s3b",
+        "kind": "milestone",
+        "text": "Stage C (window C, incept-3b) 2026-09-03: 279 of 279 code-clean strict-route gate members hold /v1/qc passed:true (window3/qc-jobs/*-result.json; superseded fails under qc-jobs/round1..2/), zero parked; 3 repair batches committed on wt-bpb-gaterepair-w3, rebuild byte-check PASS each (final-rebuild-check.txt 1988/1988, manifest identical). Serve-side staging + Phase 3.4 report + PR texts in progress; push/PR HOLD(owner word typed in window C). Report received 08:33Z.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
