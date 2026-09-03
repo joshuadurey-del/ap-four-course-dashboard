@@ -1,5 +1,77 @@
 [
   {
+    "ts": "2026-09-03T16:12Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #798 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33776256171",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:11Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:11Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:11Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107#issuecomment-5528592551",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:09Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1923 completed: cancelled.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33776656156",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:09Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:09Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:07Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107#issuecomment-5528536841",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:07Z",
+    "course": "humgeo",
+    "text": "incept-agent-intake issue #107 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:05Z",
     "course": "humgeo",
     "text": "ap-one workflow run #1922 completed: success.",
@@ -861,6 +933,14 @@
     "text": "ap-one pull request #977 opened at b22552b6.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/977",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:36Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #976 opened at d29b4fc8.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/976",
     "writer": "repository-event automation"
   },
   {
