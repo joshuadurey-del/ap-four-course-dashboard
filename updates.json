@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T16:46Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "state-change",
+    "text": "s6 re-cut decided 01:5x KST 09-04 (orchestrator, owner standing authority): v1 plan fbf2d525 carries zero XP on 1393 resources (fleet corridor shape vs fleet contract runbook l.319; acceptance instrument reads base XP from the plan). A2 re-cuts on namespace ap-human-geography-native-202608-v2 with base XP from committed calibration (offline: gates 2652 + videos 1102 + articles 462 = 4216 >= 4102 floor); zero-write capture; gates; v1 undo later on orchestrator line only.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T16:44Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #799 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33779583926",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:42Z",
     "course": "humgeo",
     "phase": "7",

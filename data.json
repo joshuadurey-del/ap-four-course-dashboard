@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T16:42Z",
+  "snapshot": "2026-09-03T16:46Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T16:42Z",
-        "phase": "7",
+        "ts": "2026-09-03T16:46Z",
+        "phase": "",
         "kind": "state-change",
-        "text": "RUNBOOK-ASAP-HUMGEO.md s7: enrollment_operator field moved to LANDED (#976 030cc066; profile flipped by #981); blocked_by now [s6]. Staged: S7-NATIVE-LEGS-RUNBOOK.md (native legs on EXECUTE COMPLETE), SEAL-PLAN-DIGEST-CHANGE.md (held for A2 XP ruling). #982 (instrument, replaces auto-closed #980) open against main awaiting CI then merge-gate.",
+        "text": "s6 re-cut decided 01:5x KST 09-04 (orchestrator, owner standing authority): v1 plan fbf2d525 carries zero XP on 1393 resources (fleet corridor shape vs fleet contract runbook l.319; acceptance instrument reads base XP from the plan). A2 re-cuts on namespace ap-human-geography-native-202608-v2 with base XP from committed calibration (offline: gates 2652 + videos 1102 + articles 462 = 4216 >= 4102 floor); zero-write capture; gates; v1 undo later on orchestrator line only.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T16:40Z",
-        "event_type": "issues",
-        "text": "ap-one issue #980 comment-created.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/980#issuecomment-5528957030",
+        "ts": "2026-09-03T16:44Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #799 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33779583926",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
