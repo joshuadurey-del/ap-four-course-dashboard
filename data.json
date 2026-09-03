@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T18:24Z",
+  "snapshot": "2026-09-03T18:30Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T17:48Z",
+        "ts": "2026-09-03T18:30Z",
         "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #75 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/75",
+        "text": "ap-one pull request #984 opened at aeb3b1b8.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/984",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
