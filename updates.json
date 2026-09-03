@@ -1,6 +1,14 @@
 [
   {
     "ts": "2026-09-03T07:38Z",
+    "course": "cross",
+    "text": "ap-one pull request #978 opened at c7fc84d0.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/978",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:38Z",
     "course": "humgeo",
     "phase": "",
     "kind": "filed",
