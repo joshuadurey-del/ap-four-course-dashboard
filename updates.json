@@ -1,5 +1,53 @@
 [
   {
+    "ts": "2026-09-03T10:23Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "merged",
+    "text": "ilmych/apwh-blueprint-build PR #72 merged 94ddfd12 (2026-09-03T10:22:26Z) on Josh's typed line 'Push, PR, and merge through the gates': 59 source rows for the s3b Stage C extension (50 served strict-route members repaired after /v1/qc verdicts, 279/279 now passed; 9 unserved stem twins) + proposed rationale bank rebuilt. merge-gate PASS rd93858f4 (suite 381/3 in-gate, CI verify green); review lane APPROVE. Serve side = ap-one PR #979 (CI pending).",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T10:22Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #72 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:15Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build workflow run #60 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/33743332845",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:15Z",
+    "course": "apwh",
+    "text": "ap-one pull request #979 opened at 6a28d466.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/979",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:15Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build pull request #72 opened at 5cd07998.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T09:48Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #84 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/84",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T09:41Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #84 pullrequestreview-created at 5a1b276e.",
@@ -1808,6 +1856,22 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-02T04:02Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build commit c83b7d1c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/commit/c83b7d1cd91ffe94e550a17818ef98a2726992e9",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T03:57Z",
+    "course": "apwh",
+    "text": "ap-one commit 2575b287.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/2575b287e362b9bd8a3f4506661c8f75d84aee41",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-02T03:56Z",
     "course": "apwh",
     "text": "ap-one workflow run #1892 completed: success.",
@@ -1845,6 +1909,14 @@
     "text": "apwh-build-outputs pull request #1 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/apwh-build-outputs/pull/1",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T03:36Z",
+    "course": "apwh",
+    "text": "ap-one commit f98b4b0d.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/f98b4b0d90d539e62dd5e41a08e9b7bcf8bb0a0c",
     "writer": "repository-event automation"
   },
   {
