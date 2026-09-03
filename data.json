@@ -416,8 +416,8 @@
       "current_event": {
         "ts": "2026-09-03T17:08Z",
         "phase": "",
-        "kind": "note",
-        "text": "Grant: Ilma authorized the six OneRoster/QTI create permissions for the client in pp-org1 (intake #107 comment 16:55:59Z); token scope claim unchanged at 16:59Z (12 scopes); receipt reply posted (issuecomment-5529208575); detector re-mints every 5 min. Execute of the v2 plan runs only when both the grant and the v2 capture are true.",
+        "kind": "merged",
+        "text": "ap-one #982 MERGED f87ddc2a (B3 learner-acceptance instrument; replaces #980 auto-closed at branch delete); #976 MERGED 030cc066 (enrollment operator), deploy run 33779583926 success, staging /version 030cc066.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
