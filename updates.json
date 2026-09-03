@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T15:44Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "owner word (window D, verbatim): keep working until everything is done. authorization \u2014 recorded OWNER-WORD-20260903.md line 7",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T15:41Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1920 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33772706557",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T15:31Z",
     "course": "humgeo",
     "text": "ap-one pull request #981 opened at a242fab6.",

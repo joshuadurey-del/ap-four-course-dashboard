@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T15:31Z",
+  "snapshot": "2026-09-03T15:44Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T15:31Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #981 opened at a242fab6.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/981",
+        "ts": "2026-09-03T15:41Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #1920 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33772706557",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
@@ -732,10 +732,10 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T14:15Z",
+        "ts": "2026-09-03T15:44Z",
         "phase": "",
-        "kind": "milestone",
-        "text": "s4 Phase 2 DONE: 272/272 primary-text items hold /v1/qc passed:true on current bytes (26 answer-shape repairs re-judged; 1 regenerate); 68/70 topics, 3.4 + 9.5 factory-terminal (authored lane in Phase 3). generate_jobs 74/120, judge_calls 70/1700, sol_drafts 16/1000 ($0.96 est), image_renders 7/200. Receipt out/apwh-s4-20260903/phase2/PHASE-2-RECEIPT.md",
+        "kind": "note",
+        "text": "owner word (window D, verbatim): keep working until everything is done. authorization \u2014 recorded OWNER-WORD-20260903.md line 7",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
