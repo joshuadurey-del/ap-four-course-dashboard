@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T15:27Z",
-        "event_type": "issues",
-        "text": "ap-one issue #874 comment-created.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/874#issuecomment-5528032396",
+        "ts": "2026-09-03T15:31Z",
+        "event_type": "pull_request",
+        "text": "ap-one pull request #981 opened at a242fab6.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/981",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"

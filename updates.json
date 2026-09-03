@@ -2,6 +2,14 @@
   {
     "ts": "2026-09-03T15:31Z",
     "course": "humgeo",
+    "text": "ap-one pull request #981 opened at a242fab6.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/981",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T15:31Z",
+    "course": "humgeo",
     "phase": "p5",
     "kind": "state-change",
     "text": "Owner decision 2026-09-03T15:31:16Z: Route 1 (same client re-scoped; classes write permission added to this client id, then identical --execute from the checkpoint). Route 2 (undo + new namespace) closed. Re-run waits on the permission.",
