@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T05:35Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s6 free chain steps 1-5 run once over final bytes (humgeo-rebuild f34c605c, ap-one 098f5689): build byte-identical x2 manifest fc957b07, 3.6+3.7 pass, 1137/1137 src https, corridor sha unchanged 277b520a, plan_digest 66fbfca8 offline gate pass; step 1 served gate key-skew row stays flagged; no committed executor for the plan schema at main; OWNER_WORD ask staged in out/humgeo-s6-20260903/06-OWNER-WORD-ASK.md; spend 0",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T05:27Z",
     "course": "apwh",
     "phase": "",

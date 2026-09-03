@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T05:27Z",
+  "snapshot": "2026-09-03T05:35Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,11 +414,11 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T04:36Z",
-        "phase": "content",
-        "kind": "state-change",
-        "text": "HumGeo s3 is DONE on landed final bytes: humgeo-rebuild PRs #73/#74 and ap-one PR #974 are merged; the final build measures 187/440 stimulus-bound checks, 110 answer keys per letter, zero uniquely longest correct options, and Phase 3.6 PASS. s6 is next and remains unexecuted; the corridor pauses for the owner execute word before push dark.",
-        "writer": "dashboard curation"
+        "ts": "2026-09-03T05:35Z",
+        "phase": "",
+        "kind": "milestone",
+        "text": "s6 free chain steps 1-5 run once over final bytes (humgeo-rebuild f34c605c, ap-one 098f5689): build byte-identical x2 manifest fc957b07, 3.6+3.7 pass, 1137/1137 src https, corridor sha unchanged 277b520a, plan_digest 66fbfca8 offline gate pass; step 1 served gate key-skew row stays flagged; no committed executor for the plan schema at main; OWNER_WORD ask staged in out/humgeo-s6-20260903/06-OWNER-WORD-ASK.md; spend 0",
+        "writer": "INCEPT event projection"
       },
       "repository_event": {
         "ts": "2026-09-03T04:37Z",
