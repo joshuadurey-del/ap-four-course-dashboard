@@ -1,5 +1,45 @@
 [
   {
+    "ts": "2026-09-03T04:22Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "merged",
+    "text": "ilmych/humgeo-rebuild PR #74 merged f34c605c (2026-09-03T04:22:30Z): phase 2b row b2-201 amended after the served image render pilot exposed an SVG locator-map pick \u2014 now the NASA Landsat natural-color scene (factory vision QC PASS), item rewritten to read it, /v1/qc pass; Flash no findings; merge-gate PASS rfc38e3e5 (27 rows). Receipts INCEPT/out/humgeo-topup-phase2-20260902/landing-amend/ + render-pilot-images/RENDER-RECEIPT.md.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T04:22Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #74 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/74",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:18Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #74 opened at 33dca397.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/74",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:16Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1914 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33713470295",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T04:09Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 pull request #78 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/78",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T04:09Z",
     "course": "apwh",
     "phase": "",

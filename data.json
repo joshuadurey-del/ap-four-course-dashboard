@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T04:09Z",
+  "snapshot": "2026-09-03T04:22Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -377,17 +377,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T03:25Z",
+        "ts": "2026-09-03T04:22Z",
         "phase": "",
         "kind": "merged",
-        "text": "ilmych/humgeo-rebuild PR #73 merged 55b720cc (2026-09-03T03:08:59Z): check-stimulus top-up phase 2 (121 rows landed of 126 accepted) + phase 2b images (36 rows, factory renderers + factory vision QC) + phase 1 v2 (18 rows rewritten); checker generalized to any phase. Flash review no findings; validator PASS x3; merge-gate PASS rfc38e3e5 (21 prescreen-suite refusals pre-exist on main). Receipts INCEPT/out/humgeo-topup-phase2-20260902/landing/.",
+        "text": "ilmych/humgeo-rebuild PR #74 merged f34c605c (2026-09-03T04:22:30Z): phase 2b row b2-201 amended after the served image render pilot exposed an SVG locator-map pick \u2014 now the NASA Landsat natural-color scene (factory vision QC PASS), item rewritten to read it, /v1/qc pass; Flash no findings; merge-gate PASS rfc38e3e5 (27 rows). Receipts INCEPT/out/humgeo-topup-phase2-20260902/landing-amend/ + render-pilot-images/RENDER-RECEIPT.md.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T03:08Z",
+        "ts": "2026-09-03T04:22Z",
         "event_type": "pull_request",
-        "text": "humgeo-rebuild pull request #73 merged at no-sha.",
-        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/73",
+        "text": "humgeo-rebuild pull request #74 merged at no-sha.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/74",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
@@ -910,7 +910,7 @@
       "repository_event": {
         "ts": "2026-09-03T04:09Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #78 opened at 0a2a2d2d.",
+        "text": "ap-psychology-fall-2025-v1 pull request #78 merged at no-sha.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/78",
         "writer": "repository-event automation"
       },
