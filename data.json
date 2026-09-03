@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T19:01Z",
+  "snapshot": "2026-09-03T19:06Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T19:01Z",
+        "ts": "2026-09-03T19:06Z",
         "phase": "",
-        "kind": "note",
-        "text": "Lane W2 stop (out/humgeo-writing-tasks-20260904/BANK-RESTAGE-RECEIPT.md): the factory's re-staged HumGeo writing bank (humgeo-rebuild 53084657 w6-staging, 7a3c7df9) fails two fleet ap-one tests on content (stale FRQ map alt texts; 39 rubric repairs without checklist re-derivation leak answers pre-submit). Decision: publish the 115 accepted writing tasks tonight; the 5 unaccepted return with the fleet's next clean W6 stage; defect routed to the fleet as a comment.",
+        "kind": "receipt-sealed",
+        "text": "Lane Q receipt (out/humgeo-pp100-unit-20260904/ANSWER-SHAPE-REPAIR-RECEIPT.md, ap-one commit c7a08e20 on humgeo/native-pp100-unit-20260904): 109 PP100 distractor repairs -> uniquely-longest correct 0/1,715 by visible characters; unit tests reference bank items by id (70 duplicate objects removed; fleet citation aplit_native_timeback_course.py l.1168-1176); validator ownership rules; battery clean; /v1/qc judge runs after the PP100 rationales land (D1 requires distractor_rationales).",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T18:58Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #983 pullrequestreview-created at 476bd037.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/983#pullrequestreview-5105692696",
+        "ts": "2026-09-03T19:06Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #801 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33793564848",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"

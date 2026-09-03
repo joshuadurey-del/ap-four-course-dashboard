@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T19:06Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "receipt-sealed",
+    "text": "Lane Q receipt (out/humgeo-pp100-unit-20260904/ANSWER-SHAPE-REPAIR-RECEIPT.md, ap-one commit c7a08e20 on humgeo/native-pp100-unit-20260904): 109 PP100 distractor repairs -> uniquely-longest correct 0/1,715 by visible characters; unit tests reference bank items by id (70 duplicate objects removed; fleet citation aplit_native_timeback_course.py l.1168-1176); validator ownership rules; battery clean; /v1/qc judge runs after the PP100 rationales land (D1 requires distractor_rationales).",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T19:06Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #801 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33793564848",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T19:03Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #4 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/4#issuecomment-5530710261",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T19:01Z",
     "course": "humgeo",
     "phase": "",
@@ -2741,6 +2765,14 @@
     "text": "ap-one workflow run #1895 completed: cancelled.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33598585758",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T06:31Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 89a5cb3b.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/89a5cb3b13d1e2aab0524e7dd577351fe2b366ba",
     "writer": "repository-event automation"
   },
   {
