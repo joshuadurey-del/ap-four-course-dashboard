@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-03T12:31:31Z",
+ "generated_ts": "2026-09-03T16:32:35Z",
  "open": [
   {
    "course": "apush",
@@ -16,6 +16,14 @@
    "kind": "credential",
    "title": "HumGeo Phase 6: TimeBack client lacks OneRoster classes write (POST /classes 403 explicit deny); course row already live",
    "ts": "2026-09-03T12:31:31Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "2026-09-04",
+   "id": "bbea970a84fbf3b6",
+   "kind": "decision",
+   "title": "Canary owner-1 defaulted to the owner's own TimeBack account; veto before the enrollment execute or it proceeds",
+   "ts": "2026-09-03T16:32:35Z"
   }
  ],
  "schema": "needs-human-public/v1"
