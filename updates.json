@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T16:35Z",
+    "course": "humgeo",
+    "text": "ap-one issue #866 closed.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/866",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:35Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #976 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/976",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:26Z",
     "course": "humgeo",
     "phase": "",
@@ -109,6 +125,14 @@
     "text": "incept-agent-intake issue #107 labeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:06Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #980 closed at c21d3d62.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/980",
     "writer": "repository-event automation"
   },
   {
@@ -1546,6 +1570,14 @@
   {
     "ts": "2026-09-02T18:07Z",
     "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T18:07Z",
+    "course": "cross",
     "text": "ap-one commit 4ac9ea72.",
     "event_type": "push",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/4ac9ea721673d87ac63cb8d2b2549cb94c2854dc",
@@ -1565,6 +1597,14 @@
     "text": "ap-one pull request #972 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/972",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T18:06Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {

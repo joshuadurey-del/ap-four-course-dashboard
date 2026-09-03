@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T16:26Z",
+  "snapshot": "2026-09-03T16:35Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T16:25Z",
+        "ts": "2026-09-03T16:35Z",
         "event_type": "issues",
-        "text": "incept-agent-intake issue #107 comment-created.",
-        "evidence_url": "https://github.com/ilmych/incept-agent-intake/issues/107#issuecomment-5528772602",
+        "text": "ap-one issue #866 closed.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/866",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
