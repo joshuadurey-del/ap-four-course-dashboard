@@ -1,5 +1,5 @@
 {
- "generated_ts": "2026-09-03T03:58:54Z",
+ "generated_ts": "2026-09-03T04:34:52Z",
  "open": [
   {
    "course": "apush",
@@ -16,14 +16,6 @@
    "kind": "credential",
    "title": "GEMINI_API_KEY (or OPENAI_API_KEY) for the engine's nano_banana map/diagram renderer \u2014 ~/.secrets, never chat",
    "ts": "2026-09-02T11:50:34Z"
-  },
-  {
-   "course": "cross",
-   "deadline": "",
-   "id": "d1ce41c9f009e432",
-   "kind": "approval",
-   "title": "Approve repo-sync discovery work order (fetch every clone under ~/repos; discovered = fetch-only) so the daemon change can be built",
-   "ts": "2026-09-03T03:58:36Z"
   }
  ],
  "schema": "needs-human-public/v1"
