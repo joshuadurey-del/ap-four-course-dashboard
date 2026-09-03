@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T10:37Z",
+  "snapshot": "2026-09-03T10:46Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -732,17 +732,17 @@
         "gate": "the tier-2 landing is complete"
       },
       "current_event": {
-        "ts": "2026-09-03T10:37Z",
+        "ts": "2026-09-03T10:46Z",
         "phase": "",
-        "kind": "merged",
-        "text": "InceptTrilogy/ap-one PR #979 merged f0f061e2 (2026-09-03T10:36:23Z) on Josh's typed line 'Push, PR, and merge through the gates': serve copy of the 50 repaired strict-route gate members (all 422 judged 422/422 by /v1/qc), bank 2,011 (45 entries changed), delivery package re-pinned 1991bf9f->34c6da2d. merge-gate PASS r6ed866cb (suite 9805/325 in-gate, CI 4 green, repo-check apwh-phase02-capture-pins exit 0); Deploy run 33745212283 queued; /version readback follows.",
+        "kind": "landed",
+        "text": "s3b Stage C extension LANDED + READ BACK: ap-one Deploy run 33745212283 success on f0f061e2 (10:45:13Z); whats_deployed.py shows staging serving f0f061e2 (0 behind/0 ahead of main); served demo_gate_snapshot + mcq_rationales blobs at main equal the certified candidate; manifest unchanged. s3b now DONE for all 422 strict-route members (runbook block v2026-09-03.4). Receipts: window3/LANDING-READBACK.md.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T10:36Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #979 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/979",
+        "ts": "2026-09-03T10:45Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #797 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33745212283",
         "writer": "repository-event automation"
       },
       "evidence": [

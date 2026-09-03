@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T10:46Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "landed",
+    "text": "s3b Stage C extension LANDED + READ BACK: ap-one Deploy run 33745212283 success on f0f061e2 (10:45:13Z); whats_deployed.py shows staging serving f0f061e2 (0 behind/0 ahead of main); served demo_gate_snapshot + mcq_rationales blobs at main equal the certified candidate; manifest unchanged. s3b now DONE for all 422 strict-route members (runbook block v2026-09-03.4). Receipts: window3/LANDING-READBACK.md.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T10:45Z",
+    "course": "apwh",
+    "text": "ap-one workflow run #797 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33745212283",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:37Z",
+    "course": "apwh",
+    "text": "ap-one pull request #979 pullrequestreview-created at 6a28d466.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/979#pullrequestreview-5100831411",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T10:37Z",
     "course": "apwh",
     "phase": "",
