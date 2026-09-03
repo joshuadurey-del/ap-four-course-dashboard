@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T04:29Z",
+    "course": "humgeo",
+    "phase": "",
+    "kind": "merged",
+    "text": "ap-one PR #974 merged 098f5689 (2026-09-03T04:28:33Z): humgeo_native_timeback_assets balances authored-accepted rows' answer positions at placement (census 110 per label, chi-square 0.0; letter-reference and four-option guards). Flash round-2 APPROVE; module 95 tests; tests/ingest 5,095 at 72e1ae55; CI green at 2bf850c7; merge-gate PASS r6ed866cb (25 rows). Deploy run 33715170635 watched to terminal state. Receipts INCEPT/out/humgeo-topup-phase2-20260902/apone-balance/.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T04:28Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #974 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/974",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T04:22Z",
     "course": "humgeo",
     "phase": "",
