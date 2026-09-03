@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-03T10:35Z",
+    "course": "humgeo",
+    "phase": "p5",
+    "kind": "hold",
+    "text": "A2 ruling on the s6 --execute stop (10:35Z): 2730/2730 static assets readback_pass; course row live 200 (publishStatus testing); class row POST raised TimebackError, 404 live (checkpoint write_pending); 7,101 rows never attempted. Wrapper prints only the exception type, so status/body not on disk. HOLD(class POST: TimebackError, body not surfaced; class absent live). Resume re-POSTs that row then continues; A2 asks Josh for the resume line in its window and captures the error body on resume.",
+    "writer": "INCEPT event projection"
+  },
+  {
     "ts": "2026-09-03T10:32Z",
     "course": "humgeo",
     "phase": "p5",

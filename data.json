@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T10:32Z",
+  "snapshot": "2026-09-03T10:35Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,10 +414,10 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T10:32Z",
+        "ts": "2026-09-03T10:35Z",
         "phase": "p5",
         "kind": "hold",
-        "text": "s6 --execute (A2, pid 57798) EXITED ~10:30Z: execute-run.log 'HumGeo native publication failed safely: TimebackError'; writer.lock released. Checkpoint at 10:31Z: static-asset 2730/2730 readback_pass, course 1 readback_pass, class 1 write_pending, 7,101 TimeBack rows never attempted. A2 ordered to read the exact error, GET the class/course rows live, and rule HOLD vs checkpoint-resume under its /100 file. Orchestrator received the monitor exit event 10:32Z.",
+        "text": "A2 ruling on the s6 --execute stop (10:35Z): 2730/2730 static assets readback_pass; course row live 200 (publishStatus testing); class row POST raised TimebackError, 404 live (checkpoint write_pending); 7,101 rows never attempted. Wrapper prints only the exception type, so status/body not on disk. HOLD(class POST: TimebackError, body not surfaced; class absent live). Resume re-POSTs that row then continues; A2 asks Josh for the resume line in its window and captures the error body on resume.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
