@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T16:42Z",
+    "course": "humgeo",
+    "phase": "7",
+    "kind": "state-change",
+    "text": "RUNBOOK-ASAP-HUMGEO.md s7: enrollment_operator field moved to LANDED (#976 030cc066; profile flipped by #981); blocked_by now [s6]. Staged: S7-NATIVE-LEGS-RUNBOOK.md (native legs on EXECUTE COMPLETE), SEAL-PLAN-DIGEST-CHANGE.md (held for A2 XP ruling). #982 (instrument, replaces auto-closed #980) open against main awaiting CI then merge-gate.",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T16:40Z",
+    "course": "humgeo",
+    "text": "ap-one issue #980 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/980#issuecomment-5528957030",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:38Z",
     "course": "humgeo",
     "text": "ap-one pull request #982 opened at 1d32e71c.",
@@ -1654,6 +1670,14 @@
     "kind": "milestone",
     "text": "s3b Stage B window 1 COMPLETE (free chain): 143/143 flagged strict-route gate members repaired locally (131 singles + 12 doubles in place), 5 commits on apwh-seat/gate-repair-20260902 (head ee05be9), battery fires only S2, rebuild 1988/1988 zero seat movement, manifest+bank byte-identical, verify_rebuild PASS, bff 186 passed, build suite 379 passed, oracle unchanged; spend 0, pushes 0. Report: out/apwh-gate-repair-20260902/window1/WINDOW-1-REPORT.md",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-02T12:00Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 06623665.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/06623665e721a194bb3cf8700ca69f16172f3104",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-02T12:00Z",

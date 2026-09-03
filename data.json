@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-03T16:38Z",
+  "snapshot": "2026-09-03T16:42Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -414,17 +414,17 @@
       ],
       "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
       "current_event": {
-        "ts": "2026-09-03T16:26Z",
-        "phase": "",
-        "kind": "milestone",
-        "text": "s6 hold, grant route measured: client token scope claim = or/v1p2 admin.own + qti admin.own + read-only roster-core/resource; classes+enrollments need roster-core write, resources need resource write. Posted on intake #107 (issuecomment-5528772602) 01:25 KST 09-04. Fleet triage blocked-upstream -> Ilma. Zero-write scope detector + #107 comment monitor armed; A2 resumes identical --execute on grant (Route 1). Owner standing authority for live-by-morning recorded in OWNER-WORDS-20260903.md.",
+        "ts": "2026-09-03T16:42Z",
+        "phase": "7",
+        "kind": "state-change",
+        "text": "RUNBOOK-ASAP-HUMGEO.md s7: enrollment_operator field moved to LANDED (#976 030cc066; profile flipped by #981); blocked_by now [s6]. Staged: S7-NATIVE-LEGS-RUNBOOK.md (native legs on EXECUTE COMPLETE), SEAL-PLAN-DIGEST-CHANGE.md (held for A2 XP ruling). #982 (instrument, replaces auto-closed #980) open against main awaiting CI then merge-gate.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-03T16:38Z",
-        "event_type": "pull_request",
-        "text": "ap-one pull request #982 opened at 1d32e71c.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/982",
+        "ts": "2026-09-03T16:40Z",
+        "event_type": "issues",
+        "text": "ap-one issue #980 comment-created.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/980#issuecomment-5528957030",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
