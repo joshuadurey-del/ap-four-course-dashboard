@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-03T13:12Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "milestone",
+    "text": "s4 Phase 1 pilot receipted: 4 generate jobs (1 document/topic finding), 4 authored documents rendered (chart, Ortelius 1570 map, Potosi 1553 woodcut, secondary paraphrase), 14/16 authored items judged pass after 1 repair + 2 regenerate rounds (2 parked), seating rehearsal exit 0 (8/18 seated under Becky's rules), parser + mock-set render PASS. generate_jobs 4/120, judge_calls 36/1700, sol_drafts 12/1000 ($0.67 est), image_renders 7/200. Receipt out/apwh-s4-20260903/phase1/PILOT-RECEIPT.md",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T13:08Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5102284476",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:07Z",
+    "course": "cross",
+    "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5102277869",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T12:32Z",
     "course": "humgeo",
     "phase": "p5",
@@ -864,6 +888,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T03:09Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild repository activity: delete.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T03:08Z",
     "course": "humgeo",
     "text": "humgeo-rebuild pull request #73 merged at no-sha.",
@@ -878,6 +910,14 @@
     "kind": "merged",
     "text": "s3b Stage E part 1 LANDED: ilmych/apwh-blueprint-build PR #71 merged 2026-09-03T03:02:05Z as 1f0fac27 (owner line 'I Approve the two APWH gate-repair PRs.' + merge-gate PASS receipt rd93858f4; 143 repaired strict-route members + proposed bank). Serve side ap-one PR #975 open as draft at d9c6a165; CI re-running after the delivery-package re-pin. Receipts: out/apwh-gate-repair-20260902/window2/",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T03:06Z",
+    "course": "apwh",
+    "text": "ap-one commit d9c6a165.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/d9c6a165c30ca9c00b5b71a1b2ba53e75662db84",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-03T03:02Z",
@@ -2453,6 +2493,22 @@
     "text": "humgeo-rebuild commit 80840c3f.",
     "event_type": "push",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/80840c3f9fdf61a7b82fe25b61f6023478c9825e",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T01:59Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild commit 7ccb682f.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/7ccb682f4cde6d1520ec4437b4d938d01570c5b6",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-02T01:54Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild commit bcfda690.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/bcfda6909b64bd2161b53535cb82a29c8c76130d",
     "writer": "repository-event automation"
   },
   {
