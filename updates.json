@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-03T15:52Z",
+    "course": "apwh",
+    "phase": "",
+    "kind": "note",
+    "text": "owner words (window D, verbatim, OWNER-WORD-20260903.md lines 8-9): landing authorized tonight ('this is my authorization. schedule it whatever you gotta do. get it done.'); compaction imminent \u2014 WINDOW-D-RESUME-STATE.md rewritten in full",
+    "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T15:47Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1921 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33773161187",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T15:44Z",
     "course": "apwh",
     "phase": "",
@@ -797,6 +813,14 @@
     "text": "ap-one pull request #977 opened at b22552b6.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/977",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:36Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #976 opened at 5fc56a46.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/976",
     "writer": "repository-event automation"
   },
   {
