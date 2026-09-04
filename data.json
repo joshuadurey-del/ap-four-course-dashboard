@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-04T21:23Z",
+  "snapshot": "2026-09-04T22:28Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,9 +421,9 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-04T21:22Z",
+        "ts": "2026-09-04T22:28Z",
         "event_type": "issues",
-        "text": "ap-one issue #1003 labeled.",
+        "text": "ap-one issue #1003 unlabeled.",
         "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/1003",
         "writer": "repository-event automation"
       },
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-04T21:23Z",
+        "ts": "2026-09-04T21:30Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #99 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/99",
+        "text": "ap-psychology-fall-2025-v1 pull request #100 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/100",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
