@@ -1,5 +1,325 @@
 [
   {
+    "ts": "2026-09-04T02:49Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:47Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:46Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:46Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:45Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534933445",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:45Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:44Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:44Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534924196",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:42Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:38Z",
+    "course": "cross",
+    "text": "ap-one workflow run #435 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33830173560",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:38Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:38Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:36Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #811 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33828087704",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:21Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534759445",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:21Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:20Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534750675",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:20Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:20Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:17Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:13Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:13Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:10Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534678916",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:10Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:09Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:09Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534668301",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:07Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:03Z",
+    "course": "humgeo",
+    "text": "ap-one pull request #998 merged at no-sha.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/998",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:03Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:03Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T02:02Z",
+    "course": "humgeo",
+    "text": "ap-one workflow run #1954 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33826461964",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:55Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534570120",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:55Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:55Z",
+    "course": "cross",
+    "text": "ap-one workflow run #434 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33827497846",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:54Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988#issuecomment-5534561344",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:54Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:54Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:54Z",
+    "course": "cross",
+    "text": "ap-one workflow run #810 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33826509403",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:52Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:48Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 labeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T01:48Z",
+    "course": "humgeo",
+    "text": "ap-one issue #988 unlabeled.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/988",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T23:48Z",
     "course": "humgeo",
     "text": "ap-one issue #988 comment-created.",
