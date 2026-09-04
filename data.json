@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-04T06:33Z",
+  "snapshot": "2026-09-04T12:25Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-04T06:33Z",
-        "event_type": "workflow_run",
-        "text": "ap-one workflow run #812 completed: success.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33842489598",
+        "ts": "2026-09-04T09:50Z",
+        "event_type": "issues",
+        "text": "ap-one issue #999 comment-created.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/999#issuecomment-5538740695",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"
@@ -945,10 +945,10 @@
         "writer": "dashboard curation"
       },
       "repository_event": {
-        "ts": "2026-09-04T06:07Z",
+        "ts": "2026-09-04T12:25Z",
         "event_type": "pull_request",
-        "text": "ap-psychology-fall-2025-v1 pull request #89 merged at no-sha.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/89",
+        "text": "ap-psychology-fall-2025-v1 pull request #93 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/93",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-01T04:47Z"
