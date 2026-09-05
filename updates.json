@@ -3450,6 +3450,14 @@
   {
     "ts": "2026-09-03T19:08Z",
     "course": "humgeo",
+    "text": "ap-one commit d6755cc2.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/d6755cc257a50f641738e8c4bfdeeb0afea89a58",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T19:08Z",
+    "course": "humgeo",
     "text": "humgeo-rebuild issue #4 comment-created.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/4#issuecomment-5530769300",
@@ -4120,6 +4128,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T16:20Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit d6ec7a31.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/d6ec7a31248d01f79e576462376ced63768dcd2d",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T16:15Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 commit 43f0d5e9.",
@@ -4352,6 +4368,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T15:26Z",
+    "course": "humgeo",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T14:33Z",
     "course": "cross",
     "text": "incept-test-builder workflow run #15 completed: success.",
@@ -4477,6 +4501,14 @@
     "text": "incept-test-builder repository activity: delete.",
     "event_type": "repository",
     "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:40Z",
+    "course": "cross",
+    "text": "incept-test-builder commit f639d68f.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/commit/f639d68f11219c8399a59d40d6f331ae5cfaea00",
     "writer": "repository-event automation"
   },
   {
