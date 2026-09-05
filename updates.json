@@ -450,6 +450,14 @@
   {
     "ts": "2026-09-04T17:10Z",
     "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 2b719b21.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/2b719b2198bc45027701f4cb16a72076da98badc",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T17:10Z",
+    "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #96 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/96",
@@ -520,6 +528,22 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-04T15:51Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T15:44Z",
+    "course": "cross",
+    "text": "ap-one commit d2b948f6.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/d2b948f6ba0ceef35f584dbcf99e5f6f6d9a12da",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-04T15:44Z",
     "course": "cross",
     "text": "ap-one workflow run #439 completed: success.",
@@ -562,6 +586,14 @@
   {
     "ts": "2026-09-04T15:17Z",
     "course": "cross",
+    "text": "ap-one repository activity: delete.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T15:17Z",
+    "course": "cross",
     "text": "ap-one workflow run #1957 completed: cancelled.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33888012013",
@@ -578,6 +610,14 @@
   {
     "ts": "2026-09-04T15:12Z",
     "course": "cross",
+    "text": "ap-one commit 9fb0fce8.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/9fb0fce81970cbfd11df3b4380cfd41422766bea",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T15:12Z",
+    "course": "cross",
     "text": "ap-one pull request #1001 pullrequestreview-created at 9fb0fce8.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/1001#pullrequestreview-5114742292",
@@ -589,6 +629,22 @@
     "text": "ap-one pull request #1001 opened at 9fb0fce8.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/1001",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T15:10Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T15:04Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit c664afb1.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/c664afb1b204a27c168f0fde2664fae584638a64",
     "writer": "repository-event automation"
   },
   {
@@ -613,6 +669,14 @@
     "text": "ap-psychology-fall-2025-v1 pull request #94 opened at d9df4409.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/94",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T14:55Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1",
     "writer": "repository-event automation"
   },
   {
@@ -917,6 +981,14 @@
     "text": "ap-psychology-fall-2025-v1 pull request #89 opened at bb7dec78.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/89",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T05:58Z",
+    "course": "cross",
+    "text": "ap-one commit 34f6b41e.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/34f6b41eaaa6d246a14cf5f1458835fb6472e5ca",
     "writer": "repository-event automation"
   },
   {
@@ -4473,6 +4545,14 @@
   },
   {
     "ts": "2026-09-03T11:50Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit db58b3fa.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/db58b3faf1351e7df9ad02f787b41c33aab0011c",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T11:50Z",
     "course": "cross",
     "text": "incept-test-builder repository activity: create.",
     "event_type": "repository",
@@ -4585,6 +4665,14 @@
   },
   {
     "ts": "2026-09-03T10:36Z",
+    "course": "cross",
+    "text": "ap-one commit f0f061e2.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/f0f061e233a205ab5bf5f379b02735fb8607457a",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:36Z",
     "course": "apwh",
     "text": "ap-one pull request #979 merged at no-sha.",
     "event_type": "pull_request",
@@ -4630,6 +4718,14 @@
     "kind": "merged",
     "text": "ilmych/apwh-blueprint-build PR #72 merged 94ddfd12 (2026-09-03T10:22:26Z) on Josh's typed line 'Push, PR, and merge through the gates': 59 source rows for the s3b Stage C extension (50 served strict-route members repaired after /v1/qc verdicts, 279/279 now passed; 9 unserved stem twins) + proposed rationale bank rebuilt. merge-gate PASS rd93858f4 (suite 381/3 in-gate, CI verify green); review lane APPROVE. Serve side = ap-one PR #979 (CI pending).",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T10:22Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build commit 94ddfd12.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/commit/94ddfd127a964b5dd48b4b8f52fd78258da990eb",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-03T10:22Z",
@@ -4786,6 +4882,14 @@
   {
     "ts": "2026-09-03T08:34Z",
     "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 3b5a4b5c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/3b5a4b5c10684d5e0689618c18fc6d8612b7af52",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T08:34Z",
+    "course": "psych",
     "text": "ap-psychology-fall-2025-v1 commit fa557b92.",
     "event_type": "push",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/fa557b92b811cb5adaa80f9bef8262f5ac352a4c",
@@ -4882,6 +4986,14 @@
   {
     "ts": "2026-09-03T08:02Z",
     "course": "cross",
+    "text": "ap-one commit 11292fba.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/11292fba4345fe4df071e60a646dcae35eb8d059",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T08:02Z",
+    "course": "cross",
     "text": "ap-one pull request #978 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/978",
@@ -4901,6 +5013,14 @@
     "text": "ap-psychology-fall-2025-v1 commit 9511bd2f.",
     "event_type": "push",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/9511bd2f1ef0192556fb664bf187cc6f97a19bfd",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:57Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit bb35ef73.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/bb35ef73b6ad20dfc801081a5f2dfb6b04da582d",
     "writer": "repository-event automation"
   },
   {
@@ -4942,6 +5062,14 @@
     "kind": "milestone",
     "text": "Jayesh course-QC harness answer landed 2026-09-03 (Josh pasted it; email 16:46 KST). Web service course-loadb-...elb.amazonaws.com: GET /api/health, POST /api/jobs, GET /api/jobs/{id} every 60 s; 4 report files in S3 course-qc-app-reportsbucket-ccd05ock6zwr jobs/{id}/. Script = APES repo scripts/publish/qc_run5_submit_poll_fetch.py (blob 84708684). Seat-measured: health ok; S3 list+head OK as joshua_durey. p6 entry_point UNMEASURED -> quoted invocation.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T07:38Z",
+    "course": "cross",
+    "text": "ap-one commit 70eaf27c.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/70eaf27c91980cbb86d28e5127922b5345299594",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-03T07:38Z",
@@ -5074,6 +5202,14 @@
   {
     "ts": "2026-09-03T07:16Z",
     "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 8f721f89.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/8f721f89fce9dd4ee802b0b9849919fa7adf2b42",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:16Z",
+    "course": "psych",
     "text": "ap-psychology-fall-2025-v1 commit 00aff6ce.",
     "event_type": "push",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/00aff6ce1bc90114eed351cc853c704f8cce1106",
@@ -5117,6 +5253,14 @@
     "text": "ap-psychology-fall-2025-v1 pull request #79 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/79",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T07:09Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 986bffed.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/986bffed16226ceb5ae1629c206de237961218fa",
     "writer": "repository-event automation"
   },
   {
