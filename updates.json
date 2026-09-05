@@ -3008,6 +3008,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T20:19Z",
+    "course": "humgeo",
+    "text": "ap-one commit 68c576de.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/68c576debc31fb566357448fc49af2ea6f9c495b",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T20:18Z",
     "course": "apwh",
     "text": "apwh-blueprint-build pull request #73 merged at no-sha.",
@@ -3165,6 +3173,14 @@
     "text": "humgeo-rebuild issue #4 unlabeled.",
     "event_type": "issues",
     "evidence_url": "https://github.com/ilmych/humgeo-rebuild/issues/4",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T19:40Z",
+    "course": "humgeo",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {
