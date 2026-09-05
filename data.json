@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-05T14:51Z",
+  "snapshot": "2026-09-05T19:42Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -421,10 +421,10 @@
         "writer": "INCEPT event projection"
       },
       "repository_event": {
-        "ts": "2026-09-04T22:28Z",
-        "event_type": "issues",
-        "text": "ap-one issue #1003 unlabeled.",
-        "evidence_url": "https://github.com/InceptTrilogy/ap-one/issues/1003",
+        "ts": "2026-09-05T19:42Z",
+        "event_type": "pull_request",
+        "text": "humgeo-rebuild pull request #77 pullrequestreview-created at 396e4f46.",
+        "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/77#pullrequestreview-5122757471",
         "writer": "repository-event automation"
       },
       "observed_at": "2026-09-03T04:29Z"

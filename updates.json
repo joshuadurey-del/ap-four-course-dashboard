@@ -1,5 +1,29 @@
 [
   {
+    "ts": "2026-09-05T19:42Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #77 pullrequestreview-created at 396e4f46.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/77#pullrequestreview-5122757471",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-05T19:42Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild issue #77 comment-created.",
+    "event_type": "issues",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/77#issuecomment-5554318223",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-05T19:41Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild pull request #77 opened at 396e4f46.",
+    "event_type": "pull_request",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/pull/77",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-05T14:51Z",
     "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #103 merged at no-sha.",
@@ -2960,6 +2984,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T20:44Z",
+    "course": "humgeo",
+    "text": "ap-one commit 8367e090.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/8367e090c4c77ec0e553af97ef9a077ca2e67f5c",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T20:40Z",
     "course": "cross",
     "text": "ap-one workflow run #426 completed: failure.",
@@ -2981,6 +3013,22 @@
     "text": "ap-one workflow run #803 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33802594180",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T20:38Z",
+    "course": "apwh",
+    "text": "ap-one commit 477ff833.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/477ff83351b7771ac6aa1872b36cdf0c09592a7a",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T20:29Z",
+    "course": "cross",
+    "text": "ap-one commit 6ae3a731.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/6ae3a7313102b678e7a409ed1e0040b275037e54",
     "writer": "repository-event automation"
   },
   {
@@ -3766,6 +3814,14 @@
     "kind": "merged",
     "text": "ilmych/humgeo-rebuild PR #75 merged 53084657 (2026-09-03T17:48:43Z) by window C under Josh's standing merge authority (orchestrator assignment): three check-stimulus top-up manifest dirs re-pinned to the v2 native namespace (193 files; replaces_identifier -v1 -> -v2, sha fields re-hashed; no item created or removed; checker + selftest PASS). merge-gate PASS rfc38e3e5 (21 prescreen refusals pre-existing, identical head/base). Review: A2's Gemini APPROVE.",
     "writer": "INCEPT event projection"
+  },
+  {
+    "ts": "2026-09-03T17:48Z",
+    "course": "humgeo",
+    "text": "humgeo-rebuild commit 53084657.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/ilmych/humgeo-rebuild/commit/53084657b74714c1be79f33f4e0587d04cfd85e6",
+    "writer": "repository-event automation"
   },
   {
     "ts": "2026-09-03T17:48Z",
