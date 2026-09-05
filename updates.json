@@ -1,5 +1,21 @@
 [
   {
+    "ts": "2026-09-05T09:34Z",
+    "course": "cross",
+    "text": "ap-one workflow run #26 completed: success.",
+    "event_type": "workflow_run",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33957936116",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-05T06:20Z",
+    "course": "cross",
+    "text": "incept-test-builder commit aa5bf446.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/commit/aa5bf44659c680b56a565780ab294a9e5430f158",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-05T06:20Z",
     "course": "cross",
     "text": "incept-test-builder workflow run #121 completed: success.",
@@ -714,6 +730,14 @@
   {
     "ts": "2026-09-04T13:02Z",
     "course": "cross",
+    "text": "ap-one commit f4d23f7d.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one/commit/f4d23f7d3cd561b6ea6676d2f6d38004566c5180",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T13:02Z",
+    "course": "cross",
     "text": "ap-one pull request #1000 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/pull/1000",
@@ -725,6 +749,14 @@
     "text": "ap-one workflow run #1956 completed: success.",
     "event_type": "workflow_run",
     "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33874367814",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-04T12:45Z",
+    "course": "cross",
+    "text": "ap-one repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-one",
     "writer": "repository-event automation"
   },
   {
@@ -3970,6 +4002,14 @@
   {
     "ts": "2026-09-03T16:15Z",
     "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 commit 43f0d5e9.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/43f0d5e9a9bd9da4ae088790cc8a917208ef902d",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T16:15Z",
+    "course": "psych",
     "text": "ap-psychology-fall-2025-v1 pull request #86 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/86",
@@ -4376,6 +4416,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T13:21Z",
+    "course": "cross",
+    "text": "incept-test-builder commit fd6921d7.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/commit/fd6921d76adbff8f0a2fc13b92e3cbb94bd90266",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T13:12Z",
     "course": "apwh",
     "phase": "",
@@ -4397,6 +4445,14 @@
     "text": "incept-test-builder pull request #291 pullrequestreview-created at a471ab0c.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/pull/291#pullrequestreview-5102284476",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T13:07Z",
+    "course": "cross",
+    "text": "incept-test-builder commit dd6abbc1.",
+    "event_type": "push",
+    "evidence_url": "https://github.com/InceptTrilogy/incept-test-builder/commit/dd6abbc14f7293f631728c45ae6cd04067e3d898",
     "writer": "repository-event automation"
   },
   {
@@ -4648,6 +4704,14 @@
     "writer": "repository-event automation"
   },
   {
+    "ts": "2026-09-03T11:30Z",
+    "course": "psych",
+    "text": "ap-psychology-fall-2025-v1 repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1",
+    "writer": "repository-event automation"
+  },
+  {
     "ts": "2026-09-03T11:01Z",
     "course": "humgeo",
     "phase": "p7",
@@ -4765,6 +4829,14 @@
     "text": "apwh-blueprint-build pull request #72 merged at no-sha.",
     "event_type": "pull_request",
     "evidence_url": "https://github.com/ilmych/apwh-blueprint-build/pull/72",
+    "writer": "repository-event automation"
+  },
+  {
+    "ts": "2026-09-03T10:15Z",
+    "course": "apwh",
+    "text": "apwh-blueprint-build repository activity: create.",
+    "event_type": "repository",
+    "evidence_url": "https://github.com/ilmych/apwh-blueprint-build",
     "writer": "repository-event automation"
   },
   {
