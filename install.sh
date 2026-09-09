@@ -5,9 +5,9 @@ set -euo pipefail
 main() {
   [[ "$(uname -s)" == Darwin ]] || { echo 'Incept Course Builder currently supports macOS only.' >&2; exit 1; }
   umask 077
-  if ( : </dev/tty ) 2>/dev/null; then tty_available=1; fi
   local root="${INCEPT_BUILDER_HOME:-$HOME/.local/share/incept-course-builder}"
-  local temp gh_bin python_bin uv_bin archive checksum commit tty_available=0
+  local temp gh_bin python_bin uv_bin archive checksum commit email_ok tty_available=0
+  if ( : </dev/tty ) 2>/dev/null; then tty_available=1; fi
   mkdir -p "$root/runtime/bin"
   export PATH="$root/runtime/bin:$HOME/.local/bin:$PATH"
   temp=$(mktemp -d)
@@ -54,10 +54,28 @@ main() {
   fi
 
   printf '\n  [2/4] Connecting your Alpha GitHub account\n'
-  if ! "$gh_bin" auth status --hostname github.com >/dev/null 2>&1; then
+  if ! "$gh_bin" auth status --active --hostname github.com >/dev/null 2>&1; then
     [[ "$tty_available" == 1 ]] || { echo 'Sign into GitHub CLI in a terminal, then run this command again.' >&2; exit 1; }
-    "$gh_bin" auth login --hostname github.com --web --git-protocol https </dev/tty
+    "$gh_bin" auth login --hostname github.com --web --git-protocol https --scopes user:email </dev/tty
   fi
+  # GitHub verifies the email; the repository ACL remains the download boundary.
+  # Emit only a boolean. Never write the account's email list to disk or logs.
+  verified_alpha_email() {
+    "$gh_bin" api --paginate --slurp user/emails |
+      "$python_bin" -c 'import json,sys; pages=json.load(sys.stdin); assert isinstance(pages,list) and all(isinstance(page,list) for page in pages); print("true" if any(isinstance(row,dict) and row.get("verified") is True and isinstance(row.get("email"),str) and row["email"].lower().endswith("@alpha.school") for page in pages for row in page) else "false")'
+  }
+  if ! email_ok=$(verified_alpha_email 2>/dev/null); then
+    if [[ "$tty_available" != 1 || -n "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
+      printf '  GitHub email access is required. In Terminal, run:\n  gh auth refresh --hostname github.com --scopes user:email\n  Then rerun without an environment token that lacks email access.\n' >&2; exit 1
+    fi
+    printf '    → Allow GitHub to confirm your verified Alpha email\n'
+    "$gh_bin" auth refresh --hostname github.com --scopes user:email </dev/tty
+    email_ok=$(verified_alpha_email)
+  fi
+  if [[ "$email_ok" != true ]]; then
+    printf '\n  Add and verify your @alpha.school email at https://github.com/settings/emails\n  Then rerun this installer. Your existing dashboard and files are unchanged.\n' >&2; exit 1
+  fi
+  printf '    ✓ Verified alpha.school email\n'
   if ! commit=$("$gh_bin" api repos/InceptTrilogy/ap-four-course-dashboard/commits/main --jq .sha); then
     printf '\n  Your GitHub account needs access to InceptTrilogy/ap-four-course-dashboard.\n  Sign in with your authorized Alpha account, then rerun the installer.\n' >&2; exit 1
   fi
