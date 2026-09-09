@@ -49,6 +49,7 @@ main() {
     fi
     uv_bin=$(command -v uv)
     export UV_PYTHON_INSTALL_DIR="$root/runtime/python"
+    export UV_PYTHON_BIN_DIR="$root/runtime/bin" UV_CACHE_DIR="$root/runtime/cache"
     "$uv_bin" python install 3.11
     python_bin=$("$uv_bin" python find --managed-python 3.11)
   fi
