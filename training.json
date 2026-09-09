@@ -1,0 +1,111 @@
+{
+ "schema_version": 1,
+ "generated_utc": "2026-09-08T04:48:09Z",
+ "what_this_is": "Register of training and eval corpora for the course-build model program: the catalog, never the data.",
+ "boundary": "No corpus file is ever published to this site. A SHA-256 here lets a holder of the private bytes verify identity.",
+ "assets": [
+  {
+   "id": "repair_pairs.v0",
+   "purpose": "Repair model: failing item + structural repair + accepted retry, full content inline.",
+   "rows": 431,
+   "sha256": "6f60e664f94aee78d7ecbba20ebe09a05714077e282495999c37daea0efd963a",
+   "snapshot": "2026-08-26",
+   "status": "GO at pilot scale",
+   "home": "Alpha workspace, training-data census 2026-08-26"
+  },
+  {
+   "id": "prescreen_labels.v0",
+   "purpose": "Verdict prediction: predict the factory verdict before spend.",
+   "rows": 444,
+   "sha256": "257a95ca64010f493000fd59ff7e28ebc146446c4984ebe14aeced9f5e885121",
+   "snapshot": "2026-08-26",
+   "status": "NOT trainable yet: 437 pass vs 7 fail \u2014 failures get repaired out of the bank",
+   "home": "Alpha workspace, training-data census 2026-08-26"
+  },
+  {
+   "id": "decision_events.v0",
+   "purpose": "Content-free typed controller events, each source-traceable to its ledger line.",
+   "rows": 161,
+   "sha256": "efa01c2024cd99146b731340ab999f8b592546181665d2d294bfdc77d812ac22",
+   "snapshot": "2026-08-27",
+   "status": "GROWING with publication-route events",
+   "home": "Alpha workspace, decision-log v0 2026-08-27"
+  },
+  {
+   "id": "historical_fails.v0",
+   "purpose": "Mine the fail class for verdict prediction.",
+   "rows": null,
+   "sha256": null,
+   "snapshot": null,
+   "status": "PLANNED, not started",
+   "home": "Workspace receipts and git history"
+  },
+  {
+   "id": "cross_course_verdicts.v0",
+   "purpose": "Verdict evidence for APWH, APUSH, and Psychology.",
+   "rows": null,
+   "sha256": null,
+   "snapshot": null,
+   "status": "PLANNED, not started; historical assessment receipts are the named leads",
+   "home": "Private evidence homes"
+  },
+  {
+   "id": "article_labels.v2",
+   "purpose": "Article labels",
+   "rows": 640,
+   "sha256": "2f0f6d09eb1dd99949a42a8c481b6df24005cf6eb8ad32b567a4f730d1a77630",
+   "snapshot": "2026-09-08",
+   "status": "COMPILED; training readiness not assessed",
+   "home": "Private Alpha workspace, v2 corpus register"
+  },
+  {
+   "id": "prescreen_labels.v2",
+   "purpose": "Prescreen labels",
+   "rows": 2551,
+   "sha256": "da19dd044caf0a9f80494acfb5e0b8f0f1d0b6c4dc00ae483bf9075caedcdfb4",
+   "snapshot": "2026-09-08",
+   "status": "COMPILED; training readiness not assessed",
+   "home": "Private Alpha workspace, v2 corpus register"
+  },
+  {
+   "id": "regen_pairs.v2",
+   "purpose": "Regen pairs",
+   "rows": 1945,
+   "sha256": "adbb8fc14c56cd011372163eabdda428747f11c0418439d7da551f47f57ee61d",
+   "snapshot": "2026-09-08",
+   "status": "COMPILED; training readiness not assessed",
+   "home": "Private Alpha workspace, v2 corpus register"
+  },
+  {
+   "id": "repair_pairs.v2",
+   "purpose": "Repair pairs",
+   "rows": 361,
+   "sha256": "1a1256d47666c0b6b42c029c055a071a0015d9812d23f073db3fd9bb3d29536b",
+   "snapshot": "2026-09-08",
+   "status": "COMPILED; training readiness not assessed",
+   "home": "Private Alpha workspace, v2 corpus register"
+  },
+  {
+   "id": "unverified_pool.v2",
+   "purpose": "Unverified pool",
+   "rows": 468,
+   "sha256": "587e5e8b436ae44ae577c587a4e22dc7522891c245c4f2addf788b7329297e5e",
+   "snapshot": "2026-09-08",
+   "status": "COMPILED; training readiness not assessed",
+   "home": "Private Alpha workspace, v2 corpus register"
+  },
+  {
+   "id": "write_labels.v2",
+   "purpose": "Write labels",
+   "rows": 834,
+   "sha256": "7cb3a282edabbe8f566b4443e320c160ddd73512491b56844f7e79f16ae518a0",
+   "snapshot": "2026-09-08",
+   "status": "COMPILED; training readiness not assessed",
+   "home": "Private Alpha workspace, v2 corpus register"
+  }
+ ],
+ "observability": {
+  "langfuse": "https://us.cloud.langfuse.com",
+  "evidence_repo": "https://github.com/joshuadurey-del/ap-ss-evidence"
+ }
+}

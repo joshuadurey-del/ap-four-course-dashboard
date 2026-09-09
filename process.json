@@ -1,0 +1,227 @@
+{
+ "schema_version": 2,
+ "generated_utc": "2026-09-08T04:48:09Z",
+ "label": "ASAP edition (2026-09-01)",
+ "runbook_version": "2026-09-03.6",
+ "source_sha256": "ce1cccf6b3a2e3990e321f1892d9544b12ede0192d9552a060dc758eac1b2635",
+ "authority_note": "Publication runbook, ASAP edition, 2026-09-01. Version 2026-09-03.6. Requirements only; current course positions are re-earned from the per-course plans.",
+ "route": [
+  "content",
+  "p3",
+  "p5",
+  "p6",
+  "p7",
+  "p8"
+ ],
+ "phases": [
+  {
+   "id": "p0"
+  },
+  {
+   "id": "p12",
+   "name": "tree-and-pricing",
+   "state": "done-all-four",
+   "verify": "Blueprint predicates and each child plan's live state, re-earned from the owning repository's current main."
+  },
+  {
+   "id": "p3",
+   "name": "bank-gates",
+   "verify": [
+    "phase-bank-validation skill (answer-shape + key balance)",
+    "QTI parse + assertions (original \u00a73.6) \u2014 NOT skippable: LearnWith marks a failed embedded item COMPLETE"
+   ]
+  },
+  {
+   "id": "p4"
+  },
+  {
+   "id": "p5",
+   "name": "publish-dark",
+   "steps": [
+    "bank-gates",
+    "assets-qti",
+    "images",
+    "tree",
+    "drift-preflight",
+    "OWNER_WORD",
+    "push-dark",
+    "verify-live",
+    "post-push",
+    "xp",
+    "evidence-bundle"
+   ],
+   "verify": [
+    "verify-live readback reconciles push bundle exactly (APES pub_stage7_verify_live.py pattern)",
+    "publishStatus == testing",
+    "enrollments == 0",
+    "evidence bundle README in course repo (Bio/APES format)"
+   ],
+   "shape": "one course holds all units (APES: unit 1 mints, later units pin --course-id)"
+  },
+  {
+   "id": "p6",
+   "name": "live-qc-gauntlet",
+   "instrument": "fleet course-QC harness (APES reports/step5_courseqc/ job pattern) \u2014 reuse, don't build",
+   "loop": "judge -> remediate (1-repair/2-regenerate) -> re-push -> re-judge until bar",
+   "repush_rules": [
+    "denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs",
+    "drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)"
+   ]
+  },
+  {
+   "id": "p7",
+   "name": "walk-and-accept",
+   "verify": [
+    "factory walkthrough PASS on the staging deployment after the reversible flag PR (answers save; feedback choice-specific, non-leaking; keys unskewed)",
+    "one human pass: start/middle/end + longest reading + each writing geometry",
+    "XP spot-check: <80%=0, >=80%=base once, 100%=1.25x once, reload adds nothing"
+   ],
+   "account": "ONE owner test account, enrolled additively"
+  },
+  {
+   "id": "p8",
+   "name": "demo-and-flip",
+   "verify": [
+    "Ilma demo done from test account",
+    "her word recorded",
+    "then broader enrollment"
+   ]
+  }
+ ],
+ "stages": [
+  {
+   "id": "p0",
+   "name": "CUT",
+   "state": "cut",
+   "contract_status": "CUT",
+   "required_artifacts": [],
+   "automated": false
+  },
+  {
+   "id": "p12",
+   "name": "tree-and-pricing",
+   "state": "done-all-four",
+   "contract_status": "DONE_ALL_FOUR",
+   "required_artifacts": [
+    "Blueprint predicates and each child plan's live state, re-earned from the owning repository's current main."
+   ],
+   "automated": false
+  },
+  {
+   "id": "p3",
+   "name": "bank-gates",
+   "state": "required",
+   "contract_status": "REQUIRED",
+   "required_artifacts": [
+    "phase-bank-validation skill (answer-shape + key balance)",
+    "QTI parse + assertions (original \u00a73.6) \u2014 NOT skippable: LearnWith marks a failed embedded item COMPLETE"
+   ],
+   "automated": false
+  },
+  {
+   "id": "p4",
+   "name": "CUT",
+   "state": "cut",
+   "contract_status": "CUT",
+   "required_artifacts": [],
+   "automated": false
+  },
+  {
+   "id": "p5",
+   "name": "publish-dark",
+   "state": "required",
+   "contract_status": "REQUIRED",
+   "required_artifacts": [
+    "bank-gates",
+    "assets-qti",
+    "images",
+    "tree",
+    "drift-preflight",
+    "OWNER_WORD",
+    "push-dark",
+    "verify-live",
+    "post-push",
+    "xp",
+    "evidence-bundle",
+    "verify-live readback reconciles push bundle exactly (APES pub_stage7_verify_live.py pattern)",
+    "publishStatus == testing",
+    "enrollments == 0",
+    "evidence bundle README in course repo (Bio/APES format)",
+    "one course holds all units (APES: unit 1 mints, later units pin --course-id)"
+   ],
+   "automated": false
+  },
+  {
+   "id": "p6",
+   "name": "live-qc-gauntlet",
+   "state": "required",
+   "contract_status": "REQUIRED",
+   "required_artifacts": [
+    "denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs",
+    "drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)",
+    "fleet course-QC harness (APES reports/step5_courseqc/ job pattern) \u2014 reuse, don't build",
+    "judge -> remediate (1-repair/2-regenerate) -> re-push -> re-judge until bar"
+   ],
+   "automated": false
+  },
+  {
+   "id": "p7",
+   "name": "walk-and-accept",
+   "state": "required",
+   "contract_status": "REQUIRED",
+   "required_artifacts": [
+    "factory walkthrough PASS on the staging deployment after the reversible flag PR (answers save; feedback choice-specific, non-leaking; keys unskewed)",
+    "one human pass: start/middle/end + longest reading + each writing geometry",
+    "XP spot-check: <80%=0, >=80%=base once, 100%=1.25x once, reload adds nothing",
+    "ONE owner test account, enrolled additively"
+   ],
+   "automated": false
+  },
+  {
+   "id": "p8",
+   "name": "demo-and-flip",
+   "state": "required",
+   "contract_status": "REQUIRED",
+   "required_artifacts": [
+    "Ilma demo done from test account",
+    "her word recorded",
+    "then broader enrollment"
+   ],
+   "automated": false
+  }
+ ],
+ "courses": {
+  "humgeo": {
+   "label": "AP Human Geography",
+   "current_stage": "content",
+   "state": "RE-EARN \u2014 FINAL CUT PENDING",
+   "as_of": "2026-09-08T04:11:12Z",
+   "detail": "Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited.",
+   "priority": 1
+  },
+  "apwh": {
+   "label": "AP World History",
+   "current_stage": "p3",
+   "state": "RE-EARN \u2014 BANK VALIDATION",
+   "as_of": "2026-09-08T03:43:26Z",
+   "detail": "The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.",
+   "priority": 2
+  },
+  "apush": {
+   "label": "AP US History",
+   "current_stage": "fleet-held",
+   "state": "RE-EARN \u2014 FLEET-HELD",
+   "as_of": "2026-09-08T03:43:26Z",
+   "detail": "The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.",
+   "priority": 3
+  },
+  "psych": {
+   "label": "AP Psychology",
+   "current_stage": "p5",
+   "state": "RE-EARN \u2014 PARTIAL PUBLICATION",
+   "as_of": "2026-09-08T04:44:16Z",
+   "detail": "Current main carries partial publication/readback receipts for Units 0\u20131 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
+   "priority": "parallel"
+  }
+ }
+}

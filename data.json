@@ -1,0 +1,2028 @@
+{
+  "snapshot": "2026-09-09T08:57Z",
+  "claims": [
+    {
+      "claim_id": "cross.process.authority",
+      "section": "Cross-course",
+      "status": "OBSERVED",
+      "observed_at": "2026-09-08T03:43:26Z",
+      "value": "The dashboard carries a public-safe projection of ASAP runbook 2026-09-03.6: content \u2192 p3 \u2192 p5 \u2192 p6 \u2192 p7 \u2192 p8. Requirements do not grant execution authority or course completion.",
+      "scope": "Public-safe phase requirements and source fingerprint; internal operational pointers omitted",
+      "evidence": [
+        {
+          "type": "asap-runbook-source",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "version": "2026-09-01.2"
+        },
+        {
+          "type": "asap-runbook-source",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "sha256": "ce1cccf6b3a2e3990e321f1892d9544b12ede0192d9552a060dc758eac1b2635",
+          "version": "2026-09-03.6"
+        }
+      ],
+      "evidence_access": "PUBLIC_GITHUB+SCOPED_LOCAL_SEARCH"
+    },
+    {
+      "claim_id": "cross.work_evidence_map",
+      "section": "Cross-course",
+      "status": "OBSERVED",
+      "observed_at": "2026-09-01T04:47Z",
+      "settled": true,
+      "settled_at": "2026-08-29T01:01Z",
+      "settlement_reason": "Point-in-time cross-course snapshot superseded by current per-course claims; historical observation retained without re-dating.",
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.ls_qc_ready",
+        "psych.blueprint.audit"
+      ],
+      "value": "Current course cards and pages use ASAP edition (2026-09-01). Retired names appear only in crosswalk.json rows; historical claims retain evidence scope without creating current phase credit.",
+      "scope": "dashboard presentation and machine-readable phase mapping only",
+      "evidence": [
+        {
+          "type": "dashboard-overview",
+          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/"
+        },
+        {
+          "type": "dashboard-course-pages",
+          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
+        },
+        {
+          "type": "factory-operator-fix",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/284"
+        },
+        {
+          "type": "factory-recovery-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/285",
+          "merge_commit": "9da35978d34f781fb2f0692235564aae2fccd078"
+        },
+        {
+          "type": "factory-recovery-reconciliation",
+          "observed_at": "2026-08-26T14:45Z",
+          "receipt_sha256": "9755d9540fa6b85c8a4f84268213e22c26be9edc087be2e88eb7722b2f0affdc",
+          "pilot_submission_posts": 3,
+          "pilot_new_jobs": 2,
+          "pilot_independent_qc_calls": 2,
+          "scale_submission_posts": 76,
+          "scale_distinct_job_ids": 21,
+          "scale_terminal_jobs": 20,
+          "scale_unmeasured_job_ids": 1,
+          "scale_independent_qc_calls": 27,
+          "scale_replayed_submissions": 55,
+          "factory_reaching_invocations_minimum": 11,
+          "receipt_rows_landed": 9,
+          "acceptances_observed": 6,
+          "replacement_failures_observed": 3,
+          "conflicting_controller_stop_acknowledged": true,
+          "controller_adopted": false,
+          "runner_active": false
+        },
+        {
+          "type": "module-owner-clock-readback",
+          "observed_at": "2026-08-26T14:47Z",
+          "receipt_sha256": "8690c2127a785b6445e339b920f40b15c163058b4f48fb3f28be8d4452380178",
+          "ap_one_main_sha": "113f80c8479079a87f29226eb1a4b7e5f53349d0",
+          "compiler_pr": 869,
+          "compiler_issue": 865,
+          "compiler_disposition": "NONCONFORMING_FACTORY_MODULE",
+          "activation_issue": 864,
+          "enrollment_issue": 866,
+          "learner_acceptance_issue": 867
+        }
+      ],
+      "evidence_access": "PUBLIC_DASHBOARD+PUBLIC_GITHUB+SCOPED_LOCAL_READ_ONLY"
+    },
+    {
+      "claim_id": "cross.ls_qc_target",
+      "section": "Cross-course",
+      "status": "BLOCKED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical four-course review-readiness snapshot superseded by current per-course lifecycle claims; original blocked verdict retained.",
+      "superseded_by": [
+        "humgeo.ls_qc_ready",
+        "apwh.ls_qc_ready",
+        "apush.ls_qc_ready",
+        "psych.ls_qc_ready"
+      ],
+      "value": "BLOCKED across all four courses in this same-window reconciliation. HumGeo lacks the complete publisher/learner path on open issue #659; APWH lacks a current full course-dir accepted-source verdict; APUSH exact ledger bytes are build-only with no live wiring or rendering; Psychology's exact-SHA audit finds no assembled student-safe MCQ HTML and blocks narrow-width review. LS REVIEW READY remains a handoff definition, not a current course or release outcome.",
+      "scope": "same-window representative reviewer-path readiness across HumGeo, APWH, APUSH, and Psychology; excludes course completion and release",
+      "evidence": [
+        {
+          "type": "humgeo-component",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659",
+          "status": "BLOCKED"
+        },
+        {
+          "type": "apwh-component",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/actions/runs/32794423811",
+          "status": "MISSING_FULL_ORACLE"
+        },
+        {
+          "type": "apush-component",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/44e4a09ab1eaaafb8aab927f224dbf1014bc8b4c/phase2/article-acceptance-ledger-v1/ledger.json",
+          "status": "BUILD_ONLY"
+        },
+        {
+          "type": "psych-component",
+          "location": "INCEPT/out/psych-qc-assembly-audit-20260827/REPORT.md",
+          "status": "BLOCKED"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_AUDIT",
+      "status_at": "2026-08-30T04:19Z"
+    },
+    {
+      "claim_id": "cross.human_review",
+      "section": "Cross-course",
+      "status": "MISSING",
+      "value": "The named HumGeo human-review receipt is absent from this machine\u2019s declared readback location. No current named whole-course Learning Science disposition is supplied by the course evidence reviewed in this refresh. This is a scoped receipt gap, not proof that no review exists on another seat.",
+      "scope": "Named local human-review receipt and reviewed course evidence only; no global absence claim across seats or courses",
+      "evidence": [
+        {
+          "type": "component-reconciliation",
+          "claim_ids": [
+            "humgeo.review_surface.local",
+            "apwh.blueprint.audit",
+            "apush.platform",
+            "psych.ls_qc_ready"
+          ],
+          "historical": true
+        },
+        {
+          "type": "human-disposition-receipt",
+          "status": "MISSING",
+          "historical": true
+        },
+        {
+          "type": "declared-local-receipt-check",
+          "observed_at": "2026-09-08T04:48:09Z",
+          "result": "MISSING",
+          "scope": "Named HumGeo human-review receipt and parent directory absent on this machine; not cross-seat absence"
+        }
+      ],
+      "evidence_access": "DASHBOARD_COMPONENT_CLAIMS+DECLARED_EVIDENCE_GAP",
+      "status_at": "2026-09-08T04:48:09Z"
+    },
+    {
+      "claim_id": "humgeo.gate2.answer_shape_reopen",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical gate receipt superseded by the current native-runbook HumGeo state.",
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ],
+      "value": "Live GitHub readback confirms PR #66 remains merged as e16aebeb96957f1d498d21e0eda6a7c033e51399 and current HumGeo main 8495d75929f2e25d6f7fa50fc24ce3d47481a887 is two commits ahead with zero commits behind. This preserves the historical Gate 2 amendment in canonical ancestry. The prior verifier counts remain dated receipt evidence; this refresh did not rerun that production verifier and makes no later-phase claim.",
+      "scope": "historical Gate 2 amendment retention in current canonical ancestry; excludes a fresh Gate 2 verifier run, current article-check state, publication, learner visibility, and release",
+      "evidence": [
+        {
+          "type": "gate-2-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/66",
+          "merge_commit": "e16aebeb96957f1d498d21e0eda6a7c033e51399"
+        },
+        {
+          "type": "current-canonical-main",
+          "url": "https://github.com/ilmych/humgeo-rebuild/tree/8495d75929f2e25d6f7fa50fc24ce3d47481a887"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
+    },
+    {
+      "claim_id": "humgeo.gate3.source_accepted",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Accepted-source closure is retained as history and superseded by the current lifecycle claim.",
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ],
+      "value": "Current HumGeo main is still the exact PR #67 merge 8495d75929f2e25d6f7fa50fc24ce3d47481a887. The opened Gate 3 closure receipt hashes to b7845917c690f39f4568c1efa7006be3d08f0df6fbc0c14d97780d16d9ce713e and records SOURCE_ACCEPTED with 70 of 70 accepted placements and zero remaining, failed, nonterminal, or unmeasured records. This is accepted-source closure only; it does not prove current article-check completion or any native publication outcome.",
+      "scope": "Gate 3 accepted-source closure on exact HumGeo main; excludes current prior-step residue, TimeBack writes, publication, learner acceptance, and release",
+      "evidence": [
+        {
+          "type": "gate-3-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/67",
+          "merge_commit": "8495d75929f2e25d6f7fa50fc24ce3d47481a887"
+        },
+        {
+          "type": "gate-3-closure-receipt",
+          "location": "INCEPT/out/humgeo-gate4-profile-source-bind-20260825/gate3-closure.md",
+          "sha256": "b7845917c690f39f4568c1efa7006be3d08f0df6fbc0c14d97780d16d9ce713e"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
+      "observed_at": "2026-08-27T08:48Z"
+    },
+    {
+      "claim_id": "humgeo.gate4.profile_source_bound",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Profile-and-source closure is retained as history and superseded by the current lifecycle claim.",
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ],
+      "value": "Live AP One ancestry confirms PR #851 merge e46586c39c0ad0075c0cf45952f1f91503118d51 is retained in current main 79f3b5b75c4fd85c461cb8c144a9b3f8569bb7fe, 27 commits ahead and zero behind. The opened Gate 4 closure receipt hashes to 941a3bcb92fe9c9940a6eb809f27370a8477b8c07996d92bf5c8e6d6290327ce and records PROFILE_AND_SOURCE_BOUND. This refresh preserves that bounded closure without asserting that the receipt's former next-gate text is still current.",
+      "scope": "Gate 4 profile and prior publication work source closure retained in current AP One ancestry; excludes current prior-step state and every publication, enrollment, activation, learner, and release outcome",
+      "evidence": [
+        {
+          "type": "gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/851",
+          "merge_commit": "e46586c39c0ad0075c0cf45952f1f91503118d51"
+        },
+        {
+          "type": "gate-4-closure-receipt",
+          "location": "INCEPT/out/humgeo-gate4-profile-source-bind-20260825/gate4-closure.md",
+          "sha256": "941a3bcb92fe9c9940a6eb809f27370a8477b8c07996d92bf5c8e6d6290327ce"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
+      "observed_at": "2026-08-27T08:48Z"
+    },
+    {
+      "claim_id": "humgeo.blueprint.audit",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "value": "Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited.",
+      "scope": "Current source readback and next assigned work; historical evidence retains its date; no publication or later lifecycle completion inferred",
+      "freshness_limit_hours": 24,
+      "next_step": {
+        "verb": "proceed",
+        "tool": "HumGeo final-cut and QTI validation",
+        "args": [],
+        "gate": "the remaining content lands and the final-byte prerequisites pass"
+      },
+      "evidence": [
+        {
+          "type": "controller-execution-state",
+          "observed_at": "2026-08-28T14:46:48Z",
+          "sha256": "7b47ec6435d1e8b7b5ffff531edd6051111370580bc23ab0eb726b24c7dfeed0",
+          "operator_receipt_position": "440/440",
+          "persisted_job_bodies": 161,
+          "formal_reconcile": "PENDING_LANDED_ARTICLE_BYTES"
+        },
+        {
+          "type": "final-slot-dual-qc-receipt",
+          "observed_at": "2026-08-28T14:45:48Z",
+          "sha256": "02c18c45244e242729ab11c5b04719769d48f99a12a56893d204586b57d69e51",
+          "slot": "d833b559-article-05",
+          "round": 13,
+          "cycle": 1,
+          "creation_full_qc": "PASS",
+          "independent_qc": "PASS",
+          "independent_qc_score": 0.9785714285714285
+        },
+        {
+          "type": "factory-recovery-operator",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/9da35978d34f781fb2f0692235564aae2fccd078/tools/regenerate_contextual_failures.py"
+        },
+        {
+          "type": "phase-3-generator-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/906",
+          "merge_commit": "824cfd1ccd0a134a1ab121163954bfe11370dedb"
+        },
+        {
+          "type": "phase-3-video-assets-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/911",
+          "merge_commit": "d2cb182fb3fe1b5585d21e6b7f4dc3b9a1f18d00"
+        },
+        {
+          "type": "phase-3-local-build",
+          "observed_at": "2026-08-30T07:49Z",
+          "article_qti_files": 528,
+          "video_pages_and_checks": 1042,
+          "video_content_triage": 71,
+          "upload_status": "NOT_PERFORMED"
+        },
+        {
+          "type": "phase-2-pricing-receipt",
+          "observed_at": "2026-08-29",
+          "sha256": "fce8a39426c1253623dfce5c12b8df57fb5db2fb0feb538eebe6ace4a3e7fdd6",
+          "served_key_items": 3633,
+          "xp_worth_1": 3167,
+          "xp_worth_1_stored_as_float": 53,
+          "xp_worth_2": 466,
+          "demo_snapshot_items": 403,
+          "demo_snapshot_xp_worth_1": 356,
+          "demo_snapshot_xp_worth_2": 47,
+          "demo_tree_xp_fields": 0,
+          "resource_level_base_xp": "UNMEASURED_LOCALLY_BINDS_IN_PHASE_4_PLAN"
+        },
+        {
+          "type": "phase-4-authority-and-real-base-build",
+          "observed_at": "2026-08-31T01:11:34Z",
+          "authority_fields": "RESOLVED_PRIVATE_NOT_PUBLISHED",
+          "deterministic_builds": 2
+        },
+        {
+          "type": "answer-position-correction",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/918",
+          "state": "merged",
+          "merge_commit": "c1086cfcf22aa32f8f19cb1dd9855c474b795f73"
+        },
+        {
+          "type": "answer-position-correction-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/33348972020",
+          "commit": "c1086cfcf22aa32f8f19cb1dd9855c474b795f73",
+          "staging_image": "94cc7ce7",
+          "observed_at": "2026-08-31T02:18:36Z",
+          "status": "DEPLOY_GREEN_STAGING_READBACK_MATCHED"
+        },
+        {
+          "type": "native-asset-plan-builder-gap",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/919",
+          "state": "open",
+          "disposition": "ANSWERED_BY_MERGED_PR_920_AWAITING_ISSUE_CLOSE"
+        },
+        {
+          "type": "native-publication-plan-builder",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/920",
+          "merge_commit": "464b093f32bf9cf48a051837e2099200e42d758e"
+        },
+        {
+          "type": "phase-4-reseal",
+          "observed_at": "2026-08-31T06:49:25Z",
+          "plan_digest": "a4318c2894e2cd3f77846089a7bb7eb1e0cced14095ac122f1b0c90686972410",
+          "offline_gate": "PASS",
+          "byte_matched_assets": 2730
+        },
+        {
+          "type": "cue-build-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/928",
+          "merge_commit": "fb04b7c265895dd76cec9dd9d74791acd3e76046",
+          "deploy_run": 33364232468,
+          "staging_readback_at": "2026-08-31T06:51:23Z",
+          "staging_commit": "fb04b7c2",
+          "authored_cues": 59
+        },
+        {
+          "type": "no-audio-triage",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/922",
+          "state": "open",
+          "videos": 12
+        },
+        {
+          "type": "publisher-digest-pin",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/893",
+          "state": "open"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "content"
+        },
+        {
+          "type": "phase-2-topup-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/73",
+          "state": "merged",
+          "merge_commit": "55b720cccdd858215e658e0b30885a6ab3b74bfd",
+          "phase_2_landed": "121/126",
+          "phase_2b_images": "36/36"
+        },
+        {
+          "type": "served-pilot-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/74",
+          "state": "merged",
+          "merge_commit": "f34c605cb5a0ce120c54b4bc33b4d2252056b2aa"
+        },
+        {
+          "type": "answer-position-balance-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/974",
+          "state": "merged",
+          "merge_commit": "098f56896caf06f9e788d34a5eaba46dd32deb20"
+        },
+        {
+          "type": "final-build-receipt",
+          "observed_at": "2026-09-03T04:23Z",
+          "location": "INCEPT/out/humgeo-topup-phase2-20260902/CAMPAIGN-RECEIPT.md",
+          "sha256": "a92f28af2a058ebca61b72125464ca5589763325d027a90c8ce05c513d9c378c",
+          "stimulus_checks": "187/440",
+          "answer_keys": "110/110/110/110",
+          "uniquely_longest_correct": 0,
+          "phase_3_6": "PASS"
+        },
+        {
+          "type": "served-image-pilot-receipt",
+          "observed_at": "2026-09-03T04:18Z",
+          "location": "INCEPT/out/humgeo-topup-phase2-20260902/render-pilot-images/RENDER-RECEIPT.md",
+          "sha256": "b7f1f501ba2e123f99ba92de059f0d1482b9015fc0433053d06b1e022e8d4364",
+          "served_widget_renders": "5/5"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1034"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1035"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1036"
+        },
+        {
+          "type": "pp100-merge-readback",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1036",
+          "state": "MERGED",
+          "merge_commit": "6c69a93e270d8b9302c382310e18913d6af910ee",
+          "merged_at": "2026-09-08T04:02:35Z",
+          "observed_at": "2026-09-08T04:11:12Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPTS+RUNBOOK_CANON",
+      "current_event": {
+        "ts": "2026-09-09T08:57Z",
+        "phase": "",
+        "kind": "receipt-sealed",
+        "text": "HG-C8 verified installed v7 author allowlist files 2/2 against C0 reviewed kit; exact h44/h50 private pilot receipts and source hashes revalidated. No code edits or paid calls; existing QC and h50 S8 holds preserved.",
+        "writer": "INCEPT event projection"
+      },
+      "repository_event": {
+        "ts": "2026-09-09T08:37Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #868 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/34329329429",
+        "writer": "repository-event automation"
+      },
+      "observed_at": "2026-09-08T04:11:12Z"
+    },
+    {
+      "claim_id": "humgeo.coverage.denominator",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "value": "The current committed course enumeration covers the exact official universe: 150 EK nodes, 68 topics and 7 units. The production oracle passes its coverage checks. This run did not validate a serving bundle or establish publication or learner acceptance.",
+      "scope": "Exact-ref course-enumeration coverage; serving-bundle checks were not applicable because no bundle was supplied",
+      "evidence": [
+        {
+          "type": "oracle-mechanism",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/8495d75929f2e25d6f7fa50fc24ce3d47481a887/scripts/blueprint_diff.py",
+          "historical": true
+        },
+        {
+          "type": "official-ced",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap-human-geography-course-and-exam-description.pdf",
+          "historical": true
+        },
+        {
+          "type": "verifier-gap",
+          "status": "NOT_RUN",
+          "reason": "course checkout and executor runs excluded by plan v3",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/f7c9d91838f4b8ba896986772767e095060ef1fd/scripts/blueprint_diff.py",
+          "observed_at": "2026-09-08T04:45:06Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/f7c9d91838f4b8ba896986772767e095060ef1fd/blueprint/enumeration.json",
+          "observed_at": "2026-09-08T04:45:06Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/f7c9d91838f4b8ba896986772767e095060ef1fd/blueprint/official_scope.json",
+          "observed_at": "2026-09-08T04:45:06Z"
+        },
+        {
+          "type": "production-oracle-run",
+          "observed_at": "2026-09-08T04:45:06Z",
+          "sha256": "402639e0ce1286987cc00490749659859648fe78bc3476e7c31e7aff6faae88e",
+          "verdict": "PASS",
+          "serving_bundle": "NOT_SUPPLIED"
+        }
+      ],
+      "evidence_access": "PUBLIC_WEB+PRIVATE_GITHUB+DECLARED_SCOPE_HOLD",
+      "observed_at": "2026-09-08T04:45:06Z"
+    },
+    {
+      "claim_id": "humgeo.completion.gates",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "observed_at": "2026-08-26T14:47Z",
+      "settled": true,
+      "superseded_by": "humgeo.blueprint.audit",
+      "value": "SUPERSEDED historical gate snapshot. See humgeo.blueprint.audit for the current HumGeo state; this row does not restate current phase status.",
+      "scope": "owner-approved four-course sequence and current HumGeo migration state",
+      "evidence": [
+        {
+          "type": "course-plan",
+          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
+        },
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/55"
+        },
+        {
+          "type": "gate-closure-receipt",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44#issuecomment-5365762989"
+        },
+        {
+          "type": "sealed-unarmed-plan",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/56"
+        },
+        {
+          "type": "closed-unmerged-executor",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/57"
+        },
+        {
+          "type": "later-gate-activity",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/58"
+        },
+        {
+          "type": "regression-repair",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/59"
+        },
+        {
+          "type": "canonical-main",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/62"
+        },
+        {
+          "type": "publication-retry",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/60#issuecomment-5369498130"
+        },
+        {
+          "type": "scope-closure-receipt",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/50#issuecomment-5369982183"
+        },
+        {
+          "type": "current-item-bank-contract",
+          "url": "https://test-builder.inceptstore.com/openapi.json"
+        },
+        {
+          "type": "contextual-repair-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/281"
+        },
+        {
+          "type": "factory-version",
+          "url": "https://test-builder.inceptstore.com/version",
+          "observed_at": "2026-08-26T13:00Z",
+          "commit": "9da35978d34f781fb2f0692235564aae2fccd078"
+        },
+        {
+          "type": "factory-operator-fix",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/284",
+          "observed_at": "2026-08-26T13:00Z",
+          "state": "closed"
+        },
+        {
+          "type": "factory-recovery-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/285",
+          "merge_commit": "9da35978d34f781fb2f0692235564aae2fccd078"
+        },
+        {
+          "type": "factory-recovery-pilot",
+          "receipt_sha256": "f804cfd77b7bd1160f3364b4ee8060be45a5380e515cbbb477ae72073184ad65",
+          "submitted_jobs": 1,
+          "terminal_jobs": 1,
+          "creation_full_qc_passed": 1,
+          "independent_qc_schema_rejected": 1,
+          "accepted_replacements": 0,
+          "operator_source": "https://github.com/InceptTrilogy/incept-test-builder/blob/a70df7ef7adf3b307948aba6f03cbcb70fcb1625/tools/regenerate_contextual_failures.py#L81-L93"
+        },
+        {
+          "type": "factory-recovery-reconciliation",
+          "observed_at": "2026-08-26T14:45Z",
+          "receipt_sha256": "9755d9540fa6b85c8a4f84268213e22c26be9edc087be2e88eb7722b2f0affdc",
+          "pilot_submission_posts": 3,
+          "pilot_new_jobs": 2,
+          "pilot_independent_qc_calls": 2,
+          "scale_submission_posts": 76,
+          "scale_distinct_job_ids": 21,
+          "scale_terminal_jobs": 20,
+          "scale_unmeasured_job_ids": 1,
+          "scale_independent_qc_calls": 27,
+          "scale_replayed_submissions": 55,
+          "factory_reaching_invocations_minimum": 11,
+          "receipt_rows_landed": 9,
+          "acceptances_observed": 6,
+          "replacement_failures_observed": 3,
+          "conflicting_controller_stop_acknowledged": true,
+          "scale_qc_verdicts_landed": false,
+          "controller_adopted": false,
+          "runner_active": false,
+          "hold": "UNBOUND_FACTORY_SCALE_AND_MISSING_OWNER_SCOPED_LANDING_RECEIPTS"
+        },
+        {
+          "type": "module-owner-clock-readback",
+          "observed_at": "2026-08-26T14:47Z",
+          "receipt_sha256": "8690c2127a785b6445e339b920f40b15c163058b4f48fb3f28be8d4452380178",
+          "ap_one_main_sha": "113f80c8479079a87f29226eb1a4b7e5f53349d0",
+          "compiler_pr": 869,
+          "compiler_issue": 865,
+          "compiler_disposition": "NONCONFORMING_FACTORY_MODULE",
+          "activation_issue": 864,
+          "enrollment_issue": 866,
+          "learner_acceptance_issue": 867
+        },
+        {
+          "type": "controller-checkpoint",
+          "observed_at": "2026-08-26T13:20Z",
+          "packet_2": "PACKET_ACTIVE",
+          "controller_state": "REBOUND_TO_CURRENT_EXECUTION_STATE",
+          "active_hold": "HOLD: RECOVERY_PILOT_RECERTIFICATION_REQUIRED",
+          "course_completion_claim": false,
+          "event_sha256": "f83bab177e84763a702ee927efb08362fe598dbc75a416c6a37664a08e476b9f"
+        },
+        {
+          "type": "packet-3-contract-boundary",
+          "sha256": "3ba9d279432ff8c57f3e40f76dd4f947350b8abc6e62ef506a3b06a7c2946800",
+          "status": "PREP_ONLY_PARTIAL"
+        },
+        {
+          "type": "packet-4-contract-recheck",
+          "sha256": "9e062dbcd4056cf3710fe199f0d78951ccbbea399d3d522e1213b87ab6e45955",
+          "status": "HOLD_BLOCKED_CONTRACT"
+        },
+        {
+          "type": "packet-3-compiler-ask",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/865"
+        },
+        {
+          "type": "materializer-bind-ask",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5426046587"
+        },
+        {
+          "type": "canary-enrollment-ask",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/866"
+        },
+        {
+          "type": "private-activation-ask",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/864"
+        },
+        {
+          "type": "learner-acceptance-ask",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/867"
+        },
+        {
+          "type": "read-only-bank-receipt",
+          "sha256": "38cd738e8d8447ef462c93b08b1523400a1fc532a9ad25c074bf9bf15cb8d45b"
+        },
+        {
+          "type": "gate-2-inventory-summary",
+          "sha256": "9ce925ab9047cae149de68ed34ea6f67c60da3838afc6fb7ad48f84fb68d7192"
+        },
+        {
+          "type": "gate-2-3-review",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
+          "head": "7b8a01727426abcf063cc6d86e8222863c1eb111",
+          "merge_commit": "4bd35b9ca350924fef2653f71c64270baa3ea9db",
+          "delivery_package_sha256": "508543c19be1371e3acc29949d7544784deae1901cba4d598af378f77b866ac3"
+        },
+        {
+          "type": "publisher-contract-follow-up",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5381059146"
+        },
+        {
+          "type": "get-only-authority-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/842",
+          "ap_one_main": "bb17b21b856d81de4ba26c468790f0c5896a3c75"
+        },
+        {
+          "type": "owner-direction",
+          "observed_at": "2026-08-22T04:07Z",
+          "scope": "Gate 4 opened and underway only"
+        },
+        {
+          "type": "gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
+          "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb"
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32620437842",
+          "commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
+          "conclusion": "success"
+        },
+        {
+          "type": "gate-2-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
+          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
+          "manifest_self_sha256": "7755525e29bf2eb77f0856636b712a95cde974e79ba17a05c52d523b1ed4cdca"
+        },
+        {
+          "type": "gate-3-factory-contract",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/272",
+          "merge_commit": "fb6a56ea81c091b600e5d827c5eb200fa33112fa",
+          "openapi_sha256": "d9f6c4b795de1fff10356765b6abecfd516640f33d709d796e1b3cca0016b61d"
+        },
+        {
+          "type": "gate-3-source-accepted-review",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/65",
+          "head": "71fddd538ba7bdca9a47b021a0f71d1d878959b3",
+          "merge_commit": "b56c26403cf15fa859a30a250e625cef39e3cfbb",
+          "accepted_candidates": 195,
+          "accepted_placements": 203,
+          "remaining": 0,
+          "delivery_package_sha256": "f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4"
+        },
+        {
+          "type": "gate-4-source-rebind",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/847",
+          "review_commit": "fff15e9d1bea0b23f36e3d2882ed026c8f1eb367",
+          "merge_commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "profile_sha256": "9d50ae77c5b95d6617ff6e34c1039dc717876e5a49c61c7b4b3ce81abd6b5c91",
+          "source_capture_sha256": "48ddea2a9dd4cb334224c9d916cff12dc61e4419f7ff5f1e105d0ba46a8a4477",
+          "native_bind_sha256": "cc41a995491490ed212bb6dd00577b32ac48effb3b052c7964f846c50aeebdd1"
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32649699317",
+          "commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "image_digest": "sha256:19a0b7bf89ca1f94e30a157b8096ed5b36937d8ae02625830a7e52cbf703a4ec",
+          "conclusion": "success"
+        },
+        {
+          "type": "current-gate-3-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/67",
+          "head": "19ac99a83566c90d594f690d5b35d9507ae67b5a",
+          "merge_commit": "8495d75929f2e25d6f7fa50fc24ce3d47481a887",
+          "accepted_placements": 70,
+          "remaining": 0,
+          "delivery_package_sha256": "37fb16a0133bb1e1390cb6ce9ada96a2e96cfd49a9c54020046437d9e9edc11b"
+        },
+        {
+          "type": "current-gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/851",
+          "review_head": "9216ee8c484f6a74ab312ebfb771a6fad089f0ac",
+          "merge_commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
+          "profile_sha256": "9dc1468a433c7f6e34d99a0b2355aeb510b52d0606a4982d5d362eba4ca0f621",
+          "source_capture_sha256": "183ecf2d84c1c6973d0b754e3a0e06cd2844a944dda7b12b677886f2570bdeb7",
+          "native_bind_sha256": "4cc86661e8f945016aaaae036188f5da921a42bff53ad1f4b44637f0ff6ab748"
+        },
+        {
+          "type": "current-gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32799920454",
+          "commit": "e46586c39c0ad0075c0cf45952f1f91503118d51",
+          "image_digest": "sha256:d33773cab37f8d2ad5e7ec523587c748e6b04e7c55d37b4549b182e3f75d6994",
+          "conclusion": "success"
+        }
+      ],
+      "evidence_access": "GITHUB+DASHBOARD_PLAN+SCOPED_LOCAL_READ_ONLY+OWNER_DIRECTION"
+    },
+    {
+      "claim_id": "apwh.blueprint.audit",
+      "section": "APWH",
+      "status": "OBSERVED",
+      "value": "The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.",
+      "scope": "Current source readback and next assigned work; historical evidence retains its date; no publication or later lifecycle completion inferred",
+      "freshness_limit_hours": 24,
+      "next_step": {
+        "verb": "proceed",
+        "tool": "APWH s5 bank validation and s6 QTI checks",
+        "args": [],
+        "gate": "the repaired final bytes and current judge receipts are available"
+      },
+      "current_event": {
+        "ts": "2026-09-07T01:46Z",
+        "phase": "s5",
+        "kind": "milestone",
+        "text": "apwh s5 bank validation v1 over the 1988 served gate members: key positions FAIL the engine chi-square (A 749/B 513/C 394/D 332, chi2 204 vs 16.3; ap-one shuffles per student at serve); 156 uniquely-longest keys (114 carried, 41 s4, 1 Engelmann) vs the zero rule; no length bias (key longest 16% vs 25%); per-item /v1/qc passes 1988/1988. Fix: rotate s4 keys + repair 156, re-judge, v2 record before s6.",
+        "writer": "INCEPT event projection"
+      },
+      "repository_event": {
+        "ts": "2026-09-08T06:29Z",
+        "event_type": "workflow_run",
+        "text": "ap-one workflow run #850 completed: success.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/34194275949",
+        "writer": "repository-event automation"
+      },
+      "evidence": [
+        {
+          "type": "current-blueprint-main",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/tree/550496a0947d36c45df39e20358ce977ab8a51d9"
+        },
+        {
+          "type": "tier-1-fix-round",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/pull/65",
+          "state": "merged",
+          "head": "d7eb13bcc3e5991d8e1667d551281fd1fd42f5c4",
+          "merge_commit": "ea721a32c1ff614b6f9caf76bed1b0575e861334"
+        },
+        {
+          "type": "e3-wiring-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/916",
+          "state": "merged",
+          "merge_commit": "e2d920423f4b5878d9aa6212386ba533aac62d51"
+        },
+        {
+          "type": "phase-0.2-source-capture",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
+          "state": "merged",
+          "head": "1014fc185de392dceda23c42cc111cf18e00341e",
+          "merge_commit": "4fc7c055a0785d39d1698903d22a2d77613f330c"
+        },
+        {
+          "type": "phase-1-course-tree",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+          "state": "merged",
+          "head": "7dd28738439c17f66ddd1b7135720ce58167750a",
+          "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6",
+          "observed_at": "2026-08-31T04:37:22Z"
+        },
+        {
+          "type": "phase-2-activity-pricing",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/930",
+          "state": "merged",
+          "merge_commit": "ec09709f021ef0937c8b7d2d19cc6315c900e305",
+          "required_activities": 894,
+          "total_xp": 6576,
+          "manifest_digest_prefix": "019094aa"
+        },
+        {
+          "type": "tier-2-round-1-attestation",
+          "accepted_distinct": 975,
+          "requested": 1003,
+          "duplicates": 0,
+          "factory_terminal_topics": 2,
+          "observed_at": "2026-08-31T06:43:58Z"
+        },
+        {
+          "type": "pre-qti-bank-validation",
+          "position_leg": "FAIL_ALL_THREE_BANKS_NONBLOCKING_UNTIL_PLAN_SEAL",
+          "length_legs": "PASS",
+          "observed_at": "2026-08-31T04:43:43Z"
+        },
+        {
+          "type": "a-168-serving-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/905",
+          "state": "merged",
+          "merge_commit": "e61ffc3b44449d0848c3c546b36a2f84c03a18a5"
+        },
+        {
+          "type": "profile-and-consumer",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/889",
+          "state": "merged",
+          "merge_commit": "8d4ab63a3830f8ab5f9866896e90c173b09bb571"
+        },
+        {
+          "type": "authoring-and-profile-hash-refresh",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/891",
+          "state": "merged",
+          "merge_commit": "3ab26f2402646cbff5b7804e5f5ac9f2eb5ff489"
+        },
+        {
+          "type": "runbook-pin",
+          "sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "content"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/992"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_COURSE_ORACLE+SESSION_RECEIPT",
+      "observed_at": "2026-09-08T03:43:26Z"
+    },
+    {
+      "claim_id": "apush.blueprint.audit",
+      "section": "APUSH",
+      "status": "BLOCKED",
+      "value": "The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.",
+      "scope": "Current source readback and next assigned work; historical evidence retains its date; no publication or later lifecycle completion inferred",
+      "freshness_limit_hours": 24,
+      "next_step": {
+        "verb": "proceed",
+        "tool": "current-main content verifier",
+        "args": [],
+        "gate": "the fleet sequence-adapter release is verified"
+      },
+      "evidence": [
+        {
+          "type": "reconciliation-manifest",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "status": "BLUEPRINT_RECONCILED_WITH_4_DEVIATIONS"
+        },
+        {
+          "type": "fleet-wave-position-54",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473222370",
+          "status": "TERMINAL_FAILED"
+        },
+        {
+          "type": "fleet-wave-position-57",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5473824088",
+          "status": "ARTICLES_READY_POSITION_58_NEXT"
+        },
+        {
+          "type": "fleet-wave-position-58",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474017817",
+          "status": "TERMINAL_FAILED_POSITION_59_NEXT"
+        },
+        {
+          "type": "packet-defect-closure",
+          "url": "https://github.com/ilmych/apush-build-outputs/pull/8",
+          "state": "merged",
+          "merge_commit": "98842f41d90138846ca8a584e2d60d8d54719e0f"
+        },
+        {
+          "type": "successor-replay-diagnostic",
+          "observed_at": "2026-08-31T02:17:41Z",
+          "status": "COMPLETE_11_OF_11_PASS"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "fleet-held"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/ilmych/apush-course-build/blob/deeaf0c190d8905c7a5efe3cb612b899ca190f3c/PIPELINE.md#L21"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "current_event": {
+        "ts": "2026-09-01T06:00Z",
+        "phase": "",
+        "kind": "note",
+        "text": "PIPELINE.md crosswalk PR #16 posted to ilmych/apush-course-build at head 64252c70 (five-round independent review APPROVE; pr-review-gate + pr-necessity PASS; consumer rows adjudicated from bytes). Merge rides the fleet lane: measured merged_by on PRs 13-15 is ilmych, and the suite cannot collect green off their build host (one test binds their filesystem; deps fixed locally). Receipts: out/pipeline-crosswalks-20260901/ + ~/.incept/merge-gate/.",
+        "writer": "INCEPT event projection"
+      },
+      "repository_event": {
+        "ts": "2026-09-01T06:11Z",
+        "event_type": "push",
+        "text": "apush-course-build commit deeaf0c1.",
+        "evidence_url": "https://github.com/ilmych/apush-course-build/commit/deeaf0c190d8905c7a5efe3cb612b899ca190f3c",
+        "writer": "repository-event automation"
+      },
+      "status_at": "2026-09-08T03:43:26Z"
+    },
+    {
+      "claim_id": "psych.blueprint.audit",
+      "section": "Psych",
+      "status": "OBSERVED",
+      "value": "Current main carries partial publication/readback receipts for Units 0\u20131 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
+      "scope": "Exact-ref committed partial publication and failed QC artifacts; live platform state and full-course acceptance UNMEASURED",
+      "freshness_limit_hours": 24,
+      "next_step": {
+        "verb": "reconcile",
+        "tool": "existing fleet publication and QC pipeline",
+        "args": [],
+        "gate": "the exact partial-publication receipts and current platform state are read back"
+      },
+      "evidence": [
+        {
+          "type": "course-main",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b"
+        },
+        {
+          "type": "historical-generation-issue",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51",
+          "state": "CLOSED",
+          "disposition": "Overtaken; not a remaining publication gate"
+        },
+        {
+          "type": "canon-ledger",
+          "location": "INCEPT/PSYCH-CANON-REQUIREMENTS.md",
+          "runbook_sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d"
+        },
+        {
+          "type": "asap-plan-re-earn",
+          "observed_at": "2026-09-01T04:47Z",
+          "sha256": "eb1a4e57c171d6a92f6d2f2da692a48e48abe44005d5cadb532d0c9afdb293d9",
+          "position": "p5"
+        },
+        {
+          "type": "current-source-readback",
+          "observed_at": "2026-09-08T03:43:26Z",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/README.md#L17"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/publish_audit.jsonl",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/live_tree_all.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_0/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_1/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/course_qc/qc_summary.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER+LOCAL_INCEPT_EVENT",
+      "current_event": {
+        "ts": "2026-09-01T04:47Z",
+        "phase": "p5",
+        "kind": "state-change",
+        "text": "Re-earn: p5, fleet-driven. Dark publication stays in the existing fleet pipeline; p6 waits for exact live readback.",
+        "writer": "dashboard curation"
+      },
+      "repository_event": {
+        "ts": "2026-09-09T08:31Z",
+        "event_type": "pull_request",
+        "text": "ap-psychology-fall-2025-v1 pull request #117 merged at no-sha.",
+        "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/117",
+        "writer": "repository-event automation"
+      },
+      "observed_at": "2026-09-08T04:44:16Z"
+    },
+    {
+      "claim_id": "cross.recovery.audit",
+      "section": "Cross-course",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Point-in-time recovery audit superseded by current per-course claims.",
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.blueprint.audit",
+        "psych.blueprint.audit"
+      ],
+      "value": "The exact recovery register at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb still contains 25 rows: 2 VALID_FACTORY_PROOF, 8 SALVAGEABLE_INPUT_ONLY, 5 FACTORY_REEARN_REQUIRED, 6 VOID, and 4 UNKNOWN_BLOCKED. This is an immutable historical classification, not a current course-state or completion verdict.",
+      "scope": "historical 25-row recovery classification at exact evidence-repo SHA; excludes current course state and release readiness",
+      "evidence": [
+        {
+          "type": "recovery-register",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/fe839ffc0caf59fe17868c0e64f09c1b90e60bfb/evidence/recovery/20260819-course-recovery-audit/codex/DAMAGE-REGISTER.jsonl"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:50Z"
+    },
+    {
+      "claim_id": "cross.handrolled.machinery",
+      "section": "Cross-course",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Point-in-time machinery audit superseded by current per-course claims.",
+      "superseded_by": [
+        "humgeo.blueprint.audit",
+        "apwh.blueprint.audit",
+        "apush.blueprint.audit",
+        "psych.blueprint.audit"
+      ],
+      "value": "The exact historical purge manifest at evidence-repo main fe839ffc0caf59fe17868c0e64f09c1b90e60bfb enumerates prior-step through prior-step hand-rolled machinery classes and states that deletion requires owner approval. Current INCEPT rules give those local tools no factory-proof authority and require committed factory routes. This claim does not assert that the inventoried files were deleted or that their present filesystem state was checked.",
+      "scope": "historical prior-step-prior-step machinery inventory plus current factory-first authority rule; excludes current filesystem removal status",
+      "evidence": [
+        {
+          "type": "purge-manifest",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/fe839ffc0caf59fe17868c0e64f09c1b90e60bfb/evidence/recovery/20260819-course-recovery-audit/codex/PURGE-AND-REPLACEMENT-MANIFEST.md"
+        },
+        {
+          "type": "current-seat-rule",
+          "location": "INCEPT/ORIENTATION.md",
+          "rule": "factory-first; no local substitutes"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RULE",
+      "observed_at": "2026-08-27T08:50Z"
+    },
+    {
+      "claim_id": "humgeo.wave.proof",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical generation-wave proof superseded by the current landed asset state.",
+      "superseded_by": [
+        "humgeo.bank374"
+      ],
+      "value": "Live GitHub readback preserves the historical Gate 0 record: PRs #55 and #56 are merged, PR #57 is closed unmerged, and issue #44 remains open with label autopilot:attention and no assignee. Current HumGeo main is later accepted-source commit 8495d75929f2e25d6f7fa50fc24ce3d47481a887. This row reports PR/issue history only and gives no current prior-step, writer, bank, or release verdict.",
+      "scope": "historical Gate 0 PR disposition and present issue #44 metadata; excludes current writer absence, prior-step state, bank state, and release",
+      "evidence": [
+        {
+          "type": "merged-pilot",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/55"
+        },
+        {
+          "type": "merged-plan",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/56"
+        },
+        {
+          "type": "closed-unmerged-executor",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/57"
+        },
+        {
+          "type": "residual-issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44",
+          "state": "open"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
+    },
+    {
+      "claim_id": "humgeo.rescreen741.reearn",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical rescreen receipt superseded by the current native-runbook validation state.",
+      "superseded_by": [
+        "humgeo.ls_qc_ready"
+      ],
+      "value": "Live PR #43 remains merged as be18d12db835b3fab55043536910a134a1102504. Current issue #44 separately records 429 fingerprint-bound passing rows and a 332-row residual disposition. This preserves the bounded historical admission and residual split; it does not re-run per-item QC, establish current factory verdicts, or authorize the residual campaign.",
+      "scope": "historical PR #43 admission plus the separately tracked 332-row residual queue; excludes fresh per-item QC and execution authority",
+      "evidence": [
+        {
+          "type": "rescreen-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/43",
+          "merge_commit": "be18d12db835b3fab55043536910a134a1102504"
+        },
+        {
+          "type": "residual-issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/44",
+          "state": "open"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-08-27T08:48Z"
+    },
+    {
+      "claim_id": "humgeo.bank374",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "value": "Historical August 31 operator/build snapshot: the then-pinned operator receipt and build measurements are retained as dated evidence. They do not measure today\u2019s bank or the current final publication cut.",
+      "scope": "Historical operator/build snapshot only; no current bank, publication, or release credit",
+      "evidence": [
+        {
+          "type": "controller-execution-state",
+          "observed_at": "2026-08-28T14:46:48Z",
+          "sha256": "7b47ec6435d1e8b7b5ffff531edd6051111370580bc23ab0eb726b24c7dfeed0"
+        },
+        {
+          "type": "final-slot-dual-qc-receipt",
+          "observed_at": "2026-08-28T14:45:48Z",
+          "sha256": "02c18c45244e242729ab11c5b04719769d48f99a12a56893d204586b57d69e51"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_RECEIPT",
+      "observed_at": "2026-08-31T06:49:16Z",
+      "settled": true,
+      "settled_at": "2026-09-08T04:48:09Z",
+      "settlement_reason": "Terminal historical checkpoint on superseded bytes; original observation date retained. Current progression belongs to the primary course claim.",
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ]
+    },
+    {
+      "claim_id": "humgeo.review_surface.local",
+      "section": "HumGeo",
+      "status": "OBSERVED",
+      "value": "The August 31 offline-preview checkpoint established an offline review surface on its then-pinned bytes. It does not establish current final-cut validation, platform publication, or learner acceptance.",
+      "scope": "Historical offline-preview checkpoint only",
+      "evidence": [
+        {
+          "type": "landed-build-output",
+          "url": "https://github.com/ilmych/humgeo-build-outputs/commit/c0ec5ed8e4cf"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_EVENT",
+      "status_at": "2026-08-31T00:58:45Z",
+      "settled": true,
+      "settled_at": "2026-09-08T04:48:09Z",
+      "settlement_reason": "Terminal historical checkpoint on superseded bytes; original observation date retained. Current progression belongs to the primary course claim.",
+      "superseded_by": [
+        "humgeo.blueprint.audit"
+      ]
+    },
+    {
+      "claim_id": "humgeo.ls_qc_ready",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "value": "Current HumGeo learner-review readiness has not been earned in the reviewed publication plan. The final publication cut and exact readback precede cold QC and learner acceptance; historical offline-preview receipts do not establish those outcomes.",
+      "scope": "Current owner-plan prerequisites and available receipts; not a live platform or human-disposition check",
+      "evidence": [
+        {
+          "type": "controller-execution-state",
+          "observed_at": "2026-08-28T14:46:48Z",
+          "sha256": "7b47ec6435d1e8b7b5ffff531edd6051111370580bc23ab0eb726b24c7dfeed0",
+          "historical": true
+        },
+        {
+          "type": "dashboard-plan",
+          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html",
+          "historical": true
+        },
+        {
+          "type": "gate-2-3-review",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/63",
+          "historical": true
+        },
+        {
+          "type": "publisher-contract-follow-up",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/659#issuecomment-5381059146",
+          "historical": true
+        },
+        {
+          "type": "owner-direction",
+          "observed_at": "2026-08-22T04:07Z",
+          "scope": "Gate 4 opened and underway only",
+          "historical": true
+        },
+        {
+          "type": "gate-4-merge",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/846",
+          "merge_commit": "3c865669fb7df838bd31dc43197de09d63fcedcb",
+          "historical": true
+        },
+        {
+          "type": "gate-2-amendment-merge",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/64",
+          "merge_commit": "00b5926c41410f47dd48280c915e46422f16bbbe",
+          "historical": true
+        },
+        {
+          "type": "gate-3-source-accepted-review",
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/65",
+          "head": "71fddd538ba7bdca9a47b021a0f71d1d878959b3",
+          "merge_commit": "b56c26403cf15fa859a30a250e625cef39e3cfbb",
+          "delivery_package_sha256": "f72bf837dee99963751c30c5dc0323a7b31d4c67a8b090137fc825c3dac21ed4",
+          "historical": true
+        },
+        {
+          "type": "gate-4-source-rebind",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/847",
+          "merge_commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "profile_sha256": "9d50ae77c5b95d6617ff6e34c1039dc717876e5a49c61c7b4b3ce81abd6b5c91",
+          "source_capture_sha256": "48ddea2a9dd4cb334224c9d916cff12dc61e4419f7ff5f1e105d0ba46a8a4477",
+          "historical": true
+        },
+        {
+          "type": "gate-4-deploy",
+          "url": "https://github.com/InceptTrilogy/ap-one/actions/runs/32649699317",
+          "commit": "9582e3087798880d6c9cbfb54175c861741be27a",
+          "conclusion": "success",
+          "historical": true
+        },
+        {
+          "type": "terminal-receipt",
+          "location": "INCEPT/out/humgeo-gate5-offline-preview-seal-20260825/private-factory/factory-e2e-9da35978-20260827T011526Z/terminal-receipt.json",
+          "historical": true
+        },
+        {
+          "type": "residue-queue",
+          "location": "INCEPT/out/humgeo-gate5-offline-preview-seal-20260825/RESIDUE-REGENERATION-QUEUE-20260827.json",
+          "historical": true
+        },
+        {
+          "type": "current-lifecycle-claim",
+          "claim_id": "humgeo.blueprint.audit",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1036",
+          "observed_at": "2026-09-08T04:42:43Z"
+        }
+      ],
+      "evidence_access": "GITHUB+DASHBOARD_PLAN+OWNER_DIRECTION",
+      "status_at": "2026-09-08T04:42:43Z"
+    },
+    {
+      "claim_id": "humgeo.eoc",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "value": "EOC issue #28 remains open. The calibration report committed at current HumGeo main records FAIL. The live grader health endpoint reports availability at build 699cbdf7d9fd194f1e7c6b40672af3c7fef6f1c3; health does not establish calibration acceptance for that served build.",
+      "scope": "Current issue, committed calibration verdict, and live health readback; no fresh calibration run",
+      "evidence": [
+        {
+          "type": "eoc-calibration-issue",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/28",
+          "state": "open",
+          "historical": true
+        },
+        {
+          "type": "grader-health",
+          "url": "https://ap-grader.inceptstore.com/api/health",
+          "git_sha": "7d05d0251594e9424e1bf668d2b89eb281970a2d",
+          "observed_at": "2026-08-27T08:47Z",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/humgeo-rebuild/blob/f7c9d91838f4b8ba896986772767e095060ef1fd/manifests/eoc-calibration/report.json",
+          "observed_at": "2026-09-08T04:42:43Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/humgeo-rebuild/issues/28",
+          "observed_at": "2026-09-08T04:42:43Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://ap-grader.inceptstore.com/api/health",
+          "observed_at": "2026-09-08T04:42:43Z"
+        }
+      ],
+      "evidence_access": "PUBLIC_SERVICE+PRIVATE_GITHUB",
+      "status_at": "2026-09-08T04:42:43Z"
+    },
+    {
+      "claim_id": "humgeo.release",
+      "section": "HumGeo",
+      "status": "BLOCKED",
+      "value": "HumGeo broader enrollment and release remain unearned in the reviewed plan. Publication preparation has advanced, including merged PP100 #1036, but the final-cut, dark-publication readback, cold-QC and learner-acceptance chain must close before release. Historical dark publication does not establish current release readiness.",
+      "scope": "Current owner-plan release prerequisites; no current enrollment or learner-surface readback",
+      "evidence": [
+        {
+          "type": "current-lifecycle-claim",
+          "claim_id": "humgeo.blueprint.audit",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1036",
+          "observed_at": "2026-09-08T04:42:43Z"
+        }
+      ],
+      "evidence_access": "DASHBOARD_COMPONENT_CLAIM",
+      "status_at": "2026-09-08T04:42:43Z"
+    },
+    {
+      "claim_id": "apwh.sweep.pack",
+      "section": "APWH",
+      "status": "MISSING",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical missing sweep snapshot superseded by the current accepted-source ledger.",
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ],
+      "value": "MISSING: issue #48 remains closed and preserves a historical 933-item acceptance narrative, but the cited PR #9 and commit 1d59042235117bddbd0a2065baf2b2d68359c0a1 do not resolve in the current APWH remotes. Current canon also excludes that local ceremony from accepted-source proof. No current canonical serialized-bank receipt was identified, so the historical population is not re-dated as current.",
+      "scope": "historical 933-item serialized population and its current canonical resolvability; excludes accepted-source closure and learner serving",
+      "evidence": [
+        {
+          "type": "historical-issue-record",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48",
+          "state": "closed"
+        },
+        {
+          "type": "unresolved-canonical-ref",
+          "sha": "1d59042235117bddbd0a2065baf2b2d68359c0a1",
+          "result": "NOT_FOUND"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-27T08:49Z"
+    },
+    {
+      "claim_id": "apwh.qc933",
+      "section": "APWH",
+      "status": "MISSING",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical missing-QC snapshot superseded by the current accepted-source ledger.",
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ],
+      "value": "MISSING: the closed issue #48 comment reports two passing legs over 933 identities, but its cited merged ref no longer resolves in the current remote and the 2026-08-27 APWH canon assigns the local Faultless Bar campaign no publication-proof weight. Without a current canonical factory receipt, exact item agreement and acceptance remain historical assertions only.",
+      "scope": "historical 933-item acceptance receipt and current factory provenance; excludes accepted-source closure, QTI parity, and learner acceptance",
+      "evidence": [
+        {
+          "type": "historical-completion-record",
+          "url": "https://github.com/ilmych/apwh-blueprint-build/issues/48#issuecomment-5354633163"
+        },
+        {
+          "type": "current-canon-limit",
+          "location": "INCEPT/APWH-CANON-REQUIREMENTS.md",
+          "rule": "local 933-item ceremony carries no runbook row"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_INCEPT_CANON",
+      "status_at": "2026-08-27T08:49Z"
+    },
+    {
+      "claim_id": "apwh.pr791",
+      "section": "APWH",
+      "status": "BLOCKED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "The owner retired the Platform3 route for this greenfield course; the historical blocked verdict is retained without carrying it into the native-runbook state.",
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ],
+      "value": "BLOCKED: four validated APWH study-skills lessons wait for a Platform3 write window under open issue #591. The evidence-gated write is one of two owner-side levers on accepted source and may move A-210 plus A-203's length leg. It does not enter prior publication work or supply later lifecycle credit.",
+      "scope": "APWH study-skills placement authority and current issue disposition; excludes accepted-source closure and learner/reviewer visibility",
+      "evidence": [
+        {
+          "type": "closed-unmerged-pr",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/791",
+          "state": "closed",
+          "merged": false
+        },
+        {
+          "type": "placement-issue",
+          "url": "https://github.com/InceptTrilogy/ap-one/issues/591",
+          "state": "open"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-08-30T14:06Z"
+    },
+    {
+      "claim_id": "apwh.local_done",
+      "section": "APWH",
+      "status": "OBSERVED",
+      "value": "Historical retired marker: apwh.local_done supplies no course-completion credit. The implementation landings recorded below retain their original scope and dates. Current APWH progression is tracked by the primary course claim.",
+      "scope": "Terminal history of a retired local marker; no accepted-source, publication or learner completion",
+      "evidence": [
+        {
+          "type": "current-canon-limit",
+          "location": "INCEPT/APWH-CANON-REQUIREMENTS.md",
+          "rule": "local ceremonies eliminated from proof on 2026-08-27"
+        },
+        {
+          "type": "phase-0.2-source-capture",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
+          "state": "merged",
+          "merge_commit": "4fc7c055a0785d39d1698903d22a2d77613f330c"
+        },
+        {
+          "type": "phase-1-course-tree",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+          "state": "merged",
+          "head": "7dd28738439c17f66ddd1b7135720ce58167750a",
+          "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6"
+        }
+      ],
+      "evidence_access": "LOCAL_INCEPT_CANON+PRIVATE_GITHUB",
+      "observed_at": "2026-08-31T07:13:05Z",
+      "settled": true,
+      "settled_at": "2026-09-08T04:48:09Z",
+      "settlement_reason": "Terminal historical checkpoint on superseded bytes; original observation date retained. Current progression belongs to the primary course claim.",
+      "superseded_by": [
+        "apwh.blueprint.audit"
+      ]
+    },
+    {
+      "claim_id": "apwh.ls_qc_ready",
+      "section": "APWH",
+      "status": "BLOCKED",
+      "value": "APWH reviewer readiness remains unearned in the current plan. Final bank validation and QTI checks precede dark publication, cold QC and learner acceptance. The dated September 7 validation record has failed legs; the former local sprint marker and implementation merges do not establish reviewer acceptance.",
+      "scope": "Current plan and named validation receipt; no new live QC, human review or publication credit",
+      "evidence": [
+        {
+          "type": "phase-0.2-source-capture",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/917",
+          "state": "merged",
+          "historical": true
+        },
+        {
+          "type": "phase-1-course-tree",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/923",
+          "state": "merged",
+          "merge_commit": "10b1900c0453eda45917923c78c6a632eb84c8a6",
+          "historical": true
+        },
+        {
+          "type": "e3-wiring-change",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/916",
+          "state": "merged",
+          "merge_commit": "e2d920423f4b5878d9aa6212386ba533aac62d51",
+          "historical": true
+        },
+        {
+          "type": "phase-2-activity-pricing",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/930",
+          "state": "merged",
+          "merge_commit": "ec09709f021ef0937c8b7d2d19cc6315c900e305",
+          "historical": true
+        },
+        {
+          "type": "article-alternates-gap",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/issues/290",
+          "state": "open",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/992",
+          "observed_at": "2026-09-08T04:43:24Z"
+        }
+      ],
+      "evidence_access": "GITHUB+DASHBOARD_PLAN",
+      "status_at": "2026-09-08T04:43:24Z"
+    },
+    {
+      "claim_id": "apush.ledger.mixed",
+      "section": "APUSH",
+      "status": "OBSERVED",
+      "value": "The current committed article-acceptance ledger reports 49 ACCEPTED and 200 PENDING across 249 positions. Accepted positions split 36 legacy_dual_review and 13 server_strict. Its write policy remains build-only, with platform ingest, live wiring and rendering false; these counts do not establish native seating, learner serving, publication or release.",
+      "scope": "Current committed ledger metadata and write policy only",
+      "evidence": [
+        {
+          "type": "canonical-ledger",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase2/article-acceptance-ledger-v2-succ11/ledger.json",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d90138846ca8a584e2d60d8d54719e0f/phase2/article-acceptance-ledger-v2-succ11/ledger.json",
+          "observed_at": "2026-09-08T04:44:03Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-09-08T04:44:03Z"
+    },
+    {
+      "claim_id": "apush.generated_qc",
+      "section": "APUSH",
+      "status": "MISSING",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical missing generated-QC snapshot superseded by the current build-output state.",
+      "superseded_by": [
+        "apush.ls_qc_ready"
+      ],
+      "value": "MISSING: the stale dashboard row cites only an owner-direction sentence for 2,479 generation-QC candidates and provides no resolvable current factory receipt. Current canon preserves that number as bounded historical source evidence but explicitly does not treat it as native QTI, display, persisted-result, or accepted-source proof. This task did not locate a same-scope live verifier, so the count is not re-dated.",
+      "scope": "current factory provenance for the historical 2,479 generation-QC candidate assertion; excludes hosted-grader existence and native publication readiness",
+      "evidence": [
+        {
+          "type": "current-canon-limit",
+          "location": "INCEPT/APUSH-CANON-REQUIREMENTS.md",
+          "result": "bounded historical evidence only"
+        },
+        {
+          "type": "verifier-gap",
+          "status": "MISSING",
+          "reason": "no resolvable current factory receipt in the claim or canon row"
+        }
+      ],
+      "evidence_access": "LOCAL_INCEPT_CANON+DECLARED_EVIDENCE_GAP",
+      "status_at": "2026-08-27T08:50Z"
+    },
+    {
+      "claim_id": "apush.admissions",
+      "section": "APUSH",
+      "status": "OBSERVED",
+      "value": "The committed admission ledger remains 49 accepted and 200 pending. The latest published fleet checkpoint on open issue #9, dated August 31, reports position 69 terminal-failed and position 70 next, with the remaining serial wave and final acceptance-ledger rebuild outstanding. This is a dated fleet report, not a live job or learner-serving check.",
+      "scope": "Current ledger and latest published fleet checkpoint; no assertion that the old job is running now",
+      "evidence": [
+        {
+          "type": "classification-issue",
+          "url": "https://github.com/InceptTrilogy/incept-hole-filler/issues/81",
+          "state": "closed",
+          "historical": true
+        },
+        {
+          "type": "classification-merge",
+          "url": "https://github.com/InceptTrilogy/incept-hole-filler/pull/82",
+          "merge_commit": "b9631f575fa666b8fb3a9eebd027af8939e33d5c",
+          "historical": true
+        },
+        {
+          "type": "intake",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/89",
+          "state": "closed",
+          "historical": true
+        },
+        {
+          "type": "intake",
+          "url": "https://github.com/ilmych/incept-agent-intake/issues/90",
+          "state": "closed",
+          "historical": true
+        },
+        {
+          "type": "migrated-wrapper-merge",
+          "url": "https://github.com/ilmych/apush-build-outputs/pull/4",
+          "merge_commit": "c1be6fb19f5ce0bde5c592437749e1bb81628741",
+          "historical": true
+        },
+        {
+          "type": "manifest-and-kc-repairs",
+          "urls": [
+            "https://github.com/ilmych/apush-build-outputs/pull/7",
+            "https://github.com/ilmych/apush-build-outputs/pull/8"
+          ],
+          "state": "merged",
+          "historical": true
+        },
+        {
+          "type": "portable-runner-bindings",
+          "url": "https://github.com/ilmych/apush-course-build/pull/15",
+          "merge_commit": "0a9938ffee7435907a40fce7ad1b355d7704580a",
+          "historical": true
+        },
+        {
+          "type": "fleet-wave-position-58",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474017817",
+          "status": "TERMINAL_FAILED_POSITION_59_NEXT",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d90138846ca8a584e2d60d8d54719e0f/phase2/article-acceptance-ledger-v2-succ11/ledger.json",
+          "observed_at": "2026-09-08T04:44:03Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5477110630",
+          "observed_at": "2026-09-08T04:44:03Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-09-08T04:44:03Z"
+    },
+    {
+      "claim_id": "apush.seating",
+      "section": "APUSH",
+      "status": "BLOCKED",
+      "value": "Successor seating remains unproved by the reviewed sources. The current acceptance ledger is build-only and records platform ingest, live wiring and rendering false. Open issue #9\u2019s latest published checkpoint, dated August 31, leaves position 70 next and the final acceptance-ledger rebuild outstanding. No native seating, deployment or learner execution is established.",
+      "scope": "Current committed write policy and dated fleet checkpoint; no platform readback",
+      "evidence": [
+        {
+          "type": "reconciler-merge",
+          "url": "https://github.com/ilmych/apush-course-build/pull/6",
+          "merge_commit": "dab70a6ed7ef5105f2e6fcafc05b198617ff1d08",
+          "historical": true
+        },
+        {
+          "type": "canonical-ledger",
+          "url": "https://github.com/ilmych/apush-build-outputs/pull/4",
+          "historical": true
+        },
+        {
+          "type": "fleet-wave-position-58",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474017817",
+          "status": "TERMINAL_FAILED_POSITION_59_NEXT",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d90138846ca8a584e2d60d8d54719e0f/phase2/article-acceptance-ledger-v2-succ11/ledger.json",
+          "observed_at": "2026-09-08T04:44:03Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5477110630",
+          "observed_at": "2026-09-08T04:44:03Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-09-08T04:44:03Z"
+    },
+    {
+      "claim_id": "apush.ls_qc_ready",
+      "section": "APUSH",
+      "status": "IN_PROGRESS",
+      "value": "The available sources establish content preparation, not an LS reviewer handoff. The latest published fleet checkpoint, dated August 31, leaves the serial wave and final acceptance-ledger rebuild outstanding; current PIPELINE.md records publication and post-publication review as not yet started. An LS handoff or later lifecycle completion is not established.",
+      "scope": "Current repository records and latest published checkpoint; not a live worker-status or LS-disposition check",
+      "evidence": [
+        {
+          "type": "pull-request",
+          "url": "https://github.com/ilmych/apush-course-build/pull/6",
+          "historical": true
+        },
+        {
+          "type": "reconciliation-manifest",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "historical": true
+        },
+        {
+          "type": "morning-report",
+          "location": "INCEPT/out/apush-overnight-20260827/MORNING-REPORT.md",
+          "historical": true
+        },
+        {
+          "type": "fleet-wave-position-58",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5474017817",
+          "status": "TERMINAL_FAILED_POSITION_59_NEXT",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-course-build/issues/9#issuecomment-5477110630",
+          "observed_at": "2026-09-08T04:44:03Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-course-build/blob/deeaf0c190d8905c7a5efe3cb612b899ca190f3c/PIPELINE.md#L21",
+          "observed_at": "2026-09-08T04:44:03Z"
+        }
+      ],
+      "evidence_access": "GITHUB+OWNER_DIRECTION+DASHBOARD_PLAN",
+      "status_at": "2026-09-08T04:44:03Z"
+    },
+    {
+      "claim_id": "apush.platform",
+      "section": "APUSH",
+      "status": "MISSING",
+      "value": "The current blueprint manifest records live_platform_writes as NOT_PERFORMED and generation_authorized=false. Current PIPELINE.md marks publication and post-TimeBack review as not yet started. The declared publish_evidence_bundle path returns HTTP 404 at the current build-output ref. No learner-surface verification receipt was obtained.",
+      "scope": "Repository evidence gap only; no live TimeBack endpoint was probed; publication, learner visibility and release remain unproved",
+      "evidence": [
+        {
+          "type": "canonical-ledger",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d901/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "write_policy": "build-only",
+          "historical": true
+        },
+        {
+          "type": "learner-verifier-gap",
+          "status": "MISSING",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d90138846ca8a584e2d60d8d54719e0f/phase1/blueprint-reconciliation/reconciliation_manifest.json",
+          "observed_at": "2026-09-08T04:44:03Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/ilmych/apush-course-build/blob/deeaf0c190d8905c7a5efe3cb612b899ca190f3c/PIPELINE.md#L21",
+          "observed_at": "2026-09-08T04:44:03Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+DECLARED_EVIDENCE_GAP",
+      "status_at": "2026-09-08T04:44:03Z"
+    },
+    {
+      "claim_id": "psych.content",
+      "section": "Psych",
+      "status": "OBSERVED",
+      "value": "Current main records completed content and metadata preparation across Units 0\u20135. Its README reports 2,042 MCQs and 15 served FRQs; these are source-reported totals, not a fresh corpus census. Publication artifacts record partial Units 0\u20131 publication. Full-course acceptance is not established.",
+      "scope": "Current committed preparation records and source-reported totals; fresh complete-corpus census UNMEASURED",
+      "evidence": [
+        {
+          "type": "video-manifest-fix",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/49",
+          "historical": true
+        },
+        {
+          "type": "video-manifest-closure",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/48",
+          "historical": true
+        },
+        {
+          "type": "course-main",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b",
+          "historical": true
+        },
+        {
+          "type": "unit-0-video-release",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/releases/tag/unit-0-videos",
+          "published_at": "2026-08-30T13:53:10Z",
+          "clips": 12,
+          "records_covered": 11,
+          "records_total": 22,
+          "historical": true
+        },
+        {
+          "type": "retrieved-item-check",
+          "observed_at": "2026-08-30T05:13Z",
+          "checked": 1709,
+          "live_by_id": 910,
+          "content_drift": 2,
+          "unmeasured_behind_unpublished_filter": 799,
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/README.md#L15",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_0/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_1/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-09-08T04:44:16Z"
+    },
+    {
+      "claim_id": "psych.bank",
+      "section": "Psych",
+      "status": "MISSING",
+      "value": "Current complete-bank factory-admission receipt coverage is UNMEASURED; the older zero-receipts assertion is not refreshed. Committed Units 0\u20131 live-QC receipts cover their named subsets, while the dated course-QC report fails. Neither proves complete-bank admission.",
+      "scope": "Committed subset QC evidence only; no complete-bank coverage oracle was run",
+      "evidence": [
+        {
+          "type": "open-frq-half",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/20",
+          "historical": true
+        },
+        {
+          "type": "grader-readiness-flag",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/blob/081af82925d2ce5c30ecd820aba151109a8d7fb4/engine/grader_api/calibration/thresholds.py#L194-L222",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_0/reports/live_qc_unit_0.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_1/reports/live_qc_unit_1.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/course_qc/qc_summary.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-09-08T04:44:16Z"
+    },
+    {
+      "claim_id": "psych.u5",
+      "section": "Psych",
+      "status": "OBSERVED",
+      "value": "The current Unit 5 build receipt records 457 MCQs, 364 question stimuli, three served FRQs and three reserve FRQs; its tree_pushed flag is false. Issue #51 is CLOSED as overtaken: claim rules landed, while the bounded generation route did not and must be revisited if generation resumes. This grants no live Unit 5 acceptance.",
+      "scope": "Exact-ref Unit 5 build receipt and issue disposition; no current learner-surface validation",
+      "evidence": [
+        {
+          "type": "remaining-u5-route",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51",
+          "historical": true
+        },
+        {
+          "type": "video-manifest-closure",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/48",
+          "historical": true
+        },
+        {
+          "type": "job-id-preflight",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/53",
+          "historical": true
+        },
+        {
+          "type": "renderer-environment",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/52",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_5/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51",
+          "observed_at": "2026-09-08T04:44:16Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "observed_at": "2026-09-08T04:44:16Z"
+    },
+    {
+      "claim_id": "psych.ebq",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical zero-yield snapshot superseded by the landed Unit 5 assessment set.",
+      "superseded_by": [
+        "psych.u5"
+      ],
+      "status_at": "2026-08-27T08:45Z",
+      "value": "The exact historical EBQ canary receipt was opened and hash-bound this session: it records two admitted items, zero closed buckets, and no job IDs. Live GitHub readback confirms factory issue #248 closed through merged PR #249, while current factory main is 9da35978d34f781fb2f0692235564aae2fccd078. The engine-fix evidence does not prove current served-bank admission or QC, and the missing stable job identity prevents the required direct factory service readback. The old EBQ milestone therefore remains BLOCKED, with no retry or generation action authorized.",
+      "scope": "historical EBQ canary receipt and factory engine-fix provenance; excludes current served-bank contents, current item QC, accepted-source closure, and publication readiness",
+      "evidence": [
+        {
+          "type": "receipt-hardening-audit",
+          "url": "https://github.com/joshuadurey-del/ap-ss-evidence/blob/fe839ffc0caf59fe17868c0e64f09c1b90e60bfb/evidence/recovery/20260819-course-recovery-audit/codex/DAMAGE-REGISTER.jsonl",
+          "record": "PS-002"
+        },
+        {
+          "type": "opened-local-receipt",
+          "location": "~/.incept/day-20260811/psych-topup/verify-after-23.json",
+          "sha256": "71df77ca1dc8b060cb23cfdab9296c56b4f4c0b34e4525c9866a3a3834ecea09",
+          "observed_at": "2026-08-27T08:45Z"
+        },
+        {
+          "type": "factory-engine-fix",
+          "url": "https://github.com/InceptTrilogy/incept-test-builder/pull/249",
+          "merge_commit": "ba05c78236f40137178d18009a6ebb4f82cab5fa"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+SCOPED_LOCAL_RECEIPT"
+    },
+    {
+      "claim_id": "psych.provenance",
+      "section": "Psych",
+      "status": "OBSERVED",
+      "settled": true,
+      "settled_at": "2026-08-30T04:19Z",
+      "settlement_reason": "Historical provenance snapshot superseded by the current course-main claim.",
+      "superseded_by": [
+        "psych.blueprint.audit"
+      ],
+      "observed_at": "2026-08-27T08:45Z",
+      "value": "Live GitHub API readback at Psychology main 16ee34846fe539e2ee7d5c21a3f40fc1a49082cb confirms issue #14 remains closed. The factory-owner comment states that the served bank was produced through the same generation API exposed by Content Factory and that generation includes that API's QC. This establishes the origin asserted for the historical 2026-08-16 1,105-bucket scan only; current bank counts, current per-item QC, accepted-source admission, and publication readiness remain unmeasured.",
+      "scope": "factory-generation origin of the historical 2026-08-16 served-bank scan; excludes current bank contents/counts, current per-item QC, accepted-source closure, and publication readiness",
+      "evidence": [
+        {
+          "type": "course-repository",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/16ee34846fe539e2ee7d5c21a3f40fc1a49082cb"
+        },
+        {
+          "type": "factory-owner-provenance",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/14",
+          "observed_at": "2026-08-27T08:45Z",
+          "state": "closed"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB"
+    },
+    {
+      "claim_id": "psych.ls_qc_ready",
+      "section": "Psych",
+      "status": "BLOCKED",
+      "value": "The committed course-QC report records FAIL for its partial-course scope. Its generated_at is 2026-09-06T11:02:05.110414, with no timezone declared; it checks 536 unique questions and records 263 severe-failed items and 20 LLM cache hits. It is not a cold full-course acceptance receipt. Current full-course learner acceptance remains UNMEASURED.",
+      "scope": "Dated committed partial-course QC report, not a fresh live QC run or full-course human disposition",
+      "evidence": [
+        {
+          "type": "remaining-accepted-source-mechanism",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/issues/51",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/course_qc/qc_summary.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB",
+      "status_at": "2026-09-08T04:44:16Z"
+    },
+    {
+      "claim_id": "psych.registration",
+      "section": "Psych",
+      "status": "OBSERVED",
+      "value": "Committed publication receipts record a pinned course and Units 0\u20131 tree pushes, with matching partial tree readback. This supersedes the README\u2019s publication-not-started prose. Current platform state, enrollment state and complete-course publication remain UNMEASURED.",
+      "scope": "Exact-ref historical publication and partial tree-readback receipts only; no fresh platform probe",
+      "evidence": [
+        {
+          "type": "course-repository",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/tree/037cc168b43b",
+          "historical": true
+        },
+        {
+          "type": "canon-ledger",
+          "location": "INCEPT/PSYCH-CANON-REQUIREMENTS.md",
+          "runbook_sha256": "32d079c2bb98f536fa525394772c1dd7c6bed334821d4bb17d2125e5b851bb1d",
+          "historical": true
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/publish_audit.jsonl",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/live_tree_all.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_0/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        },
+        {
+          "type": "current-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/unit_1/publish_tree.json",
+          "observed_at": "2026-09-08T04:44:16Z"
+        }
+      ],
+      "evidence_access": "PRIVATE_GITHUB+LOCAL_CANON_LEDGER",
+      "observed_at": "2026-09-08T04:44:16Z"
+    }
+  ]
+}

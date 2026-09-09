@@ -1,0 +1,118 @@
+{
+ "schema_version": 2,
+ "generated_utc": "2026-09-08T04:48:09Z",
+ "label": "Original publication runbook -> ASAP edition (2026-09-01)",
+ "rule": "Historical mappings preserve evidence scope and grant no current ASAP phase credit.",
+ "stage_ids": [
+  "p0",
+  "p12",
+  "p3",
+  "p4",
+  "p5",
+  "p6",
+  "p7",
+  "p8"
+ ],
+ "counts": {
+  "total": 12
+ },
+ "rows": [
+  {
+   "old_id": "p0",
+   "old_name": "Establish authority",
+   "new_ids": [
+    "p0"
+   ],
+   "disposition": "cut"
+  },
+  {
+   "old_id": "p1",
+   "old_name": "Map the complete course tree",
+   "new_ids": [
+    "p12"
+   ],
+   "disposition": "combined"
+  },
+  {
+   "old_id": "p2",
+   "old_name": "Price activities",
+   "new_ids": [
+    "p12"
+   ],
+   "disposition": "combined"
+  },
+  {
+   "old_id": "p3",
+   "old_name": "Generate hosted assets and QTI",
+   "new_ids": [
+    "content",
+    "p3"
+   ],
+   "disposition": "split; only bank/QTI gates remain in p3"
+  },
+  {
+   "old_id": "p4",
+   "old_name": "Seal the publication plan",
+   "new_ids": [
+    "p4"
+   ],
+   "disposition": "cut"
+  },
+  {
+   "old_id": "p5",
+   "old_name": "Capture live all-absent state",
+   "new_ids": [
+    "p5"
+   ],
+   "disposition": "folded"
+  },
+  {
+   "old_id": "p6",
+   "old_name": "Dark publication and exact replay",
+   "new_ids": [
+    "p5"
+   ],
+   "disposition": "folded"
+  },
+  {
+   "old_id": "p7",
+   "old_name": "Owner-controlled canary enrollment",
+   "new_ids": [
+    "p7"
+   ],
+   "disposition": "folded"
+  },
+  {
+   "old_id": "p8",
+   "old_name": "Private activation",
+   "new_ids": [
+    "p8"
+   ],
+   "disposition": "folded"
+  },
+  {
+   "old_id": "p9.1-9.5",
+   "old_name": "Fresh-learner acceptance",
+   "new_ids": [
+    "p7"
+   ],
+   "disposition": "folded"
+  },
+  {
+   "old_id": "p9.6",
+   "old_name": "Broader enrollment",
+   "new_ids": [
+    "p8"
+   ],
+   "disposition": "folded"
+  },
+  {
+   "old_id": "p10",
+   "old_name": "Repair and rollback",
+   "new_ids": [
+    "p6"
+   ],
+   "disposition": "folded into the gauntlet loop"
+  }
+ ]
+}

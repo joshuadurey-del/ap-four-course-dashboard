@@ -1,0 +1,79 @@
+# Private-repository activity automation
+
+Phase A polls the private source repositories every ten minutes and on
+`repository_dispatch: course-event`. It reads with a classic owner PAT, keeps an
+opaque hashed cursor in this repository, appends derived public-safe activity rows
+to `updates.json`, and projects the newest typed and repository events into the
+matching primary claim in `data.json`. The overview and course pages render that
+shared projection. Every row carries a bounded public writer attestation:
+`repository-event automation`, `INCEPT event projection`, or `dashboard curation`.
+Titles, bodies, commit
+messages, webhook bodies, tokens, and receipt paths never enter this repository.
+The monitored private-repository inventory is an Actions secret.
+
+Required Actions secrets:
+
+- `SOURCE_REPO_READ_TOKEN` — owner-minted classic PAT with `repo` read access.
+- `SOURCE_REPOSITORY_INVENTORY_JSON` — `dashboard-source-inventory/v1` JSON
+  mapping private `owner/repo` names to `humgeo`, `apwh`, `apush`, `psych`, or
+  `cross`.
+- `LOCAL_EVENT_DISPATCH_SECRET` — HMAC secret shared only with the local INCEPT
+  appender through macOS Keychain.
+
+Set each secret interactively; never place its value on a command line:
+
+```sh
+gh secret set SOURCE_REPO_READ_TOKEN -R joshuadurey-del/ap-four-course-dashboard
+gh secret set SOURCE_REPOSITORY_INVENTORY_JSON -R joshuadurey-del/ap-four-course-dashboard
+```
+
+After all three secrets exist, enable the workflow:
+
+```sh
+gh variable set DASHBOARD_AUTOMATION_ENABLED --body true -R joshuadurey-del/ap-four-course-dashboard
+```
+
+Set that variable to `false` for the kill switch. The workflow explicitly
+requests a legacy Pages build after each verified dashboard push. Serving
+completes asynchronously and is verified separately.
+
+The first event-stream run publishes the newest verified event per course and
+baselines older observed event IDs. Later runs publish unseen events, capped at
+40 rows per run; overflow remains unprocessed for the next run. Single-writer
+workflow concurrency, event-ID cursors, and exact-row dedup prevent duplicates. Actual
+event-to-decision latency is recorded by each run; the ten-minute schedule is a
+target, not a promise.
+
+Course pages keep repository activity and local-log freshness separate. Repository
+events include pushes, pull-request actions/reviews, issue actions/comments,
+releases, other GitHub repository events, and completed workflow runs. Shared-repo
+classification uses private metadata but publishes only the derived course label
+and safe event fields.
+
+Local landings use authenticated `repository_dispatch: course-event`. The
+receipt-free signed payload contract is fixed in `automation/ADR.md`; hashed row
+IDs are persisted with the dashboard cursor. Local `backfill` rows baseline as
+NOOP. A semantic update commits `updates.json` and `data.json` in the same
+transaction; the overview and course pages then render the same attested event.
+The formal lifecycle fields remain manual. The dashboard snapshot uses evidence
+time, not workflow or commit time. On Actions, precommit proves the formal claim
+bytes are unchanged and permits only `snapshot`, `current_event`, and
+`repository_event`; local claim curation still runs the full claims linter.
+
+Phase B replaces `SOURCE_REPO_READ_TOKEN` repo by repo with short-lived,
+read-only GitHub App installation tokens. External real-time webhook ingress is
+not required and remains separately gated.
+
+The needs-human strip uses the existing signed `course-event` dispatch corridor,
+not a new ingress. `needs_human.py add`, `resolve`, and `project` send the exact
+public projection after writing it. The serialized receiver accepts newer documents,
+ignores older redeliveries, and fails closed on equal-timestamp conflicts.
+
+For recovery, a local dashboard update can still validate and fold the projection:
+
+```sh
+python3 automation/poll_repositories.py fold-needs-human --source "$INCEPT_ZONE/needs-human.public.json"
+```
+
+The source ledger and private details never enter this repository. A missing or stale
+projection is visible as a typed UI hold; no background copier or new event host exists.
