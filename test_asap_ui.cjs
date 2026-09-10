@@ -23,9 +23,14 @@ const evidenceRow = {value:'0 / 10 accepted',detail:'Fixture inventory only.',ne
 data.population_coverage = {schema:'population-evidence/v1',courses:{apwh:{Practice:evidenceRow}}};
 assert.equal(populationRows(data,'apwh',['Practice'],now)[0].value,'0 / 10 accepted');
 assert.equal(populationRows(data,'humgeo',['Practice'],now)[0].measured,false,'No cross-course evidence');
+for (const id of ids) for (const label of ['Train Your Eye','Embedded checks','Unit assessments']) {
+  assert.deepEqual(populationRows(data,id,[label],now)[0],{label,measured:false,reporting_status:'NOT_REPORTED',course_status:'NOT_ASSESSED'});
+}
+assert.equal(populationRows({population_coverage:{schema:'population-evidence/v1',courses:{humgeo:{Practice:{reporting_status:'NOT_REPORTED',course_status:'NOT_ASSESSED'}}}}},'humgeo',['Practice'],now)[0].reporting_status,'NOT_REPORTED');
 assert.equal(populationRows(data,'apwh',['Practice'],now+48*3600000)[0].stale,true);
 for (const delta of [{evidence:[]},{evidence:[null]},{evidence:[{url:'javascript:alert(1)',sha256:'b'.repeat(64)}]},{observed_at:'bad'},{observed_at:new Date(now+3600000).toISOString()}]) {
   assert.equal(populationRows({population_coverage:{schema:'population-evidence/v1',courses:{apwh:{Practice:{...evidenceRow,...delta}}}}},'apwh',['Practice'],now)[0].measured,false);
+  assert.equal(populationRows({population_coverage:{schema:'population-evidence/v1',courses:{apwh:{Practice:{...evidenceRow,...delta}}}}},'apwh',['Practice'],now)[0].reporting_status,'INVALID_EVIDENCE');
 }
 const processValue = { ...generated, courses: Object.fromEntries(data.claims.map((claim, index) => [ids[index], {
   ...claim.process_position, detail: claim.value, as_of: stamp,
@@ -99,6 +104,9 @@ async function browserCheck() {
     assert.equal(await page.locator('.population-recorded').count(), 1);
     assert.match(await page.locator('.population-recorded').textContent(), /0 \/ 10 accepted/);
     assert.equal(await page.locator('.population-pending').count(), generated.population_scope.length-1);
+    assert.equal(await page.locator('.population-coverage [data-reporting-status="NOT_REPORTED"]').count(),generated.population_scope.length-1);
+    assert(!(await page.locator('.population-coverage').textContent()).includes('Audit pending'));
+    assert.match(await page.locator('.population-pending').first().textContent(),/no finding about course completion/);
     assert.match(await page.locator('.asap-unassigned').textContent(), /APUSH/);
     await page.locator('#asap-align').focus(); await page.keyboard.press('Enter');
     assert.deepEqual(await visible(), ['humgeo', 'apush']);

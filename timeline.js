@@ -152,11 +152,12 @@ const asapPosition = (course, stages) => {
 
 const populationRows = (data, courseId, labels, now = Date.now()) => labels.map(label => {
   const row = data?.population_coverage?.schema === 'population-evidence/v1' ? data.population_coverage.courses?.[courseId]?.[label] : null;
+  if (!row || row.reporting_status === 'NOT_REPORTED') return { label, measured: false, reporting_status: 'NOT_REPORTED', course_status: 'NOT_ASSESSED' };
   const valid = row && ['value', 'detail', 'next_step', 'level'].every(key => typeof row[key] === 'string' && row[key].trim()) &&
     Number.isFinite(parsedTime(row.observed_at)) && parsedTime(row.observed_at) <= now + 300000 &&
     Array.isArray(row.evidence) && row.evidence.length && row.evidence.every(e =>
       e && typeof e.url === 'string' && /^https:\/\/github\.com\/[^/]+\/[^/]+\/blob\/[a-f0-9]{40}\//.test(e.url) && /^[a-f0-9]{64}$/.test(e.sha256));
-  return valid ? { ...row, label, measured: true, stale: now - parsedTime(row.observed_at) > FRESHNESS_LIMIT_MS } : { label, measured: false };
+  return valid ? { ...row, label, measured: true, reporting_status: 'RECORDED', stale: now - parsedTime(row.observed_at) > FRESHNESS_LIMIT_MS } : { label, measured: false, reporting_status: 'INVALID_EVIDENCE', course_status: 'NOT_ASSESSED' };
 });
 
 const renderPopulationCoverage = (processValue, now) => {
@@ -170,7 +171,7 @@ const renderPopulationCoverage = (processValue, now) => {
   const summary = make('p', 'population-summary'); summary.setAttribute('role', 'status');
   const table = make('table', 'asap-coverage-table');
   const caption = make('caption'); const head = make('thead'); const headings = make('tr');
-  ['Population', 'Recorded evidence', 'Remaining work'].forEach(text => { const cell = make('th', '', text); cell.scope = 'col'; headings.append(cell); });
+  ['Population', 'Recorded evidence', 'Evidence follow-up'].forEach(text => { const cell = make('th', '', text); cell.scope = 'col'; headings.append(cell); });
   head.append(headings); const body = make('tbody'); table.append(caption, head, body);
   const scroll = make('div', 'asap-table-scroll'); scroll.append(table);
   const draw = () => {
@@ -178,13 +179,16 @@ const renderPopulationCoverage = (processValue, now) => {
     const rows = populationRows(AP4_DASHBOARD.data, select.value, processValue.population_scope, now);
     const measured = rows.filter(row => row.measured).length;
     caption.textContent = COURSE_IDENTITIES.find(course => course.id === select.value).label;
-    summary.textContent = `${measured} of ${rows.length} populations have linked source evidence. Counts describe the named source or receipt, not whole-course acceptance or a fresh live check.`;
+    summary.textContent = `${measured} of ${rows.length} populations have linked source evidence. This measures dashboard reporting, not course completion. Unreported rows are dashboard gaps; recorded counts retain their named source or receipt scope.`;
     body.replaceChildren();
     rows.forEach(row => {
       const tr = make('tr', row.measured ? 'population-recorded' : 'population-pending');
+      tr.dataset.reportingStatus = row.reporting_status;
       const name = make('th', '', row.label); name.scope = 'row'; tr.append(name);
       if (!row.measured) {
-        const pending = make('td', '', 'Audit pending · match the required population to its native inventory and acceptance receipt.');
+        const pending = make('td', '', row.reporting_status === 'NOT_REPORTED'
+          ? 'Not reported in dashboard · no finding about course completion. Connect the native source and acceptance receipt.'
+          : 'Dashboard evidence needs correction · no course finding can be drawn from this row.');
         pending.colSpan = 2; tr.append(pending);
       } else {
         const value = make('td'); value.append(make('strong', '', row.value));
