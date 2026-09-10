@@ -53,3 +53,5 @@ NOOP. A malformed local log is a typed
 Phase B replaces the classic read PAT with short-lived read-only installation
 tokens as repository owners install the public GitHub App. An external webhook
 receiver is optional and remains separately gated.
+
+Addendum, 2026-09-10 (owner request: everything tied to live repositories and a Sync control): extend the existing authenticated Actions worker with configured source-file measurements. The public projection is restricted to `population_coverage` and `source_sync`, plus its fixed updates entry. The precommit gate validates this projection before excluding those fields from formal-claim comparison. No claim status, original claim date, course stage or acceptance verdict is updated by this sync. The existing private-to-public split is bridged through a separately verified dashboard writer credential; no new web service, browser token, source workflow or daemon.

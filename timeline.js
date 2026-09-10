@@ -157,7 +157,7 @@ const populationRows = (data, courseId, labels, now = Date.now()) => labels.map(
     Number.isFinite(parsedTime(row.observed_at)) && parsedTime(row.observed_at) <= now + 300000 &&
     Array.isArray(row.evidence) && row.evidence.length && row.evidence.every(e =>
       e && typeof e.url === 'string' && /^https:\/\/github\.com\/[^/]+\/[^/]+\/blob\/[a-f0-9]{40}\//.test(e.url) && /^[a-f0-9]{64}$/.test(e.sha256));
-  return valid ? { ...row, label, measured: true, reporting_status: 'RECORDED', stale: now - parsedTime(row.observed_at) > FRESHNESS_LIMIT_MS } : { label, measured: false, reporting_status: 'INVALID_EVIDENCE', course_status: 'NOT_ASSESSED' };
+  return valid ? { ...row, label, measured: true, reporting_status: 'RECORDED', stale: now - parsedTime(row.observed_at) > FRESHNESS_LIMIT_MS || (row.sync_status && row.sync_status !== 'CHECKED') } : { label, measured: false, reporting_status: 'INVALID_EVIDENCE', course_status: 'NOT_ASSESSED' };
 });
 
 const renderPopulationCoverage = (processValue, now) => {
@@ -180,6 +180,8 @@ const renderPopulationCoverage = (processValue, now) => {
     const measured = rows.filter(row => row.measured).length;
     caption.textContent = COURSE_IDENTITIES.find(course => course.id === select.value).label;
     summary.textContent = `${measured} of ${rows.length} populations have linked source evidence. This measures dashboard reporting, not course completion. Unreported rows are dashboard gaps; recorded counts retain their named source or receipt scope.`;
+    const sync = AP4_DASHBOARD.data?.source_sync;
+    if (sync) summary.textContent += ` Last repository check: ${snapshotLabel(sync.checked_at)}. Counts cover configured files only; newer successors require their native mapping.`;
     body.replaceChildren();
     rows.forEach(row => {
       const tr = make('tr', row.measured ? 'population-recorded' : 'population-pending');
@@ -190,11 +192,15 @@ const renderPopulationCoverage = (processValue, now) => {
           ? 'Not reported in dashboard · no finding about course completion. Connect the native source and acceptance receipt.'
           : 'Dashboard evidence needs correction · no course finding can be drawn from this row.');
         pending.colSpan = 2; tr.append(pending);
+        const sync = AP4_DASHBOARD.data?.source_sync;
+        const repos = AP4_DASHBOARD.data?.population_coverage?.courses?.[select.value]?.[row.label]?.source_repositories || [];
+        repos.forEach(repo => { const ref = sync?.repositories?.[repo]; if (/^[a-f0-9]{40}$/.test(ref?.sha)) { const a = make('a', 'population-source', `${repo} @ ${ref.sha.slice(0, 8)} ↗`); a.href = `https://github.com/${repo}/tree/${ref.sha}`; pending.append(a); } });
       } else {
         const value = make('td'); value.append(make('strong', '', row.value));
         value.append(make('span', 'population-evidence-kind', `${row.level}${row.stale ? ' · refresh needed' : ''}`));
         const details = make('details'); details.append(make('summary', '', 'Scope & source'), make('p', '', row.detail));
         details.append(make('p', '', `Source read: ${snapshotLabel(row.observed_at)}`));
+        if (row.sync_status && row.sync_status !== 'CHECKED') details.append(make('p', '', 'Latest sync could not confirm this row. Showing its last recorded evidence; inspect the workflow for the current failure.'));
         row.evidence.forEach((e, i) => { const link = make('a', 'population-source', `Evidence ${i + 1} ↗`); link.href = e.url; details.append(link); });
         value.append(details); tr.append(value, make('td', '', row.next_step));
       }
@@ -503,7 +509,32 @@ globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState,
     .then(value => renderNeedsHuman(needsRoot, validateNeedsHuman(value), Date.now()))
     .catch(() => renderNeedsHuman(needsRoot, validateNeedsHuman(null), Date.now()))
     .finally(() => { needsRefresh = null; }));
-  AP4_DASHBOARD.refresh = () => AP4_DASHBOARD.ready = refreshState();
+  const syncBar = make('section', 'source-sync-bar');
+  syncBar.setAttribute('aria-label', 'Repository synchronization');
+  const syncLink = make('a', 'source-sync-link', 'Sync sources ↗');
+  syncLink.href = 'https://github.com/InceptTrilogy/ap-four-course-dashboard/actions/workflows/dashboard-repo-poll.yml';
+  syncLink.target = '_blank'; syncLink.rel = 'noopener';
+  syncLink.title = 'Open GitHub, then choose Run workflow. Requires repository write access.';
+  const refreshButton = make('button', 'source-refresh', 'Refresh results'); refreshButton.type = 'button';
+  const syncStatus = make('span', 'source-sync-status'); syncStatus.setAttribute('role', 'status');
+  syncBar.append(syncLink, refreshButton, syncStatus);
+  const help = make('small', '', 'Sync opens GitHub → Run workflow. Refresh loads the published result. Source counts do not prove learner acceptance.');
+  syncBar.append(help); document.querySelector('main')?.prepend(syncBar);
+  const showSync = () => {
+    const sync = AP4_DASHBOARD.data?.source_sync;
+    const date = parsedTime(sync?.checked_at);
+    syncStatus.textContent = AP4_DASHBOARD.errors.length ? 'Dashboard refresh incomplete. Try again or open the workflow.' :
+      !Number.isFinite(date) || date > Date.now() + 300000 ? 'No live-source sync recorded yet.' :
+      `Sources checked ${snapshotLabel(sync.checked_at)}${sync.status === 'PARTIAL' ? ' · some checks failed' : ''}${Date.now() - date > 3600000 ? ' · refresh needed' : ''}.`;
+  };
+  document.addEventListener('ap4-state-changed', showSync);
+  AP4_DASHBOARD.refresh = () => AP4_DASHBOARD.ready = Promise.all([refreshState(), refreshNeedsHuman()]).then(() => AP4_DASHBOARD);
+  refreshButton.addEventListener('click', async () => {
+    refreshButton.disabled = true; syncStatus.textContent = 'Loading published results…';
+    try { await AP4_DASHBOARD.refresh(); showSync(); }
+    catch { syncStatus.textContent = 'Refresh failed. Published evidence has not been confirmed.'; }
+    finally { refreshButton.disabled = false; }
+  });
   AP4_DASHBOARD.refresh(); void refreshNeedsHuman();
   const refreshOnReturn = () => {
     if (!document.hidden) { AP4_DASHBOARD.refresh(); void refreshNeedsHuman(); }

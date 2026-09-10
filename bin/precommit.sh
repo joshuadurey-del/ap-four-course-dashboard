@@ -116,6 +116,8 @@ def load(spec):
 
 def formal(document):
     document.pop('snapshot', None)
+    document.pop('source_sync', None)
+    document.pop('population_coverage', None)
     for claim in document.get('claims', []):
         if claim.get('claim_id') in {
             'humgeo.blueprint.audit', 'apwh.blueprint.audit',
@@ -125,8 +127,14 @@ def formal(document):
             claim.pop('repository_event', None)
     return document
 
+import sys
+sys.path.insert(0, 'automation')
+from sync_sources import validate_projection
+before, after = load('HEAD:data.json'), load(':data.json')
+if before.get('source_sync') != after.get('source_sync') or before.get('population_coverage') != after.get('population_coverage'):
+    validate_projection(after)
 assert formal(load('HEAD:data.json')) == formal(load(':data.json')), \
-    'automation may update only snapshot/current_event/repository_event'
+    'automation may update only validated source projection and snapshot/current_event/repository_event'
 print('CLAIMS OK: automation changed display projection only; formal claims are byte-identical')
 PY
 elif [ ! -f "$LINT" ]; then

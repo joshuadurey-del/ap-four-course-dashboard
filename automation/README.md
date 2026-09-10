@@ -77,3 +77,15 @@ python3 automation/poll_repositories.py fold-needs-human --source "$INCEPT_ZONE/
 
 The source ledger and private details never enter this repository. A missing or stale
 projection is visible as a typed UI hold; no background copier or new event host exists.
+
+## Live source sync (September 10, 2026)
+
+The dashboard's **Sync sources** control opens the private [Sync live course sources workflow](https://github.com/InceptTrilogy/ap-four-course-dashboard/actions/workflows/dashboard-repo-poll.yml). Sign in to GitHub and select **Run workflow** on main. **Refresh results** then reloads the public site's published JSON, including the check timestamp and source revisions. It does not itself dispatch a job. GitHub may delay scheduled runs; this is an on-demand snapshot, not a streaming feed.
+
+The existing ten-minute workflow reads remote main once per configured repository, fetches source files at those immutable SHAs, and rechecks heads before recording a successful sync. It uses the existing source read credential. `sync_sources.py` produces only reviewed inventory summaries and hashes; source bodies stay in memory. Every mapped row retains a direct source URL. Failure preserves the old value/date and labels the failed check. Unmapped populations link to their source repository and remain mapping gaps. This is not an exhaustive search for new native schemas or successor ledgers.
+
+Claims with an exact file hash are compared with current bytes separately from their formal status. Claims lacking a mapped verifier stay explicitly unverified. Identical source bytes do not renew QC, a receipt date, a stage, or learner acceptance. Historical calibration, acceptance-ledger and Unit 3 receipts retain their named scope. No source repository or platform is mutated.
+
+The same serialized job updates the private dashboard, then uses `EVIDENCE_REPO_WRITE_TOKEN` to publish only the validated population/source-check projection and a fixed update row to `joshuadurey-del/ap-four-course-dashboard`. It first checks that credential's public-repo write access. Public claims, needs-human decisions, other updates, code and course sources are not copied from the private tree. Each repository's own precommit and remote-drift checks run before pushing. Public Pages is requested after the push; workflow completion alone does not certify learner state. Missing write permission fails visibly, leaving the last public evidence date intact. Never place a PAT in browser JavaScript.
+
+Local authenticated check: `SOURCE_REPO_READ_TOKEN=... python3 automation/sync_sources.py refresh` from the dashboard checkout. Regression: `python3 automation/sync_sources.py selftest`. Adding a new population requires its owning native source path, schema, scope and metadata-only reader; absence of a reader is not absence of course work.

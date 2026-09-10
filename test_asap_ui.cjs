@@ -77,6 +77,9 @@ async function browserCheck() {
     };
     const visible = () => page.locator('[data-course-card]:visible').evaluateAll(cards => cards.map(card => card.dataset.courseCard));
     await page.goto('https://asap.test/index.html'); await ready();
+    assert.match(await page.locator('.source-sync-link').getAttribute('href'), /InceptTrilogy.*dashboard-repo-poll.yml$/);
+    await page.locator('.source-refresh').click(); await ready();
+    assert.match(await page.locator('.source-sync-status').textContent(), /No live-source sync recorded/);
     assert.equal(await page.locator('.site-header .site-identity img').evaluate(image => image.complete && image.naturalWidth > 0), true);
     assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(20, 22, 21)');
     const contrast = await page.evaluate(() => {

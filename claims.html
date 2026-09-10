@@ -30,6 +30,7 @@ function jump(){
  setTimeout(()=>{row.style.outline='';},4000);
 }
 window.addEventListener('hashchange',jump);
+document.addEventListener('ap4-state-changed',()=>{if(DATA && globalThis.AP4_DASHBOARD?.data){DATA=AP4_DASHBOARD.data;render();}});
 function mkFilters(){
  const cs=['All',...new Set(DATA.claims.map(c=>c.section))];
  const ss=['All',...new Set(DATA.claims.map(c=>c.status))];
@@ -48,13 +49,15 @@ function render(){
  document.getElementById('tbl').innerHTML='<tr><th>Claim</th><th>Status</th><th>Value</th><th>Access</th><th>Evidence</th></tr>'+
   rows.map(c=>{
    const ev=(c.evidence||[]).map(e=>e.url&&safeUrl(e.url)?`<a href="${safeUrl(e.url)}" target="_blank" rel="noopener">${esc(e.type)}</a>`:esc(e.location||e.type||e.id||'')).join(' · ');
+   const source=DATA.source_sync?.claims?.[c.claim_id];
+   const sourceLabel=!source?'Source sync not recorded':source.status==='NO_AUTOMATIC_VERIFIER'?'No automatic verifier for this claim':source.checks.some(e=>e.status==='SOURCE_CHANGED')?'Bound source changed; reconcile claim':source.checks.some(e=>e.status==='UNAVAILABLE')?'Source check unavailable':'Bound file bytes unchanged; acceptance date retained';
    const date=c.observed_at||c.status_at;
    const when=date?`${c.observed_at?'observed':'status set'} ${esc(date)}`:'no row date';
    const old=!c.settled && (!date || !Number.isFinite(Date.parse(date)) || Date.now()-Date.parse(date)>(c.freshness_limit_hours||48)*3600000);
    return `<tr id="claim-${esc(c.claim_id)}"><td data-label="Claim"><a href="#claim-${esc(c.claim_id)}"><code>${esc(c.claim_id)}</code></a><br><small>${when}${c.observed_note?` (${esc(c.observed_note)})`:''}</small></td>
    <td data-label="Status"><span class="badge ${SC[c.status]||'b-gray'}">${esc(c.status)}</span>${c.settled?'<br><span class="badge b-gray">Historical / superseded</span>':old?'<br><span class="badge b-amber">Source refresh needed</span>':''}</td>
    <td data-label="Value">${esc(c.value)}${c.scope?`<br><small><b>scope:</b> ${esc(c.scope)}</small>`:''}${c.excluded?.length?`<br><small><b>excluded:</b> ${esc(c.excluded.join('; '))}</small>`:''}</td>
-   <td data-label="Access"><small>${esc(c.evidence_access)}</small></td><td data-label="Evidence">${ev}</td></tr>`;
+   <td data-label="Access"><small>${esc(c.evidence_access)}</small></td><td data-label="Evidence"><small>${esc(sourceLabel)}</small><br>${ev}</td></tr>`;
   }).join('');
 }
 </script>

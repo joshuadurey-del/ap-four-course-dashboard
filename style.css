@@ -1763,3 +1763,9 @@ footer { border-top: 1px solid var(--line); }
 .value-strip > a span { display: inline; color: inherit; }
 .value-strip > p { grid-column: 1 / -1; margin: -8px 0 0; color: var(--muted); font-size: 11px; }
 @media (max-width: 650px) { .value-strip { grid-template-columns: 1fr; gap: 18px; } }
+
+/* Source synchronization reuses GitHub authentication; no credentials in the page. */
+.source-sync-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem 1rem;margin:0 0 1.5rem;padding:1rem;border:1px solid var(--line,#454637);background:#1b1e19;font-size:.85rem}
+.source-sync-link,.source-refresh{border:1px solid #b99e35;background:transparent;color:#ffdc42;padding:.5rem .75rem;font:inherit;text-decoration:none;cursor:pointer}
+.source-refresh:disabled{opacity:.65;cursor:wait}.source-sync-status{color:#d8dacb;overflow-wrap:anywhere}
+.source-sync-bar small{flex-basis:100%;color:#b7bcad}.population-source{overflow-wrap:anywhere}

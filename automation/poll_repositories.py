@@ -107,20 +107,20 @@ class GitHub:
             raise RuntimeError("required token is missing")
         self.token = token
 
-    def request(self, path, method="GET", payload=None):
+    def request(self, path, method="GET", payload=None, raw=False):
         data = None if payload is None else json.dumps(payload).encode()
         request = urllib.request.Request(
             "https://api.github.com" + path, data=data, method=method,
             headers={
                 "Authorization": f"Bearer {self.token}",
-                "Accept": "application/vnd.github+json",
+                "Accept": "application/vnd.github.raw+json" if raw else "application/vnd.github+json",
                 "X-GitHub-Api-Version": "2022-11-28",
                 "User-Agent": "ap-four-course-dashboard-poller",
             },
         )
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
-                return json.load(response)
+                return response.read() if raw else json.load(response)
         except urllib.error.HTTPError as error:
             raise RuntimeError(f"GitHub API {path}: HTTP {error.code}") from None
 
@@ -465,6 +465,8 @@ def prepare(transaction_path):
         public_path.write_text(json.dumps(combined, indent=2) + "\n")
         sync_course_state(data, combined)
         data_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    from sync_sources import sync, write
+    write(sync(data, source, iso(observed_at)), ".")
     if needs_human_changed:
         NEEDS_HUMAN_PATH.write_text(
             json.dumps(needs_human, sort_keys=True, ensure_ascii=True, indent=1) + "\n",
