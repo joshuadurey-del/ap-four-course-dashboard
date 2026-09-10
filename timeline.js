@@ -518,7 +518,7 @@ globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState,
   const refreshButton = make('button', 'source-refresh', 'Refresh results'); refreshButton.type = 'button';
   const syncStatus = make('span', 'source-sync-status'); syncStatus.setAttribute('role', 'status');
   syncBar.append(syncLink, refreshButton, syncStatus);
-  const help = make('small', '', 'Sync opens GitHub → Run workflow. Refresh loads the published result. Source counts do not prove learner acceptance.');
+  const help = make('small', '', 'Sync opens GitHub → select public publication → Run workflow. Refresh loads the published result. Source counts do not prove learner acceptance.');
   syncBar.append(help); document.querySelector('main')?.prepend(syncBar);
   const showSync = () => {
     const sync = AP4_DASHBOARD.data?.source_sync;
