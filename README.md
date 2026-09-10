@@ -78,6 +78,7 @@ The runbook guides your agent through these stages using each course’s native 
 
 | Path | Purpose |
 | :--- | :--- |
+| [Builder application](https://github.com/InceptTrilogy/ap-four-course-dashboard) | Application code, persistent dashboard service, installer and agent runbook (team access) |
 | [install.sh](install.sh) | Public bootstrap for the private builder |
 | [index.html](index.html) · [courses.html](courses.html) · [docs.html](docs.html) · [style.css](style.css) | Dashboard pages and shared theme |
 | [data.json](data.json) · [process.json](process.json) | Published observations and process navigation |

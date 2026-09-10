@@ -18,9 +18,15 @@ curl -fsSL https://joshuadurey-del.github.io/incept-course-builder/install.sh | 
 
 The installer checks your machine, reuses installed tools, and downloads missing runtime components into the app directory. It requires no administrator password or shell-profile edit. Onboarding happens in Terminal: GitHub sign-in, course name, agent choice, then dashboard or agent launch.
 
-**Watch progress in your customized dashboard.** It runs on your Mac and updates automatically as your agent saves coverage, completed work, decisions and the next action. Keep the Terminal command open. **Ctrl+C** closes it; your workspace remains saved. Run `incept-course-builder build` to resume with your agent, or `incept-course-builder` to view progress.
+**Watch progress in your customized dashboard.** It updates as your agent saves coverage, completed work and its next action. The dashboard runs independently through macOS: closing Terminal or navigating away does not stop it. Reopen the same local address to see saved progress. Run `incept-course-builder build` to resume the agent; the dashboard itself stays available after that session ends.
 
 The public Courses page is a shared reference, not your installed workspace. Local dashboard refreshes read saved progress only; they do not launch work or call paid services.
+
+## When something is needed from you
+
+Your agent resolves ordinary setup, retries and workflow choices. It reuses existing access and authorization. A missing-input request must give you one concrete action, such as a hidden-input Terminal command or the existing service's browser sign-in. If you do not have access, it provides the verified retrieval steps, access owner or request channel, and a prepared message. Never paste secrets into chat or the dashboard.
+
+The request gate checks agent reports and what appears in the local dashboard. Local agent hosts must follow the bundled instruction to run it before speaking; the builder cannot intercept every host's conversation. Native spending limits, access checks and required release approvals still apply.
 
 ## Everyday commands
 
@@ -30,6 +36,7 @@ The public Courses page is a shared reference, not your installed workspace. Loc
 ~/.local/bin/incept-course-builder onboard  # Change your course or agent
 ~/.local/bin/incept-course-builder scan     # Inspect tools offline
 ~/.local/bin/incept-course-builder connect  # Check native connections; no course work
+~/.local/bin/incept-course-builder stop     # Stop only the dashboard; preserve course work
 ```
 
 Choose **Claude Code**, **Codex**, **Hermes**, a custom local command, or a portable prompt during onboarding. Automated execution needs an agent with filesystem and terminal tools. Keep using your existing model credentials and subscription; the builder does not provide model access.
@@ -69,20 +76,10 @@ An environment token must already provide email-read and repository access. Brow
 
 **For maintainers:** skill changes ship in the private builder repository with their scripts, affected runtime consumers and rebuilt installation package. Validate both bundled resources and the installed code path; a dashboard-only edit is not a builder update. Public documentation follows the actual installable release.
 
-**Update:** rerun the install command. Settings, course work and existing skills are preserved. Changed managed release files are left for review rather than silently overwritten.
+**Update:** the installer reuses your saved course and agent settings, preserves course work and existing skills, and reopens the dashboard. Onboarding is only repeated when you explicitly request it. Changed managed release files are left for review rather than silently overwritten.
 
-**Remove:** back up any course work first. Then remove the app directory at `~/.local/share/incept-course-builder` and the launcher at `~/.local/bin/incept-course-builder`. Runtime dependencies installed by this app are contained in its directory.
+**Remove:** back up any course work, then run `incept-course-builder stop` to unregister its macOS dashboard service. Then remove the app directory at `~/.local/share/incept-course-builder` and the launcher at `~/.local/bin/incept-course-builder`. Runtime dependencies installed by this app are contained in its directory.
 
 ## Privacy
 
 The public repository serves the dashboard, published observations, product documentation and install entry point. The private repository contains the builder package and agent resources. Course content, credentials and local checkpoints are not served by the public site. Agent and factory calls use the services configured for your authorized workflow.
-
-## Keep your dashboard available
-
-The local dashboard runs through macOS independently of your agent. It keeps the same address across opens, restarts after a crash, and returns at login. Closing Terminal ends a foreground agent session, but preserves the dashboard and saved progress. Run `incept-course-builder build` to resume work; run `incept-course-builder` to open the dashboard. `incept-course-builder stop` stops only the dashboard. Reopening starts it again. Updates preserve your workspace and restart a configured dashboard on the new release.
-
-## When something is needed from you
-
-Your agent resolves ordinary setup, retries and workflow choices. It reuses existing access and authorization. A missing-input request must give you one concrete action, such as a hidden-input Terminal command or the existing service's browser sign-in. If you do not have access, it provides the verified retrieval steps, access owner or request channel, and a prepared message. Never paste secrets into chat or the dashboard.
-
-The request gate checks agent reports and what appears in the local dashboard. Local agent hosts must follow the bundled instruction to run it before speaking; the builder cannot intercept every host's conversation. Native spending limits, access checks and required release approvals still apply.
