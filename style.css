@@ -504,6 +504,7 @@ small { color: var(--muted); line-height: 1.45; }
   gap: 18px;
 }
 
+.update-item > *, .agent-latest { min-width: 0; overflow-wrap: anywhere; }
 .update-item:first-child { border-top: 0; }
 .update-meta { display: flex; flex-direction: column; gap: 4px; }
 .update-meta strong { color: var(--blue-strong); font-size: 13px; }

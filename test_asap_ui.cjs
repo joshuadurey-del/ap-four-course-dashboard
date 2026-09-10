@@ -60,7 +60,7 @@ async function browserCheck() {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
     const errors = []; page.on('pageerror', error => errors.push(error.message));
     let processFails = false;
-    const fixtures = { 'data.json': data, 'process.json': processValue, 'updates.json': [],
+    const fixtures = { 'data.json': data, 'process.json': processValue, 'updates.json': [{ts:stamp,course:'dashboard',writer:'test fixture',text:'Receipt '+ 'a'.repeat(160)}],
       'needs-human.json': { schema: 'needs-human-public/v1', generated_ts: stamp, open: [] } };
     await page.route('https://asap.test/**', route => {
       const filename = new URL(route.request().url()).pathname.slice(1) || 'index.html';
@@ -148,6 +148,12 @@ async function browserCheck() {
     assert.match(await page.locator('[data-population-coverage]').textContent(), /unavailable/);
     assert.equal(await page.locator('.population-recorded').count(), 0);
     processFails = false;
+    await page.goto('https://asap.test/updates.html');
+    await page.waitForSelector('.update-item');
+    for (const width of [320, 390]) {
+      await page.setViewportSize({width, height:844});
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'Long update receipt overflows on mobile');
+    }
     for (const filename of fs.readdirSync(__dirname).filter(name => name.endsWith('.html'))) {
       await page.goto(`https://asap.test/${filename}`);
       assert.deepEqual(await page.locator('nav[aria-label="Main navigation"] > a').allTextContents(), ['Courses','Docs','Impact'], filename);
