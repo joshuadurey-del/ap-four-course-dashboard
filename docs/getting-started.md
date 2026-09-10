@@ -26,10 +26,15 @@ Your dashboard runs locally while its Terminal command is open. **Ctrl+C** close
 ~/.local/bin/incept-course-builder          # Open your local dashboard
 ~/.local/bin/incept-course-builder build    # Start your selected agent
 ~/.local/bin/incept-course-builder onboard  # Change your course or agent
-~/.local/bin/incept-course-builder scan     # Inspect tools without an agent call
+~/.local/bin/incept-course-builder scan     # Inspect tools offline
+~/.local/bin/incept-course-builder connect  # Check native connections; no course work
 ```
 
 Choose **Claude Code**, **Codex**, **Hermes**, a custom local command, or a portable prompt during onboarding. Automated execution needs an agent with filesystem and terminal tools. Keep using your existing model credentials and subscription; the builder does not provide model access.
+
+## Connect the native stack
+
+Run `incept-course-builder connect` for read-only connection checks, or `incept-course-builder build` to check and continue with your agent. The agent resolves existing course repository, AWS profile, S3 prefix and native publish configuration; only references go in `workspace/connections.config.json`. Credentials stay with their existing providers. `CONNECTIONS.json` supplies a dated connection report to the local dashboard and agent. Source coverage and learner acceptance still require their native verifiers.
 
 ## What the agent does first
 

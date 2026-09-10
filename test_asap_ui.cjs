@@ -66,7 +66,7 @@ async function browserCheck() {
       const filename = new URL(route.request().url()).pathname.slice(1) || 'index.html';
       if (filename === 'process.json' && processFails) return route.fulfill({ status: 503, body: 'Unavailable' });
       if (fixtures[filename]) return route.fulfill({ contentType: 'application/json', body: JSON.stringify(fixtures[filename]) });
-      if (!(['docs/assets/workspace-preview.png','docs/assets/incept-banner.svg'].includes(filename) || /^[a-z][a-z0-9.-]*\.(html|js|css|json|svg)$/.test(filename)) || !fs.existsSync(path.join(__dirname, filename))) return route.fulfill({ status: 404, body: '' });
+      if (!(['docs/assets/workspace-preview.png','docs/assets/incept-book.svg'].includes(filename) || /^[a-z][a-z0-9.-]*\.(html|js|css|json|svg)$/.test(filename)) || !fs.existsSync(path.join(__dirname, filename))) return route.fulfill({ status: 404, body: '' });
       return route.fulfill({ contentType: filename.endsWith('.png') ? 'image/png' : filename.endsWith('.js') ? 'text/javascript' : filename.endsWith('.css') ? 'text/css' : filename.endsWith('.svg') ? 'image/svg+xml' : filename.endsWith('.json') ? 'application/json' : 'text/html',
         body: fs.readFileSync(path.join(__dirname, filename)) });
     });

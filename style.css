@@ -1778,7 +1778,7 @@ footer { border-top: 1px solid var(--line); }
 .product-page main { max-width: 1120px; }
 .product-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: 48px; padding: 40px 0 48px; border: 0; margin: 0; }
 .hero-copy { min-width: 0; }
-.hero-banner { display: block; width: 100%; height: auto; }
+.hero-banner { display: block; width: 100%; max-width: 440px; height: auto; justify-self: center; }
 @media(max-width:900px) { .product-hero { grid-template-columns: 1fr; gap: 24px; } }
 .product-hero h1 { max-width: 20ch; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.1; letter-spacing: -.04em; margin: 22px 0 16px; }
 .product-hero .sub { max-width: 62ch; font-size: 17px; line-height: 1.7; }
