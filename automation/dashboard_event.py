@@ -89,7 +89,7 @@ def process_delivery(secret, body, signature, inventory, seen, current_head, now
     key = f'{event["repository"]}:{event["delivery_id"]}:{event["source_sha"]}'
     if key in seen:
         return _decision("REDELIVERY", "DUPLICATE_DELIVERY_AND_SHA", **base)
-    if event["repository"] == "joshuadurey-del/ap-four-course-dashboard" or event["sender"].endswith("[bot]"):
+    if event["repository"] in {"joshuadurey-del/ap-four-course-dashboard", "joshuadurey-del/incept-course-builder"} or event["sender"].endswith("[bot]"):
         return _decision("NOOP", "AUTOMATION_OR_SELF_EVENT", **base)
 
     course = inventory.get(event["repository"])
@@ -263,6 +263,10 @@ def _self_test():
         secret, value, sig, {"example/course": "humgeo"}, set(seen), current, now,
     )
     assert run()["status"] == "UPDATE"
+    for repository in ["joshuadurey-del/ap-four-course-dashboard", "joshuadurey-del/incept-course-builder"]:
+        own = json.dumps({**event, "repository": repository}, sort_keys=True).encode()
+        own_sig = "sha256=" + hmac.new(secret, own, hashlib.sha256).hexdigest()
+        assert run(own, own_sig)["reason"] == "AUTOMATION_OR_SELF_EVENT"
     assert run()["update"]["event_type"] == "push"
     assert run(seen={f"example/course:delivery-1:{sha}"})["status"] == "REDELIVERY"
     assert run(sig="sha256=bad")["reason"] == "SIGNATURE_INVALID"

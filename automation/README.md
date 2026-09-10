@@ -23,14 +23,14 @@ Required Actions secrets:
 Set each secret interactively; never place its value on a command line:
 
 ```sh
-gh secret set SOURCE_REPO_READ_TOKEN -R joshuadurey-del/ap-four-course-dashboard
-gh secret set SOURCE_REPOSITORY_INVENTORY_JSON -R joshuadurey-del/ap-four-course-dashboard
+gh secret set SOURCE_REPO_READ_TOKEN -R joshuadurey-del/incept-course-builder
+gh secret set SOURCE_REPOSITORY_INVENTORY_JSON -R joshuadurey-del/incept-course-builder
 ```
 
 After all three secrets exist, enable the workflow:
 
 ```sh
-gh variable set DASHBOARD_AUTOMATION_ENABLED --body true -R joshuadurey-del/ap-four-course-dashboard
+gh variable set DASHBOARD_AUTOMATION_ENABLED --body true -R joshuadurey-del/incept-course-builder
 ```
 
 Set that variable to `false` for the kill switch. The workflow explicitly
@@ -86,7 +86,7 @@ The existing ten-minute workflow reads remote main once per configured repositor
 
 Claims with an exact file hash are compared with current bytes separately from their formal status. Claims lacking a mapped verifier stay explicitly unverified. Identical source bytes do not renew QC, a receipt date, a stage, or learner acceptance. Historical calibration, acceptance-ledger and Unit 3 receipts retain their named scope. No source repository or platform is mutated.
 
-The same serialized job updates the private dashboard, then uses `EVIDENCE_REPO_WRITE_TOKEN` to publish only the validated population/source-check projection and a fixed update row to `joshuadurey-del/ap-four-course-dashboard`. It first checks that credential's public-repo write access. Public claims, needs-human decisions, other updates, code and course sources are not copied from the private tree. Each repository's own precommit and remote-drift checks run before pushing. Public Pages is requested after the push; workflow completion alone does not certify learner state. Missing write permission fails visibly, leaving the last public evidence date intact. Never place a PAT in browser JavaScript.
+The same serialized job updates the private dashboard, then uses `EVIDENCE_REPO_WRITE_TOKEN` to publish only the validated population/source-check projection and a fixed update row to `joshuadurey-del/incept-course-builder`. It first checks that credential's public-repo write access. Public claims, needs-human decisions, other updates, code and course sources are not copied from the private tree. Each repository's own precommit and remote-drift checks run before pushing. Public Pages is requested after the push; workflow completion alone does not certify learner state. Missing write permission fails visibly, leaving the last public evidence date intact. Never place a PAT in browser JavaScript.
 
 Local authenticated check: `SOURCE_REPO_READ_TOKEN=... python3 automation/sync_sources.py refresh` from the dashboard checkout. Regression: `python3 automation/sync_sources.py selftest`. Adding a new population requires its owning native source path, schema, scope and metadata-only reader; absence of a reader is not absence of course work.
 

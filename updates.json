@@ -1,5 +1,11 @@
 [
   {
+    "ts": "2026-09-10T07:22Z",
+    "course": "All",
+    "writer": "dashboard curation",
+    "text": "Public repository and website renamed to incept-course-builder. Navigation, installer entry links and dashboard self-links follow the new address. The private Alpha package retains its current repository name; course evidence and acceptance timestamps are unchanged."
+  },
+  {
     "ts": "2026-09-10T06:53Z",
     "course": "All",
     "writer": "dashboard curation",

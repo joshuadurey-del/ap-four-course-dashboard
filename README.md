@@ -10,8 +10,8 @@
   <a href="#quick-start"><strong>Install</strong></a> ·
   <a href="docs/getting-started.md">Setup guide</a> ·
   <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md">Agent runbook</a> ·
-  <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/courses.html">Courses</a> ·
-  <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html">About</a>
+  <a href="https://joshuadurey-del.github.io/incept-course-builder/courses.html">Courses</a> ·
+  <a href="https://joshuadurey-del.github.io/incept-course-builder/about.html">About</a>
 </p>
 
 <p align="center"><sub>macOS · Terminal onboarding · Local workspace · Alpha / Incept team access</sub></p>
@@ -21,7 +21,7 @@
 Paste into Terminal:
 
 ```bash
-curl -fsSL https://joshuadurey-del.github.io/ap-four-course-dashboard/install.sh | bash
+curl -fsSL https://joshuadurey-del.github.io/incept-course-builder/install.sh | bash
 ```
 
 **Sign in → Name your course → Choose your agent → Start building.**
@@ -57,7 +57,7 @@ Works with **Claude Code, Codex, Hermes**, and tool-capable local agents. You ke
 
 The runbook guides your agent through these stages using each course’s native tooling. Current permissions, budgets and release gates govern execution. Course completion requires verified learner-facing results.
 
-[Explore the runbook →](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) · [See reusable value & ROI →](https://joshuadurey-del.github.io/ap-four-course-dashboard/economics.html)
+[Explore the runbook →](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) · [See reusable value & ROI →](https://joshuadurey-del.github.io/incept-course-builder/economics.html)
 
 ## Find your next step
 
@@ -65,9 +65,9 @@ The runbook guides your agent through these stages using each course’s native 
 | :--- | :--- |
 | Install, update, switch agents or troubleshoot sign-in | [Setup & everyday use](docs/getting-started.md) |
 | Give an agent the smallest useful starting context | [Agent entry point](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) |
-| Understand the product and access model | [About Incept](https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html) |
-| Check published course progress | [Course workspace](https://joshuadurey-del.github.io/ap-four-course-dashboard/courses.html) |
-| Inspect evidence or improve the next build | [Claims](https://joshuadurey-del.github.io/ap-four-course-dashboard/claims.html) · [Lessons](https://joshuadurey-del.github.io/ap-four-course-dashboard/lessons.html) |
+| Understand the product and access model | [About Incept](https://joshuadurey-del.github.io/incept-course-builder/about.html) |
+| Check published course progress | [Course workspace](https://joshuadurey-del.github.io/incept-course-builder/courses.html) |
+| Inspect evidence or improve the next build | [Claims](https://joshuadurey-del.github.io/incept-course-builder/claims.html) · [Lessons](https://joshuadurey-del.github.io/incept-course-builder/lessons.html) |
 
 <details>
 <summary><strong>For maintainers: source map and local checks</strong></summary>

@@ -1,6 +1,6 @@
 # Setup & everyday use
 
-[← Incept Course Builder](../README.md) · [About](https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html) · [Agent runbook (team access)](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md)
+[← Incept Course Builder](../README.md) · [About](https://joshuadurey-del.github.io/incept-course-builder/about.html) · [Agent runbook (team access)](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md)
 
 ## Before you start
 
@@ -13,7 +13,7 @@
 Paste this into Terminal:
 
 ```bash
-curl -fsSL https://joshuadurey-del.github.io/ap-four-course-dashboard/install.sh | bash
+curl -fsSL https://joshuadurey-del.github.io/incept-course-builder/install.sh | bash
 ```
 
 The installer checks your machine, reuses installed tools, and downloads missing runtime components into the app directory. It requires no administrator password or shell-profile edit. Onboarding happens in Terminal: GitHub sign-in, course name, agent choice, then dashboard or agent launch.

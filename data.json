@@ -17,7 +17,7 @@
         },
         {
           "type": "public-projection",
-          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/process.json"
+          "url": "https://joshuadurey-del.github.io/incept-course-builder/process.json"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+SCOPED_LOCAL_RECEIPTS",
@@ -42,11 +42,11 @@
       "evidence": [
         {
           "type": "dashboard-overview",
-          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/"
+          "url": "https://joshuadurey-del.github.io/incept-course-builder/"
         },
         {
           "type": "dashboard-course-pages",
-          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
+          "url": "https://joshuadurey-del.github.io/incept-course-builder/humgeo.html"
         },
         {
           "type": "factory-operator-fix",
@@ -341,7 +341,7 @@
       "evidence": [
         {
           "type": "course-plan",
-          "url": "https://joshuadurey-del.github.io/ap-four-course-dashboard/humgeo.html"
+          "url": "https://joshuadurey-del.github.io/incept-course-builder/humgeo.html"
         },
         {
           "type": "pull-request",

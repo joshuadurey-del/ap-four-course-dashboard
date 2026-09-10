@@ -66,7 +66,7 @@ async function browserCheck() {
       const filename = new URL(route.request().url()).pathname.slice(1) || 'index.html';
       if (filename === 'process.json' && processFails) return route.fulfill({ status: 503, body: 'Unavailable' });
       if (fixtures[filename]) return route.fulfill({ contentType: 'application/json', body: JSON.stringify(fixtures[filename]) });
-      if (!(filename === 'docs/assets/workspace-preview.png' || /^[a-z][a-z0-9.-]*\.(html|js|css|json|svg)$/.test(filename)) || !fs.existsSync(path.join(__dirname, filename))) return route.fulfill({ status: 404, body: '' });
+      if (!(['docs/assets/workspace-preview.png','docs/assets/incept-banner.svg'].includes(filename) || /^[a-z][a-z0-9.-]*\.(html|js|css|json|svg)$/.test(filename)) || !fs.existsSync(path.join(__dirname, filename))) return route.fulfill({ status: 404, body: '' });
       return route.fulfill({ contentType: filename.endsWith('.png') ? 'image/png' : filename.endsWith('.js') ? 'text/javascript' : filename.endsWith('.css') ? 'text/css' : filename.endsWith('.svg') ? 'image/svg+xml' : filename.endsWith('.json') ? 'application/json' : 'text/html',
         body: fs.readFileSync(path.join(__dirname, filename)) });
     });
@@ -79,6 +79,12 @@ async function browserCheck() {
     await page.goto('https://asap.test/index.html');
     assert.equal(await page.locator('#course-release-timeline, .population-coverage, .source-sync-bar, #needs-human-strip').count(), 0, 'Home must remain a product entry');
     assert.equal(await page.locator('#install-command').count(), 1);
+    assert.equal(await page.locator('.hero-banner').evaluate(img => img.complete && img.naturalWidth > 0), true);
+    assert(await page.evaluate(() => document.querySelector('.hero-banner').getBoundingClientRect().left > document.querySelector('.hero-copy').getBoundingClientRect().right), 'Banner sits beside desktop copy');
+    await page.setViewportSize({width:390,height:844});
+    assert(await page.evaluate(() => document.querySelector('.hero-banner').getBoundingClientRect().top >= document.querySelector('.hero-copy').getBoundingClientRect().bottom), 'Banner stacks below mobile copy');
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.setViewportSize({width:1280,height:900});
     await page.locator('#copy-install').click();
     await page.waitForFunction(() => document.querySelector('#copy-install-status').textContent.length > 0);
     assert.equal(await page.locator('.preview-link img').evaluate(img => img.complete && img.naturalWidth > 0), true);
@@ -160,7 +166,7 @@ async function browserCheck() {
       assert.equal(await page.locator('footer a[href="about.html"]').count(), 1, filename);
       const links = await page.locator('a[href]').evaluateAll(links => links.map(a => a.getAttribute('href')).filter(h => !/^(https?:|mailto:|#)/.test(h)));
       for (const href of links) { const target=href.split(/[?#]/)[0]; if(target) assert(fs.existsSync(path.join(__dirname,target)), `${filename} has broken local link: ${href}`); }
-      assert.equal(await page.locator('.site-header a[href="https://github.com/joshuadurey-del/ap-four-course-dashboard"]').count(), 1, filename);
+      assert.equal(await page.locator('.site-header a[href="https://github.com/joshuadurey-del/incept-course-builder"]').count(), 1, filename);
       assert.equal(await page.locator('.skip-link').count(), 1, filename);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${filename} overflows on mobile`);
     }
