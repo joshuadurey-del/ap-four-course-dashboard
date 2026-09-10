@@ -76,3 +76,13 @@ An environment token must already provide email-read and repository access. Brow
 ## Privacy
 
 The public repository serves the dashboard, published observations, product documentation and install entry point. The private repository contains the builder package and agent resources. Course content, credentials and local checkpoints are not served by the public site. Agent and factory calls use the services configured for your authorized workflow.
+
+## Keep your dashboard available
+
+The local dashboard runs through macOS independently of your agent. It keeps the same address across opens, restarts after a crash, and returns at login. Closing Terminal ends a foreground agent session, but preserves the dashboard and saved progress. Run `incept-course-builder build` to resume work; run `incept-course-builder` to open the dashboard. `incept-course-builder stop` stops only the dashboard. Reopening starts it again. Updates preserve your workspace and restart a configured dashboard on the new release.
+
+## When something is needed from you
+
+Your agent resolves ordinary setup, retries and workflow choices. It reuses existing access and authorization. A missing-input request must give you one concrete action, such as a hidden-input Terminal command or the existing service's browser sign-in. If you do not have access, it provides the verified retrieval steps, access owner or request channel, and a prepared message. Never paste secrets into chat or the dashboard.
+
+The request gate checks agent reports and what appears in the local dashboard. Local agent hosts must follow the bundled instruction to run it before speaking; the builder cannot intercept every host's conversation. Native spending limits, access checks and required release approvals still apply.

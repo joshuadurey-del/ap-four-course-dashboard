@@ -34,7 +34,9 @@ Use a GitHub account with a verified **@alpha.school** email and access to the [
 
 Works with **Claude Code, Codex, Hermes**, and tool-capable local agents. You keep your existing model access.
 
-Start from a course brief or resume existing work. Your agent develops the blueprint, generates and checks content through Content Factory, then assembles it for native publication and learner verification. Your local dashboard updates automatically as the agent saves progress; reopen the same workspace to continue. [From-zero workflow and current execution requirements →](docs/getting-started.md#from-zero-to-a-complete-course)
+Start from a course brief or resume existing work. Your agent develops the blueprint, generates and checks content through Content Factory, then assembles it for native publication and learner verification. Your local dashboard updates as the agent saves progress and stays available after Terminal closes. Reopen it at the same local address; run `incept-course-builder build` to resume the agent. [From-zero workflow and current execution requirements →](docs/getting-started.md#from-zero-to-a-complete-course)
+
+The agent handles setup and execution choices. When it needs something only you can provide, it gives you a plain request, a prepared action, and access-recovery steps. Credentials are entered privately in Terminal or through native sign-in.
 
 ## Your course, in one customized dashboard
 
@@ -49,7 +51,7 @@ Start from a course brief or resume existing work. Your agent develops the bluep
 | **Bundled factory skills** | Give your agent native tools, workflow instructions, scripts and references. |
 | **Whole-course discovery** | Find missing populations before accepting a plan’s progress claims. |
 | **An executable runbook** | Plan independent work in parallel; keep integration and publication in order. |
-| **A customized local dashboard** | Watch saved progress update automatically, then resume from the same course workspace. |
+| **A persistent local dashboard** | Watch saved progress update automatically, even after the agent session ends. |
 
 ## From brief to verified course
 
