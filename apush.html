@@ -5,14 +5,13 @@
 <nav><span class="brand">AP Four-Course Dashboard</span><a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html">APWH</a><a href="apush.html" class="active" aria-current="page">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP US History</h1>
-  <p class="sub"><strong>Source check: 2026-09-08.</strong> The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.</p>
-  <aside class="course-activity" aria-labelledby="activity-title-apush"><h2 id="activity-title-apush">Repository activity</h2><p>Verified public repository events, newest first.</p><ol class="update-list" data-update-list data-course="apush" data-update-limit="4" aria-live="polite"></ol></aside>
+  <p class="sub">Loading the current source check from <a href="data.json">data.json</a>…</p>
+  <aside class="course-activity" aria-labelledby="activity-title-apush"><h2 id="activity-title-apush">Repository activity</h2><p>Verified public repository events, newest first.</p><ol class="update-list" data-update-list data-course="apush" data-limit="4" data-event-only aria-live="polite"></ol></aside>
   <section data-gate-evidence="apush"><noscript>Enable JavaScript to view the re-earned position.</noscript></section>
-  <section><h2>Landed or measured</h2><p>Current source readback (2026-09-08): <a href="https://github.com/ilmych/apush-course-build/blob/deeaf0c190d8905c7a5efe3cb612b899ca190f3c/PIPELINE.md#L21">Current pipeline</a> · <a href="https://github.com/ilmych/apush-course-build/issues/9">Fleet issue #9</a>.</p><p>Earlier measurements below are historical snapshots; they do not verify the current publication cut.</p><ul><li>p1-2 is done for all four courses.</li><li>Dashboard-side specification work is closed.</li><li>The sequence-adapter release has not been re-earned as landed.</li></ul></section>
-  <section><h2>Next governed move</h2><p>Obtain the fleet sequence-adapter release receipt, then measure content at current main before filling proven gaps.</p></section>
+  <section><h2>Next governed move</h2><p data-course-next>Loading the current next action from the claims manifest…</p></section>
   <section><h2>Receipt-by-receipt chronology</h2><p class="sub">Historical rows retain their timestamp and scope; current state is the re-earned position above.</p><ol class="update-list update-list-full" data-update-list data-course="apush" aria-live="polite"></ol></section>
   <section><h2>Machine-readable evidence</h2><p><a href="process.json">ASAP process JSON</a> · <a href="crosswalk.json">original-to-ASAP crosswalk</a> · <a href="data.json">claims JSON</a></p></section>
 </main>
 <footer>Publication runbook, ASAP edition, 2026-09-01 · <a href="updates.json">updates JSON</a></footer>
-<script type="module">import(`./timeline.js?v=${Date.now()}`)</script><script type="module">import(`./updates.js?v=${Date.now()}`)</script>
+<script type="module">await import(`./updates.js?v=${Date.now()}`); await import(`./timeline.js?v=${Date.now()}`);</script>
 </body></html>

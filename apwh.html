@@ -5,14 +5,13 @@
 <nav><span class="brand">AP Four-Course Dashboard</span><a href="index.html">Overview</a><a href="humgeo.html">HumGeo</a><a href="apwh.html" class="active" aria-current="page">APWH</a><a href="apush.html">APUSH</a><a href="psych.html">Psych</a><a href="claims.html">Claims</a><a href="lessons.html">Lessons</a><a href="retro.html">Retro</a><a href="agents.html">Agent data</a></nav>
 <main>
   <h1>AP World History</h1>
-  <p class="sub"><strong>Source check: 2026-09-08.</strong> The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.</p>
-  <aside class="course-activity" aria-labelledby="activity-title-apwh"><h2 id="activity-title-apwh">Repository activity</h2><p>Verified public repository events, newest first.</p><ol class="update-list" data-update-list data-course="apwh" data-update-limit="4" aria-live="polite"></ol></aside>
+  <p class="sub">Loading the current source check from <a href="data.json">data.json</a>…</p>
+  <aside class="course-activity" aria-labelledby="activity-title-apwh"><h2 id="activity-title-apwh">Repository activity</h2><p>Verified public repository events, newest first.</p><ol class="update-list" data-update-list data-course="apwh" data-limit="4" data-event-only aria-live="polite"></ol></aside>
   <section data-gate-evidence="apwh"><noscript>Enable JavaScript to view the re-earned position.</noscript></section>
-  <section><h2>Landed or measured</h2><p>Current source readback (2026-09-08): <a href="https://github.com/InceptTrilogy/ap-one/pull/992">s4 follow-up #992</a>.</p><p>Earlier measurements below are historical snapshots; they do not verify the current publication cut.</p><ul><li>p1-2 is done for all four courses.</li><li><a href="https://github.com/ilmych/apwh-blueprint-build/pull/71">Build PR #71</a> merged as <code>1f0fac27</code>; <a href="https://github.com/InceptTrilogy/ap-one/pull/975">serve PR #975</a> merged as <code>2b17b98e</code>, and <a href="https://github.com/InceptTrilogy/ap-one/actions/runs/33713304614">Deploy run 33713304614</a> succeeded with staging read back on <code>2b17b98e</code>.</li><li>All 143 repaired strict-route gate members are served with factory judge passes; seating remains 1,988 of 1,988 and the gate manifest is unchanged.</li></ul></section>
-  <section><h2>Next governed move</h2><p>Complete s5 repairs and re-judging, then pass final-byte bank validation and the s6 QTI checks before dark publication.</p></section>
+  <section><h2>Next governed move</h2><p data-course-next>Loading the current next action from the claims manifest…</p></section>
   <section><h2>Receipt-by-receipt chronology</h2><p class="sub">Historical rows retain their timestamp and scope; current state is the re-earned position above.</p><ol class="update-list update-list-full" data-update-list data-course="apwh" aria-live="polite"></ol></section>
   <section><h2>Machine-readable evidence</h2><p><a href="process.json">ASAP process JSON</a> · <a href="crosswalk.json">original-to-ASAP crosswalk</a> · <a href="data.json">claims JSON</a></p></section>
 </main>
 <footer>Publication runbook, ASAP edition, 2026-09-01 · <a href="updates.json">updates JSON</a></footer>
-<script type="module">import(`./timeline.js?v=${Date.now()}`)</script><script type="module">import(`./updates.js?v=${Date.now()}`)</script>
+<script type="module">await import(`./updates.js?v=${Date.now()}`); await import(`./timeline.js?v=${Date.now()}`);</script>
 </body></html>

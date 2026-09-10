@@ -8,10 +8,6 @@
   const local = ms => new Date(ms).toLocaleString(undefined, {
     year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
   });
-  const nextStep = value => value && typeof value.verb === 'string' && typeof value.tool === 'string' &&
-    Array.isArray(value.args) && typeof value.gate === 'string'
-    ? `${value.verb} via ${value.tool}${value.args.length ? ` (${value.args.join(', ')})` : ''} once ${value.gate}`
-    : 'The governed next step is unavailable.';
   const displayText = text => String(text)
     .replace(/\bilmych\/apush-build-outputs\b/gi, 'the APUSH build-outputs repository')
     .replace(/\bIlma['’]s\b/gi, "the repository owner's")
@@ -77,7 +73,22 @@
     };
   };
 
-  globalThis.AP4_UPDATES = { summarizeCourse };
+  const validateUpdates = value => {
+    if (!Array.isArray(value) || value.some(row => !row ||
+        !['ts', 'course', 'text', 'writer'].every(key => typeof row[key] === 'string') ||
+        !Number.isFinite(Date.parse(row.ts)))) throw new Error('updates.json has invalid event rows');
+    return value;
+  };
+  const listLimit = (dataset, sidebar, total) => {
+    const raw = dataset.limit ?? dataset.updateLimit;
+    const limit = raw === undefined ? NaN : Number(raw);
+    return Number.isInteger(limit) && limit >= 0 ? limit : sidebar ? 4 : total;
+  };
+  let feedPromise;
+  const loadUpdates = () => feedPromise || (feedPromise = fetch('updates.json', { cache: 'no-store' })
+    .then(response => { if (!response.ok) throw new Error(`updates.json returned ${response.status}`); return response.json(); })
+    .then(validateUpdates).finally(() => { feedPromise = null; }));
+  globalThis.AP4_UPDATES = { summarizeCourse, validateUpdates, listLimit, load: loadUpdates };
 
   if (typeof document === 'undefined') {
     if (displayText('Ilma') !== 'the repository owner') throw new Error('display text self-test failed');
@@ -92,6 +103,13 @@
       { course: 'psych', kind: 'state-change', phase: 'p5', ts: '2026-08-29T00:00Z' },
     ], 'psych', Date.parse('2026-08-31T00:00Z'));
     if (summary.landings7d !== 2 || summary.openHolds !== 1 || summary.gateDays !== 2) throw new Error('rate summary self-test failed');
+    if (listLimit({ updateLimit: '4' }, true, 500) !== 4 || listLimit({ limit: '2', updateLimit: '4' }, true, 500) !== 2 || listLimit({}, true, 500) !== 4 || listLimit({}, false, 500) !== 500) throw new Error('bounded activity list self-test failed');
+    for (const bad of [null, {}, [{ ts: 'yesterday', course: 'psych', text: 'bad', writer: 'test' }]]) {
+      try { validateUpdates(bad); } catch { continue; }
+      throw new Error('invalid event feed accepted');
+    }
+    if (validateUpdates([]).length !== 0) throw new Error('empty event feed rejected');
+
     return;
   }
 
@@ -111,7 +129,8 @@
       (!course || update.course.toLowerCase() === course) &&
       (!eventOnly || (typeof update.event_type === 'string' && evidenceUrl(update.evidence_url)))
     );
-    const limit = Number(list.dataset.limit) || visible.length;
+    visible.sort((a, b) => Date.parse(b.ts) - Date.parse(a.ts));
+    const limit = listLimit(list.dataset, Boolean(list.closest('.course-activity')), visible.length);
     const items = visible.slice(0, limit).map(update => {
       const ms = Date.parse(update.ts);
       const item = document.createElement('li');
@@ -152,35 +171,10 @@
     return visible;
   };
 
-  const renderCourseCurrent = (data, updates) => lists.filter(list => list.hasAttribute('data-event-only')).forEach(list => {
-    const course = list.dataset.course?.toLowerCase();
-    const claim = data?.claims?.find(row => row?.claim_id === `${course}.blueprint.audit`);
-    if (!claim) return;
-    const event = claim.current_event;
-    const current = event && typeof event.phase === 'string' && typeof event.kind === 'string' &&
-      typeof event.text === 'string' ? event : null;
-    const intro = list.closest('main')?.querySelector('h1 + .sub');
-    if (intro) intro.textContent = displayText(current?.text || claim.value);
-    const prior = list.parentElement?.querySelector('[data-automated-current]');
-    if (prior) prior.remove();
-    if (!current || Number.isNaN(Date.parse(current.ts))) return;
-    const state = document.createElement('p');
-    state.dataset.automatedCurrent = '';
-    state.className = 'course-current';
-    const phase = current.phase?.trim() ? `${current.phase} · ` : '';
-    state.textContent = `Current attested state: ${phase}${current.kind.replaceAll('-', ' ')} · ${current.text} Next: ${nextStep(claim.next_step)}.`;
-    list.before(state);
-  });
-
   let updatesRefresh;
-  const refreshUpdates = () => updatesRefresh || (updatesRefresh = Promise.all([
-    fetch('updates.json', { cache: 'no-store' }).then(response => response.json()),
-    fetch('data.json', { cache: 'no-store' }).then(response => response.json()).catch(() => null),
-  ]).then(([updates, data]) => {
-    if (!Array.isArray(updates)) throw new Error('updates.json must be an array');
+  const refreshUpdates = () => updatesRefresh || (updatesRefresh = loadUpdates().then(updates => {
     const visibleUpdates = render(lists[0], updates);
     lists.slice(1).forEach(list => render(list, updates));
-    renderCourseCurrent(data, updates);
     lists.filter(list => list.hasAttribute('data-event-only')).forEach(list => {
       if (list.previousElementSibling?.classList.contains('local-freshness')) list.previousElementSibling.remove();
       const course = list.dataset.course?.toLowerCase();
@@ -205,11 +199,14 @@
       badge.textContent = relative(newest);
       lastUpdated.replaceChildren(label, ` ${local(newest)} `, badge);
     }
-  }).catch(() => {
+  }).catch(error => {
+    const lastUpdated = document.getElementById('lastupd');
+    if (lastUpdated) lastUpdated.textContent = 'Update feed unavailable; freshness unmeasured.';
     lists.forEach(list => {
+      if (list.previousElementSibling?.classList.contains('local-freshness')) list.previousElementSibling.remove();
       const empty = document.createElement('li');
       empty.className = 'update-empty';
-      empty.textContent = 'The update feed is temporarily unavailable.';
+      empty.textContent = `Update feed unavailable: ${error.message}. Open updates.json to inspect the source.`;
       list.replaceChildren(empty);
     });
   }).finally(() => { updatesRefresh = null; }));

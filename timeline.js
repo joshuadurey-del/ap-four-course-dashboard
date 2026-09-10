@@ -1,184 +1,11 @@
-/* Source-bound dashboard snapshots, 2026-09-08. */
-const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = {
-  "activeCourse": "humgeo",
-  "gates": [],
-  "courses": [
-    {
-      "id": "humgeo",
-      "label": "AP Human Geography",
-      "short": "HumGeo",
-      "color": "oklch(46% 0.11 170)",
-      "status": "RE-EARN \u2014 FINAL CUT PENDING",
-      "statusTone": "blue",
-      "mapping": "ASAP edition \u00b7 re-earn",
-      "observed": "Sep 8 \u00b7 04:11Z",
-      "landed": "Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited.",
-      "nextStep": "Complete the regenerated-item landing, then validate the final publication cut and QTI before authorized dark publication and exact readback.",
-      "footprint": [
-        {
-          "value": "content",
-          "label": "assigned work; completion unearned"
-        }
-      ],
-      "phaseStates": [
-        {
-          "code": "content",
-          "name": "RE-EARN \u2014 FINAL CUT PENDING",
-          "state": "active",
-          "status": "RE-EARN",
-          "detail": "Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited."
-        }
-      ]
-    },
-    {
-      "id": "apwh",
-      "label": "AP World History",
-      "short": "APWH",
-      "color": "oklch(48% 0.12 75)",
-      "status": "RE-EARN \u2014 BANK VALIDATION",
-      "statusTone": "blue",
-      "mapping": "ASAP edition \u00b7 re-earn",
-      "observed": "Sep 8 \u00b7 03:43Z",
-      "landed": "The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.",
-      "nextStep": "Complete s5 repairs and re-judging, then pass final-byte bank validation and the s6 QTI checks before dark publication.",
-      "footprint": [
-        {
-          "value": "p3",
-          "label": "assigned work; completion unearned"
-        }
-      ],
-      "phaseStates": [
-        {
-          "code": "p3",
-          "name": "RE-EARN \u2014 BANK VALIDATION",
-          "state": "active",
-          "status": "RE-EARN",
-          "detail": "The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned."
-        }
-      ]
-    },
-    {
-      "id": "apush",
-      "label": "AP US History",
-      "short": "APUSH",
-      "color": "oklch(48% 0.17 28)",
-      "status": "RE-EARN \u2014 FLEET-HELD",
-      "statusTone": "blue",
-      "mapping": "ASAP edition \u00b7 re-earn",
-      "observed": "Sep 8 \u00b7 03:43Z",
-      "landed": "The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.",
-      "nextStep": "Obtain the fleet sequence-adapter release receipt, then measure content at current main before filling proven gaps.",
-      "footprint": [
-        {
-          "value": "fleet-held",
-          "label": "assigned work; completion unearned"
-        }
-      ],
-      "phaseStates": [
-        {
-          "code": "fleet-held",
-          "name": "RE-EARN \u2014 FLEET-HELD",
-          "state": "locked",
-          "status": "RE-EARN",
-          "detail": "The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned."
-        }
-      ]
-    },
-    {
-      "id": "psych",
-      "label": "AP Psychology",
-      "short": "Psych",
-      "color": "oklch(48% 0.16 305)",
-      "status": "RE-EARN \u2014 PARTIAL PUBLICATION",
-      "statusTone": "blue",
-      "mapping": "ASAP edition \u00b7 re-earn",
-      "observed": "Sep 8 \u00b7 04:44Z",
-      "landed": "Current main carries partial publication/readback receipts for Units 0\u20131 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
-      "nextStep": "Reconcile the partial publication receipts with current platform state, then close full-course readback, cold QC and learner acceptance through the fleet-owned route.",
-      "footprint": [
-        {
-          "value": "p5",
-          "label": "assigned work; completion unearned"
-        }
-      ],
-      "phaseStates": [
-        {
-          "code": "p5",
-          "name": "RE-EARN \u2014 PARTIAL PUBLICATION",
-          "state": "active",
-          "status": "RE-EARN",
-          "detail": "Current main carries partial publication/readback receipts for Units 0\u20131 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED."
-        }
-      ]
-    }
-  ],
-  "evidenceMaps": {
-    "humgeo": {
-      "title": "ASAP position",
-      "note": "Source readback: 2026-09-08. Assigned work is not phase completion.",
-      "rows": [
-        {
-          "code": "content",
-          "name": "RE-EARN \u2014 FINAL CUT PENDING",
-          "label": "Re-earn",
-          "state": "active",
-          "status": "RE-EARN",
-          "signal": "Current-source check \u00b7 2026-09-08",
-          "copy": "Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited.",
-          "href": "https://github.com/InceptTrilogy/ap-one/pull/1034"
-        }
-      ]
-    },
-    "apwh": {
-      "title": "ASAP position",
-      "note": "Source readback: 2026-09-08. Assigned work is not phase completion.",
-      "rows": [
-        {
-          "code": "p3",
-          "name": "RE-EARN \u2014 BANK VALIDATION",
-          "label": "Re-earn",
-          "state": "active",
-          "status": "RE-EARN",
-          "signal": "Current-source check \u00b7 2026-09-08",
-          "copy": "The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.",
-          "href": "https://github.com/InceptTrilogy/ap-one/pull/992"
-        }
-      ]
-    },
-    "apush": {
-      "title": "ASAP position",
-      "note": "Source readback: 2026-09-08. Assigned work is not phase completion.",
-      "rows": [
-        {
-          "code": "fleet-held",
-          "name": "RE-EARN \u2014 FLEET-HELD",
-          "label": "Re-earn",
-          "state": "locked",
-          "status": "RE-EARN",
-          "signal": "Current-source check \u00b7 2026-09-08",
-          "copy": "The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.",
-          "href": "https://github.com/ilmych/apush-course-build/blob/deeaf0c190d8905c7a5efe3cb612b899ca190f3c/PIPELINE.md#L21"
-        }
-      ]
-    },
-    "psych": {
-      "title": "ASAP position",
-      "note": "Source readback: 2026-09-08. Assigned work is not phase completion.",
-      "rows": [
-        {
-          "code": "p5",
-          "name": "RE-EARN \u2014 PARTIAL PUBLICATION",
-          "label": "Re-earn",
-          "state": "active",
-          "status": "RE-EARN",
-          "signal": "Current-source check \u00b7 2026-09-08",
-          "copy": "Current main carries partial publication/readback receipts for Units 0\u20131 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
-          "href": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/9593745a175a91feaa64b51e87e97b20a6c10f67/out/publish/live_tree_all.json"
-        }
-      ]
-    }
-  }
-};
+/* Course identity is static; every standing is loaded from current JSON. */
+const COURSE_IDENTITIES = [
+  { id: 'humgeo', label: 'AP Human Geography', short: 'HumGeo', color: 'oklch(46% 0.11 170)' },
+  { id: 'apwh', label: 'AP World History', short: 'APWH', color: 'oklch(48% 0.12 75)' },
+  { id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)' },
+  { id: 'psych', label: 'AP Psychology', short: 'Psych', color: 'oklch(48% 0.16 305)' },
+];
+const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = { activeCourse: 'humgeo', courses: [], snapshot: 'UNMEASURED', errors: [] };
 
 const NEEDS_KEYS = ['generated_ts', 'open', 'schema'];
 const NEEDS_ITEM_KEYS = ['course', 'deadline', 'id', 'kind', 'title', 'ts'];
@@ -235,8 +62,41 @@ const formatNextStep = (value, fallback) => {
   return `${value.verb.trim().replace(/^./, char => char.toUpperCase())} via ${value.tool.trim()}${args} once ${value.gate.trim().replace(/[.]$/, '')}.`;
 };
 
+const bindCourseState = (data, processValue, now = Date.now()) => COURSE_IDENTITIES.map(identity => {
+  const rows = Array.isArray(data?.claims) ? data.claims.filter(row => row?.claim_id === `${identity.id}.blueprint.audit`) : [];
+  const claim = rows.length === 1 ? rows[0] : null;
+  const position = processValue?.courses?.[identity.id];
+  const text = value => typeof value === 'string' && value.trim();
+  const missing = !claim || !['OBSERVED', 'PLANNED', 'BLOCKED', 'MISSING', 'DERIVED'].includes(claim.status) || !text(claim.value) ||
+    !Number.isFinite(parsedTime(claim.observed_at || claim.status_at)) ||
+    !claim.process_position || !['current_stage', 'state'].every(key => text(claim.process_position[key])) ||
+    !position || !['current_stage', 'state', 'detail', 'as_of'].every(key => text(position[key]));
+  const mismatch = !missing && (position.detail !== claim.value || position.as_of !== (claim.observed_at || claim.status_at) ||
+    ['current_stage', 'state'].some(key => position[key] !== claim.process_position[key]));
+  if (missing || mismatch) return { ...identity, available: false, stale: true, measured: NaN, status: 'MISSING · CURRENT STATE UNAVAILABLE',
+    reason: mismatch ? 'data.json and process.json disagree on standing, date or position.' : 'Standing or process record is missing/invalid.',
+    statusTone: 'red', mapping: 'Source unavailable', observed: 'UNMEASURED', processObserved: 'UNMEASURED',
+    landed: 'Current standing is unavailable. Reconcile data.json and process.json; dated history is not a fallback.',
+    nextStep: 'Restore and verify the current source records.', phaseStates: [], footprint: [] };
+  const measured = parsedTime(claim.observed_at || claim.status_at);
+  const processMeasured = parsedTime(position.as_of);
+  const limit = claim.freshness_limit_hours;
+  const stale = typeof limit !== 'number' || !Number.isFinite(limit) || limit <= 0 ||
+    [measured, processMeasured].some(stamp => !Number.isFinite(stamp) || stamp > now + 300000 || now - stamp > limit * 3600000);
+  return { ...identity, available: true, stale, measured, claimStatus: claim.status,
+    status: `${claim.status} · ${position.state}`, statusTone: claim.status === 'MISSING' ? 'red' : claim.status === 'BLOCKED' ? 'amber' : 'blue',
+    mapping: processValue.label || 'ASAP process', observed: snapshotLabel(claim.observed_at || claim.status_at), processObserved: snapshotLabel(position.as_of),
+    landed: claim.value, nextStep: formatNextStep(claim.next_step, 'The governed next step is unavailable.'),
+    claimHref: `claims.html#claim-${encodeURIComponent(claim.claim_id)}`,
+    evidence: Array.isArray(claim.evidence) ? claim.evidence.filter(item => item && typeof item === 'object') : [],
+    phaseStates: [{ code: position.current_stage, name: position.state, state: ['BLOCKED', 'MISSING'].includes(claim.status) ? 'locked' : 'active', status: claim.status, detail: claim.value }],
+    footprint: [{ value: position.current_stage, label: 'declared position; receipts govern completion' }] };
+});
+
 const processFrontier = value => {
-  if (!value || !Array.isArray(value.stages) || !value.stages.length ||
+  if (!value || typeof value.label !== 'string' || !Number.isFinite(parsedTime(value.generated_utc)) ||
+      !Array.isArray(value.route) || value.route.some(stage => typeof stage !== 'string') ||
+      !Array.isArray(value.stages) || !value.stages.length ||
       value.stages.some(stage => typeof stage?.automated !== 'boolean' || typeof stage.id !== 'string' ||
         typeof stage.name !== 'string' || typeof stage.contract_status !== 'string' ||
         !Array.isArray(stage.required_artifacts) || stage.required_artifacts.some(item => typeof item !== 'string'))) return null;
@@ -267,12 +127,12 @@ const renderNeedsHuman = (root, result, now) => {
   root.className = `needs-human-strip ${result.status === 'hold' ? 'is-hold' : result.items.length ? 'has-items' : 'is-clear'}`;
   const head = make('div', 'needs-human-head');
   if (result.status === 'hold') {
-    head.append(make('h2', '', 'Needs-human status unavailable'), make('p', '', result.reason));
+    head.append(make('h2', '', 'Request projection unavailable'), make('p', '', result.reason));
     root.replaceChildren(head);
     return;
   }
-  const title = make('h2', '', result.items.length ? `Needs a human: ${result.items.length}` : 'Nothing needs you');
-  head.append(title, make('p', '', `Projection measured ${ageLabel(result.generated, now)}`));
+  const title = make('h2', '', result.items.length ? `Recorded requests: ${result.items.length}` : 'No requests in this projection');
+  head.append(title, make('p', '', `Projection generated ${ageLabel(result.generated, now)}. Unresolved ledger entries retain their original dates; they do not prove a current blocker.`));
   if (!result.items.length) {
     root.replaceChildren(head);
     return;
@@ -286,12 +146,18 @@ const renderNeedsHuman = (root, result, now) => {
     row.append(chip);
     const copy = make('div', 'needs-human-copy');
     copy.append(make('strong', '', item.title));
-    const meta = make('span', '', `${ageLabel(parsedTime(item.ts), now)} · ${item.deadline ? `Deadline ${item.deadline}` : 'No deadline'}`);
+    const meta = make('span', '', `Recorded ${snapshotLabel(item.ts)} · ${item.deadline ? `Recorded deadline ${item.deadline}` : 'No recorded deadline'}`);
     copy.append(meta);
     row.append(copy);
     list.append(row);
   });
-  root.replaceChildren(head, list);
+  if (result.items.every(item => /^(historical|optional historical) /i.test(item.title))) {
+    const details = make('details');
+    const summary = make('summary', 'needs-human-head');
+    summary.append(...head.childNodes);
+    details.append(summary, list);
+    root.replaceChildren(details);
+  } else root.replaceChildren(head, list);
 };
 
 const renderFrontier = (root, processValue, now) => {
@@ -323,7 +189,6 @@ const renderFrontier = (root, processValue, now) => {
 };
 
 const renderCourseCards = (root, data, updates, now) => {
-  const claims = Array.isArray(data?.claims) ? data.claims : [];
   const summary = globalThis.AP4_UPDATES?.summarizeCourse;
   const head = make('div', 'timeline-head');
   const intro = make('div');
@@ -333,31 +198,20 @@ const renderCourseCards = (root, data, updates, now) => {
   const grid = make('div', 'course-card-grid');
   grid.setAttribute('aria-label', 'Current TimeBack state and next step by course');
   AP4_DASHBOARD.courses.forEach(course => {
-    const claim = claims.find(row => row?.claim_id === `${course.id}.blueprint.audit`);
-    const claimMeasured = parsedTime(claim?.observed_at || claim?.status_at);
-    const event = claim?.current_event;
-    const eventMeasured = parsedTime(event?.ts);
-    const validEvent = event && typeof event.phase === 'string' && typeof event.kind === 'string' && typeof event.text === 'string';
-    const currentEvent = validEvent && Number.isFinite(eventMeasured) && (!Number.isFinite(claimMeasured) || eventMeasured >= claimMeasured) ? event : null;
-    const measuredValues = [claimMeasured, eventMeasured].filter(Number.isFinite);
-    const measured = measuredValues.length ? Math.max(...measuredValues) : NaN;
-    const limit = Number(claim?.freshness_limit_hours);
-    const stale = !Number.isFinite(measured) || !Number.isFinite(limit) || measured > now + 5 * 60 * 1000 || now - measured > limit * 60 * 60 * 1000;
-    const rates = typeof summary === 'function' ? summary(updates, course.id, now) : null;
+    const { measured, stale } = course;
+    const rates = Array.isArray(updates) && typeof summary === 'function' ? summary(updates, course.id, now) : null;
     const card = make('a', `course-summary-card${stale ? ' is-stale' : ''}`);
     card.href = `${course.id}.html`;
     card.style.setProperty('--course-color', course.color);
     const headline = make('div', 'course-card-headline');
-    const eventPhase = currentEvent?.phase?.trim();
-    const eventStatus = eventPhase && currentEvent.kind !== 'note' ? `${eventPhase.replace(/^phase\s*/i, 'Phase ')} · ${currentEvent.kind.replaceAll('-', ' ').toUpperCase()}` : course.status;
-    const status = make('span', 'course-card-status', `${stale ? 'STALE · ' : ''}${eventStatus} · measured ${ageLabel(measured, now)}`);
+    const status = make('span', 'course-card-status', `${stale ? 'STALE · ' : ''}${course.status} · claim checked ${ageLabel(measured, now)}`);
     if (Number.isFinite(measured)) status.title = new Date(measured).toISOString();
     headline.append(status);
     card.append(headline, make('h3', '', course.label));
     const landed = make('p', 'course-card-landed');
-    landed.append(make('strong', '', currentEvent ? 'Latest attested: ' : 'Landed: '), currentEvent?.text || course.landed);
+    landed.append(make('strong', '', 'Standing: '), course.landed);
     const next = make('p', 'course-card-next');
-    next.append(make('strong', '', 'Next: '), formatNextStep(claim?.next_step, course.nextStep));
+    next.append(make('strong', '', 'Next: '), course.nextStep);
     const tiles = make('div', 'rate-tiles');
     [
       [rates?.landings7d, 'landings · 7d'],
@@ -374,6 +228,56 @@ const renderCourseCards = (root, data, updates, now) => {
   root.replaceChildren(head, grid);
 };
 
+const renderCourseDetails = () => {
+  const appendState = (root, course) => {
+    root.append(make('p', `gate-observed${course.stale ? ' is-stale' : ''}`, `${course.stale ? 'STALE · ' : ''}${course.status} · claim checked ${course.observed} · process position dated ${course.processObserved}`));
+    const grid = make('div', 'phase-state-grid');
+    course.phaseStates.forEach(phase => {
+      const row = make('div', `phase-state phase-state-${phase.state}`);
+      row.append(make('strong', '', phase.code), make('h3', '', phase.name));
+      grid.append(row);
+    });
+    root.append(grid, make('p', '', course.landed), make('p', 'course-card-next', `Next: ${course.nextStep}`));
+    if (course.reason) root.append(make('p', 'update-empty', course.reason));
+    if (course.evidence?.length) {
+      const sources = make('ul', 'course-source-evidence');
+      course.evidence.forEach(item => {
+        const row = make('li');
+        const label = typeof item.type === 'string' ? item.type : 'Source reference';
+        if (typeof item.url === 'string' && /^https?:\/\//i.test(item.url)) {
+          const link = make('a', '', label); link.href = item.url; row.append(link);
+        } else row.append(make('span', '', `${label}: ${typeof item.location === 'string' ? item.location : 'Link unavailable'}`));
+        row.append(make('small', '', ` · reference checked ${snapshotLabel(item.observed_at)}`));
+        if (typeof item.scope === 'string') row.append(make('span', '', ` · ${item.scope}`));
+        sources.append(row);
+      });
+      root.append(make('h3', '', 'Referenced evidence'), sources);
+    }
+    if (course.claimHref) {
+      const link = make('a', '', 'Open standing claim and source receipts →');
+      link.href = course.claimHref; root.append(link);
+    }
+  };
+  document.querySelectorAll('[data-phase-summary]').forEach(root => {
+    root.replaceChildren(make('h2', '', 'Current source-bound position'), make('p', '', 'Standing claims and declared process positions; repository activity does not advance either.'));
+    const list = make('div', 'phase-course-list');
+    AP4_DASHBOARD.courses.forEach(course => {
+      const row = make('article'); row.append(make('h3', '', course.label)); appendState(row, course); list.append(row);
+    });
+    root.append(list);
+  });
+  document.querySelectorAll('[data-gate-evidence]').forEach(root => {
+    const course = AP4_DASHBOARD.courses.find(item => item.id === root.dataset.gateEvidence);
+    if (!course) { root.replaceChildren(make('p', '', 'Unknown course; current state unavailable.')); return; }
+    root.classList.add('gate-evidence-sec'); root.replaceChildren(make('h2', '', 'Current ASAP position')); appendState(root, course);
+    const main = root.closest('main');
+    const intro = main?.querySelector('h1 + .sub');
+    if (intro) intro.textContent = `${course.stale ? 'STALE · ' : ''}Source check: ${course.observed}. ${course.landed}`;
+    const next = main?.querySelector('[data-course-next]');
+    if (next) next.textContent = course.nextStep;
+  });
+};
+
 const boardSelftest = () => {
   const now = Date.parse('2026-08-31T03:00:00Z');
   if (snapshotLabel('2026-08-31T07:22Z') !== 'Aug 31, 2026 · 16:22 KST') throw new Error('evidence snapshot clock failed');
@@ -386,108 +290,68 @@ const boardSelftest = () => {
   if (validateNeedsHuman({ ...good, extra: true }, now).status !== 'hold') throw new Error('unexpected field did not hold');
   if (formatNextStep({ verb: 'resume', tool: 'factory-course-run', args: ['humgeo'], gate: 'the picker is runnable' }, 'fallback') === 'fallback') throw new Error('typed next step failed');
   if (automationGap({ automated: false, contract_status: 'CUT' }).label !== 'Cut') throw new Error('ASAP phase self-test failed');
+  const claim = { claim_id: 'humgeo.blueprint.audit', status: 'OBSERVED', value: 'Current checked source', observed_at: new Date(now - 3600000).toISOString(), freshness_limit_hours: 24, process_position: { current_stage: 'p3', state: 'VALIDATING' } };
+  const processValue = { courses: { humgeo: { current_stage: 'p3', state: 'VALIDATING', detail: claim.value, as_of: claim.observed_at } } };
+  const view = bindCourseState({ claims: [claim] }, processValue, now);
+  if (view.length !== 4 || view[0].landed !== claim.value || view[0].stale || view[1].available) throw new Error('current source binding failed');
+  const older = { ...claim, observed_at: new Date(now - 172800000).toISOString(), current_event: { ts: new Date(now).toISOString(), kind: 'landed', phase: 'p8', text: 'Recent activity' } };
+  const olderProcess = { courses: { humgeo: { ...processValue.courses.humgeo, as_of: older.observed_at } } };
+  const stale = bindCourseState({ claims: [older] }, olderProcess, now)[0];
+  if (!stale.stale || stale.landed !== claim.value || stale.phaseStates[0].code !== 'p3') throw new Error('activity refreshed or advanced a standing claim');
+  for (const field of ['detail', 'as_of', 'current_stage', 'state']) {
+    const drift = { courses: { humgeo: { ...processValue.courses.humgeo, [field]: 'Different source value' } } };
+    if (bindCourseState({ claims: [claim] }, drift, now)[0].available) throw new Error(`${field} drift accepted as current`);
+  }
+  const p5 = { ...claim, process_position: { current_stage: 'p5', state: 'PARTIAL' } };
+  const p5View = bindCourseState({ claims: [p5] }, { courses: { humgeo: { ...processValue.courses.humgeo, ...p5.process_position } } }, now)[0];
+  if (p5View.phaseStates.length !== 1 || p5View.phaseStates[0].code !== 'p5' || p5View.phaseStates[0].status !== 'OBSERVED') throw new Error('position inferred another phase or PASS');
+  if (bindCourseState(null, processValue, now)[0].available || bindCourseState({ claims: [claim] }, null, now)[0].available || bindCourseState({ claims: [claim, claim] }, processValue, now)[0].available) throw new Error('missing/duplicate source used a fallback');
+
 };
 
-globalThis.AP4_BOARD = { ageLabel, automationGap, formatNextStep, processFrontier, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
+globalThis.AP4_BOARD = { ageLabel, automationGap, bindCourseState, formatNextStep, processFrontier, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
 
 (() => {
-  const courses = AP4_DASHBOARD.courses;
-  if (courses.length !== 4 || courses.some(course => !course.phaseStates.length || course.phaseStates.some(phase => !phase.code || !phase.name || !phase.status))) {
-    throw new Error('Dashboard lifecycle data is incomplete.');
-  }
-
-  if (typeof document === 'undefined') {
-    boardSelftest();
-    return;
-  }
-
-  const phaseMarkup = course => `
-    <div class="phase-state-grid" aria-label="${course.label} current runbook position">
-      ${course.phaseStates.map(phase => `
-        <div class="phase-state phase-state-${phase.state}">
-          <div><strong>${phase.code}</strong><span>${phase.status}</span></div>
-          <h3>${phase.name}</h3>
-          <p>${phase.detail}</p>
-        </div>`).join('')}
-    </div>`;
-
-  document.querySelectorAll('[data-phase-summary]').forEach(root => {
-    root.innerHTML = `
-      <div class="section-head"><div><span class="badge b-blue">ASAP edition (2026-09-01)</span><h2>Current re-earned position</h2></div></div>
-      <p>Each course shows only landed or measured state; queued work is not phase credit.</p>
-      <div class="phase-course-list">
-        ${courses.map(course => `<article><h3><a href="${course.id}.html">${course.label}</a></h3>${phaseMarkup(course)}</article>`).join('')}
-      </div>`;
-  });
-
-  document.querySelectorAll('[data-course-eta]').forEach(section => {
-    const course = courses.find(item => item.id === section.dataset.courseEta);
-    if (!course) return;
-    section.querySelector('[data-course-eta-days]').textContent = course.etaDays;
-    section.querySelector('[data-course-eta-note]').textContent = course.etaNote;
-  });
-
-  document.querySelectorAll('[data-gate-evidence]').forEach(root => {
-    const courseId = root.dataset.gateEvidence;
-    const map = AP4_DASHBOARD.evidenceMaps[courseId];
-    const course = courses.find(item => item.id === courseId);
-    if (!map || !course) return;
-    root.classList.add('gate-evidence-sec');
-    root.innerHTML = `
-      <div class="gate-evidence-head">
-        <div><span class="badge b-${course.statusTone}">${course.mapping}</span><h2>Current ASAP edition state</h2></div>
-        <span class="gate-observed">Re-earned · ${course.observed}</span>
-      </div>
-      <p class="gate-evidence-note">${map.note} Evidence counts retain their cited scope and are never summed into a completion percentage.</p>
-      ${phaseMarkup(course)}
-      <div class="work-footprint" aria-label="${course.label} observable work footprint">
-        ${course.footprint.map(metric => `<div><strong>${metric.value}</strong><span>${metric.label}</span></div>`).join('')}
-      </div>
-      <div class="gate-evidence-list">
-        ${map.rows.map(row => `
-          <article class="gate-evidence-row gate-evidence-${row.state}">
-            <div class="gate-evidence-id"><span title="${row.name}" aria-label="${row.name}">${row.code}</span><small aria-hidden="true">${row.label}</small></div>
-            <div>
-              <span class="gate-evidence-status">${row.status}</span>
-              <h3>${row.signal}</h3>
-              <p>${row.copy}</p>
-              <a href="${row.href}"${row.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>Open receipt →</a>
-            </div>
-          </article>`).join('')}
-      </div>`;
-  });
-
+  if (typeof document === 'undefined') { boardSelftest(); return; }
   const root = document.getElementById('course-release-timeline');
-  if (!root) return;
   const needsRoot = document.getElementById('needs-human-strip');
   const frontierRoot = document.getElementById('automation-frontier');
   const load = async path => {
     const response = await fetch(path, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`${path} unavailable`);
-    return response.json();
+    if (!response.ok) throw new Error(`${path} returned ${response.status}`);
+    const value = await response.json();
+    if (path === 'data.json' && !Array.isArray(value?.claims)) throw new Error('data.json claims are invalid');
+    if (path === 'process.json' && (!processFrontier(value) || !value.courses || Array.isArray(value.courses))) throw new Error('process.json is invalid');
+    if (path === 'updates.json' && !Array.isArray(value)) throw new Error('updates.json is invalid');
+    return value;
   };
-  let needsRefresh;
-  const refreshNeedsHuman = () => needsRefresh || (needsRefresh = load('needs-human.json')
-    .then(value => {
-      const now = Date.now();
-      if (needsRoot) renderNeedsHuman(needsRoot, validateNeedsHuman(value, now), now);
-    })
-    .catch(() => {
-      const now = Date.now();
-      if (needsRoot) renderNeedsHuman(needsRoot, validateNeedsHuman(null, now), now);
-    })
+  let stateRefresh, needsRefresh;
+  const refreshState = () => stateRefresh || (stateRefresh = Promise.allSettled([
+    load('data.json'), load('process.json'), globalThis.AP4_UPDATES?.load ? globalThis.AP4_UPDATES.load() : load('updates.json'),
+  ]).then(results => {
+    const [data, processValue, updates] = results.map(result => result.status === 'fulfilled' ? result.value : null);
+    const now = Date.now();
+    AP4_DASHBOARD.data = data; AP4_DASHBOARD.process = processValue; AP4_DASHBOARD.updates = updates;
+    AP4_DASHBOARD.snapshot = typeof data?.snapshot === 'string' ? data.snapshot : 'UNMEASURED';
+    AP4_DASHBOARD.errors = results.flatMap((result, index) => result.status === 'rejected' ? [`${['data.json', 'process.json', 'updates.json'][index]} unavailable: ${result.reason.message}`] : []);
+    AP4_DASHBOARD.courses = bindCourseState(data, processValue, now);
+    AP4_DASHBOARD.errors.push(...AP4_DASHBOARD.courses.filter(course => !course.available).map(course => `${course.short}: ${course.reason}`));
+    renderCourseDetails();
+    if (frontierRoot) renderFrontier(frontierRoot, processValue, now);
+    if (root) renderCourseCards(root, data, updates, now);
+    document.dispatchEvent(new CustomEvent('ap4-state-changed'));
+    return AP4_DASHBOARD;
+  }).finally(() => { stateRefresh = null; }));
+  const refreshNeedsHuman = () => !needsRoot ? Promise.resolve() : needsRefresh || (needsRefresh = load('needs-human.json')
+    .then(value => renderNeedsHuman(needsRoot, validateNeedsHuman(value), Date.now()))
+    .catch(() => renderNeedsHuman(needsRoot, validateNeedsHuman(null), Date.now()))
     .finally(() => { needsRefresh = null; }));
+  AP4_DASHBOARD.refresh = () => AP4_DASHBOARD.ready = refreshState();
+  AP4_DASHBOARD.refresh(); void refreshNeedsHuman();
   const refreshOnReturn = () => {
-    if (!document.hidden) void refreshNeedsHuman();
+    if (!document.hidden) { AP4_DASHBOARD.refresh(); void refreshNeedsHuman(); }
   };
-  void refreshNeedsHuman();
   window.addEventListener('focus', refreshOnReturn);
   window.addEventListener('pageshow', refreshOnReturn);
   document.addEventListener('visibilitychange', refreshOnReturn);
-  Promise.allSettled([load('data.json'), load('process.json'), load('updates.json')]).then(results => {
-    const now = Date.now();
-    if (frontierRoot) renderFrontier(frontierRoot, results[1].status === 'fulfilled' ? results[1].value : null, now);
-    renderCourseCards(root, results[0].status === 'fulfilled' ? results[0].value : null,
-      results[2].status === 'fulfilled' && Array.isArray(results[2].value) ? results[2].value : [], now);
-  });
 })();

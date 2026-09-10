@@ -1,10 +1,10 @@
 {
  "schema_version": 2,
- "generated_utc": "2026-09-08T04:48:09Z",
+ "generated_utc": "2026-09-10T02:18:44Z",
  "label": "ASAP edition (2026-09-01)",
- "runbook_version": "2026-09-03.6",
- "source_sha256": "ce1cccf6b3a2e3990e321f1892d9544b12ede0192d9552a060dc758eac1b2635",
- "authority_note": "Publication runbook, ASAP edition, 2026-09-01. Version 2026-09-03.6. Requirements only; current course positions are re-earned from the per-course plans.",
+ "runbook_version": "2026-09-08.7",
+ "source_sha256": "2f96703379f095a93556a6dba1b491241be31610907741f269aa63b55422ca64",
+ "authority_note": "Publication runbook, ASAP edition, 2026-09-01. Version 2026-09-08.7. Requirements only; current course positions are re-earned from the per-course plans.",
  "route": [
   "content",
   "p3",
@@ -13,6 +13,13 @@
   "p7",
   "p8"
  ],
+ "bar": {
+  "strict_pass_min": 0.95,
+  "severe_fails": 0,
+  "final_run": "cold",
+  "all_checkers_executed": true,
+  "confirm": "Josh"
+ },
  "phases": [
   {
    "id": "p0"
@@ -66,7 +73,25 @@
    "repush_rules": [
     "denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs",
     "drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)"
-   ]
+   ],
+   "receipt_required": [
+    "job_id",
+    "course_id",
+    "request_body_sha256",
+    "submitted_at",
+    "terminal_at",
+    "status",
+    "per_checker_status_all_five_executed_or_errored",
+    "pass_rate",
+    "llm_questions_checked",
+    "llm_cache_hits",
+    "llm_cache_dir",
+    "cold_or_warm",
+    "s3_report_keys_sha256",
+    "cold_route_A_or_B"
+   ],
+   "final_run": "cold",
+   "all_checkers_executed": true
   },
   {
    "id": "p7",
@@ -159,6 +184,20 @@
    "required_artifacts": [
     "denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs",
     "drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)",
+    "job_id",
+    "course_id",
+    "request_body_sha256",
+    "submitted_at",
+    "terminal_at",
+    "status",
+    "per_checker_status_all_five_executed_or_errored",
+    "pass_rate",
+    "llm_questions_checked",
+    "llm_cache_hits",
+    "llm_cache_dir",
+    "cold_or_warm",
+    "s3_report_keys_sha256",
+    "cold_route_A_or_B",
     "fleet course-QC harness (APES reports/step5_courseqc/ job pattern) \u2014 reuse, don't build",
     "judge -> remediate (1-repair/2-regenerate) -> re-push -> re-judge until bar"
    ],
@@ -194,33 +233,33 @@
   "humgeo": {
    "label": "AP Human Geography",
    "current_stage": "content",
-   "state": "RE-EARN \u2014 FINAL CUT PENDING",
-   "as_of": "2026-09-08T04:11:12Z",
-   "detail": "Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited.",
+   "state": "FINAL SOURCE FREEZE / CUT PENDING",
+   "as_of": "2026-09-10T02:13:38Z",
+   "detail": "HumGeo source integration is merged through PR #88. AP One\u2019s regenerated PP100 intake (#1047), native v2 preparation (#1052), and 51-activity writing-bank successor (#1069) are merged. Video-receipt and assets reseal #1072 remains open. The current execution checklist places source freeze, bank assembly and the final publication cut before dark publication and its exact readback.",
    "priority": 1
   },
   "apwh": {
    "label": "AP World History",
    "current_stage": "p3",
-   "state": "RE-EARN \u2014 BANK VALIDATION",
-   "as_of": "2026-09-08T03:43:26Z",
-   "detail": "The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.",
+   "state": "GATE BANK PASS / FINAL QTI HELD",
+   "as_of": "2026-09-10T02:14:46Z",
+   "detail": "The final gate-bank and mock update landed in #1037. The September 8 v2 record passes the gate-bank checks. Publication preparation remains held on accepted-source/content gaps and incomplete final QTI, publication-operator and readback requirements. Full p3 completion, dark publication, cold QC and learner acceptance are not established.",
    "priority": 2
   },
   "apush": {
    "label": "AP US History",
    "current_stage": "fleet-held",
-   "state": "RE-EARN \u2014 FLEET-HELD",
-   "as_of": "2026-09-08T03:43:26Z",
-   "detail": "The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.",
+   "state": "PRE-PUBLICATION / WAVE RECONCILIATION",
+   "as_of": "2026-09-10T02:14:46Z",
+   "detail": "Current main includes the September 9\u201310 learner-surface admission, suite-portability and whole-round migration fixes. The committed acceptance ledger is unchanged, and PIPELINE.md still records publication and post-publication review as pre-publication. The current execution/release readback remains unverified; no later phase credit is established.",
    "priority": 3
   },
   "psych": {
    "label": "AP Psychology",
    "current_stage": "p5",
-   "state": "RE-EARN \u2014 PARTIAL PUBLICATION",
-   "as_of": "2026-09-08T04:44:16Z",
-   "detail": "Current main carries partial publication/readback receipts for Units 0\u20131 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
+   "state": "PARTIAL PUBLICATION THROUGH UNIT 3",
+   "as_of": "2026-09-10T02:14:46Z",
+   "detail": "Current committed receipts extend partial publication through Unit 3. Aggregate tree readback covers Units 0\u20132, and Unit 3\u2019s deterministic live-QC receipt passes its named inventory. Units 4\u20135 retain tree_pushed=false. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
    "priority": "parallel"
   }
  }

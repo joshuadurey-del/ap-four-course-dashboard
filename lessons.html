@@ -21,8 +21,65 @@
   </nav>
 
   <main>
-    <h1>Recovery lessons</h1>
-    <p class="sub">A reproducible process catalog: each lesson names a trigger, observable failure, missing control, implemented control, and verifier. Ownership sets priority; blame does not close a process gap.</p>
+    <h1>Lessons into practice</h1>
+    <p class="sub">Practical improvements for the next course build: when to act, who owns the outcome, which existing tool to use, and what evidence proves the change worked. Shipped controls and proposed operating practices are labeled separately.</p>
+
+    <section id="morning-retro-20260910">
+      <h2>September 10: put the twelve lessons into practice</h2>
+      <p>Source window: the September 9–10 HumGeo two-seat retrospective, ending at the recorded stand-down. Apply these actions at existing dispatch, review, integration and release decisions. They describe next-build practice; current course standing remains on the <a href="humgeo.html">HumGeo page</a>.</p>
+      <p><b>Wired code:</b> the Course Builder launcher runs the existing checkpoint consistency check. It checks declared scope, dependencies, retry reasons, job evidence references, usage and ETA support; it does not open the referenced receipts or verify native acceptance. <b>Guidance shipped:</b> eight decision cards cover all twelve findings. <b>Operating adoption pending:</b> the actions below still need evidence from the next build.</p>
+      <table class="lesson-table">
+        <caption>Eight existing decision cards, with accountable roles and acceptance evidence.</caption>
+        <thead><tr><th scope="col">When to act · accountable role</th><th scope="col">Implementation to adopt · acceptance evidence</th></tr></thead>
+        <tbody>
+          <tr data-decision="inventory" data-retro-lessons="1 3 9 12">
+            <td><b class="lesson-title">Reconcile the selected source before scale</b><span class="lesson-context">Lessons 1, 3, 9, 12 · <b>Trigger:</b> broad dispatch or a changed selected-source baseline. <b>Owner:</b> orchestrator.</span></td>
+            <td><b>Action:</b> use the existing selector to classify every selected obligation and its teaching, placement and integration dependencies. Keep release milestones fixed when scope changes. <b>Use:</b> <code>course-deficit-burndown</code>, <code>phase-bank-validation</code>. <b>Accept when:</b> the selected-source receipt binds the exact source, actual form members, reusable native acceptance and one owner per remaining group.</td>
+          </tr>
+          <tr data-decision="dispatch" data-retro-lessons="2 3 5 7 11">
+            <td><b class="lesson-title">Dispatch a feasible complete group</b><span class="lesson-context">Lessons 2, 3, 5, 7, 11 · <b>Trigger:</b> generation, article work or repair QC. <b>Owner:</b> complete-form owner.</span></td>
+            <td><b>Action:</b> reserve the actual target; read the full teacher; check current placement, concept limits and the exact request mode before spending. <b>Use:</b> <code>factory-batch-dispatch</code>, <code>item-pipeline</code>, the selected native article validator. <b>Accept when:</b> free checks pass on the intended request, the scoped envelope is recorded, and a returned teaching body is accepted before dependent items rely on it.</td>
+          </tr>
+          <tr data-decision="review" data-retro-lessons="6 7 12">
+            <td><b class="lesson-title">Return one usable review of the changed batch</b><span class="lesson-context">Lessons 6, 7, 12 · <b>Trigger:</b> a bounded changed group is ready. <b>Owner:</b> independent reviewer; author resolves findings.</span></td>
+            <td><b>Action:</b> return substantive findings together and reuse unchanged approvals under the native request and provenance rules. Finish learner-facing cleanup before final QC. <b>Use:</b> <code>one-round-review</code>. <b>Accept when:</b> one verdict binds the changed bytes, closes its findings and can be consumed directly by the integrator without another routine approval relay.</td>
+          </tr>
+          <tr data-decision="retry" data-retro-lessons="4 5 6 11 12">
+            <td><b class="lesson-title">Diagnose the premise before another attempt</b><span class="lesson-context">Lessons 4, 5, 6, 11, 12 · <b>Trigger:</b> a native failure, especially a repeated reason. <b>Owner:</b> author and independent reviewer.</span></td>
+            <td><b>Action:</b> preserve the full response and distinguish content, teaching, request, context and verdict defects. Resolve the shared cause within the native contract. <b>Use:</b> <code>item-regen</code>, <code>item-class-precedent</code>. <b>Accept when:</b> the next attempt names a changed cause or an authorized bounded diagnostic purpose, respects native limits, and closes the prior envelope's calls and outcomes.</td>
+          </tr>
+          <tr data-decision="integrate" data-retro-lessons="2 3 6 7">
+            <td><b class="lesson-title">Close the form through integration</b><span class="lesson-context">Lessons 2, 3, 6, 7 · <b>Trigger:</b> an accepted group reaches the source owner. <b>Owner:</b> form owner and single integrator.</span></td>
+            <td><b>Action:</b> consume exact approved records with current input bindings; transfer the whole group if a dependency stalls. Recheck affected inputs when they change. <b>Use:</b> <code>land-a-change</code>, <code>phase-bank-validation</code>. <b>Accept when:</b> required recall, application, teaching and placement dependencies are integrated and the native whole-form receipt passes on the joined source.</td>
+          </tr>
+          <tr data-decision="release-readiness" data-retro-lessons="8 9">
+            <td><b class="lesson-title">Prepare the release interfaces alongside content</b><span class="lesson-context">Lessons 8, 9 · <b>Trigger:</b> content work begins, then the final-source join. <b>Owner:</b> authorized release owner.</span></td>
+            <td><b>Action:</b> inspect actual merge dependencies and the native publication and learner sequence early; bind one final digest and one remote writer. <b>Use:</b> <code>land-a-change</code>, <code>publish-course-dark</code>, <code>course-qc-gauntlet</code>. <b>Accept when:</b> each required source, dark-readback, hosted-QC, learner and release outcome has its own verified receipt in the owning sequence.</td>
+          </tr>
+          <tr data-decision="report" data-retro-lessons="9 10 11 12">
+            <td><b class="lesson-title">Report outcomes, evidence and scoped cost</b><span class="lesson-context">Lessons 9, 10, 11, 12 · <b>Trigger:</b> an existing milestone update or handoff. <b>Owner:</b> orchestrator.</span></td>
+            <td><b>Action:</b> report fixed outcomes, the oldest dependency and observed, peer-reported or proposed job state. Reconcile available provider/Hermes usage and QC ledgers by scope. <b>Use:</b> <code>course-deficit-burndown</code> and the existing checkpoint check. <b>Accept when:</b> completion and running-job claims have matching receipts; billed cost, estimates and gaps stay separate; an ETA has a reconciled dependency chain and duration evidence or reads <code>UNMEASURED</code>.</td>
+          </tr>
+          <tr data-decision="stop" data-retro-lessons="7 12">
+            <td><b class="lesson-title">Transfer a compact, resumable result</b><span class="lesson-context">Lessons 7, 12 · <b>Trigger:</b> owner pause, interruption, transfer or no sanctioned work remaining. <b>Owner:</b> current orchestrator and receiving owner.</span></td>
+            <td><b>Action:</b> honor the pause and preserve current refs, complete and remaining groups, reservations, native job IDs and recovery boundaries. <b>Use:</b> <code>course-deficit-burndown</code> and the existing checkpoint. <b>Accept when:</b> the handoff names the next dependency and spend gaps, preserves failed evidence, and permits continuation without duplicate submissions or a new approval hierarchy.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b>Verify adoption:</b> inspect the next build's existing milestone receipts against these rows. A shipped card or a consistent checkpoint alone does not demonstrate changed operating behavior, course acceptance or savings.</p>
+      <p><a href="retro.html">Retrospective gateway</a> · <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/COURSE-BUILD-RUNBOOK.md">Private agent runbook</a> · <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/decisions.json">Decision cards (Alpha access)</a>.</p>
+    </section>
+
+    <section id="humgeo-run-20260909">
+      <h2>Prove the complete route before scaling the next course</h2>
+      <p>2026-09-09 · HumGeo · Evidence window: September 1–9, including the saved course pause and separately completed video uploads.</p>
+      <p><b>Trigger:</b> A course campaign expands from pilots into parallel authoring, review, integration and publication.</p>
+      <p><b>Observable failure:</b> Drafts, individual passes and prepared patches accumulated while complete forms and the final publication remained open. Item-only QC missed article failures; repeated review rounds, local/native contract mismatches and approval-file handoffs consumed effort without establishing the next outcome.</p>
+      <p><b>Missing control:</b> Complete input context, population-level validation and a defined handoff to the next owner were not consistently present before scale. Transport speed and worker activity obscured acceptance and integration.</p>
+      <p><b>Implemented control:</b> Successful HumGeo lanes used emit/judge/render pilots, native population checks, coupled whole-form repairs, exact accepted-object transfers and installed-helper verification. Routine authority allowed mechanical consumption of existing approvals. The linked retrospective turns these demonstrated methods into a staged next-course playbook; its team and flow-metric recommendations remain proposals, not new policy.</p>
+      <p><b>Verifier:</b> The investigation matched h34’s 12 recorded integration objects and h41’s six new objects to immutable Git blobs, checked 51 supporting file hashes, and joined 191 video upload rows to reviewed/local/served hashes. The page records separate limits for each example and links authenticated repository landings. None of these results grants final-course publication or learner acceptance.</p>
+      <p><b>Use it:</b> <a href="retro.html">Retrospective gateway</a> · <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/COURSE-BUILD-RUNBOOK.md">Private agent runbook</a> · <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-build-playbook.json">Structured plan (Alpha access)</a> · <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/humgeo-retro-20260909.json">Dated evidence index (Alpha access)</a>.</p>
+    </section>
 
     <section id="review-28-rounds">
       <h2>28 review rounds on one branch; now one</h2>

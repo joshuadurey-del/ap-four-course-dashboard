@@ -35,7 +35,7 @@
           <dd id="agent-snapshot">Loading…</dd>
         </div>
         <div>
-          <dt>Standing claims</dt>
+          <dt>Active standing claims</dt>
           <dd id="agent-claim-count">Loading…</dd>
         </div>
         <div>
@@ -52,7 +52,7 @@
 
     <section aria-labelledby="course-states-title">
       <div class="section-head"><div><span class="badge b-blue">Rendered from shared data</span><h2 id="course-states-title">Current course states</h2></div></div>
-      <p>These cards render from the same timeline data the overview uses, at page load, so this section cannot silently disagree with the rest of the site. The machine form — projected phases and each course's re-earned position — is <a href="process.json">process.json</a>.</p>
+      <p>These cards render from the same standing claims and process projection as the overview. Failed or inconsistent loads are shown as unavailable. The machine form — projected phases and each course's re-earned position — is <a href="process.json">process.json</a>.</p>
       <div id="agent-course-states" class="agent-source-list"></div>
       <ul>
         <li><b>Standing routing exclusions:</b> do not use completion percentages, treat 150 standards as 150 questions, blanket re-QC unchanged accepted items, or build local substitutes for current factory or course-owned routes.</li>
@@ -103,7 +103,7 @@
         <div class="agent-source">
           <div>
             <h3>Trace crosswalk</h3>
-            <p>All 167 mined process rows mapped to stages under the v0.3 precedence rule, with per-row receipts, hold classes, and a clean-vs-rule-applied basis flag. Seed data for "what is the next legal step" evals.</p>
+            <p>Historical publication phases mapped to the current ASAP route. Read crosswalk.json for the measured row count; mappings preserve evidence scope and grant no current phase credit.</p>
           </div>
           <a class="agent-source-link" href="crosswalk.json">Open crosswalk.json</a>
         </div>
@@ -195,7 +195,7 @@
         <div><dt>Trace a claim</dt><dd>Start with its <code>claim_id</code> in <a href="data.json">data.json</a>, then follow the evidence entries. Use the <a href="claims.html">Claims explorer</a> when a visual filter is faster.</dd></div>
         <div><dt>Check what you can access</dt><dd><code>evidence_access</code> states whether a receipt is shared, human-only, available after an invite, machine-local, or not yet expected.</dd></div>
         <div><dt>Check freshness</dt><dd>Age each claim from its own <code>observed_at</code> or <code>status_at</code>. A claim older than 48 hours with no successor receipt is a question, not a current fact, unless it is marked <code>settled: true</code>.</dd></div>
-        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> names another owner; <code>MISSING</code> records an absence. None implies LS review readiness or release by itself.</dd></div>
+        <div><dt>Read status precisely</dt><dd><code>OBSERVED</code> records a named check; <code>PLANNED</code> is queued; <code>BLOCKED</code> records a named dependency; <code>MISSING</code> records a verifier or evidence gap, not proven global absence. None implies LS review readiness or release by itself.</dd></div>
         <div><dt>Keep the milestones separate</dt><dd>Course lifecycle follows the publication runbook, ASAP edition, 2026-09-01. Each course has one re-earned position; queued work is not phase credit. <code>LS REVIEW READY</code> remains a planning milestone, not an LS disposition or production outcome.</dd></div>
         <div><dt>Open Langfuse evidence</dt><dd>Langfuse lives at <a href="https://us.cloud.langfuse.com" target="_blank" rel="noopener">us.cloud.langfuse.com</a>, project <b>incept-durey</b>. Accept the organization invite before following trace ids.</dd></div>
       </dl>
@@ -214,7 +214,7 @@
     <p class="note"><b>Authority rule:</b> <a href="data.json">data.json</a> governs standing claims; <a href="updates.json">updates.json</a> governs event chronology. Narrative reports are dated context, and hashes prove bytes only.</p>
   </main>
 
-  <footer>Updates land on every commit · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
+  <footer>Published snapshots retain per-row evidence dates · <a href="data.json">claims JSON</a> · <a href="updates.json">updates JSON</a></footer>
 
   <script type="module">
     await import(`./updates.js?v=${Date.now()}`);
@@ -236,7 +236,11 @@
 
     const fetchJson = path => fetch(path, { cache: 'no-store' }).then(response => {
       if (!response.ok) throw new Error(`${path} returned ${response.status}`);
-      return response.json();
+      return response.json().then(data => {
+        if (path === 'hashes.json' && !Array.isArray(data.files)) throw new Error('Invalid integrity manifest');
+        if (path === 'training.json' && !Array.isArray(data.assets)) throw new Error('Invalid training register');
+        return data;
+      });
     });
 
     const baseUrl = new URL('.', window.location.href);
@@ -256,9 +260,17 @@
       agent_guide: new URL('agents.html', baseUrl).href
     };
 
-    const contractPromise = Promise.all([fetchJson('data.json'), fetchJson('updates.json')]);
+    const requireState = () => AP4_DASHBOARD.ready.then(state => {
+      if (state.errors?.length) throw new Error(state.errors.join('; '));
+      return state;
+    });
+    const statePromise = requireState();
+    const contractPromise = Promise.all([statePromise.then(state => state.data), fetchJson('updates.json').then(rows => {
+      if (!Array.isArray(rows)) throw new Error('Invalid updates feed');
+      return rows;
+    })]);
     const integrityPromise = fetchJson('hashes.json');
-    const processPromise = fetchJson('process.json');
+    const processPromise = statePromise.then(state => state.process);
     const trainingPromise = fetchJson('training.json');
     const agentBundlePromise = Promise.all([contractPromise, integrityPromise, processPromise, trainingPromise])
       .then(([[manifest, updates], integrity, processContracts, trainingRegister]) =>
@@ -278,9 +290,9 @@
 - LS REVIEW READY is a planning milestone, not LS approval, post-review revision, or production release.
 - Prepared, accepted, merged, deployed, and released are separate states.
 - Use only committed factory-canonical routes. If no route exists, report BLOCKED_CONTRACT; do not build a local bridge.
-- Do not write, spend, file, mark, commit, merge, delete, deploy, or release without exact current authority.`;
+- Resolve and reuse current scoped owner authority before consequential actions; this dashboard grants none and does not revoke authority already supplied.`;
 
-    const buildAgentHandoff = () => `Read the AP Four-Course Dashboard contract.
+    const buildAgentHandoff = async () => { await requireState(); return `Read the AP Four-Course Dashboard contract.
 
 Standing claims: ${sourceUrls.claims_manifest}
 Event chronology: ${sourceUrls.updates_feed}
@@ -296,10 +308,10 @@ ${courseStateLines()}
 Rules:
 ${sharedRules}
 
-Return a concise executive summary of current standing, holds by owner, stale or unknown rows, and material evidence gaps.`;
+Return a concise executive summary of current standing, holds by owner, stale or unknown rows, and material evidence gaps.`; };
 
     const buildBuilderHandoff = async () => {
-      const proc = await processPromise;
+      const proc = (await requireState()).process;
       const courseId = AP4_DASHBOARD.activeCourse;
       const course = proc.courses[courseId];
       const stage = proc.stages.find(item => item.id === course.current_stage);
@@ -322,7 +334,7 @@ Active course plan: ${sourceUrls.humgeo_completion_plan}
 Builder rules:
 - Re-earn the current position against live receipts before any work; never assume it.
 - Satisfy the projected phase checks; a green intermediate state closes nothing.
-- On any hold condition, stop, name the missing artifact and its owner, and report — never adapt a runner locally or waive a failed gate.
+- Stop only the dependent action on a hold; name the missing artifact and its owner. Continue independent authorized work. Reuse settled scoped authority and valid unchanged evidence; never waive a failed native gate.
 - A closure binds exact digests; if upstream bytes moved, re-earn the affected state instead of proceeding.
 ${sharedRules}
 
@@ -346,7 +358,7 @@ Report back: the position you verified, the receipts you produced or found missi
       reading_rules: [
         'Age each claim from observed_at or status_at; the manifest snapshot does not refresh an older row.',
         'Follow each claim evidence array for receipt pointers and respect evidence_access.',
-        'OBSERVED records a named check; PLANNED is queued; BLOCKED names another owner; MISSING records an absence.',
+        'OBSERVED records a named check; PLANNED is queued; BLOCKED records a named dependency; MISSING records a verifier or evidence gap, not proven global absence.',
         'This dashboard is a read-only status surface and grants no execution authority.',
         'Course lifecycle follows the publication runbook, ASAP edition, 2026-09-01. Read each re-earned position from manifest rows and processContracts.courses; queued work is not phase credit.',
         'Do not use completion percentages, treat 150 EKs as 150 questions, or duplicate QC for unchanged creation-QC-complete items.',
@@ -369,15 +381,18 @@ Report back: the position you verified, the receipts you produced or found missi
       document.getElementById('agent-action-status').textContent = message;
     };
 
-    document.getElementById('agent-course-states').innerHTML = AP4_DASHBOARD.courses.map(course => `
+    const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const renderAgentCourses = () => requireState().then(() => { document.getElementById('agent-course-states').innerHTML = AP4_DASHBOARD.courses.map(course => `
       <div class="agent-source">
         <div>
-          <h3>${course.label}</h3>
-          <p><b>${course.status}</b> · observed ${course.observed}. ${course.nextStep}</p>
+          <h3>${escapeHtml(course.label)}</h3>
+          <p><b>${escapeHtml(course.status)}</b> · observed ${escapeHtml(course.observed)}. ${escapeHtml(course.nextStep)}</p>
           <ul>${course.phaseStates.map(phase => `<li><b>${phase.code} ${phase.status}:</b> ${phase.name}</li>`).join('')}</ul>
         </div>
         <a class="agent-source-link" href="${course.id}.html">Open ${course.short}</a>
-      </div>`).join('');
+      </div>`).join(''); }).catch(() => { document.getElementById('agent-course-states').textContent = 'Current course states unavailable. Open data.json and process.json directly; no historical fallback is shown.'; });
+    void renderAgentCourses();
+    document.addEventListener('ap4-state-changed', renderAgentCourses);
 
     const copyText = async text => {
       if (navigator.clipboard && window.isSecureContext) {
@@ -406,7 +421,7 @@ Report back: the position you verified, the receipts you produced or found missi
       button.disabled = true;
       button.textContent = 'Copying…';
       try {
-        await copyText(buildAgentHandoff());
+        await copyText(await buildAgentHandoff());
         setActionStatus('Agent handoff copied. Paste it directly into the viewer’s agent.');
       } catch {
         setActionStatus('Copy failed. Open the three current source links below and send those URLs instead.');
@@ -436,7 +451,9 @@ Report back: the position you verified, the receipts you produced or found missi
       button.disabled = true;
       button.textContent = 'Building bundle…';
       try {
-        const files = await agentBundlePromise;
+        const state = await requireState();
+        const files = {manifest: state.data, updates: state.updates, processContracts: state.process,
+          integrity: await fetchJson('hashes.json'), trainingRegister: await fetchJson('training.json')};
         const bundle = buildAgentBundle(files);
         const blob = new Blob([`${JSON.stringify(bundle, null, 2)}\n`], {type: 'application/json'});
         const objectUrl = URL.createObjectURL(blob);
@@ -469,12 +486,12 @@ Report back: the position you verified, the receipts you produced or found missi
 
     contractPromise
       .then(([manifest, updates]) => {
-        const claims = Array.isArray(manifest.claims) ? manifest.claims : [];
+        const claims = manifest.claims.filter(claim => !claim.settled);
         const counts = claims.reduce((result, claim) => {
           result[claim.status] = (result[claim.status] || 0) + 1;
           return result;
         }, {});
-        const statusOrder = ['OBSERVED', 'BLOCKED', 'PLANNED', 'MISSING'];
+        const statusOrder = ['OBSERVED', 'BLOCKED', 'PLANNED', 'MISSING', 'IN_PROGRESS', 'DERIVED'];
         const statusMix = statusOrder
           .filter(status => counts[status])
           .map(status => `${counts[status]} ${status.toLowerCase()}`)
@@ -549,7 +566,7 @@ Report back: the position you verified, the receipts you produced or found missi
         table.appendChild(generatedRow);
       })
       .catch(() => {
-        document.querySelector('#hashTbl tr:last-child td').textContent = 'Integrity manifest unavailable. Open hashes.json directly.';
+        document.getElementById('hashTbl').innerHTML = '<tr><td>Integrity manifest unavailable. Open hashes.json directly.</td></tr>';
       });
 
     trainingPromise

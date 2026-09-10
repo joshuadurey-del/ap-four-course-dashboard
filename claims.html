@@ -1,16 +1,24 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Claims explorer</title><link rel="stylesheet" href="style.css?v=20260830-2"></head><body class="claims-page">
 <nav><span class="brand">AP Four-Course Dashboard</span>
-<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" class="active" aria-current="page">Claims</a><a href="lessons.html" >Lessons</a><a href="retro.html" >Retro</a><a href="agents.html" >Agent data</a></nav><main><h1>Claims explorer</h1><p class="sub">Filter the evidence behind every standing. Status labels do not imply LS review readiness or release. The 19 previously stale records were reviewed on 2026-09-08: active claims now carry scoped source checks, and retired checkpoints retain their original dates as historical records. MISSING and BLOCKED still mean their named evidence or outcome is absent; a recent date does not imply readiness.</p>
+<a href="index.html" >Overview</a><a href="humgeo.html" >HumGeo</a><a href="apwh.html" >APWH</a><a href="apush.html" >APUSH</a><a href="psych.html" >Psych</a><a href="claims.html" class="active" aria-current="page">Claims</a><a href="lessons.html" >Lessons</a><a href="retro.html" >Retro</a><a href="agents.html" >Agent data</a></nav><main><h1>Claims explorer</h1><p class="sub">Current observations and explicitly dated history. Each row keeps its own evidence date; a recent page update does not refresh old evidence. Historical rows are superseded records, not active blockers. Stale active rows need a new source check.</p>
 <section data-phase-summary><noscript>Enable JavaScript to view each course's current runbook position.</noscript></section>
 <div class="filter-block"><span class="filter-label">Course</span><div class="filters" id="courseF" role="group" aria-label="Filter by course"></div></div>
 <div class="filter-block"><span class="filter-label">Status</span><div class="filters" id="statusF" role="group" aria-label="Filter by status"></div></div>
 <p id="resultCount" class="result-count" aria-live="polite"></p>
 <table id="tbl"><tr><th>Claim</th><th>Status</th><th>Value</th><th>Access</th><th>Evidence</th></tr></table>
 <script>
-const SC={OBSERVED:'b-green',PLANNED:'b-blue',BLOCKED:'b-amber',MISSING:'b-red',DERIVED:'b-purple'};
+const SC={OBSERVED:'b-green',PLANNED:'b-blue',BLOCKED:'b-amber',MISSING:'b-red',DERIVED:'b-purple',IN_PROGRESS:'b-blue'};
 let DATA=null, course='All', status='All';
-fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{DATA=d;mkFilters();render();jump();});
+fetch('data.json',{cache:'no-store'}).then(r=>{
+ if(!r.ok) throw new Error('data.json returned '+r.status);
+ return r.json();
+}).then(d=>{
+ if(!Array.isArray(d.claims)||!d.claims.every(c=>c && typeof c.claim_id==='string' && typeof c.section==='string' && typeof c.status==='string')) throw new Error('Invalid claims schema');
+ DATA=d;mkFilters();render();jump();
+}).catch(()=>{document.getElementById('resultCount').textContent='Claims unavailable. Open data.json directly; no historical fallback is shown.';});
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl=v=>{try{const u=new URL(v,location.href);return /^https?:$/.test(u.protocol)?esc(u.href):'';}catch{return '';}};
 function jump(){
  const id=decodeURIComponent(location.hash.slice(1));
  if(!id) return;
@@ -24,8 +32,10 @@ window.addEventListener('hashchange',jump);
 function mkFilters(){
  const cs=['All',...new Set(DATA.claims.map(c=>c.section))];
  const ss=['All',...new Set(DATA.claims.map(c=>c.status))];
- document.getElementById('courseF').innerHTML=cs.map(c=>`<button type="button" onclick="course='${c}';render()" id="c-${c}" aria-pressed="false">${c}</button>`).join('');
- document.getElementById('statusF').innerHTML=ss.map(s=>`<button type="button" onclick="status='${s}';render()" id="s-${s}" aria-pressed="false">${s}</button>`).join('');
+ for(const [container,values,kind] of [['courseF',cs,'c'],['statusF',ss,'s']]){
+  const root=document.getElementById(container);
+  values.forEach(value=>{const b=document.createElement('button');b.type='button';b.id=kind+'-'+value;b.textContent=value;b.setAttribute('aria-pressed','false');b.onclick=()=>{if(kind==='c')course=value;else status=value;render();};root.appendChild(b);});
+ }
 }
 function render(){
  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('on'));
@@ -33,15 +43,17 @@ function render(){
  document.getElementById('s-'+status)?.classList.add('on');
  document.querySelectorAll('.filters button').forEach(b=>b.setAttribute('aria-pressed',String(b.classList.contains('on'))));
  const rows=DATA.claims.filter(c=>(course==='All'||c.section===course)&&(status==='All'||c.status===status));
- document.getElementById('resultCount').textContent=`${rows.length} ${rows.length===1?'claim':'claims'}`;
+ document.getElementById('resultCount').textContent=`${rows.length} claims · ${rows.filter(c=>c.settled).length} historical`;
  document.getElementById('tbl').innerHTML='<tr><th>Claim</th><th>Status</th><th>Value</th><th>Access</th><th>Evidence</th></tr>'+
   rows.map(c=>{
-   const ev=(c.evidence||[]).map(e=>e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.type}</a>`:(e.id?`<code>${String(e.id).slice(0,18)}…</code>`:(e.location||e.type||''))).join(' · ');
-   const when=c.observed_at?`observed ${c.observed_at}`:(c.status_at?`status set ${c.status_at}`:'<b>no row date</b>');
-   return `<tr id="claim-${c.claim_id}"><td data-label="Claim"><a href="#claim-${c.claim_id}" style="text-decoration:none"><code>${c.claim_id}</code></a><br><small>${when}${c.observed_note?` <i>(${c.observed_note})</i>`:''}</small></td>
-   <td data-label="Status"><span class="badge ${SC[c.status]||'b-gray'}">${c.status}</span></td>
-   <td data-label="Value">${c.value||''}${c.scope?`<br><small><b>scope:</b> ${c.scope}</small>`:''}${(c.excluded&&c.excluded.length)?`<br><small><b>excluded:</b> ${c.excluded.join('; ')}</small>`:''}</td>
-   <td data-label="Access"><small>${c.evidence_access||''}</small></td><td data-label="Evidence">${ev}</td></tr>`;
+   const ev=(c.evidence||[]).map(e=>e.url&&safeUrl(e.url)?`<a href="${safeUrl(e.url)}" target="_blank" rel="noopener">${esc(e.type)}</a>`:esc(e.location||e.type||e.id||'')).join(' · ');
+   const date=c.observed_at||c.status_at;
+   const when=date?`${c.observed_at?'observed':'status set'} ${esc(date)}`:'no row date';
+   const old=!c.settled && (!date || !Number.isFinite(Date.parse(date)) || Date.now()-Date.parse(date)>(c.freshness_limit_hours||48)*3600000);
+   return `<tr id="claim-${esc(c.claim_id)}"><td data-label="Claim"><a href="#claim-${esc(c.claim_id)}"><code>${esc(c.claim_id)}</code></a><br><small>${when}${c.observed_note?` (${esc(c.observed_note)})`:''}</small></td>
+   <td data-label="Status"><span class="badge ${SC[c.status]||'b-gray'}">${esc(c.status)}</span>${c.settled?'<br><span class="badge b-gray">Historical / superseded</span>':old?'<br><span class="badge b-amber">Source refresh needed</span>':''}</td>
+   <td data-label="Value">${esc(c.value)}${c.scope?`<br><small><b>scope:</b> ${esc(c.scope)}</small>`:''}${c.excluded?.length?`<br><small><b>excluded:</b> ${esc(c.excluded.join('; '))}</small>`:''}</td>
+   <td data-label="Access"><small>${esc(c.evidence_access)}</small></td><td data-label="Evidence">${ev}</td></tr>`;
   }).join('');
 }
 </script>

@@ -3,7 +3,7 @@
 
 The phase objects below project `asap_runbook.phases`; internal operational pointers
 are omitted. Source:
-RUNBOOK-ASAP.md at sha256 ce1cccf6b3a2e3990e321f1892d9544b12ede0192d9552a060dc758eac1b2635.
+RUNBOOK-ASAP.md at sha256 2f96703379f095a93556a6dba1b491241be31610907741f269aa63b55422ca64.
 Run from anywhere: build-machine-files.py DASHBOARD_DIR UTC_STAMP.
 """
 import json
@@ -13,17 +13,20 @@ from pathlib import Path
 DASH = Path(sys.argv[1])
 STAMP = sys.argv[2]
 EDITION = "ASAP edition (2026-09-01)"
-SOURCE_SHA256 = "ce1cccf6b3a2e3990e321f1892d9544b12ede0192d9552a060dc758eac1b2635"
+SOURCE_SHA256 = "2f96703379f095a93556a6dba1b491241be31610907741f269aa63b55422ca64"
 
 # Public-safe projection verified against the source YAML; private operational pointers omitted.
 ASAP_PHASES = [{'id': 'p0'}, {'id': 'p12', 'name': 'tree-and-pricing', 'state': 'done-all-four', 'verify': "Blueprint predicates and each child plan's live state, re-earned from the owning repository's current main."}, {'id': 'p3', 'name': 'bank-gates', 'verify': ['phase-bank-validation skill (answer-shape + key balance)', 'QTI parse + assertions (original §3.6) — NOT skippable: LearnWith marks a failed embedded item COMPLETE']}, {'id': 'p4'}, {'id': 'p5', 'name': 'publish-dark', 'steps': ['bank-gates', 'assets-qti', 'images', 'tree', 'drift-preflight', 'OWNER_WORD', 'push-dark', 'verify-live', 'post-push', 'xp', 'evidence-bundle'], 'verify': ['verify-live readback reconciles push bundle exactly (APES pub_stage7_verify_live.py pattern)', 'publishStatus == testing', 'enrollments == 0', 'evidence bundle README in course repo (Bio/APES format)'], 'shape': 'one course holds all units (APES: unit 1 mints, later units pin --course-id)'}, {'id': 'p6', 'name': 'live-qc-gauntlet', 'instrument': "fleet course-QC harness (APES reports/step5_courseqc/ job pattern) — reuse, don't build", 'loop': 'judge -> remediate (1-repair/2-regenerate) -> re-push -> re-judge until bar', 'repush_rules': ['denylist: every QC-dropped ID recorded at drop time; push tooling refuses denylisted IDs', 'drift: never re-push a tree that mismatches last verified state (APES pub_preflight_drift.py)']}, {'id': 'p7', 'name': 'walk-and-accept', 'verify': ['factory walkthrough PASS on the staging deployment after the reversible flag PR (answers save; feedback choice-specific, non-leaking; keys unskewed)', 'one human pass: start/middle/end + longest reading + each writing geometry', 'XP spot-check: <80%=0, >=80%=base once, 100%=1.25x once, reload adds nothing'], 'account': 'ONE owner test account, enrolled additively'}, {'id': 'p8', 'name': 'demo-and-flip', 'verify': ['Ilma demo done from test account', 'her word recorded', 'then broader enrollment']}]
+
+# 2026-09-08.7: preserve cold-run and checker-execution evidence in the public projection.
+next(phase for phase in ASAP_PHASES if phase["id"] == "p6").update({'receipt_required': ['job_id', 'course_id', 'request_body_sha256', 'submitted_at', 'terminal_at', 'status', 'per_checker_status_all_five_executed_or_errored', 'pass_rate', 'llm_questions_checked', 'llm_cache_hits', 'llm_cache_dir', 'cold_or_warm', 's3_report_keys_sha256', 'cold_route_A_or_B'], 'final_run': 'cold', 'all_checkers_executed': True})
 
 DISPLAY_NAMES = {"p0": "CUT", "p4": "CUT"}
 
 
 def required_artifacts(phase):
     items = []
-    for key in ("steps", "verify", "repush_rules"):
+    for key in ("steps", "verify", "repush_rules", "receipt_required"):
         value = phase.get(key, [])
         items.extend(value if isinstance(value, list) else [value])
     for key in ("instrument", "loop", "shape", "account"):
@@ -44,16 +47,25 @@ for phase in ASAP_PHASES:
         "automated": False,
     })
 
-courses = {'humgeo': {'label': 'AP Human Geography', 'current_stage': 'content', 'state': 'RE-EARN — FINAL CUT PENDING', 'as_of': '2026-09-08T04:11:12Z', 'detail': 'Publication preparation has advanced: Train Your Eye practice (#1034) and per-choice MCQ feedback (#1035) are merged. PP100 #1036 merged as 6c69a93e on 2026-09-08 at 04:02:35Z (GitHub merge timestamp). The final publication cut and exact dark-publication readback remain pending; no p3-p8 completion is credited.', 'priority': 1}, 'apwh': {'label': 'AP World History', 'current_stage': 'p3', 'state': 'RE-EARN — BANK VALIDATION', 'as_of': '2026-09-08T03:43:26Z', 'detail': 'The s4 follow-up is merged in #992. Bank validation is the active step; its dated 2026-09-07 v1 receipt records failed key-balance and uniquely-longest-answer checks. Repaired final bytes and QTI validation must pass before dark publication; p3 and later completion remain unearned.', 'priority': 2}, 'apush': {'label': 'AP US History', 'current_stage': 'fleet-held', 'state': 'RE-EARN — FLEET-HELD', 'as_of': '2026-09-08T03:43:26Z', 'detail': 'The course remains in pre-publication preparation. Current main records publishing and post-publication review as not yet started; no sequence-adapter release or later phase credit has been re-earned.', 'priority': 3}, 'psych': {'label': 'AP Psychology', 'current_stage': 'p5', 'state': 'RE-EARN — PARTIAL PUBLICATION', 'as_of': '2026-09-08T04:44:16Z', 'detail': 'Current main carries partial publication/readback receipts for Units 0–1 and a failed dated course-QC report. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.', 'priority': 'parallel'}}
+manifest = json.loads((DASH / "data.json").read_text())
+claims = {row["claim_id"]: row for row in manifest["claims"]}
+courses = {}
+for course_id, label, priority in (("humgeo", "AP Human Geography", 1), ("apwh", "AP World History", 2), ("apush", "AP US History", 3), ("psych", "AP Psychology", "parallel")):
+    claim = claims[course_id + ".blueprint.audit"]
+    position = claim["process_position"]
+    assert position["current_stage"] in ("content", "fleet-held", "p3", "p5", "p6", "p7", "p8")
+    courses[course_id] = {"label": label, **position, "as_of": claim.get("observed_at") or claim["status_at"], "detail": claim["value"], "priority": priority}
+
 
 process = {
     "schema_version": 2,
     "generated_utc": STAMP,
     "label": EDITION,
-    "runbook_version": "2026-09-03.6",
+    "runbook_version": "2026-09-08.7",
     "source_sha256": SOURCE_SHA256,
-    "authority_note": "Publication runbook, ASAP edition, 2026-09-01. Version 2026-09-03.6. Requirements only; current course positions are re-earned from the per-course plans.",
+    "authority_note": "Publication runbook, ASAP edition, 2026-09-01. Version 2026-09-08.7. Requirements only; current course positions are re-earned from the per-course plans.",
     "route": ["content", "p3", "p5", "p6", "p7", "p8"],
+    "bar": {"strict_pass_min": 0.95, "severe_fails": 0, "final_run": "cold", "all_checkers_executed": True, "confirm": "Josh"},
     "phases": ASAP_PHASES,
     "stages": stages,
     "courses": courses,
