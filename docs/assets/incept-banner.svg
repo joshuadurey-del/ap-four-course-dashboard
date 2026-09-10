@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Incept Course Builder</title>
+  <desc id="desc">Your agent. Alpha's factory. One workspace. A yellow book mark and Incept wordmark on a charcoal background.</desc>
+  <rect width="1200" height="340" rx="12" fill="#121612"/>
+  <path d="M32 1h1136" stroke="#ffdb4b" stroke-width="2"/>
+  <g stroke="#283329" fill="none">
+    <path d="M928 36v268m64-268v268m64-268v268m64-268v268M880 80h280M880 144h280M880 208h280M880 272h280"/>
+    <path d="M904 102h204v144H904zM926 124h204v144H926zM948 146h204v144H948z"/>
+  </g>
+  <g transform="translate(936 124) scale(3.1)">
+    <path d="M0 0h13c4 0 6 2 6 5 0-3 2-5 6-5h13v32H25c-3 0-6 2-6 4-1-2-3-4-6-4H0V0Z" fill="#121612" stroke="#ffdb4b" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M19 6v24M7 9h6m-6 7h6m12-7h6m-6 7h6" stroke="#ffdb4b" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <text x="56" y="60" fill="#bbc7ae" font-family="Menlo,Consolas,monospace" font-size="14" letter-spacing="2">INCEPT / ALPHA</text>
+  <text x="59" y="163" fill="#816326" font-family="Menlo,Consolas,monospace" font-size="96" font-weight="900" letter-spacing="-3">INCEPT</text>
+  <text x="56" y="160" fill="#ffdb4b" font-family="Menlo,Consolas,monospace" font-size="96" font-weight="900" letter-spacing="-3">INCEPT</text>
+  <text x="58" y="204" fill="#edf1e6" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="600">Course Builder</text>
+  <text x="58" y="253" fill="#bbc7ae" font-family="Arial,Helvetica,sans-serif" font-size="22">Your agent. Alpha’s factory. One workspace.</text>
+  <path d="M58 284h764" stroke="#38432d"/>
+  <text x="58" y="310" fill="#ffdb4b" font-family="Menlo,Consolas,monospace" font-size="13" letter-spacing="1">macOS</text>
+  <text x="154" y="310" fill="#bbc7ae" font-family="Menlo,Consolas,monospace" font-size="13">CLAUDE CODE · CODEX · HERMES · LOCAL AGENTS</text>
+</svg>

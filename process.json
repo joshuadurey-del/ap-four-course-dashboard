@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "generated_utc": "2026-09-10T02:18:44Z",
+ "generated_utc": "2026-09-10T05:30:43Z",
  "label": "ASAP edition (2026-09-01)",
  "runbook_version": "2026-09-08.7",
  "source_sha256": "2f96703379f095a93556a6dba1b491241be31610907741f269aa63b55422ca64",
@@ -332,10 +332,10 @@
  "courses": {
   "humgeo": {
    "label": "AP Human Geography",
-   "current_stage": "content",
-   "state": "FINAL SOURCE FREEZE / CUT PENDING",
-   "as_of": "2026-09-10T02:13:38Z",
-   "detail": "HumGeo source integration is merged through PR #88. AP One\u2019s regenerated PP100 intake (#1047), native v2 preparation (#1052), and 51-activity writing-bank successor (#1069) are merged. Video-receipt and assets reseal #1072 remains open. The current execution checklist places source freeze, bank assembly and the final publication cut before dark publication and its exact readback.",
+   "current_stage": "p5",
+   "state": "ASSEMBLE / FINAL CUT AND READBACK",
+   "as_of": "2026-09-10T05:30:43Z",
+   "detail": "The current owner-assigned stage is Assemble: final-source integration, bank assembly and the publication cut, followed by exact dark readback. Committed source inventories are now shown separately in population coverage; neither the stage placement nor inventory counts establish live course acceptance.",
    "priority": 1
   },
   "apwh": {
@@ -348,10 +348,10 @@
   },
   "apush": {
    "label": "AP US History",
-   "current_stage": "fleet-held",
-   "state": "PRE-PUBLICATION / WAVE RECONCILIATION",
-   "as_of": "2026-09-10T02:14:46Z",
-   "detail": "Current main includes the September 9\u201310 learner-surface admission, suite-portability and whole-round migration fixes. The committed acceptance ledger is unchanged, and PIPELINE.md still records publication and post-publication review as pre-publication. The current execution/release readback remains unverified; no later phase credit is established.",
+   "current_stage": "content",
+   "state": "SYNTHESIZE / ACCEPTANCE AND RELEASE HOLDS",
+   "as_of": "2026-09-10T05:30:43Z",
+   "detail": "APUSH remains in content synthesis. Current committed article-ledger rows record 49 accepted and 200 pending across 249 positions. PIPELINE.md retains pre-publication status. The prior release/admission holds remain visible; they do not remove APUSH from the content stage.",
    "priority": 3
   },
   "psych": {

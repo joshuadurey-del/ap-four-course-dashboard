@@ -146,8 +146,59 @@ const asapPosition = (course, stages) => {
   if (!stages.length) return unassigned('The ASAP presentation crosswalk is unavailable.');
   const phase = course.phaseStates[0].code;
   const stage = stages.find(item => item.native_phases.includes(phase));
-  return stage ? { stage: stage.id, reason: `Reported position: ${stage.label} (${phase}). Population coverage is UNMEASURED.` } :
+  return stage ? { stage: stage.id, reason: `Reported position: ${stage.label} (${phase}). Stage placement only; population evidence is shown below.` } :
     unassigned(`Native position ${phase || 'unknown'} is unassigned. ${course.phaseStates[0].name || 'Its scope needs verification.'}`);
+};
+
+const populationRows = (data, courseId, labels, now = Date.now()) => labels.map(label => {
+  const row = data?.population_coverage?.schema === 'population-evidence/v1' ? data.population_coverage.courses?.[courseId]?.[label] : null;
+  const valid = row && ['value', 'detail', 'next_step', 'level'].every(key => typeof row[key] === 'string' && row[key].trim()) &&
+    Number.isFinite(parsedTime(row.observed_at)) && parsedTime(row.observed_at) <= now + 300000 &&
+    Array.isArray(row.evidence) && row.evidence.length && row.evidence.every(e =>
+      e && typeof e.url === 'string' && /^https:\/\/github\.com\/[^/]+\/[^/]+\/blob\/[a-f0-9]{40}\//.test(e.url) && /^[a-f0-9]{64}$/.test(e.sha256));
+  return valid ? { ...row, label, measured: true, stale: now - parsedTime(row.observed_at) > FRESHNESS_LIMIT_MS } : { label, measured: false };
+});
+
+const renderPopulationCoverage = (processValue, now) => {
+  const section = make('section', 'population-coverage');
+  section.setAttribute('aria-labelledby', 'population-coverage-title');
+  section.append(make('h3', '', 'Population coverage')); section.firstChild.id = 'population-coverage-title';
+  const label = make('label', 'population-selector-label', 'Course'); label.htmlFor = 'population-course';
+  const select = make('select', 'population-selector'); select.id = 'population-course';
+  COURSE_IDENTITIES.forEach(course => { const option = make('option', '', course.label); option.value = course.id; select.append(option); });
+  select.value = AP4_DASHBOARD.activeCourse;
+  const summary = make('p', 'population-summary'); summary.setAttribute('role', 'status');
+  const table = make('table', 'asap-coverage-table');
+  const caption = make('caption'); const head = make('thead'); const headings = make('tr');
+  ['Population', 'Recorded evidence', 'Remaining work'].forEach(text => { const cell = make('th', '', text); cell.scope = 'col'; headings.append(cell); });
+  head.append(headings); const body = make('tbody'); table.append(caption, head, body);
+  const scroll = make('div', 'asap-table-scroll'); scroll.append(table);
+  const draw = () => {
+    AP4_DASHBOARD.activeCourse = select.value;
+    const rows = populationRows(AP4_DASHBOARD.data, select.value, processValue.population_scope, now);
+    const measured = rows.filter(row => row.measured).length;
+    caption.textContent = COURSE_IDENTITIES.find(course => course.id === select.value).label;
+    summary.textContent = `${measured} of ${rows.length} populations have linked source evidence. Counts describe the named source or receipt, not whole-course acceptance or a fresh live check.`;
+    body.replaceChildren();
+    rows.forEach(row => {
+      const tr = make('tr', row.measured ? 'population-recorded' : 'population-pending');
+      const name = make('th', '', row.label); name.scope = 'row'; tr.append(name);
+      if (!row.measured) {
+        const pending = make('td', '', 'Audit pending · match the required population to its native inventory and acceptance receipt.');
+        pending.colSpan = 2; tr.append(pending);
+      } else {
+        const value = make('td'); value.append(make('strong', '', row.value));
+        value.append(make('span', 'population-evidence-kind', `${row.level}${row.stale ? ' · refresh needed' : ''}`));
+        const details = make('details'); details.append(make('summary', '', 'Scope & source'), make('p', '', row.detail));
+        details.append(make('p', '', `Source read: ${snapshotLabel(row.observed_at)}`));
+        row.evidence.forEach((e, i) => { const link = make('a', 'population-source', `Evidence ${i + 1} ↗`); link.href = e.url; details.append(link); });
+        value.append(details); tr.append(value, make('td', '', row.next_step));
+      }
+      body.append(tr);
+    });
+  };
+  select.addEventListener('change', draw); draw();
+  section.append(label, select, summary, scroll); return section;
 };
 
 const renderASAP = (root, processValue, now) => {
@@ -179,7 +230,7 @@ const renderASAP = (root, processValue, now) => {
     const unassigned = AP4_DASHBOARD.courses.filter(course => !asapPosition(course, stages).stage).length;
     const matched = AP4_DASHBOARD.courses.filter(course => asapPosition(course, stages).stage === id).length;
     notice.textContent = id ? `${stages.find(stage => stage.id === id).label}: ${matched} matching published position${matched === 1 ? '' : 's'}. ${unassigned} unassigned course${unassigned === 1 ? '' : 's'} remain visible with the reason below.` :
-      `All ${AP4_DASHBOARD.courses.length} courses shown. ${unassigned} unassigned. Population coverage is UNMEASURED.`;
+      `All ${AP4_DASHBOARD.courses.length} courses shown. ${unassigned} awaiting stage reconciliation. Inspect population evidence below.`;
   };
   stages.forEach(stage => {
     const button = make('button', 'asap-card');
@@ -189,8 +240,8 @@ const renderASAP = (root, processValue, now) => {
     const letter = make('span', 'asap-letter', stage.letter); letter.setAttribute('aria-hidden', 'true');
     heading.append(letter, make('span', 'asap-title', stage.label), make('span', 'asap-toggle', '+'));
     heading.lastChild.setAttribute('aria-hidden', 'true');
-    button.append(heading, make('span', 'asap-summary', stage.summary), make('span', 'asap-coverage', 'Coverage · UNMEASURED'));
     const matching = AP4_DASHBOARD.courses.filter(course => asapPosition(course, stages).stage === stage.id);
+    button.append(heading, make('span', 'asap-summary', stage.summary), make('span', 'asap-coverage', `${matching.length} course${matching.length === 1 ? '' : 's'} at this stage`));
     const positions = make('span', 'asap-positions');
     if (!matching.length) positions.append(make('span', '', 'No fresh matching position'));
     matching.forEach(course => positions.append(make('span', '', `${course.short} · checked ${ageLabel(course.measured, now)}`)));
@@ -200,19 +251,6 @@ const renderASAP = (root, processValue, now) => {
     panel.setAttribute('role', 'region'); panel.setAttribute('aria-labelledby', button.id);
     panel.append(make('h3', '', `${stage.label}: scope and evidence`), make('p', '', stage.scope), make('p', 'asap-proof', stage.proof));
     panel.append(make('p', 'asap-tools', `Load on demand: ${stage.skills.join(' · ')}.`), make('p', 'asap-tools', `Native tools: ${stage.tools.join(' · ')}. Resolve the current owning skill; these labels are not executable commands.`));
-    panel.append(make('p', 'asap-unassigned', 'No fresh per-population coverage receipts are published in this view. Required populations below remain UNMEASURED; course-specific applicability and denominators need native verification.'));
-    const table = make('table', 'asap-coverage-table');
-    const caption = make('caption', '', 'Population coverage · all published courses');
-    const header = make('tr');
-    ['Population to verify', 'Remaining', 'Coverage evidence'].forEach(label => { const th = make('th', '', label); th.scope = 'col'; header.append(th); });
-    const thead = make('thead'); thead.append(header);
-    const tbody = make('tbody');
-    processValue.population_scope.forEach(label => {
-      const row = make('tr'); const name = make('th', '', label); name.scope = 'row';
-      row.append(name, make('td', '', 'UNMEASURED'), make('td', '', 'Not published')); tbody.append(row);
-    });
-    table.append(caption, thead, tbody);
-    const tableScroll = make('div', 'asap-table-scroll'); tableScroll.append(table); panel.append(tableScroll);
     panel.append(make('p', 'asap-native-scope', `Native scope: ${stage.native_phases.join(' · ')}. These views do not impose an execution order or change course authority.`));
     drawers.append(panel);
     button.addEventListener('click', () => select(AP4_DASHBOARD.activeStage === stage.id ? null : stage.id));
@@ -221,6 +259,14 @@ const renderASAP = (root, processValue, now) => {
   });
   reset.addEventListener('click', () => select(null));
   root.replaceChildren(grid, controls, drawers);
+  const unassignedCourses = AP4_DASHBOARD.courses.filter(course => !asapPosition(course, stages).stage);
+  if (unassignedCourses.length) {
+    const unassigned = make('aside', 'asap-unassigned');
+    unassigned.append(make('strong', '', 'Stage needs reconciliation'));
+    unassignedCourses.forEach(course => { const link = make('a', '', `${course.short}: ${asapPosition(course, stages).reason}`); link.href = `${course.id}.html`; unassigned.append(link); });
+    root.append(unassigned);
+  }
+  root.append(renderPopulationCoverage(processValue, now));
   select(stages.some(stage => stage.id === AP4_DASHBOARD.activeStage) ? AP4_DASHBOARD.activeStage : null);
   if (focusedId) document.getElementById(focusedId)?.focus();
 };
@@ -413,7 +459,7 @@ const boardSelftest = () => {
 
 };
 
-globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState, formatNextStep, processFrontier, readASAPStages, renderASAP, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
+globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState, formatNextStep, populationRows, processFrontier, readASAPStages, renderASAP, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
 
 (() => {
   if (typeof document === 'undefined') { boardSelftest(); return; }

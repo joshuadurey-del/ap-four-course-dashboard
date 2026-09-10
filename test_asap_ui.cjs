@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 require('./timeline.js'); // Includes the existing source-binding self-test.
-const { asapPosition, bindCourseState, readASAPStages, validateNeedsHuman } = globalThis.AP4_BOARD;
+const { asapPosition, bindCourseState, populationRows, readASAPStages, validateNeedsHuman } = globalThis.AP4_BOARD;
 const generated = JSON.parse(fs.readFileSync(path.join(__dirname, 'process.json')));
 const stages = readASAPStages(generated);
 assert.deepEqual(stages.map(stage => [stage.id, stage.native_phases]), [
@@ -19,6 +19,14 @@ const data = { snapshot: stamp, claims: ids.map((id, index) => ({
   claim_id: `${id}.blueprint.audit`, status: 'OBSERVED', value: 'Subset bank PASS; other populations unmeasured.',
   observed_at: stamp, freshness_limit_hours: 24, process_position: { current_stage: phases[index], state: 'Scope needs verification' },
 })) };
+const evidenceRow = {value:'0 / 10 accepted',detail:'Fixture inventory only.',next_step:'10 pending.',level:'Acceptance ledger',observed_at:stamp,evidence:[{url:`https://github.com/example/course/blob/${'a'.repeat(40)}/ledger.json`,sha256:'b'.repeat(64)}]};
+data.population_coverage = {schema:'population-evidence/v1',courses:{apwh:{Practice:evidenceRow}}};
+assert.equal(populationRows(data,'apwh',['Practice'],now)[0].value,'0 / 10 accepted');
+assert.equal(populationRows(data,'humgeo',['Practice'],now)[0].measured,false,'No cross-course evidence');
+assert.equal(populationRows(data,'apwh',['Practice'],now+48*3600000)[0].stale,true);
+for (const delta of [{evidence:[]},{evidence:[null]},{evidence:[{url:'javascript:alert(1)',sha256:'b'.repeat(64)}]},{observed_at:'bad'},{observed_at:new Date(now+3600000).toISOString()}]) {
+  assert.equal(populationRows({population_coverage:{schema:'population-evidence/v1',courses:{apwh:{Practice:{...evidenceRow,...delta}}}}},'apwh',['Practice'],now)[0].measured,false);
+}
 const processValue = { ...generated, courses: Object.fromEntries(data.claims.map((claim, index) => [ids[index], {
   ...claim.process_position, detail: claim.value, as_of: stamp,
   coverage: { gate_mcqs: { accepted: 10, required: 10, verdict: 'PASS' } },
@@ -32,7 +40,7 @@ assert.equal(asapPosition({ ...courses[0], stale: true }, stages).stage, null);
 assert.equal(asapPosition({ ...courses[0], claimStatus: 'PLANNED' }, stages).stage, null);
 assert.equal(asapPosition({ ...courses[0], phaseStates: [{ code: 'p3' }, { code: 'p5' }] }, stages).stage, null);
 assert.equal(asapPosition({ ...courses[0], available: false }, stages).stage, null);
-assert.match(asapPosition(courses[1], stages).reason, /coverage is UNMEASURED/);
+assert.match(asapPosition(courses[1], stages).reason, /Stage placement only/);
 const item = { id: 'a'.repeat(16), ts: stamp, course: 'humgeo', kind: 'decision', title: 'A title', deadline: '' };
 for (const code of [0, 9, 10, 31]) {
   assert.equal(validateNeedsHuman({ schema: 'needs-human-public/v1', generated_ts: stamp, open: [{ ...item, title: `A${String.fromCharCode(code)}title` }] }, now).status, 'hold');
@@ -85,8 +93,13 @@ async function browserCheck() {
     await page.locator('#asap-synthesize').click();
     assert.deepEqual(await visible(), ['apwh', 'apush']);
     assert.equal(await page.locator('#asap-panel-synthesize').isVisible(), true);
-    assert.equal(await page.locator('#asap-panel-synthesize tbody tr').count(), generated.population_scope.length);
-    assert((await page.locator('#asap-panel-synthesize tbody td:nth-child(2)').allTextContents()).every(value => value === 'UNMEASURED'));
+    assert.equal(await page.locator('.population-coverage tbody tr').count(), generated.population_scope.length);
+    assert.equal(await page.locator('.population-recorded').count(), 0);
+    await page.locator('#population-course').selectOption('apwh');
+    assert.equal(await page.locator('.population-recorded').count(), 1);
+    assert.match(await page.locator('.population-recorded').textContent(), /0 \/ 10 accepted/);
+    assert.equal(await page.locator('.population-pending').count(), generated.population_scope.length-1);
+    assert.match(await page.locator('.asap-unassigned').textContent(), /APUSH/);
     await page.locator('#asap-align').focus(); await page.keyboard.press('Enter');
     assert.deepEqual(await visible(), ['humgeo', 'apush']);
     await page.keyboard.press('Space'); assert.equal((await visible()).length, 4);
@@ -111,6 +124,7 @@ async function browserCheck() {
     for (const filename of fs.readdirSync(__dirname).filter(name => name.endsWith('.html'))) {
       await page.goto(`https://asap.test/${filename}`);
       assert.equal(await page.locator('nav a[href="about.html"]').count(), 1, filename);
+      assert.equal(await page.locator('.site-header a[href="https://github.com/joshuadurey-del/ap-four-course-dashboard"]').count(), 1, filename);
       assert.equal(await page.locator('.skip-link').count(), 1, filename);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${filename} overflows on mobile`);
     }

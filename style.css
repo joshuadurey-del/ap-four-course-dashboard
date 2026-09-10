@@ -33,7 +33,7 @@ html { color-scheme: dark; }
 .site-identity { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; white-space: nowrap; }
 .site-identity strong { font: 700 15px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .035em; }
 .site-identity strong span { margin-left: 8px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
-.site-header-actions { display: flex; align-items: center; gap: 22px; font-size: 12px; }
+.site-header-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 10px 22px; font-size: 12px; }
 .site-header-actions > span { color: var(--muted); }
 .site-header-actions a { font-weight: 650; text-decoration: none; }
 
@@ -1711,6 +1711,18 @@ footer {
 .asap-drawer { background: var(--surface-raised); }
 .asap-unassigned { border-left-width: 1px; color: var(--muted); }
 .asap-coverage-table th, .asap-coverage-table td { background: transparent; }
+.population-coverage { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.population-coverage h3 { margin: 0 0 14px; font-size: 20px; }
+.population-selector-label { margin-right: 12px; font-size: 13px; }
+.population-selector { max-width: 100%; min-height: 44px; padding: 8px 32px 8px 12px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; }
+.population-summary { max-width: 78ch; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.population-recorded td strong { display: block; color: var(--ink); font-size: 14px; line-height: 1.5; }
+.population-evidence-kind { display: block; margin: 5px 0; font-size: 11px; }
+.population-recorded details { max-width: 52ch; margin-top: 8px; }
+.population-recorded summary { cursor: pointer; color: var(--blue-strong); }
+.population-source { display: inline-block; margin: 4px 14px 4px 0; }
+.population-pending td { font-style: italic; }
+.asap-unassigned a { display: block; margin-top: 8px; }
 .kpi-strip { padding: 0; border: 0; background: transparent; }
 .kpi-card { border-top-width: 1px; background: var(--surface); }
 .kpi-label { text-transform: none; letter-spacing: 0; }

@@ -1,51 +1,84 @@
-# Incept Course Builder
+<p align="center">
+  <img src="docs/assets/incept-banner.svg" alt="Incept Course Builder — Your agent. Alpha’s factory. One workspace." width="100%">
+</p>
 
-A local workspace for Alpha course building, with native tools, selected agents, and visible evidence.
+<h1 align="center">Incept Course Builder</h1>
 
-[Public dashboard](https://joshuadurey-del.github.io/ap-four-course-dashboard/) · [About and setup](https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html) · [Private agent guide](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md)
+<p align="center">Build courses with your agent, using Alpha’s native factory.</p>
 
-## Install on macOS
+<p align="center">
+  <a href="#quick-start"><strong>Install</strong></a> ·
+  <a href="docs/getting-started.md">Setup guide</a> ·
+  <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md">Agent runbook</a> ·
+  <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/">Dashboard</a> ·
+  <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html">About</a>
+</p>
 
-Run in Terminal:
+<p align="center"><sub>macOS · Terminal onboarding · Local workspace · Alpha / Incept team access</sub></p>
+
+## Quick start
+
+Paste into Terminal:
 
 ```bash
 curl -fsSL https://joshuadurey-del.github.io/ap-four-course-dashboard/install.sh | bash
 ```
 
-Sign in with an authorized Alpha/Incept GitHub account, name your course, and select Codex, Claude Code, Hermes, another tool-capable local agent, or a portable prompt. Setup reuses existing tools. Model subscriptions, native service credentials, and course execution permissions remain separate.
+**Sign in → Name your course → Choose your agent → Start building.**
+
+Use a GitHub account with a verified **@alpha.school** email and access to the [private package](https://github.com/InceptTrilogy/ap-four-course-dashboard). Setup checks your machine, reuses existing tools, and installs missing runtime components. [Access or setup help →](docs/getting-started.md)
 
 ```bash
-~/.local/bin/incept-course-builder scan
 ~/.local/bin/incept-course-builder build
 ```
 
-Open the local dashboard later with `~/.local/bin/incept-course-builder`. Re-run the installer to update; settings and course work are preserved.
+Works with **Claude Code, Codex, Hermes**, and tool-capable local agents. You keep your existing model access.
 
-## GitHub access
+## Your course, in one workspace
 
-The installer requires a verified `@alpha.school` email and access to the private InceptTrilogy package. It uses GitHub CLI's browser OAuth flow and requests `user:email` to verify the email. Existing logins request the extra permission only when needed. Tokens and email lists are not stored in installer logs or settings.
+<p align="center">
+  <img src="docs/assets/workspace-preview.png" alt="Incept dashboard showing HumGeo source inventories and remaining work." width="100%">
+  <br><sub>Public progress view, captured September 10, 2026. Source inventories and remaining work are shown separately. Your installed workspace runs locally.</sub>
+</p>
 
-If needed, add and verify your work email in [GitHub email settings](https://github.com/settings/emails). It does not need to be the primary email. An environment token must independently provide email-read and repository access; browser consent cannot expand that token's permissions.
+| What you get | What it helps you do |
+| :--- | :--- |
+| **Terminal setup** | Configure the course and agent without assembling the toolchain by hand. |
+| **Bundled factory skills** | Give your agent native tools, workflow instructions, scripts and references. |
+| **Whole-course discovery** | Find missing populations before accepting a plan’s progress claims. |
+| **An executable runbook** | Plan independent work in parallel; keep integration and publication in order. |
+| **A saved checkpoint** | Resume from current evidence, remaining gaps and the next action. |
 
-## How the views work
+## From brief to verified course
 
-**Align · Synthesize · Assemble · Prove** group the native course process for navigation. Each course keeps its own tools, acceptance requirements, source dates, and authority. A passing content bank proves only that population. Missing measurements remain `UNMEASURED`; activity and phase labels do not establish whole-course readiness.
+| Align | Synthesize | Assemble | Prove |
+| :--- | :--- | :--- | :--- |
+| Inspect current sources, tools and coverage. | Author, repair and judge missing content. | Integrate accepted work into the course. | Run native publication and learner checks. |
 
-The builder uses course-specific skills and native workflows. Required human acceptance and release decisions remain explicit.
+The runbook guides your agent through these stages using each course’s native tooling. Current permissions, budgets and release gates govern execution. Course completion requires verified learner-facing results.
 
-## Public and private boundaries
+[Explore the runbook →](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) · [See reusable value & ROI →](https://joshuadurey-del.github.io/ap-four-course-dashboard/economics.html)
 
-This repository contains the read-only public dashboard, its published observations, and the installer entry point. The private package and course-building resources require authorized access. Course content, credentials, local checkpoints, and private runbook payloads are not served by this site.
+## Find your next step
 
-| Resource | Purpose |
-| --- | --- |
-| [Overview](https://joshuadurey-del.github.io/ap-four-course-dashboard/) | Published course positions and their freshness |
-| [Claims](https://joshuadurey-del.github.io/ap-four-course-dashboard/claims.html) | Source-bound evidence and scope |
-| [Lessons](https://joshuadurey-del.github.io/ap-four-course-dashboard/lessons.html) | Operational lessons and their checks |
-| [About](https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html) | Installation, workflow, privacy, and authority |
-| [Private agent guide](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) | Authorized workspace and agent entry point |
+| I want to… | Open |
+| :--- | :--- |
+| Install, update, switch agents or troubleshoot sign-in | [Setup & everyday use](docs/getting-started.md) |
+| Give an agent the smallest useful starting context | [Agent entry point](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) |
+| Understand the product and access model | [About Incept](https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html) |
+| Check published course progress | [Course dashboard](https://joshuadurey-del.github.io/ap-four-course-dashboard/) |
+| Inspect evidence or improve the next build | [Claims](https://joshuadurey-del.github.io/ap-four-course-dashboard/claims.html) · [Lessons](https://joshuadurey-del.github.io/ap-four-course-dashboard/lessons.html) |
 
-## Local UI checks
+<details>
+<summary><strong>For maintainers: source map and local checks</strong></summary>
+
+| Path | Purpose |
+| :--- | :--- |
+| [install.sh](install.sh) | Public bootstrap for the private builder |
+| [index.html](index.html) · [style.css](style.css) | Dashboard pages and shared theme |
+| [data.json](data.json) · [process.json](process.json) | Published observations and process navigation |
+| [updates.json](updates.json) · [automation/](automation/) | Activity feed and its existing publisher |
+| [docs/](docs/) | Product setup guide and README assets |
 
 ```bash
 node --check timeline.js
@@ -54,4 +87,10 @@ node updates.js
 node test_asap_ui.cjs
 ```
 
-With Playwright available in the existing local runtime, `node test_asap_ui.cjs --browser` also checks drawers, keyboard controls, filters, mobile layout, and unavailable inputs using synthetic data.
+With Playwright available, `node test_asap_ui.cjs --browser` checks navigation, keyboard controls, mobile layouts and unavailable inputs using synthetic data.
+
+</details>
+
+---
+
+<sub>This is the public dashboard and install entry point. The builder package and agent runbook require Alpha / Incept team access; course content and local checkpoints are not included here.</sub>

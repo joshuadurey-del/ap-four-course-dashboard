@@ -1,5 +1,11 @@
 [
   {
+    "ts": "2026-09-10T05:30Z",
+    "course": "All",
+    "writer": "dashboard curation",
+    "text": "Dashboard coverage now displays source-backed inventories and scoped receipts by course. HumGeo is in Assemble; APUSH is visible in Synthesize with acceptance and release holds retained. Repository front pages now include branded navigation, setup guidance and a product preview. Every dashboard page links to GitHub from its header."
+  },
+  {
     "ts": "2026-09-10T04:57Z",
     "course": "all",
     "writer": "dashboard curation",
