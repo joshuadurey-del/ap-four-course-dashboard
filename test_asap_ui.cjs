@@ -66,28 +66,40 @@ async function browserCheck() {
       const filename = new URL(route.request().url()).pathname.slice(1) || 'index.html';
       if (filename === 'process.json' && processFails) return route.fulfill({ status: 503, body: 'Unavailable' });
       if (fixtures[filename]) return route.fulfill({ contentType: 'application/json', body: JSON.stringify(fixtures[filename]) });
-      if (!/^[a-z][a-z0-9.-]*\.(html|js|css|json|svg)$/.test(filename) || !fs.existsSync(path.join(__dirname, filename))) return route.fulfill({ status: 404, body: '' });
-      return route.fulfill({ contentType: filename.endsWith('.js') ? 'text/javascript' : filename.endsWith('.css') ? 'text/css' : filename.endsWith('.svg') ? 'image/svg+xml' : filename.endsWith('.json') ? 'application/json' : 'text/html',
+      if (!(filename === 'docs/assets/workspace-preview.png' || /^[a-z][a-z0-9.-]*\.(html|js|css|json|svg)$/.test(filename)) || !fs.existsSync(path.join(__dirname, filename))) return route.fulfill({ status: 404, body: '' });
+      return route.fulfill({ contentType: filename.endsWith('.png') ? 'image/png' : filename.endsWith('.js') ? 'text/javascript' : filename.endsWith('.css') ? 'text/css' : filename.endsWith('.svg') ? 'image/svg+xml' : filename.endsWith('.json') ? 'application/json' : 'text/html',
         body: fs.readFileSync(path.join(__dirname, filename)) });
     });
     const ready = async () => {
       await page.waitForFunction(() => globalThis.AP4_DASHBOARD?.ready);
       await page.evaluate(async () => { await AP4_DASHBOARD.ready; });
-      await page.waitForSelector('#needs-human-strip:not(.is-loading)');
+      if (await page.locator('#needs-human-strip').count()) await page.waitForSelector('#needs-human-strip:not(.is-loading)');
     };
     const visible = () => page.locator('[data-course-card]:visible').evaluateAll(cards => cards.map(card => card.dataset.courseCard));
-    await page.goto('https://asap.test/index.html'); await ready();
+    await page.goto('https://asap.test/index.html');
+    assert.equal(await page.locator('#course-release-timeline, .population-coverage, .source-sync-bar, #needs-human-strip').count(), 0, 'Home must remain a product entry');
+    assert.equal(await page.locator('#install-command').count(), 1);
+    await page.locator('#copy-install').click();
+    await page.waitForFunction(() => document.querySelector('#copy-install-status').textContent.length > 0);
+    assert.equal(await page.locator('.preview-link img').evaluate(img => img.complete && img.naturalWidth > 0), true);
+    if (process.env.UI_SCREENSHOT_DIR) await page.screenshot({path:path.join(process.env.UI_SCREENSHOT_DIR,'home-desktop.png'),fullPage:true});
+    await page.getByRole('link', {name: 'Open course workspace'}).click(); await ready();
+    assert.equal(new URL(page.url()).pathname, '/courses.html');
+    assert.equal(await page.locator('.population-coverage').count(), 0, 'Full population table belongs on each course');
+    assert(await page.locator('#course-release-timeline').evaluate(el => el.offsetTop < document.querySelector('#needs-human-strip').offsetTop));
+    await page.getByText('Source sync and verification', {exact:true}).click();
     assert.match(await page.locator('.source-sync-link').getAttribute('href'), /InceptTrilogy.*dashboard-repo-poll.yml$/);
     await page.locator('.source-refresh').click(); await ready();
     assert.match(await page.locator('.source-sync-status').textContent(), /No live-source sync recorded/);
     assert.equal(await page.locator('.site-header .site-identity img').evaluate(image => image.complete && image.naturalWidth > 0), true);
     assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(20, 22, 21)');
+    await page.getByText('Filter by build stage', {exact:true}).click();
     const contrast = await page.evaluate(() => {
       const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
       const ctx = canvas.getContext('2d');
       const rgb = color => { ctx.clearRect(0, 0, 1, 1); ctx.fillStyle = color; ctx.fillRect(0, 0, 1, 1); return [...ctx.getImageData(0, 0, 1, 1).data]; };
       const lum = color => color.slice(0, 3).map(value => value / 255).map(value => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4).reduce((sum, value, i) => sum + value * [.2126, .7152, .0722][i], 0);
-      return ['.sub', '.asap-summary', '.asap-coverage', '.course-card-status', '.primary-link', 'nav a.active'].map(selector => {
+      return ['.sub', '.asap-summary', '.asap-coverage', '.course-card-status', '.header-install', 'nav a.active'].map(selector => {
         const node = document.querySelector(selector); let parent = node; let bg;
         while (parent) { bg = rgb(getComputedStyle(parent).backgroundColor); if (bg[3] === 255) break; parent = parent.parentElement; }
         const fg = lum(rgb(getComputedStyle(node).color)), back = lum(bg);
@@ -101,15 +113,6 @@ async function browserCheck() {
     await page.locator('#asap-synthesize').click();
     assert.deepEqual(await visible(), ['apwh', 'apush']);
     assert.equal(await page.locator('#asap-panel-synthesize').isVisible(), true);
-    assert.equal(await page.locator('.population-coverage tbody tr').count(), generated.population_scope.length);
-    assert.equal(await page.locator('.population-recorded').count(), 0);
-    await page.locator('#population-course').selectOption('apwh');
-    assert.equal(await page.locator('.population-recorded').count(), 1);
-    assert.match(await page.locator('.population-recorded').textContent(), /0 \/ 10 accepted/);
-    assert.equal(await page.locator('.population-pending').count(), generated.population_scope.length-1);
-    assert.equal(await page.locator('.population-coverage [data-reporting-status="NOT_REPORTED"]').count(),generated.population_scope.length-1);
-    assert(!(await page.locator('.population-coverage').textContent()).includes('Audit pending'));
-    assert.match(await page.locator('.population-pending').first().textContent(),/no finding about course completion/);
     assert.match(await page.locator('.asap-unassigned').textContent(), /APUSH/);
     await page.locator('#asap-align').focus(); await page.keyboard.press('Enter');
     assert.deepEqual(await visible(), ['humgeo', 'apush']);
@@ -132,15 +135,31 @@ async function browserCheck() {
     assert.equal((await visible()).length, 4);
     assert.equal(await page.locator('.asap-card').count(), 0);
     processFails = false;
+    await page.goto('https://asap.test/humgeo.html'); await ready();
+    assert.equal(await page.locator('.population-coverage tbody tr').count(), generated.population_scope.length);
+    assert.equal(await page.locator('.population-recorded').count(), 0);
+    assert.equal(await page.locator('#population-course').count(), 0, 'A course page must not switch to another course silently');
+    await page.getByRole('link', {name:'APWH',exact:true}).click(); await ready();
+    assert.equal(await page.locator('.population-recorded').count(), 1);
+    assert.match(await page.locator('.population-recorded').textContent(), /0 \/ 10 accepted/);
+    assert.equal(await page.locator('.population-pending').count(), generated.population_scope.length-1);
+    assert.match(await page.locator('.population-pending').first().textContent(), /no finding about course completion/);
+    processFails = true; await page.reload(); await ready();
+    assert.match(await page.locator('[data-population-coverage]').textContent(), /unavailable/);
+    assert.equal(await page.locator('.population-recorded').count(), 0);
+    processFails = false;
     for (const filename of fs.readdirSync(__dirname).filter(name => name.endsWith('.html'))) {
       await page.goto(`https://asap.test/${filename}`);
-      assert.equal(await page.locator('nav a[href="about.html"]').count(), 1, filename);
+      assert.deepEqual(await page.locator('nav[aria-label="Main navigation"] > a').allTextContents(), ['Courses','Docs','Impact'], filename);
+      assert.equal(await page.locator('footer a[href="about.html"]').count(), 1, filename);
+      const links = await page.locator('a[href]').evaluateAll(links => links.map(a => a.getAttribute('href')).filter(h => !/^(https?:|mailto:|#)/.test(h)));
+      for (const href of links) { const target=href.split(/[?#]/)[0]; if(target) assert(fs.existsSync(path.join(__dirname,target)), `${filename} has broken local link: ${href}`); }
       assert.equal(await page.locator('.site-header a[href="https://github.com/joshuadurey-del/ap-four-course-dashboard"]').count(), 1, filename);
       assert.equal(await page.locator('.skip-link').count(), 1, filename);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, `${filename} overflows on mobile`);
     }
     await page.goto('https://asap.test/about.html');
-    assert.equal(await page.locator('nav [aria-current="page"]').textContent(), 'About');
+    assert.equal(await page.locator('footer a[href="about.html"]').count(), 1);
     assert.equal(await page.locator('#install').count(), 1);
     await page.locator('.skip-link').focus(); await page.keyboard.press('Enter');
     assert.equal(await page.evaluate(() => location.hash), '#main-content');
@@ -159,7 +178,7 @@ async function browserCheck() {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'ROI mobile overflow');
     if (process.env.UI_SCREENSHOT_DIR) await page.screenshot({ path: path.join(process.env.UI_SCREENSHOT_DIR, 'economics-mobile.png'), fullPage: true });
     assert.deepEqual(errors, []);
-    console.log('ASAP browser: drawer/filter, keyboard/focus, mobile, subset coverage, stale/failed loads, all-page navigation, About and ROI checks passed.');
+    console.log('Site browser PASS: Home/install, workspace routing, stage filters, course coverage, stale/failed loads, all-page links, mobile, keyboard/focus, About and Impact.');
   } finally { await browser.close(); }
 }
 if (process.argv.includes('--browser')) browserCheck().catch(error => { console.error(error); process.exitCode = 1; });

@@ -87,6 +87,7 @@ const bindCourseState = (data, processValue, now = Date.now()) => COURSE_IDENTIT
     status: `${claim.status} · ${position.state}`, statusTone: claim.status === 'MISSING' ? 'red' : claim.status === 'BLOCKED' ? 'amber' : 'blue',
     mapping: processValue.label || 'ASAP process', observed: snapshotLabel(claim.observed_at || claim.status_at), processObserved: snapshotLabel(position.as_of),
     landed: claim.value, nextStep: formatNextStep(claim.next_step, 'The governed next step is unavailable.'),
+    nextAction: formatNextStep(claim.next_step, '') ? claim.next_step.tool : 'Next action needs reconciliation.',
     claimHref: `claims.html#claim-${encodeURIComponent(claim.claim_id)}`,
     evidence: Array.isArray(claim.evidence) ? claim.evidence.filter(item => item && typeof item === 'object') : [],
     phaseStates: [{ code: position.current_stage, name: position.state, state: ['BLOCKED', 'MISSING'].includes(claim.status) ? 'locked' : 'active', status: claim.status, detail: claim.value }],
@@ -146,7 +147,7 @@ const asapPosition = (course, stages) => {
   if (!stages.length) return unassigned('The ASAP presentation crosswalk is unavailable.');
   const phase = course.phaseStates[0].code;
   const stage = stages.find(item => item.native_phases.includes(phase));
-  return stage ? { stage: stage.id, reason: `Reported position: ${stage.label} (${phase}). Stage placement only; population evidence is shown below.` } :
+  return stage ? { stage: stage.id, reason: `Reported position: ${stage.label} (${phase}). Stage placement only; open the course for population evidence.` } :
     unassigned(`Native position ${phase || 'unknown'} is unassigned. ${course.phaseStates[0].name || 'Its scope needs verification.'}`);
 };
 
@@ -160,14 +161,14 @@ const populationRows = (data, courseId, labels, now = Date.now()) => labels.map(
   return valid ? { ...row, label, measured: true, reporting_status: 'RECORDED', stale: now - parsedTime(row.observed_at) > FRESHNESS_LIMIT_MS || (row.sync_status && row.sync_status !== 'CHECKED') } : { label, measured: false, reporting_status: 'INVALID_EVIDENCE', course_status: 'NOT_ASSESSED' };
 });
 
-const renderPopulationCoverage = (processValue, now) => {
+const renderPopulationCoverage = (processValue, now, courseId) => {
   const section = make('section', 'population-coverage');
   section.setAttribute('aria-labelledby', 'population-coverage-title');
   section.append(make('h3', '', 'Population coverage')); section.firstChild.id = 'population-coverage-title';
   const label = make('label', 'population-selector-label', 'Course'); label.htmlFor = 'population-course';
   const select = make('select', 'population-selector'); select.id = 'population-course';
   COURSE_IDENTITIES.forEach(course => { const option = make('option', '', course.label); option.value = course.id; select.append(option); });
-  select.value = AP4_DASHBOARD.activeCourse;
+  select.value = courseId || AP4_DASHBOARD.activeCourse;
   const summary = make('p', 'population-summary'); summary.setAttribute('role', 'status');
   const table = make('table', 'asap-coverage-table');
   const caption = make('caption'); const head = make('thead'); const headings = make('tr');
@@ -208,7 +209,8 @@ const renderPopulationCoverage = (processValue, now) => {
     });
   };
   select.addEventListener('change', draw); draw();
-  section.append(label, select, summary, scroll); return section;
+  if (!courseId) section.append(label, select);
+  section.append(summary, scroll); return section;
 };
 
 const renderASAP = (root, processValue, now) => {
@@ -217,7 +219,7 @@ const renderASAP = (root, processValue, now) => {
   root.setAttribute('aria-busy', 'false');
   if (!stages.length) {
     AP4_DASHBOARD.activeStage = null;
-    root.replaceChildren(make('p', 'asap-unassigned', 'ASAP views unavailable: the generated presentation crosswalk is missing or invalid. All course records remain visible below.'));
+    root.replaceChildren(make('p', 'asap-unassigned', 'ASAP views unavailable: the generated presentation crosswalk is missing or invalid. All course records remain available.'));
     return;
   }
   const grid = make('div', 'asap-grid');
@@ -240,7 +242,7 @@ const renderASAP = (root, processValue, now) => {
     const unassigned = AP4_DASHBOARD.courses.filter(course => !asapPosition(course, stages).stage).length;
     const matched = AP4_DASHBOARD.courses.filter(course => asapPosition(course, stages).stage === id).length;
     notice.textContent = id ? `${stages.find(stage => stage.id === id).label}: ${matched} matching published position${matched === 1 ? '' : 's'}. ${unassigned} unassigned course${unassigned === 1 ? '' : 's'} remain visible with the reason below.` :
-      `All ${AP4_DASHBOARD.courses.length} courses shown. ${unassigned} awaiting stage reconciliation. Inspect population evidence below.`;
+      `All ${AP4_DASHBOARD.courses.length} courses shown. ${unassigned} awaiting stage reconciliation. Open a course for population evidence.`;
   };
   stages.forEach(stage => {
     const button = make('button', 'asap-card');
@@ -276,7 +278,6 @@ const renderASAP = (root, processValue, now) => {
     unassignedCourses.forEach(course => { const link = make('a', '', `${course.short}: ${asapPosition(course, stages).reason}`); link.href = `${course.id}.html`; unassigned.append(link); });
     root.append(unassigned);
   }
-  root.append(renderPopulationCoverage(processValue, now));
   select(stages.some(stage => stage.id === AP4_DASHBOARD.activeStage) ? AP4_DASHBOARD.activeStage : null);
   if (focusedId) document.getElementById(focusedId)?.focus();
 };
@@ -347,45 +348,26 @@ const renderFrontier = (root, processValue, now) => {
 };
 
 const renderCourseCards = (root, data, updates, now) => {
-  const summary = globalThis.AP4_UPDATES?.summarizeCourse;
-  const head = make('div', 'timeline-head');
-  const intro = make('div');
-  intro.append(make('span', 'badge b-blue', 'ASAP edition (2026-09-01)'), make('h2', '', 'All four courses'),
-    make('p', 'timeline-sub', 'Re-earned state, freshness, machine-readable next step, and measured rates. Open a course for receipts and full detail.'));
-  head.append(intro, make('span', 'timeline-snapshot', `Dashboard snapshot · ${snapshotLabel(data?.snapshot)}`));
   const grid = make('div', 'course-card-grid');
-  grid.setAttribute('aria-label', 'Current TimeBack state and next step by course');
+  grid.setAttribute('aria-label', 'Current stage and next action by course');
   AP4_DASHBOARD.courses.forEach(course => {
-    const { measured, stale } = course;
-    const rates = Array.isArray(updates) && typeof summary === 'function' ? summary(updates, course.id, now) : null;
-    const card = make('a', `course-summary-card${stale ? ' is-stale' : ''}`);
-    card.dataset.courseCard = course.id;
-    card.href = `${course.id}.html`;
-    card.style.setProperty('--course-color', course.color);
-    const headline = make('div', 'course-card-headline');
-    const status = make('span', 'course-card-status', `${stale ? 'STALE · ' : ''}${course.status} · claim checked ${ageLabel(measured, now)}`);
-    if (Number.isFinite(measured)) status.title = new Date(measured).toISOString();
-    headline.append(status);
-    card.append(headline, make('h3', '', course.label));
-    const landed = make('p', 'course-card-landed');
-    landed.append(make('strong', '', 'Standing: '), course.landed);
-    const next = make('p', 'course-card-next');
-    next.append(make('strong', '', 'Next: '), course.nextStep);
-    const tiles = make('div', 'rate-tiles');
-    [
-      [rates?.landings7d, 'landings · 7d'],
-      [rates?.openHolds, 'open typed holds'],
-      [rates?.gateDays, 'days in current phase'],
-    ].forEach(([value, label]) => {
-      const tile = make('span');
-      tile.append(make('strong', '', Number.isFinite(value) ? String(value) : 'UNMEASURED'), make('small', '', label));
-      tiles.append(tile);
-    });
     const position = asapPosition(course, AP4_DASHBOARD.asapStages);
-    card.append(make('p', 'course-asap-position', `${position.stage ? '' : 'Unassigned · '}${position.reason}`), landed, next, tiles);
+    const stage = AP4_DASHBOARD.asapStages.find(item => item.id === position.stage);
+    const card = make('a', `course-summary-card${course.stale ? ' is-stale' : ''}`);
+    card.dataset.courseCard = course.id; card.href = `${course.id}.html`;
+    card.style.setProperty('--course-color', course.color);
+    const heading = make('div', 'course-card-headline');
+    heading.append(make('h2', '', course.label), make('span', 'course-open', '→'));
+    heading.lastChild.setAttribute('aria-hidden', 'true');
+    card.append(heading, make('span', 'course-card-status', stage ? stage.label : 'Needs reconciliation'));
+    const condition = course.stale ? 'Standing needs a fresh source check.' : course.available ? course.phaseStates[0].name : course.reason;
+    card.append(make('p', 'course-asap-position', stage ? `${course.claimStatus} · ${condition}` : position.reason));
+    const next = make('p', 'course-card-next');
+    next.append(make('strong', '', 'Next action'), make('span', '', course.stale || !course.available ? 'Reconcile the current source evidence before selecting work.' : course.nextAction));
+    card.append(next, make('small', 'course-checked', `Standing checked ${course.observed} · ${ageLabel(course.measured, now)}`));
     grid.append(card);
   });
-  root.replaceChildren(head, grid);
+  root.replaceChildren(grid);
 };
 
 const renderCourseDetails = () => {
@@ -430,9 +412,18 @@ const renderCourseDetails = () => {
     const course = AP4_DASHBOARD.courses.find(item => item.id === root.dataset.gateEvidence);
     if (!course) { root.replaceChildren(make('p', '', 'Unknown course; current state unavailable.')); return; }
     root.classList.add('gate-evidence-sec'); root.replaceChildren(make('h2', '', 'Current ASAP position')); appendState(root, course);
+    const summarize = globalThis.AP4_UPDATES?.summarizeCourse;
+    const rates = Array.isArray(AP4_DASHBOARD.updates) && typeof summarize === 'function' ? summarize(AP4_DASHBOARD.updates, course.id, Date.now()) : null;
+    const tiles = make('div', 'rate-tiles');
+    [[rates?.landings7d, 'landings · 7d'], [rates?.openHolds, 'open typed holds'], [rates?.gateDays, 'days in current phase']].forEach(([value, label]) => {
+      const tile = make('span');
+      tile.append(make('strong', '', Number.isFinite(value) ? String(value) : 'UNMEASURED'), make('small', '', label));
+      tiles.append(tile);
+    });
+    root.append(make('h3', '', 'Recorded activity'), tiles);
     const main = root.closest('main');
     const intro = main?.querySelector('h1 + .sub');
-    if (intro) intro.textContent = `${course.stale ? 'STALE · ' : ''}Source check: ${course.observed}. ${course.landed}`;
+    if (intro) intro.textContent = `${course.stale ? 'STALE · ' : ''}${course.status} · standing checked ${course.observed}.`;
     const next = main?.querySelector('[data-course-next]');
     if (next) next.textContent = course.nextStep;
   });
@@ -502,6 +493,11 @@ globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState,
     if (frontierRoot) renderFrontier(frontierRoot, processValue, now);
     if (root) renderCourseCards(root, data, updates, now);
     if (asapRoot) renderASAP(asapRoot, processValue, now);
+    document.querySelectorAll('[data-population-coverage]').forEach(host => {
+      if (!readASAPStages(processValue).length || !data) {
+        host.replaceChildren(make('p', 'update-empty', 'Population evidence unavailable. Restore the source data and process scope.'));
+      } else host.replaceChildren(renderPopulationCoverage(processValue, now, host.dataset.populationCoverage));
+    });
     document.dispatchEvent(new CustomEvent('ap4-state-changed'));
     return AP4_DASHBOARD;
   }).finally(() => { stateRefresh = null; }));
@@ -519,7 +515,7 @@ globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState,
   const syncStatus = make('span', 'source-sync-status'); syncStatus.setAttribute('role', 'status');
   syncBar.append(syncLink, refreshButton, syncStatus);
   const help = make('small', '', 'Sync opens GitHub → select public publication → Run workflow. Refresh loads the published result. Source counts do not prove learner acceptance.');
-  syncBar.append(help); document.querySelector('main')?.prepend(syncBar);
+  syncBar.append(help); document.querySelector('[data-source-sync]')?.append(syncBar);
   const showSync = () => {
     const sync = AP4_DASHBOARD.data?.source_sync;
     const date = parsedTime(sync?.checked_at);

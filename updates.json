@@ -1,5 +1,11 @@
 [
   {
+    "ts": "2026-09-10T06:53Z",
+    "course": "All",
+    "writer": "dashboard curation",
+    "text": "Navigation now separates the builder home, Courses workspace, Docs and Impact. Course details own population coverage; existing claims, history, runbook links and evidence dates are preserved."
+  },
+  {
     "ts": "2026-09-10T06:41Z",
     "course": "All",
     "writer": "repository-event automation",

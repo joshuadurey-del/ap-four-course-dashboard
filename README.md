@@ -10,7 +10,7 @@
   <a href="#quick-start"><strong>Install</strong></a> ·
   <a href="docs/getting-started.md">Setup guide</a> ·
   <a href="https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md">Agent runbook</a> ·
-  <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/">Dashboard</a> ·
+  <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/courses.html">Courses</a> ·
   <a href="https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html">About</a>
 </p>
 
@@ -37,8 +37,8 @@ Works with **Claude Code, Codex, Hermes**, and tool-capable local agents. You ke
 ## Your course, in one workspace
 
 <p align="center">
-  <img src="docs/assets/workspace-preview.png" alt="Incept dashboard showing HumGeo source inventories and remaining work." width="100%">
-  <br><sub>Public progress view, captured September 10, 2026. Source inventories and remaining work are shown separately. Your installed workspace runs locally.</sub>
+  <img src="docs/assets/workspace-preview.png" alt="Shared course workspace showing course stages, next actions and verification dates." width="100%">
+  <br><sub>Public progress view, captured September 10, 2026. Open a course for population coverage and source evidence. Your installed workspace runs locally.</sub>
 </p>
 
 | What you get | What it helps you do |
@@ -66,7 +66,7 @@ The runbook guides your agent through these stages using each course’s native 
 | Install, update, switch agents or troubleshoot sign-in | [Setup & everyday use](docs/getting-started.md) |
 | Give an agent the smallest useful starting context | [Agent entry point](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) |
 | Understand the product and access model | [About Incept](https://joshuadurey-del.github.io/ap-four-course-dashboard/about.html) |
-| Check published course progress | [Course dashboard](https://joshuadurey-del.github.io/ap-four-course-dashboard/) |
+| Check published course progress | [Course workspace](https://joshuadurey-del.github.io/ap-four-course-dashboard/courses.html) |
 | Inspect evidence or improve the next build | [Claims](https://joshuadurey-del.github.io/ap-four-course-dashboard/claims.html) · [Lessons](https://joshuadurey-del.github.io/ap-four-course-dashboard/lessons.html) |
 
 <details>
@@ -75,7 +75,7 @@ The runbook guides your agent through these stages using each course’s native 
 | Path | Purpose |
 | :--- | :--- |
 | [install.sh](install.sh) | Public bootstrap for the private builder |
-| [index.html](index.html) · [style.css](style.css) | Dashboard pages and shared theme |
+| [index.html](index.html) · [courses.html](courses.html) · [docs.html](docs.html) · [style.css](style.css) | Dashboard pages and shared theme |
 | [data.json](data.json) · [process.json](process.json) | Published observations and process navigation |
 | [updates.json](updates.json) · [automation/](automation/) | Activity feed and its existing publisher |
 | [docs/](docs/) | Product setup guide and README assets |
