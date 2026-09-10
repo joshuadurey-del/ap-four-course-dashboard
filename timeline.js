@@ -5,7 +5,7 @@ const COURSE_IDENTITIES = [
   { id: 'apush', label: 'AP US History', short: 'APUSH', color: 'oklch(48% 0.17 28)' },
   { id: 'psych', label: 'AP Psychology', short: 'Psych', color: 'oklch(48% 0.16 305)' },
 ];
-const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = { activeCourse: 'humgeo', courses: [], snapshot: 'UNMEASURED', errors: [] };
+const AP4_DASHBOARD = globalThis.AP4_DASHBOARD = { activeCourse: 'humgeo', activeStage: null, asapStages: [], courses: [], snapshot: 'UNMEASURED', errors: [] };
 
 const NEEDS_KEYS = ['generated_ts', 'open', 'schema'];
 const NEEDS_ITEM_KEYS = ['course', 'deadline', 'id', 'kind', 'title', 'ts'];
@@ -123,6 +123,108 @@ const make = (tag, className, text) => {
   return node;
 };
 
+const readASAPStages = value => {
+  const stages = value?.asap_stages;
+  const text = item => typeof item === 'string' && item.trim();
+  if (!Array.isArray(stages) || stages.length !== 4 ||
+      !Array.isArray(value.population_scope) || !value.population_scope.length || !value.population_scope.every(text) ||
+      stages.some(stage => !stage || !/^[a-z]+$/.test(stage.id) ||
+        !['label', 'letter', 'summary', 'scope', 'proof'].every(key => text(stage[key])) ||
+        !['skills', 'tools'].every(key => Array.isArray(stage[key]) && stage[key].length && stage[key].every(text)) ||
+        !Array.isArray(stage.native_phases) || !stage.native_phases.length ||
+        stage.native_phases.some(phase => !text(phase) || ['p0', 'p4', 'fleet-held'].includes(phase)))) return [];
+  const phases = stages.flatMap(stage => stage.native_phases);
+  return new Set(stages.map(stage => stage.id)).size === 4 && new Set(phases).size === phases.length ? stages : [];
+};
+
+const asapPosition = (course, stages) => {
+  const unassigned = reason => ({ stage: null, reason });
+  if (!course.available) return unassigned(course.reason || 'Current source records are unavailable.');
+  if (course.stale) return unassigned('Published position is stale; fresh source verification is required.');
+  if (!['OBSERVED', 'BLOCKED'].includes(course.claimStatus)) return unassigned(`The published claim is ${course.claimStatus || 'unmeasured'}; no verified position is assigned.`);
+  if (course.phaseStates?.length !== 1) return unassigned('Mixed or missing native positions need reconciliation.');
+  if (!stages.length) return unassigned('The ASAP presentation crosswalk is unavailable.');
+  const phase = course.phaseStates[0].code;
+  const stage = stages.find(item => item.native_phases.includes(phase));
+  return stage ? { stage: stage.id, reason: `Reported position: ${stage.label} (${phase}). Population coverage is UNMEASURED.` } :
+    unassigned(`Native position ${phase || 'unknown'} is unassigned. ${course.phaseStates[0].name || 'Its scope needs verification.'}`);
+};
+
+const renderASAP = (root, processValue, now) => {
+  const stages = AP4_DASHBOARD.asapStages;
+  const focusedId = root.contains(document.activeElement) ? document.activeElement.id : null;
+  root.setAttribute('aria-busy', 'false');
+  if (!stages.length) {
+    AP4_DASHBOARD.activeStage = null;
+    root.replaceChildren(make('p', 'asap-unassigned', 'ASAP views unavailable: the generated presentation crosswalk is missing or invalid. All course records remain visible below.'));
+    return;
+  }
+  const grid = make('div', 'asap-grid');
+  const drawers = make('div', 'asap-drawers');
+  const notice = make('p', 'asap-filter-status');
+  notice.setAttribute('role', 'status');
+  const reset = make('button', 'asap-reset', 'Show all courses');
+  reset.type = 'button'; reset.id = 'asap-show-all';
+  const controls = make('div', 'asap-filter-controls');
+  controls.append(notice, reset);
+  const select = id => {
+    AP4_DASHBOARD.activeStage = id;
+    grid.querySelectorAll('button').forEach(button => button.setAttribute('aria-expanded', String(button.dataset.stage === id)));
+    drawers.querySelectorAll('[data-stage-panel]').forEach(panel => { panel.hidden = panel.dataset.stagePanel !== id; });
+    document.querySelectorAll('[data-course-card]').forEach(card => {
+      const course = AP4_DASHBOARD.courses.find(item => item.id === card.dataset.courseCard);
+      const position = course && asapPosition(course, stages);
+      card.hidden = !!(id && position?.stage && position.stage !== id);
+    });
+    const unassigned = AP4_DASHBOARD.courses.filter(course => !asapPosition(course, stages).stage).length;
+    const matched = AP4_DASHBOARD.courses.filter(course => asapPosition(course, stages).stage === id).length;
+    notice.textContent = id ? `${stages.find(stage => stage.id === id).label}: ${matched} matching published position${matched === 1 ? '' : 's'}. ${unassigned} unassigned course${unassigned === 1 ? '' : 's'} remain visible with the reason below.` :
+      `All ${AP4_DASHBOARD.courses.length} courses shown. ${unassigned} unassigned. Population coverage is UNMEASURED.`;
+  };
+  stages.forEach(stage => {
+    const button = make('button', 'asap-card');
+    button.type = 'button'; button.id = `asap-${stage.id}`; button.dataset.stage = stage.id;
+    button.setAttribute('aria-controls', `asap-panel-${stage.id}`);
+    const heading = make('span', 'asap-card-heading');
+    const letter = make('span', 'asap-letter', stage.letter); letter.setAttribute('aria-hidden', 'true');
+    heading.append(letter, make('span', 'asap-title', stage.label), make('span', 'asap-toggle', '+'));
+    heading.lastChild.setAttribute('aria-hidden', 'true');
+    button.append(heading, make('span', 'asap-summary', stage.summary), make('span', 'asap-coverage', 'Coverage · UNMEASURED'));
+    const matching = AP4_DASHBOARD.courses.filter(course => asapPosition(course, stages).stage === stage.id);
+    const positions = make('span', 'asap-positions');
+    if (!matching.length) positions.append(make('span', '', 'No fresh matching position'));
+    matching.forEach(course => positions.append(make('span', '', `${course.short} · checked ${ageLabel(course.measured, now)}`)));
+    button.append(positions); grid.append(button);
+    const panel = make('div', 'asap-drawer');
+    panel.id = `asap-panel-${stage.id}`; panel.dataset.stagePanel = stage.id;
+    panel.setAttribute('role', 'region'); panel.setAttribute('aria-labelledby', button.id);
+    panel.append(make('h3', '', `${stage.label}: scope and evidence`), make('p', '', stage.scope), make('p', 'asap-proof', stage.proof));
+    panel.append(make('p', 'asap-tools', `Load on demand: ${stage.skills.join(' · ')}.`), make('p', 'asap-tools', `Native tools: ${stage.tools.join(' · ')}. Resolve the current owning skill; these labels are not executable commands.`));
+    panel.append(make('p', 'asap-unassigned', 'No fresh per-population coverage receipts are published in this view. Required populations below remain UNMEASURED; course-specific applicability and denominators need native verification.'));
+    const table = make('table', 'asap-coverage-table');
+    const caption = make('caption', '', 'Population coverage · all published courses');
+    const header = make('tr');
+    ['Population to verify', 'Remaining', 'Coverage evidence'].forEach(label => { const th = make('th', '', label); th.scope = 'col'; header.append(th); });
+    const thead = make('thead'); thead.append(header);
+    const tbody = make('tbody');
+    processValue.population_scope.forEach(label => {
+      const row = make('tr'); const name = make('th', '', label); name.scope = 'row';
+      row.append(name, make('td', '', 'UNMEASURED'), make('td', '', 'Not published')); tbody.append(row);
+    });
+    table.append(caption, thead, tbody);
+    const tableScroll = make('div', 'asap-table-scroll'); tableScroll.append(table); panel.append(tableScroll);
+    panel.append(make('p', 'asap-native-scope', `Native scope: ${stage.native_phases.join(' · ')}. These views do not impose an execution order or change course authority.`));
+    drawers.append(panel);
+    button.addEventListener('click', () => select(AP4_DASHBOARD.activeStage === stage.id ? null : stage.id));
+    const closeOnEscape = event => { if (event.key === 'Escape') { select(null); button.focus(); } };
+    button.addEventListener('keydown', closeOnEscape); panel.addEventListener('keydown', closeOnEscape);
+  });
+  reset.addEventListener('click', () => select(null));
+  root.replaceChildren(grid, controls, drawers);
+  select(stages.some(stage => stage.id === AP4_DASHBOARD.activeStage) ? AP4_DASHBOARD.activeStage : null);
+  if (focusedId) document.getElementById(focusedId)?.focus();
+};
+
 const renderNeedsHuman = (root, result, now) => {
   root.className = `needs-human-strip ${result.status === 'hold' ? 'is-hold' : result.items.length ? 'has-items' : 'is-clear'}`;
   const head = make('div', 'needs-human-head');
@@ -201,6 +303,7 @@ const renderCourseCards = (root, data, updates, now) => {
     const { measured, stale } = course;
     const rates = Array.isArray(updates) && typeof summary === 'function' ? summary(updates, course.id, now) : null;
     const card = make('a', `course-summary-card${stale ? ' is-stale' : ''}`);
+    card.dataset.courseCard = course.id;
     card.href = `${course.id}.html`;
     card.style.setProperty('--course-color', course.color);
     const headline = make('div', 'course-card-headline');
@@ -222,7 +325,8 @@ const renderCourseCards = (root, data, updates, now) => {
       tile.append(make('strong', '', Number.isFinite(value) ? String(value) : 'UNMEASURED'), make('small', '', label));
       tiles.append(tile);
     });
-    card.append(landed, next, tiles);
+    const position = asapPosition(course, AP4_DASHBOARD.asapStages);
+    card.append(make('p', 'course-asap-position', `${position.stage ? '' : 'Unassigned · '}${position.reason}`), landed, next, tiles);
     grid.append(card);
   });
   root.replaceChildren(head, grid);
@@ -309,13 +413,14 @@ const boardSelftest = () => {
 
 };
 
-globalThis.AP4_BOARD = { ageLabel, automationGap, bindCourseState, formatNextStep, processFrontier, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
+globalThis.AP4_BOARD = { ageLabel, asapPosition, automationGap, bindCourseState, formatNextStep, processFrontier, readASAPStages, renderASAP, renderCourseCards, renderNeedsHuman, validateNeedsHuman };
 
 (() => {
   if (typeof document === 'undefined') { boardSelftest(); return; }
   const root = document.getElementById('course-release-timeline');
   const needsRoot = document.getElementById('needs-human-strip');
   const frontierRoot = document.getElementById('automation-frontier');
+  const asapRoot = document.getElementById('asap-stage-view');
   const load = async path => {
     const response = await fetch(path, { cache: 'no-store' });
     if (!response.ok) throw new Error(`${path} returned ${response.status}`);
@@ -335,10 +440,12 @@ globalThis.AP4_BOARD = { ageLabel, automationGap, bindCourseState, formatNextSte
     AP4_DASHBOARD.snapshot = typeof data?.snapshot === 'string' ? data.snapshot : 'UNMEASURED';
     AP4_DASHBOARD.errors = results.flatMap((result, index) => result.status === 'rejected' ? [`${['data.json', 'process.json', 'updates.json'][index]} unavailable: ${result.reason.message}`] : []);
     AP4_DASHBOARD.courses = bindCourseState(data, processValue, now);
+    AP4_DASHBOARD.asapStages = readASAPStages(processValue);
     AP4_DASHBOARD.errors.push(...AP4_DASHBOARD.courses.filter(course => !course.available).map(course => `${course.short}: ${course.reason}`));
     renderCourseDetails();
     if (frontierRoot) renderFrontier(frontierRoot, processValue, now);
     if (root) renderCourseCards(root, data, updates, now);
+    if (asapRoot) renderASAP(asapRoot, processValue, now);
     document.dispatchEvent(new CustomEvent('ap4-state-changed'));
     return AP4_DASHBOARD;
   }).finally(() => { stateRefresh = null; }));

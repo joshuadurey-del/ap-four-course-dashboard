@@ -23,6 +23,35 @@ next(phase for phase in ASAP_PHASES if phase["id"] == "p6").update({'receipt_req
 
 DISPLAY_NAMES = {"p0": "CUT", "p4": "CUT"}
 
+# Presentation only: current course positions and acceptance stay in their native records.
+ASAP_VIEWS = [
+    {"id": "align", "label": "Align", "letter": "A", "native_phases": ["p12"],
+     "summary": "Know the whole course before choosing the next step.",
+     "scope": "Reconcile the current population census, blueprint, curriculum coverage, teaching design, tree and pricing.",
+     "proof": "Every applicable population has a current inventory and a course-owned requirement. Earlier courses grant a new course no completion credit."},
+    {"id": "synthesize", "label": "Synthesize", "letter": "S", "native_phases": ["content", "p3"],
+     "summary": "Create and accept every required content population.",
+     "scope": "Author and repair content, verify items and complete forms, and satisfy native bank and QTI checks.",
+     "proof": "Acceptance is measured separately for each population. A gate-bank PASS does not prove practice, writing, media or whole-course readiness."},
+    {"id": "assemble", "label": "Assemble", "letter": "A", "native_phases": ["p5"],
+     "summary": "Connect accepted content to the learner experience.",
+     "scope": "Compile native assets and use the course-owned publication route with exact readback, media, structure and XP evidence.",
+     "proof": "Integrated, published and served coverage require their own receipts. Partial publication does not establish complete assembly."},
+    {"id": "prove", "label": "Prove", "letter": "P", "native_phases": ["p6", "p7", "p8"],
+     "summary": "Verify the final course and retain required human decisions.",
+     "scope": "Final cold course QC, native learner acceptance, the human walkthrough and the recorded release decision.",
+     "proof": "Use the native cold-QC bar and checker evidence, learner and XP readbacks, and the required human acceptance. A phase label cannot grant release authority."},
+]
+ASAP_GUIDES = {
+    "align": {"skills": ["ap-toolbox", "course-deficit-burndown", "reverse-engineer"], "tools": ["Native census and blueprint selectors", "Course-owned source and teaching contracts"]},
+    "synthesize": {"skills": ["item-pipeline", "item-regen", "factory-batch-dispatch", "enrichment", "phase-bank-validation"], "tools": ["Current native generation and item QC", "Whole-form and population validators"]},
+    "assemble": {"skills": ["native-assets-build", "publish-course-dark", "land-a-change", "100"], "tools": ["Course-owned asset and QTI compilation", "Native publisher and exact served readback"]},
+    "prove": {"skills": ["course-qc-gauntlet", "100"], "tools": ["Native course QC and learner acceptance", "Course-owned walkthrough and release decisions"]},
+}
+for view in ASAP_VIEWS:
+    view.update(ASAP_GUIDES[view["id"]])
+POPULATION_SCOPE = ["Gate MCQs", "Practice", "PowerPath / PP100", "Unit assessments", "Mock / exam forms", "Articles", "Embedded checks", "Videos / media", "Writing activities", "Writing scoring", "Train Your Eye"]
+
 
 def required_artifacts(phase):
     items = []
@@ -53,7 +82,7 @@ courses = {}
 for course_id, label, priority in (("humgeo", "AP Human Geography", 1), ("apwh", "AP World History", 2), ("apush", "AP US History", 3), ("psych", "AP Psychology", "parallel")):
     claim = claims[course_id + ".blueprint.audit"]
     position = claim["process_position"]
-    assert position["current_stage"] in ("content", "fleet-held", "p3", "p5", "p6", "p7", "p8")
+    assert isinstance(position["current_stage"], str) and position["current_stage"].strip()
     courses[course_id] = {"label": label, **position, "as_of": claim.get("observed_at") or claim["status_at"], "detail": claim["value"], "priority": priority}
 
 
@@ -68,6 +97,8 @@ process = {
     "bar": {"strict_pass_min": 0.95, "severe_fails": 0, "final_run": "cold", "all_checkers_executed": True, "confirm": "Josh"},
     "phases": ASAP_PHASES,
     "stages": stages,
+    "asap_stages": ASAP_VIEWS,
+    "population_scope": POPULATION_SCOPE,
     "courses": courses,
 }
 

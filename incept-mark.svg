@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Incept Course Builder">
+<rect width="64" height="64" rx="4" fill="#20251b"/>
+<path d="M13 15h13c4 0 6 2 6 5 0-3 2-5 6-5h13v32H38c-3 0-6 2-6 4-1-2-3-4-6-4H13V15Z" fill="none" stroke="#ffdb4b" stroke-width="3" stroke-linejoin="round"/>
+<path d="M32 21v24M20 24h6m-6 7h6m12-7h6m-6 7h6" stroke="#ffdb4b" stroke-width="3" stroke-linecap="round"/>
+</svg>

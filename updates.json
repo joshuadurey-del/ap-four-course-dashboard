@@ -1,5 +1,11 @@
 [
   {
+    "ts": "2026-09-10T04:57Z",
+    "course": "all",
+    "writer": "dashboard curation",
+    "text": "Incept dashboard redesign: dark shared styling, About and one-command setup. ASAP cards expose native skills and tool routes. The private builder bundles verified resources and checks whole-course coverage; Value & ROI presents reusable assets, repeat-setup proof and user-entered savings scenarios. Course standing is unchanged."
+  },
+  {
     "ts": "2026-09-10T02:20Z",
     "course": "humgeo",
     "text": "Source check: HumGeo #88 and AP One PP100/v2/writing #1047/#1052/#1069 merged; #1072 open. Current checklist still requires final source freeze, bank assembly, cut and exact dark readback. No current course-release credit.",
