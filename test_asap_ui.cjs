@@ -89,7 +89,7 @@ async function browserCheck() {
     await page.waitForFunction(() => document.querySelector('#copy-install-status').textContent.length > 0);
     assert.equal(await page.locator('.preview-link img').evaluate(img => img.complete && img.naturalWidth > 0), true);
     if (process.env.UI_SCREENSHOT_DIR) await page.screenshot({path:path.join(process.env.UI_SCREENSHOT_DIR,'home-desktop.png'),fullPage:true});
-    await page.getByRole('link', {name: 'Open course workspace'}).click(); await ready();
+    await page.getByRole('link', {name: 'View example courses'}).click(); await ready();
     assert.equal(new URL(page.url()).pathname, '/courses.html');
     assert.equal(await page.locator('.population-coverage').count(), 0, 'Full population table belongs on each course');
     assert(await page.locator('#course-release-timeline').evaluate(el => el.offsetTop < document.querySelector('#needs-human-strip').offsetTop));

@@ -24,7 +24,7 @@ Paste into Terminal:
 curl -fsSL https://joshuadurey-del.github.io/incept-course-builder/install.sh | bash
 ```
 
-**Sign in → Name your course → Choose your agent → Start building.**
+**Sign in → Describe your course → Choose your agent → Watch progress in your customized dashboard.**
 
 Use a GitHub account with a verified **@alpha.school** email and access to the [private package](https://github.com/InceptTrilogy/ap-four-course-dashboard). Setup checks your machine, reuses existing tools, and installs missing runtime components. [Access or setup help →](docs/getting-started.md)
 
@@ -34,7 +34,9 @@ Use a GitHub account with a verified **@alpha.school** email and access to the [
 
 Works with **Claude Code, Codex, Hermes**, and tool-capable local agents. You keep your existing model access.
 
-## Your course, in one workspace
+Start from a course brief or resume existing work. Your agent develops the blueprint, generates and checks content through Content Factory, then assembles it for native publication and learner verification. Your local dashboard updates automatically as the agent saves progress; reopen the same workspace to continue. [From-zero workflow and current execution requirements →](docs/getting-started.md#from-zero-to-a-complete-course)
+
+## Your course, in one customized dashboard
 
 <p align="center">
   <img src="docs/assets/workspace-preview.png" alt="Shared course workspace showing course stages, next actions and verification dates." width="100%">
@@ -47,13 +49,13 @@ Works with **Claude Code, Codex, Hermes**, and tool-capable local agents. You ke
 | **Bundled factory skills** | Give your agent native tools, workflow instructions, scripts and references. |
 | **Whole-course discovery** | Find missing populations before accepting a plan’s progress claims. |
 | **An executable runbook** | Plan independent work in parallel; keep integration and publication in order. |
-| **A saved checkpoint** | Resume from current evidence, remaining gaps and the next action. |
+| **A customized local dashboard** | Watch saved progress update automatically, then resume from the same course workspace. |
 
 ## From brief to verified course
 
 | Align | Synthesize | Assemble | Prove |
 | :--- | :--- | :--- | :--- |
-| Inspect current sources, tools and coverage. | Author, repair and judge missing content. | Integrate accepted work into the course. | Run native publication and learner checks. |
+| Create the blueprint, or reconcile existing sources and coverage. | Author, repair and judge missing content. | Integrate accepted work into the course. | Run native publication and learner checks. |
 
 The runbook guides your agent through these stages using each course’s native tooling. Current permissions, budgets and release gates govern execution. Course completion requires verified learner-facing results.
 

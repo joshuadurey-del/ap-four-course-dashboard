@@ -18,7 +18,9 @@ curl -fsSL https://joshuadurey-del.github.io/incept-course-builder/install.sh | 
 
 The installer checks your machine, reuses installed tools, and downloads missing runtime components into the app directory. It requires no administrator password or shell-profile edit. Onboarding happens in Terminal: GitHub sign-in, course name, agent choice, then dashboard or agent launch.
 
-Your dashboard runs locally while its Terminal command is open. **Ctrl+C** closes the server; your workspace remains saved.
+**Watch progress in your customized dashboard.** It runs on your Mac and updates automatically as your agent saves coverage, completed work, decisions and the next action. Keep the Terminal command open. **Ctrl+C** closes it; your workspace remains saved. Run `incept-course-builder build` to resume with your agent, or `incept-course-builder` to view progress.
+
+The public Courses page is a shared reference, not your installed workspace. Local dashboard refreshes read saved progress only; they do not launch work or call paid services.
 
 ## Everyday commands
 
@@ -36,11 +38,18 @@ Choose **Claude Code**, **Codex**, **Hermes**, a custom local command, or a port
 
 Run `incept-course-builder connect` for read-only connection checks, or `incept-course-builder build` to check and continue with your agent. The agent resolves existing course repository, AWS profile, S3 prefix and native publish configuration; only references go in `workspace/connections.config.json`. Credentials stay with their existing providers. `CONNECTIONS.json` supplies a dated connection report to the local dashboard and agent. Source coverage and learner acceptance still require their native verifiers.
 
-## What the agent does first
+## From zero to a complete course
 
-The [compact entry point](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) leads into fresh course discovery, a population coverage table, and a dependency plan. The agent reconciles current native evidence before selecting work. Missing measurements stay `UNMEASURED`.
+You can start with a brief: **“Build an AP Biology course from scratch for Grade 11, aligned to the current CED, through verified publication.”** Supply the audience, standards, source materials you have, intended outcome and operating budget. The agent identifies any missing inputs and existing authority before execution.
 
-The [operating context](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/operating-context.json) covers source access and existing authority. The [decision cards](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/decisions.json) guide dispatch, review, retries, integration, release readiness and reporting. Setup does not grant spend or publication authority. The current course runbook and native gates govern execution.
+1. **Blueprint:** establish standards, learning outcomes, units, lessons, assessment coverage and source requirements. An empty workspace starts here; a missing blueprint is work to plan, not a reason to assume the course is nearly complete.
+2. **Content:** use Content Factory’s native skills and services to generate and check the required teaching, practice and assessment content; prepare media through its owning tools. Prove one representative route before scaling independent work.
+3. **Assembly:** continuously integrate accepted content in the course repository; build native assets and bind the S3 and TimeBack delivery configuration.
+4. **Publication and proof:** run the current course-owned publication route, then verify the complete learner experience and required acceptance.
+
+An existing course starts with a fresh inventory and reuses valid completed work. Both paths follow the [agent runbook](https://github.com/InceptTrilogy/ap-four-course-dashboard/blob/main/course-runbook/START.md) and update your customized dashboard after meaningful progress. Native evidence, not the refresh timer, establishes completion.
+
+The complete course is the target. The builder is an agent workspace and runbook, not proof that any arbitrary course can already publish unattended. New courses still need a conforming native blueprint, validators and publication configuration. The agent resolves or plans those missing capabilities instead of reusing another course’s IDs. Current spend permissions, human walkthroughs and release decisions remain binding; setup does not grant them.
 
 ## Skills & factory tooling
 
@@ -57,6 +66,8 @@ If your work email is missing, add and verify it in [GitHub email settings](http
 An environment token must already provide email-read and repository access. Browser consent cannot expand an externally supplied token. If GitHub sign-in succeeds but package download fails, check that the same account can open the private repository.
 
 ## Update or remove
+
+**For maintainers:** skill changes ship in the private builder repository with their scripts, affected runtime consumers and rebuilt installation package. Validate both bundled resources and the installed code path; a dashboard-only edit is not a builder update. Public documentation follows the actual installable release.
 
 **Update:** rerun the install command. Settings, course work and existing skills are preserved. Changed managed release files are left for review rather than silently overwritten.
 
