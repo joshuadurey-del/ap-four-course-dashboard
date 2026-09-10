@@ -12,7 +12,29 @@ main() {
   export PATH="$root/runtime/bin:$HOME/.local/bin:$PATH"
   temp=$(mktemp -d)
   trap "rm -rf -- $(printf '%q' "$temp")" EXIT
-  printf '\n  ╭─────╮ ╭─────╮\n  │  ▰  │ │  ▰  │   INCEPT\n  │     ╰─╯     │   Course Builder\n  ╰──────┬──────╯\n\n  Your course factory. On your Mac.\n\n'
+  local columns=${COLUMNS:-80} shade
+  [[ "$columns" =~ ^[0-9]+$ ]] || columns=80
+  printf '\n'
+  if [[ "$columns" -ge 76 ]]; then
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;226m'; fi
+    printf '%s\n' '  ██████████  ██      ██    ████████  ██████████  ████████    ██████████'
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;226m'; fi
+    printf '%s\n' '      ██      ████    ██  ██          ██          ██      ██      ██    '
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;220m'; fi
+    printf '%s\n' '      ██      ████    ██  ██          ██          ██      ██      ██    '
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;220m'; fi
+    printf '%s\n' '      ██      ██  ██  ██  ██          ████████    ████████        ██    '
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;214m'; fi
+    printf '%s\n' '      ██      ██    ████  ██          ██          ██              ██    '
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;208m'; fi
+    printf '%s\n' '      ██      ██    ████  ██          ██          ██              ██    '
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[38;5;172m'; fi
+    printf '%s\n' '  ██████████  ██      ██    ████████  ██████████  ██              ██    '
+    if [[ -t 1 && ${TERM:-dumb} != dumb && -z ${NO_COLOR+x} ]]; then printf '\033[0m'; fi
+  else
+    printf '  INCEPT\n'
+  fi
+  printf '\n  COURSE BUILDER / macOS\n  Your course factory. On your Mac.\n\n'
 
   verify() {
     local actual

@@ -21,3 +21,5 @@ Open it later with `~/.local/bin/incept-course-builder`. Re-run the command to u
 Use a GitHub account with a **verified `@alpha.school` email** and access to the private InceptTrilogy repository. The installer uses GitHub CLI’s browser OAuth flow and requests `user:email` to check verification. Existing logins request the extra permission only if needed. Email lists and tokens are not stored in installer logs or settings.
 
 If your work email is not linked, add and verify it at [GitHub email settings](https://github.com/settings/emails), then rerun. It does not need to be your primary email. Environment tokens must independently include email-read and repository access; browser consent cannot expand an externally supplied token. Repository permissions remain the private-package access boundary.
+
+The installer now uses a large Incept Terminal wordmark and warm colors, with a compact display for narrow windows and `NO_COLOR` support. The private local dashboard shows the tools actually installed on your Mac.
