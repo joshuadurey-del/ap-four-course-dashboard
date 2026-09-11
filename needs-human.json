@@ -1,12 +1,12 @@
 {
- "generated_ts": "2026-09-10T02:17:22Z",
+ "generated_ts": "2026-09-10T21:56:58Z",
  "open": [
   {
    "course": "apush",
    "deadline": "",
    "id": "313bf951fb28329e",
    "kind": "decision",
-   "title": "Optional historical review (Aug 31): map and illustration choices; defaults accepted, no pipeline gate",
+   "title": "Review-at-leisure: 4 first-of-kind map slots (84/141/155/173) + slot 166 kind change causal->chart \u2014 merged work, no gate",
    "ts": "2026-08-31T04:56:43Z"
   },
   {
@@ -14,7 +14,7 @@
    "deadline": "",
    "id": "c774403d451ce33a",
    "kind": "decision",
-   "title": "Historical APWH request (Sep 8): article-check count exception; current disposition unconfirmed",
+   "title": "APWH s6: profile rule = 1 boundary check per article (blueprint A-186), reduced-count exception on. Yes/no?",
    "ts": "2026-09-08T08:01:33Z"
   },
   {
@@ -22,7 +22,7 @@
    "deadline": "",
    "id": "16ae6170b0bbeb2e",
    "kind": "decision",
-   "title": "Historical APWH request (Sep 8): boundary-check authoring budget; current disposition unconfirmed",
+   "title": "APWH s6: fund the 176 boundary-check authoring package now (176 generate + 176 judge) or publish dark without embedded checks?",
    "ts": "2026-09-08T08:01:34Z"
   },
   {
@@ -30,7 +30,7 @@
    "deadline": "",
    "id": "0b8c4d46b65ef3f7",
    "kind": "decision",
-   "title": "Historical APWH request (Sep 8): inline Train Your Eye exception; current disposition unconfirmed",
+   "title": "APWH s6: Train Your Eye dialect = inline (3 pairs stay in host lessons, no Know A/B carriers)? Yes/no?",
    "ts": "2026-09-08T08:01:34Z"
   },
   {
@@ -38,7 +38,7 @@
    "deadline": "",
    "id": "f1e8d775a1a058f0",
    "kind": "approval",
-   "title": "Historical HumGeo pilot request (Sep 8): later source work advanced; this ledger item has no resolution row",
+   "title": "HumGeo landing: Josh declined 68's read of Codex's pilot-8 manifest (~01:2x KST); the 8-slot S4 apply stays unapplied until his word",
    "ts": "2026-09-08T16:25:44Z"
   },
   {
@@ -46,8 +46,24 @@
    "deadline": "",
    "id": "87c0f9cab83dcbc9",
    "kind": "approval",
-   "title": "Historical HumGeo tool-stop report (Sep 8): later work advanced; not a verified current stop or authority gap",
+   "title": "HumGeo landing: 68 (source integrator), 50 and d0 are paused on cancelled tool calls in their windows; integration waits for your word",
    "ts": "2026-09-08T17:28:20Z"
+  },
+  {
+   "course": "apwh",
+   "deadline": "",
+   "id": "8f1b9bde959a4737",
+   "kind": "approval",
+   "title": "APWH s6: go to open the ap-one PR for the offline asset emitter + publication planner (5 files, 0 runtime importers)? Merge stays your line.",
+   "ts": "2026-09-10T03:32:03Z"
+  },
+  {
+   "course": "humgeo",
+   "deadline": "",
+   "id": "3ca7dc5d8d841bde",
+   "kind": "decision",
+   "title": "HumGeo dark run stopped: TimeBack 422 rejects resource type web_application; choose undo+-v3, platform ask, or one-row probe",
+   "ts": "2026-09-10T21:56:57Z"
   }
  ],
  "schema": "needs-human-public/v1"

@@ -1,6 +1,6 @@
 {
  "schema_version": 2,
- "generated_utc": "2026-09-10T05:30:43Z",
+ "generated_utc": "2026-09-11T09:05:36Z",
  "label": "ASAP edition (2026-09-01)",
  "runbook_version": "2026-09-08.7",
  "source_sha256": "2f96703379f095a93556a6dba1b491241be31610907741f269aa63b55422ca64",
@@ -333,33 +333,33 @@
   "humgeo": {
    "label": "AP Human Geography",
    "current_stage": "p5",
-   "state": "ASSEMBLE / FINAL CUT AND READBACK",
-   "as_of": "2026-09-10T05:30:43Z",
-   "detail": "The current owner-assigned stage is Assemble: final-source integration, bank assembly and the publication cut, followed by exact dark readback. Committed source inventories are now shown separately in population coverage; neither the stage placement nor inventory counts establish live course acceptance.",
+   "state": "ASSEMBLE / DARK RUN STOPPED, OWNER DECISION OPEN",
+   "as_of": "2026-09-11T09:05:36Z",
+   "detail": "Dark publication execute stopped on 2026-09-10T21:55:02Z when TimeBack returned HTTP 422 for resource metadata type web_application. 9,654 of 12,552 planned rows were written (course, class, components, QTI items and tests, 204 QTI resources); 1,201 web_application resources and 1,551 links are unwritten. Since the stop, the v3 native namespace re-cut and digest seal landed (humgeo-rebuild #93, ap-one #1083) and a bounded read-only publication preflight landed (ap-one #1084). The owner decision on the 422 stop (undo and re-run under v3, a platform ask, or a one-row probe) is open. No live course acceptance is established.",
    "priority": 1
   },
   "apwh": {
    "label": "AP World History",
    "current_stage": "p3",
-   "state": "GATE BANK PASS / FINAL QTI HELD",
-   "as_of": "2026-09-10T02:14:46Z",
-   "detail": "The final gate-bank and mock update landed in #1037. The September 8 v2 record passes the gate-bank checks. Publication preparation remains held on accepted-source/content gaps and incomplete final QTI, publication-operator and readback requirements. Full p3 completion, dark publication, cold QC and learner acceptance are not established.",
+   "state": "GATE BANK PASS / PUBLICATION PREP ON OWNER DECISIONS",
+   "as_of": "2026-09-11T09:05:36Z",
+   "detail": "The final gate-bank and mock update landed in ap-one #1037 on 2026-09-08 and staging serves it. No APWH source repository has moved since: apwh-blueprint-build main is still 568985f6 (2026-09-08). Publication preparation (s6) waits on four open owner decisions: the one-boundary-check-per-article profile rule, funding the 176 boundary-check package or publishing dark without embedded checks, the inline Train Your Eye dialect, and opening the ap-one PR for the offline asset emitter and publication planner. Full p3 completion, dark publication, cold QC and learner acceptance are not established.",
    "priority": 2
   },
   "apush": {
    "label": "AP US History",
    "current_stage": "content",
    "state": "SYNTHESIZE / ACCEPTANCE AND RELEASE HOLDS",
-   "as_of": "2026-09-10T05:30:43Z",
-   "detail": "APUSH remains in content synthesis. Current committed article-ledger rows record 49 accepted and 200 pending across 249 positions. PIPELINE.md retains pre-publication status. The prior release/admission holds remain visible; they do not remove APUSH from the content stage.",
+   "as_of": "2026-09-11T09:05:36Z",
+   "detail": "APUSH remains in content synthesis. Re-read on 2026-09-11 with both source repositories unmoved: the article-acceptance ledger at apush-build-outputs 98842f41 records 49 accepted (36 by legacy dual review, 13 by server strict mode) and 200 pending across 249 positions; units 4, 6, 7 and 8 have zero accepted records. PIPELINE.md at apush-course-build 319e0777 retains pre-publication status. The prior release/admission holds remain visible; they do not remove APUSH from the content stage.",
    "priority": 3
   },
   "psych": {
    "label": "AP Psychology",
    "current_stage": "p5",
-   "state": "PARTIAL PUBLICATION THROUGH UNIT 3",
-   "as_of": "2026-09-10T02:14:46Z",
-   "detail": "Current committed receipts extend partial publication through Unit 3. Aggregate tree readback covers Units 0\u20132, and Unit 3\u2019s deterministic live-QC receipt passes its named inventory. Units 4\u20135 retain tree_pushed=false. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
+   "state": "PARTIAL PUBLICATION THROUGH UNIT 4",
+   "as_of": "2026-09-11T09:05:36Z",
+   "detail": "Committed receipts now extend partial publication through Unit 4. The Unit 4 component tree was pushed to TimeBack from commit ab3db64b (234 created, 0 failed in publish_audit.jsonl; PR #128). Unit 3 render fixes U3-46 and U3-47 were re-pushed on 2026-09-10. Unit 5 is generated and gated through phase 3b (PR #137, 2026-09-11) but its README states nothing in it is published. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
    "priority": "parallel"
   }
  }

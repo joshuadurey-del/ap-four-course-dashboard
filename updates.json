@@ -1,5 +1,37 @@
 [
   {
+    "ts": "2026-09-11T09:05Z",
+    "course": "HumGeo",
+    "writer": "dashboard curation",
+    "phase": "p5",
+    "kind": "hold",
+    "text": "Standing re-curated: dark publication execute stopped 2026-09-10T21:55:02Z (INCEPT event log row c4fa9188ececcde3) on a TimeBack HTTP 422 for web_application resources; 9,654 of 12,552 rows written. v3 namespace re-cut and digest seal (humgeo-rebuild #93, ap-one #1083) and read-only preflight (ap-one #1084) landed since. Owner decision open; no acceptance credit."
+  },
+  {
+    "ts": "2026-09-11T09:05Z",
+    "course": "APWH",
+    "writer": "dashboard curation",
+    "phase": "p3",
+    "kind": "state-change",
+    "text": "Standing re-observed: no APWH source repository has moved since 2026-09-08 (apwh-blueprint-build 568985f6; ap-one #1037). Publication preparation waits on four open owner decisions recorded in the needs-human ledger."
+  },
+  {
+    "ts": "2026-09-11T09:05Z",
+    "course": "APUSH",
+    "writer": "dashboard curation",
+    "phase": "content",
+    "kind": "state-change",
+    "text": "Standing re-observed from unmoved sources: 49 accepted and 200 pending across 249 ledger positions at apush-build-outputs 98842f41; units 4, 6, 7 and 8 have zero accepted records. Content stage unchanged."
+  },
+  {
+    "ts": "2026-09-11T09:05Z",
+    "course": "Psych",
+    "writer": "dashboard curation",
+    "phase": "p5",
+    "kind": "state-change",
+    "text": "Standing advanced: partial publication now extends through Unit 4 (tree pushed from commit ab3db64b, 234 created, 0 failed; PR #128). Unit 5 is generated and gated through phase 3b (PR #137) but not published. Whole-course readback and acceptance remain UNMEASURED."
+  },
+  {
     "ts": "2026-09-11T08:23Z",
     "course": "All",
     "writer": "repository-event automation",

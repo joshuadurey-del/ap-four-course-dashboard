@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-09-10T05:30:43Z",
+  "snapshot": "2026-09-11T09:05:36Z",
   "claims": [
     {
       "claim_id": "cross.process.authority",
@@ -238,61 +238,62 @@
     {
       "claim_id": "humgeo.blueprint.audit",
       "section": "HumGeo",
-      "status": "OBSERVED",
-      "value": "The current owner-assigned stage is Assemble: final-source integration, bank assembly and the publication cut, followed by exact dark readback. Committed source inventories are now shown separately in population coverage; neither the stage placement nor inventory counts establish live course acceptance.",
+      "status": "BLOCKED",
+      "value": "Dark publication execute stopped on 2026-09-10T21:55:02Z when TimeBack returned HTTP 422 for resource metadata type web_application. 9,654 of 12,552 planned rows were written (course, class, components, QTI items and tests, 204 QTI resources); 1,201 web_application resources and 1,551 links are unwritten. Since the stop, the v3 native namespace re-cut and digest seal landed (humgeo-rebuild #93, ap-one #1083) and a bounded read-only publication preflight landed (ap-one #1084). The owner decision on the 422 stop (undo and re-run under v3, a platform ask, or a one-row probe) is open. No live course acceptance is established.",
       "scope": "Current source readback and next assigned work; historical evidence retains its date; no publication or later lifecycle completion inferred",
       "freshness_limit_hours": 24,
       "next_step": {
-        "verb": "proceed",
-        "tool": "Freeze the accepted source, assemble the bank at that SHA, seal the final cut, then execute authorized dark publication and exact readback.",
+        "verb": "decide",
+        "tool": "Record the owner decision on the TimeBack 422 stop, then resume dark publication and exact readback under that decision using the sealed v3 plan.",
         "args": [],
         "gate": "Current input fingerprints, native prerequisites and existing scoped owner authority verified"
       },
       "evidence": [
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/ilmych/humgeo-rebuild/pull/88",
-          "observed_at": "2026-09-10T02:13:38Z"
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1075",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/1047",
-          "observed_at": "2026-09-10T02:13:38Z"
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1080",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/1052",
-          "observed_at": "2026-09-10T02:13:38Z"
+          "url": "https://github.com/ilmych/humgeo-rebuild/pull/93",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/1069",
-          "observed_at": "2026-09-10T02:13:38Z"
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1083",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-one/pull/1072",
-          "observed_at": "2026-09-10T02:13:38Z"
+          "url": "https://github.com/InceptTrilogy/ap-one/pull/1084",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
-          "type": "current-execution-checklist",
-          "location": "Private Alpha workspace: LIVE-CHECKLIST.md, latest Fable section",
-          "sha256": "090aaece08e67d6f2bcee6627c7d2288dafea98c730dfa259a6346880180b9f7",
-          "observed_at": "2026-09-10T02:05:02Z",
-          "scope": "Plan only; source freeze, bank assembly, cut and dark readback unchecked"
+          "type": "execution-hold",
+          "location": "Private Alpha workspace: INCEPT event log row c4fa9188ececcde3 (dark-run execute 8325c0ef)",
+          "receipt_at": "2026-09-10T21:55:02Z",
+          "observed_at": "2026-09-11T09:05:36Z",
+          "scope": "Partial dark write; owner decision open; no readback or acceptance"
         },
         {
-          "type": "owner-stage-direction",
-          "observed_at": "2026-09-10T05:30:43Z",
-          "scope": "Owner-directed Assemble placement; no new acceptance or publication credit"
+          "type": "owner-decision-open",
+          "location": "Needs-human ledger item 3ca7dc5d8d841bde",
+          "observed_at": "2026-09-11T09:05:36Z",
+          "scope": "Decision only; no publication credit"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+SCOPED_LOCAL_RECEIPTS",
       "current_event": {
-        "ts": "2026-09-09T10:02Z",
-        "phase": "",
-        "kind": "landed",
-        "text": "HumGeo: two previously passed h50 objects integrated locally with request-bound native checks and 46 affected tests passing. Full-form acceptance remains pending. (actor Codex orchestrator; receipt out/orchestrator-20260903/two-seat-20260909/... H50-TRANSFER-OUTCOME.json under codex/two-seat-20260909/; integ-next2 commits ec32d254, e798285c)",
+        "ts": "2026-09-11T08:04Z",
+        "phase": "p5",
+        "kind": "merged",
+        "text": "InceptTrilogy/ap-one #1084 landed 7e587d3d: bounded concurrent read-only preflight and zero-write replay for native publication; serial writes unchanged (stage D of the 2026-09-11 collaborative plan).",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -302,11 +303,12 @@
         "evidence_url": "https://github.com/InceptTrilogy/ap-one/actions/runs/34426679982",
         "writer": "repository-event automation"
       },
-      "observed_at": "2026-09-10T05:30:43Z",
+      "observed_at": null,
       "process_position": {
         "current_stage": "p5",
-        "state": "ASSEMBLE / FINAL CUT AND READBACK"
-      }
+        "state": "ASSEMBLE / DARK RUN STOPPED, OWNER DECISION OPEN"
+      },
+      "status_at": "2026-09-11T09:05:36Z"
     },
     {
       "claim_id": "humgeo.coverage.denominator",
@@ -598,20 +600,20 @@
       "claim_id": "apwh.blueprint.audit",
       "section": "APWH",
       "status": "OBSERVED",
-      "value": "The final gate-bank and mock update landed in #1037. The September 8 v2 record passes the gate-bank checks. Publication preparation remains held on accepted-source/content gaps and incomplete final QTI, publication-operator and readback requirements. Full p3 completion, dark publication, cold QC and learner acceptance are not established.",
+      "value": "The final gate-bank and mock update landed in ap-one #1037 on 2026-09-08 and staging serves it. No APWH source repository has moved since: apwh-blueprint-build main is still 568985f6 (2026-09-08). Publication preparation (s6) waits on four open owner decisions: the one-boundary-check-per-article profile rule, funding the 176 boundary-check package or publishing dark without embedded checks, the inline Train Your Eye dialect, and opening the ap-one PR for the offline asset emitter and publication planner. Full p3 completion, dark publication, cold QC and learner acceptance are not established.",
       "scope": "Current source readback and next assigned work; historical evidence retains its date; no publication or later lifecycle completion inferred",
       "freshness_limit_hours": 24,
       "next_step": {
-        "verb": "proceed",
-        "tool": "Resolve accepted delivery/content dependencies, validate the complete remaining bank/QTI scope, and finish publication preparation.",
+        "verb": "decide",
+        "tool": "Record the four open s6 owner decisions, then resolve accepted delivery/content dependencies, validate the complete remaining bank/QTI scope, and finish publication preparation.",
         "args": [],
         "gate": "Current input fingerprints, native prerequisites and existing scoped owner authority verified"
       },
       "current_event": {
-        "ts": "2026-09-07T01:46Z",
-        "phase": "s5",
-        "kind": "milestone",
-        "text": "apwh s5 bank validation v1 over the 1988 served gate members: key positions FAIL the engine chi-square (A 749/B 513/C 394/D 332, chi2 204 vs 16.3; ap-one shuffles per student at serve); 156 uniquely-longest keys (114 carried, 41 s4, 1 Engelmann) vs the zero rule; no length bias (key longest 16% vs 25%); per-item /v1/qc passes 1988/1988. Fix: rotate s4 keys + repair 156, re-judge, v2 record before s6.",
+        "ts": "2026-09-08T06:31Z",
+        "phase": "s4",
+        "kind": "landed",
+        "text": "ap-one staging serves the s4 final APWH bank and rebuilt mock Form 1: deploy run 34194275949 for main ff1b9314 completed success; staging /version reported ff1b9314 at 2026-09-08T06:30:44Z.",
         "writer": "INCEPT event projection"
       },
       "repository_event": {
@@ -625,40 +627,46 @@
         {
           "type": "exact-source-readback",
           "url": "https://github.com/InceptTrilogy/ap-one/pull/1037",
-          "observed_at": "2026-09-10T02:14:46Z"
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-one/blob/a55888b6bbe42663b7715b925ae460d52a488bb9/services/bff/data/courses/ap-world-history-fall-2026-v1/demo_gate_snapshot.json",
-          "observed_at": "2026-09-10T02:14:46Z"
+          "url": "https://github.com/ilmych/apwh-blueprint-build/commit/568985f605dd488f0619976d2464b75fdcd1bb31",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "validation-v2",
           "location": "Private Alpha workspace: APWH PHASE-1.3-VALIDATION-RECORD-v2.md",
           "receipt_at": "2026-09-08T04:13:08Z",
-          "observed_at": "2026-09-10T02:14:46Z",
+          "observed_at": "2026-09-11T09:05:36Z",
           "scope": "Gate bank only; not other populations or final QTI"
         },
         {
           "type": "publication-preparation",
           "location": "Private Alpha workspace: APWH s6 EXECUTION-RESULT.md",
           "receipt_at": "2026-09-08T10:01:59.952586Z",
-          "observed_at": "2026-09-10T02:14:46Z",
+          "observed_at": "2026-09-11T09:05:36Z",
           "result": "HOLD: checkpoints 2/3 incomplete; course acceptance unearned"
+        },
+        {
+          "type": "owner-decision-open",
+          "location": "Needs-human ledger items c774403d451ce33a, 16ae6170b0bbeb2e, 0b8c4d46b65ef3f7, 8f1b9bde959a4737",
+          "observed_at": "2026-09-11T09:05:36Z",
+          "scope": "Decisions only; no publication credit"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+SCOPED_LOCAL_RECEIPTS",
-      "observed_at": "2026-09-10T02:14:46Z",
+      "observed_at": "2026-09-11T09:05:36Z",
       "process_position": {
         "current_stage": "p3",
-        "state": "GATE BANK PASS / FINAL QTI HELD"
+        "state": "GATE BANK PASS / PUBLICATION PREP ON OWNER DECISIONS"
       }
     },
     {
       "claim_id": "apush.blueprint.audit",
       "section": "APUSH",
       "status": "BLOCKED",
-      "value": "APUSH remains in content synthesis. Current committed article-ledger rows record 49 accepted and 200 pending across 249 positions. PIPELINE.md retains pre-publication status. The prior release/admission holds remain visible; they do not remove APUSH from the content stage.",
+      "value": "APUSH remains in content synthesis. Re-read on 2026-09-11 with both source repositories unmoved: the article-acceptance ledger at apush-build-outputs 98842f41 records 49 accepted (36 by legacy dual review, 13 by server strict mode) and 200 pending across 249 positions; units 4, 6, 7 and 8 have zero accepted records. PIPELINE.md at apush-course-build 319e0777 retains pre-publication status. The prior release/admission holds remain visible; they do not remove APUSH from the content stage.",
       "scope": "Current source readback and next assigned work; historical evidence retains its date; no publication or later lifecycle completion inferred",
       "freshness_limit_hours": 24,
       "next_step": {
@@ -670,13 +678,13 @@
       "evidence": [
         {
           "type": "exact-source-readback",
-          "observed_at": "2026-09-10T05:30:43Z",
+          "observed_at": "2026-09-11T09:05:36Z",
           "url": "https://github.com/ilmych/apush-build-outputs/blob/98842f41d90138846ca8a584e2d60d8d54719e0f/phase2/article-acceptance-ledger-v2-succ11/ledger.json",
           "sha256": "ec8db758827ffc46f981d0328015091efe35ec9794f1ba258911da612ac55292"
         },
         {
           "type": "exact-source-readback",
-          "observed_at": "2026-09-10T05:30:43Z",
+          "observed_at": "2026-09-11T09:05:36Z",
           "url": "https://github.com/ilmych/apush-course-build/blob/319e0777d208601379749066f579e0f67a086cdb/PIPELINE.md",
           "sha256": "68f8568297474180eca4d807aae52e58a64f44fa2399860e6705fc9e62b91d78"
         }
@@ -696,48 +704,59 @@
         "evidence_url": "https://github.com/ilmych/apush-course-build/pull/19",
         "writer": "repository-event automation"
       },
-      "status_at": "2026-09-10T05:30:43Z",
+      "status_at": "2026-09-11T09:05:36Z",
       "process_position": {
         "current_stage": "content",
         "state": "SYNTHESIZE / ACCEPTANCE AND RELEASE HOLDS"
-      }
+      },
+      "observed_at": null
     },
     {
       "claim_id": "psych.blueprint.audit",
       "section": "Psych",
       "status": "OBSERVED",
-      "value": "Current committed receipts extend partial publication through Unit 3. Aggregate tree readback covers Units 0–2, and Unit 3’s deterministic live-QC receipt passes its named inventory. Units 4–5 retain tree_pushed=false. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
+      "value": "Committed receipts now extend partial publication through Unit 4. The Unit 4 component tree was pushed to TimeBack from commit ab3db64b (234 created, 0 failed in publish_audit.jsonl; PR #128). Unit 3 render fixes U3-46 and U3-47 were re-pushed on 2026-09-10. Unit 5 is generated and gated through phase 3b (PR #137, 2026-09-11) but its README states nothing in it is published. Full-course dark readback, enrollment state, cold QC and learner acceptance remain UNMEASURED.",
       "scope": "Exact-ref committed partial publication and failed QC artifacts; live platform state and full-course acceptance UNMEASURED",
       "freshness_limit_hours": 24,
       "next_step": {
         "verb": "reconcile",
-        "tool": "Reconcile Units 0–3 receipts with current platform state, close the remaining unit and full-course readbacks, then run the existing cold-QC and learner-acceptance route.",
+        "tool": "Reconcile Units 0–4 receipts with current platform state, complete Unit 5 publication under the fleet pipeline, then run the existing cold-QC and learner-acceptance route.",
         "args": [],
         "gate": "Current input fingerprints, native prerequisites and existing scoped owner authority verified"
       },
       "evidence": [
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/fecad2ed1f0885d8190efbb472aba1160a59120c/out/publish/publish_audit.jsonl",
-          "observed_at": "2026-09-10T02:14:46Z"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/07d70d567a2857d0036700404d97c08c5ea01390/out/publish/publish_audit.jsonl",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/fecad2ed1f0885d8190efbb472aba1160a59120c/out/publish/unit_3/reports/live_qc_unit_3.json",
-          "observed_at": "2026-09-10T02:14:46Z"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/07d70d567a2857d0036700404d97c08c5ea01390/out/publish/unit_4/README.md",
+          "observed_at": "2026-09-11T09:05:36Z"
         },
         {
           "type": "exact-source-readback",
-          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/124",
-          "observed_at": "2026-09-10T02:14:46Z"
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/blob/07d70d567a2857d0036700404d97c08c5ea01390/out/publish/unit_5/README.md",
+          "observed_at": "2026-09-11T09:05:36Z"
+        },
+        {
+          "type": "exact-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/128",
+          "observed_at": "2026-09-11T09:05:36Z"
+        },
+        {
+          "type": "exact-source-readback",
+          "url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/pull/137",
+          "observed_at": "2026-09-11T09:05:36Z"
         }
       ],
       "evidence_access": "PRIVATE_GITHUB+SCOPED_LOCAL_RECEIPTS",
       "current_event": {
-        "ts": "2026-09-01T04:47Z",
+        "ts": "2026-09-10T11:29Z",
         "phase": "p5",
-        "kind": "state-change",
-        "text": "Re-earn: p5, fleet-driven. Dark publication stays in the existing fleet pipeline; p6 waits for exact live readback.",
+        "kind": "landed",
+        "text": "Unit 4 pushed to TimeBack from commit ab3db64b: 234 component-tree rows created, 0 failed, read back clean (PR #128 merged 2026-09-10T11:29:11Z per the repository commit log).",
         "writer": "dashboard curation"
       },
       "repository_event": {
@@ -747,10 +766,10 @@
         "evidence_url": "https://github.com/InceptTrilogy/ap-psychology-fall-2025-v1/commit/bcf2f34298cdb6eacdf4f62cb472a241909a5dd5",
         "writer": "repository-event automation"
       },
-      "observed_at": "2026-09-10T02:14:46Z",
+      "observed_at": "2026-09-11T09:05:36Z",
       "process_position": {
         "current_stage": "p5",
-        "state": "PARTIAL PUBLICATION THROUGH UNIT 3"
+        "state": "PARTIAL PUBLICATION THROUGH UNIT 4"
       }
     },
     {
