@@ -1,5 +1,13 @@
 [
   {
+    "ts": "2026-09-11T08:15Z",
+    "course": "All",
+    "writer": "dashboard curation",
+    "phase": "source evidence",
+    "kind": "hold",
+    "text": "An attempted source-evidence sync created local commit 04bce2b, but GitHub denied access to incept-course-builder (HTTP 403). This attempt did not update the public dashboard; formal course claims remain unchanged. Restore repository access before retrying."
+  },
+  {
     "ts": "2026-09-10T07:22Z",
     "course": "All",
     "writer": "dashboard curation",
